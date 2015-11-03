@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F2CF108E-0F66-4960-9033-1EC60D653F9B}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSBuildLogsExtended.DataSourceEntities</RootNamespace>
+    <AssemblyName>MSBuildLogsExtended.DataSourceEntities.WP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="system" />
+    <Reference Include="mscorlib.Extensions" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Servicemodel" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <Content Include="Maps\map.2.B.3.vsd" />
+    <Content Include="Maps\map.2.B.3.vsd.png" />
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntity_\Build.cs">
+      <Link>DataSourceEntity_\Build.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntity_\BuildEventCode.cs">
+      <Link>DataSourceEntity_\BuildEventCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntity_\BuildLog.cs">
+      <Link>DataSourceEntity_\BuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntity_\Solution.cs">
+      <Link>DataSourceEntity_\Solution.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntity_\BuildCollection.cs">
+      <Link>DataSourceEntity_\BuildCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntity_\BuildEventCodeCollection.cs">
+      <Link>DataSourceEntity_\BuildEventCodeCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntity_\BuildLogCollection.cs">
+      <Link>DataSourceEntity_\BuildLogCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntity_\SolutionCollection.cs">
+      <Link>DataSourceEntity_\SolutionCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntityHelpers\DataSourceEntityHelperBuild.cs">
+      <Link>DataSourceEntityHelpers\DataSourceEntityHelperBuild.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntityHelpers\DataSourceEntityHelperBuildEventCode.cs">
+      <Link>DataSourceEntityHelpers\DataSourceEntityHelperBuildEventCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntityHelpers\DataSourceEntityHelperBuildLog.cs">
+      <Link>DataSourceEntityHelpers\DataSourceEntityHelperBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntityHelpers\DataSourceEntityHelperSolution.cs">
+      <Link>DataSourceEntityHelpers\DataSourceEntityHelperSolution.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceIdentifiers\BuildIdentifier.cs">
+      <Link>DataSourceIdentifiers\BuildIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceIdentifiers\BuildEventCodeIdentifier.cs">
+      <Link>DataSourceIdentifiers\BuildEventCodeIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceIdentifiers\BuildLogIdentifier.cs">
+      <Link>DataSourceIdentifiers\BuildLogIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceIdentifiers\SolutionIdentifier.cs">
+      <Link>DataSourceIdentifiers\SolutionIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceQueryCriteriaByEntityReferences\DataSourceQueryCriteriaByEntityReferenceBuild.cs">
+      <Link>DataSourceQueryCriteriaByEntityReferences\DataSourceQueryCriteriaByEntityReferenceBuild.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceQueryCriteriaByEntityReferences\DataSourceQueryCriteriaByEntityReferenceBuildLog.cs">
+      <Link>DataSourceQueryCriteriaByEntityReferences\DataSourceQueryCriteriaByEntityReferenceBuildLog.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntityContracts.WP\MSBuildLogsExtended.EntityContracts.WP.csproj">
+      <Project>{ed9fcb70-6226-43b5-b0ac-8c13e135e177}</Project>
+      <Name>MSBuildLogsExtended.EntityContracts.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.WP\Framework.WP\Framework.WP.csproj">
+      <Project>{8601cd0c-5985-4b2b-a333-52c0a5902ce2}</Project>
+      <Name>Framework.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.WP\Framework.DataSourceEntities.WP\Framework.DataSourceEntities.WP.csproj">
+      <Project>{4a41448f-8d92-435b-9f02-5f1d3a502f4f}</Project>
+      <Name>Framework.DataSourceEntities.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Resources.WP\MSBuildLogsExtended.Resources.WP.csproj">
+      <Project>{d53b35b3-7244-41b5-b8f7-2e6dc46b257b}</Project>
+      <Name>MSBuildLogsExtended.Resources.WP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib.Extensions" />
+    <Reference Include="system" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Servicemodel" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!--
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="806a9ab2-2edd-42d2-a3ca-a2acba0cedd7" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

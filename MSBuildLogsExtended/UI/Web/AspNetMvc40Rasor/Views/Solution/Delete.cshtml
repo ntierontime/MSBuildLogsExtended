@@ -1,0 +1,43 @@
+@model MSBuildLogsExtended.DataSourceEntities.Solution
+@{
+    ViewBag.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+<h3>@Framework.Resources.UIStringResource.Warning_Areyousureyouwanttodeletethis</h3>
+            </hgroup>
+        </div>
+    </section>
+}
+<fieldset>
+    <legend>@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Solution.</legend>
+	@Html.HiddenFor(model => model.Id)        <div class="display-label">
+			@Html.LabelFor(model => model.ExternalParentId)
+        </div>
+        <div class="display-field">
+			@Html.DisplayFor(model => model.ExternalParentId)
+        </div>
+        <div class="display-label">
+			@Html.LabelFor(model => model.Name)
+        </div>
+        <div class="display-field">
+			@Html.DisplayFor(model => model.Name)
+        </div>
+        <div class="display-label">
+			@Html.LabelFor(model => model.Description)
+        </div>
+        <div class="display-field">
+			@Html.DisplayFor(model => model.Description)
+        </div>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <div class="buttonContainer">
+        <input type="submit" value="@Framework.Resources.UIStringResource.DeleteAlternativeText" class="button" />
+		<input type="button" value="@Framework.Resources.UIStringResource.BackAlternativeText" class="button" onclick="location.href='@Url.Action("Index")'" />
+    </div>
+}
+</fieldset>

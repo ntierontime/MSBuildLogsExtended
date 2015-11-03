@@ -1,0 +1,73 @@
+<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+
+                <binding name="BasicHttpBinding_AuthenticationServiceAsyn" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+
+
+
+                <binding name="BasicHttpBinding_WcfClientEntityAsynBuild"  closeTimeout="00:01:00"
+					  openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00"
+					  maxBufferSize="65536" maxReceivedMessageSize="65536" textEncoding="utf-8" />
+
+
+                <binding name="BasicHttpBinding_WcfClientEntityAsynBuildEventCode"  closeTimeout="00:01:00"
+					  openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00"
+					  maxBufferSize="65536" maxReceivedMessageSize="65536" textEncoding="utf-8" />
+
+
+                <binding name="BasicHttpBinding_WcfClientEntityAsynBuildLog"  closeTimeout="00:01:00"
+					  openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00"
+					  maxBufferSize="65536" maxReceivedMessageSize="65536" textEncoding="utf-8" />
+
+
+                <binding name="BasicHttpBinding_WcfClientEntityAsynSolution"  closeTimeout="00:01:00"
+					  openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00"
+					  maxBufferSize="65536" maxReceivedMessageSize="65536" textEncoding="utf-8" />
+
+
+            </basicHttpBinding>
+        </bindings>
+        <client>
+
+            <endpoint address="http://localhost:4321/Authentication.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationServiceAsyn"
+                contract="Framework.WcfClient.AuthenticationServiceAsyn" name="BasicHttpBinding_AuthenticationServiceAsyn" />
+
+
+
+            <endpoint address="http://localhost:10605/WcfMarkupBuild.svc" 
+                binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_WcfClientEntityAsynBuild"
+                contract="MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild"
+                name="BasicHttpBinding_WcfClientEntityAsynBuild" />
+
+
+            <endpoint address="http://localhost:10605/WcfMarkupBuildEventCode.svc" 
+                binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_WcfClientEntityAsynBuildEventCode"
+                contract="MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuildEventCode"
+                name="BasicHttpBinding_WcfClientEntityAsynBuildEventCode" />
+
+
+            <endpoint address="http://localhost:10605/WcfMarkupBuildLog.svc" 
+                binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_WcfClientEntityAsynBuildLog"
+                contract="MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuildLog"
+                name="BasicHttpBinding_WcfClientEntityAsynBuildLog" />
+
+
+            <endpoint address="http://localhost:10605/WcfMarkupSolution.svc" 
+                binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_WcfClientEntityAsynSolution"
+                contract="MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynSolution"
+                name="BasicHttpBinding_WcfClientEntityAsynSolution" />
+
+
+        </client>
+    </system.serviceModel>
+</configuration>

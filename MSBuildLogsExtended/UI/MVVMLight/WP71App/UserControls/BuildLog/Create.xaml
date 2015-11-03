@@ -1,0 +1,117 @@
+<UserControl
+	x:Class="MSBuildLogsExtended.WP71App.UserControls.BuildLog.Create"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:WPToolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+	xmlns:WPToolkitPrimitives="clr-namespace:Microsoft.Phone.Controls.Primitives;assembly=Microsoft.Phone.Controls.Toolkit"
+	mc:Ignorable="d"
+	xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras"
+	xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+	xmlns:vm="clr-namespace:MSBuildLogsExtended.ViewModels;assembly=MSBuildLogsExtended.ViewModels"
+	xmlns:fresx="clr-namespace:Framework.Resources;assembly=Framework.Resources.WP"
+	xmlns:eresx="clr-namespace:MSBuildLogsExtended.Resources;assembly=MSBuildLogsExtended.Resources.WP"
+	xmlns:fvm="clr-namespace:Framework.Xaml;assembly=Framework.Xaml.WP"
+	>
+    <Grid DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.NewItemDefault, Source={StaticResource Locator}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition   Width="Auto" />
+            <ColumnDefinition   Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Build_B1_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
+		<TextBlock Text="{Binding Path=Build_B1_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
+		<TextBlock Text="{Binding Path=Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_S1_1Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
+		<WPToolkit:ListPicker Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.DropDownContentsOfSolution_S1_1, Source={StaticResource Locator}}" SelectedItem="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.DropDownContentsOfSolution_S1_1SelectedItem, Mode=TwoWay, Source={StaticResource Locator}}" FullModeHeader="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntitySolution.Build, Source={StaticResource LocalizedStrings}}" CacheMode="BitmapCache">
+                  <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Loaded">
+                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.GetDropDownContentsOfSolution_S1_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.GetDropDownContentsOfSolution_S1_1SelectionChangedCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+                    <WPToolkit:ListPicker.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Fill="{Binding}" Width="24" Height="24"/>
+                                <TextBlock Text="{Binding Path=Name}" Margin="16"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </WPToolkit:ListPicker.ItemTemplate>
+                    <WPToolkit:ListPicker.FullModeItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="32">
+                                <Rectangle Fill="{Binding}" Width="43" Height="43"/>
+                                <TextBlock Text="{Binding Path=Name}" Margin="16" FontSize="43" FontFamily="{StaticResource PhoneFontFamilyLight}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </WPToolkit:ListPicker.FullModeItemTemplate>
+</WPToolkit:ListPicker>
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_S1_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
+		<TextBlock Text="{Binding Path=Solution_S1_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCode_B2_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
+		<TextBlock Text="{Binding Path=BuildEventCode_B2_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
+		<WPToolkit:ListPicker Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.DropDownContentsOfBuild_B1_1, Source={StaticResource Locator}}" SelectedItem="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.DropDownContentsOfBuild_B1_1SelectedItem, Mode=TwoWay, Source={StaticResource Locator}}" FullModeHeader="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.BuildLog, Source={StaticResource LocalizedStrings}}" CacheMode="BitmapCache">
+                    <WPToolkit:ListPicker.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Fill="{Binding}" Width="24" Height="24"/>
+                                <TextBlock Text="{Binding Path=Name}" Margin="16"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </WPToolkit:ListPicker.ItemTemplate>
+                    <WPToolkit:ListPicker.FullModeItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="32">
+                                <Rectangle Fill="{Binding}" Width="43" Height="43"/>
+                                <TextBlock Text="{Binding Path=Name}" Margin="16" FontSize="43" FontFamily="{StaticResource PhoneFontFamilyLight}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </WPToolkit:ListPicker.FullModeItemTemplate>
+</WPToolkit:ListPicker>
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCodeId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
+		<WPToolkit:ListPicker Grid.Column="1" Grid.Row="6" ItemsSource="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.DropDownContentsOfBuildEventCode_B2_1, Source={StaticResource Locator}}" SelectedItem="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.DropDownContentsOfBuildEventCode_B2_1SelectedItem, Mode=TwoWay, Source={StaticResource Locator}}" FullModeHeader="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildEventCode.BuildLog, Source={StaticResource LocalizedStrings}}" CacheMode="BitmapCache">
+                  <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Loaded">
+                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.GetDropDownContentsOfBuildEventCode_B2_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+                    <WPToolkit:ListPicker.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Fill="{Binding}" Width="24" Height="24"/>
+                                <TextBlock Text="{Binding Path=Name}" Margin="16"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </WPToolkit:ListPicker.ItemTemplate>
+                    <WPToolkit:ListPicker.FullModeItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="32">
+                                <Rectangle Fill="{Binding}" Width="43" Height="43"/>
+                                <TextBlock Text="{Binding Path=Name}" Margin="16" FontSize="43" FontFamily="{StaticResource PhoneFontFamilyLight}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </WPToolkit:ListPicker.FullModeItemTemplate>
+</WPToolkit:ListPicker>
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Message, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
+		<TextBox Text="{Binding Path=Message, Mode=TwoWay}" Grid.Column="1" Grid.Row="7" fvm:BindingUtility.UpdateSourceOnChange="true" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
+		<WPToolkit:DatePicker Grid.Column="1" Grid.Row="8" Value="{Binding Path=EventTime, Mode=TwoWay}" />
+    </Grid>
+</UserControl>

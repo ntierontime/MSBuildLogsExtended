@@ -1,0 +1,10 @@
+2015-11-03 13:59:47,590 [7] INFO  MSBuildLogsExtended.WcfWebApp.Global [(null)] - Application_Started
+2015-11-03 14:06:03,354 [10] INFO  MSBuildLogsExtended.WcfWebApp.Global [(null)] - Application_Started
+2015-11-03 14:06:04,434 [17] INFO  MSBuildLogsExtended.CommonBLL.BusinessLogicLayerEntitySolution [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2015-11-03 14:06:04,435 [18] INFO  MSBuildLogsExtended.CommonBLL.BusinessLogicLayerEntityBuild [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfDefaultOfCommon
+2015-11-03 14:06:04,436 [17] INFO  MSBuildLogsExtended.LinqDAL.LinqToSqlDataAccessLayerEntitySolution [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2015-11-03 14:06:04,437 [18] INFO  MSBuildLogsExtended.LinqDAL.LinqToSqlDataAccessLayerEntityBuild [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfDefaultOfCommon
+2015-11-03 14:06:04,481 [17] INFO  MSBuildLogsExtended.LinqDAL.LinqToSqlDataAccessLayerEntitySolution [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2015-11-03 14:06:04,483 [17] INFO  MSBuildLogsExtended.CommonBLL.BusinessLogicLayerEntitySolution [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2015-11-03 14:06:04,511 [18] INFO  MSBuildLogsExtended.LinqDAL.LinqToSqlDataAccessLayerEntityBuild [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfDefaultOfCommon
+2015-11-03 14:06:04,512 [18] INFO  MSBuildLogsExtended.CommonBLL.BusinessLogicLayerEntityBuild [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfDefaultOfCommon

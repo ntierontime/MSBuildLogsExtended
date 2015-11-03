@@ -1,0 +1,47 @@
+@model MSBuildLogsExtended.DataSourceEntities.Build.Default
+@{
+    ViewBag.Title = @Framework.Resources.UIStringResource.DetailsAlternativeText;
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+        </div>
+    </section>
+}
+<fieldset>
+    <legend>@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Build.</legend>
+<div class="display-label">
+			@Html.LabelFor(model => model.Solution_S1_1_Name)
+        </div>
+        <div class="display-field">
+@Html.ActionLink(Model.Solution_S1_1_Name, "WPEntityRelatedOfSolution", "Solution", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.SolutionId }, null)
+        </div>
+@Html.HiddenFor(model => model.Id)@Html.HiddenFor(model => model.SolutionId)        <div class="display-label">
+			@Html.LabelFor(model => model.Name)
+        </div>
+        <div class="display-field">
+			@Html.DisplayFor(model => model.Name)
+        </div>
+        <div class="display-label">
+			@Html.LabelFor(model => model.Description)
+        </div>
+        <div class="display-field">
+			@Html.DisplayFor(model => model.Description)
+        </div>
+        <div class="display-label">
+			@Html.LabelFor(model => model.BuildStartTime)
+        </div>
+        <div class="display-field">
+			@Html.DisplayFor(model => model.BuildStartTime)
+        </div>
+	<div class="buttonContainer">
+		<input type="button" value="@Framework.Resources.UIStringResource.EditAlternativeText" class="button" onclick="location.href='@Url.Action("Edit", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Id })'" />
+		<input type="button" value="@Framework.Resources.UIStringResource.DeleteAlternativeText" class="button" onclick="location.href='@Url.Action( "Delete", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Id })'" />
+		<input type="button" value="@Framework.Resources.UIStringResource.BackAlternativeText" class="button" onclick="location.href='@Url.Action("Index")'" />
+		<input type="button" value="@Framework.Resources.UIStringResource.CopyAlternativeText" class="button" onclick="location.href='@Url.Action("Copy", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Id })'" />
+	</div>
+</fieldset>

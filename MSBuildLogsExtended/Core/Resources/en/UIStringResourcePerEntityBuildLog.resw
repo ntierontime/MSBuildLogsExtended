@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <data name="BuildLog" xml:space="preserve">
+    <value>BuildLog</value>
+  </data>
+  <data name="Loading_BuildLog____" xml:space="preserve">
+    <value>Loading BuildLog ...</value>
+  </data>
+  <data name="Please_select_BuildLog____" xml:space="preserve">
+    <value>Please select BuildLog ...</value>
+  </data>
+  <data name="Rss_Title_of_BuildLog" xml:space="preserve">
+    <value>Rss Title of BuildLog</value>
+  </data>
+  <data name="Rss_Description_of_BuildLog" xml:space="preserve">
+    <value>Rss Description of BuildLog</value>
+  </data>
+  <data name="AddNew_BuildLog" xml:space="preserve">
+    <value>AddNew BuildLog</value>
+  </data>
+  <data name="Delete_BuildLog" xml:space="preserve">
+    <value>Delete BuildLog</value>
+  </data>
+  <data name="Details_BuildLog" xml:space="preserve">
+    <value>Details BuildLog</value>
+  </data>
+  <data name="Edit_BuildLog" xml:space="preserve">
+    <value>Edit BuildLog</value>
+  </data>
+  <data name="IdDescription" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="IdRequiredErrorMessage" xml:space="preserve">
+    <value>Id is required</value>
+  </data>
+  <data name="IdToolTip" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="IdValueValidationErrorMessage" xml:space="preserve">
+    <value>Id has validation error</value>
+  </data>
+  <data name="IdValueValidationExpression" xml:space="preserve">
+    <value>Please input Id validation regular expression</value>
+  </data>
+  <data name="Id_is_required" xml:space="preserve">
+    <value>Id is required</value>
+  </data>
+  <data name="BuildIdDescription" xml:space="preserve">
+    <value>Build Id</value>
+  </data>
+  <data name="BuildId" xml:space="preserve">
+    <value>Build Id</value>
+  </data>
+  <data name="BuildIdRequiredErrorMessage" xml:space="preserve">
+    <value>Build Id is required</value>
+  </data>
+  <data name="BuildIdToolTip" xml:space="preserve">
+    <value>Build Id</value>
+  </data>
+  <data name="BuildIdValueValidationErrorMessage" xml:space="preserve">
+    <value>Build Id has validation error</value>
+  </data>
+  <data name="BuildIdValueValidationExpression" xml:space="preserve">
+    <value>Please input Build Id validation regular expression</value>
+  </data>
+  <data name="BuildId_is_required" xml:space="preserve">
+    <value>BuildId is required</value>
+  </data>
+  <data name="BuildEventCodeIdDescription" xml:space="preserve">
+    <value>Build Event Code Id</value>
+  </data>
+  <data name="BuildEventCodeId" xml:space="preserve">
+    <value>Build Event Code Id</value>
+  </data>
+  <data name="BuildEventCodeIdRequiredErrorMessage" xml:space="preserve">
+    <value>Build Event Code Id is required</value>
+  </data>
+  <data name="BuildEventCodeIdToolTip" xml:space="preserve">
+    <value>Build Event Code Id</value>
+  </data>
+  <data name="BuildEventCodeIdValueValidationErrorMessage" xml:space="preserve">
+    <value>Build Event Code Id has validation error</value>
+  </data>
+  <data name="BuildEventCodeIdValueValidationExpression" xml:space="preserve">
+    <value>Please input Build Event Code Id validation regular expression</value>
+  </data>
+  <data name="BuildEventCodeId_is_required" xml:space="preserve">
+    <value>BuildEventCodeId is required</value>
+  </data>
+  <data name="MessageDescription" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="MessageRequiredErrorMessage" xml:space="preserve">
+    <value>Message is required</value>
+  </data>
+  <data name="MessageToolTip" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="MessageValueValidationErrorMessage" xml:space="preserve">
+    <value>Message has validation error</value>
+  </data>
+  <data name="MessageValueValidationExpression" xml:space="preserve">
+    <value>Please input Message validation regular expression</value>
+  </data>
+  <data name="EventTimeDescription" xml:space="preserve">
+    <value>Event Time</value>
+  </data>
+  <data name="EventTime" xml:space="preserve">
+    <value>Event Time</value>
+  </data>
+  <data name="EventTimeRequiredErrorMessage" xml:space="preserve">
+    <value>Event Time is required</value>
+  </data>
+  <data name="EventTimeToolTip" xml:space="preserve">
+    <value>Event Time</value>
+  </data>
+  <data name="EventTimeValueValidationErrorMessage" xml:space="preserve">
+    <value>Event Time has validation error</value>
+  </data>
+  <data name="EventTimeValueValidationExpression" xml:space="preserve">
+    <value>Please input Event Time validation regular expression</value>
+  </data>
+  <data name="EventTime_is_required" xml:space="preserve">
+    <value>EventTime is required</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Value_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Value of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Value_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Value of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Name of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Name of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="IdentifierInString" xml:space="preserve">
+    <value>Identifier In String</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_IdentifierInString_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property IdentifierInString of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_IdentifierInString_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property IdentifierInString of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Title_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Title of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Title_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Title of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Description_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Description of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Description_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Description of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="PubDate" xml:space="preserve">
+    <value>Pub Date</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_PubDate_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property PubDate of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_PubDate_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property PubDate of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Build_B1_1_Name" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Build_B1_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Build_B1_1_Name of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Build_B1_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Build_B1_1_Name of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Id_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Id of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Id_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Id of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Solution_S1_1Id" xml:space="preserve">
+    <value>Solution</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Solution_S1_1Id_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Solution_S1_1Id of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Solution_S1_1Id_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Solution_S1_1Id of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Solution_S1_1_Name" xml:space="preserve">
+    <value>Solution</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Solution_S1_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Solution_S1_1_Name of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Solution_S1_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Solution_S1_1_Name of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="BuildEventCode_B2_1_Name" xml:space="preserve">
+    <value>Build Event Code</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_BuildEventCode_B2_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property BuildEventCode_B2_1_Name of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_BuildEventCode_B2_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property BuildEventCode_B2_1_Name of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_BuildId_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property BuildId of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_BuildId_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property BuildId of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_BuildEventCodeId_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property BuildEventCodeId of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_BuildEventCodeId_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property BuildEventCodeId of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_Message_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Message of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_Message_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Message of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_EventTime_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property EventTime of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_EventTime_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property EventTime of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="CountPerFK" xml:space="preserve">
+    <value>Count Per FK</value>
+  </data>
+  <data name="Required_Field_Error_Message_of_property_CountPerFK_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property CountPerFK of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property CountPerFK of MSBuildLogsExtended.BuildLog</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_B1_1OfCommon" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_B1_1OfCommon" xml:space="preserve">
+    <value>Description of Id of Build</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_B1_1OfCommon" xml:space="preserve">
+    <value>Tooltip of Id of Build</value>
+  </data>
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuild_B1_1OfCommon" xml:space="preserve">
+    <value>Id of Build</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuild_B1_1OfCommon" xml:space="preserve">
+    <value>Description of Id of Build</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuild_B1_1OfCommon" xml:space="preserve">
+    <value>Tooltip of Id of Build</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+    <value>Solution</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+    <value>Description of Id of Solution</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+    <value>Tooltip of Id of Solution</value>
+  </data>
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+    <value>Id of Solution</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+    <value>Description of Id of Solution</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+    <value>Tooltip of Id of Solution</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_B2_1OfCommon" xml:space="preserve">
+    <value>BuildEventCode</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_B2_1OfCommon" xml:space="preserve">
+    <value>Description of Id of BuildEventCode</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_B2_1OfCommon" xml:space="preserve">
+    <value>Tooltip of Id of BuildEventCode</value>
+  </data>
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuildEventCode_B2_1OfCommon" xml:space="preserve">
+    <value>Id of BuildEventCode</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuildEventCode_B2_1OfCommon" xml:space="preserve">
+    <value>Description of Id of BuildEventCode</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuildEventCode_B2_1OfCommon" xml:space="preserve">
+    <value>Tooltip of Id of BuildEventCode</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon" xml:space="preserve">
+    <value>Description of Message</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of Message</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon" xml:space="preserve">
+    <value>Message of BuildLog</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon" xml:space="preserve">
+    <value>Description of Message of BuildLog</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of Message of BuildLog</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon" xml:space="preserve">
+    <value>EventTime</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Description of EventTime</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of EventTime</value>
+  </data>
+  <data name="IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundEventTimeCommonOftOfCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundEventTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundEventTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="LowerBound_ID_TextBox_Search_lowerBoundEventTimeCommonOftOfCommon" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Description_of_LowerBound_ID_TextBox_Search_lowerBoundEventTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Description of From</value>
+  </data>
+  <data name="Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundEventTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of From</value>
+  </data>
+  <data name="IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundEventTimeCommonOftOfCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundEventTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundEventTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="UpperBound_ID_TextBox_Search_upperBoundEventTimeCommonOftOfCommon" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Description_of_UpperBound_ID_TextBox_Search_upperBoundEventTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Description of To</value>
+  </data>
+  <data name="Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundEventTimeCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of To</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuild_B1_1OfByFKOnly" xml:space="preserve">
+    <value>Build</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuild_B1_1OfByFKOnly" xml:space="preserve">
+    <value>Description of Id of Build</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuild_B1_1OfByFKOnly" xml:space="preserve">
+    <value>Tooltip of Id of Build</value>
+  </data>
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuild_B1_1OfByFKOnly" xml:space="preserve">
+    <value>Id of Build</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuild_B1_1OfByFKOnly" xml:space="preserve">
+    <value>Description of Id of Build</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuild_B1_1OfByFKOnly" xml:space="preserve">
+    <value>Tooltip of Id of Build</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+    <value>Solution</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+    <value>Description of Id of Solution</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+    <value>Tooltip of Id of Solution</value>
+  </data>
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+    <value>Id of Solution</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+    <value>Description of Id of Solution</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+    <value>Tooltip of Id of Solution</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuildEventCode_B2_1OfByFKOnly" xml:space="preserve">
+    <value>BuildEventCode</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuildEventCode_B2_1OfByFKOnly" xml:space="preserve">
+    <value>Description of Id of BuildEventCode</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuildEventCode_B2_1OfByFKOnly" xml:space="preserve">
+    <value>Tooltip of Id of BuildEventCode</value>
+  </data>
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuildEventCode_B2_1OfByFKOnly" xml:space="preserve">
+    <value>Id of BuildEventCode</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuildEventCode_B2_1OfByFKOnly" xml:space="preserve">
+    <value>Description of Id of BuildEventCode</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuildEventCode_B2_1OfByFKOnly" xml:space="preserve">
+    <value>Tooltip of Id of BuildEventCode</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+    <value>Description of Id</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+    <value>Tooltip of Id</value>
+  </data>
+  <data name="ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+    <value>Id of BuildLog</value>
+  </data>
+  <data name="Description_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+    <value>Description of Id of BuildLog</value>
+  </data>
+  <data name="Tooltip_of_ValueToCompare_ID_Unknown_Search_valueToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">
+    <value>Tooltip of Id of BuildLog</value>
+  </data>
+
+</root>

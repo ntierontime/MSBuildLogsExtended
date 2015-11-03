@@ -1,0 +1,47 @@
+<UserControl
+            x:Class="MSBuildLogsExtended.WPF4App.UserControls.Build.Edit"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            mc:Ignorable="d"
+		    xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras"
+		    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+		    xmlns:vm="clr-namespace:MSBuildLogsExtended.ViewModels;assembly=MSBuildLogsExtended.ViewModels"
+			xmlns:fresx="clr-namespace:Framework.Resources;assembly=Framework.Resources"
+			xmlns:eresx="clr-namespace:MSBuildLogsExtended.Resources;assembly=MSBuildLogsExtended.Resources"
+            >
+    <Grid DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM.CurrentInEditingDefault, Source={StaticResource Locator}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition   Width="Auto" />
+            <ColumnDefinition   Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Solution_S1_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
+		<TextBlock Text="{Binding Path=Solution_S1_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
+		<TextBlock Text="{Binding Path=Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.SolutionId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
+		<ComboBox ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntitySolution.Build, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM.DropDownContentsOfSolution_S1_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=SolutionId}">
+                  <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Loaded">
+                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM.GetDropDownContentsOfSolution_S1_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+</ComboBox>
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
+		<TextBox Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="3" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Description, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
+		<TextBox Text="{Binding Path=Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="4" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.BuildStartTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
+		<DatePicker HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5" SelectedDate="{Binding Path=BuildStartTime, Mode=TwoWay}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
+    </Grid>
+</UserControl>

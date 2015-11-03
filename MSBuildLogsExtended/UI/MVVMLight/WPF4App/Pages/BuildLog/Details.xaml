@@ -1,0 +1,44 @@
+<Page
+        x:Class="MSBuildLogsExtended.WPF4App.Pages.BuildLog.Details"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras"
+		xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+		xmlns:vm="clr-namespace:MSBuildLogsExtended.ViewModels;assembly=MSBuildLogsExtended.ViewModels"
+		xmlns:fresx="clr-namespace:Framework.Resources;assembly=Framework.Resources"
+		xmlns:eresx="clr-namespace:MSBuildLogsExtended.Resources;assembly=MSBuildLogsExtended.Resources"
+		xmlns:BuildLog="clr-namespace:MSBuildLogsExtended.WPF4App.UserControls.BuildLog"
+        Title="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildLog_Details, Source={StaticResource LocalizedStrings}}"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"  />
+            <RowDefinition Height="Auto"  />
+        </Grid.RowDefinitions>
+        <ToolBarTray Grid.Row="0" >
+            <ToolBar>
+                <Button     Name="Edit" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.LaunchEditViewCommand, Source={StaticResource Locator}}" Width="75" Height="25" >
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.EditAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button     Name="Copy" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.LaunchCopyViewCommand, Source={StaticResource Locator}}" Width="75" Height="25" >
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.CopyAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button     Name="Delete" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.LaunchDeleteViewCommand, Source={StaticResource Locator}}" Width="75" Height="25" >
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.DeleteAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button     Name="Close" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.CloseViewDetailsViewCommand, Source={StaticResource Locator}}" Width="75" Height="25" >
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.CloseAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    </StackPanel>
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+        <BuildLog:Details Grid.Row="1" />
+    </Grid>
+</Page>

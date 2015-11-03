@@ -1,0 +1,254 @@
+@using Framework.Mvc;
+@model MSBuildLogsExtended.AspNetMvc40ViewModel.WPCommonOfBuildVM
+@{
+    // http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
+    // http://dotnetmentors.com/mvc/paging-and-sorting-in-asp-net-mvc-and-entity-framework-application.aspx
+    ViewBag.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Build;
+    RouteValueDictionary queryStringDictionary = new RouteValueDictionary(Request.QueryString.AllKeys.ToDictionary(key => key, key => (object)Request.QueryString[key]));
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+        </div>
+    </section>
+}
+<article>
+<div>
+<div class="default">
+@using (Html.BeginForm()){
+<div>
+<div class="buttonContainer">
+<input class="button button-Search" type="submit" name="SearchToolBarUp" value="@Framework.Resources.UIStringResource.SearchAlternativeText" />
+<input onclick="location.href='@Url.Action("AddNew", "Build")'" class="button button-AddNew" type="button" name="AddNewToolBarUp" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
+<input onclick="location.href='@Url.Action("WPCommonOfBuild_Export", "Build", new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="button button-Export" type="button" name="ExportToolBarUp" value="@Framework.Resources.UIStringResource.ExportAlternativeText" />
+<input onclick="location.href='@Url.Action("WPCommonOfBuild_Export", "Build", new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="button button-ExportToExcel" type="button" name="ExportToExcelToolBarUp" value="@Framework.Resources.UIStringResource.ExportToExcelAlternativeText" />
+<input onclick="location.href='@Url.Action("Import", "Build")'" class="button button-Import" type="button" name="ImportToolBarUp" value="@Framework.Resources.UIStringResource.ImportAlternativeText" />
+</div>
+<div>
+</div>
+<div>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareBuildStartTimeCommonOftOfCommon, new { style="display:display;" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareBuildStartTimeCommonOftOfCommon
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareLowerBoundBuildStartTimeCommonOftOfCommon, new { style="display:display;" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundBuildStartTimeCommonOftOfCommon
+@Html.TextBox("lowerBoundBuildStartTimeCommonOftOfCommon", Model.Criteria.LowerBoundBuildStartTimeCommonOftOfCommon.ToString(), new { @readonly = "readonly" })
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareUpperBoundBuildStartTimeCommonOftOfCommon, new { style="display:display;" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundBuildStartTimeCommonOftOfCommon
+@Html.TextBox("upperBoundBuildStartTimeCommonOftOfCommon", Model.Criteria.UpperBoundBuildStartTimeCommonOftOfCommon.ToString(), new { @readonly = "readonly" })
+</div>
+<div>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareDescriptionCommonOftOfCommon, new { style="display:display;" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon
+@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedDescriptionCommonOftOfCommon)
+</div>
+<div>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareNameCommonOftOfCommon, new { style="display:display;" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon
+@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedNameCommonOftOfCommon)
+</div>
+<div>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfSolution_S1_1OfCommon, new { style="display:display;" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_S1_1OfCommon
+@Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfSolution_S1_1OfCommon, (List<SelectListItem>)Model.SelectListOfMSBuildLogsExtended_Solution, MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Please_select_Solution____)
+</div>
+<div class="buttonContainer">
+    <div class="paging-label">Items per page : </div><div class="paging-field">@Html.DropDownListFor(model=>model.QueryPagingSetting.PageSize, Model.SelectListOfPageSize, new Dictionary<string,Object>{ { "onchange", "this.form.submit();" } })
+    </div><div class="paging-label">Sort by:</div><div class="paging-field">@Html.DropDownListFor(model => model.QueryOrderBySettingCollecionInString, Model.SelectListOfQueryOrderBySettingCollecionInString, new Dictionary<string, Object> { { "onchange", "this.form.submit();" } })
+    </div><div class="paging-field-right">@Model.QueryPagingSetting.GetPagingInformationString()</div>
+</div>
+<div class="buttonContainer">
+<input class="button button-Search" type="submit" name="SearchToolBarBottom" value="@Framework.Resources.UIStringResource.SearchAlternativeText" />
+<input onclick="location.href='@Url.Action("AddNew", "Build")'" class="button button-AddNew" type="button" name="AddNewToolBarBottom" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
+<input onclick="location.href='@Url.Action("WPCommonOfBuild_Export", "Build", new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="button button-Export" type="button" name="ExportToolBarBottom" value="@Framework.Resources.UIStringResource.ExportAlternativeText" />
+<input onclick="location.href='@Url.Action("WPCommonOfBuild_Export", "Build", new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="button button-ExportToExcel" type="button" name="ExportToExcelToolBarBottom" value="@Framework.Resources.UIStringResource.ExportToExcelAlternativeText" />
+<input onclick="location.href='@Url.Action("Import", "Build")'" class="button button-Import" type="button" name="ImportToolBarBottom" value="@Framework.Resources.UIStringResource.ImportAlternativeText" />
+</div>
+</div>
+}
+</div>
+<div class="default">
+<div>
+    @Html.PagedListPager(Url
+        , new PagerHtmlRenderer(
+        //Constructor mandatory values
+                currentPageNumber: Model.QueryPagingSetting.CurrentPage,
+                pageSize: Model.QueryPagingSetting.PageSize,
+                totalNumberOfItems: Model.QueryPagingSetting.CountOfRecords,
+                actionName: "WPCommonOfBuild",
+                controllerName: "Build",
+                routeValues: new RouteValueDictionary() { { "currentPage", "" } },
+                pageRouteValueName: "currentPage")
+                {
+                    //Properties
+                    PreviousLinkInnerHtml = "<strong>Previous</strong>",
+                    NextLinkInnerHtml = "<strong>Next<strong>",
+                    FirstLinkInnerHtml = "<strong>First</strong>",
+                    LastLinkInnerHtml = "<strong>Last</strong>"
+                });
+</div>
+<div>
+<table id="MasterDataControl0" name="MasterDataControl0" >
+<tr><th class="sorting"></th>
+<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Solution_S1_1_Name</th>
+<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Name</th>
+<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Description</th>
+<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.BuildStartTime</th>
+<th class="sorting"></th></tr>
+    @if (Model != null && Model.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+    {
+		int index = 0;
+        foreach (var item in Model.Result)
+        {
+			index++;
+<tr><td ></td>
+<td >@Html.ActionLink(item.Solution_S1_1_Name, "WPEntityRelatedOfSolution", "Solution", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.SolutionId }, null)</td>
+<td >@Html.DisplayFor(modelItem => item.Name)</td>
+<td >@Html.DisplayFor(modelItem => item.Description)</td>
+<td >@Html.DisplayFor(modelItem => item.BuildStartTime)</td>
+<td ><div class="buttonContainer">
+<input onclick="location.href='@Url.Action("WPEntityRelatedOfBuild", "Build", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" class="button button-Details" type="button" name="DetailsToolBarRightInList" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+<input onclick="location.href='@Url.Action("Edit", "Build", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" class="button button-Edit" type="button" name="EditToolBarRightInList" value="@Framework.Resources.UIStringResource.EditAlternativeText" />
+</div></td></tr>
+        }
+    }
+    else
+    {
+<tr><td colspan="50" ><div class="error-label">@Model.StatusMessageOfResult</div></td></tr>
+    }
+</table>
+</div>
+<div>
+    @Html.PagedListPager(Url
+        , new PagerHtmlRenderer(
+        //Constructor mandatory values
+                currentPageNumber: Model.QueryPagingSetting.CurrentPage,
+                pageSize: Model.QueryPagingSetting.PageSize,
+                totalNumberOfItems: Model.QueryPagingSetting.CountOfRecords,
+                actionName: "WPCommonOfBuild",
+                controllerName: "Build",
+                routeValues: new RouteValueDictionary() { { "currentPage", "" } },
+                pageRouteValueName: "currentPage")
+                {
+                    //Properties
+                    PreviousLinkInnerHtml = "<strong>Previous</strong>",
+                    NextLinkInnerHtml = "<strong>Next<strong>",
+                    FirstLinkInnerHtml = "<strong>First</strong>",
+                    LastLinkInnerHtml = "<strong>Last</strong>"
+                });
+</div>
+</div>
+</div>
+</article>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/dataTables")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script type="text/javascript">
+        //http://www.softfinity.com/blog/using-ajax-with-knockout-js-and-asp-net-mvc-4-to-load-select-drop-down-options/
+        $(document).ready($(function() {
+            $('input[name=upperBoundBuildStartTimeCommonOftOfCommon]').datepicker({
+                autoclose: true,
+                beforeShowDay: $.noop,
+                calendarWeeks: false,
+                clearBtn: false,
+                daysOfWeekDisabled: [],
+                endDate: Infinity,
+                forceParse: true,
+                format: 'dd/mm/yyyy',
+                keyboardNavigation: true,
+                language: 'en',
+                minViewMode: 0,
+                orientation: 'auto',
+                rtl: false,
+                startDate: -Infinity,
+                startView: 2,
+                todayBtn: false,
+                todayHighlight: false,
+                weekStart: 0
+            });
+            $('input[name=lowerBoundBuildStartTimeCommonOftOfCommon]').datepicker({
+                autoclose: true,
+                beforeShowDay: $.noop,
+                calendarWeeks: false,
+                clearBtn: false,
+                daysOfWeekDisabled: [],
+                endDate: Infinity,
+                forceParse: true,
+                format: 'dd/mm/yyyy',
+                keyboardNavigation: true,
+                language: 'en',
+                minViewMode: 0,
+                orientation: 'auto',
+                rtl: false,
+                startDate: -Infinity,
+                startView: 2,
+                todayBtn: false,
+                todayHighlight: false,
+                weekStart: 0
+            });
+        }));
+        $(document).ready($(function() {
+            $.validator.addMethod(
+                "date",
+                function(value, element) {
+                    var bits = value.match(/([0-9]+)/gi), str;
+                    if (!bits)
+                        return this.optional(element) || false;
+                    str = bits[1] + '/' + bits[0] + '/' + bits[2];
+                    return this.optional(element) || !/Invalid|NaN/.test(new Date(str));
+                },
+                "Please enter a date in the format dd/mm/yyyy"
+            );
+            $("form").validate({
+                onkeyup: false,
+                errorPlacement: function(error, element) {
+                    if (element.attr("name").indexOf("DOB") >= 0) {
+                        error.insertAfter("#DOB_Day");
+                    } else {
+                        error.insertAfter(element);
+                    }
+                },
+                rules: {
+                    upperBoundBuildStartTimeCommonOftOfCommon: {
+                        //required: true,
+                        date: true,
+                        range: ['1900-01-01', '2100-01-01']
+                    },
+                    lowerBoundBuildStartTimeCommonOftOfCommon: {
+                        //required: true,
+                        date: true,
+                        range: ['1900-01-01', '2100-01-01']
+                    },
+                },
+                messages: {
+                    upperBoundBuildStartTimeCommonOftOfCommon: {
+                        //required: 'Email is required',
+                        date: 'Please enter a date in the format dd/mm/yyyy',
+                    },
+                    lowerBoundBuildStartTimeCommonOftOfCommon: {
+                        //required: 'Email is required',
+                        date: 'Please enter a date in the format dd/mm/yyyy',
+                    },
+                },
+                highlight:
+                    function(element) {
+                        $(element).css('border', '2px solid red');
+                    },
+                unhighlight:
+                    function(element) {
+                        $(element).css('border', '1px solid rgb(170, 170, 170)');
+                    },
+                errorLabelContainer: "#ErrorList",
+                wrapper: "li",
+            });
+        }));
+        //cascaded dropdownlist by knockoutjs
+        function CascadingDDLViewModel() {
+            var self = this;
+        }
+        $(document).ready($(function() {
+            var objVM = new CascadingDDLViewModel();
+            ko.applyBindings(objVM);
+        }));
+    </script>
+}

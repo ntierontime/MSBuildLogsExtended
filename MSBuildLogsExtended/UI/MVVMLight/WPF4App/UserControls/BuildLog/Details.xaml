@@ -1,0 +1,49 @@
+<UserControl
+            x:Class="MSBuildLogsExtended.WPF4App.UserControls.BuildLog.Details"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            mc:Ignorable="d"
+		    xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras"
+		    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+		    xmlns:vm="clr-namespace:MSBuildLogsExtended.ViewModels;assembly=MSBuildLogsExtended.ViewModels"
+			xmlns:fresx="clr-namespace:Framework.Resources;assembly=Framework.Resources"
+			xmlns:eresx="clr-namespace:MSBuildLogsExtended.Resources;assembly=MSBuildLogsExtended.Resources"
+            >
+    <Grid DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.CurrentDefault, Source={StaticResource Locator}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition   Width="Auto" />
+            <ColumnDefinition   Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Build_B1_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
+		<TextBlock Text="{Binding Path=Build_B1_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
+		<TextBlock Text="{Binding Path=Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_S1_1Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_S1_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
+		<TextBlock Text="{Binding Path=Solution_S1_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCode_B2_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
+		<TextBlock Text="{Binding Path=BuildEventCode_B2_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
+		<TextBlock Text="{Binding Path=BuildId, Mode=TwoWay}" Grid.Column="1" Grid.Row="5" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCodeId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
+		<TextBlock Text="{Binding Path=BuildEventCodeId, Mode=TwoWay}" Grid.Column="1" Grid.Row="6" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Message, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
+		<TextBlock Text="{Binding Path=Message, Mode=TwoWay}" Grid.Column="1" Grid.Row="7" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
+		<TextBlock Text="{Binding Path=EventTime, Mode=TwoWay}" Grid.Column="1" Grid.Row="8" />
+    </Grid>
+</UserControl>
