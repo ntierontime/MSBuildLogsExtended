@@ -1,1 +1,11 @@
-Read.Me
+Please reference following links if you need more information about how msbuild.exe work together with sql logger database. There are some changes between this solution and the link.
+https://github.com/mikefourie/MSBuildExtensionPack/blob/master/Solutions/Main/Loggers/Framework/SqlLogger.cs
+or 
+http://mikefourie.github.io/MSBuildExtensionPack/
+
+There is msbep_SqlLogger.sql file to create stored procedure for SqlLogger. Please run this file in Sql Management Studio after you create MSBuildLogsExtended database using ..\MSBuildLogsExtended\MSBuildLogsExtended\Core\VS2012DatabaseProject\MSBuildLogsExtended.VS2012DatabaseProject.sqlproj
+
+Sample batch file to run msbuild with SqlLogger:
+
+@path=%windir%\Microsoft.NET\Framework\v4.0.30319;%windir%\Microsoft.NET\Framework\v3.5;%path%
+msbuild <%path to you solution or project file%> /l:SqlLogger,MSBuild.ExtensionPack.Loggers.dll;BID=123;BN=Log4Net,Deploy_Log4Net_AspNetMvc40Rasor_%date:~-4,4%%date:~-10,2%%date:~-7,2%_%time:~0,2%%time:~3,2%%time:~6,2%;DS=localhost;IC=MSBuildLogsExtended;SP=msbep_SqlLogger;CL;/p:Configuration=Release;DeployOnBuild=true;PublishProfile=Z1_WebSitePublishProfiles\Log4Net.AspNetMvc40Rasor.Publish.xml
