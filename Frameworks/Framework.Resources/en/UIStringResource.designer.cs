@@ -21,7 +21,14 @@ namespace Framework.Resources {
     public class UIStringResource {
         
         private static ResourceLoader resourceLoader = new ResourceLoader("Framework.Resources.WinRT/UIStringResource");
-        
+        public static ResourceLoader ResourceManager
+        {
+            get
+            {
+                return resourceLoader;
+            }
+        }
+
         public UIStringResource() {
         }
 

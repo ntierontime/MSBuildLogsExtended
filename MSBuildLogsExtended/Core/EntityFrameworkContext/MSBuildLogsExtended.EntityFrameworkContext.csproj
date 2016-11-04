@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.EntityFrameworkContext</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.EntityFrameworkContext</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
@@ -56,7 +56,6 @@
     <None Include="EFEntityDataModel.Context.tt" />
     <Compile Include="EFEntityDataModel.Context.cs">
       <DependentUpon>EFEntityDataModel.Context.tt</DependentUpon>
-      <SubType>RESXCodeBehind</SubType>
     </Compile>
     <Compile Include="EFEntityDataModel.Generated.cs" />
     <None Include="EFEntityDataModel.txt" />

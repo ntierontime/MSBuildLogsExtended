@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -14,6 +14,9 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <TargetFrameworkVersion />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -130,33 +133,47 @@
     </Compile>
     <Compile Include="..\..\Frameworks\Framework\IoCContainerWrapper.cs">
       <Link>IoCContainerWrapper.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\BinaryRelated\BinaryFile.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\BinaryRelated\BinaryFile.cs">
       <Link>BinaryRelated\BinaryFile.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\BinaryRelated\BinaryFileHelper.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\BinaryRelated\BinaryFileHelper.cs">
       <Link>BinaryRelated\BinaryFileHelper.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\DateTimePeriodHelper.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\DateTimePeriodHelper.cs">
       <Link>DateTimePeriodHelper.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\Models\MenuTreeItem.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\Models\MenuTreeItem.cs">
       <Link>Models\MenuTreeItem.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\LoggingOptions.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\LoggingOptions.cs">
       <Link>LoggingOptions.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\BinaryRelated\MIMEContentTypeToFileExtensionMappingCollection.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\BinaryRelated\MIMEContentTypeToFileExtensionMappingCollection.cs">
       <Link>BinaryRelated\MIMEContentTypeToFileExtensionMappingCollection.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\Models\ChangePasswordModel.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\Models\ChangePasswordModel.cs">
       <Link>Models\ChangePasswordModel.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\Models\LogOnModel.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\Models\LogOnModel.cs">
       <Link>Models\LogOnModel.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\Models\RegisterModel.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\Models\RegisterModel.cs">
       <Link>Models\RegisterModel.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\NameValuePair.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\NameValuePair.cs">
       <Link>NameValuePair.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\PagingPageSizeOption.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\PagingPageSizeOption.cs">
       <Link>PagingPageSizeOption.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\RssItem.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\RssItem.cs">
       <Link>RssItem.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\Common\Singleton.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\Common\Singleton.cs">
       <Link>Common\Singleton.cs</Link>
-    </Compile>  </ItemGroup>
+    </Compile>
+  </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
@@ -166,13 +183,13 @@
       <HintPath>..\..\packages\LINQtoCSV.1.5.0.0\lib\net35\LINQtoCSV.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
-    <VisualStudioVersion>11.0</VisualStudioVersion>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="6d25aa30-c3af-4ae0-b567-0f2653120cdc" />
+      <UserProperties ProjectLinkReference="6d25aa30-c3af-4ae0-b567-0f2653120cdc" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
     </VisualStudio>
   </ProjectExtensions>
   <!--

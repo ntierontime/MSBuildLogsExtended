@@ -1,12 +1,13 @@
-<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
 <edmx:Runtime>
 <edmx:StorageModels>
-<Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="MSBuildLogsExtendedModel.Store" Alias="self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="MSBuildLogsExtendedModel.Store" Alias="self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
   <EntityContainer Name="MSBuildLogsExtendedModelStoreContainer">
-    <EntitySet Name="Build" EntityType="MSBuildLogsExtendedModel.Store.Build" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="BuildEventCode" EntityType="MSBuildLogsExtendedModel.Store.BuildEventCode" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="BuildLog" EntityType="MSBuildLogsExtendedModel.Store.BuildLog" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Solution" EntityType="MSBuildLogsExtendedModel.Store.Solution" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Build" EntityType="MSBuildLogsExtendedModel.Store.Build" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="BuildEventCode" EntityType="MSBuildLogsExtendedModel.Store.BuildEventCode" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="BuildLog" EntityType="MSBuildLogsExtendedModel.Store.BuildLog" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="Solution" EntityType="MSBuildLogsExtendedModel.Store.Solution" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
     <AssociationSet Name="FK_Build_Solution" Association="MSBuildLogsExtendedModel.Store.FK_Build_Solution">
       <End Role="Build" EntitySet="Solution" />
       <End Role="Solution" EntitySet="Build" />
@@ -96,7 +97,7 @@
 </Schema>
 </edmx:StorageModels>
 <edmx:ConceptualModels>
-<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" Namespace="MSBuildLogsExtendedModel" Alias="self" annotation:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="MSBuildLogsExtendedModel" Alias="self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
   <EntityContainer Name="MSBuildLogsExtendedEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Build" EntityType="MSBuildLogsExtendedModel.Build" />
     <EntitySet Name="BuildEventCode" EntityType="MSBuildLogsExtendedModel.BuildEventCode" />
@@ -197,7 +198,7 @@
 </Schema>
 </edmx:ConceptualModels>
 <edmx:Mappings>
-<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
   <EntityContainerMapping StorageEntityContainer="MSBuildLogsExtendedModelStoreContainer" CdmEntityContainer="MSBuildLogsExtendedEntities">
     <EntitySetMapping Name="Build">
       <EntityTypeMapping TypeName="MSBuildLogsExtendedModel.Build">
@@ -244,8 +245,8 @@
 </Mapping>
 </edmx:Mappings>
 </edmx:Runtime>
-<edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
-<Connection><DesignerInfoPropertySet><DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" /></DesignerInfoPropertySet></Connection>
+<edmx:Designer>
+<Connection xmlns="http://schemas.microsoft.com/ado/2007/06/edmx"><DesignerInfoPropertySet><DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" /></DesignerInfoPropertySet></Connection>
 <edmx:Options />
 <edmx:Diagrams />
 </edmx:Designer></edmx:Edmx>
