@@ -42,8 +42,6 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="BusinessLogicLayerContext.cs" />
     <Compile Include="BusinessLogicLayerContextContainerCommon.cs" />
     <Compile Include="BusinessLogicLayerContextSetting.cs" />
@@ -52,9 +50,11 @@
     <Compile Include="BusinessLogicLayerRequestTypes.cs" />
     <Compile Include="BusinessLogicLayerResponseMessageBase.cs" />
     <Compile Include="IBusinessLogicLayerContextContainer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionVariablesCommon.cs" />
     <Content Include="Maps\map.1.B.3.vsd" />
     <Content Include="Maps\map.1.B.3.vsd.png" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj">

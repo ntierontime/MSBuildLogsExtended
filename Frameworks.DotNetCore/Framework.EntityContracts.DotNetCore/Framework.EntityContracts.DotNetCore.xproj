@@ -4,7 +4,6 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
-
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>62f3cc4f-4925-4a97-ade8-6f92d64912f7</ProjectGuid>
@@ -13,9 +12,90 @@
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
   </PropertyGroup>
-
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\AlphabeticalOrderCategory.cs">
+      <Link>AlphabeticalOrderCategory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\DateTimePivotEntities\DateTimePivot.cs">
+      <Link>DateTimePivotEntities\DateTimePivot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\DateTimePivotEntities\DateTimePivotCollection.cs">
+      <Link>DateTimePivotEntities\DateTimePivotCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\DateTimePivotEntities\DateTimePivotContextBase.cs">
+      <Link>DateTimePivotEntities\DateTimePivotContextBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\DateTimePivotEntities\DateTimePivotContextByAlphabeticalOrderCategoryBase.cs">
+      <Link>DateTimePivotEntities\DateTimePivotContextByAlphabeticalOrderCategoryBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\DateTimePivotEntities\DateTimePivotContextByDateTimePivotSettingBase.cs">
+      <Link>DateTimePivotEntities\DateTimePivotContextByDateTimePivotSettingBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\DateTimePivotEntities\DateTimePivotContextByNameValuePairBase.cs">
+      <Link>DateTimePivotEntities\DateTimePivotContextByNameValuePairBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\DateTimePivotEntities\DateTimePivotSetting.cs">
+      <Link>DateTimePivotEntities\DateTimePivotSetting.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\KnownMathCalculations.cs">
+      <Link>KnownMathCalculations.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\DateTimeUnit.cs">
+      <Link>Queries\DateTimeUnit.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\IQueryPredicate.cs">
+      <Link>Queries\IQueryPredicate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryCriteriaBase.cs">
+      <Link>Queries\QueryCriteriaBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryOrderBySetting.cs">
+      <Link>Queries\QueryOrderBySetting.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryPagingResult.cs">
+      <Link>Queries\QueryPagingResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryPagingSetting.cs">
+      <Link>Queries\QueryPagingSetting.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryPredicateBase.cs">
+      <Link>Queries\QueryPredicateBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryPredicateTypes.cs">
+      <Link>Queries\QueryPredicateTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\SummaryData.cs">
+      <Link>SummaryData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\IViewModelBase.cs">
+      <Link>ViewModels\IViewModelBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\SearchStatus.cs">
+      <Link>ViewModels\SearchStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\ViewModelBase.cs">
+      <Link>ViewModels\ViewModelBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\ViewModelItemBase.cs">
+      <Link>ViewModels\ViewModelItemBase.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\Frameworks\Framework.EntityContracts\Maps\map.1.B.3.vsd">
+      <Link>Maps\map.1.B.3.vsd</Link>
+    </Content>
+    <Content Include="..\..\Frameworks\Framework.EntityContracts\Maps\map.1.B.3.vsd.png">
+      <Link>Maps\map.1.B.3.vsd.png</Link>
+    </Content>
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="C3A270DE-9727-492E-91E2-F56E7E0E0F83" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

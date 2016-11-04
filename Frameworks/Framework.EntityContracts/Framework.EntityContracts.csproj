@@ -42,8 +42,6 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="AlphabeticalOrderCategory.cs" />
     <Compile Include="DateTimePivotEntities\DateTimePivot.cs" />
     <Compile Include="DateTimePivotEntities\DateTimePivotCollection.cs" />
@@ -52,22 +50,24 @@
     <Compile Include="DateTimePivotEntities\DateTimePivotContextByDateTimePivotSettingBase.cs" />
     <Compile Include="DateTimePivotEntities\DateTimePivotContextByNameValuePairBase.cs" />
     <Compile Include="DateTimePivotEntities\DateTimePivotSetting.cs" />
-    <Compile Include="Queries\DateTimeUnit.cs" />
     <Compile Include="KnownMathCalculations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\DateTimeUnit.cs" />
+    <Compile Include="Queries\IQueryPredicate.cs" />
+    <Compile Include="Queries\QueryCriteriaBase.cs" />
+    <Compile Include="Queries\QueryOrderBySetting.cs" />
     <Compile Include="Queries\QueryPagingResult.cs" />
+    <Compile Include="Queries\QueryPagingSetting.cs" />
+    <Compile Include="Queries\QueryPredicateBase.cs" />
+    <Compile Include="Queries\QueryPredicateTypes.cs" />
     <Compile Include="SummaryData.cs" />
     <Compile Include="ViewModels\IViewModelBase.cs" />
     <Compile Include="ViewModels\SearchStatus.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\ViewModelItemBase.cs" />
-    <Compile Include="Queries\QueryCriteriaBase.cs" />
-    <Compile Include="Queries\QueryOrderBySetting.cs" />
-    <Compile Include="Queries\QueryPagingSetting.cs" />
-    <Compile Include="Queries\QueryPredicateBase.cs" />
-    <Compile Include="Queries\IQueryPredicate.cs" />
-    <Compile Include="Queries\QueryPredicateTypes.cs" />
     <Content Include="Maps\map.1.B.3.vsd" />
     <Content Include="Maps\map.1.B.3.vsd.png" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj">
