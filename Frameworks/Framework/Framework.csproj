@@ -42,31 +42,31 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="AssemblyHelper.cs" />
+    <Compile Include="BinaryRelated\BinaryFile.cs" />
+    <Compile Include="BinaryRelated\BinaryFileHelper.cs" />
+    <Compile Include="BinaryRelated\MIMEContentTypeToFileExtensionMappingCollection.cs" />
+    <Compile Include="Common\Singleton.cs" />
     <Compile Include="DataServiceTypes.cs" />
     <Compile Include="DataStreamServiceResult.cs" />
+    <Compile Include="DateTimePeriodHelper.cs" />
     <Compile Include="IDataStreamServiceProviderBase.cs" />
+    <Compile Include="IoCContainerWrapper.cs" />
+    <Compile Include="LoggingOptions.cs" />
+    <Compile Include="Models\ChangePasswordModel.cs" />
+    <Compile Include="Models\LogOnModel.cs" />
+    <Compile Include="Models\MenuTreeItem.cs" />
+    <Compile Include="Models\RegisterModel.cs" />
+    <Compile Include="NameValuePair.cs" />
     <Compile Include="NavigationSetting.cs" />
+    <Compile Include="PagingPageSizeOption.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyChangedNotifier.cs" />
+    <Compile Include="RssItem.cs" />
     <Compile Include="UIAction.cs" />
     <Compile Include="UIActionStatus.cs" />
     <Compile Include="UIActionStatusMessage.cs" />
-    <Compile Include="IoCContainerWrapper.cs" />
-    <Compile Include="BinaryRelated\BinaryFile.cs" />
-    <Compile Include="BinaryRelated\BinaryFileHelper.cs" />
-    <Compile Include="DateTimePeriodHelper.cs" />
-    <Compile Include="Models\MenuTreeItem.cs" />
-    <Compile Include="LoggingOptions.cs" />
-    <Compile Include="BinaryRelated\MIMEContentTypeToFileExtensionMappingCollection.cs" />
-    <Compile Include="Models\ChangePasswordModel.cs" />
-    <Compile Include="Models\LogOnModel.cs" />
-    <Compile Include="Models\RegisterModel.cs" />
-    <Compile Include="NameValuePair.cs" />
-    <Compile Include="PagingPageSizeOption.cs" />
-    <Compile Include="RssItem.cs" />
-    <Compile Include="Common\Singleton.cs" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

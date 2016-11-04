@@ -43,21 +43,41 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
-    <EmbeddedResource Include="UIImageResource.resx">
-    </EmbeddedResource>
     <Compile Include="UIImageResource.designer.cs">
       <DependentUpon>UIImageResource.resx</DependentUpon>
-      <SubType>RESXCodeBehind</SubType>
     </Compile>
-    <EmbeddedResource Include="UIStringResource.resx">
-    </EmbeddedResource>
     <Compile Include="UIStringResource.designer.cs">
       <DependentUpon>UIStringResource.resx</DependentUpon>
-      <SubType>RESXCodeBehind</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\AddNew.png" />
+    <Content Include="Images\Attachment.png" />
+    <Content Include="Images\Back.png" />
+    <Content Include="Images\Bookmark.png" />
+    <Content Include="Images\Calendar.png" />
+    <Content Include="Images\Cancel.png" />
+    <Content Include="Images\ChangePassword.png" />
+    <Content Include="Images\Chart.png" />
+    <Content Include="Images\Checkbox_Checked.png" />
+    <Content Include="Images\Checkbox_Unchecked.png" />
+    <Content Include="Images\Clock.png" />
+    <Content Include="Images\Close.png" />
+    <Content Include="Images\Comment.png" />
     <Content Include="Images\Comments.png" />
     <Content Include="Images\Confirm.png" />
+    <Content Include="Images\Copy.png" />
     <Content Include="Images\CreateUser.png" />
     <Content Include="Images\Delete.png" />
     <Content Include="Images\Details.png" />
@@ -71,7 +91,9 @@
     <Content Include="Images\FileReplace.png" />
     <Content Include="Images\First.png" />
     <Content Include="Images\Forward.png" />
+    <Content Include="Images\FullDetails.png" />
     <Content Include="Images\Go.png" />
+    <Content Include="Images\GotoSearch.png" />
     <Content Include="Images\Heart.png" />
     <Content Include="Images\Help.png" />
     <Content Include="Images\Home.png" />
@@ -89,6 +111,7 @@
     <Content Include="Images\MailSend.png" />
     <Content Include="Images\Minus.png" />
     <Content Include="Images\Money.png" />
+    <Content Include="Images\More.png" />
     <Content Include="Images\NewFile.png" />
     <Content Include="Images\Next.png" />
     <Content Include="Images\NumericDown.png" />
@@ -96,6 +119,7 @@
     <Content Include="Images\Open.png" />
     <Content Include="Images\PageSize.png" />
     <Content Include="Images\PasswordRecovery.png" />
+    <Content Include="Images\Paste.png" />
     <Content Include="Images\Pause.png" />
     <Content Include="Images\PieChart.png" />
     <Content Include="Images\Play.png" />
@@ -135,39 +159,10 @@
     <Content Include="Images\Warning.png" />
     <Content Include="Images\ZoomIn.png" />
     <Content Include="Images\ZoomOut.png" />
-    <Content Include="Images\AddNew.png" />
-    <Content Include="Images\Attachment.png" />
-    <Content Include="Images\Back.png" />
-    <Content Include="Images\Bookmark.png" />
-    <Content Include="Images\Calendar.png" />
-    <Content Include="Images\Cancel.png" />
-    <Content Include="Images\ChangePassword.png" />
-    <Content Include="Images\Chart.png" />
-    <Content Include="Images\Checkbox_Checked.png" />
-    <Content Include="Images\Checkbox_Unchecked.png" />
-    <Content Include="Images\Clock.png" />
-    <Content Include="Images\Close.png" />
-    <Content Include="Images\Comment.png" />
-    <Content Include="Images\Paste.png" />
-    <Content Include="Images\Copy.png" />
-    <Content Include="Images\More.png" />
-    <Content Include="Images\FullDetails.png" />
-    <Content Include="Images\GotoSearch.png" />
   </ItemGroup>
   <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
-  </ItemGroup>
-  <ItemGroup>
+    <EmbeddedResource Include="UIImageResource.resx" />
+    <EmbeddedResource Include="UIStringResource.resx" />
   </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent>rem copy $(TargetPath) $(SolutionDir)BuiltResults\*.* /y</PostBuildEvent>

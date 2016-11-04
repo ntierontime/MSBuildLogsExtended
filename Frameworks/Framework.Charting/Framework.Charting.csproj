@@ -42,12 +42,14 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="MSChartBuilder.cs" />
     <Compile Include="MSChartConfiguration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Maps\map.1.B.2.vsd" />
     <Content Include="Maps\map.1.B.2.vsd.png" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

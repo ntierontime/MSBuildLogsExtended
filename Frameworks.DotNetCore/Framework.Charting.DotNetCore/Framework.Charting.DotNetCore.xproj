@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>6de8dca0-3200-4e4d-ac42-6a2104042be9</ProjectGuid>
+    <RootNamespace>Framework.Charting.DotNetCore</RootNamespace>
+    <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
+    <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="..\..\Frameworks\Framework.Charting\Maps\map.1.B.2.vsd">
+      <Link>Maps\map.1.B.2.vsd</Link>
+    </Content>
+    <Content Include="..\..\Frameworks\Framework.Charting\Maps\map.1.B.2.vsd.png">
+      <Link>Maps\map.1.B.2.vsd.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Frameworks\Framework.Charting\MSChartBuilder.cs">
+      <Link>MSChartBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Charting\MSChartConfiguration.cs">
+      <Link>MSChartConfiguration.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="51D5F233-02F2-45F7-B4F2-60D18EF3DEC5" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
