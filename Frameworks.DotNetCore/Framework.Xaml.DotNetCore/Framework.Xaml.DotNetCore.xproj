@@ -4,7 +4,6 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
-
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>581b4957-215d-4cbb-86fe-32c5116fe908</ProjectGuid>
@@ -13,9 +12,60 @@
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
   </PropertyGroup>
-
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="..\..\Frameworks\Framework.Xaml\Maps\map.1.D.1.vsd">
+      <Link>Maps\map.1.D.1.vsd</Link>
+    </Content>
+    <Content Include="..\..\Frameworks\Framework.Xaml\Maps\map.1.D.1.vsd.png">
+      <Link>Maps\map.1.D.1.vsd.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Frameworks\Framework.Xaml\BindingUtility.cs">
+      <Link>BindingUtility.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Xaml\BooleanNegationConverter.cs">
+      <Link>BooleanNegationConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Xaml\BooleanToOnOffConverter.cs">
+      <Link>BooleanToOnOffConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Xaml\BoolToVisibilityConverter.cs">
+      <Link>BoolToVisibilityConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Xaml\InfiniteListBox.cs">
+      <Link>InfiniteListBox.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Xaml\LayoutAwarePage.cs">
+      <Link>LayoutAwarePage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Xaml\MenuTreeItem.cs">
+      <Link>MenuTreeItem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Xaml\NameValuePairToIntegerConverter.cs">
+      <Link>NameValuePairToIntegerConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Xaml\RichTextColumns.cs">
+      <Link>RichTextColumns.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Xaml\SuspensionManager.cs">
+      <Link>SuspensionManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Xaml\TextBoxUpdateSourceBehaviour.cs">
+      <Link>TextBoxUpdateSourceBehaviour.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Xaml\ViewModelBaseWithResultAndUIElement.cs">
+      <Link>ViewModelBaseWithResultAndUIElement.cs</Link>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="E5302713-0022-4657-85D8-9620818071DF" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

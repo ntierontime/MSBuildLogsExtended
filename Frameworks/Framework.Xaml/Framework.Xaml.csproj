@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Framework.Xaml</RootNamespace>
     <AssemblyName>Framework.Xaml</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
@@ -44,22 +44,22 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
-    <Compile Include="TextBoxUpdateSourceBehaviour.cs" />
     <Compile Include="BindingUtility.cs" />
+    <Compile Include="BooleanNegationConverter.cs" />
     <Compile Include="BooleanToOnOffConverter.cs" />
+    <Compile Include="BoolToVisibilityConverter.cs" />
     <Compile Include="InfiniteListBox.cs" />
     <Compile Include="LayoutAwarePage.cs" />
+    <Compile Include="MenuTreeItem.cs" />
     <Compile Include="NameValuePairToIntegerConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RichTextColumns.cs" />
     <Compile Include="SuspensionManager.cs" />
+    <Compile Include="TextBoxUpdateSourceBehaviour.cs" />
     <Compile Include="ViewModelBaseWithResultAndUIElement.cs" />
-    <Compile Include="BooleanNegationConverter.cs" />
-    <Compile Include="BoolToVisibilityConverter.cs" />
-    <Compile Include="MenuTreeItem.cs" />
     <Content Include="Maps\map.1.D.1.vsd" />
     <Content Include="Maps\map.1.D.1.vsd.png" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj">

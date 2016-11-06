@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.DataSourceEntities</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.DataSourceEntities</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -42,28 +42,28 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
-    <Compile Include="DataSourceEntity_\Build.cs" />
-    <Compile Include="DataSourceEntity_\BuildEventCode.cs" />
-    <Compile Include="DataSourceEntity_\BuildLog.cs" />
-    <Compile Include="DataSourceEntity_\Solution.cs" />
-    <Compile Include="DataSourceEntity_\BuildCollection.cs" />
-    <Compile Include="DataSourceEntity_\BuildEventCodeCollection.cs" />
-    <Compile Include="DataSourceEntity_\BuildLogCollection.cs" />
-    <Compile Include="DataSourceEntity_\SolutionCollection.cs" />
     <Compile Include="DataSourceEntityHelpers\DataSourceEntityHelperBuild.cs" />
     <Compile Include="DataSourceEntityHelpers\DataSourceEntityHelperBuildEventCode.cs" />
     <Compile Include="DataSourceEntityHelpers\DataSourceEntityHelperBuildLog.cs" />
     <Compile Include="DataSourceEntityHelpers\DataSourceEntityHelperSolution.cs" />
-    <Compile Include="DataSourceIdentifiers\BuildIdentifier.cs" />
+    <Compile Include="DataSourceEntity_\Build.cs" />
+    <Compile Include="DataSourceEntity_\BuildCollection.cs" />
+    <Compile Include="DataSourceEntity_\BuildEventCode.cs" />
+    <Compile Include="DataSourceEntity_\BuildEventCodeCollection.cs" />
+    <Compile Include="DataSourceEntity_\BuildLog.cs" />
+    <Compile Include="DataSourceEntity_\BuildLogCollection.cs" />
+    <Compile Include="DataSourceEntity_\Solution.cs" />
+    <Compile Include="DataSourceEntity_\SolutionCollection.cs" />
     <Compile Include="DataSourceIdentifiers\BuildEventCodeIdentifier.cs" />
+    <Compile Include="DataSourceIdentifiers\BuildIdentifier.cs" />
     <Compile Include="DataSourceIdentifiers\BuildLogIdentifier.cs" />
     <Compile Include="DataSourceIdentifiers\SolutionIdentifier.cs" />
     <Compile Include="DataSourceQueryCriteriaByEntityReferences\DataSourceQueryCriteriaByEntityReferenceBuild.cs" />
     <Compile Include="DataSourceQueryCriteriaByEntityReferences\DataSourceQueryCriteriaByEntityReferenceBuildLog.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Maps\map.2.B.3.vsd" />
     <Content Include="Maps\map.2.B.3.vsd.png" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EntityContracts\MSBuildLogsExtended.EntityContracts.csproj">

@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.DALContracts</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.DALContracts</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -42,15 +42,15 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="DataAccessLayerEntityContractBuild.cs" />
     <Compile Include="DataAccessLayerEntityContractBuildEventCode.cs" />
     <Compile Include="DataAccessLayerEntityContractBuildLog.cs" />
     <Compile Include="DataAccessLayerEntityContractSolution.cs" />
     <Compile Include="DataAccessLayerFactoryContract.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Maps\map.2.A.1.vsd" />
     <Content Include="Maps\map.2.A.1.vsd.png" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks\Framework.EntityContracts\Framework.EntityContracts.csproj">

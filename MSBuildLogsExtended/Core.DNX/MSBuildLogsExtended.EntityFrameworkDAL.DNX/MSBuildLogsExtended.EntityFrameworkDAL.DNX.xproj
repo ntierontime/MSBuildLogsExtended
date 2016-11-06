@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>8cc4c294-6643-422c-aba6-8bc4dec603c9</ProjectGuid>
+    <RootNamespace>MSBuildLogsExtended.EntityFrameworkDAL.DNX</RootNamespace>
+    <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
+    <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Core\EntityFrameworkDAL\EFDataAccessLayerEntities\EFDataAccessLayerEntityBuild.cs">
+      <Link>EFDataAccessLayerEntities\EFDataAccessLayerEntityBuild.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityFrameworkDAL\EFDataAccessLayerEntities\EFDataAccessLayerEntityBuildEventCode.cs">
+      <Link>EFDataAccessLayerEntities\EFDataAccessLayerEntityBuildEventCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityFrameworkDAL\EFDataAccessLayerEntities\EFDataAccessLayerEntityBuildLog.cs">
+      <Link>EFDataAccessLayerEntities\EFDataAccessLayerEntityBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityFrameworkDAL\EFDataAccessLayerEntities\EFDataAccessLayerEntitySolution.cs">
+      <Link>EFDataAccessLayerEntities\EFDataAccessLayerEntitySolution.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityFrameworkDAL\EFDataAccessLayerFactory.cs">
+      <Link>EFDataAccessLayerFactory.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\Core\EntityFrameworkDAL\Maps\map.2.A.1.vsd">
+      <Link>Maps\map.2.A.1.vsd</Link>
+    </Content>
+    <Content Include="..\..\Core\EntityFrameworkDAL\Maps\map.2.A.1.vsd.png">
+      <Link>Maps\map.2.A.1.vsd.png</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="E1175D88-A441-403E-8806-14BD0C0924B4" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

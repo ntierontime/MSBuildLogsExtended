@@ -4,7 +4,6 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
-
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>20189ef9-fd39-4084-8a9d-92f6f9b047b4</ProjectGuid>
@@ -13,9 +12,28 @@
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
   </PropertyGroup>
-
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Frameworks\Framework.Services\ClosedXmlHelper.cs">
+      <Link>ClosedXmlHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Services\DataStreamServiceProviderBase.cs">
+      <Link>DataStreamServiceProviderBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Services\LinqToCsvHelper.cs">
+      <Link>LinqToCsvHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Services\LinqToExcelHelper.cs">
+      <Link>LinqToExcelHelper.cs</Link>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="3EF91DC7-12C9-47F3-BB18-AD3D85D1B624" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.CommonBLLIoC</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.CommonBLLIoC</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -43,13 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="Static\BusinessLogicLayerEntityStaticBuild.cs" />
     <Compile Include="Static\BusinessLogicLayerEntityStaticBuildEventCode.cs" />
     <Compile Include="Static\BusinessLogicLayerEntityStaticBuildLog.cs" />
     <Compile Include="Static\BusinessLogicLayerEntityStaticSolution.cs" />
     <Content Include="Maps\map.2.C.2.vsd" />
     <Content Include="Maps\map.2.C.2.vsd.png" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks\Framework.CommonBLLEntities\Framework.CommonBLLEntities.csproj">

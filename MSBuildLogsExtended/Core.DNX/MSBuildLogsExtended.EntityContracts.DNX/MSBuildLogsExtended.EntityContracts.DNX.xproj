@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>ed23bc5f-7d25-4a52-9b03-b856f20bf041</ProjectGuid>
+    <RootNamespace>MSBuildLogsExtended.EntityContracts.DNX</RootNamespace>
+    <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
+    <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Core\EntityContracts\Contracts\IBuild.cs">
+      <Link>Contracts\IBuild.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\Contracts\IBuildEventCode.cs">
+      <Link>Contracts\IBuildEventCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\Contracts\IBuildLog.cs">
+      <Link>Contracts\IBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\Contracts\ISolution.cs">
+      <Link>Contracts\ISolution.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\EntityContractHelpers\IBuildEventCodeHelper.cs">
+      <Link>EntityContractHelpers\IBuildEventCodeHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\EntityContractHelpers\IBuildHelper.cs">
+      <Link>EntityContractHelpers\IBuildHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\EntityContractHelpers\IBuildLogHelper.cs">
+      <Link>EntityContractHelpers\IBuildLogHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\EntityContractHelpers\ISolutionHelper.cs">
+      <Link>EntityContractHelpers\ISolutionHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContractHelpers\IBuildEventCodeIdentifierHelper.cs">
+      <Link>IdentifierContractHelpers\IBuildEventCodeIdentifierHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContractHelpers\IBuildIdentifierHelper.cs">
+      <Link>IdentifierContractHelpers\IBuildIdentifierHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContractHelpers\IBuildLogIdentifierHelper.cs">
+      <Link>IdentifierContractHelpers\IBuildLogIdentifierHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContractHelpers\ISolutionIdentifierHelper.cs">
+      <Link>IdentifierContractHelpers\ISolutionIdentifierHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContracts\IBuildEventCodeIdentifier.cs">
+      <Link>IdentifierContracts\IBuildEventCodeIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContracts\IBuildIdentifier.cs">
+      <Link>IdentifierContracts\IBuildIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContracts\IBuildLogIdentifier.cs">
+      <Link>IdentifierContracts\IBuildLogIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContracts\ISolutionIdentifier.cs">
+      <Link>IdentifierContracts\ISolutionIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildByFKs.cs">
+      <Link>QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildByFKs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildLogByFKs.cs">
+      <Link>QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildLogByFKs.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\Core\EntityContracts\Maps\map.2.B.3.vsd">
+      <Link>Maps\map.2.B.3.vsd</Link>
+    </Content>
+    <Content Include="..\..\Core\EntityContracts\Maps\map.2.B.3.vsd.png">
+      <Link>Maps\map.2.B.3.vsd.png</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="D090796D-578A-4C52-B489-3E688DDD5206" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

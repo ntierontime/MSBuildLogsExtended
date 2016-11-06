@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.CommonBLLEntities</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.CommonBLLEntities</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -42,12 +42,11 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="ChainedQueryCriteria\BusinessLogicLayerChainedQueryCriteriaEntityBuild.cs" />
     <Compile Include="ChainedQueryCriteria\BusinessLogicLayerChainedQueryCriteriaEntityBuildEventCode.cs" />
     <Compile Include="ChainedQueryCriteria\BusinessLogicLayerChainedQueryCriteriaEntityBuildLog.cs" />
     <Compile Include="ChainedQueryCriteria\BusinessLogicLayerChainedQueryCriteriaEntitySolution.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryCriteria\BusinessLogicLayerQueryCriteriaEntityBuild.cs" />
     <Compile Include="QueryCriteria\BusinessLogicLayerQueryCriteriaEntityBuildEventCode.cs" />
     <Compile Include="QueryCriteria\BusinessLogicLayerQueryCriteriaEntityBuildLog.cs" />
@@ -70,6 +69,7 @@
     <Compile Include="ResponseMessagesUserDefined\BusinessLogicLayerResponseMessageUserDefinedSolution.cs" />
     <Content Include="Maps\map.2.B.2.vsd" />
     <Content Include="Maps\map.2.B.2.vsd.png" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataSourceEntities\MSBuildLogsExtended.DataSourceEntities.csproj">

@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.WcfContracts</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.WcfContracts</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -42,13 +42,12 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
-    <Compile Include="IBusinessLogicLayerFactory.cs" />
-    <Compile Include="IBuildWcfService.cs" />
     <Compile Include="IBuildEventCodeWcfService.cs" />
     <Compile Include="IBuildLogWcfService.cs" />
+    <Compile Include="IBuildWcfService.cs" />
+    <Compile Include="IBusinessLogicLayerFactory.cs" />
     <Compile Include="ISolutionWcfService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WcfServiceContractAsynBuild.cs" />
     <Compile Include="WcfServiceContractAsynBuildEventCode.cs" />
     <Compile Include="WcfServiceContractAsynBuildLog.cs" />
@@ -56,6 +55,7 @@
     <Compile Include="WcfServiceResolver.cs" />
     <Content Include="Maps\map.2.B.2.vsd" />
     <Content Include="Maps\map.2.B.2.vsd.png" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonBLLEntities\MSBuildLogsExtended.CommonBLLEntities.csproj">

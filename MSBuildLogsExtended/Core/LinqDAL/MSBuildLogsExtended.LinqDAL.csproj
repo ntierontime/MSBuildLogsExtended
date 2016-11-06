@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.LinqDAL</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.LinqDAL</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -42,15 +42,15 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="LinqToSqlDataAccessLayerEntities\LinqToSqlDataAccessLayerEntityBuild.cs" />
     <Compile Include="LinqToSqlDataAccessLayerEntities\LinqToSqlDataAccessLayerEntityBuildEventCode.cs" />
     <Compile Include="LinqToSqlDataAccessLayerEntities\LinqToSqlDataAccessLayerEntityBuildLog.cs" />
     <Compile Include="LinqToSqlDataAccessLayerEntities\LinqToSqlDataAccessLayerEntitySolution.cs" />
     <Compile Include="LinqToSqlDataAccessLayerFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Maps\map.2.A.1.vsd" />
     <Content Include="Maps\map.2.A.1.vsd.png" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DALContracts\MSBuildLogsExtended.DALContracts.csproj">

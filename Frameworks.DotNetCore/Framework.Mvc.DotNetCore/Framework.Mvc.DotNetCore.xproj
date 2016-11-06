@@ -4,7 +4,6 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
-
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>26acd81a-686d-4f48-aa05-8be559d4ef20</ProjectGuid>
@@ -13,9 +12,45 @@
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
   </PropertyGroup>
-
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="..\..\Frameworks\Framework.Mvc\Maps\map.1.D.1.vsd">
+      <Link>Maps\map.1.D.1.vsd</Link>
+    </Content>
+    <Content Include="..\..\Frameworks\Framework.Mvc\Maps\map.1.D.1.vsd.png">
+      <Link>Maps\map.1.D.1.vsd.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Frameworks\Framework.Mvc\HtmlChartHelpers.cs">
+      <Link>HtmlChartHelpers.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Mvc\MvcHelper.cs">
+      <Link>MvcHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Mvc\PagerHelper.cs">
+      <Link>PagerHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Mvc\PagerHtmlRenderer.cs">
+      <Link>PagerHtmlRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Mvc\ViewModelBaseWithResultAndUIElement.cs">
+      <Link>ViewModelBaseWithResultAndUIElement.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Mvc\ViewModels\MultipleFileUploadModel.cs">
+      <Link>ViewModels\MultipleFileUploadModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Mvc\ViewModels\ViewModelEntityRelatedBase.cs">
+      <Link>ViewModels\ViewModelEntityRelatedBase.cs</Link>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="E45A004F-FBEF-445C-9607-FBC89D6D4590" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

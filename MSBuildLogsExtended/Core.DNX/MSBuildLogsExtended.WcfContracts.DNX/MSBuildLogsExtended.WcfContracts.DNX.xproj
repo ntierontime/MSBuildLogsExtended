@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>a21adde7-d812-4533-9f80-8c76bf195c9e</ProjectGuid>
+    <RootNamespace>MSBuildLogsExtended.WcfContracts.DNX</RootNamespace>
+    <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
+    <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="..\..\Core\WcfContracts\Maps\map.2.B.2.vsd">
+      <Link>Maps\map.2.B.2.vsd</Link>
+    </Content>
+    <Content Include="..\..\Core\WcfContracts\Maps\map.2.B.2.vsd.png">
+      <Link>Maps\map.2.B.2.vsd.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Core\WcfContracts\IBuildEventCodeWcfService.cs">
+      <Link>IBuildEventCodeWcfService.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\WcfContracts\IBuildLogWcfService.cs">
+      <Link>IBuildLogWcfService.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\WcfContracts\IBuildWcfService.cs">
+      <Link>IBuildWcfService.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\WcfContracts\IBusinessLogicLayerFactory.cs">
+      <Link>IBusinessLogicLayerFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\WcfContracts\ISolutionWcfService.cs">
+      <Link>ISolutionWcfService.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\WcfContracts\WcfServiceContractAsynBuild.cs">
+      <Link>WcfServiceContractAsynBuild.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\WcfContracts\WcfServiceContractAsynBuildEventCode.cs">
+      <Link>WcfServiceContractAsynBuildEventCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\WcfContracts\WcfServiceContractAsynBuildLog.cs">
+      <Link>WcfServiceContractAsynBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\WcfContracts\WcfServiceContractAsynSolution.cs">
+      <Link>WcfServiceContractAsynSolution.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\WcfContracts\WcfServiceResolver.cs">
+      <Link>WcfServiceResolver.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="9EB722DE-3C2A-43CA-AB84-E2DB1F814EA5" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

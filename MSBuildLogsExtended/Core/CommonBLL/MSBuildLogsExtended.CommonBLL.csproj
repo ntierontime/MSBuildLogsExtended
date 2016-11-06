@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.CommonBLL</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.CommonBLL</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -42,8 +42,6 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="BusinessLogicLayerEntity\BusinessLogicLayerEntityBuild.cs" />
     <Compile Include="BusinessLogicLayerEntity\BusinessLogicLayerEntityBuildEventCode.cs" />
     <Compile Include="BusinessLogicLayerEntity\BusinessLogicLayerEntityBuildLog.cs" />
@@ -57,9 +55,11 @@
     <Compile Include="DataStreamServiceProviders\DataStreamServiceProviderBuildEventCode.cs" />
     <Compile Include="DataStreamServiceProviders\DataStreamServiceProviderBuildLog.cs" />
     <Compile Include="DataStreamServiceProviders\DataStreamServiceProviderSolution.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SyndicationFeedFacade.cs" />
     <Content Include="Maps\map.2.B.2.vsd" />
     <Content Include="Maps\map.2.B.2.vsd.png" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Resources\MSBuildLogsExtended.Resources.csproj">

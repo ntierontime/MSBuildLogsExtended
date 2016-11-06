@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.EntityContracts</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.EntityContracts</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -42,28 +42,28 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="Contracts\IBuild.cs" />
     <Compile Include="Contracts\IBuildEventCode.cs" />
     <Compile Include="Contracts\IBuildLog.cs" />
     <Compile Include="Contracts\ISolution.cs" />
-    <Compile Include="EntityContractHelpers\IBuildHelper.cs" />
     <Compile Include="EntityContractHelpers\IBuildEventCodeHelper.cs" />
+    <Compile Include="EntityContractHelpers\IBuildHelper.cs" />
     <Compile Include="EntityContractHelpers\IBuildLogHelper.cs" />
     <Compile Include="EntityContractHelpers\ISolutionHelper.cs" />
-    <Compile Include="IdentifierContracts\IBuildIdentifier.cs" />
-    <Compile Include="IdentifierContracts\IBuildEventCodeIdentifier.cs" />
-    <Compile Include="IdentifierContracts\IBuildLogIdentifier.cs" />
-    <Compile Include="IdentifierContracts\ISolutionIdentifier.cs" />
-    <Compile Include="IdentifierContractHelpers\IBuildIdentifierHelper.cs" />
     <Compile Include="IdentifierContractHelpers\IBuildEventCodeIdentifierHelper.cs" />
+    <Compile Include="IdentifierContractHelpers\IBuildIdentifierHelper.cs" />
     <Compile Include="IdentifierContractHelpers\IBuildLogIdentifierHelper.cs" />
     <Compile Include="IdentifierContractHelpers\ISolutionIdentifierHelper.cs" />
+    <Compile Include="IdentifierContracts\IBuildEventCodeIdentifier.cs" />
+    <Compile Include="IdentifierContracts\IBuildIdentifier.cs" />
+    <Compile Include="IdentifierContracts\IBuildLogIdentifier.cs" />
+    <Compile Include="IdentifierContracts\ISolutionIdentifier.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildByFKs.cs" />
     <Compile Include="QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildLogByFKs.cs" />
     <Content Include="Maps\map.2.B.3.vsd" />
     <Content Include="Maps\map.2.B.3.vsd.png" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">

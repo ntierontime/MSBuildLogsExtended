@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Framework.Web</RootNamespace>
     <AssemblyName>Framework.Web</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -42,29 +42,29 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="AjaxControlToolkitHelper.cs" />
     <Compile Include="AppEngine\WebFormApplicationApplicationVarHelper.cs" />
-    <Compile Include="WebFormApplicationApplicationVariables.cs" />
     <Compile Include="AppEngine\WebFormApplicationButtonHelper.cs" />
     <Compile Include="AppEngine\WebFormApplicationButtonRolePermission.cs" />
     <Compile Include="AppEngine\WebFormApplicationButtonRolePermissionHelper.cs" />
     <Compile Include="AppEngine\WebFormApplicationCascadingDropDownHelper.cs" />
-    <Compile Include="ControlHelper.cs" />
-    <Compile Include="WebFormApplicationExceptionHandler.cs" />
     <Compile Include="AppEngine\WebFormApplicationFileUploadWorker.cs" />
     <Compile Include="AppEngine\WebFormApplicationGlobalSetting.cs" />
-    <Compile Include="ListViewHelper.cs" />
     <Compile Include="AppEngine\WebFormApplicationMetaContentTypeList.cs" />
     <Compile Include="AppEngine\WebFormApplicationPageHelper.cs" />
     <Compile Include="AppEngine\WebFormApplicationPickListWorker.cs" />
     <Compile Include="AppEngine\WebFormApplicationSessionHelper.cs" />
-    <Compile Include="WebFormApplicationSessionVariables.cs" />
     <Compile Include="AppEngine\WebFormApplicationUploadFilePathBuilder.cs" />
     <Compile Include="AppEngine\WebFormApplicationWikiPlexHelper.cs" />
+    <Compile Include="ControlHelper.cs" />
+    <Compile Include="ListViewHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebFormApplicationApplicationVariables.cs" />
+    <Compile Include="WebFormApplicationExceptionHandler.cs" />
+    <Compile Include="WebFormApplicationSessionVariables.cs" />
     <Content Include="Maps\map.1.D.1.vsd" />
     <Content Include="Maps\map.1.D.1.vsd.png" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj">

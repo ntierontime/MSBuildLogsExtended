@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>c83854da-d3ca-441f-b7a0-64e0f697eae9</ProjectGuid>
+    <RootNamespace>MSBuildLogsExtended.CommonBLL.DotNetCore</RootNamespace>
+    <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
+    <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Core\CommonBLL\BusinessLogicLayerEntity\BusinessLogicLayerEntityBuild.cs">
+      <Link>BusinessLogicLayerEntity\BusinessLogicLayerEntityBuild.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLL\BusinessLogicLayerEntity\BusinessLogicLayerEntityBuildEventCode.cs">
+      <Link>BusinessLogicLayerEntity\BusinessLogicLayerEntityBuildEventCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLL\BusinessLogicLayerEntity\BusinessLogicLayerEntityBuildLog.cs">
+      <Link>BusinessLogicLayerEntity\BusinessLogicLayerEntityBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLL\BusinessLogicLayerEntity\BusinessLogicLayerEntitySolution.cs">
+      <Link>BusinessLogicLayerEntity\BusinessLogicLayerEntitySolution.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLL\BusinessLogicLayerFactory.cs">
+      <Link>BusinessLogicLayerFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLL\Charting\ChartBuilderBuild.cs">
+      <Link>Charting\ChartBuilderBuild.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLL\Charting\ChartBuilderBuildEventCode.cs">
+      <Link>Charting\ChartBuilderBuildEventCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLL\Charting\ChartBuilderBuildLog.cs">
+      <Link>Charting\ChartBuilderBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLL\Charting\ChartBuilderSolution.cs">
+      <Link>Charting\ChartBuilderSolution.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLL\DataStreamServiceProviders\DataStreamServiceProviderBuild.cs">
+      <Link>DataStreamServiceProviders\DataStreamServiceProviderBuild.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLL\DataStreamServiceProviders\DataStreamServiceProviderBuildEventCode.cs">
+      <Link>DataStreamServiceProviders\DataStreamServiceProviderBuildEventCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLL\DataStreamServiceProviders\DataStreamServiceProviderBuildLog.cs">
+      <Link>DataStreamServiceProviders\DataStreamServiceProviderBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLL\DataStreamServiceProviders\DataStreamServiceProviderSolution.cs">
+      <Link>DataStreamServiceProviders\DataStreamServiceProviderSolution.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLL\SyndicationFeedFacade.cs">
+      <Link>SyndicationFeedFacade.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\Core\CommonBLL\Maps\map.2.B.2.vsd">
+      <Link>Maps\map.2.B.2.vsd</Link>
+    </Content>
+    <Content Include="..\..\Core\CommonBLL\Maps\map.2.B.2.vsd.png">
+      <Link>Maps\map.2.B.2.vsd.png</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="048F80FD-CF9C-4F55-A0E6-9D9BB131CB3F" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

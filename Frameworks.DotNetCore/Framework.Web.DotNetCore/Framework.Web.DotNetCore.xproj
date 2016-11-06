@@ -4,7 +4,6 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
-
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>393a12e8-3570-4d09-8779-b19fab4bc794</ProjectGuid>
@@ -13,9 +12,81 @@
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
   </PropertyGroup>
-
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Frameworks\Framework.Web\AjaxControlToolkitHelper.cs">
+      <Link>AjaxControlToolkitHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationApplicationVarHelper.cs">
+      <Link>AppEngine\WebFormApplicationApplicationVarHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationButtonHelper.cs">
+      <Link>AppEngine\WebFormApplicationButtonHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationButtonRolePermission.cs">
+      <Link>AppEngine\WebFormApplicationButtonRolePermission.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationButtonRolePermissionHelper.cs">
+      <Link>AppEngine\WebFormApplicationButtonRolePermissionHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationCascadingDropDownHelper.cs">
+      <Link>AppEngine\WebFormApplicationCascadingDropDownHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationFileUploadWorker.cs">
+      <Link>AppEngine\WebFormApplicationFileUploadWorker.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationGlobalSetting.cs">
+      <Link>AppEngine\WebFormApplicationGlobalSetting.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationMetaContentTypeList.cs">
+      <Link>AppEngine\WebFormApplicationMetaContentTypeList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationPageHelper.cs">
+      <Link>AppEngine\WebFormApplicationPageHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationPickListWorker.cs">
+      <Link>AppEngine\WebFormApplicationPickListWorker.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationSessionHelper.cs">
+      <Link>AppEngine\WebFormApplicationSessionHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationUploadFilePathBuilder.cs">
+      <Link>AppEngine\WebFormApplicationUploadFilePathBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationWikiPlexHelper.cs">
+      <Link>AppEngine\WebFormApplicationWikiPlexHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\ControlHelper.cs">
+      <Link>ControlHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\ListViewHelper.cs">
+      <Link>ListViewHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\WebFormApplicationApplicationVariables.cs">
+      <Link>WebFormApplicationApplicationVariables.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\WebFormApplicationExceptionHandler.cs">
+      <Link>WebFormApplicationExceptionHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.Web\WebFormApplicationSessionVariables.cs">
+      <Link>WebFormApplicationSessionVariables.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\Frameworks\Framework.Web\Maps\map.1.D.1.vsd">
+      <Link>Maps\map.1.D.1.vsd</Link>
+    </Content>
+    <Content Include="..\..\Frameworks\Framework.Web\Maps\map.1.D.1.vsd.png">
+      <Link>Maps\map.1.D.1.vsd.png</Link>
+    </Content>
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="950B9CDB-9286-4A1A-8D88-1DF6954A45E3" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

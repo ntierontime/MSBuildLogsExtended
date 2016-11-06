@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.WcfClientBLL</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.WcfClientBLL</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -43,19 +43,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
-    <None Include="App.config" />
-    <Compile Include="WcfClientEntityBuild.cs" />
-    <Compile Include="WcfClientEntityBuildEventCode.cs" />
-    <Compile Include="WcfClientEntityBuildLog.cs" />
-    <Compile Include="WcfClientEntitySolution.cs" />
     <Compile Include="WcfClientEntityAsynBuild.cs" />
     <Compile Include="WcfClientEntityAsynBuildEventCode.cs" />
     <Compile Include="WcfClientEntityAsynBuildLog.cs" />
     <Compile Include="WcfClientEntityAsynSolution.cs" />
+    <Compile Include="WcfClientEntityBuild.cs" />
+    <Compile Include="WcfClientEntityBuildEventCode.cs" />
+    <Compile Include="WcfClientEntityBuildLog.cs" />
+    <Compile Include="WcfClientEntitySolution.cs" />
     <Compile Include="WcfClientFactory.cs" />
     <Content Include="Maps\map.2.A.3.vsd" />
     <Content Include="Maps\map.2.A.3.vsd.png" />
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\CommonBLLEntities\MSBuildLogsExtended.CommonBLLEntities.csproj">

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>fef480f3-c147-4666-af93-7a810563b5d4</ProjectGuid>
+    <RootNamespace>MSBuildLogsExtended.LinqToSqlContexts.DNX</RootNamespace>
+    <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
+    <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="..\..\Core\LinqToSqlContexts\DBMLOfLinqToSqlOfCodeListAndEntity">
+      <Link>DBMLOfLinqToSqlOfCodeListAndEntity</Link>
+    </Content>
+    <Content Include="..\..\Core\LinqToSqlContexts\Maps\map.2.A.1.vsd">
+      <Link>Maps\map.2.A.1.vsd</Link>
+    </Content>
+    <Content Include="..\..\Core\LinqToSqlContexts\Maps\map.2.A.1.vsd.png">
+      <Link>Maps\map.2.A.1.vsd.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Core\LinqToSqlContexts\ContextCompanionOfLinqToSqlOfCodeListAndEntity.cs">
+      <Link>ContextCompanionOfLinqToSqlOfCodeListAndEntity.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\LinqToSqlContexts\ContextOfLinqToSqlOfCodeListAndEntity.cs">
+      <Link>ContextOfLinqToSqlOfCodeListAndEntity.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="5F48EC62-60D3-4D77-8F5F-7D5B820227A8" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
