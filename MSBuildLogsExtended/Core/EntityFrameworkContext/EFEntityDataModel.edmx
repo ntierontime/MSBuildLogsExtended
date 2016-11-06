@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
 <edmx:Runtime>
 <edmx:StorageModels>
-<Schema Namespace="MSBuildLogsExtendedModel.Store" Alias="self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+<Schema Namespace="MSBuildLogsExtendedModel.Store" Alias="self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="MSBuildLogsExtendedModelStoreContainer">
     <EntitySet Name="Build" EntityType="MSBuildLogsExtendedModel.Store.Build" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
     <EntitySet Name="BuildEventCode" EntityType="MSBuildLogsExtendedModel.Store.BuildEventCode" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
@@ -97,8 +97,8 @@
 </Schema>
 </edmx:StorageModels>
 <edmx:ConceptualModels>
-<Schema Namespace="MSBuildLogsExtendedModel" Alias="self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
-  <EntityContainer Name="MSBuildLogsExtendedEntities" annotation:LazyLoadingEnabled="true">
+<Schema Namespace="MSBuildLogsExtendedModel" Alias="self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="MSBuildLogsExtendedEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
     <EntitySet Name="Build" EntityType="MSBuildLogsExtendedModel.Build" />
     <EntitySet Name="BuildEventCode" EntityType="MSBuildLogsExtendedModel.BuildEventCode" />
     <EntitySet Name="BuildLog" EntityType="MSBuildLogsExtendedModel.BuildLog" />
@@ -120,7 +120,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Type="Int32" Name="SolutionId" Nullable="false" />
     <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="Description" MaxLength="1500" FixedLength="false" Unicode="false" />
@@ -132,7 +132,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Type="String" Name="EventCode" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="Description" MaxLength="1500" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="BuildLog" Relationship="MSBuildLogsExtendedModel.FK_BuildLog_BuildEventCode" FromRole="BuildLog" ToRole="BuildEventCode" />
@@ -141,7 +141,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Type="Int64" Name="BuildId" Nullable="false" />
     <Property Type="Int32" Name="BuildEventCodeId" Nullable="false" />
     <Property Type="String" Name="Message" MaxLength="1500" FixedLength="false" Unicode="false" />
@@ -153,7 +153,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Type="String" Name="ExternalParentId" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="Description" MaxLength="1500" FixedLength="false" Unicode="false" />
@@ -198,7 +198,7 @@
 </Schema>
 </edmx:ConceptualModels>
 <edmx:Mappings>
-<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="MSBuildLogsExtendedModelStoreContainer" CdmEntityContainer="MSBuildLogsExtendedEntities">
     <EntitySetMapping Name="Build">
       <EntityTypeMapping TypeName="MSBuildLogsExtendedModel.Build">
@@ -246,7 +246,7 @@
 </edmx:Mappings>
 </edmx:Runtime>
 <edmx:Designer>
-<Connection xmlns="http://schemas.microsoft.com/ado/2007/06/edmx"><DesignerInfoPropertySet><DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" /></DesignerInfoPropertySet></Connection>
+<Connection xmlns="http://schemas.microsoft.com/ado/2008/10/edmx"><DesignerInfoPropertySet><DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" /></DesignerInfoPropertySet></Connection>
 <edmx:Options />
 <edmx:Diagrams />
 </edmx:Designer></edmx:Edmx>
