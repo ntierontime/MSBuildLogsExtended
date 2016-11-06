@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Framework.Resources</RootNamespace>
     <AssemblyName>Framework.Resources</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -46,7 +46,17 @@
     <Compile Include="UIImageResource.designer.cs">
       <DependentUpon>UIImageResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UIImageResource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UIImageResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UIStringResource.designer.cs">
+      <DependentUpon>UIStringResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UIStringResource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>UIStringResource.resx</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -161,8 +171,14 @@
     <Content Include="Images\ZoomOut.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="UIImageResource.resx" />
-    <EmbeddedResource Include="UIStringResource.resx" />
+    <EmbeddedResource Include="UIImageResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIImageResource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIStringResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIStringResource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent>rem copy $(TargetPath) $(SolutionDir)BuiltResults\*.* /y</PostBuildEvent>

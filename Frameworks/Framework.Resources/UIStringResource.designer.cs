@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Framework.Resources {
+namespace Framework.Resources
+{
     using System;
-    using System.Reflection;
-    
-    
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,2893 +23,3535 @@ namespace Framework.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class UIStringResource {
-        
+    public class UIStringResource
+    {
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal UIStringResource() {
+        public UIStringResource()
+        {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
-            get {
-                if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Framework.Resources.UIStringResource", typeof(UIStringResource).GetTypeInfo().Assembly);
+        public static global::System.Resources.ResourceManager ResourceManager
+        {
+            get
+            {
+                if (object.ReferenceEquals(resourceMan, null))
+                {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Framework.Resources.UIStringResource", typeof(UIStringResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
-            get {
+        public static global::System.Globalization.CultureInfo Culture
+        {
+            get
+            {
                 return resourceCulture;
             }
-            set {
+            set
+            {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Accepted.
         /// </summary>
-        internal static string Accepted {
-            get {
+        public static string Accepted
+        {
+            get
+            {
                 return ResourceManager.GetString("Accepted", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Change Password Form.
         /// </summary>
-        internal static string Account_ChangePassword_LegendText {
-            get {
+        public static string Account_ChangePassword_LegendText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ChangePassword_LegendText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Change password.
         /// </summary>
-        internal static string Account_ChangePassword_SubmitValue {
-            get {
+        public static string Account_ChangePassword_SubmitValue
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ChangePassword_SubmitValue", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Change password.
         /// </summary>
-        internal static string Account_ChangePassword_TitleText {
-            get {
+        public static string Account_ChangePassword_TitleText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ChangePassword_TitleText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Your password has been changed..
         /// </summary>
-        internal static string Account_ChangePasswordSuccess {
-            get {
+        public static string Account_ChangePasswordSuccess
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ChangePasswordSuccess", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Check Availability.
         /// </summary>
-        internal static string Account_CreateNewUserWizard_Button_CheckUserNameAvailabilityText {
-            get {
+        public static string Account_CreateNewUserWizard_Button_CheckUserNameAvailabilityText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_CreateNewUserWizard_Button_CheckUserNameAvailabilityText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The password provided is invalid. Please enter a valid password value..
         /// </summary>
-        internal static string Account_CreateNewUserWizard_DuiplicateEmail {
-            get {
+        public static string Account_CreateNewUserWizard_DuiplicateEmail
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_CreateNewUserWizard_DuiplicateEmail", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The password retrieval answer provided is invalid. Please check the value and try again..
         /// </summary>
-        internal static string Account_CreateNewUserWizard_InvalidAnswer {
-            get {
+        public static string Account_CreateNewUserWizard_InvalidAnswer
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_CreateNewUserWizard_InvalidAnswer", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The e-mail address provided is invalid. Please check the value and try again..
         /// </summary>
-        internal static string Account_CreateNewUserWizard_InvalidEmail {
-            get {
+        public static string Account_CreateNewUserWizard_InvalidEmail
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_CreateNewUserWizard_InvalidEmail", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The password provided is invalid. Please enter a valid password value..
         /// </summary>
-        internal static string Account_CreateNewUserWizard_InvalidPassword {
-            get {
+        public static string Account_CreateNewUserWizard_InvalidPassword
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_CreateNewUserWizard_InvalidPassword", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The password retrieval question provided is invalid. Please check the value and try again..
         /// </summary>
-        internal static string Account_CreateNewUserWizard_InvalidQuestion {
-            get {
+        public static string Account_CreateNewUserWizard_InvalidQuestion
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_CreateNewUserWizard_InvalidQuestion", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The user name provided is invalid. Please check the value and try again..
         /// </summary>
-        internal static string Account_CreateNewUserWizard_InvalidUserName {
-            get {
+        public static string Account_CreateNewUserWizard_InvalidUserName
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_CreateNewUserWizard_InvalidUserName", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The authentication provider returned an error. Please verify your entry and try again. If the problem persists, please contact your system administrator..
         /// </summary>
-        internal static string Account_CreateNewUserWizard_ProviderError {
-            get {
+        public static string Account_CreateNewUserWizard_ProviderError
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_CreateNewUserWizard_ProviderError", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to This UserName is not Available, please try another one..
         /// </summary>
-        internal static string Account_CreateNewUserWizard_ThisUserNameIsNotAvailableLabelText {
-            get {
+        public static string Account_CreateNewUserWizard_ThisUserNameIsNotAvailableLabelText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_CreateNewUserWizard_ThisUserNameIsNotAvailableLabelText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Create New User Wizard.
         /// </summary>
-        internal static string Account_CreateNewUserWizard_TitleText {
-            get {
+        public static string Account_CreateNewUserWizard_TitleText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_CreateNewUserWizard_TitleText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to An unknown error occurred. Please verify your entry and try again. If the problem persists, please contact your system administrator..
         /// </summary>
-        internal static string Account_CreateNewUserWizard_UnknownError {
-            get {
+        public static string Account_CreateNewUserWizard_UnknownError
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_CreateNewUserWizard_UnknownError", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The user creation request has been canceled. Please verify your entry and try again. If the problem persists, please contact your system administrator..
         /// </summary>
-        internal static string Account_CreateNewUserWizard_UserRejected {
-            get {
+        public static string Account_CreateNewUserWizard_UserRejected
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_CreateNewUserWizard_UserRejected", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Association Form.
         /// </summary>
-        internal static string Account_ExternalLogin_AssociateExternalLoginLegend {
-            get {
+        public static string Account_ExternalLogin_AssociateExternalLoginLegend
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ExternalLogin_AssociateExternalLoginLegend", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You&apos;ve successfully authenticated with &lt;strong&gt;{0}&lt;/strong&gt;. Please enter a user name for this site below and click the Confirm button to finish logging in..
         /// </summary>
-        internal static string Account_ExternalLogin_AssociateExternalLoginSuccess {
-            get {
+        public static string Account_ExternalLogin_AssociateExternalLoginSuccess
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ExternalLogin_AssociateExternalLoginSuccess", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Associate your {0} account..
         /// </summary>
-        internal static string Account_ExternalLogin_AssociateExternalLoginTitle {
-            get {
+        public static string Account_ExternalLogin_AssociateExternalLoginTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ExternalLogin_AssociateExternalLoginTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Register.
         /// </summary>
-        internal static string Account_ExternalLogin_AssociationSubmitValue {
-            get {
+        public static string Account_ExternalLogin_AssociationSubmitValue
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ExternalLogin_AssociationSubmitValue", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Register.
         /// </summary>
-        internal static string Account_ExternalLogin_AssociationTitleText {
-            get {
+        public static string Account_ExternalLogin_AssociationTitleText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ExternalLogin_AssociationTitleText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Log in using your {0} account..
         /// </summary>
-        internal static string Account_ExternalLogin_DescriptionText {
-            get {
+        public static string Account_ExternalLogin_DescriptionText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ExternalLogin_DescriptionText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unsuccessful login with service..
         /// </summary>
-        internal static string Account_ExternalLogin_LoginFailureDescription {
-            get {
+        public static string Account_ExternalLogin_LoginFailureDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ExternalLogin_LoginFailureDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Login Failure.
         /// </summary>
-        internal static string Account_ExternalLogin_LoginFailureTitle {
-            get {
+        public static string Account_ExternalLogin_LoginFailureTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ExternalLogin_LoginFailureTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to There are no external authentication services configured..
         /// </summary>
-        internal static string Account_ExternalLogin_NoExternalLoginText {
-            get {
+        public static string Account_ExternalLogin_NoExternalLoginText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ExternalLogin_NoExternalLoginText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Registered external logins..
         /// </summary>
-        internal static string Account_ExternalLogin_Registeredexternallogins {
-            get {
+        public static string Account_ExternalLogin_Registeredexternallogins
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ExternalLogin_Registeredexternallogins", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Remove this {0} credential from your account.
         /// </summary>
-        internal static string Account_ExternalLogin_RemovedExternalLoginTitle {
-            get {
+        public static string Account_ExternalLogin_RemovedExternalLoginTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ExternalLogin_RemovedExternalLoginTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to ou do not have a local password for this site. Add a local password so you can log in without an external login..
         /// </summary>
-        internal static string Account_ExternalLogin_SetPasswordDescription {
-            get {
+        public static string Account_ExternalLogin_SetPasswordDescription
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ExternalLogin_SetPasswordDescription", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Set Password Form.
         /// </summary>
-        internal static string Account_ExternalLogin_SetPasswordLegend {
-            get {
+        public static string Account_ExternalLogin_SetPasswordLegend
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ExternalLogin_SetPasswordLegend", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Set Password.
         /// </summary>
-        internal static string Account_ExternalLogin_SetPasswordSubmitValue {
-            get {
+        public static string Account_ExternalLogin_SetPasswordSubmitValue
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ExternalLogin_SetPasswordSubmitValue", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Log in using another service.
         /// </summary>
-        internal static string Account_ExternalLogin_TitleText {
-            get {
+        public static string Account_ExternalLogin_TitleText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_ExternalLogin_TitleText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Your login attempt was not successful. Please try again..
         /// </summary>
-        internal static string Account_LogIn_FailureText {
-            get {
+        public static string Account_LogIn_FailureText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_LogIn_FailureText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to if you don&apos;t have an account..
         /// </summary>
-        internal static string Account_LogIn_ifyoudonthaveanaccount {
-            get {
+        public static string Account_LogIn_ifyoudonthaveanaccount
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_LogIn_ifyoudonthaveanaccount", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Login InstructionText.
         /// </summary>
-        internal static string Account_LogIn_InstructionText {
-            get {
+        public static string Account_LogIn_InstructionText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_LogIn_InstructionText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Log in Form.
         /// </summary>
-        internal static string Account_LogIn_Legend {
-            get {
+        public static string Account_LogIn_Legend
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_LogIn_Legend", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Log In.
         /// </summary>
-        internal static string Account_LogIn_LoginButtonText {
-            get {
+        public static string Account_LogIn_LoginButtonText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_LogIn_LoginButtonText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Remember me next time..
         /// </summary>
-        internal static string Account_LogIn_RememberMeText {
-            get {
+        public static string Account_LogIn_RememberMeText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_LogIn_RememberMeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Log In.
         /// </summary>
-        internal static string Account_LogIn_TitleText {
-            get {
+        public static string Account_LogIn_TitleText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_LogIn_TitleText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Use a local account to log in..
         /// </summary>
-        internal static string Account_LogIn_Usealocalaccounttologin {
-            get {
+        public static string Account_LogIn_Usealocalaccounttologin
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_LogIn_Usealocalaccounttologin", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Use another service to log in..
         /// </summary>
-        internal static string Account_LogIn_Useanotherservicetologin {
-            get {
+        public static string Account_LogIn_Useanotherservicetologin
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_LogIn_Useanotherservicetologin", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
-        internal static string Account_LogInStatus_LoginText {
-            get {
+        public static string Account_LogInStatus_LoginText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_LogInStatus_LoginText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Logout.
         /// </summary>
-        internal static string Account_LogInStatus_LogoutText {
-            get {
+        public static string Account_LogInStatus_LogoutText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_LogInStatus_LogoutText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Add an external login..
         /// </summary>
-        internal static string Account_Manage_Addanexternallogin {
-            get {
+        public static string Account_Manage_Addanexternallogin
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_Manage_Addanexternallogin", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Manage Account.
         /// </summary>
-        internal static string Account_Manage_TitleText {
-            get {
+        public static string Account_Manage_TitleText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_Manage_TitleText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You&apos;re logged in as .
         /// </summary>
-        internal static string Account_Manage_Youreloggedinas {
-            get {
+        public static string Account_Manage_Youreloggedinas
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_Manage_Youreloggedinas", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Your attempt to retrieve your password was not successful. Please try again..
         /// </summary>
-        internal static string Account_PasswordRecovery_GeneralFailureText {
-            get {
+        public static string Account_PasswordRecovery_GeneralFailureText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_PasswordRecovery_GeneralFailureText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Your answer could not be verified. Please try again..
         /// </summary>
-        internal static string Account_PasswordRecovery_QuestionFailureText {
-            get {
+        public static string Account_PasswordRecovery_QuestionFailureText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_PasswordRecovery_QuestionFailureText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Answer the following question to receive your password..
         /// </summary>
-        internal static string Account_PasswordRecovery_QuestionInstructionText {
-            get {
+        public static string Account_PasswordRecovery_QuestionInstructionText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_PasswordRecovery_QuestionInstructionText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Identity Confirmation.
         /// </summary>
-        internal static string Account_PasswordRecovery_QuestionTitle {
-            get {
+        public static string Account_PasswordRecovery_QuestionTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_PasswordRecovery_QuestionTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Your password has been sent to you..
         /// </summary>
-        internal static string Account_PasswordRecovery_SuccessText {
-            get {
+        public static string Account_PasswordRecovery_SuccessText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_PasswordRecovery_SuccessText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Forgot Your Password.
         /// </summary>
-        internal static string Account_PasswordRecovery_TitleText {
-            get {
+        public static string Account_PasswordRecovery_TitleText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_PasswordRecovery_TitleText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to We were unable to access your information. Please try again..
         /// </summary>
-        internal static string Account_PasswordRecovery_UserNameFailureText {
-            get {
+        public static string Account_PasswordRecovery_UserNameFailureText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_PasswordRecovery_UserNameFailureText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Enter your User Name to receive your password..
         /// </summary>
-        internal static string Account_PasswordRecovery_UserNameInstructionText {
-            get {
+        public static string Account_PasswordRecovery_UserNameInstructionText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_PasswordRecovery_UserNameInstructionText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Forgot Your Password?.
         /// </summary>
-        internal static string Account_PasswordRecovery_UserNameTitleText {
-            get {
+        public static string Account_PasswordRecovery_UserNameTitleText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_PasswordRecovery_UserNameTitleText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Create a new account..
         /// </summary>
-        internal static string Account_Register_DescriptionText {
-            get {
+        public static string Account_Register_DescriptionText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_Register_DescriptionText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Registration Form.
         /// </summary>
-        internal static string Account_Register_Legend {
-            get {
+        public static string Account_Register_Legend
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_Register_Legend", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Register.
         /// </summary>
-        internal static string Account_Register_SubmitValue {
-            get {
+        public static string Account_Register_SubmitValue
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_Register_SubmitValue", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Register.
         /// </summary>
-        internal static string Account_Register_TitleText {
-            get {
+        public static string Account_Register_TitleText
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_Register_TitleText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The external login was removed..
         /// </summary>
-        internal static string Account_RemoveLoginSucess {
-            get {
+        public static string Account_RemoveLoginSucess
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_RemoveLoginSucess", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Your password has been set..
         /// </summary>
-        internal static string Account_SetPasswordSuccess {
-            get {
+        public static string Account_SetPasswordSuccess
+        {
+            get
+            {
                 return ResourceManager.GetString("Account_SetPasswordSuccess", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to AddNew.
         /// </summary>
-        internal static string AddNewAlternativeText {
-            get {
+        public static string AddNewAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("AddNewAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=AddNew.
         /// </summary>
-        internal static string AddNewUrl {
-            get {
+        public static string AddNewUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("AddNewUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Attachment.
         /// </summary>
-        internal static string AttachmentAlternativeText {
-            get {
+        public static string AttachmentAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("AttachmentAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Attachment.
         /// </summary>
-        internal static string AttachmentUrl {
-            get {
+        public static string AttachmentUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("AttachmentUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Back.
         /// </summary>
-        internal static string BackAlternativeText {
-            get {
+        public static string BackAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("BackAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Back to List.
         /// </summary>
-        internal static string BacktoList {
-            get {
+        public static string BacktoList
+        {
+            get
+            {
                 return ResourceManager.GetString("BacktoList", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Back.
         /// </summary>
-        internal static string BackUrl {
-            get {
+        public static string BackUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("BackUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to BeingProcessed.
         /// </summary>
-        internal static string BeingProcessed {
-            get {
+        public static string BeingProcessed
+        {
+            get
+            {
                 return ResourceManager.GetString("BeingProcessed", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Bookmark.
         /// </summary>
-        internal static string BookmarkAlternativeText {
-            get {
+        public static string BookmarkAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("BookmarkAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Bookmark.
         /// </summary>
-        internal static string BookmarkUrl {
-            get {
+        public static string BookmarkUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("BookmarkUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Calendar.
         /// </summary>
-        internal static string CalendarAlternativeText {
-            get {
+        public static string CalendarAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("CalendarAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Calendar.
         /// </summary>
-        internal static string CalendarUrl {
-            get {
+        public static string CalendarUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("CalendarUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
-        internal static string CancelAlternativeText {
-            get {
+        public static string CancelAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("CancelAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Cancel.
         /// </summary>
-        internal static string CancelUrl {
-            get {
+        public static string CancelUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("CancelUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to ChangePassword.
         /// </summary>
-        internal static string ChangePasswordAlternativeText {
-            get {
+        public static string ChangePasswordAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("ChangePasswordAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=ChangePassword.
         /// </summary>
-        internal static string ChangePasswordUrl {
-            get {
+        public static string ChangePasswordUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("ChangePasswordUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Chart.
         /// </summary>
-        internal static string ChartAlternativeText {
-            get {
+        public static string ChartAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("ChartAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Chart.
         /// </summary>
-        internal static string ChartUrl {
-            get {
+        public static string ChartUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("ChartUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Checkbox_Checked.
         /// </summary>
-        internal static string Checkbox_CheckedAlternativeText {
-            get {
+        public static string Checkbox_CheckedAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("Checkbox_CheckedAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Checkbox_Checked.
         /// </summary>
-        internal static string Checkbox_CheckedUrl {
-            get {
+        public static string Checkbox_CheckedUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("Checkbox_CheckedUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Checkbox_Unchecked.
         /// </summary>
-        internal static string Checkbox_UncheckedAlternativeText {
-            get {
+        public static string Checkbox_UncheckedAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("Checkbox_UncheckedAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Checkbox_Unchecked.
         /// </summary>
-        internal static string Checkbox_UncheckedUrl {
-            get {
+        public static string Checkbox_UncheckedUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("Checkbox_UncheckedUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Clock.
         /// </summary>
-        internal static string ClockAlternativeText {
-            get {
+        public static string ClockAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("ClockAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Clock.
         /// </summary>
-        internal static string ClockUrl {
-            get {
+        public static string ClockUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("ClockUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
-        internal static string CloseAlternativeText {
-            get {
+        public static string CloseAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("CloseAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Close.
         /// </summary>
-        internal static string CloseUrl {
-            get {
+        public static string CloseUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("CloseUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Comment.
         /// </summary>
-        internal static string CommentAlternativeText {
-            get {
+        public static string CommentAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("CommentAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Comments.
         /// </summary>
-        internal static string CommentsAlternativeText {
-            get {
+        public static string CommentsAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("CommentsAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Comments.
         /// </summary>
-        internal static string CommentsUrl {
-            get {
+        public static string CommentsUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("CommentsUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Comment.
         /// </summary>
-        internal static string CommentUrl {
-            get {
+        public static string CommentUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("CommentUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to About.
         /// </summary>
-        internal static string Common_AboutPageTitle {
-            get {
+        public static string Common_AboutPageTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_AboutPageTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Answer cannot be same as Question.
         /// </summary>
-        internal static string Common_AnswerErrorMessage {
-            get {
+        public static string Common_AnswerErrorMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_AnswerErrorMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Answer:.
         /// </summary>
-        internal static string Common_AnswerLabelText {
-            get {
+        public static string Common_AnswerLabelText
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_AnswerLabelText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Answer is required..
         /// </summary>
-        internal static string Common_AnswerRequiredErrorMessage {
-            get {
+        public static string Common_AnswerRequiredErrorMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_AnswerRequiredErrorMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Confirm Password:.
         /// </summary>
-        internal static string Common_ConfirmPasswordLabelText {
-            get {
+        public static string Common_ConfirmPasswordLabelText
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_ConfirmPasswordLabelText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Passwords do not match!.
         /// </summary>
-        internal static string Common_ConfirmPasswordNotMatchErrorMessage {
-            get {
+        public static string Common_ConfirmPasswordNotMatchErrorMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_ConfirmPasswordNotMatchErrorMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Confirm Password is required..
         /// </summary>
-        internal static string Common_ConfirmPasswordRequiredErrorMessage {
-            get {
+        public static string Common_ConfirmPasswordRequiredErrorMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_ConfirmPasswordRequiredErrorMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Contacts.
         /// </summary>
-        internal static string Common_ContactPageTitle {
-            get {
+        public static string Common_ContactPageTitle
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_ContactPageTitle", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Current Password:.
         /// </summary>
-        internal static string Common_CurrentPasswordLabelText {
-            get {
+        public static string Common_CurrentPasswordLabelText
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_CurrentPasswordLabelText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Email format is not correct..
         /// </summary>
-        internal static string Common_EmailFormatErrorMessage {
-            get {
+        public static string Common_EmailFormatErrorMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_EmailFormatErrorMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Email:.
         /// </summary>
-        internal static string Common_EmailLabelText {
-            get {
+        public static string Common_EmailLabelText
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_EmailLabelText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Email is required..
         /// </summary>
-        internal static string Common_EmailRequiredErrorMessage {
-            get {
+        public static string Common_EmailRequiredErrorMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_EmailRequiredErrorMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to New Password:.
         /// </summary>
-        internal static string Common_NewPasswordLabelText {
-            get {
+        public static string Common_NewPasswordLabelText
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_NewPasswordLabelText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to No data was returned..
         /// </summary>
-        internal static string Common_Nodatawasreturned {
-            get {
+        public static string Common_Nodatawasreturned
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_Nodatawasreturned", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Items Per Page.
         /// </summary>
-        internal static string Common_Pagination_ItemsPerPage {
-            get {
+        public static string Common_Pagination_ItemsPerPage
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_Pagination_ItemsPerPage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Sort By.
         /// </summary>
-        internal static string Common_Pagination_SortBy {
-            get {
+        public static string Common_Pagination_SortBy
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_Pagination_SortBy", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to The {0} must be at least {2} characters long..
         /// </summary>
-        internal static string Common_PasswordErrorMessage {
-            get {
+        public static string Common_PasswordErrorMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_PasswordErrorMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Password:.
         /// </summary>
-        internal static string Common_PasswordLabelText {
-            get {
+        public static string Common_PasswordLabelText
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_PasswordLabelText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Password length: 6-20 characters..
         /// </summary>
-        internal static string Common_PasswordLengthErrorMessage {
-            get {
+        public static string Common_PasswordLengthErrorMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_PasswordLengthErrorMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Password is required..
         /// </summary>
-        internal static string Common_PasswordRequiredErrorMessage {
-            get {
+        public static string Common_PasswordRequiredErrorMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_PasswordRequiredErrorMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Question:.
         /// </summary>
-        internal static string Common_QuestionLabelText {
-            get {
+        public static string Common_QuestionLabelText
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_QuestionLabelText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Question is required..
         /// </summary>
-        internal static string Common_QuestionRequiredErrorMessage {
-            get {
+        public static string Common_QuestionRequiredErrorMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_QuestionRequiredErrorMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Submit.
         /// </summary>
-        internal static string Common_SubmitButtonText {
-            get {
+        public static string Common_SubmitButtonText
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_SubmitButtonText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to About.
         /// </summary>
-        internal static string Common_Url_About {
-            get {
+        public static string Common_Url_About
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_Url_About", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Contact.
         /// </summary>
-        internal static string Common_Url_Contact {
-            get {
+        public static string Common_Url_Contact
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_Url_Contact", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
-        internal static string Common_Url_Home {
-            get {
+        public static string Common_Url_Home
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_Url_Home", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to User Name:.
         /// </summary>
-        internal static string Common_UserNameLabelText {
-            get {
+        public static string Common_UserNameLabelText
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_UserNameLabelText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to User Name is required..
         /// </summary>
-        internal static string Common_UserNameRequiredErrorMessage {
-            get {
+        public static string Common_UserNameRequiredErrorMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_UserNameRequiredErrorMessage", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Welcome.
         /// </summary>
-        internal static string Common_Welcome {
-            get {
+        public static string Common_Welcome
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_Welcome", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Welcome to nTier on Time..
         /// </summary>
-        internal static string Common_WelcomeToNTIERONTIME {
-            get {
+        public static string Common_WelcomeToNTIERONTIME
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_WelcomeToNTIERONTIME", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Workspaces.
         /// </summary>
-        internal static string Common_Workspaces {
-            get {
+        public static string Common_Workspaces
+        {
+            get
+            {
                 return ResourceManager.GetString("Common_Workspaces", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Confirm.
         /// </summary>
-        internal static string ConfirmAlternativeText {
-            get {
+        public static string ConfirmAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("ConfirmAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Confirm.
         /// </summary>
-        internal static string ConfirmUrl {
-            get {
+        public static string ConfirmUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("ConfirmUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Address.
         /// </summary>
-        internal static string Contact_AddressText {
-            get {
+        public static string Contact_AddressText
+        {
+            get
+            {
                 return ResourceManager.GetString("Contact_AddressText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Email.
         /// </summary>
-        internal static string Contact_EmailText {
-            get {
+        public static string Contact_EmailText
+        {
+            get
+            {
                 return ResourceManager.GetString("Contact_EmailText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Phone.
         /// </summary>
-        internal static string Contact_PhoneText {
-            get {
+        public static string Contact_PhoneText
+        {
+            get
+            {
                 return ResourceManager.GetString("Contact_PhoneText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Copy.
         /// </summary>
-        internal static string CopyAlternativeText {
-            get {
+        public static string CopyAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("CopyAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Copy.
         /// </summary>
-        internal static string CopyUrl {
-            get {
+        public static string CopyUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("CopyUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to CreateUser.
         /// </summary>
-        internal static string CreateUserAlternativeText {
-            get {
+        public static string CreateUserAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("CreateUserAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=CreateUser.
         /// </summary>
-        internal static string CreateUserUrl {
-            get {
+        public static string CreateUserUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("CreateUserUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You can import .csv and .xlsx with first heading row in following format:.
         /// </summary>
-        internal static string Data_Import_DescriptionText {
-            get {
+        public static string Data_Import_DescriptionText
+        {
+            get
+            {
                 return ResourceManager.GetString("Data_Import_DescriptionText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to No Record In Source File.
         /// </summary>
-        internal static string Data_Import_NoRecordInSourceFile {
-            get {
+        public static string Data_Import_NoRecordInSourceFile
+        {
+            get
+            {
                 return ResourceManager.GetString("Data_Import_NoRecordInSourceFile", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to File Format or File Content is wrong.
         /// </summary>
-        internal static string Data_Import_Notaproperfile {
-            get {
+        public static string Data_Import_Notaproperfile
+        {
+            get
+            {
                 return ResourceManager.GetString("Data_Import_Notaproperfile", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Data Import Success.
         /// </summary>
-        internal static string Data_Import_Success {
-            get {
+        public static string Data_Import_Success
+        {
+            get
+            {
                 return ResourceManager.GetString("Data_Import_Success", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
-        internal static string DeleteAlternativeText {
-            get {
+        public static string DeleteAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("DeleteAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Delete.
         /// </summary>
-        internal static string DeleteUrl {
-            get {
+        public static string DeleteUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("DeleteUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Details.
         /// </summary>
-        internal static string DetailsAlternativeText {
-            get {
+        public static string DetailsAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("DetailsAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Details.
         /// </summary>
-        internal static string DetailsUrl {
-            get {
+        public static string DetailsUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("DetailsUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Down.
         /// </summary>
-        internal static string DownAlternativeText {
-            get {
+        public static string DownAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("DownAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Download.
         /// </summary>
-        internal static string DownloadAlternativeText {
-            get {
+        public static string DownloadAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("DownloadAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Download.
         /// </summary>
-        internal static string DownloadUrl {
-            get {
+        public static string DownloadUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("DownloadUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Down.
         /// </summary>
-        internal static string DownUrl {
-            get {
+        public static string DownUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("DownUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Edit.
         /// </summary>
-        internal static string EditAlternativeText {
-            get {
+        public static string EditAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("EditAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Edit.
         /// </summary>
-        internal static string EditUrl {
-            get {
+        public static string EditUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("EditUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to An error occurred while processing your request..
         /// </summary>
-        internal static string Error_DescriptionText {
-            get {
+        public static string Error_DescriptionText
+        {
+            get
+            {
                 return ResourceManager.GetString("Error_DescriptionText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
-        internal static string Error_TitleText {
-            get {
+        public static string Error_TitleText
+        {
+            get
+            {
                 return ResourceManager.GetString("Error_TitleText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Exit.
         /// </summary>
-        internal static string ExitAlternativeText {
-            get {
+        public static string ExitAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("ExitAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Exit.
         /// </summary>
-        internal static string ExitUrl {
-            get {
+        public static string ExitUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("ExitUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Export.
         /// </summary>
-        internal static string ExportAlternativeText {
-            get {
+        public static string ExportAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("ExportAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to ExportToExcel.
         /// </summary>
-        internal static string ExportToExcelAlternativeText {
-            get {
+        public static string ExportToExcelAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("ExportToExcelAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=ExportToExcel.
         /// </summary>
-        internal static string ExportToExcelUrl {
-            get {
+        public static string ExportToExcelUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("ExportToExcelUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Export.
         /// </summary>
-        internal static string ExportUrl {
-            get {
+        public static string ExportUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("ExportUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Failed.
         /// </summary>
-        internal static string Failed {
-            get {
+        public static string Failed
+        {
+            get
+            {
                 return ResourceManager.GetString("Failed", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Favorite.
         /// </summary>
-        internal static string FavoriteAlternativeText {
-            get {
+        public static string FavoriteAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("FavoriteAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Favorite.
         /// </summary>
-        internal static string FavoriteUrl {
-            get {
+        public static string FavoriteUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("FavoriteUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to FileReplace.
         /// </summary>
-        internal static string FileReplaceAlternativeText {
-            get {
+        public static string FileReplaceAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("FileReplaceAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=FileReplace.
         /// </summary>
-        internal static string FileReplaceUrl {
-            get {
+        public static string FileReplaceUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("FileReplaceUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to First.
         /// </summary>
-        internal static string FirstAlternativeText {
-            get {
+        public static string FirstAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("FirstAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=First.
         /// </summary>
-        internal static string FirstUrl {
-            get {
+        public static string FirstUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("FirstUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Forward.
         /// </summary>
-        internal static string ForwardAlternativeText {
-            get {
+        public static string ForwardAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("ForwardAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Forward.
         /// </summary>
-        internal static string ForwardUrl {
-            get {
+        public static string ForwardUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("ForwardUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to FullDetails.
         /// </summary>
-        internal static string FullDetailsAlternativeText {
-            get {
+        public static string FullDetailsAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("FullDetailsAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=FullDetails.
         /// </summary>
-        internal static string FullDetailsUrl {
-            get {
+        public static string FullDetailsUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("FullDetailsUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Go.
         /// </summary>
-        internal static string GoAlternativeText {
-            get {
+        public static string GoAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("GoAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to GotoSearch.
         /// </summary>
-        internal static string GotoSearchAlternativeText {
-            get {
+        public static string GotoSearchAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("GotoSearchAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=GotoSearch.
         /// </summary>
-        internal static string GotoSearchUrl {
-            get {
+        public static string GotoSearchUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("GotoSearchUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Go.
         /// </summary>
-        internal static string GoUrl {
-            get {
+        public static string GoUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("GoUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Heart.
         /// </summary>
-        internal static string HeartAlternativeText {
-            get {
+        public static string HeartAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("HeartAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Heart.
         /// </summary>
-        internal static string HeartUrl {
-            get {
+        public static string HeartUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("HeartUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Help.
         /// </summary>
-        internal static string HelpAlternativeText {
-            get {
+        public static string HelpAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("HelpAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Help.
         /// </summary>
-        internal static string HelpUrl {
-            get {
+        public static string HelpUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("HelpUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Home Page.
         /// </summary>
-        internal static string Home_DescriptionText {
-            get {
+        public static string Home_DescriptionText
+        {
+            get
+            {
                 return ResourceManager.GetString("Home_DescriptionText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Home Page.
         /// </summary>
-        internal static string Home_TitleText {
-            get {
+        public static string Home_TitleText
+        {
+            get
+            {
                 return ResourceManager.GetString("Home_TitleText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
-        internal static string HomeAlternativeText {
-            get {
+        public static string HomeAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("HomeAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Home.
         /// </summary>
-        internal static string HomeUrl {
-            get {
+        public static string HomeUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("HomeUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Import.
         /// </summary>
-        internal static string ImportAlternativeText {
-            get {
+        public static string ImportAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("ImportAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Import.
         /// </summary>
-        internal static string ImportUrl {
-            get {
+        public static string ImportUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("ImportUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Index.
         /// </summary>
-        internal static string IndexAlternativeText {
-            get {
+        public static string IndexAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("IndexAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Index.
         /// </summary>
-        internal static string IndexUrl {
-            get {
+        public static string IndexUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("IndexUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Information.
         /// </summary>
-        internal static string InformationAlternativeText {
-            get {
+        public static string InformationAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("InformationAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Information.
         /// </summary>
-        internal static string InformationUrl {
-            get {
+        public static string InformationUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("InformationUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Insert.
         /// </summary>
-        internal static string InsertAlternativeText {
-            get {
+        public static string InsertAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("InsertAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Insert.
         /// </summary>
-        internal static string InsertUrl {
-            get {
+        public static string InsertUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("InsertUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Last.
         /// </summary>
-        internal static string LastAlternativeText {
-            get {
+        public static string LastAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("LastAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Last.
         /// </summary>
-        internal static string LastUrl {
-            get {
+        public static string LastUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("LastUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to LoadFile.
         /// </summary>
-        internal static string LoadFileAlternativeText {
-            get {
+        public static string LoadFileAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("LoadFileAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=LoadFile.
         /// </summary>
-        internal static string LoadFileUrl {
-            get {
+        public static string LoadFileUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("LoadFileUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Lock.
         /// </summary>
-        internal static string LockAlternativeText {
-            get {
+        public static string LockAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("LockAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Lock.
         /// </summary>
-        internal static string LockUrl {
-            get {
+        public static string LockUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("LockUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Mail.
         /// </summary>
-        internal static string MailAlternativeText {
-            get {
+        public static string MailAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("MailAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to MailLock.
         /// </summary>
-        internal static string MailLockAlternativeText {
-            get {
+        public static string MailLockAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("MailLockAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=MailLock.
         /// </summary>
-        internal static string MailLockUrl {
-            get {
+        public static string MailLockUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("MailLockUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to MailReceive.
         /// </summary>
-        internal static string MailReceiveAlternativeText {
-            get {
+        public static string MailReceiveAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("MailReceiveAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=MailReceive.
         /// </summary>
-        internal static string MailReceiveUrl {
-            get {
+        public static string MailReceiveUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("MailReceiveUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to MailSearch.
         /// </summary>
-        internal static string MailSearchAlternativeText {
-            get {
+        public static string MailSearchAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("MailSearchAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=MailSearch.
         /// </summary>
-        internal static string MailSearchUrl {
-            get {
+        public static string MailSearchUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("MailSearchUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to MailSend.
         /// </summary>
-        internal static string MailSendAlternativeText {
-            get {
+        public static string MailSendAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("MailSendAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=MailSend.
         /// </summary>
-        internal static string MailSendUrl {
-            get {
+        public static string MailSendUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("MailSendUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Mail.
         /// </summary>
-        internal static string MailUrl {
-            get {
+        public static string MailUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("MailUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Message Error Detected.
         /// </summary>
-        internal static string MessageErrorDetected {
-            get {
+        public static string MessageErrorDetected
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageErrorDetected", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Message OK.
         /// </summary>
-        internal static string MessageOK {
-            get {
+        public static string MessageOK
+        {
+            get
+            {
                 return ResourceManager.GetString("MessageOK", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Minus.
         /// </summary>
-        internal static string MinusAlternativeText {
-            get {
+        public static string MinusAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("MinusAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Minus.
         /// </summary>
-        internal static string MinusUrl {
-            get {
+        public static string MinusUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("MinusUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Money.
         /// </summary>
-        internal static string MoneyAlternativeText {
-            get {
+        public static string MoneyAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("MoneyAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Money.
         /// </summary>
-        internal static string MoneyUrl {
-            get {
+        public static string MoneyUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("MoneyUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to More.
         /// </summary>
-        internal static string MoreAlternativeText {
-            get {
+        public static string MoreAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("MoreAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=More.
         /// </summary>
-        internal static string MoreUrl {
-            get {
+        public static string MoreUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("MoreUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to NewFile.
         /// </summary>
-        internal static string NewFileAlternativeText {
-            get {
+        public static string NewFileAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("NewFileAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=NewFile.
         /// </summary>
-        internal static string NewFileUrl {
-            get {
+        public static string NewFileUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("NewFileUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Next.
         /// </summary>
-        internal static string NextAlternativeText {
-            get {
+        public static string NextAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("NextAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Next.
         /// </summary>
-        internal static string NextUrl {
-            get {
+        public static string NextUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("NextUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to No Value From DataSource.
         /// </summary>
-        internal static string NoValueFromDataSource {
-            get {
+        public static string NoValueFromDataSource
+        {
+            get
+            {
                 return ResourceManager.GetString("NoValueFromDataSource", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to NumericDown.
         /// </summary>
-        internal static string NumericDownAlternativeText {
-            get {
+        public static string NumericDownAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("NumericDownAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=NumericDown.
         /// </summary>
-        internal static string NumericDownUrl {
-            get {
+        public static string NumericDownUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("NumericDownUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to NumericUp.
         /// </summary>
-        internal static string NumericUpAlternativeText {
-            get {
+        public static string NumericUpAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("NumericUpAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=NumericUp.
         /// </summary>
-        internal static string NumericUpUrl {
-            get {
+        public static string NumericUpUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("NumericUpUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Off.
         /// </summary>
-        internal static string Off_DescriptionText {
-            get {
+        public static string Off_DescriptionText
+        {
+            get
+            {
                 return ResourceManager.GetString("Off_DescriptionText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to On.
         /// </summary>
-        internal static string On_DescriptionText {
-            get {
+        public static string On_DescriptionText
+        {
+            get
+            {
                 return ResourceManager.GetString("On_DescriptionText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to OnHold.
         /// </summary>
-        internal static string OnHold {
-            get {
+        public static string OnHold
+        {
+            get
+            {
                 return ResourceManager.GetString("OnHold", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Open.
         /// </summary>
-        internal static string OpenAlternativeText {
-            get {
+        public static string OpenAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("OpenAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Open.
         /// </summary>
-        internal static string OpenUrl {
-            get {
+        public static string OpenUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("OpenUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to PageSize.
         /// </summary>
-        internal static string PageSizeAlternativeText {
-            get {
+        public static string PageSizeAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("PageSizeAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=PageSize.
         /// </summary>
-        internal static string PageSizeUrl {
-            get {
+        public static string PageSizeUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("PageSizeUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to PasswordRecovery.
         /// </summary>
-        internal static string PasswordRecoveryAlternativeText {
-            get {
+        public static string PasswordRecoveryAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("PasswordRecoveryAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=PasswordRecovery.
         /// </summary>
-        internal static string PasswordRecoveryUrl {
-            get {
+        public static string PasswordRecoveryUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("PasswordRecoveryUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Paste.
         /// </summary>
-        internal static string PasteAlternativeText {
-            get {
+        public static string PasteAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("PasteAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Paste.
         /// </summary>
-        internal static string PasteUrl {
-            get {
+        public static string PasteUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("PasteUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Pause.
         /// </summary>
-        internal static string PauseAlternativeText {
-            get {
+        public static string PauseAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("PauseAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Pause.
         /// </summary>
-        internal static string PauseUrl {
-            get {
+        public static string PauseUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("PauseUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Pending.
         /// </summary>
-        internal static string Pending {
-            get {
+        public static string Pending
+        {
+            get
+            {
                 return ResourceManager.GetString("Pending", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to PieChart.
         /// </summary>
-        internal static string PieChartAlternativeText {
-            get {
+        public static string PieChartAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("PieChartAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=PieChart.
         /// </summary>
-        internal static string PieChartUrl {
-            get {
+        public static string PieChartUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("PieChartUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Play.
         /// </summary>
-        internal static string PlayAlternativeText {
-            get {
+        public static string PlayAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("PlayAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Play.
         /// </summary>
-        internal static string PlayUrl {
-            get {
+        public static string PlayUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("PlayUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Plus.
         /// </summary>
-        internal static string PlusAlternativeText {
-            get {
+        public static string PlusAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("PlusAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Plus.
         /// </summary>
-        internal static string PlusUrl {
-            get {
+        public static string PlusUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("PlusUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Previous.
         /// </summary>
-        internal static string PreviousAlternativeText {
-            get {
+        public static string PreviousAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("PreviousAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Previous.
         /// </summary>
-        internal static string PreviousUrl {
-            get {
+        public static string PreviousUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("PreviousUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Process.
         /// </summary>
-        internal static string ProcessAlternativeText {
-            get {
+        public static string ProcessAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("ProcessAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Process.
         /// </summary>
-        internal static string ProcessUrl {
-            get {
+        public static string ProcessUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("ProcessUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Promotion.
         /// </summary>
-        internal static string PromotionAlternativeText {
-            get {
+        public static string PromotionAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("PromotionAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Promotion.
         /// </summary>
-        internal static string PromotionUrl {
-            get {
+        public static string PromotionUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("PromotionUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Protection.
         /// </summary>
-        internal static string ProtectionAlternativeText {
-            get {
+        public static string ProtectionAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("ProtectionAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Protection.
         /// </summary>
-        internal static string ProtectionUrl {
-            get {
+        public static string ProtectionUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("ProtectionUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Question.
         /// </summary>
-        internal static string QuestionAlternativeText {
-            get {
+        public static string QuestionAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("QuestionAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Question.
         /// </summary>
-        internal static string QuestionUrl {
-            get {
+        public static string QuestionUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("QuestionUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Received.
         /// </summary>
-        internal static string Received {
-            get {
+        public static string Received
+        {
+            get
+            {
                 return ResourceManager.GetString("Received", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Record.
         /// </summary>
-        internal static string RecordAlternativeText {
-            get {
+        public static string RecordAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("RecordAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Record.
         /// </summary>
-        internal static string RecordUrl {
-            get {
+        public static string RecordUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("RecordUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Recycle.
         /// </summary>
-        internal static string RecycleAlternativeText {
-            get {
+        public static string RecycleAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("RecycleAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Recycle.
         /// </summary>
-        internal static string RecycleUrl {
-            get {
+        public static string RecycleUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("RecycleUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Redo.
         /// </summary>
-        internal static string RedoAlternativeText {
-            get {
+        public static string RedoAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("RedoAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Redo.
         /// </summary>
-        internal static string RedoUrl {
-            get {
+        public static string RedoUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("RedoUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Refresh.
         /// </summary>
-        internal static string RefreshAlternativeText {
-            get {
+        public static string RefreshAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("RefreshAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Refresh.
         /// </summary>
-        internal static string RefreshUrl {
-            get {
+        public static string RefreshUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("RefreshUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Register.
         /// </summary>
-        internal static string RegisterAlternativeText {
-            get {
+        public static string RegisterAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("RegisterAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Register.
         /// </summary>
-        internal static string RegisterUrl {
-            get {
+        public static string RegisterUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("RegisterUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Rejected.
         /// </summary>
-        internal static string Rejected {
-            get {
+        public static string Rejected
+        {
+            get
+            {
                 return ResourceManager.GetString("Rejected", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Repeat.
         /// </summary>
-        internal static string RepeatAlternativeText {
-            get {
+        public static string RepeatAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("RepeatAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Repeat.
         /// </summary>
-        internal static string RepeatUrl {
-            get {
+        public static string RepeatUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("RepeatUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Request Error.
         /// </summary>
-        internal static string RequestError {
-            get {
+        public static string RequestError
+        {
+            get
+            {
                 return ResourceManager.GetString("RequestError", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to RSS.
         /// </summary>
-        internal static string RSSAlternativeText {
-            get {
+        public static string RSSAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("RSSAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=RSS.
         /// </summary>
-        internal static string RSSUrl {
-            get {
+        public static string RSSUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("RSSUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
-        internal static string SaveAlternativeText {
-            get {
+        public static string SaveAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("SaveAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Save.
         /// </summary>
-        internal static string SaveUrl {
-            get {
+        public static string SaveUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("SaveUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Search.
         /// </summary>
-        internal static string SearchAlternativeText {
-            get {
+        public static string SearchAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("SearchAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to SearchPage.
         /// </summary>
-        internal static string SearchPageAlternativeText {
-            get {
+        public static string SearchPageAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("SearchPageAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=SearchPage.
         /// </summary>
-        internal static string SearchPageUrl {
-            get {
+        public static string SearchPageUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("SearchPageUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Search.
         /// </summary>
-        internal static string SearchUrl {
-            get {
+        public static string SearchUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("SearchUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Setting.
         /// </summary>
-        internal static string SettingAlternativeText {
-            get {
+        public static string SettingAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("SettingAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Setting.
         /// </summary>
-        internal static string SettingUrl {
-            get {
+        public static string SettingUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("SettingUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to ShoppingCart.
         /// </summary>
-        internal static string ShoppingCartAlternativeText {
-            get {
+        public static string ShoppingCartAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("ShoppingCartAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=ShoppingCart.
         /// </summary>
-        internal static string ShoppingCartUrl {
-            get {
+        public static string ShoppingCartUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("ShoppingCartUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to SignUp.
         /// </summary>
-        internal static string SignUpAlternativeText {
-            get {
+        public static string SignUpAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("SignUpAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=SignUp.
         /// </summary>
-        internal static string SignUpUrl {
-            get {
+        public static string SignUpUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("SignUpUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Stop.
         /// </summary>
-        internal static string StopAlternativeText {
-            get {
+        public static string StopAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("StopAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Stop.
         /// </summary>
-        internal static string StopUrl {
-            get {
+        public static string StopUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("StopUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Succeeded.
         /// </summary>
-        internal static string Succeeded {
-            get {
+        public static string Succeeded
+        {
+            get
+            {
                 return ResourceManager.GetString("Succeeded", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to TagBlue.
         /// </summary>
-        internal static string TagBlueAlternativeText {
-            get {
+        public static string TagBlueAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("TagBlueAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=TagBlue.
         /// </summary>
-        internal static string TagBlueUrl {
-            get {
+        public static string TagBlueUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("TagBlueUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to TagGreen.
         /// </summary>
-        internal static string TagGreenAlternativeText {
-            get {
+        public static string TagGreenAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("TagGreenAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=TagGreen.
         /// </summary>
-        internal static string TagGreenUrl {
-            get {
+        public static string TagGreenUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("TagGreenUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to TextPage.
         /// </summary>
-        internal static string TextPageAlternativeText {
-            get {
+        public static string TextPageAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("TextPageAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=TextPage.
         /// </summary>
-        internal static string TextPageUrl {
-            get {
+        public static string TextPageUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("TextPageUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Title.
         /// </summary>
-        internal static string TitleAlternativeText {
-            get {
+        public static string TitleAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("TitleAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Title.
         /// </summary>
-        internal static string TitleUrl {
-            get {
+        public static string TitleUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("TitleUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to ToggleButton_Checked.
         /// </summary>
-        internal static string ToggleButton_CheckedAlternativeText {
-            get {
+        public static string ToggleButton_CheckedAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("ToggleButton_CheckedAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=ToggleButton_Checked.
         /// </summary>
-        internal static string ToggleButton_CheckedUrl {
-            get {
+        public static string ToggleButton_CheckedUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("ToggleButton_CheckedUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to ToggleButton_Unchecked.
         /// </summary>
-        internal static string ToggleButton_UncheckedAlternativeText {
-            get {
+        public static string ToggleButton_UncheckedAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("ToggleButton_UncheckedAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=ToggleButton_Unchecked.
         /// </summary>
-        internal static string ToggleButton_UncheckedUrl {
-            get {
+        public static string ToggleButton_UncheckedUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("ToggleButton_UncheckedUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Tutorial.
         /// </summary>
-        internal static string TutorialAlternativeText {
-            get {
+        public static string TutorialAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("TutorialAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Tutorial.
         /// </summary>
-        internal static string TutorialUrl {
-            get {
+        public static string TutorialUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("TutorialUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Undo.
         /// </summary>
-        internal static string UndoAlternativeText {
-            get {
+        public static string UndoAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("UndoAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Undo.
         /// </summary>
-        internal static string UndoUrl {
-            get {
+        public static string UndoUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("UndoUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Unlock.
         /// </summary>
-        internal static string UnlockAlternativeText {
-            get {
+        public static string UnlockAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("UnlockAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Unlock.
         /// </summary>
-        internal static string UnlockUrl {
-            get {
+        public static string UnlockUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("UnlockUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Up.
         /// </summary>
-        internal static string UpAlternativeText {
-            get {
+        public static string UpAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("UpAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Update.
         /// </summary>
-        internal static string UpdateAlternativeText {
-            get {
+        public static string UpdateAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("UpdateAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Update.
         /// </summary>
-        internal static string UpdateUrl {
-            get {
+        public static string UpdateUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("UpdateUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Up.
         /// </summary>
-        internal static string UpUrl {
-            get {
+        public static string UpUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("UpUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to User.
         /// </summary>
-        internal static string UserAlternativeText {
-            get {
+        public static string UserAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("UserAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Users.
         /// </summary>
-        internal static string UsersAlternativeText {
-            get {
+        public static string UsersAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("UsersAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Users.
         /// </summary>
-        internal static string UsersUrl {
-            get {
+        public static string UsersUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("UsersUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=User.
         /// </summary>
-        internal static string UserUrl {
-            get {
+        public static string UserUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("UserUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to delete this?.
         /// </summary>
-        internal static string Warning_Areyousureyouwanttodeletethis {
-            get {
+        public static string Warning_Areyousureyouwanttodeletethis
+        {
+            get
+            {
                 return ResourceManager.GetString("Warning_Areyousureyouwanttodeletethis", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Warning.
         /// </summary>
-        internal static string WarningAlternativeText {
-            get {
+        public static string WarningAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("WarningAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Warning.
         /// </summary>
-        internal static string WarningUrl {
-            get {
+        public static string WarningUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("WarningUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Workspace.
         /// </summary>
-        internal static string Workspace_DescriptionText {
-            get {
+        public static string Workspace_DescriptionText
+        {
+            get
+            {
                 return ResourceManager.GetString("Workspace_DescriptionText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You Have No Permission To Delete.
         /// </summary>
-        internal static string YouHaveNoPermissionToDelete {
-            get {
+        public static string YouHaveNoPermissionToDelete
+        {
+            get
+            {
                 return ResourceManager.GetString("YouHaveNoPermissionToDelete", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You Have NoPermissionTo Insert.
         /// </summary>
-        internal static string YouHaveNoPermissionToInsert {
-            get {
+        public static string YouHaveNoPermissionToInsert
+        {
+            get
+            {
                 return ResourceManager.GetString("YouHaveNoPermissionToInsert", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You Have No Permission To Update.
         /// </summary>
-        internal static string YouHaveNoPermissionToUpdate {
-            get {
+        public static string YouHaveNoPermissionToUpdate
+        {
+            get
+            {
                 return ResourceManager.GetString("YouHaveNoPermissionToUpdate", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to You Have No Permission To View.
         /// </summary>
-        internal static string YouHaveNoPermissionToView {
-            get {
+        public static string YouHaveNoPermissionToView
+        {
+            get
+            {
                 return ResourceManager.GetString("YouHaveNoPermissionToView", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to ZoomIn.
         /// </summary>
-        internal static string ZoomInAlternativeText {
-            get {
+        public static string ZoomInAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("ZoomInAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=ZoomIn.
         /// </summary>
-        internal static string ZoomInUrl {
-            get {
+        public static string ZoomInUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("ZoomInUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to ZoomOut.
         /// </summary>
-        internal static string ZoomOutAlternativeText {
-            get {
+        public static string ZoomOutAlternativeText
+        {
+            get
+            {
                 return ResourceManager.GetString("ZoomOutAlternativeText", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=ZoomOut.
         /// </summary>
-        internal static string ZoomOutUrl {
-            get {
+        public static string ZoomOutUrl
+        {
+            get
+            {
                 return ResourceManager.GetString("ZoomOutUrl", resourceCulture);
             }
         }
