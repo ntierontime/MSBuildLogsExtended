@@ -1,0 +1,3 @@
+{
+    "projects": [ "Frameworks.DotNetCore", "MSBuildLogsExtended/UI/Web", "MSBuildLogsExtended/Core.DNX" ]
+}

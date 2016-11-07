@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -52,14 +52,6 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Frameworks\Framework.Resources\UIImageResource.designer.cs">
-      <Link>UIImageResource.designer.cs</Link>
-      <DependentUpon>UIImageResource.resx</DependentUpon>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Resources\UIStringResource.designer.cs">
-      <Link>UIStringResource.designer.cs</Link>
-      <DependentUpon>UIStringResource.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <Content Include="Images\Comments.png" />
@@ -159,6 +151,16 @@
     <Content Include="Images\More.png" />
     <Content Include="Images\FullDetails.png" />
     <Content Include="Images\GotoSearch.png" />
+    <EmbeddedResource Include="..\..\Frameworks\Framework.Resources\UIStringResource.resx">
+      <Link>UIStringResource.resx</Link>
+    </EmbeddedResource>
+    <Compile Include="..\..\Frameworks\Framework.Resources\UIStringResource.designer.cs">
+      <Link>UIStringResource.designer.cs</Link>
+      <DependentUpon>UIStringResource.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="system" />
@@ -167,12 +169,6 @@
     <Reference Include="System.Servicemodel" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\..\Frameworks\Framework.Resources\UIImageResource.resx">
-      <Link>UIImageResource.resx</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Frameworks\Framework.Resources\UIStringResource.resx">
-      <Link>UIStringResource.resx</Link>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!--
@@ -189,7 +185,8 @@
       <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
         <SilverlightProjectProperties />
       </FlavorProperties>
-      <UserProperties ProjectLinkReference="c72b898b-b53b-42d5-9f4f-673f84bb485b" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="c72b898b-b53b-42d5-9f4f-673f84bb485b" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

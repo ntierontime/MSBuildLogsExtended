@@ -26,21 +26,6 @@
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
     <DefaultLanguage>en-US</DefaultLanguage>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -91,307 +76,8 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\..\Frameworks\Framework.Resources\UIImageResource.designer.cs">
-      <Link>UIImageResource.designer.cs</Link>
-      <DependentUpon>UIImageResource.resx</DependentUpon>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Resources\UIStringResource.designer.cs">
-      <Link>UIStringResource.designer.cs</Link>
-      <DependentUpon>UIStringResource.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\AddNew.png">
-      <Link>Images\AddNew.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Attachment.png">
-      <Link>Images\Attachment.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Back.png">
-      <Link>Images\Back.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Bookmark.png">
-      <Link>Images\Bookmark.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Calendar.png">
-      <Link>Images\Calendar.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Cancel.png">
-      <Link>Images\Cancel.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\ChangePassword.png">
-      <Link>Images\ChangePassword.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Chart.png">
-      <Link>Images\Chart.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Checkbox_Checked.png">
-      <Link>Images\Checkbox_Checked.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Checkbox_Unchecked.png">
-      <Link>Images\Checkbox_Unchecked.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Clock.png">
-      <Link>Images\Clock.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Close.png">
-      <Link>Images\Close.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Comment.png">
-      <Link>Images\Comment.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Comments.png">
-      <Link>Images\Comments.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Confirm.png">
-      <Link>Images\Confirm.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Copy.png">
-      <Link>Images\Copy.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\CreateUser.png">
-      <Link>Images\CreateUser.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Delete.png">
-      <Link>Images\Delete.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Details.png">
-      <Link>Images\Details.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Down.png">
-      <Link>Images\Down.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Download.png">
-      <Link>Images\Download.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Edit.png">
-      <Link>Images\Edit.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Exit.png">
-      <Link>Images\Exit.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Export.png">
-      <Link>Images\Export.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\ExportToExcel.png">
-      <Link>Images\ExportToExcel.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Favorite.png">
-      <Link>Images\Favorite.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\FileReplace.png">
-      <Link>Images\FileReplace.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\First.png">
-      <Link>Images\First.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Forward.png">
-      <Link>Images\Forward.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\FullDetails.png">
-      <Link>Images\FullDetails.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Go.png">
-      <Link>Images\Go.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\GotoSearch.png">
-      <Link>Images\GotoSearch.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Heart.png">
-      <Link>Images\Heart.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Help.png">
-      <Link>Images\Help.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Home.png">
-      <Link>Images\Home.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Import.png">
-      <Link>Images\Import.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Index.png">
-      <Link>Images\Index.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Information.png">
-      <Link>Images\Information.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Insert.png">
-      <Link>Images\Insert.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Last.png">
-      <Link>Images\Last.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\LoadFile.png">
-      <Link>Images\LoadFile.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Lock.png">
-      <Link>Images\Lock.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Mail.png">
-      <Link>Images\Mail.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\MailLock.png">
-      <Link>Images\MailLock.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\MailReceive.png">
-      <Link>Images\MailReceive.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\MailSearch.png">
-      <Link>Images\MailSearch.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\MailSend.png">
-      <Link>Images\MailSend.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Minus.png">
-      <Link>Images\Minus.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Money.png">
-      <Link>Images\Money.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\More.png">
-      <Link>Images\More.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\NewFile.png">
-      <Link>Images\NewFile.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Next.png">
-      <Link>Images\Next.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\NumericDown.png">
-      <Link>Images\NumericDown.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\NumericUp.png">
-      <Link>Images\NumericUp.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Open.png">
-      <Link>Images\Open.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\PageSize.png">
-      <Link>Images\PageSize.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\PasswordRecovery.png">
-      <Link>Images\PasswordRecovery.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Paste.png">
-      <Link>Images\Paste.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Pause.png">
-      <Link>Images\Pause.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\PieChart.png">
-      <Link>Images\PieChart.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Play.png">
-      <Link>Images\Play.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Plus.png">
-      <Link>Images\Plus.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Previous.png">
-      <Link>Images\Previous.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Process.png">
-      <Link>Images\Process.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Promotion.png">
-      <Link>Images\Promotion.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Protection.png">
-      <Link>Images\Protection.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Question.png">
-      <Link>Images\Question.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Record.png">
-      <Link>Images\Record.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Recycle.png">
-      <Link>Images\Recycle.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Redo.png">
-      <Link>Images\Redo.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Refresh.png">
-      <Link>Images\Refresh.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Register.png">
-      <Link>Images\Register.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Repeat.png">
-      <Link>Images\Repeat.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Rss.png">
-      <Link>Images\Rss.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Save.png">
-      <Link>Images\Save.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Search.png">
-      <Link>Images\Search.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\SearchPage.png">
-      <Link>Images\SearchPage.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Setting.png">
-      <Link>Images\Setting.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\ShoppingCart.png">
-      <Link>Images\ShoppingCart.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\SignUp.png">
-      <Link>Images\SignUp.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Stop.png">
-      <Link>Images\Stop.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\TagBlue.png">
-      <Link>Images\TagBlue.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\TagGreen.png">
-      <Link>Images\TagGreen.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\TextPage.png">
-      <Link>Images\TextPage.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Title.png">
-      <Link>Images\Title.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\ToggleButton_Checked.png">
-      <Link>Images\ToggleButton_Checked.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\ToggleButton_Unchecked.png">
-      <Link>Images\ToggleButton_Unchecked.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Tutorial.png">
-      <Link>Images\Tutorial.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Undo.png">
-      <Link>Images\Undo.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Unlock.png">
-      <Link>Images\Unlock.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Up.png">
-      <Link>Images\Up.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Update.png">
-      <Link>Images\Update.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\User.png">
-      <Link>Images\User.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Users.png">
-      <Link>Images\Users.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\Warning.png">
-      <Link>Images\Warning.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\ZoomIn.png">
-      <Link>Images\ZoomIn.png</Link>
-    </Content>
-    <Content Include="..\..\Frameworks\Framework.Resources\Images\ZoomOut.png">
-      <Link>Images\ZoomOut.png</Link>
-    </Content>
     <Content Include="Toolkit.Content\ApplicationBar.Edit.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -488,13 +174,16 @@
     <Content Include="Toolkit.Content\ApplicationBar.Download.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="..\..\Frameworks\Framework.Resources\UIStringResource.resx">
+      <Link>UIStringResource.resx</Link>
+    </EmbeddedResource>
+    <Compile Include="..\..\Frameworks\Framework.Resources\UIStringResource.designer.cs">
+      <Link>UIStringResource.designer.cs</Link>
+      <DependentUpon>UIStringResource.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="system" />
@@ -504,12 +193,6 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\..\Frameworks\Framework.Resources\UIImageResource.resx">
-      <Link>UIImageResource.resx</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\Frameworks\Framework.Resources\UIStringResource.resx">
-      <Link>UIStringResource.resx</Link>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
@@ -524,7 +207,7 @@
   -->
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="c72b898b-b53b-42d5-9f4f-673f84bb485b" />
+      <UserProperties ProjectLinkReference="c72b898b-b53b-42d5-9f4f-673f84bb485b" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

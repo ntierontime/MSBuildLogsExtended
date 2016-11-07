@@ -275,6 +275,15 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MSBuildLogsExtended.WcfClie
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MSBuildLogsExtended.AspNetMvc40ViewModel.DNX", "MSBuildLogsExtended\UI\Web\MSBuildLogsExtended.AspNetMvc40ViewModel.DNX\MSBuildLogsExtended.AspNetMvc40ViewModel.DNX.xproj", "{F7EF0993-BDB5-4672-A0C7-1A25F1157A24}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web.DNX", "Web.DNX", "{0FF06AB8-3E4D-4C6B-9DA0-431C2AB72A46}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MSBuildLogsExtended.AspNetMvc6", "MSBuildLogsExtended\UI\Web.DNX\MSBuildLogsExtended.AspNetMvc6\MSBuildLogsExtended.AspNetMvc6.xproj", "{B1AC924D-F001-4FE2-AB7E-BFD8521A7A55}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8CFAE7AD-B321-40C5-B399-983C32FB35E3}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1631,6 +1640,18 @@ Global
 		{F7EF0993-BDB5-4672-A0C7-1A25F1157A24}.Release|ARM.Build.0 = Release|Any CPU
 		{F7EF0993-BDB5-4672-A0C7-1A25F1157A24}.Release|x86.ActiveCfg = Release|Any CPU
 		{F7EF0993-BDB5-4672-A0C7-1A25F1157A24}.Release|x86.Build.0 = Release|Any CPU
+		{B1AC924D-F001-4FE2-AB7E-BFD8521A7A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1AC924D-F001-4FE2-AB7E-BFD8521A7A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1AC924D-F001-4FE2-AB7E-BFD8521A7A55}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{B1AC924D-F001-4FE2-AB7E-BFD8521A7A55}.Debug|ARM.Build.0 = Debug|Any CPU
+		{B1AC924D-F001-4FE2-AB7E-BFD8521A7A55}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B1AC924D-F001-4FE2-AB7E-BFD8521A7A55}.Debug|x86.Build.0 = Debug|Any CPU
+		{B1AC924D-F001-4FE2-AB7E-BFD8521A7A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1AC924D-F001-4FE2-AB7E-BFD8521A7A55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1AC924D-F001-4FE2-AB7E-BFD8521A7A55}.Release|ARM.ActiveCfg = Release|Any CPU
+		{B1AC924D-F001-4FE2-AB7E-BFD8521A7A55}.Release|ARM.Build.0 = Release|Any CPU
+		{B1AC924D-F001-4FE2-AB7E-BFD8521A7A55}.Release|x86.ActiveCfg = Release|Any CPU
+		{B1AC924D-F001-4FE2-AB7E-BFD8521A7A55}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1752,5 +1773,7 @@ Global
 		{A21ADDE7-D812-4533-9F80-8C76BF195C9E} = {427C4D14-3873-4560-857B-00D4567A116C}
 		{AA44902D-01AB-4E31-B7D5-F759B9A18AA5} = {3B1A027D-4F48-4AE9-BD67-DC5E19BD33DD}
 		{F7EF0993-BDB5-4672-A0C7-1A25F1157A24} = {EDBCF824-CF09-42A4-A82C-769FFE967294}
+		{0FF06AB8-3E4D-4C6B-9DA0-431C2AB72A46} = {850D5409-DD6A-43FA-BB16-A0D9C3A9C90C}
+		{B1AC924D-F001-4FE2-AB7E-BFD8521A7A55} = {0FF06AB8-3E4D-4C6B-9DA0-431C2AB72A46}
 	EndGlobalSection
 EndGlobal
