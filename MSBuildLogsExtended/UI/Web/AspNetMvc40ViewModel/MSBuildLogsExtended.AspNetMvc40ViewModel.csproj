@@ -42,18 +42,18 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Compile Include="ItemViewModelBuild.cs" />
     <Compile Include="ItemViewModelBuildEventCode.cs" />
     <Compile Include="ItemViewModelBuildLog.cs" />
     <Compile Include="ItemViewModelSolution.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorkspaceViewModelBuild.cs" />
     <Compile Include="WorkspaceViewModelBuildEventCode.cs" />
     <Compile Include="WorkspaceViewModelBuildLog.cs" />
     <Compile Include="WorkspaceViewModelSolution.cs" />
     <Content Include="Maps\map.2.D.1.vsd" />
     <Content Include="Maps\map.2.D.1.vsd.png" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core\CommonBLL\MSBuildLogsExtended.CommonBLL.csproj">

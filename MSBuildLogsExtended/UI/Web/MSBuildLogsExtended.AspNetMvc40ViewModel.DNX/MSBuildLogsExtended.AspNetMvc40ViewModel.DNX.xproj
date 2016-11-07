@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>f7ef0993-bdb5-4672-a0c7-1a25f1157a24</ProjectGuid>
+    <RootNamespace>MSBuildLogsExtended.AspNetMvc40ViewModel.DNX</RootNamespace>
+    <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
+    <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="..\AspNetMvc40ViewModel\Maps\map.2.D.1.vsd">
+      <Link>Maps\map.2.D.1.vsd</Link>
+    </Content>
+    <Content Include="..\AspNetMvc40ViewModel\Maps\map.2.D.1.vsd.png">
+      <Link>Maps\map.2.D.1.vsd.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AspNetMvc40ViewModel\ItemViewModelBuild.cs">
+      <Link>ItemViewModelBuild.cs</Link>
+    </Compile>
+    <Compile Include="..\AspNetMvc40ViewModel\ItemViewModelBuildEventCode.cs">
+      <Link>ItemViewModelBuildEventCode.cs</Link>
+    </Compile>
+    <Compile Include="..\AspNetMvc40ViewModel\ItemViewModelBuildLog.cs">
+      <Link>ItemViewModelBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\AspNetMvc40ViewModel\ItemViewModelSolution.cs">
+      <Link>ItemViewModelSolution.cs</Link>
+    </Compile>
+    <Compile Include="..\AspNetMvc40ViewModel\WorkspaceViewModelBuild.cs">
+      <Link>WorkspaceViewModelBuild.cs</Link>
+    </Compile>
+    <Compile Include="..\AspNetMvc40ViewModel\WorkspaceViewModelBuildEventCode.cs">
+      <Link>WorkspaceViewModelBuildEventCode.cs</Link>
+    </Compile>
+    <Compile Include="..\AspNetMvc40ViewModel\WorkspaceViewModelBuildLog.cs">
+      <Link>WorkspaceViewModelBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\AspNetMvc40ViewModel\WorkspaceViewModelSolution.cs">
+      <Link>WorkspaceViewModelSolution.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="AC276481-DDF6-472D-9893-D7533629669B" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
