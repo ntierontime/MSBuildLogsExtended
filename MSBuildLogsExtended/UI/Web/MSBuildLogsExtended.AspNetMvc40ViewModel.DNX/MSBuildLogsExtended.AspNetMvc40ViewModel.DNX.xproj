@@ -23,32 +23,6 @@
       <Link>Maps\map.2.D.1.vsd.png</Link>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\AspNetMvc40ViewModel\ItemViewModelBuild.cs">
-      <Link>ItemViewModelBuild.cs</Link>
-    </Compile>
-    <Compile Include="..\AspNetMvc40ViewModel\ItemViewModelBuildEventCode.cs">
-      <Link>ItemViewModelBuildEventCode.cs</Link>
-    </Compile>
-    <Compile Include="..\AspNetMvc40ViewModel\ItemViewModelBuildLog.cs">
-      <Link>ItemViewModelBuildLog.cs</Link>
-    </Compile>
-    <Compile Include="..\AspNetMvc40ViewModel\ItemViewModelSolution.cs">
-      <Link>ItemViewModelSolution.cs</Link>
-    </Compile>
-    <Compile Include="..\AspNetMvc40ViewModel\WorkspaceViewModelBuild.cs">
-      <Link>WorkspaceViewModelBuild.cs</Link>
-    </Compile>
-    <Compile Include="..\AspNetMvc40ViewModel\WorkspaceViewModelBuildEventCode.cs">
-      <Link>WorkspaceViewModelBuildEventCode.cs</Link>
-    </Compile>
-    <Compile Include="..\AspNetMvc40ViewModel\WorkspaceViewModelBuildLog.cs">
-      <Link>WorkspaceViewModelBuildLog.cs</Link>
-    </Compile>
-    <Compile Include="..\AspNetMvc40ViewModel\WorkspaceViewModelSolution.cs">
-      <Link>WorkspaceViewModelSolution.cs</Link>
-    </Compile>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>
