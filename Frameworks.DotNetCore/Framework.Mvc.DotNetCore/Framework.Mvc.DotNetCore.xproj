@@ -23,29 +23,6 @@
       <Link>Maps\map.1.D.1.vsd.png</Link>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Frameworks\Framework.Mvc\HtmlChartHelpers.cs">
-      <Link>HtmlChartHelpers.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Mvc\MvcHelper.cs">
-      <Link>MvcHelper.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Mvc\PagerHelper.cs">
-      <Link>PagerHelper.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Mvc\PagerHtmlRenderer.cs">
-      <Link>PagerHtmlRenderer.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Mvc\ViewModelBaseWithResultAndUIElement.cs">
-      <Link>ViewModelBaseWithResultAndUIElement.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Mvc\ViewModels\MultipleFileUploadModel.cs">
-      <Link>ViewModels\MultipleFileUploadModel.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Mvc\ViewModels\ViewModelEntityRelatedBase.cs">
-      <Link>ViewModels\ViewModelEntityRelatedBase.cs</Link>
-    </Compile>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>

@@ -7,7 +7,7 @@
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>34fd5184-f8fb-4dc3-92e4-9e22f0d13bfc</ProjectGuid>
-    <RootNamespace>Framework.Resources.DotNetCore</RootNamespace>
+    <RootNamespace>Framework.Resources</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -15,14 +15,6 @@
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Frameworks\Framework.Resources\UIImageResource1.Designer.cs">
-      <Link>UIImageResource.resx\UIImageResource1.Designer.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Resources\UIStringResource1.Designer.cs">
-      <Link>UIStringResource.resx\UIStringResource1.Designer.cs</Link>
-    </Compile>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>

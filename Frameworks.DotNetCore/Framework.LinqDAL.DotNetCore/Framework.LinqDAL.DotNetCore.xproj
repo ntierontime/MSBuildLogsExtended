@@ -23,11 +23,6 @@
       <Link>Maps\map.1.A.1.vsd.png</Link>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Frameworks\Framework.LinqDAL\LinqToSqlHelper.cs">
-      <Link>LinqToSqlHelper.cs</Link>
-    </Compile>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>

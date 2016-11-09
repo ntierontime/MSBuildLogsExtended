@@ -23,17 +23,6 @@
       <Link>Maps\map.1.A.1.vsd.png</Link>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Frameworks\Framework.DAL\DataAccessLayerContractBase.cs">
-      <Link>DataAccessLayerContractBase.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.DAL\DataAccessLayerPickListTemplateContract.cs">
-      <Link>DataAccessLayerPickListTemplateContract.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.DAL\StatusChangeLinqQuerySetBase.cs">
-      <Link>StatusChangeLinqQuerySetBase.cs</Link>
-    </Compile>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>

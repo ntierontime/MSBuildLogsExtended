@@ -23,14 +23,6 @@
       <Link>Maps\map.1.B.3.vsd.png</Link>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Frameworks\Framework.DataSourceEntities\DataAccessLayerMessageBase.cs">
-      <Link>DataAccessLayerMessageBase.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.DataSourceEntities\StatusChangeLinqQueryResultBase.cs">
-      <Link>StatusChangeLinqQueryResultBase.cs</Link>
-    </Compile>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>

@@ -23,35 +23,6 @@
       <Link>Maps\map.1.B.3.vsd.png</Link>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerContext.cs">
-      <Link>BusinessLogicLayerContext.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerContextContainerCommon.cs">
-      <Link>BusinessLogicLayerContextContainerCommon.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerContextSetting.cs">
-      <Link>BusinessLogicLayerContextSetting.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerMemberShipContract.cs">
-      <Link>BusinessLogicLayerMemberShipContract.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerRequestMessageBase.cs">
-      <Link>BusinessLogicLayerRequestMessageBase.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerRequestTypes.cs">
-      <Link>BusinessLogicLayerRequestTypes.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerResponseMessageBase.cs">
-      <Link>BusinessLogicLayerResponseMessageBase.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\IBusinessLogicLayerContextContainer.cs">
-      <Link>IBusinessLogicLayerContextContainer.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\SessionVariablesCommon.cs">
-      <Link>SessionVariablesCommon.cs</Link>
-    </Compile>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>

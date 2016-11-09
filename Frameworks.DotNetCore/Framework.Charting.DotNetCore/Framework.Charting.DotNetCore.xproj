@@ -23,14 +23,6 @@
       <Link>Maps\map.1.B.2.vsd.png</Link>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Frameworks\Framework.Charting\MSChartBuilder.cs">
-      <Link>MSChartBuilder.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Charting\MSChartConfiguration.cs">
-      <Link>MSChartConfiguration.cs</Link>
-    </Compile>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>
