@@ -15,20 +15,6 @@
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Frameworks\Framework.Services\ClosedXmlHelper.cs">
-      <Link>ClosedXmlHelper.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Services\DataStreamServiceProviderBase.cs">
-      <Link>DataStreamServiceProviderBase.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Services\LinqToCsvHelper.cs">
-      <Link>LinqToCsvHelper.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Services\LinqToExcelHelper.cs">
-      <Link>LinqToExcelHelper.cs</Link>
-    </Compile>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>

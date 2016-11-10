@@ -16,14 +16,8 @@
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\..\Frameworks\Framework.Web\AjaxControlToolkitHelper.cs">
-      <Link>AjaxControlToolkitHelper.cs</Link>
-    </Compile>
     <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationApplicationVarHelper.cs">
       <Link>AppEngine\WebFormApplicationApplicationVarHelper.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationButtonHelper.cs">
-      <Link>AppEngine\WebFormApplicationButtonHelper.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationButtonRolePermission.cs">
       <Link>AppEngine\WebFormApplicationButtonRolePermission.cs</Link>
@@ -33,9 +27,6 @@
     </Compile>
     <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationCascadingDropDownHelper.cs">
       <Link>AppEngine\WebFormApplicationCascadingDropDownHelper.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationFileUploadWorker.cs">
-      <Link>AppEngine\WebFormApplicationFileUploadWorker.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationGlobalSetting.cs">
       <Link>AppEngine\WebFormApplicationGlobalSetting.cs</Link>
@@ -57,12 +48,6 @@
     </Compile>
     <Compile Include="..\..\Frameworks\Framework.Web\AppEngine\WebFormApplicationWikiPlexHelper.cs">
       <Link>AppEngine\WebFormApplicationWikiPlexHelper.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Web\ControlHelper.cs">
-      <Link>ControlHelper.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.Web\ListViewHelper.cs">
-      <Link>ListViewHelper.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework.Web\WebFormApplicationApplicationVariables.cs">
       <Link>WebFormApplicationApplicationVariables.cs</Link>
