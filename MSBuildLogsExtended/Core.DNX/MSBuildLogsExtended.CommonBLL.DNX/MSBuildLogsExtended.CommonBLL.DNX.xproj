@@ -15,58 +15,6 @@
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Core\CommonBLL\BusinessLogicLayerEntity\BusinessLogicLayerEntityBuild.cs">
-      <Link>BusinessLogicLayerEntity\BusinessLogicLayerEntityBuild.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\CommonBLL\BusinessLogicLayerEntity\BusinessLogicLayerEntityBuildEventCode.cs">
-      <Link>BusinessLogicLayerEntity\BusinessLogicLayerEntityBuildEventCode.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\CommonBLL\BusinessLogicLayerEntity\BusinessLogicLayerEntityBuildLog.cs">
-      <Link>BusinessLogicLayerEntity\BusinessLogicLayerEntityBuildLog.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\CommonBLL\BusinessLogicLayerEntity\BusinessLogicLayerEntitySolution.cs">
-      <Link>BusinessLogicLayerEntity\BusinessLogicLayerEntitySolution.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\CommonBLL\BusinessLogicLayerFactory.cs">
-      <Link>BusinessLogicLayerFactory.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\CommonBLL\Charting\ChartBuilderBuild.cs">
-      <Link>Charting\ChartBuilderBuild.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\CommonBLL\Charting\ChartBuilderBuildEventCode.cs">
-      <Link>Charting\ChartBuilderBuildEventCode.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\CommonBLL\Charting\ChartBuilderBuildLog.cs">
-      <Link>Charting\ChartBuilderBuildLog.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\CommonBLL\Charting\ChartBuilderSolution.cs">
-      <Link>Charting\ChartBuilderSolution.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\CommonBLL\DataStreamServiceProviders\DataStreamServiceProviderBuild.cs">
-      <Link>DataStreamServiceProviders\DataStreamServiceProviderBuild.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\CommonBLL\DataStreamServiceProviders\DataStreamServiceProviderBuildEventCode.cs">
-      <Link>DataStreamServiceProviders\DataStreamServiceProviderBuildEventCode.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\CommonBLL\DataStreamServiceProviders\DataStreamServiceProviderBuildLog.cs">
-      <Link>DataStreamServiceProviders\DataStreamServiceProviderBuildLog.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\CommonBLL\DataStreamServiceProviders\DataStreamServiceProviderSolution.cs">
-      <Link>DataStreamServiceProviders\DataStreamServiceProviderSolution.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\CommonBLL\SyndicationFeedFacade.cs">
-      <Link>SyndicationFeedFacade.cs</Link>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\..\Core\CommonBLL\Maps\map.2.B.2.vsd">
-      <Link>Maps\map.2.B.2.vsd</Link>
-    </Content>
-    <Content Include="..\..\Core\CommonBLL\Maps\map.2.B.2.vsd.png">
-      <Link>Maps\map.2.B.2.vsd.png</Link>
-    </Content>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>

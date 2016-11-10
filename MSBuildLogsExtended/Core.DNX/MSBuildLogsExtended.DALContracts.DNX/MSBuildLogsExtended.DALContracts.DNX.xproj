@@ -15,31 +15,6 @@
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Content Include="..\..\Core\DALContracts\Maps\map.2.A.1.vsd">
-      <Link>Maps\map.2.A.1.vsd</Link>
-    </Content>
-    <Content Include="..\..\Core\DALContracts\Maps\map.2.A.1.vsd.png">
-      <Link>Maps\map.2.A.1.vsd.png</Link>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Core\DALContracts\DataAccessLayerEntityContractBuild.cs">
-      <Link>DataAccessLayerEntityContractBuild.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\DALContracts\DataAccessLayerEntityContractBuildEventCode.cs">
-      <Link>DataAccessLayerEntityContractBuildEventCode.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\DALContracts\DataAccessLayerEntityContractBuildLog.cs">
-      <Link>DataAccessLayerEntityContractBuildLog.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\DALContracts\DataAccessLayerEntityContractSolution.cs">
-      <Link>DataAccessLayerEntityContractSolution.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\DALContracts\DataAccessLayerFactoryContract.cs">
-      <Link>DataAccessLayerFactoryContract.cs</Link>
-    </Compile>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>

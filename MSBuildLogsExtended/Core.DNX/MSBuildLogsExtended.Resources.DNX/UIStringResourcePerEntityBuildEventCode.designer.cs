@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MSBuildLogsExtended.Resources.DNX {
+namespace MSBuildLogsExtended.Resources {
     using System;
     using System.Reflection;
     

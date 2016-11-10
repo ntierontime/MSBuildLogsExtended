@@ -52,7 +52,6 @@
     "Framework.LinqDAL.DotNetCore": "1.0.0-*",
     "Framework.Resources.DotNetCore": "1.0.0-*",
     "Framework.Services.DotNetCore": "1.0.0-*",
-    "Framework.Web.DotNetCore": "1.0.0-*",
     "MSBuildLogsExtended.AspNetMvc40ViewModel.DNX": "1.0.0-*",
     "MSBuildLogsExtended.CommonBLL.DNX": "1.0.0-*",
     "MSBuildLogsExtended.CommonBLLEntities.DNX": "1.0.0-*",

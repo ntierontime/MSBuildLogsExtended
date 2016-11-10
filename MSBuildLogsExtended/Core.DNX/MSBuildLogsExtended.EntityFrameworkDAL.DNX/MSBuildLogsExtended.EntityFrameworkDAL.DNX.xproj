@@ -15,31 +15,6 @@
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Core\EntityFrameworkDAL\EFDataAccessLayerEntities\EFDataAccessLayerEntityBuild.cs">
-      <Link>EFDataAccessLayerEntities\EFDataAccessLayerEntityBuild.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\EntityFrameworkDAL\EFDataAccessLayerEntities\EFDataAccessLayerEntityBuildEventCode.cs">
-      <Link>EFDataAccessLayerEntities\EFDataAccessLayerEntityBuildEventCode.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\EntityFrameworkDAL\EFDataAccessLayerEntities\EFDataAccessLayerEntityBuildLog.cs">
-      <Link>EFDataAccessLayerEntities\EFDataAccessLayerEntityBuildLog.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\EntityFrameworkDAL\EFDataAccessLayerEntities\EFDataAccessLayerEntitySolution.cs">
-      <Link>EFDataAccessLayerEntities\EFDataAccessLayerEntitySolution.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\EntityFrameworkDAL\EFDataAccessLayerFactory.cs">
-      <Link>EFDataAccessLayerFactory.cs</Link>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\..\Core\EntityFrameworkDAL\Maps\map.2.A.1.vsd">
-      <Link>Maps\map.2.A.1.vsd</Link>
-    </Content>
-    <Content Include="..\..\Core\EntityFrameworkDAL\Maps\map.2.A.1.vsd.png">
-      <Link>Maps\map.2.A.1.vsd.png</Link>
-    </Content>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>

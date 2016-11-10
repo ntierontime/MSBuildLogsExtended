@@ -42,6 +42,9 @@ namespace MSBuildLogsExtended.AspNetMvc6
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.NewDb;Trusted_Connection=True;";
+            //services.AddDbContext<MSBuildLogsExtendedEntities>(options => options.UseSqlServer(connection));
+
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
@@ -62,6 +65,7 @@ namespace MSBuildLogsExtended.AspNetMvc6
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 

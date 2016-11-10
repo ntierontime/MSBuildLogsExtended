@@ -15,28 +15,6 @@
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Content Include="..\..\Core\CommonBLLIoC\Maps\map.2.C.2.vsd">
-      <Link>Maps\map.2.C.2.vsd</Link>
-    </Content>
-    <Content Include="..\..\Core\CommonBLLIoC\Maps\map.2.C.2.vsd.png">
-      <Link>Maps\map.2.C.2.vsd.png</Link>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Core\CommonBLLIoC\Static\BusinessLogicLayerEntityStaticBuild.cs">
-      <Link>Static\BusinessLogicLayerEntityStaticBuild.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\CommonBLLIoC\Static\BusinessLogicLayerEntityStaticBuildEventCode.cs">
-      <Link>Static\BusinessLogicLayerEntityStaticBuildEventCode.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\CommonBLLIoC\Static\BusinessLogicLayerEntityStaticBuildLog.cs">
-      <Link>Static\BusinessLogicLayerEntityStaticBuildLog.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\CommonBLLIoC\Static\BusinessLogicLayerEntityStaticSolution.cs">
-      <Link>Static\BusinessLogicLayerEntityStaticSolution.cs</Link>
-    </Compile>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>

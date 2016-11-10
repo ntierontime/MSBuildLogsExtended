@@ -15,43 +15,6 @@
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Content Include="..\..\Core\EntityFrameworkContext\App.config">
-      <Link>App.config</Link>
-    </Content>
-    <Content Include="..\..\Core\EntityFrameworkContext\EFEntityDataModel.Context.tt">
-      <Link>EFEntityDataModel.Context.tt</Link>
-    </Content>
-    <Content Include="..\..\Core\EntityFrameworkContext\EFEntityDataModel.edmx">
-      <Link>EFEntityDataModel.edmx</Link>
-    </Content>
-    <Content Include="..\..\Core\EntityFrameworkContext\EFEntityDataModel.txt">
-      <Link>EFEntityDataModel.txt</Link>
-    </Content>
-    <Content Include="..\..\Core\EntityFrameworkContext\Maps\map.2.A.1.vsd">
-      <Link>Maps\map.2.A.1.vsd</Link>
-    </Content>
-    <Content Include="..\..\Core\EntityFrameworkContext\Maps\map.2.A.1.vsd.png">
-      <Link>Maps\map.2.A.1.vsd.png</Link>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Core\EntityFrameworkContext\EFEntityDataModel.Companion.cs">
-      <Link>EFEntityDataModel.Companion.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\EntityFrameworkContext\EFEntityDataModel.Context.cs">
-      <Link>EFEntityDataModel.Context.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\EntityFrameworkContext\EFEntityDataModel.Designer.cs">
-      <Link>EFEntityDataModel.Designer.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\EntityFrameworkContext\EFEntityDataModel.edmx.designer.cs">
-      <Link>EFEntityDataModel.edmx.designer.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\EntityFrameworkContext\EFEntityDataModel.Generated.cs">
-      <Link>EFEntityDataModel.Generated.cs</Link>
-    </Compile>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>

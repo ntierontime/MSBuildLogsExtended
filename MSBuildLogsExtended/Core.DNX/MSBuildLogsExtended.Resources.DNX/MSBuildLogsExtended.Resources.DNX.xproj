@@ -7,7 +7,7 @@
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>3f3ac17b-b494-4b7d-82da-f53f09503b07</ProjectGuid>
-    <RootNamespace>MSBuildLogsExtended.Resources.DNX</RootNamespace>
+    <RootNamespace>MSBuildLogsExtended.Resources</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -15,22 +15,6 @@
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Content Include="..\..\Core\Resources\Maps\map.2.D.2.vsd">
-      <Link>Maps\map.2.D.2.vsd</Link>
-    </Content>
-    <Content Include="..\..\Core\Resources\Maps\map.2.D.2.vsd.png">
-      <Link>Maps\map.2.D.2.vsd.png</Link>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerApp1.Designer.cs">
-      <Link>UIStringResourcePerApp1.Designer.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuild1.Designer.cs">
-      <Link>UIStringResourcePerEntityBuild1.Designer.cs</Link>
-    </Compile>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>

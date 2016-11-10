@@ -15,46 +15,6 @@
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Content Include="..\..\Core\WcfContracts\Maps\map.2.B.2.vsd">
-      <Link>Maps\map.2.B.2.vsd</Link>
-    </Content>
-    <Content Include="..\..\Core\WcfContracts\Maps\map.2.B.2.vsd.png">
-      <Link>Maps\map.2.B.2.vsd.png</Link>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Core\WcfContracts\IBuildEventCodeWcfService.cs">
-      <Link>IBuildEventCodeWcfService.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\WcfContracts\IBuildLogWcfService.cs">
-      <Link>IBuildLogWcfService.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\WcfContracts\IBuildWcfService.cs">
-      <Link>IBuildWcfService.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\WcfContracts\IBusinessLogicLayerFactory.cs">
-      <Link>IBusinessLogicLayerFactory.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\WcfContracts\ISolutionWcfService.cs">
-      <Link>ISolutionWcfService.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\WcfContracts\WcfServiceContractAsynBuild.cs">
-      <Link>WcfServiceContractAsynBuild.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\WcfContracts\WcfServiceContractAsynBuildEventCode.cs">
-      <Link>WcfServiceContractAsynBuildEventCode.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\WcfContracts\WcfServiceContractAsynBuildLog.cs">
-      <Link>WcfServiceContractAsynBuildLog.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\WcfContracts\WcfServiceContractAsynSolution.cs">
-      <Link>WcfServiceContractAsynSolution.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\WcfContracts\WcfServiceResolver.cs">
-      <Link>WcfServiceResolver.cs</Link>
-    </Compile>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>
