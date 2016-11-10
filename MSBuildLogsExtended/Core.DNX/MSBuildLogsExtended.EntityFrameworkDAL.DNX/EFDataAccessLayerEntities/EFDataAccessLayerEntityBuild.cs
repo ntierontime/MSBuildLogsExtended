@@ -183,32 +183,39 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
             {
                 try
                 {
-                    DataTable _DataTable = new DataTable();
-				_DataTable.Columns.Add("Id", typeof(System.Int64));
-				_DataTable.Columns.Add("SolutionId", typeof(System.Int32));
-				_DataTable.Columns.Add("Name", typeof(System.String));
-				_DataTable.Columns.Add("Description", typeof(System.String));
-				_DataTable.Columns.Add("BuildStartTime", typeof(System.DateTime));
-
                     foreach (MSBuildLogsExtended.DataSourceEntities.Build _Item in input)
                     {
+                        var item = MSBuildLogsExtended.EntityContracts.IBuildHelper.m;
+                        this.LinqContext.Build.Add(item);
                         _DataTable.Rows.Add(new object[] { _Item.Id, _Item.SolutionId, _Item.Name, _Item.Description, _Item.BuildStartTime });
                     }
+                    
+    //                DataTable _DataTable = new DataTable();
+				//_DataTable.Columns.Add("Id", typeof(System.Int64));
+				//_DataTable.Columns.Add("SolutionId", typeof(System.Int32));
+				//_DataTable.Columns.Add("Name", typeof(System.String));
+				//_DataTable.Columns.Add("Description", typeof(System.String));
+				//_DataTable.Columns.Add("BuildStartTime", typeof(System.DateTime));
 
-                    using (SqlBulkCopy s = new SqlBulkCopy(this.LinqContext.Database.Connection.ConnectionString))
-                    {
-                        s.DestinationTableName = "dbo.Build";
+    //                foreach (MSBuildLogsExtended.DataSourceEntities.Build _Item in input)
+    //                {
+    //                    _DataTable.Rows.Add(new object[] { _Item.Id, _Item.SolutionId, _Item.Name, _Item.Description, _Item.BuildStartTime });
+    //                }
 
-					s.ColumnMappings.Add("Id", "Id");
-					s.ColumnMappings.Add("SolutionId", "SolutionId");
-					s.ColumnMappings.Add("Name", "Name");
-					s.ColumnMappings.Add("Description", "Description");
-					s.ColumnMappings.Add("BuildStartTime", "BuildStartTime");
+    //                using (SqlBulkCopy s = new SqlBulkCopy(this.LinqContext.Database.Connection.ConnectionString))
+    //                {
+    //                    s.DestinationTableName = "dbo.Build";
 
-                        s.NotifyAfter = 10000;
-                        s.WriteToServer(_DataTable);
-                        s.Close();
-                    }
+				//	s.ColumnMappings.Add("Id", "Id");
+				//	s.ColumnMappings.Add("SolutionId", "SolutionId");
+				//	s.ColumnMappings.Add("Name", "Name");
+				//	s.ColumnMappings.Add("Description", "Description");
+				//	s.ColumnMappings.Add("BuildStartTime", "BuildStartTime");
+
+    //                    s.NotifyAfter = 10000;
+    //                    s.WriteToServer(_DataTable);
+    //                    s.Close();
+    //                }
                 }
                 catch (Exception ex)
                 {
