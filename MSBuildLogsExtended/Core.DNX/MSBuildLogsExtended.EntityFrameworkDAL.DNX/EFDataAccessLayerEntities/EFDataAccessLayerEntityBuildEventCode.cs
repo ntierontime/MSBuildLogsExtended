@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-//using System.Linq.Dynamic;
+using System.Linq.Dynamic;
+using System.Linq.Dynamic.Core;
 using System.Linq.Expressions;
 using System.Text;
 using LinqKit;
@@ -183,28 +184,28 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
             {
                 try
                 {
-                    DataTable _DataTable = new DataTable();
-				_DataTable.Columns.Add("Id", typeof(System.Int32));
-				_DataTable.Columns.Add("EventCode", typeof(System.String));
-				_DataTable.Columns.Add("Description", typeof(System.String));
+    //                DataTable _DataTable = new DataTable();
+				//_DataTable.Columns.Add("Id", typeof(System.Int32));
+				//_DataTable.Columns.Add("EventCode", typeof(System.String));
+				//_DataTable.Columns.Add("Description", typeof(System.String));
 
-                    foreach (MSBuildLogsExtended.DataSourceEntities.BuildEventCode _Item in input)
-                    {
-                        _DataTable.Rows.Add(new object[] { _Item.Id, _Item.EventCode, _Item.Description });
-                    }
+    //                foreach (MSBuildLogsExtended.DataSourceEntities.BuildEventCode _Item in input)
+    //                {
+    //                    _DataTable.Rows.Add(new object[] { _Item.Id, _Item.EventCode, _Item.Description });
+    //                }
 
-                    using (SqlBulkCopy s = new SqlBulkCopy(this.LinqContext.Database.Connection.ConnectionString))
-                    {
-                        s.DestinationTableName = "dbo.BuildEventCode";
+    //                using (SqlBulkCopy s = new SqlBulkCopy(this.LinqContext.Database.Connection.ConnectionString))
+    //                {
+    //                    s.DestinationTableName = "dbo.BuildEventCode";
 
-					s.ColumnMappings.Add("Id", "Id");
-					s.ColumnMappings.Add("EventCode", "EventCode");
-					s.ColumnMappings.Add("Description", "Description");
+				//	s.ColumnMappings.Add("Id", "Id");
+				//	s.ColumnMappings.Add("EventCode", "EventCode");
+				//	s.ColumnMappings.Add("Description", "Description");
 
-                        s.NotifyAfter = 10000;
-                        s.WriteToServer(_DataTable);
-                        s.Close();
-                    }
+    //                    s.NotifyAfter = 10000;
+    //                    s.WriteToServer(_DataTable);
+    //                    s.Close();
+    //                }
                 }
                 catch (Exception ex)
                 {

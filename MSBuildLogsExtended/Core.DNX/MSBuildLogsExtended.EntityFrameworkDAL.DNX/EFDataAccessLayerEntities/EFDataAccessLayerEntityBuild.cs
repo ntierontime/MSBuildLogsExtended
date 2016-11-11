@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-//using System.Linq.Dynamic;
+using System.Linq.Dynamic;
+using System.Linq.Dynamic.Core;
 using System.Linq.Expressions;
 using System.Text;
 using LinqKit;
@@ -183,12 +184,12 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
             {
                 try
                 {
-                    foreach (MSBuildLogsExtended.DataSourceEntities.Build _Item in input)
-                    {
-                        var item = MSBuildLogsExtended.EntityContracts.IBuildHelper.m;
-                        this.LinqContext.Build.Add(item);
-                        _DataTable.Rows.Add(new object[] { _Item.Id, _Item.SolutionId, _Item.Name, _Item.Description, _Item.BuildStartTime });
-                    }
+                    //foreach (MSBuildLogsExtended.DataSourceEntities.Build _Item in input)
+                    //{
+                    //    var item = MSBuildLogsExtended.EntityContracts.IBuildHelper.m;
+                    //    this.LinqContext.Build.Add(item);
+                    //    _DataTable.Rows.Add(new object[] { _Item.Id, _Item.SolutionId, _Item.Name, _Item.Description, _Item.BuildStartTime });
+                    //}
                     
     //                DataTable _DataTable = new DataTable();
 				//_DataTable.Columns.Add("Id", typeof(System.Int64));

@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-//using System.Linq.Dynamic;
+using System.Linq.Dynamic;
+using System.Linq.Dynamic.Core;
 using System.Linq.Expressions;
 using System.Text;
 using LinqKit;
@@ -182,32 +183,32 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
             {
                 try
                 {
-                    DataTable _DataTable = new DataTable();
-				_DataTable.Columns.Add("Id", typeof(System.Int64));
-				_DataTable.Columns.Add("BuildId", typeof(System.Int64));
-				_DataTable.Columns.Add("BuildEventCodeId", typeof(System.Int32));
-				_DataTable.Columns.Add("Message", typeof(System.String));
-				_DataTable.Columns.Add("EventTime", typeof(System.DateTime));
+    //                DataTable _DataTable = new DataTable();
+				//_DataTable.Columns.Add("Id", typeof(System.Int64));
+				//_DataTable.Columns.Add("BuildId", typeof(System.Int64));
+				//_DataTable.Columns.Add("BuildEventCodeId", typeof(System.Int32));
+				//_DataTable.Columns.Add("Message", typeof(System.String));
+				//_DataTable.Columns.Add("EventTime", typeof(System.DateTime));
 
-                    foreach (MSBuildLogsExtended.DataSourceEntities.BuildLog _Item in input)
-                    {
-                        _DataTable.Rows.Add(new object[] { _Item.Id, _Item.BuildId, _Item.BuildEventCodeId, _Item.Message, _Item.EventTime });
-                    }
+    //                foreach (MSBuildLogsExtended.DataSourceEntities.BuildLog _Item in input)
+    //                {
+    //                    _DataTable.Rows.Add(new object[] { _Item.Id, _Item.BuildId, _Item.BuildEventCodeId, _Item.Message, _Item.EventTime });
+    //                }
 
-                    using (SqlBulkCopy s = new SqlBulkCopy(this.LinqContext.Database.Connection.ConnectionString))
-                    {
-                        s.DestinationTableName = "dbo.BuildLog";
+    //                using (SqlBulkCopy s = new SqlBulkCopy(this.LinqContext.Database.Connection.ConnectionString))
+    //                {
+    //                    s.DestinationTableName = "dbo.BuildLog";
 
-					s.ColumnMappings.Add("Id", "Id");
-					s.ColumnMappings.Add("BuildId", "BuildId");
-					s.ColumnMappings.Add("BuildEventCodeId", "BuildEventCodeId");
-					s.ColumnMappings.Add("Message", "Message");
-					s.ColumnMappings.Add("EventTime", "EventTime");
+				//	s.ColumnMappings.Add("Id", "Id");
+				//	s.ColumnMappings.Add("BuildId", "BuildId");
+				//	s.ColumnMappings.Add("BuildEventCodeId", "BuildEventCodeId");
+				//	s.ColumnMappings.Add("Message", "Message");
+				//	s.ColumnMappings.Add("EventTime", "EventTime");
 
-                        s.NotifyAfter = 10000;
-                        s.WriteToServer(_DataTable);
-                        s.Close();
-                    }
+    //                    s.NotifyAfter = 10000;
+    //                    s.WriteToServer(_DataTable);
+    //                    s.Close();
+    //                }
                 }
                 catch (Exception ex)
                 {

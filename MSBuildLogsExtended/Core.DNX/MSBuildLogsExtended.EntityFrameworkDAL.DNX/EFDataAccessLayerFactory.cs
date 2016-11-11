@@ -31,7 +31,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
         /// <returns>a new instance of <see cref="MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractBuild"/>.</returns>
         public MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractBuild CreateDALInstanceOfBuild()
         {
-            return new MSBuildLogsExtended.EntityFrameworkDAL.EFDataAccessLayerEntityBuild(new MSBuildLogsExtended.EntityFrameworkContext.MSBuildLogsExtendedEntities());
+            return new MSBuildLogsExtended.EntityFrameworkDAL.EFDataAccessLayerEntityBuild(new MSBuildLogsExtended.EntityFrameworkContext.MSBuildLogsExtendedEntities(new Microsoft.EntityFrameworkCore.DbContextOptions<EntityFrameworkContext.MSBuildLogsExtendedEntities>()));
         }
 
 
@@ -42,7 +42,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
         /// <returns>a new instance of <see cref="MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractBuildEventCode"/>.</returns>
         public MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractBuildEventCode CreateDALInstanceOfBuildEventCode()
         {
-            return new MSBuildLogsExtended.EntityFrameworkDAL.EFDataAccessLayerEntityBuildEventCode(new MSBuildLogsExtended.EntityFrameworkContext.MSBuildLogsExtendedEntities());
+            return new MSBuildLogsExtended.EntityFrameworkDAL.EFDataAccessLayerEntityBuildEventCode(new MSBuildLogsExtended.EntityFrameworkContext.MSBuildLogsExtendedEntities(new Microsoft.EntityFrameworkCore.DbContextOptions<EntityFrameworkContext.MSBuildLogsExtendedEntities>()));
         }
 
 
@@ -53,7 +53,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
         /// <returns>a new instance of <see cref="MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractBuildLog"/>.</returns>
         public MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractBuildLog CreateDALInstanceOfBuildLog()
         {
-            return new MSBuildLogsExtended.EntityFrameworkDAL.EFDataAccessLayerEntityBuildLog(new MSBuildLogsExtended.EntityFrameworkContext.MSBuildLogsExtendedEntities());
+            return new MSBuildLogsExtended.EntityFrameworkDAL.EFDataAccessLayerEntityBuildLog(new MSBuildLogsExtended.EntityFrameworkContext.MSBuildLogsExtendedEntities(new Microsoft.EntityFrameworkCore.DbContextOptions<EntityFrameworkContext.MSBuildLogsExtendedEntities>()));
         }
 
 
@@ -64,7 +64,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
         /// <returns>a new instance of <see cref="MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractSolution"/>.</returns>
         public MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractSolution CreateDALInstanceOfSolution()
         {
-            return new MSBuildLogsExtended.EntityFrameworkDAL.EFDataAccessLayerEntitySolution(new MSBuildLogsExtended.EntityFrameworkContext.MSBuildLogsExtendedEntities());
+            return new MSBuildLogsExtended.EntityFrameworkDAL.EFDataAccessLayerEntitySolution(new MSBuildLogsExtended.EntityFrameworkContext.MSBuildLogsExtendedEntities(new Microsoft.EntityFrameworkCore.DbContextOptions<EntityFrameworkContext.MSBuildLogsExtendedEntities>()));
         }
 
 
