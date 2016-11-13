@@ -21,7 +21,7 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
     {
 		#region log4net
 
-        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(BuildController));
 
 		#endregion log4net
 
@@ -30,56 +30,56 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
 
 		
 		public const string TempDataKey_WPCommonOfBuild = "TempDataKey_WPCommonOfBuild";
-		public ActionResult WPCommonOfBuild(int currentPage = 1 ,string lowerBoundBuildStartTimeCommonOftOfCommon = null, string upperBoundBuildStartTimeCommonOftOfCommon = null, WPCommonOfBuildVM viewModel = null)
-        {
-            log.Info(string.Format("{0}: WPCommonOfBuild", Framework.LoggingOptions.UI_Process_Started.ToString()));
+//		public ActionResult WPCommonOfBuild(int currentPage = 1 ,string lowerBoundBuildStartTimeCommonOftOfCommon = null, string upperBoundBuildStartTimeCommonOftOfCommon = null, WPCommonOfBuildVM viewModel = null)
+//        {
+//            log.Info(string.Format("{0}: WPCommonOfBuild", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-            Framework.EntityContracts.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildCommonFlatten> vmFromTempData;
-            if (TempData.ContainsKey(TempDataKey_WPCommonOfBuild))
-            {
-                vmFromTempData = (Framework.EntityContracts.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildCommonFlatten>)TempData[TempDataKey_WPCommonOfBuild];
-            }
-            else
-            {
-                vmFromTempData = null;
-            }
+//            Framework.EntityContracts.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildCommonFlatten> vmFromTempData;
+//            if (TempData.ContainsKey(TempDataKey_WPCommonOfBuild))
+//            {
+//                vmFromTempData = (Framework.EntityContracts.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildCommonFlatten>)TempData[TempDataKey_WPCommonOfBuild];
+//            }
+//            else
+//            {
+//                vmFromTempData = null;
+//            }
 
-            viewModel.PopulateAllUIElements(vmFromTempData, currentPage);
+//            viewModel.PopulateAllUIElements(vmFromTempData, currentPage);
 
-			viewModel.Criteria.LowerBoundBuildStartTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundBuildStartTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundBuildStartTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundBuildStartTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundBuildStartTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundBuildStartTimeCommonOftOfCommon);
-            //viewModel.Criteria.LowerBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundCreatedDateTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundCreatedDateTimeCommonOftOfCommon);
+//			viewModel.Criteria.LowerBoundBuildStartTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundBuildStartTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundBuildStartTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundBuildStartTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundBuildStartTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundBuildStartTimeCommonOftOfCommon);
+//            //viewModel.Criteria.LowerBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundCreatedDateTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundCreatedDateTimeCommonOftOfCommon);
 
-            var searchResult = MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuild.GetMessageOfDefaultOfCommon(
-                new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildCommon(viewModel.Criteria)
-                , viewModel.QueryPagingSetting
-                , viewModel.QueryOrderBySettingCollection);
+//            var searchResult = MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuild.GetMessageOfDefaultOfCommon(
+//                new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildCommon(viewModel.Criteria)
+//                , viewModel.QueryPagingSetting
+//                , viewModel.QueryOrderBySettingCollection);
 
 
-            viewModel.StatusOfResult = searchResult.BusinessLogicLayerResponseStatus;
+//            viewModel.StatusOfResult = searchResult.BusinessLogicLayerResponseStatus;
 
-            if (viewModel.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-            {
-				viewModel.Result = searchResult.Message;
+//            if (viewModel.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+//            {
+//				viewModel.Result = searchResult.Message;
 
-				if (searchResult.QueryPagingResult != null)
-				{
-					viewModel.QueryPagingSetting.CountOfRecords = searchResult.QueryPagingResult.CountOfRecords;
-					viewModel.QueryPagingSetting.RecordCountOfCurrentPage = searchResult.QueryPagingResult.RecordCountOfCurrentPage;
-				}
+//				if (searchResult.QueryPagingResult != null)
+//				{
+//					viewModel.QueryPagingSetting.CountOfRecords = searchResult.QueryPagingResult.CountOfRecords;
+//					viewModel.QueryPagingSetting.RecordCountOfCurrentPage = searchResult.QueryPagingResult.RecordCountOfCurrentPage;
+//				}
 
-				TempData[TempDataKey_WPCommonOfBuild] = viewModel.GetPrimaryInformationEntity();
-				TempData.Keep(TempDataKey_WPCommonOfBuild); 
-			}
-            else
-            {
-                viewModel.StatusMessageOfResult = searchResult.GetStatusMessage();
-#if DEBUG
-                viewModel.StatusMessageOfResult = string.Format("{0} {1}", viewModel.StatusMessageOfResult, searchResult.ServerErrorMessage);
-#endif
-            }
+//				TempData[TempDataKey_WPCommonOfBuild] = viewModel.GetPrimaryInformationEntity();
+//				TempData.Keep(TempDataKey_WPCommonOfBuild); 
+//			}
+//            else
+//            {
+//                viewModel.StatusMessageOfResult = searchResult.GetStatusMessage();
+//#if DEBUG
+//                viewModel.StatusMessageOfResult = string.Format("{0} {1}", viewModel.StatusMessageOfResult, searchResult.ServerErrorMessage);
+//#endif
+//            }
 
-            return View(viewModel);
-        }
+//            return View(viewModel);
+//        }
 
         public ActionResult WPCommonOfBuild_Export(Framework.DataServiceTypes dataServiceType)
         {
@@ -116,6 +116,7 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
 
         public ActionResult WPEntityRelatedOfBuild(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
         {
+            
             MSBuildLogsExtended.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM vm = new MSBuildLogsExtended.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM(new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
             vm.LoadData();
 
@@ -129,40 +130,40 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
 
 		#region Import()
 
-        public ActionResult Import(HttpPostedFileBase file)
-        {
-			ViewBag.FileFormat = "Solution_S1_1_Name,Id,SolutionId,Name,Description,BuildStartTime";
-            if (file != null && file.ContentLength > 0 && !string.IsNullOrWhiteSpace(file.FileName))
-            {
-                log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Started.ToString()));
+   //     public ActionResult Import(HttpPostedFileBase file)
+   //     {
+			//ViewBag.FileFormat = "Solution_S1_1_Name,Id,SolutionId,Name,Description,BuildStartTime";
+   //         if (file != null && file.ContentLength > 0 && !string.IsNullOrWhiteSpace(file.FileName))
+   //         {
+   //             log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-                Framework.DataStreamServiceResult dataStreamServiceResult = new Framework.DataStreamServiceResult(file.FileName, file.ContentType, file.ContentLength, file.InputStream);
-                dataStreamServiceResult.TempFilePath = Framework.Web.WebFormApplicationApplicationVariables.FileStorageRootFolder;
-                MSBuildLogsExtended.CommonBLL.DataStreamServiceProviderBuild.Default dataStreamServiceProvider = new MSBuildLogsExtended.CommonBLL.DataStreamServiceProviderBuild.Default();
-                MSBuildLogsExtended.DataSourceEntities.Build.DefaultCollection collection = dataStreamServiceProvider.GetCollectionFromStream(dataStreamServiceResult);
+   //             Framework.DataStreamServiceResult dataStreamServiceResult = new Framework.DataStreamServiceResult(file.FileName, file.ContentType, file.ContentLength, file.InputStream);
+   //             dataStreamServiceResult.TempFilePath = Framework.Web.WebFormApplicationApplicationVariables.FileStorageRootFolder;
+   //             MSBuildLogsExtended.CommonBLL.DataStreamServiceProviderBuild.Default dataStreamServiceProvider = new MSBuildLogsExtended.CommonBLL.DataStreamServiceProviderBuild.Default();
+   //             MSBuildLogsExtended.DataSourceEntities.Build.DefaultCollection collection = dataStreamServiceProvider.GetCollectionFromStream(dataStreamServiceResult);
 
-                if (collection != null)
-                {
-					MSBuildLogsExtended.DataSourceEntities.BuildCollection resultCollection = new MSBuildLogsExtended.DataSourceEntities.BuildCollection();
-					MSBuildLogsExtended.EntityContracts.IBuildHelper.CopyCollection<MSBuildLogsExtended.DataSourceEntities.Build.DefaultCollection, MSBuildLogsExtended.DataSourceEntities.BuildCollection, MSBuildLogsExtended.DataSourceEntities.Build.Default, MSBuildLogsExtended.DataSourceEntities.Build>(collection, resultCollection);
-                    var result = MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuild.BatchInsert(resultCollection);
-					ViewBag.Message = Framework.Resources.UIStringResource.Data_Import_Success;
-                }
-                else
-                {
-                    ViewBag.Message = Framework.Resources.UIStringResource.Data_Import_NoRecordInSourceFile;
-                }
+   //             if (collection != null)
+   //             {
+			//		MSBuildLogsExtended.DataSourceEntities.BuildCollection resultCollection = new MSBuildLogsExtended.DataSourceEntities.BuildCollection();
+			//		MSBuildLogsExtended.EntityContracts.IBuildHelper.CopyCollection<MSBuildLogsExtended.DataSourceEntities.Build.DefaultCollection, MSBuildLogsExtended.DataSourceEntities.BuildCollection, MSBuildLogsExtended.DataSourceEntities.Build.Default, MSBuildLogsExtended.DataSourceEntities.Build>(collection, resultCollection);
+   //                 var result = MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuild.BatchInsert(resultCollection);
+			//		ViewBag.Message = Framework.Resources.UIStringResource.Data_Import_Success;
+   //             }
+   //             else
+   //             {
+   //                 ViewBag.Message = Framework.Resources.UIStringResource.Data_Import_NoRecordInSourceFile;
+   //             }
 
-                log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Ended.ToString()));
+   //             log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Ended.ToString()));
 
-                return View();
-            }
-            else
-            {
-                ViewBag.Message = "";
-                return View();
-            }
-        }
+   //             return View();
+   //         }
+   //         else
+   //         {
+   //             ViewBag.Message = "";
+   //             return View();
+   //         }
+   //     }
 
 		#endregion Import()
 
@@ -360,35 +361,35 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
             } 
         }
 		
-        //
-        // POST: /MSBuildLogsExtended.DataSourceEntities.Build/Delete/5
-		[HttpPost]
-        public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier, FormCollection collection)
-        {
-            try
-            {
-                log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Started.ToString()));
-				MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default _Response =
-					MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuild.GetMessageOfDefaultOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
-				if (_Response != null && _Response.Message != null && _Response.Message.Count == 1)
-				{
-					MSBuildLogsExtended.DataSourceEntities.Build.Default input = _Response.Message[0];
-					MSBuildLogsExtended.DataSourceEntities.Build entity = MSBuildLogsExtended.EntityContracts.IBuildHelper.Clone<MSBuildLogsExtended.DataSourceEntities.Build.Default, MSBuildLogsExtended.DataSourceEntities.Build>(input);
-                    MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuild.DeleteEntity(entity);
-					log.Info(string.Format("{0}: DeleteByIdentifier", Framework.LoggingOptions.UI_Process_Ended.ToString()));
-                }
-				else
-				{
-					log.Warn(string.Format("{0}: DeleteByIdentifier, Entity not exists", Framework.LoggingOptions.UI_Process_Ended.ToString()));
-				}
+  //      //
+  //      // POST: /MSBuildLogsExtended.DataSourceEntities.Build/Delete/5
+		//[HttpPost]
+  //      public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier, FormCollection collection)
+  //      {
+  //          try
+  //          {
+  //              log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Started.ToString()));
+		//		MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default _Response =
+		//			MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuild.GetMessageOfDefaultOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
+		//		if (_Response != null && _Response.Message != null && _Response.Message.Count == 1)
+		//		{
+		//			MSBuildLogsExtended.DataSourceEntities.Build.Default input = _Response.Message[0];
+		//			MSBuildLogsExtended.DataSourceEntities.Build entity = MSBuildLogsExtended.EntityContracts.IBuildHelper.Clone<MSBuildLogsExtended.DataSourceEntities.Build.Default, MSBuildLogsExtended.DataSourceEntities.Build>(input);
+  //                  MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuild.DeleteEntity(entity);
+		//			log.Info(string.Format("{0}: DeleteByIdentifier", Framework.LoggingOptions.UI_Process_Ended.ToString()));
+  //              }
+		//		else
+		//		{
+		//			log.Warn(string.Format("{0}: DeleteByIdentifier, Entity not exists", Framework.LoggingOptions.UI_Process_Ended.ToString()));
+		//		}
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View(new MSBuildLogsExtended.DataSourceEntities.Build.Default());
-            } 
-        }
+  //              return RedirectToAction("Index");
+  //          }
+  //          catch
+  //          {
+  //              return View(new MSBuildLogsExtended.DataSourceEntities.Build.Default());
+  //          } 
+  //      }
 
 		#endregion ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
 		

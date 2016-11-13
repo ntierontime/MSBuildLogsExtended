@@ -23,7 +23,7 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
     {
 		#region log4net
 
-        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(SolutionController));
 
 		#endregion log4net
 
@@ -131,39 +131,39 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
 
 		#region Import()
 
-        public ActionResult Import(HttpPostedFileBase file)
-        {
-			ViewBag.FileFormat = "Id,ExternalParentId,Name,Description";
-            if (file != null && file.ContentLength > 0 && !string.IsNullOrWhiteSpace(file.FileName))
-            {
-                log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Started.ToString()));
+   //     public ActionResult Import(HttpPostedFileBase file)
+   //     {
+			//ViewBag.FileFormat = "Id,ExternalParentId,Name,Description";
+   //         if (file != null && file.ContentLength > 0 && !string.IsNullOrWhiteSpace(file.FileName))
+   //         {
+   //             log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-                Framework.DataStreamServiceResult dataStreamServiceResult = new Framework.DataStreamServiceResult(file.FileName, file.ContentType, file.ContentLength, file.InputStream);
-                dataStreamServiceResult.TempFilePath = Framework.Web.WebFormApplicationApplicationVariables.FileStorageRootFolder;
-                MSBuildLogsExtended.CommonBLL.DataStreamServiceProviderSolution dataStreamServiceProvider = new MSBuildLogsExtended.CommonBLL.DataStreamServiceProviderSolution();
-                MSBuildLogsExtended.DataSourceEntities.SolutionCollection collection = dataStreamServiceProvider.GetCollectionFromStream(dataStreamServiceResult);
+   //             Framework.DataStreamServiceResult dataStreamServiceResult = new Framework.DataStreamServiceResult(file.FileName, file.ContentType, file.ContentLength, file.InputStream);
+   //             dataStreamServiceResult.TempFilePath = Framework.Web.WebFormApplicationApplicationVariables.FileStorageRootFolder;
+   //             MSBuildLogsExtended.CommonBLL.DataStreamServiceProviderSolution dataStreamServiceProvider = new MSBuildLogsExtended.CommonBLL.DataStreamServiceProviderSolution();
+   //             MSBuildLogsExtended.DataSourceEntities.SolutionCollection collection = dataStreamServiceProvider.GetCollectionFromStream(dataStreamServiceResult);
 
-                if (collection != null)
-                {
-					MSBuildLogsExtended.DataSourceEntities.SolutionCollection resultCollection = collection;
-                    var result = MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticSolution.BatchInsert(resultCollection);
-					ViewBag.Message = Framework.Resources.UIStringResource.Data_Import_Success;
-                }
-                else
-                {
-                    ViewBag.Message = Framework.Resources.UIStringResource.Data_Import_NoRecordInSourceFile;
-                }
+   //             if (collection != null)
+   //             {
+			//		MSBuildLogsExtended.DataSourceEntities.SolutionCollection resultCollection = collection;
+   //                 var result = MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticSolution.BatchInsert(resultCollection);
+			//		ViewBag.Message = Framework.Resources.UIStringResource.Data_Import_Success;
+   //             }
+   //             else
+   //             {
+   //                 ViewBag.Message = Framework.Resources.UIStringResource.Data_Import_NoRecordInSourceFile;
+   //             }
 
-                log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Ended.ToString()));
+   //             log.Info(string.Format("{0}: Import", Framework.LoggingOptions.UI_Process_Ended.ToString()));
 
-                return View();
-            }
-            else
-            {
-                ViewBag.Message = "";
-                return View();
-            }
-        }
+   //             return View();
+   //         }
+   //         else
+   //         {
+   //             ViewBag.Message = "";
+   //             return View();
+   //         }
+   //     }
 
 		#endregion Import()
 
@@ -357,35 +357,35 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
             } 
         }
 		
-        //
-        // POST: /MSBuildLogsExtended.DataSourceEntities.Solution/Delete/5
-		[HttpPost]
-        public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier, FormCollection collection)
-        {
-            try
-            {
-                log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Started.ToString()));
-				MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInSolution _Response =
-					MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticSolution.GetMessageOfEntityOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
-				if (_Response != null && _Response.Message != null && _Response.Message.Count == 1)
-				{
-					MSBuildLogsExtended.DataSourceEntities.Solution input = _Response.Message[0];
-					MSBuildLogsExtended.DataSourceEntities.Solution entity = input;
-                    MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticSolution.DeleteEntity(entity);
-					log.Info(string.Format("{0}: DeleteByIdentifier", Framework.LoggingOptions.UI_Process_Ended.ToString()));
-                }
-				else
-				{
-					log.Warn(string.Format("{0}: DeleteByIdentifier, Entity not exists", Framework.LoggingOptions.UI_Process_Ended.ToString()));
-				}
+  //      //
+  //      // POST: /MSBuildLogsExtended.DataSourceEntities.Solution/Delete/5
+		//[HttpPost]
+  //      public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier, FormCollection collection)
+  //      {
+  //          try
+  //          {
+  //              log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Started.ToString()));
+		//		MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInSolution _Response =
+		//			MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticSolution.GetMessageOfEntityOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
+		//		if (_Response != null && _Response.Message != null && _Response.Message.Count == 1)
+		//		{
+		//			MSBuildLogsExtended.DataSourceEntities.Solution input = _Response.Message[0];
+		//			MSBuildLogsExtended.DataSourceEntities.Solution entity = input;
+  //                  MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticSolution.DeleteEntity(entity);
+		//			log.Info(string.Format("{0}: DeleteByIdentifier", Framework.LoggingOptions.UI_Process_Ended.ToString()));
+  //              }
+		//		else
+		//		{
+		//			log.Warn(string.Format("{0}: DeleteByIdentifier, Entity not exists", Framework.LoggingOptions.UI_Process_Ended.ToString()));
+		//		}
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View(new MSBuildLogsExtended.DataSourceEntities.Solution());
-            } 
-        }
+  //              return RedirectToAction("Index");
+  //          }
+  //          catch
+  //          {
+  //              return View(new MSBuildLogsExtended.DataSourceEntities.Solution());
+  //          } 
+  //      }
 
 		#endregion ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier)
 		

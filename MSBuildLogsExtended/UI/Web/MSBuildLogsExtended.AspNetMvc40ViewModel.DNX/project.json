@@ -2,6 +2,24 @@
   "version": "1.0.0-*",
 
   "dependencies": {
+    "Framework.CommonBLLEntities.DotNetCore": "1.0.0-*",
+    "Framework.DAL.DotNetCore": "1.0.0-*",
+    "Framework.DataSourceEntities.DotNetCore": "1.0.0-*",
+    "Framework.EntityContracts.DotNetCore": "1.0.0-*",
+    "Framework.LinqDAL.DotNetCore": "1.0.0-*",
+    "Framework.Mvc.DotNetCore": "1.0.0-*",
+    "Framework.Resources.DotNetCore": "1.0.0-*",
+    "Framework.Services.DotNetCore": "1.0.0-*",
+    "MSBuildLogsExtended.CommonBLL.DNX": "1.0.0-*",
+    "MSBuildLogsExtended.CommonBLLEntities.DNX": "1.0.0-*",
+    "MSBuildLogsExtended.CommonBLLIoC.DNX": "1.0.0-*",
+    "MSBuildLogsExtended.DALContracts.DNX": "1.0.0-*",
+    "MSBuildLogsExtended.DataSourceEntities.DNX": "1.0.0-*",
+    "MSBuildLogsExtended.EntityContracts.DNX": "1.0.0-*",
+    "MSBuildLogsExtended.EntityFrameworkContext.DNX": "1.0.0-*",
+    "MSBuildLogsExtended.EntityFrameworkDAL.DNX": "1.0.0-*",
+    "MSBuildLogsExtended.Resources.DNX": "1.0.0-*",
+    "MSBuildLogsExtended.WcfContracts.DNX": "1.0.0-*",
     "NETStandard.Library": "1.6.0"
   },
 
