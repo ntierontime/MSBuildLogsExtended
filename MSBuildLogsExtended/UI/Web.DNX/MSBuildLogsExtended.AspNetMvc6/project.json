@@ -25,10 +25,6 @@
       "version": "1.0.1",
       "type": "build"
     },
-    "Microsoft.EntityFrameworkCore.Tools": {
-      "version": "1.0.0-preview2-final",
-      "type": "build"
-    },
     "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
     "Microsoft.Extensions.Configuration.Json": "1.0.0",
     "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0",
@@ -64,7 +60,9 @@
     "MSBuildLogsExtended.Resources.DNX": "1.0.0-*",
     "MSBuildLogsExtended.WcfContracts.DNX": "1.0.0-*",
     "Microsoft.AspNetCore.Session": "1.1.0",
-    "Microsoft.Extensions.Caching.Memory": "1.1.0"
+    "Microsoft.Extensions.Caching.Memory": "1.1.0",
+    "Framework.Web.DotNetCore": "1.0.0-*",
+    "Microsoft.EntityFrameworkCore.Tools": "1.1.0-preview4-final"
   },
 
   "tools": {

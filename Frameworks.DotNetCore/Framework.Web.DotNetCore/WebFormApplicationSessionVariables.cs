@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Web;
+
+using Microsoft.AspNetCore.Session;
+using Microsoft.AspNetCore.Http;
 
 namespace Framework.Web
 {
@@ -21,7 +23,7 @@ namespace Framework.Web
             get
             {
                 Framework.CommonBLLEntities.BusinessLogicLayerContext _BusinessLogicLayerContext
-                     = (Framework.CommonBLLEntities.BusinessLogicLayerContext)HttpContext.Session[SessionKey_BusinessLogicLayerContext];
+                     = (Framework.CommonBLLEntities.BusinessLogicLayerContext)HttpContext.Session.TryGetValue(SessionKey_BusinessLogicLayerContext, );
 
                 return _BusinessLogicLayerContext;
             }
