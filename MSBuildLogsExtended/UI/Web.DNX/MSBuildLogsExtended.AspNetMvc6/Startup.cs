@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Session;
+using Microsoft.Extensions.Caching;
+using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -43,7 +47,7 @@ namespace MSBuildLogsExtended.AspNetMvc6
         public void ConfigureServices(IServiceCollection services)
         {
             var connection = @"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.NewDb;Trusted_Connection=True;";
-            //services.AddDbContext<MSBuildLogsExtendedEntities>(options => options.UseSqlServer(connection));
+            services.AddDbContext<MSBuildLogsExtended.EntityFrameworkContext.MSBuildLogsExtendedEntities>(options => options.UseSqlServer(connection));
 
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
@@ -56,6 +60,12 @@ namespace MSBuildLogsExtended.AspNetMvc6
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
+
+            services.AddMemoryCache();
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+                options.CookieName = ".MyApplication";
+            });
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
@@ -90,12 +100,28 @@ namespace MSBuildLogsExtended.AspNetMvc6
 
             // Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715
 
+            app.UseSession();
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            Framework.Web.WebFormApplicationApplicationVariables.GetDefault();
+
+            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactory, MSBuildLogsExtended.CommonBLL.BusinessLogicLayerFactory>();
+            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer, Framework.CommonBLLEntities.BusinessLogicLayerContextContainerCommon>();
+            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildLogsExtended.DALContracts.DataAccessLayerFactoryContract, MSBuildLogsExtended.LinqDAL.LinqToSqlDataAccessLayerFactory>();
+
+            Framework.CommonBLLEntities.BusinessLogicLayerMemberShip _BusinessLogicLayerMemberShip = new Framework.CommonBLLEntities.BusinessLogicLayerMemberShip();
+            List<Framework.CommonBLLEntities.BusinessLogicLayerContextSetting> _BusinessLogicLayerContextSettingCollection = new List<Framework.CommonBLLEntities.BusinessLogicLayerContextSetting>();
+            _BusinessLogicLayerContextSettingCollection.Add(new Framework.CommonBLLEntities.BusinessLogicLayerContextSetting(
+                "MSBuildLogsExtended"
+                , typeof(Framework.Web.WebFormApplicationSessionVariables)
+                , typeof(Framework.CommonBLLEntities.BusinessLogicLayerContext)
+                , typeof(MSBuildLogsExtended.EntityFrameworkDAL.EFDataAccessLayerFactory)));
         }
     }
 }

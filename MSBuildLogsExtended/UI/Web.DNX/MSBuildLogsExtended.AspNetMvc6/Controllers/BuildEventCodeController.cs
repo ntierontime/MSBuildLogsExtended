@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Http;
 using MSBuildLogsExtended.AspNetMvc40ViewModel;
 using Framework.EntityContracts;
 
@@ -34,6 +35,7 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
 		public const string TempDataKey_WPCommonOfBuildEventCode = "TempDataKey_WPCommonOfBuildEventCode";
 		public ActionResult WPCommonOfBuildEventCode(int currentPage = 1 , WPCommonOfBuildEventCodeVM viewModel = null)
         {
+            Request
             log.Info(string.Format("{0}: WPCommonOfBuildEventCode", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
             Framework.EntityContracts.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildEventCodeCommonFlatten> vmFromTempData;
