@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
 using MSBuildLogsExtended.AspNetMvc40ViewModel;
 using Framework.EntityContracts;
+using Microsoft.AspNetCore.Routing;
 
 namespace MSBuildLogsExtended.AspNetMvc40Controller
 {

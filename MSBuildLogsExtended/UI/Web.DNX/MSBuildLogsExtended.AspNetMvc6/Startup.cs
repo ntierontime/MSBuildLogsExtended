@@ -16,6 +16,8 @@ using Microsoft.Extensions.Logging;
 using MSBuildLogsExtended.AspNetMvc6.Data;
 using MSBuildLogsExtended.AspNetMvc6.Models;
 using MSBuildLogsExtended.AspNetMvc6.Services;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace MSBuildLogsExtended.AspNetMvc6
 {
@@ -70,6 +72,9 @@ namespace MSBuildLogsExtended.AspNetMvc6
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -109,11 +114,11 @@ namespace MSBuildLogsExtended.AspNetMvc6
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            Framework.Web.WebFormApplicationApplicationVariables.GetDefault();
+            //Framework.Web.WebFormApplicationApplicationVariables.GetDefault();
 
             Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactory, MSBuildLogsExtended.CommonBLL.BusinessLogicLayerFactory>();
             Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer, Framework.CommonBLLEntities.BusinessLogicLayerContextContainerCommon>();
-            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildLogsExtended.DALContracts.DataAccessLayerFactoryContract, MSBuildLogsExtended.LinqDAL.LinqToSqlDataAccessLayerFactory>();
+            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildLogsExtended.DALContracts.DataAccessLayerFactoryContract, MSBuildLogsExtended.EntityFrameworkDAL.EFDataAccessLayerFactory>();
 
             Framework.CommonBLLEntities.BusinessLogicLayerMemberShip _BusinessLogicLayerMemberShip = new Framework.CommonBLLEntities.BusinessLogicLayerMemberShip();
             List<Framework.CommonBLLEntities.BusinessLogicLayerContextSetting> _BusinessLogicLayerContextSettingCollection = new List<Framework.CommonBLLEntities.BusinessLogicLayerContextSetting>();

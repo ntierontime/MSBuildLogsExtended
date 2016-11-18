@@ -49,7 +49,9 @@
         "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.1.0",
         "Microsoft.VisualStudio.Web.CodeGeneration.Tools": "1.1.0-preview4-final",
         "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "1.1.0-preview4-final",
-        "BundlerMinifier.Core": "2.2.306"
+        "BundlerMinifier.Core": "2.2.306",
+        "Microsoft.AspNetCore.Http.Abstractions": "1.1.0",
+        "Microsoft.AspNetCore.Mvc.Core": "1.1.0"
     },
 
     "tools": {
