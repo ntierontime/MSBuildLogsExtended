@@ -12,7 +12,6 @@
         "MSBuildLogsExtended.EntityContracts.DNX": "1.0.0-*",
         "MSBuildLogsExtended.EntityFrameworkContext.DNX": "1.0.0-*",
         "MSBuildLogsExtended.Resources.DNX": "1.0.0-*",
-        "NETStandard.Library": "1.6.0",
         "RobertHargreaves.log4net.Trunk": "2.0.6",
         "System.Data.SqlClient": "4.1.0",
         "System.Linq.Dynamic.Core": "1.0.6.8",

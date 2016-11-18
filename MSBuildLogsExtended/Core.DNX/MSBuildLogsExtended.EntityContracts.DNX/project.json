@@ -4,8 +4,7 @@
     "dependencies": {
         "Framework.CommonBLLEntities.DotNetCore": "1.0.0-*",
         "Framework.DotNetCore": "1.0.0-*",
-        "Framework.EntityContracts.DotNetCore": "1.0.0-*",
-        "NETStandard.Library": "1.6.0"
+        "Framework.EntityContracts.DotNetCore": "1.0.0-*"
     },
 
   "frameworks": {

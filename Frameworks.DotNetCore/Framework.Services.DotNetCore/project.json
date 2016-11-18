@@ -2,8 +2,7 @@
   "version": "1.0.0-*",
 
     "dependencies": {
-        "Framework.DotNetCore": "1.0.0-*",
-        "NETStandard.Library": "1.6.0"
+        "Framework.DotNetCore": "1.0.0-*"
     },
 
   "frameworks": {

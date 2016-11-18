@@ -10,8 +10,7 @@
         "MSBuildLogsExtended.DALContracts.DNX": "1.0.0-*",
         "MSBuildLogsExtended.DataSourceEntities.DNX": "1.0.0-*",
         "MSBuildLogsExtended.EntityContracts.DNX": "1.0.0-*",
-        "MSBuildLogsExtended.Resources.DNX": "1.0.0-*",
-        "NETStandard.Library": "1.6.0"
+        "MSBuildLogsExtended.Resources.DNX": "1.0.0-*"
     },
 
   "frameworks": {

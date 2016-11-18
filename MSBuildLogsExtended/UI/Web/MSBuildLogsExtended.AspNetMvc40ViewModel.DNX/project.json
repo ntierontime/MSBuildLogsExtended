@@ -19,8 +19,7 @@
     "MSBuildLogsExtended.EntityFrameworkContext.DNX": "1.0.0-*",
     "MSBuildLogsExtended.EntityFrameworkDAL.DNX": "1.0.0-*",
     "MSBuildLogsExtended.Resources.DNX": "1.0.0-*",
-    "MSBuildLogsExtended.WcfContracts.DNX": "1.0.0-*",
-    "NETStandard.Library": "1.6.0"
+    "MSBuildLogsExtended.WcfContracts.DNX": "1.0.0-*"
   },
 
   "frameworks": {
