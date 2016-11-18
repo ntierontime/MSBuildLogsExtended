@@ -3,7 +3,7 @@
 
     "dependencies": {
         "Framework.DotNetCore": "1.0.0-*",
-        "System.ComponentModel.Primitives": "4.1.0"
+        "System.ComponentModel.Primitives": "4.3.0"
     },
 
   "frameworks": {

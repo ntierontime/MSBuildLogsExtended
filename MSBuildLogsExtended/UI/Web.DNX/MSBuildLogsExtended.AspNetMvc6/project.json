@@ -1,5 +1,5 @@
 {
-  "userSecretsId": "aspnet-MSBuildLogsExtended.AspNetMvc6-7405c99b-81e5-410c-9697-9b72055c88a9",
+    "userSecretsId": "aspnet-MSBuildLogsExtended.AspNetMvc6-7405c99b-81e5-410c-9697-9b72055c88a9",
 
     "dependencies": {
         "Framework.Charting.DotNetCore": "1.0.0-*",
@@ -52,40 +52,45 @@
         "BundlerMinifier.Core": "2.2.306"
     },
 
-  "tools": {
-    "BundlerMinifier.Core": "2.0.238"  },
+    "tools": {
+        "BundlerMinifier.Core": "2.0.238"
+    },
 
-  "frameworks": {
-    "netcoreapp1.0": {
-      "imports": [
-        "dotnet5.6",
-        "portable-net45+win8"
-      ]
+    "frameworks": {
+        "netcoreapp1.0": {
+            "imports": [
+                "dotnet5.6",
+                "portable-net45+win8"
+            ]
+        }
+    },
+
+    "buildOptions": {
+        "emitEntryPoint": true,
+        "preserveCompilationContext": true
+    },
+
+    "runtimeOptions": {
+        "configProperties": {
+            "System.GC.Server": true
+        }
+    },
+
+    "publishOptions": {
+        "include": [
+            "wwwroot",
+            "**/*.cshtml",
+            "appsettings.json",
+            "web.config"
+        ]
+    },
+
+    "scripts": {
+        "prepublish": [ "bower install", "dotnet bundle" ],
+        "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
+    },
+
+    "runtimes": {
+        "win10-x64": {}
     }
-  },
-
-  "buildOptions": {
-    "emitEntryPoint": true,
-    "preserveCompilationContext": true
-  },
-
-  "runtimeOptions": {
-    "configProperties": {
-      "System.GC.Server": true
-    }
-  },
-
-  "publishOptions": {
-    "include": [
-      "wwwroot",
-      "**/*.cshtml",
-      "appsettings.json",
-      "web.config"
-    ]
-  },
-
-  "scripts": {
-    "prepublish": [ "bower install", "dotnet bundle" ],
-    "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
-  }
 }

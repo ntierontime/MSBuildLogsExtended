@@ -1,8 +1,9 @@
 {
   "version": "1.0.0-*",
 
-  "dependencies": {
-  },
+    "dependencies": {
+        "System.Runtime": "4.3.0"
+    },
 
   "frameworks": {
     "netstandard1.6": {
