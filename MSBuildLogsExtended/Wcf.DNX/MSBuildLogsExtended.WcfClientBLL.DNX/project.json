@@ -1,8 +1,12 @@
 {
   "version": "1.0.0-*",
 
-  "dependencies": {
-  },
+    "dependencies": {
+        "Framework.DotNetCore": "1.0.0-*",
+        "MSBuildLogsExtended.WcfContracts.DNX": "1.0.0-*",
+        "System.Runtime": "4.3.0",
+        "System.Runtime.InteropServices": "4.3.0"
+    },
 
   "frameworks": {
     "netstandard1.6": {

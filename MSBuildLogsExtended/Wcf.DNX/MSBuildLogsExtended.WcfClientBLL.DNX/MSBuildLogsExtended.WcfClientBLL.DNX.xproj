@@ -16,44 +16,12 @@
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="..\..\Wcf\WcfClientBLL\App.config">
-      <Link>App.config</Link>
-    </Content>
     <Content Include="..\..\Wcf\WcfClientBLL\Maps\map.2.A.3.vsd">
       <Link>Maps\map.2.A.3.vsd</Link>
     </Content>
     <Content Include="..\..\Wcf\WcfClientBLL\Maps\map.2.A.3.vsd.png">
       <Link>Maps\map.2.A.3.vsd.png</Link>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\Wcf\WcfClientBLL\WcfClientEntityAsynBuild.cs">
-      <Link>WcfClientEntityAsynBuild.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Wcf\WcfClientBLL\WcfClientEntityAsynBuildEventCode.cs">
-      <Link>WcfClientEntityAsynBuildEventCode.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Wcf\WcfClientBLL\WcfClientEntityAsynBuildLog.cs">
-      <Link>WcfClientEntityAsynBuildLog.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Wcf\WcfClientBLL\WcfClientEntityAsynSolution.cs">
-      <Link>WcfClientEntityAsynSolution.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Wcf\WcfClientBLL\WcfClientEntityBuild.cs">
-      <Link>WcfClientEntityBuild.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Wcf\WcfClientBLL\WcfClientEntityBuildEventCode.cs">
-      <Link>WcfClientEntityBuildEventCode.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Wcf\WcfClientBLL\WcfClientEntityBuildLog.cs">
-      <Link>WcfClientEntityBuildLog.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Wcf\WcfClientBLL\WcfClientEntitySolution.cs">
-      <Link>WcfClientEntitySolution.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Wcf\WcfClientBLL\WcfClientFactory.cs">
-      <Link>WcfClientFactory.cs</Link>
-    </Compile>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
