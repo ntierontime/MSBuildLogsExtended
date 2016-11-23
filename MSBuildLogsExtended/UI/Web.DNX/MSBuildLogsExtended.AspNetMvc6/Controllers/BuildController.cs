@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
+using MSBuildLogsExtended.AspNetMvc40ViewModel;
 
 namespace MSBuildLogsExtended.AspNetMvc40Controller
 {
@@ -30,56 +31,56 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
 
 		
 		public const string TempDataKey_WPCommonOfBuild = "TempDataKey_WPCommonOfBuild";
-//		public ActionResult WPCommonOfBuild(int currentPage = 1 ,string lowerBoundBuildStartTimeCommonOftOfCommon = null, string upperBoundBuildStartTimeCommonOftOfCommon = null, WPCommonOfBuildVM viewModel = null)
-//        {
-//            log.Info(string.Format("{0}: WPCommonOfBuild", Framework.LoggingOptions.UI_Process_Started.ToString()));
+        public ActionResult WPCommonOfBuild(int currentPage = 1, string lowerBoundBuildStartTimeCommonOftOfCommon = null, string upperBoundBuildStartTimeCommonOftOfCommon = null, WPCommonOfBuildVM viewModel = null)
+        {
+            log.Info(string.Format("{0}: WPCommonOfBuild", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-//            Framework.EntityContracts.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildCommonFlatten> vmFromTempData;
-//            if (TempData.ContainsKey(TempDataKey_WPCommonOfBuild))
-//            {
-//                vmFromTempData = (Framework.EntityContracts.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildCommonFlatten>)TempData[TempDataKey_WPCommonOfBuild];
-//            }
-//            else
-//            {
-//                vmFromTempData = null;
-//            }
+            Framework.EntityContracts.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildCommonFlatten> vmFromTempData;
+            if (TempData.ContainsKey(TempDataKey_WPCommonOfBuild))
+            {
+                vmFromTempData = (Framework.EntityContracts.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildCommonFlatten>)TempData[TempDataKey_WPCommonOfBuild];
+            }
+            else
+            {
+                vmFromTempData = null;
+            }
 
-//            viewModel.PopulateAllUIElements(vmFromTempData, currentPage);
+            viewModel.PopulateAllUIElements(vmFromTempData, currentPage);
 
-//			viewModel.Criteria.LowerBoundBuildStartTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundBuildStartTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundBuildStartTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundBuildStartTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundBuildStartTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundBuildStartTimeCommonOftOfCommon);
-//            //viewModel.Criteria.LowerBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundCreatedDateTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundCreatedDateTimeCommonOftOfCommon);
+            viewModel.Criteria.LowerBoundBuildStartTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundBuildStartTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundBuildStartTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundBuildStartTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundBuildStartTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundBuildStartTimeCommonOftOfCommon);
+            //viewModel.Criteria.LowerBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(lowerBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(lowerBoundCreatedDateTimeCommonOftOfCommon); viewModel.Criteria.UpperBoundCreatedDateTimeCommonOftOfCommon = string.IsNullOrWhiteSpace(upperBoundCreatedDateTimeCommonOftOfCommon) ? DateTime.MinValue : Framework.DateTimePeriodHelper.ParseDateTime(upperBoundCreatedDateTimeCommonOftOfCommon);
 
-//            var searchResult = MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuild.GetMessageOfDefaultOfCommon(
-//                new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildCommon(viewModel.Criteria)
-//                , viewModel.QueryPagingSetting
-//                , viewModel.QueryOrderBySettingCollection);
+            var searchResult = MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuild.GetMessageOfDefaultOfCommon(
+                new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildCommon(viewModel.Criteria)
+                , viewModel.QueryPagingSetting
+                , viewModel.QueryOrderBySettingCollection);
 
 
-//            viewModel.StatusOfResult = searchResult.BusinessLogicLayerResponseStatus;
+            viewModel.StatusOfResult = searchResult.BusinessLogicLayerResponseStatus;
 
-//            if (viewModel.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-//            {
-//				viewModel.Result = searchResult.Message;
+            if (viewModel.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+            {
+                viewModel.Result = searchResult.Message;
 
-//				if (searchResult.QueryPagingResult != null)
-//				{
-//					viewModel.QueryPagingSetting.CountOfRecords = searchResult.QueryPagingResult.CountOfRecords;
-//					viewModel.QueryPagingSetting.RecordCountOfCurrentPage = searchResult.QueryPagingResult.RecordCountOfCurrentPage;
-//				}
+                if (searchResult.QueryPagingResult != null)
+                {
+                    viewModel.QueryPagingSetting.CountOfRecords = searchResult.QueryPagingResult.CountOfRecords;
+                    viewModel.QueryPagingSetting.RecordCountOfCurrentPage = searchResult.QueryPagingResult.RecordCountOfCurrentPage;
+                }
 
-//				TempData[TempDataKey_WPCommonOfBuild] = viewModel.GetPrimaryInformationEntity();
-//				TempData.Keep(TempDataKey_WPCommonOfBuild); 
-//			}
-//            else
-//            {
-//                viewModel.StatusMessageOfResult = searchResult.GetStatusMessage();
-//#if DEBUG
-//                viewModel.StatusMessageOfResult = string.Format("{0} {1}", viewModel.StatusMessageOfResult, searchResult.ServerErrorMessage);
-//#endif
-//            }
+                TempData[TempDataKey_WPCommonOfBuild] = viewModel.GetPrimaryInformationEntity();
+                TempData.Keep(TempDataKey_WPCommonOfBuild);
+            }
+            else
+            {
+                viewModel.StatusMessageOfResult = searchResult.GetStatusMessage();
+#if DEBUG
+                viewModel.StatusMessageOfResult = string.Format("{0} {1}", viewModel.StatusMessageOfResult, searchResult.ServerErrorMessage);
+#endif
+            }
 
-//            return View(viewModel);
-//        }
+            return View(viewModel);
+        }
 
         public ActionResult WPCommonOfBuild_Export(Framework.DataServiceTypes dataServiceType)
         {

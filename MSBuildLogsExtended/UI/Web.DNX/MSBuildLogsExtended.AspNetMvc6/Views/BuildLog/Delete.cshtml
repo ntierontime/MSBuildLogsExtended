@@ -1,0 +1,55 @@
+@model MSBuildLogsExtended.DataSourceEntities.BuildLog.Default
+@{
+    ViewBag.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+<h3>@Framework.Resources.UIStringResource.Warning_Areyousureyouwanttodeletethis</h3>
+            </hgroup>
+        </div>
+    </section>
+}
+<fieldset>
+    <legend>@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog.</legend>
+	<div class="display-label">
+			@Html.LabelFor(model => model.Build_B1_1_Name)
+        </div>
+        <div class="display-field">
+@Html.ActionLink(Model.Build_B1_1_Name, "WPEntityRelatedOfBuild", "Build", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.BuildId }, null)
+        </div>
+@Html.HiddenFor(model => model.Id)@Html.HiddenFor(model => model.Solution_S1_1Id)        <div class="display-label">
+			@Html.LabelFor(model => model.Solution_S1_1_Name)
+        </div>
+        <div class="display-field">
+@Html.ActionLink(Model.Solution_S1_1_Name, "WPEntityRelatedOfSolution", "Solution", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_S1_1Id }, null)
+        </div>
+        <div class="display-label">
+			@Html.LabelFor(model => model.BuildEventCode_B2_1_Name)
+        </div>
+        <div class="display-field">
+@Html.ActionLink(Model.BuildEventCode_B2_1_Name, "WPEntityRelatedOfBuildEventCode", "BuildEventCode", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.BuildEventCodeId }, null)
+        </div>
+@Html.HiddenFor(model => model.BuildId)@Html.HiddenFor(model => model.BuildEventCodeId)        <div class="display-label">
+			@Html.LabelFor(model => model.Message)
+        </div>
+        <div class="display-field">
+			@Html.DisplayFor(model => model.Message)
+        </div>
+        <div class="display-label">
+			@Html.LabelFor(model => model.EventTime)
+        </div>
+        <div class="display-field">
+			@Html.DisplayFor(model => model.EventTime)
+        </div>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <div class="buttonContainer">
+        <input type="submit" value="@Framework.Resources.UIStringResource.DeleteAlternativeText" class="button" />
+		<input type="button" value="@Framework.Resources.UIStringResource.BackAlternativeText" class="button" onclick="location.href='@Url.Action("Index")'" />
+    </div>
+}
+</fieldset>

@@ -62,7 +62,8 @@
     "MSBuildLogsExtended.EntityFrameworkContext.DNX": "1.0.0-*",
     "MSBuildLogsExtended.EntityFrameworkDAL.DNX": "1.0.0-*",
     "MSBuildLogsExtended.Resources.DNX": "1.0.0-*",
-    "MSBuildLogsExtended.WcfContracts.DNX": "1.0.0-*"
+    "MSBuildLogsExtended.WcfContracts.DNX": "1.0.0-*",
+    "Microsoft.AspNet.Session": "1.0.0-rc1-final"
   },
 
   "tools": {

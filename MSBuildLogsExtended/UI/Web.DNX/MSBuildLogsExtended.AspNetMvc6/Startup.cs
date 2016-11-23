@@ -43,7 +43,7 @@ namespace MSBuildLogsExtended.AspNetMvc6
         public void ConfigureServices(IServiceCollection services)
         {
             var connection = @"Server=(localdb)\mssqllocaldb;Database=EFGetStarted.AspNetCore.NewDb;Trusted_Connection=True;";
-            //services.AddDbContext<MSBuildLogsExtendedEntities>(options => options.UseSqlServer(connection));
+            services.AddDbContext<MSBuildLogsExtended.EntityFrameworkContext.MSBuildLogsExtendedEntities>(options => options.UseSqlServer(connection));
 
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
@@ -89,7 +89,7 @@ namespace MSBuildLogsExtended.AspNetMvc6
             app.UseIdentity();
 
             // Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715
-
+            //app.UseInMemorySession(configure: s => s.IdleTimeout = TimeSpan.FromMinutes(30));
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

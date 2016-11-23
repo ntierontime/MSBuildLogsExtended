@@ -1,0 +1,25 @@
+@{
+    ViewBag.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Build;
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Build
+            </p>
+        </div>
+    </section>
+}
+<div>
+	<ol>
+		<li>@Html.ActionLink(Framework.Resources.UIStringResource.AddNewAlternativeText, "Create")</li>
+		<li>@Html.ActionLink(Framework.Resources.UIStringResource.DeleteAlternativeText, "Delete") - Please add parameters to load this page </li>
+		<li>@Html.ActionLink(Framework.Resources.UIStringResource.EditAlternativeText, "Edit") - Please add parameters to load this page </li>
+		<li>@Html.ActionLink(Framework.Resources.UIStringResource.DetailsAlternativeText, "Details") - Please add parameters to load this page </li>
+		<li>@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_Build, "WPCommonOfBuild")</li>
+		<li>@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerApp.EntityRelated_of_MSBuildLogsExtended_Build, "WPEntityRelatedOfBuild")</li>
+	</ol>
+</div>

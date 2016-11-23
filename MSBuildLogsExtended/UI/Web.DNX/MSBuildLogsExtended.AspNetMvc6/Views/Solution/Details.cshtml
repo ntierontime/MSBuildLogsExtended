@@ -1,0 +1,41 @@
+@model MSBuildLogsExtended.DataSourceEntities.Solution
+@{
+    ViewBag.Title = @Framework.Resources.UIStringResource.DetailsAlternativeText;
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+        </div>
+    </section>
+}
+<fieldset>
+    <legend>@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Solution.</legend>
+@Html.HiddenFor(model => model.Id)        <div class="display-label">
+			@Html.LabelFor(model => model.ExternalParentId)
+        </div>
+        <div class="display-field">
+			@Html.DisplayFor(model => model.ExternalParentId)
+        </div>
+        <div class="display-label">
+			@Html.LabelFor(model => model.Name)
+        </div>
+        <div class="display-field">
+			@Html.DisplayFor(model => model.Name)
+        </div>
+        <div class="display-label">
+			@Html.LabelFor(model => model.Description)
+        </div>
+        <div class="display-field">
+			@Html.DisplayFor(model => model.Description)
+        </div>
+	<div class="buttonContainer">
+		<input type="button" value="@Framework.Resources.UIStringResource.EditAlternativeText" class="button" onclick="location.href='@Url.Action("Edit", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Id })'" />
+		<input type="button" value="@Framework.Resources.UIStringResource.DeleteAlternativeText" class="button" onclick="location.href='@Url.Action( "Delete", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Id })'" />
+		<input type="button" value="@Framework.Resources.UIStringResource.BackAlternativeText" class="button" onclick="location.href='@Url.Action("Index")'" />
+		<input type="button" value="@Framework.Resources.UIStringResource.CopyAlternativeText" class="button" onclick="location.href='@Url.Action("Copy", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Id })'" />
+	</div>
+</fieldset>
