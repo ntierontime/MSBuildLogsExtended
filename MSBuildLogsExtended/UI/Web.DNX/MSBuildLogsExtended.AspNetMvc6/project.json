@@ -2,13 +2,18 @@
   "userSecretsId": "aspnet-MSBuildLogsExtended.AspNetMvc6-7405c99b-81e5-410c-9697-9b72055c88a9",
 
   "dependencies": {
-    "Microsoft.NETCore.App": {
-      "version": "1.0.1",
-      "type": "platform"
-    },
-    "Microsoft.ApplicationInsights.AspNetCore": "1.0.0",
-    "Microsoft.AspNetCore.Authentication.Cookies": "1.0.0",
-    "Microsoft.AspNetCore.Diagnostics": "1.0.0",
+    "BundlerMinifier.Core": "2.0.238",
+    "Framework.Charting.DotNetCore": "1.0.0-*",
+    "Framework.CommonBLLEntities.DotNetCore": "1.0.0-*",
+    "Framework.DataSourceEntities.DotNetCore": "1.0.0-*",
+    "Framework.EntityContracts.DotNetCore": "1.0.0-*",
+    "Framework.LinqDAL.DotNetCore": "1.0.0-*",
+    "Framework.Resources.DotNetCore": "1.0.0-*",
+    "Framework.Services.DotNetCore": "1.0.0-*",
+    "Framework.Web.DotNetCore": "1.0.0-*",
+    "Microsoft.ApplicationInsights.AspNetCore": "1.0.1",
+    "Microsoft.AspNetCore.Authentication.Cookies": "1.1.0",
+    "Microsoft.AspNetCore.Diagnostics": "1.1.0",
     "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.0.0",
     "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0",
     "Microsoft.AspNetCore.Mvc": "1.0.1",
@@ -20,11 +25,8 @@
     "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
     "Microsoft.AspNetCore.Server.Kestrel": "1.0.1",
     "Microsoft.AspNetCore.StaticFiles": "1.0.0",
-    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.1",
-    "Microsoft.EntityFrameworkCore.SqlServer.Design": {
-      "version": "1.0.1",
-      "type": "build"
-    },
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.1.0",
+    "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.0",
     "Microsoft.EntityFrameworkCore.Tools": {
       "version": "1.0.0-preview2-final",
       "type": "build"
@@ -32,26 +34,23 @@
     "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
     "Microsoft.Extensions.Configuration.Json": "1.0.0",
     "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0",
-    "Microsoft.Extensions.Logging": "1.0.0",
+    "Microsoft.Extensions.Logging": "1.1.0",
     "Microsoft.Extensions.Logging.Console": "1.0.0",
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
+    "Microsoft.NETCore.App": {
+      "version": "1.0.1",
+      "type": "platform"
+    },
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
     "Microsoft.VisualStudio.Web.CodeGeneration.Tools": {
       "version": "1.0.0-preview2-final",
       "type": "build"
     },
     "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
-        "version": "1.0.0-preview2-final",
-        "type": "build"
+      "version": "1.0.0-preview2-final",
+      "type": "build"
     },
-    "Framework.Charting.DotNetCore": "1.0.0-*",
-    "Framework.CommonBLLEntities.DotNetCore": "1.0.0-*",
-    "Framework.DataSourceEntities.DotNetCore": "1.0.0-*",
-    "Framework.EntityContracts.DotNetCore": "1.0.0-*",
-    "Framework.LinqDAL.DotNetCore": "1.0.0-*",
-    "Framework.Resources.DotNetCore": "1.0.0-*",
-    "Framework.Services.DotNetCore": "1.0.0-*",
     "MSBuildLogsExtended.AspNetMvc40ViewModel.DNX": "1.0.0-*",
     "MSBuildLogsExtended.CommonBLL.DNX": "1.0.0-*",
     "MSBuildLogsExtended.CommonBLLEntities.DNX": "1.0.0-*",
@@ -62,8 +61,7 @@
     "MSBuildLogsExtended.EntityFrameworkContext.DNX": "1.0.0-*",
     "MSBuildLogsExtended.EntityFrameworkDAL.DNX": "1.0.0-*",
     "MSBuildLogsExtended.Resources.DNX": "1.0.0-*",
-    "MSBuildLogsExtended.WcfContracts.DNX": "1.0.0-*",
-    "Microsoft.AspNet.Session": "1.0.0-rc1-final"
+    "MSBuildLogsExtended.WcfContracts.DNX": "1.0.0-*"
   },
 
   "tools": {

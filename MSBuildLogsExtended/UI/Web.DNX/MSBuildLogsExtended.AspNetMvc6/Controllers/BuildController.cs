@@ -117,7 +117,6 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
 
         public ActionResult WPEntityRelatedOfBuild(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
         {
-            
             MSBuildLogsExtended.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM vm = new MSBuildLogsExtended.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM(new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
             vm.LoadData();
 

@@ -195,7 +195,7 @@ namespace Framework
             _retval.BinaryFileActionType = BinaryFileActionTypes.Save;
 
             List<string> _ActionLog = new List<string>();
-            string _Folder = System.IO.Path.GetDirectoryName(physicalFileFullPath);
+            string _Folder = Path.GetDirectoryName(physicalFileFullPath);
             if (System.IO.Directory.Exists(_Folder) == false)
             {
                 _ActionLog.Add(string.Format(@"New folder ""{0}"" created", _Folder));

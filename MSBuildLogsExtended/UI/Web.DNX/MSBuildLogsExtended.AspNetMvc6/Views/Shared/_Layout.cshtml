@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MSBuildLogsExtended.AspNetMvc6</title>
+    <title>@ViewData["Title"] - @MSBuildLogsExtended.Resources.UIStringResourcePerApp.Application_Title</title>
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -27,23 +27,27 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">MSBuildLogsExtended.AspNetMvc6</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">@MSBuildLogsExtended.Resources.UIStringResourcePerApp.Application_Title</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">@Framework.Resources.UIStringResource.Home_TitleText</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">@Framework.Resources.UIStringResource.Common_AboutPageTitle</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">@Framework.Resources.UIStringResource.Common_ContactPageTitle</a></li>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
         </div>
     </div>
     <div class="container body-content">
-        @RenderBody()
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+
         <hr />
         <footer>
-            <p>&copy; 2016 - MSBuildLogsExtended.AspNetMvc6</p>
+            <p>&copy; 2016 - @MSBuildLogsExtended.Resources.UIStringResourcePerApp.Application_Title</p>
         </footer>
     </div>
 
