@@ -8,10 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MSBuildLogsExtended.Resources {
-    using System;
+namespace MSBuildLogsExtended.Resources
+{
     using System.Reflection;
-    using Microsoft.ApplicationInsights.AspNetCore;
 
 
     /// <summary>

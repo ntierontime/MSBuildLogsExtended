@@ -9,9 +9,7 @@
 //------------------------------------------------------------------------------
 
 namespace MSBuildLogsExtended.Resources {
-    using System;
     using System.Reflection;
-    using Microsoft.ApplicationInsights.AspNetCore;
 
 
     /// <summary>

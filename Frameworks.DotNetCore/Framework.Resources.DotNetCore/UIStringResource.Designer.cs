@@ -8,12 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Framework.Resources {
-    using System;
-    using System.Diagnostics;
-    using System.Globalization;
+namespace Framework.Resources
+{
     using System.Reflection;
-    using Microsoft.ApplicationInsights.AspNetCore;
 
 
     /// <summary>

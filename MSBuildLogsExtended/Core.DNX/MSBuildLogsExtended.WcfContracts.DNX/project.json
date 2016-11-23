@@ -11,6 +11,7 @@
         "MSBuildLogsExtended.DataSourceEntities.DNX": "1.0.0-*",
         "MSBuildLogsExtended.EntityContracts.DNX": "1.0.0-*",
         "MSBuildLogsExtended.Resources.DNX": "1.0.0-*",
+        "NETStandard.Library": "1.6.0",
         "System.ServiceModel.Primitives": "4.3.0-preview1-24610-02"
     },
 

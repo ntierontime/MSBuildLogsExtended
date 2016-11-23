@@ -6,7 +6,8 @@
         "Framework.DotNetCore": "1.0.0-*",
         "Framework.EntityContracts.DotNetCore": "1.0.0-*",
         "Framework.Resources.DotNetCore": "1.0.0-*",
-        "System.Runtime.Serialization.Primitives": "4.3.0"
+        "NETStandard.Library": "1.6.0",
+        "System.Runtime.Serialization.Primitives": "4.1.1"
     },
 
   "frameworks": {
