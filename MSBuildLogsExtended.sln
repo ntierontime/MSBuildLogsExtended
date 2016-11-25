@@ -278,6 +278,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Framework.Web.DotNetCore", 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ClassLibrary2", "ClassLibrary2\ClassLibrary2.xproj", "{61543268-B6B3-4C76-9096-36CA351B29AA}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WebApplication2", "WebApplication2\WebApplication2.xproj", "{68077BA1-CD2A-4ED0-84CC-73F2C048CA9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1610,6 +1612,18 @@ Global
 		{61543268-B6B3-4C76-9096-36CA351B29AA}.Release|ARM.Build.0 = Release|Any CPU
 		{61543268-B6B3-4C76-9096-36CA351B29AA}.Release|x86.ActiveCfg = Release|Any CPU
 		{61543268-B6B3-4C76-9096-36CA351B29AA}.Release|x86.Build.0 = Release|Any CPU
+		{68077BA1-CD2A-4ED0-84CC-73F2C048CA9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68077BA1-CD2A-4ED0-84CC-73F2C048CA9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68077BA1-CD2A-4ED0-84CC-73F2C048CA9F}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{68077BA1-CD2A-4ED0-84CC-73F2C048CA9F}.Debug|ARM.Build.0 = Debug|Any CPU
+		{68077BA1-CD2A-4ED0-84CC-73F2C048CA9F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{68077BA1-CD2A-4ED0-84CC-73F2C048CA9F}.Debug|x86.Build.0 = Debug|Any CPU
+		{68077BA1-CD2A-4ED0-84CC-73F2C048CA9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68077BA1-CD2A-4ED0-84CC-73F2C048CA9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68077BA1-CD2A-4ED0-84CC-73F2C048CA9F}.Release|ARM.ActiveCfg = Release|Any CPU
+		{68077BA1-CD2A-4ED0-84CC-73F2C048CA9F}.Release|ARM.Build.0 = Release|Any CPU
+		{68077BA1-CD2A-4ED0-84CC-73F2C048CA9F}.Release|x86.ActiveCfg = Release|Any CPU
+		{68077BA1-CD2A-4ED0-84CC-73F2C048CA9F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

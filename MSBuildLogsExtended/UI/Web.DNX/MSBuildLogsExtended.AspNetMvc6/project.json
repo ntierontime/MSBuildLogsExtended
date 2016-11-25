@@ -61,7 +61,9 @@
     "MSBuildLogsExtended.EntityFrameworkContext.DNX": "1.0.0-*",
     "MSBuildLogsExtended.EntityFrameworkDAL.DNX": "1.0.0-*",
     "MSBuildLogsExtended.Resources.DNX": "1.0.0-*",
-    "MSBuildLogsExtended.WcfContracts.DNX": "1.0.0-*"
+    "MSBuildLogsExtended.WcfContracts.DNX": "1.0.0-*",
+    "Sakura.AspNetCore.Mvc.PagedList": "2.0.9",
+    "Sakura.AspNetCore.PagedList": "2.0.1"
   },
 
   "tools": {
