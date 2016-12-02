@@ -56,6 +56,10 @@ namespace MSBuildLogsExtended.AspNetMvc6
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddEntityFrameworkSqlServer()
+                .AddDbContext<MSBuildLogsExtended.EntityFrameworkContext.MSBuildLogsExtendedEntities>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("MSBuildLogsExtended")));
+
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
