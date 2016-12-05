@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="MSBuildLogsExtended.AngularJS2.MvcApplication" Language="C#" %>

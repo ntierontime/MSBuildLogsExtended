@@ -16,7 +16,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.AngularJS2</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.AngularJS2</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -26,6 +26,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>2.0</TypeScriptToolsVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -78,24 +79,52 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Global.asax" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -128,17 +157,103 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\app.component.spec.ts" />
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\hero\hero.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="e2e\app.e2e-spec.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.Charting\Framework.Charting.csproj">
+      <Project>{51d5f233-02f2-45f7-b4f2-60d18ef3dec5}</Project>
+      <Name>Framework.Charting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.CommonBLLEntities\Framework.CommonBLLEntities.csproj">
+      <Project>{ba8c8c0b-470a-4d3c-b3da-9e28599799b5}</Project>
+      <Name>Framework.CommonBLLEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.DAL\Framework.DAL.csproj">
+      <Project>{525678c4-fdc1-4a5d-9d8a-d7e78309335f}</Project>
+      <Name>Framework.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.DataSourceEntities\Framework.DataSourceEntities.csproj">
+      <Project>{f85a14d5-64e0-4cfc-88da-27fe9d0dd664}</Project>
+      <Name>Framework.DataSourceEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.EntityContracts\Framework.EntityContracts.csproj">
+      <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
+      <Name>Framework.EntityContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.Mvc\Framework.Mvc.csproj">
+      <Project>{e45a004f-fbef-445c-9607-fbc89d6d4590}</Project>
+      <Name>Framework.Mvc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.Resources\Framework.Resources.csproj">
+      <Project>{c72b898b-b53b-42d5-9f4f-673f84bb485b}</Project>
+      <Name>Framework.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.Services\Framework.Services.csproj">
+      <Project>{3ef91dc7-12c9-47f3-bb18-ad3d85d1b624}</Project>
+      <Name>Framework.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.Web\Framework.Web.csproj">
+      <Project>{950b9cdb-9286-4a1a-8d88-1df6954a45e3}</Project>
+      <Name>Framework.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework\Framework.csproj">
+      <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\CommonBLLIoC\MSBuildLogsExtended.CommonBLLIoC.csproj">
+      <Project>{9919e99e-ea70-4994-b415-f5a727020d78}</Project>
+      <Name>MSBuildLogsExtended.CommonBLLIoC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\CommonBLL\MSBuildLogsExtended.CommonBLL.csproj">
+      <Project>{048f80fd-cf9c-4f55-a0e6-9d9bb131cb3f}</Project>
+      <Name>MSBuildLogsExtended.CommonBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\DALContracts\MSBuildLogsExtended.DALContracts.csproj">
+      <Project>{c26ef262-08d5-47ae-a0cb-01dabb6b644d}</Project>
+      <Name>MSBuildLogsExtended.DALContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\DataSourceEntities\MSBuildLogsExtended.DataSourceEntities.csproj">
+      <Project>{806a9ab2-2edd-42d2-a3ca-a2acba0cedd7}</Project>
+      <Name>MSBuildLogsExtended.DataSourceEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\EntityContracts\MSBuildLogsExtended.EntityContracts.csproj">
+      <Project>{d090796d-578a-4c52-b489-3e688ddd5206}</Project>
+      <Name>MSBuildLogsExtended.EntityContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\EntityFrameworkContext\MSBuildLogsExtended.EntityFrameworkContext.csproj">
+      <Project>{3dfd1dda-7d6f-497c-b4ad-caf679239390}</Project>
+      <Name>MSBuildLogsExtended.EntityFrameworkContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\EntityFrameworkDAL\MSBuildLogsExtended.EntityFrameworkDAL.csproj">
+      <Project>{e1175d88-a441-403e-8806-14bd0c0924b4}</Project>
+      <Name>MSBuildLogsExtended.EntityFrameworkDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Resources\MSBuildLogsExtended.Resources.csproj">
+      <Project>{4072ddfc-04fb-4b21-b602-00678070187a}</Project>
+      <Name>MSBuildLogsExtended.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AspNetMvc40Controller\MSBuildLogsExtended.AspNetMvc40Controller.csproj">
+      <Project>{d3aa041b-2333-46fe-a5c4-c39f0ff8e9b6}</Project>
+      <Name>MSBuildLogsExtended.AspNetMvc40Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AspNetMvc40ViewModel\MSBuildLogsExtended.AspNetMvc40ViewModel.csproj">
+      <Project>{ac276481-ddf6-472d-9893-d7533629669b}</Project>
+      <Name>MSBuildLogsExtended.AspNetMvc40ViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
