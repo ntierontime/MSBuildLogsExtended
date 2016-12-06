@@ -688,6 +688,10 @@
     <Content Include="Maps\map.2.D.2.vsd.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.Web\Framework.Web.csproj">
+      <Project>{950b9cdb-9286-4a1a-8d88-1df6954a45e3}</Project>
+      <Name>Framework.Web</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AspNetMvc40Common\MSBuildLogsExtended.AspNetMvc40Common.csproj">
       <Project>{a84fd7e3-8606-4638-b565-627fd8eb3f0b}</Project>
       <Name>MSBuildLogsExtended.AspNetMvc40Common</Name>
