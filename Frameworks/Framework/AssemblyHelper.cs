@@ -27,10 +27,22 @@ namespace Framework
             Version version = assemblyName.Version;
             return string.Format(fmtStd, version.Major, version.Minor, version.Build, version.Revision);
         }
+#elif XAMARIN
+        //public static string GetExecutingAssemblyVersionInString()
+        //{
+        //    return GetAssemblyVersionInString(Assembly.GetCallingAssembly());
+        //}
+
+        public static string GetAssemblyVersionInString(Assembly assembly)
+        {
+            AssemblyName assemblyName = new AssemblyName(assembly.FullName);
+            Version version = assemblyName.Version;
+            return string.Format(fmtStd, version.Major, version.Minor, version.Build, version.Revision);
+        }
 #else
         public static string GetExecutingAssemblyVersionInString()
         {
-            return GetAssemblyVersionInString(Assembly.GetExecutingAssembly());
+            return GetAssemblyVersionInString(Assembly.GetCallingAssembly());
         }
 
         public static string GetAssemblyVersionInString(Assembly assembly)

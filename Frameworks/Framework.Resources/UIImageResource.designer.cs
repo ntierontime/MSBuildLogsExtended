@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Framework.Resources
-{
+namespace Framework.Resources {
     using System;
-
-
+    using System.Reflection;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,3346 +23,2756 @@ namespace Framework.Resources
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class UIImageResource
-    {
-
+    internal class UIImageResource {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal UIImageResource()
-        {
+        internal UIImageResource() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if (object.ReferenceEquals(resourceMan, null))
-                {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Framework.Resources.UIImageResource", typeof(UIImageResource).Assembly);
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Framework.Resources.UIImageResource", typeof(UIImageResource).GetTypeInfo().Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap AddNew
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap AddNew {
+            get {
                 object obj = ResourceManager.GetObject("AddNew", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to AddNew.
         /// </summary>
-        public static string AddNewAlternativeText
-        {
-            get
-            {
+        internal static string AddNewAlternativeText {
+            get {
                 return ResourceManager.GetString("AddNewAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=AddNew.
         /// </summary>
-        public static string AddNewUrl
-        {
-            get
-            {
+        internal static string AddNewUrl {
+            get {
                 return ResourceManager.GetString("AddNewUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Attachment
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Attachment {
+            get {
                 object obj = ResourceManager.GetObject("Attachment", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Attachment.
         /// </summary>
-        public static string AttachmentAlternativeText
-        {
-            get
-            {
+        internal static string AttachmentAlternativeText {
+            get {
                 return ResourceManager.GetString("AttachmentAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Attachment.
         /// </summary>
-        public static string AttachmentUrl
-        {
-            get
-            {
+        internal static string AttachmentUrl {
+            get {
                 return ResourceManager.GetString("AttachmentUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Back
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Back {
+            get {
                 object obj = ResourceManager.GetObject("Back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Back.
         /// </summary>
-        public static string BackAlternativeText
-        {
-            get
-            {
+        internal static string BackAlternativeText {
+            get {
                 return ResourceManager.GetString("BackAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Back.
         /// </summary>
-        public static string BackUrl
-        {
-            get
-            {
+        internal static string BackUrl {
+            get {
                 return ResourceManager.GetString("BackUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Bookmark
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Bookmark {
+            get {
                 object obj = ResourceManager.GetObject("Bookmark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Bookmark.
         /// </summary>
-        public static string BookmarkAlternativeText
-        {
-            get
-            {
+        internal static string BookmarkAlternativeText {
+            get {
                 return ResourceManager.GetString("BookmarkAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Bookmark.
         /// </summary>
-        public static string BookmarkUrl
-        {
-            get
-            {
+        internal static string BookmarkUrl {
+            get {
                 return ResourceManager.GetString("BookmarkUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Calendar
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Calendar {
+            get {
                 object obj = ResourceManager.GetObject("Calendar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Calendar.
         /// </summary>
-        public static string CalendarAlternativeText
-        {
-            get
-            {
+        internal static string CalendarAlternativeText {
+            get {
                 return ResourceManager.GetString("CalendarAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Calendar.
         /// </summary>
-        public static string CalendarUrl
-        {
-            get
-            {
+        internal static string CalendarUrl {
+            get {
                 return ResourceManager.GetString("CalendarUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Cancel
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Cancel {
+            get {
                 object obj = ResourceManager.GetObject("Cancel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
-        public static string CancelAlternativeText
-        {
-            get
-            {
+        internal static string CancelAlternativeText {
+            get {
                 return ResourceManager.GetString("CancelAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Cancel.
         /// </summary>
-        public static string CancelUrl
-        {
-            get
-            {
+        internal static string CancelUrl {
+            get {
                 return ResourceManager.GetString("CancelUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ChangePassword
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap ChangePassword {
+            get {
                 object obj = ResourceManager.GetObject("ChangePassword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to ChangePassword.
         /// </summary>
-        public static string ChangePasswordAlternativeText
-        {
-            get
-            {
+        internal static string ChangePasswordAlternativeText {
+            get {
                 return ResourceManager.GetString("ChangePasswordAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=ChangePassword.
         /// </summary>
-        public static string ChangePasswordUrl
-        {
-            get
-            {
+        internal static string ChangePasswordUrl {
+            get {
                 return ResourceManager.GetString("ChangePasswordUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Chart
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Chart {
+            get {
                 object obj = ResourceManager.GetObject("Chart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Chart.
         /// </summary>
-        public static string ChartAlternativeText
-        {
-            get
-            {
+        internal static string ChartAlternativeText {
+            get {
                 return ResourceManager.GetString("ChartAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Chart.
         /// </summary>
-        public static string ChartUrl
-        {
-            get
-            {
+        internal static string ChartUrl {
+            get {
                 return ResourceManager.GetString("ChartUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Checkbox_Checked
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Checkbox_Checked {
+            get {
                 object obj = ResourceManager.GetObject("Checkbox_Checked", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Checkbox_Checked.
         /// </summary>
-        public static string Checkbox_CheckedAlternativeText
-        {
-            get
-            {
+        internal static string Checkbox_CheckedAlternativeText {
+            get {
                 return ResourceManager.GetString("Checkbox_CheckedAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Checkbox_Checked.
         /// </summary>
-        public static string Checkbox_CheckedUrl
-        {
-            get
-            {
+        internal static string Checkbox_CheckedUrl {
+            get {
                 return ResourceManager.GetString("Checkbox_CheckedUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Checkbox_Unchecked
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Checkbox_Unchecked {
+            get {
                 object obj = ResourceManager.GetObject("Checkbox_Unchecked", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Checkbox_Unchecked.
         /// </summary>
-        public static string Checkbox_UncheckedAlternativeText
-        {
-            get
-            {
+        internal static string Checkbox_UncheckedAlternativeText {
+            get {
                 return ResourceManager.GetString("Checkbox_UncheckedAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Checkbox_Unchecked.
         /// </summary>
-        public static string Checkbox_UncheckedUrl
-        {
-            get
-            {
+        internal static string Checkbox_UncheckedUrl {
+            get {
                 return ResourceManager.GetString("Checkbox_UncheckedUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Clock
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Clock {
+            get {
                 object obj = ResourceManager.GetObject("Clock", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Clock.
         /// </summary>
-        public static string ClockAlternativeText
-        {
-            get
-            {
+        internal static string ClockAlternativeText {
+            get {
                 return ResourceManager.GetString("ClockAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Clock.
         /// </summary>
-        public static string ClockUrl
-        {
-            get
-            {
+        internal static string ClockUrl {
+            get {
                 return ResourceManager.GetString("ClockUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Close
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Close {
+            get {
                 object obj = ResourceManager.GetObject("Close", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
-        public static string CloseAlternativeText
-        {
-            get
-            {
+        internal static string CloseAlternativeText {
+            get {
                 return ResourceManager.GetString("CloseAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Close.
         /// </summary>
-        public static string CloseUrl
-        {
-            get
-            {
+        internal static string CloseUrl {
+            get {
                 return ResourceManager.GetString("CloseUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Comment
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Comment {
+            get {
                 object obj = ResourceManager.GetObject("Comment", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Comment.
         /// </summary>
-        public static string CommentAlternativeText
-        {
-            get
-            {
+        internal static string CommentAlternativeText {
+            get {
                 return ResourceManager.GetString("CommentAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Comments
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Comments {
+            get {
                 object obj = ResourceManager.GetObject("Comments", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Comments.
         /// </summary>
-        public static string CommentsAlternativeText
-        {
-            get
-            {
+        internal static string CommentsAlternativeText {
+            get {
                 return ResourceManager.GetString("CommentsAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Comments.
         /// </summary>
-        public static string CommentsUrl
-        {
-            get
-            {
+        internal static string CommentsUrl {
+            get {
                 return ResourceManager.GetString("CommentsUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Comment.
         /// </summary>
-        public static string CommentUrl
-        {
-            get
-            {
+        internal static string CommentUrl {
+            get {
                 return ResourceManager.GetString("CommentUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Confirm
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Confirm {
+            get {
                 object obj = ResourceManager.GetObject("Confirm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Confirm.
         /// </summary>
-        public static string ConfirmAlternativeText
-        {
-            get
-            {
+        internal static string ConfirmAlternativeText {
+            get {
                 return ResourceManager.GetString("ConfirmAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Confirm.
         /// </summary>
-        public static string ConfirmUrl
-        {
-            get
-            {
+        internal static string ConfirmUrl {
+            get {
                 return ResourceManager.GetString("ConfirmUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Copy
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Copy {
+            get {
                 object obj = ResourceManager.GetObject("Copy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Copy.
         /// </summary>
-        public static string CopyAlternativeText
-        {
-            get
-            {
+        internal static string CopyAlternativeText {
+            get {
                 return ResourceManager.GetString("CopyAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Copy.
         /// </summary>
-        public static string CopyUrl
-        {
-            get
-            {
+        internal static string CopyUrl {
+            get {
                 return ResourceManager.GetString("CopyUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap CreateUser
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap CreateUser {
+            get {
                 object obj = ResourceManager.GetObject("CreateUser", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to CreateUser.
         /// </summary>
-        public static string CreateUserAlternativeText
-        {
-            get
-            {
+        internal static string CreateUserAlternativeText {
+            get {
                 return ResourceManager.GetString("CreateUserAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=CreateUser.
         /// </summary>
-        public static string CreateUserUrl
-        {
-            get
-            {
+        internal static string CreateUserUrl {
+            get {
                 return ResourceManager.GetString("CreateUserUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Delete
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Delete {
+            get {
                 object obj = ResourceManager.GetObject("Delete", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
-        public static string DeleteAlternativeText
-        {
-            get
-            {
+        internal static string DeleteAlternativeText {
+            get {
                 return ResourceManager.GetString("DeleteAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Delete.
         /// </summary>
-        public static string DeleteUrl
-        {
-            get
-            {
+        internal static string DeleteUrl {
+            get {
                 return ResourceManager.GetString("DeleteUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Details
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Details {
+            get {
                 object obj = ResourceManager.GetObject("Details", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Details.
         /// </summary>
-        public static string DetailsAlternativeText
-        {
-            get
-            {
+        internal static string DetailsAlternativeText {
+            get {
                 return ResourceManager.GetString("DetailsAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Details.
         /// </summary>
-        public static string DetailsUrl
-        {
-            get
-            {
+        internal static string DetailsUrl {
+            get {
                 return ResourceManager.GetString("DetailsUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Down
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Down {
+            get {
                 object obj = ResourceManager.GetObject("Down", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Down.
         /// </summary>
-        public static string DownAlternativeText
-        {
-            get
-            {
+        internal static string DownAlternativeText {
+            get {
                 return ResourceManager.GetString("DownAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Download
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Download {
+            get {
                 object obj = ResourceManager.GetObject("Download", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Download.
         /// </summary>
-        public static string DownloadAlternativeText
-        {
-            get
-            {
+        internal static string DownloadAlternativeText {
+            get {
                 return ResourceManager.GetString("DownloadAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Download.
         /// </summary>
-        public static string DownloadUrl
-        {
-            get
-            {
+        internal static string DownloadUrl {
+            get {
                 return ResourceManager.GetString("DownloadUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Down.
         /// </summary>
-        public static string DownUrl
-        {
-            get
-            {
+        internal static string DownUrl {
+            get {
                 return ResourceManager.GetString("DownUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Edit
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Edit {
+            get {
                 object obj = ResourceManager.GetObject("Edit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Edit.
         /// </summary>
-        public static string EditAlternativeText
-        {
-            get
-            {
+        internal static string EditAlternativeText {
+            get {
                 return ResourceManager.GetString("EditAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Edit.
         /// </summary>
-        public static string EditUrl
-        {
-            get
-            {
+        internal static string EditUrl {
+            get {
                 return ResourceManager.GetString("EditUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Exit
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Exit {
+            get {
                 object obj = ResourceManager.GetObject("Exit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Exit.
         /// </summary>
-        public static string ExitAlternativeText
-        {
-            get
-            {
+        internal static string ExitAlternativeText {
+            get {
                 return ResourceManager.GetString("ExitAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Exit.
         /// </summary>
-        public static string ExitUrl
-        {
-            get
-            {
+        internal static string ExitUrl {
+            get {
                 return ResourceManager.GetString("ExitUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Export
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Export {
+            get {
                 object obj = ResourceManager.GetObject("Export", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Export.
         /// </summary>
-        public static string ExportAlternativeText
-        {
-            get
-            {
+        internal static string ExportAlternativeText {
+            get {
                 return ResourceManager.GetString("ExportAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ExportToExcel
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap ExportToExcel {
+            get {
                 object obj = ResourceManager.GetObject("ExportToExcel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to ExportToExcel.
         /// </summary>
-        public static string ExportToExcelAlternativeText
-        {
-            get
-            {
+        internal static string ExportToExcelAlternativeText {
+            get {
                 return ResourceManager.GetString("ExportToExcelAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=ExportToExcel.
         /// </summary>
-        public static string ExportToExcelUrl
-        {
-            get
-            {
+        internal static string ExportToExcelUrl {
+            get {
                 return ResourceManager.GetString("ExportToExcelUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Export.
         /// </summary>
-        public static string ExportUrl
-        {
-            get
-            {
+        internal static string ExportUrl {
+            get {
                 return ResourceManager.GetString("ExportUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Favorite
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Favorite {
+            get {
                 object obj = ResourceManager.GetObject("Favorite", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Favorite.
         /// </summary>
-        public static string FavoriteAlternativeText
-        {
-            get
-            {
+        internal static string FavoriteAlternativeText {
+            get {
                 return ResourceManager.GetString("FavoriteAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Favorite.
         /// </summary>
-        public static string FavoriteUrl
-        {
-            get
-            {
+        internal static string FavoriteUrl {
+            get {
                 return ResourceManager.GetString("FavoriteUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap FileReplace
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap FileReplace {
+            get {
                 object obj = ResourceManager.GetObject("FileReplace", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to FileReplace.
         /// </summary>
-        public static string FileReplaceAlternativeText
-        {
-            get
-            {
+        internal static string FileReplaceAlternativeText {
+            get {
                 return ResourceManager.GetString("FileReplaceAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=FileReplace.
         /// </summary>
-        public static string FileReplaceUrl
-        {
-            get
-            {
+        internal static string FileReplaceUrl {
+            get {
                 return ResourceManager.GetString("FileReplaceUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap First
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap First {
+            get {
                 object obj = ResourceManager.GetObject("First", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to First.
         /// </summary>
-        public static string FirstAlternativeText
-        {
-            get
-            {
+        internal static string FirstAlternativeText {
+            get {
                 return ResourceManager.GetString("FirstAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=First.
         /// </summary>
-        public static string FirstUrl
-        {
-            get
-            {
+        internal static string FirstUrl {
+            get {
                 return ResourceManager.GetString("FirstUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Forward
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Forward {
+            get {
                 object obj = ResourceManager.GetObject("Forward", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Forward.
         /// </summary>
-        public static string ForwardAlternativeText
-        {
-            get
-            {
+        internal static string ForwardAlternativeText {
+            get {
                 return ResourceManager.GetString("ForwardAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Forward.
         /// </summary>
-        public static string ForwardUrl
-        {
-            get
-            {
+        internal static string ForwardUrl {
+            get {
                 return ResourceManager.GetString("ForwardUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap FullDetails
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap FullDetails {
+            get {
                 object obj = ResourceManager.GetObject("FullDetails", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to FullDetails.
         /// </summary>
-        public static string FullDetailsAlternativeText
-        {
-            get
-            {
+        internal static string FullDetailsAlternativeText {
+            get {
                 return ResourceManager.GetString("FullDetailsAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=FullDetails.
         /// </summary>
-        public static string FullDetailsUrl
-        {
-            get
-            {
+        internal static string FullDetailsUrl {
+            get {
                 return ResourceManager.GetString("FullDetailsUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Go
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Go {
+            get {
                 object obj = ResourceManager.GetObject("Go", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Go.
         /// </summary>
-        public static string GoAlternativeText
-        {
-            get
-            {
+        internal static string GoAlternativeText {
+            get {
                 return ResourceManager.GetString("GoAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap GotoSearch
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap GotoSearch {
+            get {
                 object obj = ResourceManager.GetObject("GotoSearch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to GotoSearch.
         /// </summary>
-        public static string GotoSearchAlternativeText
-        {
-            get
-            {
+        internal static string GotoSearchAlternativeText {
+            get {
                 return ResourceManager.GetString("GotoSearchAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=GotoSearch.
         /// </summary>
-        public static string GotoSearchUrl
-        {
-            get
-            {
+        internal static string GotoSearchUrl {
+            get {
                 return ResourceManager.GetString("GotoSearchUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Go.
         /// </summary>
-        public static string GoUrl
-        {
-            get
-            {
+        internal static string GoUrl {
+            get {
                 return ResourceManager.GetString("GoUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Heart
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Heart {
+            get {
                 object obj = ResourceManager.GetObject("Heart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Heart.
         /// </summary>
-        public static string HeartAlternativeText
-        {
-            get
-            {
+        internal static string HeartAlternativeText {
+            get {
                 return ResourceManager.GetString("HeartAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Heart.
         /// </summary>
-        public static string HeartUrl
-        {
-            get
-            {
+        internal static string HeartUrl {
+            get {
                 return ResourceManager.GetString("HeartUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Help
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Help {
+            get {
                 object obj = ResourceManager.GetObject("Help", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Help.
         /// </summary>
-        public static string HelpAlternativeText
-        {
-            get
-            {
+        internal static string HelpAlternativeText {
+            get {
                 return ResourceManager.GetString("HelpAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Help.
         /// </summary>
-        public static string HelpUrl
-        {
-            get
-            {
+        internal static string HelpUrl {
+            get {
                 return ResourceManager.GetString("HelpUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Home
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Home {
+            get {
                 object obj = ResourceManager.GetObject("Home", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
-        public static string HomeAlternativeText
-        {
-            get
-            {
+        internal static string HomeAlternativeText {
+            get {
                 return ResourceManager.GetString("HomeAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Home.
         /// </summary>
-        public static string HomeUrl
-        {
-            get
-            {
+        internal static string HomeUrl {
+            get {
                 return ResourceManager.GetString("HomeUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Import
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Import {
+            get {
                 object obj = ResourceManager.GetObject("Import", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Import.
         /// </summary>
-        public static string ImportAlternativeText
-        {
-            get
-            {
+        internal static string ImportAlternativeText {
+            get {
                 return ResourceManager.GetString("ImportAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Import.
         /// </summary>
-        public static string ImportUrl
-        {
-            get
-            {
+        internal static string ImportUrl {
+            get {
                 return ResourceManager.GetString("ImportUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Index
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Index {
+            get {
                 object obj = ResourceManager.GetObject("Index", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Index.
         /// </summary>
-        public static string IndexAlternativeText
-        {
-            get
-            {
+        internal static string IndexAlternativeText {
+            get {
                 return ResourceManager.GetString("IndexAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Index.
         /// </summary>
-        public static string IndexUrl
-        {
-            get
-            {
+        internal static string IndexUrl {
+            get {
                 return ResourceManager.GetString("IndexUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Information
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Information {
+            get {
                 object obj = ResourceManager.GetObject("Information", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Information.
         /// </summary>
-        public static string InformationAlternativeText
-        {
-            get
-            {
+        internal static string InformationAlternativeText {
+            get {
                 return ResourceManager.GetString("InformationAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Information.
         /// </summary>
-        public static string InformationUrl
-        {
-            get
-            {
+        internal static string InformationUrl {
+            get {
                 return ResourceManager.GetString("InformationUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Insert
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Insert {
+            get {
                 object obj = ResourceManager.GetObject("Insert", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Insert.
         /// </summary>
-        public static string InsertAlternativeText
-        {
-            get
-            {
+        internal static string InsertAlternativeText {
+            get {
                 return ResourceManager.GetString("InsertAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Insert.
         /// </summary>
-        public static string InsertUrl
-        {
-            get
-            {
+        internal static string InsertUrl {
+            get {
                 return ResourceManager.GetString("InsertUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Last
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Last {
+            get {
                 object obj = ResourceManager.GetObject("Last", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Last.
         /// </summary>
-        public static string LastAlternativeText
-        {
-            get
-            {
+        internal static string LastAlternativeText {
+            get {
                 return ResourceManager.GetString("LastAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Last.
         /// </summary>
-        public static string LastUrl
-        {
-            get
-            {
+        internal static string LastUrl {
+            get {
                 return ResourceManager.GetString("LastUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap LoadFile
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap LoadFile {
+            get {
                 object obj = ResourceManager.GetObject("LoadFile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to LoadFile.
         /// </summary>
-        public static string LoadFileAlternativeText
-        {
-            get
-            {
+        internal static string LoadFileAlternativeText {
+            get {
                 return ResourceManager.GetString("LoadFileAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=LoadFile.
         /// </summary>
-        public static string LoadFileUrl
-        {
-            get
-            {
+        internal static string LoadFileUrl {
+            get {
                 return ResourceManager.GetString("LoadFileUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Lock
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Lock {
+            get {
                 object obj = ResourceManager.GetObject("Lock", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Lock.
         /// </summary>
-        public static string LockAlternativeText
-        {
-            get
-            {
+        internal static string LockAlternativeText {
+            get {
                 return ResourceManager.GetString("LockAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Lock.
         /// </summary>
-        public static string LockUrl
-        {
-            get
-            {
+        internal static string LockUrl {
+            get {
                 return ResourceManager.GetString("LockUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Mail
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Mail {
+            get {
                 object obj = ResourceManager.GetObject("Mail", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Mail.
         /// </summary>
-        public static string MailAlternativeText
-        {
-            get
-            {
+        internal static string MailAlternativeText {
+            get {
                 return ResourceManager.GetString("MailAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap MailLock
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap MailLock {
+            get {
                 object obj = ResourceManager.GetObject("MailLock", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to MailLock.
         /// </summary>
-        public static string MailLockAlternativeText
-        {
-            get
-            {
+        internal static string MailLockAlternativeText {
+            get {
                 return ResourceManager.GetString("MailLockAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=MailLock.
         /// </summary>
-        public static string MailLockUrl
-        {
-            get
-            {
+        internal static string MailLockUrl {
+            get {
                 return ResourceManager.GetString("MailLockUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap MailReceive
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap MailReceive {
+            get {
                 object obj = ResourceManager.GetObject("MailReceive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to MailReceive.
         /// </summary>
-        public static string MailReceiveAlternativeText
-        {
-            get
-            {
+        internal static string MailReceiveAlternativeText {
+            get {
                 return ResourceManager.GetString("MailReceiveAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=MailReceive.
         /// </summary>
-        public static string MailReceiveUrl
-        {
-            get
-            {
+        internal static string MailReceiveUrl {
+            get {
                 return ResourceManager.GetString("MailReceiveUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap MailSearch
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap MailSearch {
+            get {
                 object obj = ResourceManager.GetObject("MailSearch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to MailSearch.
         /// </summary>
-        public static string MailSearchAlternativeText
-        {
-            get
-            {
+        internal static string MailSearchAlternativeText {
+            get {
                 return ResourceManager.GetString("MailSearchAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=MailSearch.
         /// </summary>
-        public static string MailSearchUrl
-        {
-            get
-            {
+        internal static string MailSearchUrl {
+            get {
                 return ResourceManager.GetString("MailSearchUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap MailSend
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap MailSend {
+            get {
                 object obj = ResourceManager.GetObject("MailSend", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to MailSend.
         /// </summary>
-        public static string MailSendAlternativeText
-        {
-            get
-            {
+        internal static string MailSendAlternativeText {
+            get {
                 return ResourceManager.GetString("MailSendAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=MailSend.
         /// </summary>
-        public static string MailSendUrl
-        {
-            get
-            {
+        internal static string MailSendUrl {
+            get {
                 return ResourceManager.GetString("MailSendUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Mail.
         /// </summary>
-        public static string MailUrl
-        {
-            get
-            {
+        internal static string MailUrl {
+            get {
                 return ResourceManager.GetString("MailUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Minus
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Minus {
+            get {
                 object obj = ResourceManager.GetObject("Minus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Minus.
         /// </summary>
-        public static string MinusAlternativeText
-        {
-            get
-            {
+        internal static string MinusAlternativeText {
+            get {
                 return ResourceManager.GetString("MinusAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Minus.
         /// </summary>
-        public static string MinusUrl
-        {
-            get
-            {
+        internal static string MinusUrl {
+            get {
                 return ResourceManager.GetString("MinusUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Money
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Money {
+            get {
                 object obj = ResourceManager.GetObject("Money", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Money.
         /// </summary>
-        public static string MoneyAlternativeText
-        {
-            get
-            {
+        internal static string MoneyAlternativeText {
+            get {
                 return ResourceManager.GetString("MoneyAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Money.
         /// </summary>
-        public static string MoneyUrl
-        {
-            get
-            {
+        internal static string MoneyUrl {
+            get {
                 return ResourceManager.GetString("MoneyUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap More
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap More {
+            get {
                 object obj = ResourceManager.GetObject("More", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to More.
         /// </summary>
-        public static string MoreAlternativeText
-        {
-            get
-            {
+        internal static string MoreAlternativeText {
+            get {
                 return ResourceManager.GetString("MoreAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=More.
         /// </summary>
-        public static string MoreUrl
-        {
-            get
-            {
+        internal static string MoreUrl {
+            get {
                 return ResourceManager.GetString("MoreUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap NewFile
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap NewFile {
+            get {
                 object obj = ResourceManager.GetObject("NewFile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to NewFile.
         /// </summary>
-        public static string NewFileAlternativeText
-        {
-            get
-            {
+        internal static string NewFileAlternativeText {
+            get {
                 return ResourceManager.GetString("NewFileAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=NewFile.
         /// </summary>
-        public static string NewFileUrl
-        {
-            get
-            {
+        internal static string NewFileUrl {
+            get {
                 return ResourceManager.GetString("NewFileUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Next
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Next {
+            get {
                 object obj = ResourceManager.GetObject("Next", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Next.
         /// </summary>
-        public static string NextAlternativeText
-        {
-            get
-            {
+        internal static string NextAlternativeText {
+            get {
                 return ResourceManager.GetString("NextAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Next.
         /// </summary>
-        public static string NextUrl
-        {
-            get
-            {
+        internal static string NextUrl {
+            get {
                 return ResourceManager.GetString("NextUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap NumericDown
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap NumericDown {
+            get {
                 object obj = ResourceManager.GetObject("NumericDown", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to NumericDown.
         /// </summary>
-        public static string NumericDownAlternativeText
-        {
-            get
-            {
+        internal static string NumericDownAlternativeText {
+            get {
                 return ResourceManager.GetString("NumericDownAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=NumericDown.
         /// </summary>
-        public static string NumericDownUrl
-        {
-            get
-            {
+        internal static string NumericDownUrl {
+            get {
                 return ResourceManager.GetString("NumericDownUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap NumericUp
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap NumericUp {
+            get {
                 object obj = ResourceManager.GetObject("NumericUp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to NumericUp.
         /// </summary>
-        public static string NumericUpAlternativeText
-        {
-            get
-            {
+        internal static string NumericUpAlternativeText {
+            get {
                 return ResourceManager.GetString("NumericUpAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=NumericUp.
         /// </summary>
-        public static string NumericUpUrl
-        {
-            get
-            {
+        internal static string NumericUpUrl {
+            get {
                 return ResourceManager.GetString("NumericUpUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Open
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Open {
+            get {
                 object obj = ResourceManager.GetObject("Open", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Open.
         /// </summary>
-        public static string OpenAlternativeText
-        {
-            get
-            {
+        internal static string OpenAlternativeText {
+            get {
                 return ResourceManager.GetString("OpenAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Open.
         /// </summary>
-        public static string OpenUrl
-        {
-            get
-            {
+        internal static string OpenUrl {
+            get {
                 return ResourceManager.GetString("OpenUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap PageSize
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap PageSize {
+            get {
                 object obj = ResourceManager.GetObject("PageSize", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to PageSize.
         /// </summary>
-        public static string PageSizeAlternativeText
-        {
-            get
-            {
+        internal static string PageSizeAlternativeText {
+            get {
                 return ResourceManager.GetString("PageSizeAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=PageSize.
         /// </summary>
-        public static string PageSizeUrl
-        {
-            get
-            {
+        internal static string PageSizeUrl {
+            get {
                 return ResourceManager.GetString("PageSizeUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap PasswordRecovery
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap PasswordRecovery {
+            get {
                 object obj = ResourceManager.GetObject("PasswordRecovery", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to PasswordRecovery.
         /// </summary>
-        public static string PasswordRecoveryAlternativeText
-        {
-            get
-            {
+        internal static string PasswordRecoveryAlternativeText {
+            get {
                 return ResourceManager.GetString("PasswordRecoveryAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=PasswordRecovery.
         /// </summary>
-        public static string PasswordRecoveryUrl
-        {
-            get
-            {
+        internal static string PasswordRecoveryUrl {
+            get {
                 return ResourceManager.GetString("PasswordRecoveryUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Paste
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Paste {
+            get {
                 object obj = ResourceManager.GetObject("Paste", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Paste.
         /// </summary>
-        public static string PasteAlternativeText
-        {
-            get
-            {
+        internal static string PasteAlternativeText {
+            get {
                 return ResourceManager.GetString("PasteAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Paste.
         /// </summary>
-        public static string PasteUrl
-        {
-            get
-            {
+        internal static string PasteUrl {
+            get {
                 return ResourceManager.GetString("PasteUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Pause
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Pause {
+            get {
                 object obj = ResourceManager.GetObject("Pause", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Pause.
         /// </summary>
-        public static string PauseAlternativeText
-        {
-            get
-            {
+        internal static string PauseAlternativeText {
+            get {
                 return ResourceManager.GetString("PauseAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Pause.
         /// </summary>
-        public static string PauseUrl
-        {
-            get
-            {
+        internal static string PauseUrl {
+            get {
                 return ResourceManager.GetString("PauseUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap PieChart
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap PieChart {
+            get {
                 object obj = ResourceManager.GetObject("PieChart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to PieChart.
         /// </summary>
-        public static string PieChartAlternativeText
-        {
-            get
-            {
+        internal static string PieChartAlternativeText {
+            get {
                 return ResourceManager.GetString("PieChartAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=PieChart.
         /// </summary>
-        public static string PieChartUrl
-        {
-            get
-            {
+        internal static string PieChartUrl {
+            get {
                 return ResourceManager.GetString("PieChartUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Play
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Play {
+            get {
                 object obj = ResourceManager.GetObject("Play", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Play.
         /// </summary>
-        public static string PlayAlternativeText
-        {
-            get
-            {
+        internal static string PlayAlternativeText {
+            get {
                 return ResourceManager.GetString("PlayAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Play.
         /// </summary>
-        public static string PlayUrl
-        {
-            get
-            {
+        internal static string PlayUrl {
+            get {
                 return ResourceManager.GetString("PlayUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Plus
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Plus {
+            get {
                 object obj = ResourceManager.GetObject("Plus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Plus.
         /// </summary>
-        public static string PlusAlternativeText
-        {
-            get
-            {
+        internal static string PlusAlternativeText {
+            get {
                 return ResourceManager.GetString("PlusAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Plus.
         /// </summary>
-        public static string PlusUrl
-        {
-            get
-            {
+        internal static string PlusUrl {
+            get {
                 return ResourceManager.GetString("PlusUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Previous
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Previous {
+            get {
                 object obj = ResourceManager.GetObject("Previous", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Previous.
         /// </summary>
-        public static string PreviousAlternativeText
-        {
-            get
-            {
+        internal static string PreviousAlternativeText {
+            get {
                 return ResourceManager.GetString("PreviousAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Previous.
         /// </summary>
-        public static string PreviousUrl
-        {
-            get
-            {
+        internal static string PreviousUrl {
+            get {
                 return ResourceManager.GetString("PreviousUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Process
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Process {
+            get {
                 object obj = ResourceManager.GetObject("Process", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Process.
         /// </summary>
-        public static string ProcessAlternativeText
-        {
-            get
-            {
+        internal static string ProcessAlternativeText {
+            get {
                 return ResourceManager.GetString("ProcessAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Process.
         /// </summary>
-        public static string ProcessUrl
-        {
-            get
-            {
+        internal static string ProcessUrl {
+            get {
                 return ResourceManager.GetString("ProcessUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Promotion
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Promotion {
+            get {
                 object obj = ResourceManager.GetObject("Promotion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Promotion.
         /// </summary>
-        public static string PromotionAlternativeText
-        {
-            get
-            {
+        internal static string PromotionAlternativeText {
+            get {
                 return ResourceManager.GetString("PromotionAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Promotion.
         /// </summary>
-        public static string PromotionUrl
-        {
-            get
-            {
+        internal static string PromotionUrl {
+            get {
                 return ResourceManager.GetString("PromotionUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Protection
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Protection {
+            get {
                 object obj = ResourceManager.GetObject("Protection", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Protection.
         /// </summary>
-        public static string ProtectionAlternativeText
-        {
-            get
-            {
+        internal static string ProtectionAlternativeText {
+            get {
                 return ResourceManager.GetString("ProtectionAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Protection.
         /// </summary>
-        public static string ProtectionUrl
-        {
-            get
-            {
+        internal static string ProtectionUrl {
+            get {
                 return ResourceManager.GetString("ProtectionUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Question
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Question {
+            get {
                 object obj = ResourceManager.GetObject("Question", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Question.
         /// </summary>
-        public static string QuestionAlternativeText
-        {
-            get
-            {
+        internal static string QuestionAlternativeText {
+            get {
                 return ResourceManager.GetString("QuestionAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Question.
         /// </summary>
-        public static string QuestionUrl
-        {
-            get
-            {
+        internal static string QuestionUrl {
+            get {
                 return ResourceManager.GetString("QuestionUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Record
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Record {
+            get {
                 object obj = ResourceManager.GetObject("Record", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Record.
         /// </summary>
-        public static string RecordAlternativeText
-        {
-            get
-            {
+        internal static string RecordAlternativeText {
+            get {
                 return ResourceManager.GetString("RecordAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Record.
         /// </summary>
-        public static string RecordUrl
-        {
-            get
-            {
+        internal static string RecordUrl {
+            get {
                 return ResourceManager.GetString("RecordUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Recycle
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Recycle {
+            get {
                 object obj = ResourceManager.GetObject("Recycle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Recycle.
         /// </summary>
-        public static string RecycleAlternativeText
-        {
-            get
-            {
+        internal static string RecycleAlternativeText {
+            get {
                 return ResourceManager.GetString("RecycleAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Recycle.
         /// </summary>
-        public static string RecycleUrl
-        {
-            get
-            {
+        internal static string RecycleUrl {
+            get {
                 return ResourceManager.GetString("RecycleUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Redo
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Redo {
+            get {
                 object obj = ResourceManager.GetObject("Redo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Redo.
         /// </summary>
-        public static string RedoAlternativeText
-        {
-            get
-            {
+        internal static string RedoAlternativeText {
+            get {
                 return ResourceManager.GetString("RedoAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Redo.
         /// </summary>
-        public static string RedoUrl
-        {
-            get
-            {
+        internal static string RedoUrl {
+            get {
                 return ResourceManager.GetString("RedoUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Refresh
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Refresh {
+            get {
                 object obj = ResourceManager.GetObject("Refresh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Refresh.
         /// </summary>
-        public static string RefreshAlternativeText
-        {
-            get
-            {
+        internal static string RefreshAlternativeText {
+            get {
                 return ResourceManager.GetString("RefreshAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Refresh.
         /// </summary>
-        public static string RefreshUrl
-        {
-            get
-            {
+        internal static string RefreshUrl {
+            get {
                 return ResourceManager.GetString("RefreshUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Register
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Register {
+            get {
                 object obj = ResourceManager.GetObject("Register", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Register.
         /// </summary>
-        public static string RegisterAlternativeText
-        {
-            get
-            {
+        internal static string RegisterAlternativeText {
+            get {
                 return ResourceManager.GetString("RegisterAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Register.
         /// </summary>
-        public static string RegisterUrl
-        {
-            get
-            {
+        internal static string RegisterUrl {
+            get {
                 return ResourceManager.GetString("RegisterUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Repeat
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Repeat {
+            get {
                 object obj = ResourceManager.GetObject("Repeat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Repeat.
         /// </summary>
-        public static string RepeatAlternativeText
-        {
-            get
-            {
+        internal static string RepeatAlternativeText {
+            get {
                 return ResourceManager.GetString("RepeatAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Repeat.
         /// </summary>
-        public static string RepeatUrl
-        {
-            get
-            {
+        internal static string RepeatUrl {
+            get {
                 return ResourceManager.GetString("RepeatUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap RSS
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap RSS {
+            get {
                 object obj = ResourceManager.GetObject("RSS", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to RSS.
         /// </summary>
-        public static string RSSAlternativeText
-        {
-            get
-            {
+        internal static string RSSAlternativeText {
+            get {
                 return ResourceManager.GetString("RSSAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=RSS.
         /// </summary>
-        public static string RSSUrl
-        {
-            get
-            {
+        internal static string RSSUrl {
+            get {
                 return ResourceManager.GetString("RSSUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Save
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Save {
+            get {
                 object obj = ResourceManager.GetObject("Save", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
-        public static string SaveAlternativeText
-        {
-            get
-            {
+        internal static string SaveAlternativeText {
+            get {
                 return ResourceManager.GetString("SaveAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Save.
         /// </summary>
-        public static string SaveUrl
-        {
-            get
-            {
+        internal static string SaveUrl {
+            get {
                 return ResourceManager.GetString("SaveUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Search
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Search {
+            get {
                 object obj = ResourceManager.GetObject("Search", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Search.
         /// </summary>
-        public static string SearchAlternativeText
-        {
-            get
-            {
+        internal static string SearchAlternativeText {
+            get {
                 return ResourceManager.GetString("SearchAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap SearchPage
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap SearchPage {
+            get {
                 object obj = ResourceManager.GetObject("SearchPage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to SearchPage.
         /// </summary>
-        public static string SearchPageAlternativeText
-        {
-            get
-            {
+        internal static string SearchPageAlternativeText {
+            get {
                 return ResourceManager.GetString("SearchPageAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=SearchPage.
         /// </summary>
-        public static string SearchPageUrl
-        {
-            get
-            {
+        internal static string SearchPageUrl {
+            get {
                 return ResourceManager.GetString("SearchPageUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Search.
         /// </summary>
-        public static string SearchUrl
-        {
-            get
-            {
+        internal static string SearchUrl {
+            get {
                 return ResourceManager.GetString("SearchUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Setting
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Setting {
+            get {
                 object obj = ResourceManager.GetObject("Setting", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Setting.
         /// </summary>
-        public static string SettingAlternativeText
-        {
-            get
-            {
+        internal static string SettingAlternativeText {
+            get {
                 return ResourceManager.GetString("SettingAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Setting.
         /// </summary>
-        public static string SettingUrl
-        {
-            get
-            {
+        internal static string SettingUrl {
+            get {
                 return ResourceManager.GetString("SettingUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ShoppingCart
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap ShoppingCart {
+            get {
                 object obj = ResourceManager.GetObject("ShoppingCart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to ShoppingCart.
         /// </summary>
-        public static string ShoppingCartAlternativeText
-        {
-            get
-            {
+        internal static string ShoppingCartAlternativeText {
+            get {
                 return ResourceManager.GetString("ShoppingCartAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=ShoppingCart.
         /// </summary>
-        public static string ShoppingCartUrl
-        {
-            get
-            {
+        internal static string ShoppingCartUrl {
+            get {
                 return ResourceManager.GetString("ShoppingCartUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap SignUp
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap SignUp {
+            get {
                 object obj = ResourceManager.GetObject("SignUp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to SignUp.
         /// </summary>
-        public static string SignUpAlternativeText
-        {
-            get
-            {
+        internal static string SignUpAlternativeText {
+            get {
                 return ResourceManager.GetString("SignUpAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=SignUp.
         /// </summary>
-        public static string SignUpUrl
-        {
-            get
-            {
+        internal static string SignUpUrl {
+            get {
                 return ResourceManager.GetString("SignUpUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Stop
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Stop {
+            get {
                 object obj = ResourceManager.GetObject("Stop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Stop.
         /// </summary>
-        public static string StopAlternativeText
-        {
-            get
-            {
+        internal static string StopAlternativeText {
+            get {
                 return ResourceManager.GetString("StopAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Stop.
         /// </summary>
-        public static string StopUrl
-        {
-            get
-            {
+        internal static string StopUrl {
+            get {
                 return ResourceManager.GetString("StopUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap TagBlue
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap TagBlue {
+            get {
                 object obj = ResourceManager.GetObject("TagBlue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to TagBlue.
         /// </summary>
-        public static string TagBlueAlternativeText
-        {
-            get
-            {
+        internal static string TagBlueAlternativeText {
+            get {
                 return ResourceManager.GetString("TagBlueAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=TagBlue.
         /// </summary>
-        public static string TagBlueUrl
-        {
-            get
-            {
+        internal static string TagBlueUrl {
+            get {
                 return ResourceManager.GetString("TagBlueUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap TagGreen
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap TagGreen {
+            get {
                 object obj = ResourceManager.GetObject("TagGreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to TagGreen.
         /// </summary>
-        public static string TagGreenAlternativeText
-        {
-            get
-            {
+        internal static string TagGreenAlternativeText {
+            get {
                 return ResourceManager.GetString("TagGreenAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=TagGreen.
         /// </summary>
-        public static string TagGreenUrl
-        {
-            get
-            {
+        internal static string TagGreenUrl {
+            get {
                 return ResourceManager.GetString("TagGreenUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap TextPage
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap TextPage {
+            get {
                 object obj = ResourceManager.GetObject("TextPage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to TextPage.
         /// </summary>
-        public static string TextPageAlternativeText
-        {
-            get
-            {
+        internal static string TextPageAlternativeText {
+            get {
                 return ResourceManager.GetString("TextPageAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=TextPage.
         /// </summary>
-        public static string TextPageUrl
-        {
-            get
-            {
+        internal static string TextPageUrl {
+            get {
                 return ResourceManager.GetString("TextPageUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Title
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Title {
+            get {
                 object obj = ResourceManager.GetObject("Title", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Title.
         /// </summary>
-        public static string TitleAlternativeText
-        {
-            get
-            {
+        internal static string TitleAlternativeText {
+            get {
                 return ResourceManager.GetString("TitleAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Title.
         /// </summary>
-        public static string TitleUrl
-        {
-            get
-            {
+        internal static string TitleUrl {
+            get {
                 return ResourceManager.GetString("TitleUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ToggleButton_Checked
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap ToggleButton_Checked {
+            get {
                 object obj = ResourceManager.GetObject("ToggleButton_Checked", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to ToggleButton_Checked.
         /// </summary>
-        public static string ToggleButton_CheckedAlternativeText
-        {
-            get
-            {
+        internal static string ToggleButton_CheckedAlternativeText {
+            get {
                 return ResourceManager.GetString("ToggleButton_CheckedAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=ToggleButton_Checked.
         /// </summary>
-        public static string ToggleButton_CheckedUrl
-        {
-            get
-            {
+        internal static string ToggleButton_CheckedUrl {
+            get {
                 return ResourceManager.GetString("ToggleButton_CheckedUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ToggleButton_Unchecked
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap ToggleButton_Unchecked {
+            get {
                 object obj = ResourceManager.GetObject("ToggleButton_Unchecked", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to ToggleButton_Unchecked.
         /// </summary>
-        public static string ToggleButton_UncheckedAlternativeText
-        {
-            get
-            {
+        internal static string ToggleButton_UncheckedAlternativeText {
+            get {
                 return ResourceManager.GetString("ToggleButton_UncheckedAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=ToggleButton_Unchecked.
         /// </summary>
-        public static string ToggleButton_UncheckedUrl
-        {
-            get
-            {
+        internal static string ToggleButton_UncheckedUrl {
+            get {
                 return ResourceManager.GetString("ToggleButton_UncheckedUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Tutorial
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Tutorial {
+            get {
                 object obj = ResourceManager.GetObject("Tutorial", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Tutorial.
         /// </summary>
-        public static string TutorialAlternativeText
-        {
-            get
-            {
+        internal static string TutorialAlternativeText {
+            get {
                 return ResourceManager.GetString("TutorialAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Tutorial.
         /// </summary>
-        public static string TutorialUrl
-        {
-            get
-            {
+        internal static string TutorialUrl {
+            get {
                 return ResourceManager.GetString("TutorialUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Undo
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Undo {
+            get {
                 object obj = ResourceManager.GetObject("Undo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Undo.
         /// </summary>
-        public static string UndoAlternativeText
-        {
-            get
-            {
+        internal static string UndoAlternativeText {
+            get {
                 return ResourceManager.GetString("UndoAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Undo.
         /// </summary>
-        public static string UndoUrl
-        {
-            get
-            {
+        internal static string UndoUrl {
+            get {
                 return ResourceManager.GetString("UndoUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Unlock
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Unlock {
+            get {
                 object obj = ResourceManager.GetObject("Unlock", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Unlock.
         /// </summary>
-        public static string UnlockAlternativeText
-        {
-            get
-            {
+        internal static string UnlockAlternativeText {
+            get {
                 return ResourceManager.GetString("UnlockAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Unlock.
         /// </summary>
-        public static string UnlockUrl
-        {
-            get
-            {
+        internal static string UnlockUrl {
+            get {
                 return ResourceManager.GetString("UnlockUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Up
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Up {
+            get {
                 object obj = ResourceManager.GetObject("Up", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Up.
         /// </summary>
-        public static string UpAlternativeText
-        {
-            get
-            {
+        internal static string UpAlternativeText {
+            get {
                 return ResourceManager.GetString("UpAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Update
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Update {
+            get {
                 object obj = ResourceManager.GetObject("Update", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Update.
         /// </summary>
-        public static string UpdateAlternativeText
-        {
-            get
-            {
+        internal static string UpdateAlternativeText {
+            get {
                 return ResourceManager.GetString("UpdateAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Update.
         /// </summary>
-        public static string UpdateUrl
-        {
-            get
-            {
+        internal static string UpdateUrl {
+            get {
                 return ResourceManager.GetString("UpdateUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Up.
         /// </summary>
-        public static string UpUrl
-        {
-            get
-            {
+        internal static string UpUrl {
+            get {
                 return ResourceManager.GetString("UpUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap User
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap User {
+            get {
                 object obj = ResourceManager.GetObject("User", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to User.
         /// </summary>
-        public static string UserAlternativeText
-        {
-            get
-            {
+        internal static string UserAlternativeText {
+            get {
                 return ResourceManager.GetString("UserAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Users
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Users {
+            get {
                 object obj = ResourceManager.GetObject("Users", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Users.
         /// </summary>
-        public static string UsersAlternativeText
-        {
-            get
-            {
+        internal static string UsersAlternativeText {
+            get {
                 return ResourceManager.GetString("UsersAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Users.
         /// </summary>
-        public static string UsersUrl
-        {
-            get
-            {
+        internal static string UsersUrl {
+            get {
                 return ResourceManager.GetString("UsersUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=User.
         /// </summary>
-        public static string UserUrl
-        {
-            get
-            {
+        internal static string UserUrl {
+            get {
                 return ResourceManager.GetString("UserUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap Warning
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap Warning {
+            get {
                 object obj = ResourceManager.GetObject("Warning", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Warning.
         /// </summary>
-        public static string WarningAlternativeText
-        {
-            get
-            {
+        internal static string WarningAlternativeText {
+            get {
                 return ResourceManager.GetString("WarningAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=Warning.
         /// </summary>
-        public static string WarningUrl
-        {
-            get
-            {
+        internal static string WarningUrl {
+            get {
                 return ResourceManager.GetString("WarningUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ZoomIn
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap ZoomIn {
+            get {
                 object obj = ResourceManager.GetObject("ZoomIn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to ZoomIn.
         /// </summary>
-        public static string ZoomInAlternativeText
-        {
-            get
-            {
+        internal static string ZoomInAlternativeText {
+            get {
                 return ResourceManager.GetString("ZoomInAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=ZoomIn.
         /// </summary>
-        public static string ZoomInUrl
-        {
-            get
-            {
+        internal static string ZoomInUrl {
+            get {
                 return ResourceManager.GetString("ZoomInUrl", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ZoomOut
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap ZoomOut {
+            get {
                 object obj = ResourceManager.GetObject("ZoomOut", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to ZoomOut.
         /// </summary>
-        public static string ZoomOutAlternativeText
-        {
-            get
-            {
+        internal static string ZoomOutAlternativeText {
+            get {
                 return ResourceManager.GetString("ZoomOutAlternativeText", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to IISHandlers/WebFormApplicationBinaryResourceHandler.ashx?img=ZoomOut.
         /// </summary>
-        public static string ZoomOutUrl
-        {
-            get
-            {
+        internal static string ZoomOutUrl {
+            get {
                 return ResourceManager.GetString("ZoomOutUrl", resourceCulture);
             }
         }

@@ -24,7 +24,7 @@ namespace Framework.EntityContracts
         /// </summary>
         /// <param name="propertyName">Name of the property.</param>
         /// <param name="direction">The direction.</param>
-#if NETFX_CORE
+#if NETFX_CORE || XAMARIN
         public QueryOrderBySetting(
             string propertyName
             , string direction)
@@ -59,7 +59,7 @@ namespace Framework.EntityContracts
         /// <value>
         /// The direction.
         /// </value>
-#if NETFX_CORE
+#if NETFX_CORE || XAMARIN
         public string Direction { get; set; }
 #else
         public System.ComponentModel.ListSortDirection Direction { get; set; }
@@ -100,7 +100,7 @@ namespace Framework.EntityContracts
                         if (string.IsNullOrWhiteSpace(_Splitted1Item) == false)
                         {
                             string[] _Splitted2 = _Splitted1Item.Trim().Split("~".ToCharArray());
-#if NETFX_CORE     
+#if NETFX_CORE || XAMARIN
                             if (_Splitted2.Length == 1)
                             {
                                 this.Add(_Splitted2[0], "Ascending");
@@ -143,14 +143,14 @@ namespace Framework.EntityContracts
             }
 		}
 
-		#endregion constructors
+        #endregion constructors
 
         /// <summary>
         /// Adds one item of QueryOrderBySetting to this collection
         /// </summary>
         /// <param name="propertyName">Name of the property.</param>
         /// <param name="direction">The direction.</param>
-#if NETFX_CORE        
+#if NETFX_CORE || XAMARIN
         public void Add(
             string propertyName
             , string direction)
@@ -185,7 +185,7 @@ namespace Framework.EntityContracts
                 {
                     _SB.Append(",");
                 }
-#if NETFX_CORE        
+#if NETFX_CORE || XAMARIN
                 _SB.Append(string.Format("{0}{1}", _QueryOrderBySetting.PropertyName, _QueryOrderBySetting.Direction == "Ascending" ? "" : " DESC"));
 #else
                 _SB.Append(string.Format("{0}{1}", _QueryOrderBySetting.PropertyName, _QueryOrderBySetting.Direction == System.ComponentModel.ListSortDirection.Ascending ? "" : " DESC"));

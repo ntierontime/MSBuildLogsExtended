@@ -699,6 +699,7 @@
     <ProjectReference Include="..\AspNetMvc40Controller\MSBuildLogsExtended.AspNetMvc40Controller.csproj">
       <Project>{d3aa041b-2333-46fe-a5c4-c39f0ff8e9b6}</Project>
       <Name>MSBuildLogsExtended.AspNetMvc40Controller</Name>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </ProjectReference>
     <ProjectReference Include="..\AspNetMvc40ViewModel\MSBuildLogsExtended.AspNetMvc40ViewModel.csproj">
       <Project>{ac276481-ddf6-472d-9893-d7533629669b}</Project>
@@ -775,8 +776,9 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\..\..\..\..\..\..\NotATest\nTierCraftWhatever\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />

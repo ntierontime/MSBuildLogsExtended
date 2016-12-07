@@ -6,7 +6,8 @@ namespace Framework
 {
     public class ChangePasswordModel
     {
-#if WINDOWS_PHONE
+
+#if (WINDOWS_PHONE || XAMARIN)
 #else
         [System.ComponentModel.DataAnnotations.Required]
         [System.ComponentModel.DataAnnotations.DataType(System.ComponentModel.DataAnnotations.DataType.Password)]
@@ -14,7 +15,7 @@ namespace Framework
 #endif
         public string OldPassword { get; set; }
 
-#if WINDOWS_PHONE
+#if (WINDOWS_PHONE || XAMARIN)
 #else
         [System.ComponentModel.DataAnnotations.Required]
         [System.ComponentModel.DataAnnotations.StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
@@ -23,7 +24,7 @@ namespace Framework
 #endif
         public string NewPassword { get; set; }
 
-#if WINDOWS_PHONE
+#if (WINDOWS_PHONE || XAMARIN)
 #else
         [System.ComponentModel.DataAnnotations.DataType(System.ComponentModel.DataAnnotations.DataType.Password)]
         [System.ComponentModel.DataAnnotations.Display(Name = "Confirm new password")]

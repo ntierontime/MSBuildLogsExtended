@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE388F3A-1AF4-48BD-A082-A43F6BB60F15}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSBuildLogsExtended.EntityContracts.Xamarin</RootNamespace>
+    <AssemblyName>MSBuildLogsExtended.EntityContracts.Xamarin</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <None Include="..\..\Core\EntityContracts\Maps\map.2.B.3.vsd">
+      <Link>Maps\map.2.B.3.vsd</Link>
+    </None>
+    <None Include="..\..\Core\EntityContracts\packages.config">
+      <Link>packages.config</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Core\EntityContracts\Contracts\IBuild.cs">
+      <Link>Contracts\IBuild.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\Contracts\IBuildEventCode.cs">
+      <Link>Contracts\IBuildEventCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\Contracts\IBuildLog.cs">
+      <Link>Contracts\IBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\Contracts\ISolution.cs">
+      <Link>Contracts\ISolution.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\EntityContractHelpers\IBuildEventCodeHelper.cs">
+      <Link>EntityContractHelpers\IBuildEventCodeHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\EntityContractHelpers\IBuildHelper.cs">
+      <Link>EntityContractHelpers\IBuildHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\EntityContractHelpers\IBuildLogHelper.cs">
+      <Link>EntityContractHelpers\IBuildLogHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\EntityContractHelpers\ISolutionHelper.cs">
+      <Link>EntityContractHelpers\ISolutionHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContractHelpers\IBuildEventCodeIdentifierHelper.cs">
+      <Link>IdentifierContractHelpers\IBuildEventCodeIdentifierHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContractHelpers\IBuildIdentifierHelper.cs">
+      <Link>IdentifierContractHelpers\IBuildIdentifierHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContractHelpers\IBuildLogIdentifierHelper.cs">
+      <Link>IdentifierContractHelpers\IBuildLogIdentifierHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContractHelpers\ISolutionIdentifierHelper.cs">
+      <Link>IdentifierContractHelpers\ISolutionIdentifierHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContracts\IBuildEventCodeIdentifier.cs">
+      <Link>IdentifierContracts\IBuildEventCodeIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContracts\IBuildIdentifier.cs">
+      <Link>IdentifierContracts\IBuildIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContracts\IBuildLogIdentifier.cs">
+      <Link>IdentifierContracts\IBuildLogIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\IdentifierContracts\ISolutionIdentifier.cs">
+      <Link>IdentifierContracts\ISolutionIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildByFKs.cs">
+      <Link>QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildByFKs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\EntityContracts\QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildLogByFKs.cs">
+      <Link>QueryCriteriaByEntityReferenceContracts\IQueryCriteriaBuildLogByFKs.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\Core\EntityContracts\Maps\map.2.B.3.vsd.png">
+      <Link>Maps\map.2.B.3.vsd.png</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Frameworks.Xamarin\Framework.DataSourceEntities.Xamarin\Framework.DataSourceEntities.Xamarin.csproj">
+      <Project>{1f5d2838-0223-40b0-a97b-03f90c7fc115}</Project>
+      <Name>Framework.DataSourceEntities.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.Xamarin\Framework.EntityContracts.Xamarin\Framework.EntityContracts.Xamarin.csproj">
+      <Project>{f9ff5112-0e8b-43bd-9b0f-d822e8a152e7}</Project>
+      <Name>Framework.EntityContracts.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.Xamarin\Framework.Xamarin\Framework.Xamarin.csproj">
+      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
+      <Name>Framework.Xamarin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ProjectLinkReference="d090796d-578a-4c52-b489-3e688ddd5206" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

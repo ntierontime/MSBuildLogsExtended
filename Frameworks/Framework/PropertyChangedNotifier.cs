@@ -8,7 +8,7 @@ namespace Framework
     /// We use this class for model classes.
     /// It should be serializable.
     /// </summary>
-#if SILVERLIGHT
+#if SILVERLIGHT || XAMARIN
 #elif NETFX_CORE
 #else
     [Serializable]
@@ -18,7 +18,7 @@ namespace Framework
         /// <summary>
         /// Occurs when a property value changes.
         /// </summary>
-#if SILVERLIGHT
+#if SILVERLIGHT || XAMARIN
 #elif NETFX_CORE
 #else
         [field: NonSerialized]

@@ -148,9 +148,9 @@ namespace Framework
             _retval.ActionLogs = new string[] { string.Format("Database failed when Entity of Identifier {0} in {1}, Details: {2}", id, entityName, message) };
 
             return _retval;
-        }                  
+        }
 
-#if WINDOWS_PHONE
+#if WINDOWS_PHONE || XAMARIN
 #elif NETFX_CORE
 #else
         /// <summary>
@@ -262,7 +262,7 @@ namespace Framework
         /// </summary>
         /// <param name="input">The input.</param>
         /// <returns>converted CSharpName</returns>
-		public static string BuildCSharpName(string input)
+        public static string BuildCSharpName(string input)
         {
             if (string.IsNullOrEmpty(input) == false)
             {

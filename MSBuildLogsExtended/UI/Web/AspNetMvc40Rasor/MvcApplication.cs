@@ -49,6 +49,10 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
                 object _BusinessLogicLayerContext = Activator.CreateInstance(_BusinessLogicLayerContextSetting.TypeOfBusinessLogicLayerContext, _Params);
                 _BusinessLogicLayerContextSetting.TypeOfTargetUser.GetProperty("BusinessLogicLayerContext").SetValue(null, _BusinessLogicLayerContext, null);
             }
+
+
+            var a = new MSBuildLogsExtended.AspNetMvc40Controller.ApiControllers.BuildApiController();
+            ControllerBuilder.Current.DefaultNamespaces.Add("MSBuildLogsExtended.AspNetMvc40Controller.ApiControllers");
         }
     }
 }

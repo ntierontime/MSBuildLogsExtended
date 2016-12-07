@@ -1,10 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
-using System.Web.Optimization;
 using System.Web.Routing;
 
 namespace MSBuildLogsExtended.AngularJS2
@@ -21,7 +18,6 @@ namespace MSBuildLogsExtended.AngularJS2
             MSBuildLogsExtended.AspNetMvc40Controller.WebApiConfig.Register(GlobalConfiguration.Configuration);
             MSBuildLogsExtended.AspNetMvc40Controller.FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             MSBuildLogsExtended.AspNetMvc40Controller.RouteConfig.RegisterRoutes(RouteTable.Routes);
-            MSBuildLogsExtended.AspNetMvc40Controller.BundleConfig.RegisterBundles(BundleTable.Bundles);
             MSBuildLogsExtended.AspNetMvc40Controller.AuthConfig.RegisterAuth();
 
 			GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
@@ -31,7 +27,7 @@ namespace MSBuildLogsExtended.AngularJS2
 
 			Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactory, MSBuildLogsExtended.CommonBLL.BusinessLogicLayerFactory>();
             Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer, Framework.CommonBLLEntities.BusinessLogicLayerContextContainerCommon>();
-            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildLogsExtended.DALContracts.DataAccessLayerFactoryContract, MSBuildLogsExtended.LinqDAL.LinqToSqlDataAccessLayerFactory>();
+            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildLogsExtended.DALContracts.DataAccessLayerFactoryContract, MSBuildLogsExtended.EntityFrameworkDAL.EFDataAccessLayerFactory>();
 
             Framework.CommonBLLEntities.BusinessLogicLayerMemberShip _BusinessLogicLayerMemberShip = new Framework.CommonBLLEntities.BusinessLogicLayerMemberShip();
             //Framework.Web.WebFormApplicationSessionVariables.BusinessLogicLayerContext = new Framework.CommonBLLEntities.BusinessLogicLayerContext(
@@ -42,13 +38,15 @@ namespace MSBuildLogsExtended.AngularJS2
 				"MSBuildLogsExtended"
 				, typeof(Framework.Web.WebFormApplicationSessionVariables)
 				, typeof(Framework.CommonBLLEntities.BusinessLogicLayerContext)
-				, typeof(MSBuildLogsExtended.LinqDAL.LinqToSqlDataAccessLayerFactory)));
+				, typeof(MSBuildLogsExtended.EntityFrameworkDAL.EFDataAccessLayerFactory)));
             foreach (Framework.CommonBLLEntities.BusinessLogicLayerContextSetting _BusinessLogicLayerContextSetting in _BusinessLogicLayerContextSettingCollection)
             {
                 object[] _Params = new object[] {_BusinessLogicLayerMemberShip };
                 object _BusinessLogicLayerContext = Activator.CreateInstance(_BusinessLogicLayerContextSetting.TypeOfBusinessLogicLayerContext, _Params);
                 _BusinessLogicLayerContextSetting.TypeOfTargetUser.GetProperty("BusinessLogicLayerContext").SetValue(null, _BusinessLogicLayerContext, null);
             }
+
+            var a = new MSBuildLogsExtended.AspNetMvc40Controller.ApiControllers.BuildApiController();
         }
     }
 }

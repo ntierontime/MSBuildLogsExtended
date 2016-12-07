@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{75D2430E-08A9-4491-9949-6A992F808B07}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClassLibrary2.Android</RootNamespace>
+    <AssemblyName>ClassLibrary2.Android</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\MSBuildLogsExtended\Core\WcfContracts\IBuildEventCodeWcfService.cs">
+      <Link>IBuildEventCodeWcfService.cs</Link>
+    </Compile>
+    <Compile Include="..\MSBuildLogsExtended\Core\WcfContracts\IBuildLogWcfService.cs">
+      <Link>IBuildLogWcfService.cs</Link>
+    </Compile>
+    <Compile Include="..\MSBuildLogsExtended\Core\WcfContracts\IBuildWcfService.cs">
+      <Link>IBuildWcfService.cs</Link>
+    </Compile>
+    <Compile Include="..\MSBuildLogsExtended\Core\WcfContracts\IBusinessLogicLayerFactory.cs">
+      <Link>IBusinessLogicLayerFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\MSBuildLogsExtended\Core\WcfContracts\ISolutionWcfService.cs">
+      <Link>ISolutionWcfService.cs</Link>
+    </Compile>
+    <Compile Include="..\MSBuildLogsExtended\Core\WcfContracts\WcfServiceContractAsynBuild.cs">
+      <Link>WcfServiceContractAsynBuild.cs</Link>
+    </Compile>
+    <Compile Include="..\MSBuildLogsExtended\Core\WcfContracts\WcfServiceContractAsynBuildEventCode.cs">
+      <Link>WcfServiceContractAsynBuildEventCode.cs</Link>
+    </Compile>
+    <Compile Include="..\MSBuildLogsExtended\Core\WcfContracts\WcfServiceContractAsynBuildLog.cs">
+      <Link>WcfServiceContractAsynBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\MSBuildLogsExtended\Core\WcfContracts\WcfServiceContractAsynSolution.cs">
+      <Link>WcfServiceContractAsynSolution.cs</Link>
+    </Compile>
+    <Compile Include="..\MSBuildLogsExtended\Core\WcfContracts\WcfServiceResolver.cs">
+      <Link>WcfServiceResolver.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Frameworks.Xamarin\Framework.CommonBLLEntities.Xamarin\Framework.CommonBLLEntities.Xamarin.csproj">
+      <Project>{0a0395f9-ae2d-4660-a720-de1249d55797}</Project>
+      <Name>Framework.CommonBLLEntities.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frameworks.Xamarin\Framework.Xamarin\Framework.Xamarin.csproj">
+      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
+      <Name>Framework.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSBuildLogsExtended\Core.X\MSBuildLogsExtended.CommonBLLEntities.X\MSBuildLogsExtended.CommonBLLEntities.X.csproj">
+      <Project>{d14487d3-888c-4534-b753-5254684c3df1}</Project>
+      <Name>MSBuildLogsExtended.CommonBLLEntities.X</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\MSBuildLogsExtended\Core\WcfContracts\Maps\map.2.B.2.vsd">
+      <Link>Maps\map.2.B.2.vsd</Link>
+    </None>
+    <None Include="..\MSBuildLogsExtended\Core\WcfContracts\packages.config">
+      <Link>packages.config</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\MSBuildLogsExtended\Core\WcfContracts\Maps\map.2.B.2.vsd.png">
+      <Link>Maps\map.2.B.2.vsd.png</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ProjectLinkReference="9eb722de-3c2a-43ca-ab84-e2db1f814ea5" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

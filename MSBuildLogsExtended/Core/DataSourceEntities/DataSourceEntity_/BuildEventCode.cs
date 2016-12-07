@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-#if WINDOWS_PHONE
+#if (WINDOWS_PHONE || XAMARIN)
 #else
 using System.ComponentModel.DataAnnotations;
 #endif
@@ -78,7 +78,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 		#region properties
 
 				[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Id", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode))]
@@ -98,7 +98,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "EventCode", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode))]
@@ -118,7 +118,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Description", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode))]
@@ -238,7 +238,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 			#region properties
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Id", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode))]

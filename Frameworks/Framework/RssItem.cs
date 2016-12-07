@@ -79,7 +79,7 @@ namespace Framework
         /// The title.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT)
+#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN)
 #else
             [LINQtoCSV.CsvColumn()]
 #endif
@@ -91,7 +91,7 @@ namespace Framework
         /// The description.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT)
+#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN)
 #else
             [LINQtoCSV.CsvColumn()]
 #endif
@@ -103,7 +103,7 @@ namespace Framework
         /// The author.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT)
+#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN)
 #else
             [LINQtoCSV.CsvColumn()]
 #endif
@@ -115,7 +115,7 @@ namespace Framework
         /// The comments.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT)
+#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN)
 #else
             [LINQtoCSV.CsvColumn()]
 #endif
@@ -127,7 +127,7 @@ namespace Framework
         /// The link.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT)
+#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN)
 #else
             [LINQtoCSV.CsvColumn()]
 #endif
@@ -139,7 +139,7 @@ namespace Framework
         /// The pub date.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT)
+#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN)
 #else
             [LINQtoCSV.CsvColumn()]
 #endif
@@ -152,7 +152,7 @@ namespace Framework
         /// The identifier in string.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT)
+#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN)
 #else
             [LINQtoCSV.CsvColumn()]
 #endif
@@ -164,7 +164,7 @@ namespace Framework
         /// The name of the created by user.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT)
+#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN)
 #else
             [LINQtoCSV.CsvColumn()]
 #endif
@@ -176,7 +176,7 @@ namespace Framework
         /// The created by identifier.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT)
+#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN)
 #else
             [LINQtoCSV.CsvColumn(OutputFormat = "D")]
 #endif
@@ -188,7 +188,7 @@ namespace Framework
         /// The date created.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT)
+#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN)
 #else
             [LINQtoCSV.CsvColumn()]
 #endif
@@ -200,7 +200,7 @@ namespace Framework
         /// The last name of the modified by user.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT)
+#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN)
 #else
             [LINQtoCSV.CsvColumn()]
 #endif
@@ -212,7 +212,7 @@ namespace Framework
         /// The last modified by identifier.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT)
+#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN)
 #else
             [LINQtoCSV.CsvColumn(OutputFormat = "D")]
 #endif
@@ -224,7 +224,7 @@ namespace Framework
         /// The date last modified.
         /// </value>
         [DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT)
+#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN)
 #else
             [LINQtoCSV.CsvColumn()]
 #endif

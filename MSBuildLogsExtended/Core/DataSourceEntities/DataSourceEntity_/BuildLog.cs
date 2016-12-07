@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-#if WINDOWS_PHONE
+#if (WINDOWS_PHONE || XAMARIN)
 #else
 using System.ComponentModel.DataAnnotations;
 #endif
@@ -90,7 +90,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 		#region properties
 
 				[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Id", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -110,7 +110,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "BuildId", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -130,7 +130,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -150,7 +150,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Message", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -169,7 +169,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "EventTime", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -314,7 +314,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 			#region properties
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Build_B1_1_Name", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -333,7 +333,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Id", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -353,7 +353,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Solution_S1_1Id", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -372,7 +372,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Solution_S1_1_Name", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -391,7 +391,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "BuildEventCode_B2_1_Name", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -410,7 +410,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "BuildId", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -429,7 +429,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -448,7 +448,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Message", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -467,7 +467,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "EventTime", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -592,7 +592,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 			#region properties
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "BuildId", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -612,7 +612,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "BuildEventCodeId", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -632,7 +632,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "CountPerFK", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -651,7 +651,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Name", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -670,7 +670,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Solution_S1_1Id", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]
@@ -778,7 +778,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 			#region properties
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Id", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog))]

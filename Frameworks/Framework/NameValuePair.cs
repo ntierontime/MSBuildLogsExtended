@@ -411,7 +411,7 @@ namespace Framework
         /// The value.
         /// </value>
 		[DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT)
+#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN)
 #else
             [LINQtoCSV.CsvColumn()]
 #endif
@@ -423,7 +423,7 @@ namespace Framework
         /// The name.
         /// </value>
 		[DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT)
+#if(WINDOWS_PHONE || SILVERLIGHT || XAMARIN)
 #else
             [LINQtoCSV.CsvColumn()]
 #endif
