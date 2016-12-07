@@ -43,35 +43,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerApp.Designer.cs">
-      <Link>UIStringResourcePerApp.Designer.cs</Link>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerApp1.Designer.cs">
+      <Link>UIStringResourcePerApp1.Designer.cs</Link>
       <DependentUpon>UIStringResourcePerApp.resx</DependentUpon>
-    </Compile>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuild.Designer.cs">
-      <Link>UIStringResourcePerEntityBuild.Designer.cs</Link>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UIStringResourcePerEntityBuild.resx</DependentUpon>
-    </Compile>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuildEventCode.Designer.cs">
-      <Link>UIStringResourcePerEntityBuildEventCode.Designer.cs</Link>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UIStringResourcePerEntityBuildEventCode.resx</DependentUpon>
-    </Compile>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuildLog.Designer.cs">
-      <Link>UIStringResourcePerEntityBuildLog.Designer.cs</Link>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UIStringResourcePerEntityBuildLog.resx</DependentUpon>
-    </Compile>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntitySolution.Designer.cs">
-      <Link>UIStringResourcePerEntitySolution.Designer.cs</Link>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UIStringResourcePerEntitySolution.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -110,7 +84,7 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkReference="4072ddfc-04fb-4b21-b602-00678070187a" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="4072ddfc-04fb-4b21-b602-00678070187a" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

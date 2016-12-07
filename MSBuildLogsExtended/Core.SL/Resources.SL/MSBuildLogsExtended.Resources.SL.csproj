@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -52,6 +52,26 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerApp1.Designer.cs">
+      <Link>UIStringResourcePerApp1.Designer.cs</Link>
+      <DependentUpon>UIStringResourcePerApp.resx</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuild.Designer.cs">
+      <Link>UIStringResourcePerEntityBuild.Designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntityBuild.resx</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuildEventCode.Designer.cs">
+      <Link>UIStringResourcePerEntityBuildEventCode.Designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntityBuildEventCode.resx</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuildLog.Designer.cs">
+      <Link>UIStringResourcePerEntityBuildLog.Designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntityBuildLog.resx</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntitySolution.Designer.cs">
+      <Link>UIStringResourcePerEntitySolution.Designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntitySolution.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <Content Include="Maps\map.2.D.2.vsd" />
@@ -59,43 +79,18 @@
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerApp.resx">
       <Link>UIStringResourcePerApp.resx</Link>
     </EmbeddedResource>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerApp.designer.cs">
-      <Link>UIStringResourcePerApp.designer.cs</Link>
-      <DependentUpon>UIStringResourcePerApp.resx</DependentUpon>
-      <SubType>RESXCodeBehind</SubType>
-    </Compile>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntityBuild.resx">
       <Link>UIStringResourcePerEntityBuild.resx</Link>
     </EmbeddedResource>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuild.designer.cs">
-      <Link>UIStringResourcePerEntityBuild.designer.cs</Link>
-      <DependentUpon>UIStringResourcePerEntityBuild.resx</DependentUpon>
-      <SubType>RESXCodeBehind</SubType>
-    </Compile>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntityBuildEventCode.resx">
       <Link>UIStringResourcePerEntityBuildEventCode.resx</Link>
     </EmbeddedResource>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuildEventCode.designer.cs">
-      <Link>UIStringResourcePerEntityBuildEventCode.designer.cs</Link>
-      <DependentUpon>UIStringResourcePerEntityBuildEventCode.resx</DependentUpon>
-      <SubType>RESXCodeBehind</SubType>
-    </Compile>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntityBuildLog.resx">
       <Link>UIStringResourcePerEntityBuildLog.resx</Link>
     </EmbeddedResource>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuildLog.designer.cs">
-      <Link>UIStringResourcePerEntityBuildLog.designer.cs</Link>
-      <DependentUpon>UIStringResourcePerEntityBuildLog.resx</DependentUpon>
-      <SubType>RESXCodeBehind</SubType>
-    </Compile>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntitySolution.resx">
       <Link>UIStringResourcePerEntitySolution.resx</Link>
     </EmbeddedResource>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntitySolution.designer.cs">
-      <Link>UIStringResourcePerEntitySolution.designer.cs</Link>
-      <DependentUpon>UIStringResourcePerEntitySolution.resx</DependentUpon>
-      <SubType>RESXCodeBehind</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks.SL\Framework.SL\Framework.SL.csproj">
@@ -126,8 +121,7 @@
       <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
         <SilverlightProjectProperties />
       </FlavorProperties>
-      <!-- For ProjectLinker -->
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="4072ddfc-04fb-4b21-b602-00678070187a" />
+      <UserProperties ProjectLinkReference="4072ddfc-04fb-4b21-b602-00678070187a" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

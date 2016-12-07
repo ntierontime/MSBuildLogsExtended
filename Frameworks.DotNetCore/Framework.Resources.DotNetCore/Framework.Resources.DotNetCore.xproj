@@ -15,6 +15,11 @@
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Frameworks\Framework.Resources\UIImageResource.Designer.cs">
+      <Link>UIImageResource.resx\UIImageResource.Designer.cs</Link>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>

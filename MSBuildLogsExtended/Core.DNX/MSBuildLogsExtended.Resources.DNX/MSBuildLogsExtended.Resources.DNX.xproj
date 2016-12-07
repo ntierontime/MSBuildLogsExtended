@@ -15,6 +15,11 @@
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerApp1.Designer.cs">
+      <Link>UIStringResourcePerApp1.Designer.cs</Link>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
   <ProjectExtensions>
     <VisualStudio>

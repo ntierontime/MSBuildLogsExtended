@@ -39,10 +39,6 @@
       <Project>{0a0395f9-ae2d-4660-a720-de1249d55797}</Project>
       <Name>Framework.CommonBLLEntities.Xamarin</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Frameworks.Xamarin\Framework.DataSourceEntities.Xamarin\Framework.DataSourceEntities.Xamarin.csproj">
-      <Project>{1f5d2838-0223-40b0-a97b-03f90c7fc115}</Project>
-      <Name>Framework.DataSourceEntities.Xamarin</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.Xamarin\Framework.EntityContracts.Xamarin\Framework.EntityContracts.Xamarin.csproj">
       <Project>{f9ff5112-0e8b-43bd-9b0f-d822e8a152e7}</Project>
       <Name>Framework.EntityContracts.Xamarin</Name>

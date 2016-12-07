@@ -330,6 +330,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\Frameworks\Framework.Resources\UIImageResource.Designer.cs">
+      <Link>UIImageResource.resx\UIImageResource.Designer.cs</Link>
+    </Compile>
     <Compile Include="..\..\Frameworks\Framework.Resources\UIStringResource.Designer.cs">
       <Link>UIStringResource.Designer.cs</Link>
       <AutoGen>True</AutoGen>
