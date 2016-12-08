@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{804391E5-9B39-48BE-9B42-E6D05956BE68}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MSBuildLogsExtended.CommonBLLIoC.IOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>MSBuildLogsExtended.CommonBLLIoC.IOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Core\CommonBLLIoC\Maps\map.2.C.2.vsd">
+      <Link>Maps\map.2.C.2.vsd</Link>
+    </None>
+    <None Include="..\..\Core\CommonBLLIoC\packages.config">
+      <Link>packages.config</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Core\CommonBLLIoC\Static\BusinessLogicLayerEntityStaticBuild.cs">
+      <Link>Static\BusinessLogicLayerEntityStaticBuild.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLIoC\Static\BusinessLogicLayerEntityStaticBuildEventCode.cs">
+      <Link>Static\BusinessLogicLayerEntityStaticBuildEventCode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLIoC\Static\BusinessLogicLayerEntityStaticBuildLog.cs">
+      <Link>Static\BusinessLogicLayerEntityStaticBuildLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Core\CommonBLLIoC\Static\BusinessLogicLayerEntityStaticSolution.cs">
+      <Link>Static\BusinessLogicLayerEntityStaticSolution.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Frameworks.IOS\Framework.CommonBLLEntities.IOS\Framework.CommonBLLEntities.IOS.csproj">
+      <Project>{5bfb623c-702d-45ac-8f30-50751d870e6e}</Project>
+      <Name>Framework.CommonBLLEntities.IOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.IOS\Framework.DataSourceEntities.IOS\Framework.DataSourceEntities.IOS.csproj">
+      <Project>{d85b1b66-d9b5-44bf-a9db-d0ef23c9375c}</Project>
+      <Name>Framework.DataSourceEntities.IOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.IOS\Framework.EntityContracts.IOS\Framework.EntityContracts.IOS.csproj">
+      <Project>{ca94d417-ce4f-49ea-a053-e390819f348d}</Project>
+      <Name>Framework.EntityContracts.IOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.IOS\Framework.IOS\Framework.IOS.csproj">
+      <Project>{56bf44d3-8b1d-4512-86f9-e84322a4b530}</Project>
+      <Name>Framework.IOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.Xamarin\Framework.Resources.Xamarin\Framework.Resources.Xamarin.csproj">
+      <Project>{1fc79b1f-a316-44d8-8c27-d5d8893ef966}</Project>
+      <Name>Framework.Resources.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.Xamarin\Framework.Xamarin\Framework.Xamarin.csproj">
+      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
+      <Name>Framework.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core.X\Resources.X\MSBuildLogsExtended.Resources.Xamarin.csproj">
+      <Project>{f08277fd-5670-4b5e-9b05-6510f1994686}</Project>
+      <Name>MSBuildLogsExtended.Resources.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSBuildLogsExtended.CommonBLLEntities.IOS\MSBuildLogsExtended.CommonBLLEntities.IOS.csproj">
+      <Project>{52979c96-a997-4b37-87bc-e63333f49d2a}</Project>
+      <Name>MSBuildLogsExtended.CommonBLLEntities.IOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\MSBuildLogsExtended.DataSourceEntities.IOS\MSBuildLogsExtended.DataSourceEntities.IOS.csproj">
+      <Project>{e36b875e-5dc1-427f-8c7e-f00212e74b9f}</Project>
+      <Name>MSBuildLogsExtended.DataSourceEntities.IOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\MSBuildLogsExtended.EntityContracts.IOS\MSBuildLogsExtended.EntityContracts.IOS.csproj">
+      <Project>{bd6a9325-b941-400b-ba32-98668718985f}</Project>
+      <Name>MSBuildLogsExtended.EntityContracts.IOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\MSBuildLogsExtended.WcfContracts.IOS\MSBuildLogsExtended.WcfContracts.IOS.csproj">
+      <Project>{76981575-0861-4e40-9463-0751551bf9b8}</Project>
+      <Name>MSBuildLogsExtended.WcfContracts.IOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\..\Core\CommonBLLIoC\Maps\map.2.C.2.vsd.png">
+      <Link>Maps\map.2.C.2.vsd.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ProjectLinkReference="9919e99e-ea70-4994-b415-f5a727020d78" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

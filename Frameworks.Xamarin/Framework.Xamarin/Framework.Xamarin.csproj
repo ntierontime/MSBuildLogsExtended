@@ -35,9 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\..\Frameworks\Framework\AssemblyHelper.cs">
-      <Link>AssemblyHelper.cs</Link>
-    </Compile>
     <Compile Include="..\..\Frameworks\Framework\BinaryRelated\BinaryFile.cs">
       <Link>BinaryRelated\BinaryFile.cs</Link>
     </Compile>
@@ -68,32 +65,11 @@
     <Compile Include="..\..\Frameworks\Framework\LoggingOptions.cs">
       <Link>LoggingOptions.cs</Link>
     </Compile>
-    <Compile Include="..\..\Frameworks\Framework\Models\ChangePasswordModel.cs">
-      <Link>Models\ChangePasswordModel.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework\Models\LogOnModel.cs">
-      <Link>Models\LogOnModel.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework\Models\MenuTreeItem.cs">
-      <Link>Models\MenuTreeItem.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework\Models\RegisterModel.cs">
-      <Link>Models\RegisterModel.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework\NameValuePair.cs">
-      <Link>NameValuePair.cs</Link>
-    </Compile>
     <Compile Include="..\..\Frameworks\Framework\NavigationSetting.cs">
       <Link>NavigationSetting.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework\PagingPageSizeOption.cs">
       <Link>PagingPageSizeOption.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework\PropertyChangedNotifier.cs">
-      <Link>PropertyChangedNotifier.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework\RssItem.cs">
-      <Link>RssItem.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework\UIAction.cs">
       <Link>UIAction.cs</Link>
@@ -126,7 +102,7 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkReference="6d25aa30-c3af-4ae0-b567-0f2653120cdc" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="6d25aa30-c3af-4ae0-b567-0f2653120cdc" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\..\packages\Xamarin.Forms.2.3.3.175\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.175\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

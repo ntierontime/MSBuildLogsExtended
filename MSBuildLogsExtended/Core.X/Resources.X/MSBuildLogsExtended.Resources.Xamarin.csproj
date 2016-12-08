@@ -8,13 +8,15 @@
     <ProjectGuid>{F08277FD-5670-4B5E-9B05-6510F1994686}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MSBuildLogsExtended.Resources.Xamarin</RootNamespace>
+    <RootNamespace>MSBuildLogsExtended.Resources</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.Resources.Xamarin</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -38,15 +40,9 @@
     <None Include="..\..\Core\Resources\Maps\map.2.D.2.vsd">
       <Link>Maps\map.2.D.2.vsd</Link>
     </None>
-    <None Include="..\..\Core\Resources\packages.config">
-      <Link>packages.config</Link>
-    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerApp1.Designer.cs">
-      <Link>UIStringResourcePerApp1.Designer.cs</Link>
-      <DependentUpon>UIStringResourcePerApp.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,31 +51,57 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerApp1.Designer.cs">
+      <Link>UIStringResourcePerApp1.Designer.cs</Link>
+      <DependentUpon>UIStringResourcePerApp.resx</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuild.Designer.cs">
+      <Link>UIStringResourcePerEntityBuild.Designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntityBuild.resx</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuildEventCode.Designer.cs">
+      <Link>UIStringResourcePerEntityBuildEventCode.Designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntityBuildEventCode.resx</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuildLog.Designer.cs">
+      <Link>UIStringResourcePerEntityBuildLog.Designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntityBuildLog.resx</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntitySolution.Designer.cs">
+      <Link>UIStringResourcePerEntitySolution.Designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntitySolution.resx</DependentUpon>
+    </Compile>
+    <Content Include="Maps\map.2.D.2.vsd" />
+    <Content Include="Maps\map.2.D.2.vsd.png" />
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerApp.resx">
       <Link>UIStringResourcePerApp.resx</Link>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>UIStringResourcePerApp.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntityBuild.resx">
       <Link>UIStringResourcePerEntityBuild.resx</Link>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>UIStringResourcePerEntityBuild.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntityBuildEventCode.resx">
       <Link>UIStringResourcePerEntityBuildEventCode.resx</Link>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>UIStringResourcePerEntityBuildEventCode.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntityBuildLog.resx">
       <Link>UIStringResourcePerEntityBuildLog.resx</Link>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>UIStringResourcePerEntityBuildLog.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntitySolution.resx">
       <Link>UIStringResourcePerEntitySolution.resx</Link>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>UIStringResourcePerEntitySolution.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Xamarin.Forms.2.3.3.175\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Xamarin.Forms.2.3.3.175\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Xamarin.Forms.2.3.3.175\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ProjectExtensions>
@@ -87,6 +109,13 @@
       <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="4072ddfc-04fb-4b21-b602-00678070187a" />
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="..\..\..\packages\Xamarin.Forms.2.3.3.175\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\..\packages\Xamarin.Forms.2.3.3.175\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\packages\Xamarin.Forms.2.3.3.175\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Xamarin.Forms.2.3.3.175\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

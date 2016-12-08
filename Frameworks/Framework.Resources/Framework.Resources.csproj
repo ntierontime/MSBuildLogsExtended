@@ -174,7 +174,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIStringResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>UIStringResource1.Designer.cs</LastGenOutput>
+      <LastGenOutput>UIStringResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
