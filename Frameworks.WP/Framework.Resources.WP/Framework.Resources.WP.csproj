@@ -76,9 +76,6 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\..\Frameworks\Framework.Resources\UIImageResource.Designer.cs">
-      <Link>UIImageResource.resx\UIImageResource.Designer.cs</Link>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <Content Include="Toolkit.Content\ApplicationBar.Edit.png">
@@ -210,7 +207,7 @@
   -->
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="c72b898b-b53b-42d5-9f4f-673f84bb485b" />
+      <UserProperties ProjectLinkReference="c72b898b-b53b-42d5-9f4f-673f84bb485b" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
