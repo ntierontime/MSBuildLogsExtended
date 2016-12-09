@@ -44,7 +44,10 @@
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -71,6 +74,72 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Frameworks.Droid\Framework.CommonBLLEntities.Droid\Framework.CommonBLLEntities.Droid.csproj">
+      <Project>{fd92559e-9c9e-4761-87da-390bec410325}</Project>
+      <Name>Framework.CommonBLLEntities.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.Droid\Framework.DataSourceEntities.Droid\Framework.DataSourceEntities.Droid.csproj">
+      <Project>{9c63d44b-f681-4917-8fb0-44af769972f6}</Project>
+      <Name>Framework.DataSourceEntities.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.Droid\Framework.Droid\Framework.Droid.csproj">
+      <Project>{d8dbb691-d249-4209-a5cb-860e678ae8b0}</Project>
+      <Name>Framework.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.Droid\Framework.EntityContracts.Droid\Framework.EntityContracts.Droid.csproj">
+      <Project>{f687ecb1-26ad-4f52-826e-b60922a16420}</Project>
+      <Name>Framework.EntityContracts.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.Droid\Framework.WcfClient.Droid\Framework.WcfClient.Droid.csproj">
+      <Project>{97c258ba-ff4d-44b1-8d3c-a330c081ddc9}</Project>
+      <Name>Framework.WcfClient.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.Droid\Framework.Xaml.Droid\Framework.Xaml.Droid.csproj">
+      <Project>{93c89ce2-a35a-48cd-8abb-ca85357b3155}</Project>
+      <Name>Framework.Xaml.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.Xamarin\Framework.Resources.Xamarin\Framework.Resources.Xamarin.csproj">
+      <Project>{1fc79b1f-a316-44d8-8c27-d5d8893ef966}</Project>
+      <Name>Framework.Resources.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks.Xamarin\Framework.Xamarin\Framework.Xamarin.csproj">
+      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
+      <Name>Framework.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core.Droid\MSBuildLogsExtended.CommonBLLEntities.Droid\MSBuildLogsExtended.CommonBLLEntities.Droid.csproj">
+      <Project>{ffc08559-5446-43ac-a19b-028902e77081}</Project>
+      <Name>MSBuildLogsExtended.CommonBLLEntities.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core.Droid\MSBuildLogsExtended.CommonBLLIoC.Droid\MSBuildLogsExtended.CommonBLLIoC.Droid.csproj">
+      <Project>{5bc5c046-94d1-4522-b688-af45b9d02899}</Project>
+      <Name>MSBuildLogsExtended.CommonBLLIoC.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core.Droid\MSBuildLogsExtended.DataSourceEntities.Droid\MSBuildLogsExtended.DataSourceEntities.Droid.csproj">
+      <Project>{b80ec3b7-1eaa-4e66-8855-48d5c0c8de10}</Project>
+      <Name>MSBuildLogsExtended.DataSourceEntities.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core.Droid\MSBuildLogsExtended.EntityContracts.Droid\MSBuildLogsExtended.EntityContracts.Droid.csproj">
+      <Project>{63ae7874-14be-48bd-84ac-1279fb936e69}</Project>
+      <Name>MSBuildLogsExtended.EntityContracts.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core.Droid\MSBuildLogsExtended.WcfContracts.Droid\MSBuildLogsExtended.WcfContracts.Droid.csproj">
+      <Project>{c27a51b7-b468-42c2-a53b-1aad007c3ce7}</Project>
+      <Name>MSBuildLogsExtended.WcfContracts.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core.X\Resources.X\MSBuildLogsExtended.Resources.Xamarin.csproj">
+      <Project>{f08277fd-5670-4b5e-9b05-6510f1994686}</Project>
+      <Name>MSBuildLogsExtended.Resources.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Wcf.Droid\MSBuildLogsExtended.WcfClientBLL.Droid\MSBuildLogsExtended.WcfClientBLL.Droid.csproj">
+      <Project>{6aa5463f-1fb4-4359-b194-3494ae3b8d3c}</Project>
+      <Name>MSBuildLogsExtended.WcfClientBLL.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ViewModels\MSBuildLogsExtended.ViewModels.Droid.csproj">
+      <Project>{b8fd388f-d0a2-49dc-83dc-358b919e9ecb}</Project>
+      <Name>MSBuildLogsExtended.ViewModels.Droid</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
