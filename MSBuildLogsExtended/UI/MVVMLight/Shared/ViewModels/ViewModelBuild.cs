@@ -601,7 +601,8 @@ namespace MSBuildLogsExtended.ViewModels
         }
 #endif
 
-#if NETFX_CORE
+#if ANDROID
+#elif NETFX_CORE
         public RelayCommand<Windows.UI.Xaml.Controls.SelectionChangedEventArgs> GetDropDownContentsOfSolution_S1_1SelectionChangedCommand { get; private set; }
 #else
         public RelayCommand<System.Windows.Controls.SelectionChangedEventArgs> GetDropDownContentsOfSolution_S1_1SelectionChangedCommand { get; private set; }

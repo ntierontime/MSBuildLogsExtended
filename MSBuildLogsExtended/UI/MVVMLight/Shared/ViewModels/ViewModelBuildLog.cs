@@ -61,7 +61,8 @@ namespace MSBuildLogsExtended.ViewModels
             this.GetDropDownContentsOfSolution_S1_1Command = new RelayCommand(this.GetDropDownContentsOfSolution_S1_1);
 
 
-#if NETFX_CORE
+#if ANDROID
+#elif NETFX_CORE
             this.GetDropDownContentsOfSolution_S1_1SelectionChangedCommand = new RelayCommand<Windows.UI.Xaml.Controls.SelectionChangedEventArgs>(
                 (e) =>
                 {
@@ -84,7 +85,7 @@ namespace MSBuildLogsExtended.ViewModels
 #endif
 
 
-		#endregion Commands for Cascading ComboBox
+            #endregion Commands for Cascading ComboBox
 
 
 
@@ -100,7 +101,7 @@ namespace MSBuildLogsExtended.ViewModels
 
         #endregion Constructor
 
-		#region RefreshCurrentEditingItem
+        #region RefreshCurrentEditingItem
 
         protected override void RefreshCurrentEditingItem()
         {
@@ -630,7 +631,8 @@ namespace MSBuildLogsExtended.ViewModels
         }
 #endif
 
-#if NETFX_CORE
+#if ANDROID
+#elif NETFX_CORE
         public RelayCommand<Windows.UI.Xaml.Controls.SelectionChangedEventArgs> GetDropDownContentsOfBuildEventCode_B2_1SelectionChangedCommand { get; private set; }
 #else
         public RelayCommand<System.Windows.Controls.SelectionChangedEventArgs> GetDropDownContentsOfBuildEventCode_B2_1SelectionChangedCommand { get; private set; }
@@ -742,7 +744,8 @@ namespace MSBuildLogsExtended.ViewModels
         }
 #endif
 
-#if NETFX_CORE
+#if ANDROID
+#elif NETFX_CORE
         public RelayCommand<Windows.UI.Xaml.Controls.SelectionChangedEventArgs> GetDropDownContentsOfSolution_S1_1SelectionChangedCommand { get; private set; }
 #else
         public RelayCommand<System.Windows.Controls.SelectionChangedEventArgs> GetDropDownContentsOfSolution_S1_1SelectionChangedCommand { get; private set; }
