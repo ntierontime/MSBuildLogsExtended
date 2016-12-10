@@ -49,26 +49,71 @@
     <Compile Include="..\..\Frameworks\Framework\AssemblyHelper.cs">
       <Link>AssemblyHelper.cs</Link>
     </Compile>
-    <Compile Include="..\..\Frameworks\Framework\Models\ChangePasswordModel.cs">
+    <Compile Include="..\..\frameworks\framework\binaryrelated\BinaryFile.cs">
+      <Link>BinaryRelated\BinaryFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\frameworks\framework\binaryrelated\BinaryFileHelper.cs">
+      <Link>BinaryRelated\BinaryFileHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\frameworks\framework\binaryrelated\MIMEContentTypeToFileExtensionMappingCollection.cs">
+      <Link>BinaryRelated\MIMEContentTypeToFileExtensionMappingCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\frameworks\framework\common\Singleton.cs">
+      <Link>Common\Singleton.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\DataServiceTypes.cs">
+      <Link>DataServiceTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\DataStreamServiceResult.cs">
+      <Link>DataStreamServiceResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\DateTimePeriodHelper.cs">
+      <Link>DateTimePeriodHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\IDataStreamServiceProviderBase.cs">
+      <Link>IDataStreamServiceProviderBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\IoCContainerWrapper.cs">
+      <Link>IoCContainerWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\LoggingOptions.cs">
+      <Link>LoggingOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\frameworks\framework\models\ChangePasswordModel.cs">
       <Link>Models\ChangePasswordModel.cs</Link>
     </Compile>
-    <Compile Include="..\..\Frameworks\Framework\Models\LogOnModel.cs">
+    <Compile Include="..\..\frameworks\framework\models\LogOnModel.cs">
       <Link>Models\LogOnModel.cs</Link>
     </Compile>
-    <Compile Include="..\..\Frameworks\Framework\Models\MenuTreeItem.cs">
+    <Compile Include="..\..\frameworks\framework\models\MenuTreeItem.cs">
       <Link>Models\MenuTreeItem.cs</Link>
     </Compile>
-    <Compile Include="..\..\Frameworks\Framework\Models\RegisterModel.cs">
+    <Compile Include="..\..\frameworks\framework\models\RegisterModel.cs">
       <Link>Models\RegisterModel.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework\NameValuePair.cs">
       <Link>NameValuePair.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\NavigationSetting.cs">
+      <Link>NavigationSetting.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\PagingPageSizeOption.cs">
+      <Link>PagingPageSizeOption.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework\PropertyChangedNotifier.cs">
       <Link>PropertyChangedNotifier.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework\RssItem.cs">
       <Link>RssItem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\UIAction.cs">
+      <Link>UIAction.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\UIActionStatus.cs">
+      <Link>UIActionStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\UIActionStatusMessage.cs">
+      <Link>UIActionStatusMessage.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -85,7 +130,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkReference="6d25aa30-c3af-4ae0-b567-0f2653120cdc" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="6d25aa30-c3af-4ae0-b567-0f2653120cdc" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

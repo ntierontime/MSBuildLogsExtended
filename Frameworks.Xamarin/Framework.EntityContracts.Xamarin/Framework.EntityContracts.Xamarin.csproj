@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3DBDF639-486B-4B4B-9217-5350509D53B3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework.EntityContracts</RootNamespace>
+    <AssemblyName>Framework.EntityContracts.Xamarin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;XAMARIN</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\AlphabeticalOrderCategory.cs">
+      <Link>AlphabeticalOrderCategory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\DateTimePivotEntities\DateTimePivot.cs">
+      <Link>DateTimePivotEntities\DateTimePivot.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\DateTimePivotEntities\DateTimePivotCollection.cs">
+      <Link>DateTimePivotEntities\DateTimePivotCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\DateTimePivotEntities\DateTimePivotContextBase.cs">
+      <Link>DateTimePivotEntities\DateTimePivotContextBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\DateTimePivotEntities\DateTimePivotContextByAlphabeticalOrderCategoryBase.cs">
+      <Link>DateTimePivotEntities\DateTimePivotContextByAlphabeticalOrderCategoryBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\DateTimePivotEntities\DateTimePivotContextByDateTimePivotSettingBase.cs">
+      <Link>DateTimePivotEntities\DateTimePivotContextByDateTimePivotSettingBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\DateTimePivotEntities\DateTimePivotContextByNameValuePairBase.cs">
+      <Link>DateTimePivotEntities\DateTimePivotContextByNameValuePairBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\DateTimePivotEntities\DateTimePivotSetting.cs">
+      <Link>DateTimePivotEntities\DateTimePivotSetting.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\KnownMathCalculations.cs">
+      <Link>KnownMathCalculations.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\DateTimeUnit.cs">
+      <Link>Queries\DateTimeUnit.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\IQueryPredicate.cs">
+      <Link>Queries\IQueryPredicate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryCriteriaBase.cs">
+      <Link>Queries\QueryCriteriaBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryOrderBySetting.cs">
+      <Link>Queries\QueryOrderBySetting.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryPagingResult.cs">
+      <Link>Queries\QueryPagingResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryPagingSetting.cs">
+      <Link>Queries\QueryPagingSetting.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryPredicateBase.cs">
+      <Link>Queries\QueryPredicateBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryPredicateTypes.cs">
+      <Link>Queries\QueryPredicateTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\SummaryData.cs">
+      <Link>SummaryData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\IViewModelBase.cs">
+      <Link>ViewModels\IViewModelBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\SearchStatus.cs">
+      <Link>ViewModels\SearchStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\ViewModelBase.cs">
+      <Link>ViewModels\ViewModelBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\ViewModelItemBase.cs">
+      <Link>ViewModels\ViewModelItemBase.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.0.0.6482\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.0.0.6482\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.0.0.6482\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Frameworks\Framework.EntityContracts\Maps\map.1.B.3.vsd">
+      <Link>Maps\map.1.B.3.vsd</Link>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.Resources.Xamarin\Framework.Resources.Xamarin.csproj">
+      <Project>{1fc79b1f-a316-44d8-8c27-d5d8893ef966}</Project>
+      <Name>Framework.Resources.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Xamarin\Framework.Xamarin.csproj">
+      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
+      <Name>Framework.Xamarin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\Frameworks\Framework.EntityContracts\Maps\map.1.B.3.vsd.png">
+      <Link>Maps\map.1.B.3.vsd.png</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ProjectLinkReference="c3a270de-9727-492e-91e2-f56e7e0e0f83" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

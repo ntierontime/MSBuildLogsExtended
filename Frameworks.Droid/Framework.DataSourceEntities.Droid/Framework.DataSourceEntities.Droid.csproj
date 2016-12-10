@@ -59,10 +59,6 @@
       <Project>{1fc79b1f-a316-44d8-8c27-d5d8893ef966}</Project>
       <Name>Framework.Resources.Xamarin</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Frameworks.Xamarin\Framework.Xamarin\Framework.Xamarin.csproj">
-      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
-      <Name>Framework.Xamarin</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Framework.Droid\Framework.Droid.csproj">
       <Project>{d8dbb691-d249-4209-a5cb-860e678ae8b0}</Project>
       <Name>Framework.Droid</Name>
@@ -88,7 +84,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkReference="f85a14d5-64e0-4cfc-88da-27fe9d0dd664" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="f85a14d5-64e0-4cfc-88da-27fe9d0dd664" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

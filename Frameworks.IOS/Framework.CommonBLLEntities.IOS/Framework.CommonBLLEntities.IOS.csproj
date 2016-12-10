@@ -44,10 +44,6 @@
       <Project>{1fc79b1f-a316-44d8-8c27-d5d8893ef966}</Project>
       <Name>Framework.Resources.Xamarin</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Frameworks.Xamarin\Framework.Xamarin\Framework.Xamarin.csproj">
-      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
-      <Name>Framework.Xamarin</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Framework.DataSourceEntities.IOS\Framework.DataSourceEntities.IOS.csproj">
       <Project>{d85b1b66-d9b5-44bf-a9db-d0ef23c9375c}</Project>
       <Name>Framework.DataSourceEntities.IOS</Name>
@@ -113,7 +109,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkReference="ba8c8c0b-470a-4d3c-b3da-9e28599799b5" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="ba8c8c0b-470a-4d3c-b3da-9e28599799b5" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

@@ -79,10 +79,6 @@
     <Compile Include="ViewModel\ViewModelLocator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Frameworks.Xamarin\Framework.Xamarin\Framework.Xamarin.csproj">
-      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
-      <Name>Framework.Xamarin</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Framework.Droid\Framework.Droid.csproj">
       <Project>{d8dbb691-d249-4209-a5cb-860e678ae8b0}</Project>
       <Name>Framework.Droid</Name>
@@ -102,7 +98,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkReference="e5302713-0022-4657-85d8-9620818071df" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="e5302713-0022-4657-85d8-9620818071df" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5100B1AE-2ED7-4507-8281-847738595E04}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework.CommonBLLEntities.Xamarin</RootNamespace>
+    <AssemblyName>Framework.CommonBLLEntities.Xamarin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerContext.cs">
+      <Link>BusinessLogicLayerContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerContextContainerCommon.cs">
+      <Link>BusinessLogicLayerContextContainerCommon.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerContextSetting.cs">
+      <Link>BusinessLogicLayerContextSetting.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerMemberShipContract.cs">
+      <Link>BusinessLogicLayerMemberShipContract.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerRequestMessageBase.cs">
+      <Link>BusinessLogicLayerRequestMessageBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerRequestTypes.cs">
+      <Link>BusinessLogicLayerRequestTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerResponseMessageBase.cs">
+      <Link>BusinessLogicLayerResponseMessageBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\IBusinessLogicLayerContextContainer.cs">
+      <Link>IBusinessLogicLayerContextContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\SessionVariablesCommon.cs">
+      <Link>SessionVariablesCommon.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.0.0.6482\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.0.0.6482\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.0.0.6482\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Frameworks\Framework.CommonBLLEntities\Maps\map.1.B.3.vsd">
+      <Link>Maps\map.1.B.3.vsd</Link>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.DataSourceEntities.Xamarin\Framework.DataSourceEntities.Xamarin.csproj">
+      <Project>{cdea3175-65fd-4645-b9e0-d51d5f51af65}</Project>
+      <Name>Framework.DataSourceEntities.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.EntityContracts.Xamarin\Framework.EntityContracts.Xamarin.csproj">
+      <Project>{3dbdf639-486b-4b4b-9217-5350509d53b3}</Project>
+      <Name>Framework.EntityContracts.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Resources.Xamarin\Framework.Resources.Xamarin.csproj">
+      <Project>{1fc79b1f-a316-44d8-8c27-d5d8893ef966}</Project>
+      <Name>Framework.Resources.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Xamarin\Framework.Xamarin.csproj">
+      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
+      <Name>Framework.Xamarin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\Frameworks\Framework.CommonBLLEntities\Maps\map.1.B.3.vsd.png">
+      <Link>Maps\map.1.B.3.vsd.png</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ProjectLinkReference="ba8c8c0b-470a-4d3c-b3da-9e28599799b5" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

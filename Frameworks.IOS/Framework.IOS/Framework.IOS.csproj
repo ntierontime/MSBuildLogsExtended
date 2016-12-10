@@ -49,6 +49,36 @@
     <Compile Include="..\..\Frameworks\Framework\AssemblyHelper.cs">
       <Link>AssemblyHelper.cs</Link>
     </Compile>
+    <Compile Include="..\..\frameworks\framework\binaryrelated\BinaryFile.cs">
+      <Link>BinaryRelated\BinaryFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\frameworks\framework\binaryrelated\BinaryFileHelper.cs">
+      <Link>BinaryRelated\BinaryFileHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\frameworks\framework\binaryrelated\MIMEContentTypeToFileExtensionMappingCollection.cs">
+      <Link>BinaryRelated\MIMEContentTypeToFileExtensionMappingCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\frameworks\framework\common\Singleton.cs">
+      <Link>Common\Singleton.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\DataServiceTypes.cs">
+      <Link>DataServiceTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\DataStreamServiceResult.cs">
+      <Link>DataStreamServiceResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\DateTimePeriodHelper.cs">
+      <Link>DateTimePeriodHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\IDataStreamServiceProviderBase.cs">
+      <Link>IDataStreamServiceProviderBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\IoCContainerWrapper.cs">
+      <Link>IoCContainerWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\LoggingOptions.cs">
+      <Link>LoggingOptions.cs</Link>
+    </Compile>
     <Compile Include="..\..\frameworks\framework\models\ChangePasswordModel.cs">
       <Link>Models\ChangePasswordModel.cs</Link>
     </Compile>
@@ -64,13 +94,31 @@
     <Compile Include="..\..\Frameworks\Framework\NameValuePair.cs">
       <Link>NameValuePair.cs</Link>
     </Compile>
+    <Compile Include="..\..\Frameworks\Framework\NavigationSetting.cs">
+      <Link>NavigationSetting.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\PagingPageSizeOption.cs">
+      <Link>PagingPageSizeOption.cs</Link>
+    </Compile>
     <Compile Include="..\..\Frameworks\Framework\PropertyChangedNotifier.cs">
       <Link>PropertyChangedNotifier.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework\RssItem.cs">
       <Link>RssItem.cs</Link>
     </Compile>
+    <Compile Include="..\..\Frameworks\Framework\UIAction.cs">
+      <Link>UIAction.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\UIActionStatus.cs">
+      <Link>UIActionStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\UIActionStatusMessage.cs">
+      <Link>UIActionStatusMessage.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
