@@ -266,7 +266,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -341,7 +341,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -402,7 +402,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -451,7 +451,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -500,7 +500,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -569,7 +569,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -609,7 +609,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -1005,7 +1005,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -1080,7 +1080,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -1141,7 +1141,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -1190,7 +1190,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -1239,7 +1239,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -1308,7 +1308,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -1348,7 +1348,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -1702,7 +1702,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Value", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Value", System.ComponentModel.ListSortDirection.Ascending);
@@ -1777,7 +1777,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Value", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Value", System.ComponentModel.ListSortDirection.Ascending);
@@ -1838,7 +1838,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Value", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Value", System.ComponentModel.ListSortDirection.Ascending);
@@ -1887,7 +1887,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Value", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Value", System.ComponentModel.ListSortDirection.Ascending);
@@ -1936,7 +1936,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Value", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Value", System.ComponentModel.ListSortDirection.Ascending);
@@ -2005,7 +2005,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Value", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Value", System.ComponentModel.ListSortDirection.Ascending);
@@ -2045,7 +2045,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Value", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Value", System.ComponentModel.ListSortDirection.Ascending);
@@ -2399,7 +2399,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("IdentifierInString", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("IdentifierInString", System.ComponentModel.ListSortDirection.Ascending);
@@ -2474,7 +2474,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("IdentifierInString", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("IdentifierInString", System.ComponentModel.ListSortDirection.Ascending);
@@ -2535,7 +2535,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("IdentifierInString", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("IdentifierInString", System.ComponentModel.ListSortDirection.Ascending);
@@ -2584,7 +2584,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("IdentifierInString", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("IdentifierInString", System.ComponentModel.ListSortDirection.Ascending);
@@ -2633,7 +2633,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("IdentifierInString", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("IdentifierInString", System.ComponentModel.ListSortDirection.Ascending);
@@ -2702,7 +2702,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("IdentifierInString", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("IdentifierInString", System.ComponentModel.ListSortDirection.Ascending);
@@ -2742,7 +2742,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("IdentifierInString", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("IdentifierInString", System.ComponentModel.ListSortDirection.Ascending);
@@ -3096,7 +3096,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -3171,7 +3171,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -3232,7 +3232,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -3281,7 +3281,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -3330,7 +3330,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -3399,7 +3399,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -3439,7 +3439,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -3807,7 +3807,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -3882,7 +3882,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -3943,7 +3943,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -3992,7 +3992,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -4041,7 +4041,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -4110,7 +4110,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);
@@ -4150,7 +4150,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             if (queryOrderBySettingCollection == null || queryOrderBySettingCollection.Count == 0)
             {
                 _Request.QueryOrderBySettingCollection = new QueryOrderBySettingCollection();
-#if NETFX_CORE
+#if (NETFX_CORE || XAMARIN)
 				_Request.QueryOrderBySettingCollection.Add("Id", "Ascending");
 #else
 				_Request.QueryOrderBySettingCollection.Add("Id", System.ComponentModel.ListSortDirection.Ascending);

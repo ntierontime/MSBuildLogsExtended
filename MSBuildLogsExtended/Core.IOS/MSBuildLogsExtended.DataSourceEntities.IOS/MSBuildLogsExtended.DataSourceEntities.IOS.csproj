@@ -68,7 +68,7 @@
       <Project>{1fc79b1f-a316-44d8-8c27-d5d8893ef966}</Project>
       <Name>Framework.Resources.Xamarin</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Core.X\Resources.X\MSBuildLogsExtended.Resources.Xamarin.csproj">
+    <ProjectReference Include="..\..\Core.Xamarin\MSBuildLogsExtended.Resources.Xamarin\MSBuildLogsExtended.Resources.Xamarin.csproj">
       <Project>{f08277fd-5670-4b5e-9b05-6510f1994686}</Project>
       <Name>MSBuildLogsExtended.Resources.Xamarin</Name>
     </ProjectReference>

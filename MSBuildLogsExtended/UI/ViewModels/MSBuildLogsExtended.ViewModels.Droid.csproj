@@ -139,7 +139,7 @@
       <Project>{c27a51b7-b468-42c2-a53b-1aad007c3ce7}</Project>
       <Name>MSBuildLogsExtended.WcfContracts.Droid</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Core.X\Resources.X\MSBuildLogsExtended.Resources.Xamarin.csproj">
+    <ProjectReference Include="..\..\Core.Xamarin\MSBuildLogsExtended.Resources.Xamarin\MSBuildLogsExtended.Resources.Xamarin.csproj">
       <Project>{f08277fd-5670-4b5e-9b05-6510f1994686}</Project>
       <Name>MSBuildLogsExtended.Resources.Xamarin</Name>
     </ProjectReference>

@@ -127,10 +127,6 @@
       <Project>{1fc79b1f-a316-44d8-8c27-d5d8893ef966}</Project>
       <Name>Framework.Resources.Xamarin</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Core.X\Resources.X\MSBuildLogsExtended.Resources.Xamarin.csproj">
-      <Project>{f08277fd-5670-4b5e-9b05-6510f1994686}</Project>
-      <Name>MSBuildLogsExtended.Resources.Xamarin</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="..\..\Core\EntityContracts\Maps\map.2.B.3.vsd.png">
@@ -140,7 +136,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="d090796d-578a-4c52-b489-3e688ddd5206" />
+      <UserProperties ProjectLinkReference="d090796d-578a-4c52-b489-3e688ddd5206" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

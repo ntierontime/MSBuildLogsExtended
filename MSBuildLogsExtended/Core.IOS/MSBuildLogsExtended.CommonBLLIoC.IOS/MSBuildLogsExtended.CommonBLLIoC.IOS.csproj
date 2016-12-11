@@ -91,10 +91,6 @@
       <Project>{1fc79b1f-a316-44d8-8c27-d5d8893ef966}</Project>
       <Name>Framework.Resources.Xamarin</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Core.X\Resources.X\MSBuildLogsExtended.Resources.Xamarin.csproj">
-      <Project>{f08277fd-5670-4b5e-9b05-6510f1994686}</Project>
-      <Name>MSBuildLogsExtended.Resources.Xamarin</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MSBuildLogsExtended.CommonBLLEntities.IOS\MSBuildLogsExtended.CommonBLLEntities.IOS.csproj">
       <Project>{52979c96-a997-4b37-87bc-e63333f49d2a}</Project>
       <Name>MSBuildLogsExtended.CommonBLLEntities.IOS</Name>
@@ -128,7 +124,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="9919e99e-ea70-4994-b415-f5a727020d78" />
+      <UserProperties ProjectLinkReference="9919e99e-ea70-4994-b415-f5a727020d78" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
