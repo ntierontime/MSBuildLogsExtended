@@ -71,6 +71,60 @@
       <Private>True</Private>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.Xamarin\Framework.CommonBLLEntities.Xamarin\Framework.CommonBLLEntities.Xamarin.csproj">
+      <Project>{5100b1ae-2ed7-4507-8281-847738595e04}</Project>
+      <Name>Framework.CommonBLLEntities.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.Xamarin\Framework.DataSourceEntities.Xamarin\Framework.DataSourceEntities.Xamarin.csproj">
+      <Project>{cdea3175-65fd-4645-b9e0-d51d5f51af65}</Project>
+      <Name>Framework.DataSourceEntities.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.Xamarin\Framework.EntityContracts.Xamarin\Framework.EntityContracts.Xamarin.csproj">
+      <Project>{3dbdf639-486b-4b4b-9217-5350509d53b3}</Project>
+      <Name>Framework.EntityContracts.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.Xamarin\Framework.Resources.Xamarin\Framework.Resources.Xamarin.csproj">
+      <Project>{1fc79b1f-a316-44d8-8c27-d5d8893ef966}</Project>
+      <Name>Framework.Resources.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.Xamarin\Framework.Xamarin\Framework.Xamarin.csproj">
+      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
+      <Name>Framework.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.Xamarin\Framework.Xaml.Xamarin\Framework.Xaml.Xamarin.csproj">
+      <Project>{e3da923b-a95e-42f7-82f4-22314c848408}</Project>
+      <Name>Framework.Xaml.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.Xamarin\MSBuildLogsExtended.CommonBLLEntities.Xamarin\MSBuildLogsExtended.CommonBLLEntities.Xamarin.csproj">
+      <Project>{8b7986a2-fd0d-4096-922b-63ebe5651c60}</Project>
+      <Name>MSBuildLogsExtended.CommonBLLEntities.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.Xamarin\MSBuildLogsExtended.CommonBLLIoC.Xamarin\MSBuildLogsExtended.CommonBLLIoC.Xamarin.csproj">
+      <Project>{cb826928-cfb2-49fa-b72e-440a588a5254}</Project>
+      <Name>MSBuildLogsExtended.CommonBLLIoC.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.Xamarin\MSBuildLogsExtended.DataSourceEntities.Xamarin\MSBuildLogsExtended.DataSourceEntities.Xamarin.csproj">
+      <Project>{260321d2-50fb-42f8-ac7f-acb064e4982d}</Project>
+      <Name>MSBuildLogsExtended.DataSourceEntities.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.Xamarin\MSBuildLogsExtended.EntityContracts.Xamarin\MSBuildLogsExtended.EntityContracts.Xamarin.csproj">
+      <Project>{9371a5d5-c8db-4ffd-a9ca-8f56080bd6e1}</Project>
+      <Name>MSBuildLogsExtended.EntityContracts.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.Xamarin\MSBuildLogsExtended.Resources.Xamarin\MSBuildLogsExtended.Resources.Xamarin.csproj">
+      <Project>{f08277fd-5670-4b5e-9b05-6510f1994686}</Project>
+      <Name>MSBuildLogsExtended.Resources.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Core.Xamarin\MSBuildLogsExtended.WcfContracts.Xamarin\MSBuildLogsExtended.WcfContracts.Xamarin.csproj">
+      <Project>{9a9a7da4-b818-4b49-a959-324d6719b3ee}</Project>
+      <Name>MSBuildLogsExtended.WcfContracts.Xamarin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MSBuildLogsExtended.ViewModels.Xamarin\MSBuildLogsExtended.ViewModels.Xamarin.csproj">
+      <Project>{7de29917-40ea-42f9-85c8-c8de637d2865}</Project>
+      <Name>MSBuildLogsExtended.ViewModels.Xamarin</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\..\..\..\packages\Xamarin.Forms.2.3.3.175\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\..\..\..\packages\Xamarin.Forms.2.3.3.175\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
