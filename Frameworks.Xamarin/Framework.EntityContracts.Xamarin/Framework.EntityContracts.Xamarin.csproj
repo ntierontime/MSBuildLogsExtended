@@ -89,6 +89,9 @@
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\SummaryData.cs">
       <Link>SummaryData.cs</Link>
     </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\ContentData.cs">
+      <Link>ViewModels\ContentData.cs</Link>
+    </Compile>
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\IViewModelBase.cs">
       <Link>ViewModels\IViewModelBase.cs</Link>
     </Compile>
@@ -141,7 +144,7 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkReference="c3a270de-9727-492e-91e2-f56e7e0e0f83" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="c3a270de-9727-492e-91e2-f56e7e0e0f83" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="..\..\packages\Xamarin.Forms.2.3.3.175\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.175\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

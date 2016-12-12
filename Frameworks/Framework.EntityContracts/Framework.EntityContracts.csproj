@@ -61,6 +61,7 @@
     <Compile Include="Queries\QueryPredicateBase.cs" />
     <Compile Include="Queries\QueryPredicateTypes.cs" />
     <Compile Include="SummaryData.cs" />
+    <Compile Include="ViewModels\ContentData.cs" />
     <Compile Include="ViewModels\IViewModelBase.cs" />
     <Compile Include="ViewModels\SearchStatus.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />

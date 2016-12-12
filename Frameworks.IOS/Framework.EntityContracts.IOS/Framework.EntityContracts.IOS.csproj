@@ -99,6 +99,9 @@
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\SummaryData.cs">
       <Link>SummaryData.cs</Link>
     </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\ContentData.cs">
+      <Link>ViewModels\ContentData.cs</Link>
+    </Compile>
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\IViewModelBase.cs">
       <Link>ViewModels\IViewModelBase.cs</Link>
     </Compile>
@@ -129,7 +132,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="c3a270de-9727-492e-91e2-f56e7e0e0f83" />
+      <UserProperties ProjectLinkReference="c3a270de-9727-492e-91e2-f56e7e0e0f83" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

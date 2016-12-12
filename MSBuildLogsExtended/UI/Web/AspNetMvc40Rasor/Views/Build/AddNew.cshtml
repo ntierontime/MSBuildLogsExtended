@@ -3,14 +3,10 @@
     ViewBag.Title = Framework.Resources.UIStringResource.AddNewAlternativeText;
 }
 @section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
-        </div>
-    </section>
+<section class="featured">
+    <h2>@ViewBag.Title.</h2>
+    <h4>@ViewBag.Message</h4>
+</section>
 }
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()

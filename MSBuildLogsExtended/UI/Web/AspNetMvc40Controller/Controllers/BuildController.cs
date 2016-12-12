@@ -11,9 +11,6 @@ using Framework.EntityContracts;
 namespace MSBuildLogsExtended.AspNetMvc40Controller
 {
     /// <summary>
-	/// Cascading Dropdown: http://stackoverflow.com/questions/5497524/easiest-way-to-create-a-cascade-dropdown-in-asp-net-mvc-3-with-c-sharp
-	/// Cascading Dropdown: http://code.msdn.microsoft.com/Cascading-DropDownList-in-833683f9
-	/// Mvc Paging http://mvcpaging.apphb.com/
     /// Mvc Controller of  <see cref="MSBuildLogsExtended.DataSourceEntities.Build"/>
     /// </summary>
     public partial class BuildController : Controller
@@ -29,7 +26,15 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
 
 		
 		public const string TempDataKey_WPCommonOfBuild = "TempDataKey_WPCommonOfBuild";
-		public ActionResult WPCommonOfBuild(int currentPage = 1 ,string lowerBoundBuildStartTimeCommonOftOfCommon = null, string upperBoundBuildStartTimeCommonOftOfCommon = null, WPCommonOfBuildVM viewModel = null)
+        /// <summary>
+        /// Search and display a list of <see cref="MSBuildLogsExtended.DataSourceEntities.Build"/>
+        /// </summary>
+        /// <param name="currentPage">The current page.</param>
+        /// <param name="lowerBoundBuildStartTimeCommonOftOfCommon">The lower bound build start time common oft of common.</param>
+        /// <param name="upperBoundBuildStartTimeCommonOftOfCommon">The upper bound build start time common oft of common.</param>
+        /// <param name="viewModel">The view model.</param>
+        /// <returns></returns>
+        public ActionResult WPCommonOfBuild(int currentPage = 1 ,string lowerBoundBuildStartTimeCommonOftOfCommon = null, string upperBoundBuildStartTimeCommonOftOfCommon = null, WPCommonOfBuildVM viewModel = null)
         {
             log.Info(string.Format("{0}: WPCommonOfBuild", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
@@ -80,6 +85,11 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
             return View(viewModel);
         }
 
+        /// <summary>
+        /// Export current search result.
+        /// </summary>
+        /// <param name="dataServiceType">Type of the data service.</param>
+        /// <returns></returns>
         public ActionResult WPCommonOfBuild_Export(Framework.DataServiceTypes dataServiceType)
         {
             log.Info(string.Format("{0}: WPCommonOfBuild_Export", Framework.LoggingOptions.UI_Process_Started.ToString()));
@@ -110,9 +120,15 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
 
 
 
-		#endregion Workspace Controller Methods : there are 1 workspace(s)
-		
+        #endregion Workspace Controller Methods : there are 1 workspace(s)
 
+
+        /// <summary>
+        /// Display one <see cref="MSBuildLogsExtended.DataSourceEntities.Build"/> and all related entities if any, either single item or a list, based on foreign keys
+        /// </summary>
+        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">if set to <c>true</c> [is to compare identifier by identifier oft of by identifier].</param>
+        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">The value to compare identifier by identifier oft of by identifier.</param>
+        /// <returns></returns>
         public ActionResult WPEntityRelatedOfBuild(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
         {
             MSBuildLogsExtended.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM vm = new MSBuildLogsExtended.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM(new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier));
@@ -126,8 +142,13 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
 
 
 
-		#region Import()
+        #region Import()
 
+        /// <summary>
+        /// Imports a list of <see cref="MSBuildLogsExtended.DataSourceEntities.Build"/>.
+        /// </summary>
+        /// <param name="file">The file.</param>
+        /// <returns></returns>
         public ActionResult Import(HttpPostedFileBase file)
         {
 			ViewBag.FileFormat = "Solution_S1_1_Name,Id,SolutionId,Name,Description,BuildStartTime";
@@ -163,22 +184,30 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
             }
         }
 
-		#endregion Import()
+        #endregion Import()
 
-		#region Index()
+        #region Index()
 
+        /// <summary>
+        /// default page, redirect to "WPCommonOfBuild".
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             return RedirectToAction("WPCommonOfBuild");
         }
 
-		#endregion Index()
+        #endregion Index()
 
-		#region ActionResult Details(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
+        #region ActionResult Details(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
 
-        //
-        // GET: /MSBuildLogsExtended.DataSourceEntities.Build/Details/5
-
+        /// <summary>
+        /// GET method of details page, based on identifier or unique constraint, this entity only, no related entities.
+        /// GET: /MSBuildLogsExtended.DataSourceEntities.Build/Details/5
+        /// </summary>
+        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">if set to <c>true</c> [is to compare identifier by identifier oft of by identifier].</param>
+        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">The value to compare identifier by identifier oft of by identifier.</param>
+        /// <returns></returns>
         public ActionResult Details(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
         {
             ViewBag.Message = "this is details";
@@ -200,12 +229,15 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
             }
         }
 
-		#endregion ActionResult Details(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
+        #endregion ActionResult Details(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
 
-		#region ActionResult AddNew()
+        #region ActionResult AddNew()
 
-        //
-        // GET: /MSBuildLogsExtended.DataSourceEntities.Build/Create
+        /// <summary>
+        /// GET method of Adds the new <see cref="MSBuildLogsExtended.DataSourceEntities.Build"/>.
+        /// GET: /MSBuildLogsExtended.DataSourceEntities.Build/AddNew 
+        /// </summary>
+        /// <returns></returns>
         public ActionResult AddNew()
         {
             ViewBag.Message = "to AddNew a new MSBuildLogsExtended.DataSourceEntities.Build";
@@ -233,10 +265,13 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
             }
 
             return View(entity);
-        } 
+        }
 
-        //
-        // POST: /MSBuildLogsExtended.DataSourceEntities.Build/AddNew
+        /// <summary>
+        /// POST method of Adds the new <see cref="MSBuildLogsExtended.DataSourceEntities.Build"/>.
+        /// POST: /MSBuildLogsExtended.DataSourceEntities.Build/AddNew 
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult AddNew(MSBuildLogsExtended.DataSourceEntities.Build.Default input)
         {
@@ -263,6 +298,12 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
         }
         
         public const string TempDataKey_BuildController_Copy = "TempDataKey_BuildController_Copy";
+        /// <summary>
+        /// Copies current <see cref="MSBuildLogsExtended.DataSourceEntities.Build"/>, without identifier
+        /// </summary>
+        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">if set to <c>true</c> [is to compare identifier by identifier oft of by identifier].</param>
+        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">The value to compare identifier by identifier oft of by identifier.</param>
+        /// <returns></returns>
         public ActionResult Copy(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
         {
             MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default _Response =
@@ -275,15 +316,19 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
             }
 
             return RedirectToAction("AddNew");
-        } 
+        }
 
-		#endregion ActionResult AddNew()
+        #endregion ActionResult AddNew()
 
-		#region ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
+        #region ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
 
-        //
-        // GET: /MSBuildLogsExtended.DataSourceEntities.Build/Edit/5
- 
+        /// <summary>
+        /// GET method of editing page of <see cref="MSBuildLogsExtended.DataSourceEntities.Build"/>
+        /// GET: /MSBuildLogsExtended.DataSourceEntities.Build/Edit/5
+        /// </summary>
+        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">if set to <c>true</c> [is to compare identifier by identifier oft of by identifier].</param>
+        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">The value to compare identifier by identifier oft of by identifier.</param>
+        /// <returns></returns>
         public ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
         {
             log.Info(string.Format("{0}: Edit", Framework.LoggingOptions.UI_Process_Started.ToString()));
@@ -306,9 +351,13 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
             }
         }
 
-        //
-        // POST: /MSBuildLogsExtended.DataSourceEntities.Build/Edit/5
-
+        /// <summary>
+        /// POST method of editing page of <see cref="MSBuildLogsExtended.DataSourceEntities.Build"/>
+        /// POST: /MSBuildLogsExtended.DataSourceEntities.Build/Edit/5
+        /// </summary>
+        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">if set to <c>true</c> [is to compare identifier by identifier oft of by identifier].</param>
+        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">The value to compare identifier by identifier oft of by identifier.</param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier, MSBuildLogsExtended.DataSourceEntities.Build.Default input)
         {
@@ -333,13 +382,17 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
             }
         }
 
-		#endregion ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
+        #endregion ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
 
-		#region ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
+        #region ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
 
-        //
-        // GET: /MSBuildLogsExtended.DataSourceEntities.Build/Delete/5
-
+        /// <summary>
+        /// GET method of editing page of <see cref="MSBuildLogsExtended.DataSourceEntities.Build"/>
+        /// GET: /MSBuildLogsExtended.DataSourceEntities.Build/Delete/5
+        /// </summary>
+        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">if set to <c>true</c> [is to compare identifier by identifier oft of by identifier].</param>
+        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">The value to compare identifier by identifier oft of by identifier.</param>
+        /// <returns></returns>
         public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
         {
 
@@ -358,10 +411,15 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
                 return View(new MSBuildLogsExtended.DataSourceEntities.Build.Default());
             } 
         }
-		
-        //
-        // POST: /MSBuildLogsExtended.DataSourceEntities.Build/Delete/5
-		[HttpPost]
+
+        /// <summary>
+        /// POST method of editing page of <see cref="MSBuildLogsExtended.DataSourceEntities.Build"/>
+        /// POST: /MSBuildLogsExtended.DataSourceEntities.Build/Delete/5
+        /// </summary>
+        /// <param name="isToCompareIdByIdentifierOftOfByIdentifier">if set to <c>true</c> [is to compare identifier by identifier oft of by identifier].</param>
+        /// <param name="valueToCompareIdByIdentifierOftOfByIdentifier">The value to compare identifier by identifier oft of by identifier.</param>
+        /// <returns></returns>
+        [HttpPost]
         public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier, FormCollection collection)
         {
             try

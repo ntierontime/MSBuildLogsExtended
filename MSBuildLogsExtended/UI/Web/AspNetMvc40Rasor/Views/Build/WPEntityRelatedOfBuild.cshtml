@@ -1,8 +1,6 @@
 @using Framework.Mvc;
 @model MSBuildLogsExtended.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM
 @{
-    // http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
-    // http://dotnetmentors.com/mvc/paging-and-sorting-in-asp-net-mvc-and-entity-framework-application.aspx
     ViewBag.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Build;
     RouteValueDictionary queryStringDictionary = new RouteValueDictionary(Request.QueryString.AllKeys.ToDictionary(key => key, key => (object)Request.QueryString[key]));
 }
@@ -10,15 +8,15 @@
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
+                <h2>@ViewBag.Title.</h2>
+                <h4>@ViewBag.Message</h4>
             </hgroup>
         </div>
     </section>
 }
 <article>
 <div class="default">
-<div><h2>@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog, "WPCommonOfBuildLog", "BuildLog")</h2></div>
+<div><h4>@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog, "WPCommonOfBuildLog", "BuildLog")</h4></div>
 <div>
 <table id="MasterDataControl0" name="MasterDataControl0" >
 <tr><th class="sorting"></th>

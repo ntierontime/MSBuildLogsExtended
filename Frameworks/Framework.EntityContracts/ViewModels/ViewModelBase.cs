@@ -10,8 +10,11 @@ namespace Framework.EntityContracts
     {
         public ViewModelBase()
         {
+            this.ContentData = new Framework.EntityContracts.ContentData();
         }
-        
+
+        public ContentData ContentData { get; set; }
+
         public TSearchCriteria Criteria { get; set; }
 
         public Framework.EntityContracts.QueryPagingSetting QueryPagingSetting { get; set; }

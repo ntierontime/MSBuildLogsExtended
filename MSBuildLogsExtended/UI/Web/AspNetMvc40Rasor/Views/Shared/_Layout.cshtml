@@ -1,62 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>@ViewBag.Title - @MSBuildLogsExtended.Resources.UIStringResourcePerApp.Application_Title</title>
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width" />
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
-    </head>
-    <body>
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
-                </div>
-                <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
-                    <nav>
-						<div class="navbar nav-inverse">
-							<div class="navbar-inner">
-								<div class="container-fluid">
-									<ul class="nav">
-										<li>@Html.ActionLink(Framework.Resources.UIStringResource.Home_TitleText, "Index", "Home")</li>
-										<li>@Html.ActionLink(Framework.Resources.UIStringResource.Common_AboutPageTitle, "About", "Home")</li>
-										<li>@Html.ActionLink(Framework.Resources.UIStringResource.Common_ContactPageTitle, "Contact", "Home")</li>
-									</ul>
-										<li class="dropdown"><a href="#" class="dropdown-toggle" id="dropdownCommonMenu" data-toggle="dropdown">@Framework.Resources.UIStringResource.Common_Workspaces</a>
-											<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCommonMenu">
-												<li role="menuitem">@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_Build, "WPCommonOfBuild", "Build")</li>
-												<li role="menuitem">@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_BuildEventCode, "WPCommonOfBuildEventCode", "BuildEventCode")</li>
-												<li role="menuitem">@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_BuildLog, "WPCommonOfBuildLog", "BuildLog")</li>
-												<li role="menuitem">@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_Solution, "WPCommonOfSolution", "Solution")</li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-                    </nav>
-                </div>
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>@ViewBag.Title - @MSBuildLogsExtended.Resources.UIStringResourcePerApp.Application_Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    @Styles.Render("~/Content/css")
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-        </header>
-        <div id="body">
-            @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </section>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink(Framework.Resources.UIStringResource.Home_TitleText, "Index", "Home")</li>
+                    <li>@Html.ActionLink(Framework.Resources.UIStringResource.Common_AboutPageTitle, "About", "Home")</li>
+                    <li>@Html.ActionLink(Framework.Resources.UIStringResource.Common_ContactPageTitle, "Contact", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" id="dropdownCommonMenu" data-toggle="dropdown">@Framework.Resources.UIStringResource.Common_Workspaces</a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCommonMenu">
+                            <li role="menuitem">@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_Build, "WPCommonOfBuild", "Build")</li>
+                            <li role="menuitem">@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_BuildEventCode, "WPCommonOfBuildEventCode", "BuildEventCode")</li>
+                            <li role="menuitem">@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_BuildLog, "WPCommonOfBuildLog", "BuildLog")</li>
+                            <li role="menuitem">@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_Solution, "WPCommonOfSolution", "Solution")</li>
+                        </ul>
+                    </li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
         </div>
+    </div>
+    <div class="container body-content">
+        @RenderSection("featured", required: false)
+        <hr />
+        @RenderBody()
+        <hr />
         <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - @MSBuildLogsExtended.Resources.UIStringResourcePerApp.Application_Title</p>
-                </div>
-            </div>
+            @DateTime.Now.Year - @MSBuildLogsExtended.Resources.UIStringResourcePerApp.Application_Title
         </footer>
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
-    </body>
+    </div>
+    @Scripts.Render("~/bundles/js")
+    @RenderSection("scripts", required: false)
+</body>
 </html>
