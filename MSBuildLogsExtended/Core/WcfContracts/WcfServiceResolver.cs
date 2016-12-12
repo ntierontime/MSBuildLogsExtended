@@ -56,8 +56,6 @@ namespace MSBuildLogsExtended.WcfContracts
 
     }
 
-#if (XAMARIN)
-#else
     public static class WcfServiceResolverAsyn
     {
 
@@ -106,6 +104,5 @@ namespace MSBuildLogsExtended.WcfContracts
 
 
     }
-#endif
 
 }

@@ -2,8 +2,11 @@ using System;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using GalaSoft.MvvmLight.Threading;
 using GalaSoft.MvvmLight.Messaging;
+#if (XAMARIN)
+#else
+using GalaSoft.MvvmLight.Threading;
+#endif
 
 namespace MSBuildLogsExtended.ViewModels
 {
@@ -601,7 +604,7 @@ namespace MSBuildLogsExtended.ViewModels
         }
 #endif
 
-#if ANDROID
+#if ANDROID || __IOS__ || XAMARIN
 #elif NETFX_CORE
         public RelayCommand<Windows.UI.Xaml.Controls.SelectionChangedEventArgs> GetDropDownContentsOfSolution_S1_1SelectionChangedCommand { get; private set; }
 #else

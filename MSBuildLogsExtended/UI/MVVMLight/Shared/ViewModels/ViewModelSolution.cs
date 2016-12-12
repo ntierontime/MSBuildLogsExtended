@@ -2,8 +2,11 @@ using System;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using GalaSoft.MvvmLight.Threading;
 using GalaSoft.MvvmLight.Messaging;
+#if (XAMARIN)
+#else
+using GalaSoft.MvvmLight.Threading;
+#endif
 
 namespace MSBuildLogsExtended.ViewModels
 {

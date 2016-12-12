@@ -40,8 +40,6 @@ namespace MSBuildLogsExtended.WcfContracts
 
     }
 
-#if (XAMARIN)
-#else
     public interface IBusinessLogicLayerFactoryAsyn
     {
 
@@ -79,7 +77,4 @@ namespace MSBuildLogsExtended.WcfContracts
 
 
     }
-
-#endif
-
 }
