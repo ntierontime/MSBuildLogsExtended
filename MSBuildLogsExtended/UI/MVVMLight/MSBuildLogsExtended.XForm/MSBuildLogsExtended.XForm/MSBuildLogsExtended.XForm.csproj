@@ -112,10 +112,6 @@
       <Project>{9371a5d5-c8db-4ffd-a9ca-8f56080bd6e1}</Project>
       <Name>MSBuildLogsExtended.EntityContracts.Xamarin</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Core.Xamarin\MSBuildLogsExtended.Resources.Xamarin\MSBuildLogsExtended.Resources.Xamarin.csproj">
-      <Project>{f08277fd-5670-4b5e-9b05-6510f1994686}</Project>
-      <Name>MSBuildLogsExtended.Resources.Xamarin</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\..\Core.Xamarin\MSBuildLogsExtended.WcfContracts.Xamarin\MSBuildLogsExtended.WcfContracts.Xamarin.csproj">
       <Project>{9a9a7da4-b818-4b49-a959-324d6719b3ee}</Project>
       <Name>MSBuildLogsExtended.WcfContracts.Xamarin</Name>

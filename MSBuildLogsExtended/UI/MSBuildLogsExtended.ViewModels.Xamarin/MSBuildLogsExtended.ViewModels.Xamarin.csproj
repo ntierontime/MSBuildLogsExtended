@@ -80,9 +80,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\MVVMLight\Shared\ViewModels\Maps\map.2.D.1.vsd.png">
+    <None Include="..\MVVMLight\Shared\ViewModels\Maps\map.2.D.1.vsd.png">
       <Link>Maps\map.2.D.1.vsd.png</Link>
-    </Content>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks.Xamarin\Framework.CommonBLLEntities.Xamarin\Framework.CommonBLLEntities.Xamarin.csproj">
@@ -144,7 +144,7 @@
   </Target>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkReference="e179e71c-55f6-468c-bdf1-9a62cfdb39a9" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="e179e71c-55f6-468c-bdf1-9a62cfdb39a9" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
