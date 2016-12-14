@@ -7,134 +7,147 @@
     RouteValueDictionary queryStringDictionary = new RouteValueDictionary(Request.QueryString.AllKeys.ToDictionary(key => key, key => (object)Request.QueryString[key]));
 }
 @section featured {
-<hgroup class="title">
+<hgroup>
     <h2>@ViewBag.Title.</h2>
     <h4>@ViewBag.Message</h4>
 </hgroup>
 }
-<article>
-    <div>
-        <div class="default">
-            @using (Html.BeginForm())
-            {
-                <div>
-                    <div class="buttonContainer">
-                        <input class="button button-Search" type="submit" name="SearchToolBarUp" value="@Framework.Resources.UIStringResource.SearchAlternativeText" />
-                        <input onclick="location.href='@Url.Action("AddNew", "BuildEventCode")'" class="button button-AddNew" type="button" name="AddNewToolBarUp" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
-                        <input onclick="location.href='@Url.Action("WPCommonOfBuildEventCode_Export", "BuildEventCode", new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="button button-Export" type="button" name="ExportToolBarUp" value="@Framework.Resources.UIStringResource.ExportAlternativeText" />
-                        <input onclick="location.href='@Url.Action("WPCommonOfBuildEventCode_Export", "BuildEventCode", new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="button button-ExportToExcel" type="button" name="ExportToExcelToolBarUp" value="@Framework.Resources.UIStringResource.ExportToExcelAlternativeText" />
-                        <input onclick="location.href='@Url.Action("Import", "BuildEventCode")'" class="button button-Import" type="button" name="ImportToolBarUp" value="@Framework.Resources.UIStringResource.ImportAlternativeText" />
-                    </div>
-                    <div>
-                    </div>
-                    <div>
-                        @Html.CheckBoxFor(model => model.Criteria.IsToCompareDescriptionCommonOftOfCommon, new { style = "display:display;" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon
-                        @Html.TextBoxFor(model => model.Criteria.ValueToBeContainedDescriptionCommonOftOfCommon)
-                    </div>
-                    <div>
-                        @Html.CheckBoxFor(model => model.Criteria.IsToCompareEventCodeCommonOftOfCommon, new { style = "display:display;" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.IsToCompare_ID_CheckBox_Search_isToCompareEventCodeCommonOftOfCommon
-                        @Html.TextBoxFor(model => model.Criteria.ValueToBeContainedEventCodeCommonOftOfCommon)
-                    </div>
-                    <div class="buttonContainer">
-                        <div class="paging-label">Items per page : </div><div class="paging-field">
-                            @Html.DropDownListFor(model => model.QueryPagingSetting.PageSize, Model.SelectListOfPageSize, new Dictionary<string, Object> { { "onchange", "this.form.submit();" } })
-                    </div><div class="paging-label">Sort by:</div><div class="paging-field">
-                        @Html.DropDownListFor(model => model.QueryOrderBySettingCollecionInString, Model.SelectListOfQueryOrderBySettingCollecionInString, new Dictionary<string, Object> { { "onchange", "this.form.submit();" } })
-                </div><div class="paging-field-right">@Model.QueryPagingSetting.GetPagingInformationString()</div>
-            </div>
-            <div class="buttonContainer">
-                <input class="button button-Search" type="submit" name="SearchToolBarBottom" value="@Framework.Resources.UIStringResource.SearchAlternativeText" />
-                <input onclick="location.href='@Url.Action("AddNew", "BuildEventCode")'" class="button button-AddNew" type="button" name="AddNewToolBarBottom" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
-                <input onclick="location.href='@Url.Action("WPCommonOfBuildEventCode_Export", "BuildEventCode", new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="button button-Export" type="button" name="ExportToolBarBottom" value="@Framework.Resources.UIStringResource.ExportAlternativeText" />
-                <input onclick="location.href='@Url.Action("WPCommonOfBuildEventCode_Export", "BuildEventCode", new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="button button-ExportToExcel" type="button" name="ExportToExcelToolBarBottom" value="@Framework.Resources.UIStringResource.ExportToExcelAlternativeText" />
-                <input onclick="location.href='@Url.Action("Import", "BuildEventCode")'" class="button button-Import" type="button" name="ImportToolBarBottom" value="@Framework.Resources.UIStringResource.ImportAlternativeText" />
-            </div>
+@using (Html.BeginForm())
+{
+    <div class="btn-group btn-group-justified">
+        <div class="btn-group" role="group">
+            <button class="btn btn-primary button-Search" type="submit" name="SearchToolBarUp">@Framework.Resources.UIStringResource.SearchAlternativeText</button>
         </div>
-            }
+        <div class="btn-group" role="group">
+            <button onclick="location.href='@Url.Action("AddNew", "BuildEventCode")'" class="btn btn-default button-AddNew" name="AddNewToolBarUp">@Framework.Resources.UIStringResource.AddNewAlternativeText</button>
         </div>
-        <div class="default">
-            <div>
-                @Html.PagedListPager(Url
-        , new PagerHtmlRenderer(
-                //Constructor mandatory values
-                currentPageNumber: Model.QueryPagingSetting.CurrentPage,
-                pageSize: Model.QueryPagingSetting.PageSize,
-                totalNumberOfItems: Model.QueryPagingSetting.CountOfRecords,
-                actionName: "WPCommonOfBuildEventCode",
-                controllerName: "BuildEventCode",
-                routeValues: new RouteValueDictionary() { { "currentPage", "" } },
-                pageRouteValueName: "currentPage")
-        {
-            //Properties
-            PreviousLinkInnerHtml = "<strong>Previous</strong>",
-            NextLinkInnerHtml = "<strong>Next<strong>",
-            FirstLinkInnerHtml = "<strong>First</strong>",
-            LastLinkInnerHtml = "<strong>Last</strong>"
-        });
-            </div>
-            <div>
-                <table id="MasterDataControl0" name="MasterDataControl0" class="table">
-                    <tr>
-                        <th class="sorting"></th>
-                        <th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.EventCode</th>
-                        <th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.Description</th>
-                        <th class="sorting"></th>
-                    </tr>
-                    @if (Model != null && Model.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-                    {
-                        int index = 0;
-                        foreach (var item in Model.Result)
-                        {
-                            index++;
-                            <tr>
-                                <td></td>
-                                <td>@Html.DisplayFor(modelItem => item.EventCode)</td>
-                                <td>@Html.DisplayFor(modelItem => item.Description)</td>
-                                <td>
-                                    <div class="buttonContainer">
-                                        <input onclick="location.href='@Url.Action("WPEntityRelatedOfBuildEventCode", "BuildEventCode", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" class="button button-Details" type="button" name="DetailsToolBarRightInList" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
-                                        <input onclick="location.href='@Url.Action("Edit", "BuildEventCode", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" class="button button-Edit" type="button" name="EditToolBarRightInList" value="@Framework.Resources.UIStringResource.EditAlternativeText" />
-                                    </div>
-                                </td>
-                            </tr>
-                        }
-                    }
-                    else
-                    {
-                        <tr><td colspan="50"><div class="error-label">@Model.StatusMessageOfResult</div></td></tr>
-                    }
-                </table>
-            </div>
-            <div>
-                @Html.PagedListPager(Url
-        , new PagerHtmlRenderer(
-                //Constructor mandatory values
-                currentPageNumber: Model.QueryPagingSetting.CurrentPage,
-                pageSize: Model.QueryPagingSetting.PageSize,
-                totalNumberOfItems: Model.QueryPagingSetting.CountOfRecords,
-                actionName: "WPCommonOfBuildEventCode",
-                controllerName: "BuildEventCode",
-                routeValues: new RouteValueDictionary() { { "currentPage", "" } },
-                pageRouteValueName: "currentPage")
-        {
-            //Properties
-            PreviousLinkInnerHtml = "<strong>Previous</strong>",
-            NextLinkInnerHtml = "<strong>Next<strong>",
-            FirstLinkInnerHtml = "<strong>First</strong>",
-            LastLinkInnerHtml = "<strong>Last</strong>"
-        });
-            </div>
+        <div class="btn-group" role="group">
+            <button onclick="location.href='@Url.Action("WPCommonOfBuildEventCode_Export", "BuildEventCode", new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="btn btn-default button-Export" name="ExportToolBarUp">@Framework.Resources.UIStringResource.ExportAlternativeText</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button onclick="location.href='@Url.Action("WPCommonOfBuildEventCode_Export", "BuildEventCode", new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="btn btn-default button-ExportToExcel" name="ExportToExcelToolBarUp">@Framework.Resources.UIStringResource.ExportToExcelAlternativeText</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button onclick="location.href='@Url.Action("Import", "BuildEventCode")'" class="btn btn-default button-Import" name="ImportToolBarUp">@Framework.Resources.UIStringResource.ImportAlternativeText</button>
         </div>
     </div>
-</article>
+    <div class="form-group">
+        <div class="checkbox">
+            @Html.CheckBoxFor(model => model.Criteria.IsToCompareDescriptionCommonOftOfCommon, new { @class="styled" })
+            @Html.LabelFor(model => model.Criteria.ValueToBeContainedDescriptionCommonOftOfCommon)
+        </div>
+        @Html.TextBoxFor(model => model.Criteria.ValueToBeContainedDescriptionCommonOftOfCommon, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <div class="checkbox checkbox-info checkbox-circle">
+            @Html.CheckBoxFor(model => model.Criteria.IsToCompareEventCodeCommonOftOfCommon, new { @class = "styled" })
+            @Html.LabelFor(model => model.Criteria.ValueToBeContainedEventCodeCommonOftOfCommon)
+        </div>
+        @Html.TextBoxFor(model => model.Criteria.ValueToBeContainedEventCodeCommonOftOfCommon, new { style = "display:display;", @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <div class="paging-label">Items per page : </div><div class="paging-field">
+            @Html.DropDownListFor(model => model.QueryPagingSetting.PageSize, Model.SelectListOfPageSize, new Dictionary<string, Object> { { "onchange", "this.form.submit();" } })
+        </div><div class="paging-label">Sort by:</div><div class="paging-field">
+            @Html.DropDownListFor(model => model.QueryOrderBySettingCollecionInString, Model.SelectListOfQueryOrderBySettingCollecionInString, new Dictionary<string, Object> { { "onchange", "this.form.submit();" } })
+        </div><div class="paging-field-right">@Model.QueryPagingSetting.GetPagingInformationString()</div>
+    </div>
+    <div class="btn-group btn-group-justified">
+        <div class="btn-group" role="group">
+            <button class="btn btn-primary button-Search" type="submit" name="SearchToolBarUp">@Framework.Resources.UIStringResource.SearchAlternativeText</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button onclick="location.href='@Url.Action("AddNew", "BuildEventCode")'" class="btn btn-default button-AddNew" name="AddNewToolBarUp">@Framework.Resources.UIStringResource.AddNewAlternativeText</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button onclick="location.href='@Url.Action("WPCommonOfBuildEventCode_Export", "BuildEventCode", new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="btn btn-default button-Export" name="ExportToolBarUp">@Framework.Resources.UIStringResource.ExportAlternativeText</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button onclick="location.href='@Url.Action("WPCommonOfBuildEventCode_Export", "BuildEventCode", new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="btn btn-default button-ExportToExcel" name="ExportToExcelToolBarUp">@Framework.Resources.UIStringResource.ExportToExcelAlternativeText</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button onclick="location.href='@Url.Action("Import", "BuildEventCode")'" class="btn btn-default button-Import" name="ImportToolBarUp">@Framework.Resources.UIStringResource.ImportAlternativeText</button>
+        </div>
+    </div>
+}
+<div>
+    <div class="default">
+        <div>
+            @Html.PagedListPager(Url
+        , new PagerHtmlRenderer(
+                //Constructor mandatory values
+                currentPageNumber: Model.QueryPagingSetting.CurrentPage,
+                pageSize: Model.QueryPagingSetting.PageSize,
+                totalNumberOfItems: Model.QueryPagingSetting.CountOfRecords,
+                actionName: "WPCommonOfBuildEventCode",
+                controllerName: "BuildEventCode",
+                routeValues: new RouteValueDictionary() { { "currentPage", "" } },
+                pageRouteValueName: "currentPage")
+        {
+            //Properties
+            PreviousLinkInnerHtml = "<strong>Previous</strong>",
+            NextLinkInnerHtml = "<strong>Next<strong>",
+            FirstLinkInnerHtml = "<strong>First</strong>",
+            LastLinkInnerHtml = "<strong>Last</strong>"
+        });
+        </div>
+        <div>
+            <table id="MasterDataControl0" name="MasterDataControl0" class="table">
+                <tr>
+                    <th class="sorting"></th>
+                    <th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.EventCode</th>
+                    <th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.Description</th>
+                    <th class="sorting"></th>
+                </tr>
+                @if (Model != null && Model.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+                {
+                    int index = 0;
+                    foreach (var item in Model.Result)
+                    {
+                        index++;
+                        <tr>
+                            <td></td>
+                            <td>@Html.DisplayFor(modelItem => item.EventCode)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                            <td>
+                                <div class="buttonContainer">
+                                    <input onclick="location.href='@Url.Action("WPEntityRelatedOfBuildEventCode", "BuildEventCode", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" class="button button-Details" type="button" name="DetailsToolBarRightInList" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+                                    <input onclick="location.href='@Url.Action("Edit", "BuildEventCode", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" class="button button-Edit" type="button" name="EditToolBarRightInList" value="@Framework.Resources.UIStringResource.EditAlternativeText" />
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="50"><div class="error-label">@Model.StatusMessageOfResult</div></td></tr>
+                }
+            </table>
+        </div>
+        <div>
+            @Html.PagedListPager(Url
+        , new PagerHtmlRenderer(
+                //Constructor mandatory values
+                currentPageNumber: Model.QueryPagingSetting.CurrentPage,
+                pageSize: Model.QueryPagingSetting.PageSize,
+                totalNumberOfItems: Model.QueryPagingSetting.CountOfRecords,
+                actionName: "WPCommonOfBuildEventCode",
+                controllerName: "BuildEventCode",
+                routeValues: new RouteValueDictionary() { { "currentPage", "" } },
+                pageRouteValueName: "currentPage")
+        {
+            //Properties
+            PreviousLinkInnerHtml = "<strong>Previous</strong>",
+            NextLinkInnerHtml = "<strong>Next<strong>",
+            FirstLinkInnerHtml = "<strong>First</strong>",
+            LastLinkInnerHtml = "<strong>Last</strong>"
+        });
+        </div>
+    </div>
+</div>
+
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryui")
-    @Scripts.Render("~/bundles/jqueryval")
-    @Scripts.Render("~/bundles/knockout")
-    @Scripts.Render("~/bundles/dataTables")
-    @Scripts.Render("~/bundles/bootstrap")
     <script type="text/javascript">
-        //http://www.softfinity.com/blog/using-ajax-with-knockout-js-and-asp-net-mvc-4-to-load-select-drop-down-options/
         $(document).ready($(function() {
         }));
         $(document).ready($(function() {

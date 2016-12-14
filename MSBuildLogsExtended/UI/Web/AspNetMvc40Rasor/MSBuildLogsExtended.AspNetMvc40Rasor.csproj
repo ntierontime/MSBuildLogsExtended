@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="MvcApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Content\awesome-bootstrap-checkbox.mvcmodified.css" />
     <Content Include="Content\bootstrap-datepicker.min.css" />
     <Content Include="Content\bootstrap-datepicker.standalone.css" />
     <Content Include="Content\bootstrap-datepicker.standalone.min.css" />
