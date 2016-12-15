@@ -132,10 +132,6 @@
       <Project>{6aa5463f-1fb4-4359-b194-3494ae3b8d3c}</Project>
       <Name>MSBuildLogsExtended.WcfClientBLL.Droid</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ViewModels.Droid\MSBuildLogsExtended.ViewModels.Droid.csproj">
-      <Project>{b8fd388f-d0a2-49dc-83dc-358b919e9ecb}</Project>
-      <Name>MSBuildLogsExtended.ViewModels.Droid</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -55,7 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -116,7 +118,7 @@
       <Project>{9a9a7da4-b818-4b49-a959-324d6719b3ee}</Project>
       <Name>MSBuildLogsExtended.WcfContracts.Xamarin</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\MSBuildLogsExtended.ViewModels.Xamarin\MSBuildLogsExtended.ViewModels.Xamarin.csproj">
+    <ProjectReference Include="..\..\Shared.Xamarin\ViewModels.Xamarin\MSBuildLogsExtended.ViewModels.Xamarin.csproj">
       <Project>{7de29917-40ea-42f9-85c8-c8de637d2865}</Project>
       <Name>MSBuildLogsExtended.ViewModels.Xamarin</Name>
     </ProjectReference>
