@@ -44,6 +44,7 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
                 "~/Content/bootstrap.css"
                 , "~/Content/bootstrap-theme.css"
                 , "~/Content/bootstrap-datepicker.css"
+                , "~/Content/PagedList.css"
                 , "~/Content/awesome-bootstrap-checkbox.mvcmodified.css"
                 , "~/Content/DataTables/css/jquery.dataTables.css"
                 , "~/Content/site.css"

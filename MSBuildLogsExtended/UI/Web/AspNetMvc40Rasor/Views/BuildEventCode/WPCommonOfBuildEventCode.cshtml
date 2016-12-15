@@ -1,10 +1,14 @@
 @using Framework.Mvc;
+@using PagedList;
+@using PagedList.Mvc;
 @model MSBuildLogsExtended.AspNetMvc40ViewModel.WPCommonOfBuildEventCodeVM
 @{
     // http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
     // http://dotnetmentors.com/mvc/paging-and-sorting-in-asp-net-mvc-and-entity-framework-application.aspx
     ViewBag.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.BuildEventCode;
     RouteValueDictionary queryStringDictionary = new RouteValueDictionary(Request.QueryString.AllKeys.ToDictionary(key => key, key => (object)Request.QueryString[key]));
+
+    StaticPagedList<MSBuildLogsExtended.DataSourceEntities.BuildEventCode> pagedResult = new StaticPagedList<MSBuildLogsExtended.DataSourceEntities.BuildEventCode>(Model.Result, Model.QueryPagingSetting.CurrentPage, Model.QueryPagingSetting.PageSize, Model.QueryPagingSetting.CountOfRecords);
 }
 @section featured {
 <hgroup class="">
@@ -78,29 +82,11 @@
 }
 <div>
     <div class="default">
-        <div>
-            @Html.PagedListPager(Url
-                , new PagerHtmlRenderer(
-                        //Constructor mandatory values
-                        currentPageNumber: Model.QueryPagingSetting.CurrentPage,
-                        pageSize: Model.QueryPagingSetting.PageSize,
-                        totalNumberOfItems: Model.QueryPagingSetting.CountOfRecords,
-                        actionName: "WPCommonOfBuildEventCode",
-                        controllerName: "BuildEventCode",
-                        routeValues: new RouteValueDictionary() { { "currentPage", "" } },
-                        pageRouteValueName: "currentPage")
-                {
-                    //Properties
-                    PreviousLinkInnerHtml = "<strong>Previous</strong>",
-                    NextLinkInnerHtml = "<strong>Next<strong>",
-                    FirstLinkInnerHtml = "<strong>First</strong>",
-                    LastLinkInnerHtml = "<strong>Last</strong>"
-                });
-        </div>
+        @Html.PagedListPager(pagedResult, currentPage => Url.Action("WPCommonOfBuildEventCode", new { currentPage = currentPage }), PagedListRenderOptions.OnlyShowFivePagesAtATime)
         <div>
             <table id="MasterDataControl0" name="MasterDataControl0" class="table">
                 <tr>
-                    <th class="sorting"></th>
+                    <th class=""></th>
                     <th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.EventCode</th>
                     <th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.Description</th>
                     <th class="sorting"></th>
@@ -116,10 +102,10 @@
                             <td>@Html.DisplayFor(modelItem => item.EventCode)</td>
                             <td>@Html.DisplayFor(modelItem => item.Description)</td>
                             <td>
-                                <div class="buttonContainer">
-                                    <input onclick="location.href='@Url.Action("WPEntityRelatedOfBuildEventCode", "BuildEventCode", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" class="button button-Details" type="button" name="DetailsToolBarRightInList" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
-                                    <input onclick="location.href='@Url.Action("Edit", "BuildEventCode", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" class="button button-Edit" type="button" name="EditToolBarRightInList" value="@Framework.Resources.UIStringResource.EditAlternativeText" />
-                                </div>
+                                    <div class="btn-group" role="group">
+                                        <input class="btn btn-default" onclick="location.href='@Url.Action("WPEntityRelatedOfBuildEventCode", "BuildEventCode", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" type="button" role="button" name="DetailsToolBarRightInList" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+                                        <input class="btn btn-default" onclick="location.href='@Url.Action("Edit", "BuildEventCode", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" type="button" role="button" name="EditToolBarRightInList" value="@Framework.Resources.UIStringResource.EditAlternativeText" />
+                                    </div>
                             </td>
                         </tr>
                     }
@@ -131,23 +117,7 @@
             </table>
         </div>
         <div>
-            @Html.PagedListPager(Url
-        , new PagerHtmlRenderer(
-                //Constructor mandatory values
-                currentPageNumber: Model.QueryPagingSetting.CurrentPage,
-                pageSize: Model.QueryPagingSetting.PageSize,
-                totalNumberOfItems: Model.QueryPagingSetting.CountOfRecords,
-                actionName: "WPCommonOfBuildEventCode",
-                controllerName: "BuildEventCode",
-                routeValues: new RouteValueDictionary() { { "currentPage", "" } },
-                pageRouteValueName: "currentPage")
-        {
-            //Properties
-            PreviousLinkInnerHtml = "<strong>Previous</strong>",
-            NextLinkInnerHtml = "<strong>Next<strong>",
-            FirstLinkInnerHtml = "<strong>First</strong>",
-            LastLinkInnerHtml = "<strong>Last</strong>"
-        });
+            @Html.PagedListPager(pagedResult, currentPage => Url.Action("WPCommonOfBuildEventCode", new { currentPage = currentPage }), PagedListRenderOptions.OnlyShowFivePagesAtATime)
         </div>
     </div>
 </div>
