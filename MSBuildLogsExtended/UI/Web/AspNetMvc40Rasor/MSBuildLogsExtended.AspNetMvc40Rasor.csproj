@@ -41,6 +41,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="App_Code\BundleConfig.cs" />
     <Compile Include="MvcApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Content\awesome-bootstrap-checkbox.mvcmodified.css" />

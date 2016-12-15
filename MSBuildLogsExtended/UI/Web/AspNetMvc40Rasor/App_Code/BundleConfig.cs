@@ -42,9 +42,9 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css"
+                , "~/Content/bootstrap-theme.css"
                 , "~/Content/bootstrap-datepicker.css"
                 , "~/Content/awesome-bootstrap-checkbox.mvcmodified.css"
-                , "~/Content/bootstrap-theme.css"
                 , "~/Content/DataTables/css/jquery.dataTables.css"
                 , "~/Content/site.css"
                 ));

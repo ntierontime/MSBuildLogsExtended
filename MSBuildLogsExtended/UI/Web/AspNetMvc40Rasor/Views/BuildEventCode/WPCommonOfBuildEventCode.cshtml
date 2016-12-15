@@ -7,7 +7,7 @@
     RouteValueDictionary queryStringDictionary = new RouteValueDictionary(Request.QueryString.AllKeys.ToDictionary(key => key, key => (object)Request.QueryString[key]));
 }
 @section featured {
-<hgroup>
+<hgroup class="">
     <h2>@ViewBag.Title.</h2>
     <h4>@ViewBag.Message</h4>
 </hgroup>
@@ -45,13 +45,19 @@
         </div>
         @Html.TextBoxFor(model => model.Criteria.ValueToBeContainedEventCodeCommonOftOfCommon, new { style = "display:display;", @class = "form-control" })
     </div>
-    <div class="form-group">
-        <div class="paging-label">Items per page : </div><div class="paging-field">
-            @Html.DropDownListFor(model => model.QueryPagingSetting.PageSize, Model.SelectListOfPageSize, new Dictionary<string, Object> { { "onchange", "this.form.submit();" } })
-        </div><div class="paging-label">Sort by:</div><div class="paging-field">
-            @Html.DropDownListFor(model => model.QueryOrderBySettingCollecionInString, Model.SelectListOfQueryOrderBySettingCollecionInString, new Dictionary<string, Object> { { "onchange", "this.form.submit();" } })
-        </div><div class="paging-field-right">@Model.QueryPagingSetting.GetPagingInformationString()</div>
-    </div>
+    <p>
+        <div class="form-group">
+            <div class="col-sm-2">
+                <span>Items per page : </span>
+                @Html.DropDownListFor(model => model.QueryPagingSetting.PageSize, Model.SelectListOfPageSize, new Dictionary<string, Object> { { "onchange", "this.form.submit();" } })
+            </div>
+            <div class="col-sm-3">
+                <span>Sort by:</span>
+                @Html.DropDownListFor(model => model.QueryOrderBySettingCollecionInString, Model.SelectListOfQueryOrderBySettingCollecionInString, new Dictionary<string, Object> { { "onchange", "this.form.submit();" } })
+            </div>
+            <div class="col-sm-4">@Model.QueryPagingSetting.GetPagingInformationString()</div>
+        </div>
+    </p>
     <div class="btn-group btn-group-justified">
         <div class="btn-group" role="group">
             <button class="btn btn-primary button-Search" type="submit" name="SearchToolBarUp">@Framework.Resources.UIStringResource.SearchAlternativeText</button>
@@ -74,22 +80,22 @@
     <div class="default">
         <div>
             @Html.PagedListPager(Url
-        , new PagerHtmlRenderer(
-                //Constructor mandatory values
-                currentPageNumber: Model.QueryPagingSetting.CurrentPage,
-                pageSize: Model.QueryPagingSetting.PageSize,
-                totalNumberOfItems: Model.QueryPagingSetting.CountOfRecords,
-                actionName: "WPCommonOfBuildEventCode",
-                controllerName: "BuildEventCode",
-                routeValues: new RouteValueDictionary() { { "currentPage", "" } },
-                pageRouteValueName: "currentPage")
-        {
-            //Properties
-            PreviousLinkInnerHtml = "<strong>Previous</strong>",
-            NextLinkInnerHtml = "<strong>Next<strong>",
-            FirstLinkInnerHtml = "<strong>First</strong>",
-            LastLinkInnerHtml = "<strong>Last</strong>"
-        });
+                , new PagerHtmlRenderer(
+                        //Constructor mandatory values
+                        currentPageNumber: Model.QueryPagingSetting.CurrentPage,
+                        pageSize: Model.QueryPagingSetting.PageSize,
+                        totalNumberOfItems: Model.QueryPagingSetting.CountOfRecords,
+                        actionName: "WPCommonOfBuildEventCode",
+                        controllerName: "BuildEventCode",
+                        routeValues: new RouteValueDictionary() { { "currentPage", "" } },
+                        pageRouteValueName: "currentPage")
+                {
+                    //Properties
+                    PreviousLinkInnerHtml = "<strong>Previous</strong>",
+                    NextLinkInnerHtml = "<strong>Next<strong>",
+                    FirstLinkInnerHtml = "<strong>First</strong>",
+                    LastLinkInnerHtml = "<strong>Last</strong>"
+                });
         </div>
         <div>
             <table id="MasterDataControl0" name="MasterDataControl0" class="table">
