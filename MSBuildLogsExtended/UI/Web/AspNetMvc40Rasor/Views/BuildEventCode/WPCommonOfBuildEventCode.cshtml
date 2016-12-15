@@ -84,7 +84,7 @@
     <div class="default">
         @Html.PagedListPager(pagedResult, currentPage => Url.Action("WPCommonOfBuildEventCode", new { currentPage = currentPage }), PagedListRenderOptions.OnlyShowFivePagesAtATime)
         <div>
-            <table id="MasterDataControl0" name="MasterDataControl0" class="table">
+            <table id="MasterDataControl0" name="MasterDataControl0" class="table table-striped">
                 <tr>
                     <th class=""></th>
                     <th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.EventCode</th>
