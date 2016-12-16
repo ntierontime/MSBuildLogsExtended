@@ -13,8 +13,11 @@ namespace Framework.Mvc
             : base()
         {
             this.StatusOfResult = CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady;
+            this.UIActionStatusMessage = new UIActionStatusMessage();
         }
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfResult { get; set; }
         public string StatusMessageOfResult { get; set; }
+
+        public UIActionStatusMessage UIActionStatusMessage { get; set; }
     }
 }

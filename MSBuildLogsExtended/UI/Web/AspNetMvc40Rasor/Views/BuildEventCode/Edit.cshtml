@@ -1,40 +1,31 @@
-@model MSBuildLogsExtended.DataSourceEntities.BuildEventCode
-@{
-    ViewBag.Title = @Framework.Resources.UIStringResource.EditAlternativeText;
-}
+@model MSBuildLogsExtended.AspNetMvc40ViewModel.ItemViewModelBuildEventCode
 @section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h2>@ViewBag.Title.</h2>
-                <h4>@ViewBag.Message</h4>
-            </hgroup>
-        </div>
-    </section>
+    <hgroup class="title">
+        <h2>@ViewBag.Title.</h2>
+        <h4>@ViewBag.Message</h4>
+    </hgroup>
 }
-@using (Html.BeginForm()) {
+@using (Html.BeginForm("Edit", "BuildEventCode", FormMethod.Post, new { @class = "form-horizontal" })) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
-    <fieldset>
-        <legend>@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.BuildEventCode.</legend>
-@Html.HiddenFor(model => model.Id)        <div class="editor-label">
-			@Html.LabelFor(model => model.EventCode)
+    <legend>@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.BuildEventCode.</legend>@Html.HiddenFor(model => model.Item.Id)
+    <div class="form-group">
+        @Html.LabelFor(model => model.Item.EventCode, new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-10">
+            @Html.EditorFor(model => model.Item.EventCode, new { @class = "form-control" })
         </div>
-        <div class="editor-field">
-			@Html.EditorFor(model => model.EventCode)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Item.Description, new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-10">
+            @Html.EditorFor(model => model.Item.Description, new { @class = "form-control" })
         </div>
-        <div class="editor-label">
-			@Html.LabelFor(model => model.Description)
-        </div>
-        <div class="editor-field">
-			@Html.EditorFor(model => model.Description)
-        </div>
-        <div class="buttonContainer">
-            <input type="submit" value="@Framework.Resources.UIStringResource.SaveAlternativeText" class="button" />
-			<input type="button" value="@Framework.Resources.UIStringResource.RefreshAlternativeText" class="button" onclick="location.href='@Url.Action("Edit", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Id })'" />
-			<input type="button" value="@Framework.Resources.UIStringResource.BackAlternativeText" class="button" onclick="location.href='@Url.Action("Index")'" />
-        </div>
-    </fieldset>
+    </div>
+    <div class="btn-group" role="group">
+        <input class="btn btn-default" role="button" type="submit" value="@Framework.Resources.UIStringResource.SaveAlternativeText" />
+        <input class="btn btn-default" role="button" type="button" value="@Framework.Resources.UIStringResource.RefreshAlternativeText" onclick="location.href='@Url.Action("Edit", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })'" />
+        <input class="btn btn-default" role="button" type="button" value="@Framework.Resources.UIStringResource.BackAlternativeText" onclick="location.href='@Url.Action("Index")'" />
+    </div>
 }
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryui")
