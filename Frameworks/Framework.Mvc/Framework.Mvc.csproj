@@ -50,6 +50,7 @@
     <Compile Include="ViewModelBaseWithResultAndUIElement.cs" />
     <Compile Include="ViewModels\MultipleFileUploadModel.cs" />
     <Compile Include="ViewModels\ViewModelEntityRelatedBase.cs" />
+    <Compile Include="ViewModels\ViewModelItemBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj">

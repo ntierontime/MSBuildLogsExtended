@@ -19,142 +19,142 @@
 <article>
 </article>
 <aside>
-<label class="no-toggle-box">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog</label>
-<div class="default">
-@if (Model.StatusOfMasterEntity == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-{ // Item
-<div class="aside-buttonContainer">
-<input onclick="location.href='@Url.Action("Edit", "BuildLog", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })'" class="aside-button aside-button-Edit" type="button" name="EditToolBarUp" value="@Framework.Resources.UIStringResource.EditAlternativeText" />
-<input onclick="location.href='@Url.Action("AddNew", "BuildLog")'" class="aside-button aside-button-AddNew" type="button" name="AddNewToolBarUp" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
-<input onclick="location.href='@Url.Action("Copy", "BuildLog", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })'" class="aside-button aside-button-Copy" type="button" name="CopyToolBarUp" value="@Framework.Resources.UIStringResource.CopyAlternativeText" />
-<input onclick="location.href='@Url.Action("Details", "BuildLog", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
-<input onclick="location.href='@Url.Action("Index", "BuildLog")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
-</div>
-<div class="aside-display-label">
-			@Html.LabelFor(model => model.MasterEntity.Build_B1_1_Name)
-        </div>
-        <div class="aside-display-field">
-@Html.ActionLink(Model.MasterEntity.Build_B1_1_Name, "WPEntityRelatedOfBuild", "Build", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.BuildId }, null)
-        </div>
-<div class="aside-display-label">
-			@Html.LabelFor(model => model.MasterEntity.Id)
-        </div>
-        <div class="aside-display-field">
-			@Html.DisplayFor(model => model.MasterEntity.Id)
-        </div>
-<div class="aside-display-label">
-			@Html.LabelFor(model => model.MasterEntity.Solution_S1_1_Name)
-        </div>
-        <div class="aside-display-field">
-@Html.ActionLink(Model.MasterEntity.Solution_S1_1_Name, "WPEntityRelatedOfSolution", "Solution", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Solution_S1_1Id }, null)
-        </div>
-<div class="aside-display-label">
-			@Html.LabelFor(model => model.MasterEntity.BuildEventCode_B2_1_Name)
-        </div>
-        <div class="aside-display-field">
-@Html.ActionLink(Model.MasterEntity.BuildEventCode_B2_1_Name, "WPEntityRelatedOfBuildEventCode", "BuildEventCode", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.BuildEventCodeId }, null)
-        </div>
-<div class="aside-display-label">
-			@Html.LabelFor(model => model.MasterEntity.Message)
-        </div>
-        <div class="aside-display-field">
-			@Html.DisplayFor(model => model.MasterEntity.Message)
-        </div>
-<div class="aside-display-label">
-			@Html.LabelFor(model => model.MasterEntity.EventTime)
-        </div>
-        <div class="aside-display-field">
-			@Html.DisplayFor(model => model.MasterEntity.EventTime)
-        </div>
-@Html.HiddenFor(model => model.MasterEntity.Solution_S1_1Id)
-@Html.HiddenFor(model => model.MasterEntity.BuildId)
-@Html.HiddenFor(model => model.MasterEntity.BuildEventCodeId)
-}
-@if (Model.StatusOfMasterEntity != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfMasterEntity != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-{
-<div class="aside-buttonContainer">
-<input onclick="location.href='@Url.Action("AddNew", "BuildLog")'" class="aside-button aside-button-AddNew" type="button" name="AddNewToolBarUp" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
-<input onclick="location.href='@Url.Action("WPEntityRelatedOfBuildLog", "BuildLog", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
-<input onclick="location.href='@Url.Action("Index", "BuildLog")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
-</div>
-<div class="error-label">@Model.StatusMessageOfMasterEntity</div>
-}
-</div>
-<input class="toggle-box" id="header1" type="checkbox" />
-<label for="header1">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Build</label>
-<div class="default">
-@if (Model.StatusOfBuild_B1_1 == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-{ // Item
-<div class="aside-buttonContainer">
-<input onclick="location.href='@Url.Action("Index", "Build")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
-<input onclick="location.href='@Url.Action("WPEntityRelatedOfBuild", "Build", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Build_B1_1.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
-</div>
-<div class="aside-display-label">
-			@Html.LabelFor(model => model.Build_B1_1.Id)
-        </div>
-        <div class="aside-display-field">
-			@Html.DisplayFor(model => model.Build_B1_1.Id)
-        </div>
-}
-@if (Model.StatusOfBuild_B1_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfBuild_B1_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-{
-<div class="aside-buttonContainer">
-<input onclick="location.href='@Url.Action("Index", "Build")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
-<input onclick="location.href='@Url.Action("WPEntityRelatedOfBuild", "Build", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Build_B1_1.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
-</div>
-<div class="error-label">@Model.StatusMessageOfBuild_B1_1</div>
-}
-</div>
-<input class="toggle-box" id="header2" type="checkbox" />
-<label for="header2">@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Solution</label>
-<div class="default">
-@if (Model.StatusOfSolution_S1_1 == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-{ // Item
-<div class="aside-buttonContainer">
-<input onclick="location.href='@Url.Action("Index", "Solution")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
-<input onclick="location.href='@Url.Action("WPEntityRelatedOfSolution", "Solution", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_S1_1.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
-</div>
-<div class="aside-display-label">
-			@Html.LabelFor(model => model.Solution_S1_1.Id)
-        </div>
-        <div class="aside-display-field">
-			@Html.DisplayFor(model => model.Solution_S1_1.Id)
-        </div>
-}
-@if (Model.StatusOfSolution_S1_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfSolution_S1_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-{
-<div class="aside-buttonContainer">
-<input onclick="location.href='@Url.Action("Index", "Solution")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
-<input onclick="location.href='@Url.Action("WPEntityRelatedOfSolution", "Solution", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_S1_1.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
-</div>
-<div class="error-label">@Model.StatusMessageOfSolution_S1_1</div>
-}
-</div>
-<input class="toggle-box" id="header3" type="checkbox" />
-<label for="header3">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.BuildEventCode</label>
-<div class="default">
-@if (Model.StatusOfBuildEventCode_B2_1 == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-{ // Item
-<div class="aside-buttonContainer">
-<input onclick="location.href='@Url.Action("Index", "BuildEventCode")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
-<input onclick="location.href='@Url.Action("WPEntityRelatedOfBuildEventCode", "BuildEventCode", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.BuildEventCode_B2_1.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
-</div>
-<div class="aside-display-label">
-			@Html.LabelFor(model => model.BuildEventCode_B2_1.Id)
-        </div>
-        <div class="aside-display-field">
-			@Html.DisplayFor(model => model.BuildEventCode_B2_1.Id)
-        </div>
-}
-@if (Model.StatusOfBuildEventCode_B2_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfBuildEventCode_B2_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-{
-<div class="aside-buttonContainer">
-<input onclick="location.href='@Url.Action("Index", "BuildEventCode")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
-<input onclick="location.href='@Url.Action("WPEntityRelatedOfBuildEventCode", "BuildEventCode", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.BuildEventCode_B2_1.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
-</div>
-<div class="error-label">@Model.StatusMessageOfBuildEventCode_B2_1</div>
-}
-</div>
+    <label class="no-toggle-box">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog</label>
+    <div class="default">
+        @if (Model.StatusOfMasterEntity == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+        { // Item
+            <div class="aside-buttonContainer">
+                <input onclick="location.href='@Url.Action("Edit", "BuildLog", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })'" class="aside-button aside-button-Edit" type="button" name="EditToolBarUp" value="@Framework.Resources.UIStringResource.EditAlternativeText" />
+                <input onclick="location.href='@Url.Action("AddNew", "BuildLog")'" class="aside-button aside-button-AddNew" type="button" name="AddNewToolBarUp" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
+                <input onclick="location.href='@Url.Action("Copy", "BuildLog", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })'" class="aside-button aside-button-Copy" type="button" name="CopyToolBarUp" value="@Framework.Resources.UIStringResource.CopyAlternativeText" />
+                <input onclick="location.href='@Url.Action("Details", "BuildLog", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+                <input onclick="location.href='@Url.Action("Index", "BuildLog")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+            </div>
+            <div class="aside-display-label">
+                @Html.LabelFor(model => model.MasterEntity.Build_B1_1_Name)
+            </div>
+            <div class="aside-display-field">
+                @Html.ActionLink(Model.MasterEntity.Build_B1_1_Name, "WPEntityRelatedOfBuild", "Build", new { isToCompareIdByIdentifierOftOfByIdentifier = true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.BuildId }, null)
+            </div>
+            <div class="aside-display-label">
+                @Html.LabelFor(model => model.MasterEntity.Id)
+            </div>
+            <div class="aside-display-field">
+                @Html.DisplayFor(model => model.MasterEntity.Id)
+            </div>
+            <div class="aside-display-label">
+                @Html.LabelFor(model => model.MasterEntity.Solution_S1_1_Name)
+            </div>
+            <div class="aside-display-field">
+                @Html.ActionLink(Model.MasterEntity.Solution_S1_1_Name, "WPEntityRelatedOfSolution", "Solution", new { isToCompareIdByIdentifierOftOfByIdentifier = true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Solution_S1_1Id }, null)
+            </div>
+            <div class="aside-display-label">
+                @Html.LabelFor(model => model.MasterEntity.BuildEventCode_B2_1_Name)
+            </div>
+            <div class="aside-display-field">
+                @Html.ActionLink(Model.MasterEntity.BuildEventCode_B2_1_Name, "WPEntityRelatedOfBuildEventCode", "BuildEventCode", new { isToCompareIdByIdentifierOftOfByIdentifier = true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.BuildEventCodeId }, null)
+            </div>
+            <div class="aside-display-label">
+                @Html.LabelFor(model => model.MasterEntity.Message)
+            </div>
+            <div class="aside-display-field">
+                @Html.DisplayFor(model => model.MasterEntity.Message)
+            </div>
+            <div class="aside-display-label">
+                @Html.LabelFor(model => model.MasterEntity.EventTime)
+            </div>
+            <div class="aside-display-field">
+                @Html.DisplayFor(model => model.MasterEntity.EventTime)
+            </div>
+            @Html.HiddenFor(model => model.MasterEntity.Solution_S1_1Id)
+            @Html.HiddenFor(model => model.MasterEntity.BuildId)
+            @Html.HiddenFor(model => model.MasterEntity.BuildEventCodeId)
+        }
+        @if (Model.StatusOfMasterEntity != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfMasterEntity != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+        {
+            <div class="aside-buttonContainer">
+                <input onclick="location.href='@Url.Action("AddNew", "BuildLog")'" class="aside-button aside-button-AddNew" type="button" name="AddNewToolBarUp" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
+                <input onclick="location.href='@Url.Action("WPEntityRelatedOfBuildLog", "BuildLog", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+                <input onclick="location.href='@Url.Action("Index", "BuildLog")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+            </div>
+            <div class="error-label">@Model.StatusMessageOfMasterEntity</div>
+        }
+    </div>
+    <input class="toggle-box" id="header1" type="checkbox" />
+    <label for="header1">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Build</label>
+    <div class="default">
+        @if (Model.StatusOfBuild_B1_1 == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+        { // Item
+            <div class="aside-buttonContainer">
+                <input onclick="location.href='@Url.Action("Index", "Build")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+                <input onclick="location.href='@Url.Action("WPEntityRelatedOfBuild", "Build", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Build_B1_1.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+            </div>
+            <div class="aside-display-label">
+                @Html.LabelFor(model => model.Build_B1_1.Id)
+            </div>
+            <div class="aside-display-field">
+                @Html.DisplayFor(model => model.Build_B1_1.Id)
+            </div>
+        }
+        @if (Model.StatusOfBuild_B1_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfBuild_B1_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+        {
+            <div class="aside-buttonContainer">
+                <input onclick="location.href='@Url.Action("Index", "Build")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+                <input onclick="location.href='@Url.Action("WPEntityRelatedOfBuild", "Build", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Build_B1_1.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+            </div>
+            <div class="error-label">@Model.StatusMessageOfBuild_B1_1</div>
+        }
+    </div>
+    <input class="toggle-box" id="header2" type="checkbox" />
+    <label for="header2">@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Solution</label>
+    <div class="default">
+        @if (Model.StatusOfSolution_S1_1 == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+        { // Item
+            <div class="aside-buttonContainer">
+                <input onclick="location.href='@Url.Action("Index", "Solution")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+                <input onclick="location.href='@Url.Action("WPEntityRelatedOfSolution", "Solution", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_S1_1.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+            </div>
+            <div class="aside-display-label">
+                @Html.LabelFor(model => model.Solution_S1_1.Id)
+            </div>
+            <div class="aside-display-field">
+                @Html.DisplayFor(model => model.Solution_S1_1.Id)
+            </div>
+        }
+        @if (Model.StatusOfSolution_S1_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfSolution_S1_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+        {
+            <div class="aside-buttonContainer">
+                <input onclick="location.href='@Url.Action("Index", "Solution")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+                <input onclick="location.href='@Url.Action("WPEntityRelatedOfSolution", "Solution", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_S1_1.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+            </div>
+            <div class="error-label">@Model.StatusMessageOfSolution_S1_1</div>
+        }
+    </div>
+    <input class="toggle-box" id="header3" type="checkbox" />
+    <label for="header3">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.BuildEventCode</label>
+    <div class="default">
+        @if (Model.StatusOfBuildEventCode_B2_1 == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+        { // Item
+            <div class="aside-buttonContainer">
+                <input onclick="location.href='@Url.Action("Index", "BuildEventCode")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+                <input onclick="location.href='@Url.Action("WPEntityRelatedOfBuildEventCode", "BuildEventCode", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.BuildEventCode_B2_1.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+            </div>
+            <div class="aside-display-label">
+                @Html.LabelFor(model => model.BuildEventCode_B2_1.Id)
+            </div>
+            <div class="aside-display-field">
+                @Html.DisplayFor(model => model.BuildEventCode_B2_1.Id)
+            </div>
+        }
+        @if (Model.StatusOfBuildEventCode_B2_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfBuildEventCode_B2_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+        {
+            <div class="aside-buttonContainer">
+                <input onclick="location.href='@Url.Action("Index", "BuildEventCode")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+                <input onclick="location.href='@Url.Action("WPEntityRelatedOfBuildEventCode", "BuildEventCode", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.BuildEventCode_B2_1.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+            </div>
+            <div class="error-label">@Model.StatusMessageOfBuildEventCode_B2_1</div>
+        }
+    </div>
 </aside>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryui")

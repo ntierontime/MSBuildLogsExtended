@@ -180,72 +180,65 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
 
         public ActionResult Details(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier)
         {
-            ViewBag.Message = "this is details";
+            MSBuildLogsExtended.AspNetMvc40ViewModel.ItemViewModelBuildEventCode vm = new ItemViewModelBuildEventCode();
+            vm.ContentData.Title = Framework.Resources.UIStringResource.DetailsAlternativeText;
+            vm.ContentData.Summary = "Details of MSBuildLogsExtended.DataSourceEntities.BuildEventCode";
 
-            log.Info(string.Format("{0}: Details", Framework.LoggingOptions.UI_Process_Started.ToString()));
-
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuildEventCode _Response =
-                MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuildEventCode.GetMessageOfEntityOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
-
-            if (_Response.Message != null && _Response.Message.Count > 0)
+            try
             {
-                log.Info(string.Format("{0}: Details", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
-                return View(_Response.Message[0]);
+                log.Info(string.Format("{0}: Details", Framework.LoggingOptions.UI_Process_Started.ToString()));
+
+                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuildEventCode _Response =
+                    MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuildEventCode.GetMessageOfEntityOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
+
+                if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || _Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
+                {
+                    vm.Item = _Response.Message[0];
+
+                    log.Info(string.Format("{0}: Details", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
+                }
+                else
+                {
+                    vm.StatusOfResult = _Response.BusinessLogicLayerResponseStatus;
+                    vm.StatusMessageOfResult = _Response.ServerErrorMessage;
+                    log.Error(string.Format("{0}: Details", Framework.LoggingOptions.UI_Process_Failed.ToString()));
+                }
             }
-            else
+            catch(Exception ex)
             {
-                log.Error(string.Format("{0}: Details", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-                return View();
+                vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
+                vm.StatusMessageOfResult = ex.Message;
+                log.Error(string.Format("{0}: Details, {1}", Framework.LoggingOptions.UI_Process_Failed.ToString(), ex.Message));
             }
+
+            return View(vm);
         }
 
-		#endregion ActionResult Details(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier)
+        #endregion ActionResult Details(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier)
 
-		#region ActionResult AddNew()
+        #region ActionResult AddNew()
 
         //
         // GET: /MSBuildLogsExtended.DataSourceEntities.BuildEventCode/Create
         public ActionResult AddNew()
         {
-            ViewBag.Message = "to AddNew a new MSBuildLogsExtended.DataSourceEntities.BuildEventCode";
+            ItemViewModelBuildEventCode vm = PopulateAddNewViewModel();
 
-
-
-            MSBuildLogsExtended.DataSourceEntities.BuildEventCode entity;
-            if (TempData.ContainsKey(TempDataKey_BuildEventCodeController_Copy) && TempData[TempDataKey_BuildEventCodeController_Copy] != null)
-            {
-				try
-				{
-					entity = (MSBuildLogsExtended.DataSourceEntities.BuildEventCode)TempData[TempDataKey_BuildEventCodeController_Copy];
-					TempData.Keep(TempDataKey_BuildEventCodeController_Copy);
-				}
-				catch
-				{
-	                entity = new MSBuildLogsExtended.DataSourceEntities.BuildEventCode();
-				}
-            }
-            else
-            {
-                entity = new MSBuildLogsExtended.DataSourceEntities.BuildEventCode();
-            }
-
-            return View(entity);
-        } 
+            return View(vm);
+        }
 
         //
         // POST: /MSBuildLogsExtended.DataSourceEntities.BuildEventCode/AddNew
         [HttpPost]
-        public ActionResult AddNew(MSBuildLogsExtended.DataSourceEntities.BuildEventCode input)
+        public ActionResult AddNew(MSBuildLogsExtended.AspNetMvc40ViewModel.ItemViewModelBuildEventCode input)
         {
             try
             {
                 log.Info(string.Format("{0}: AddNew", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-				MSBuildLogsExtended.DataSourceEntities.BuildEventCode entity = input;
+				MSBuildLogsExtended.DataSourceEntities.BuildEventCode entity = input.Item;
 
                 var _Response = MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuildEventCode.InsertEntity(entity);
-
-
 
 				TempData[TempDataKey_BuildEventCodeController_Copy] = null;
                 TempData.Remove(TempDataKey_BuildEventCodeController_Copy);
@@ -253,12 +246,44 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
 
                 return RedirectToAction("Index");
             }
-            catch
+            catch(Exception ex)
             {
-                return View(new MSBuildLogsExtended.DataSourceEntities.BuildEventCode());
+                ItemViewModelBuildEventCode vm = PopulateAddNewViewModel();
+                vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
+                vm.StatusMessageOfResult = ex.Message;
+                log.Error(string.Format("{0}: AddNew: {1}", Framework.LoggingOptions.Business_Logic_Layer_Process_Failed.ToString(), ex.Message));
+                return View(vm);
             }
         }
-        
+
+        private ItemViewModelBuildEventCode PopulateAddNewViewModel()
+        {
+            MSBuildLogsExtended.AspNetMvc40ViewModel.ItemViewModelBuildEventCode vm = new ItemViewModelBuildEventCode();
+            vm.ContentData.Title = Framework.Resources.UIStringResource.AddNewAlternativeText;
+            vm.ContentData.Summary = "to AddNew a new MSBuildLogsExtended.DataSourceEntities.BuildEventCode";
+
+            MSBuildLogsExtended.DataSourceEntities.BuildEventCode entity;
+            if (TempData.ContainsKey(TempDataKey_BuildEventCodeController_Copy) && TempData[TempDataKey_BuildEventCodeController_Copy] != null)
+            {
+                try
+                {
+                    entity = (MSBuildLogsExtended.DataSourceEntities.BuildEventCode)TempData[TempDataKey_BuildEventCodeController_Copy];
+                    TempData.Keep(TempDataKey_BuildEventCodeController_Copy);
+                }
+                catch
+                {
+                    entity = new MSBuildLogsExtended.DataSourceEntities.BuildEventCode();
+                }
+            }
+            else
+            {
+                entity = new MSBuildLogsExtended.DataSourceEntities.BuildEventCode();
+            }
+
+            vm.Item = entity;
+            return vm;
+        }
+
         public const string TempDataKey_BuildEventCodeController_Copy = "TempDataKey_BuildEventCodeController_Copy";
         public ActionResult Copy(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier)
         {

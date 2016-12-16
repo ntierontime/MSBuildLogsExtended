@@ -12,7 +12,11 @@ namespace Framework.EntityContracts
             : base()
         {
             this.SearchStatus = SearchStatus.Unknown;
+            this.ContentData = new Framework.EntityContracts.ContentData();
         }
+
+        public ContentData ContentData { get; set; }
+
         public TSearchCriteria Criteria { get; set; }
         public TItem Item { get; set; }
         public Framework.EntityContracts.SearchStatus SearchStatus { get; set; }

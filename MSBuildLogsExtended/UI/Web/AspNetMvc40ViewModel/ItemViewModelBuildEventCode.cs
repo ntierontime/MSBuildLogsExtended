@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MSBuildLogsExtended.AspNetMvc40ViewModel
 {
-    public class ItemViewModelBuildEventCode : Framework.EntityContracts.ViewModelItemBase<MSBuildLogsExtended.DataSourceEntities.BuildEventCodeIdentifier, MSBuildLogsExtended.DataSourceEntities.BuildEventCode>
+    public class ItemViewModelBuildEventCode : Framework.Mvc.ViewModelItemBase<MSBuildLogsExtended.DataSourceEntities.BuildEventCodeIdentifier, MSBuildLogsExtended.DataSourceEntities.BuildEventCode>
     {
 
     }
