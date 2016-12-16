@@ -12,8 +12,8 @@
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
-<div class="btn-group">
-    <input type="file" name="file" id="file" />
-    <input class="btn btn-default" role="button" type="submit" name="Import" value="@Framework.Resources.UIStringResource.ImportAlternativeText" />
-</div>
+    <div class="btn-group">
+        <input type="file" name="file" id="file" />
+        <input class="btn btn-default" role="button" type="submit" name="Import" value="@Framework.Resources.UIStringResource.ImportAlternativeText" />
+    </div>
 }
