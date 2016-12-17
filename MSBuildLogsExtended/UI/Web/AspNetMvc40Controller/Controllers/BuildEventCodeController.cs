@@ -327,23 +327,6 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
             vm.ContentData.Summary = "Edit MSBuildLogsExtended.DataSourceEntities.BuildEventCode";
 
             return View(vm);
-
-            //log.Info(string.Format("{0}: Edit", Framework.LoggingOptions.UI_Process_Started.ToString()));
-
-
-
-            //MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuildEventCode _Response =
-            //    MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuildEventCode.GetMessageOfEntityOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
-            //if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
-            //{
-            //    log.Info(string.Format("{0}: Edit", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
-            //    return View(_Response.Message[0]);
-            //}
-            //else
-            //{
-            //    log.Error(string.Format("{0}: Edit", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-            //    return View(new MSBuildLogsExtended.DataSourceEntities.BuildEventCode());
-            //}
         }
 
         //
@@ -387,41 +370,8 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
             Framework.UIAction uiAction = Framework.UIAction.Delete;
             ItemViewModelBuildEventCode vm = PopulateItemViewModel(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
-            vm.ContentData.Summary = "Details of MSBuildLogsExtended.DataSourceEntities.BuildEventCode";
+            vm.ContentData.Summary = "Delete MSBuildLogsExtended.DataSourceEntities.BuildEventCode";
             return View(vm);
-
-            //MSBuildLogsExtended.AspNetMvc40ViewModel.ItemViewModelBuildEventCode vm = new ItemViewModelBuildEventCode();
-            //vm.ContentData.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
-            //vm.ContentData.Summary = "Details of MSBuildLogsExtended.DataSourceEntities.BuildEventCode";
-
-            //try
-            //{
-            //    log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Started.ToString()));
-            //    MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuildEventCode _Response =
-            //        MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuildEventCode.GetMessageOfEntityOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
-
-            //    if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || _Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
-            //    {
-            //        vm.Item = _Response.Message[0];
-
-            //        log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Succeeded.ToString()));
-            //    }
-            //    else
-            //    {
-            //        vm.StatusOfResult = _Response.BusinessLogicLayerResponseStatus;
-            //        vm.StatusMessageOfResult = _Response.ServerErrorMessage;
-
-            //        log.Error(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
-            //    vm.StatusMessageOfResult = ex.Message;
-            //    log.Error(string.Format("{0}: Details, {1}", Framework.LoggingOptions.UI_Process_Failed.ToString(), ex.Message));
-            //}
-
-            //return View(vm);
         }
 		
         //
@@ -436,11 +386,11 @@ namespace MSBuildLogsExtended.AspNetMvc40Controller
 				if (_Response)
                 {
                     MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuildEventCode.DeleteEntity(input.Item);
-					log.Info(string.Format("{0}: DeleteByIdentifier", Framework.LoggingOptions.UI_Process_Ended.ToString()));
+					log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Ended.ToString()));
                 }
 				else
 				{
-					log.Warn(string.Format("{0}: DeleteByIdentifier, Entity not exists", Framework.LoggingOptions.UI_Process_Ended.ToString()));
+					log.Warn(string.Format("{0}: Delete, Entity not exists", Framework.LoggingOptions.UI_Process_Ended.ToString()));
 				}
 
                 return RedirectToAction("Index");

@@ -1,8 +1,8 @@
 @model MSBuildLogsExtended.AspNetMvc40ViewModel.ItemViewModelBuildEventCode
 @section featured {
     <hgroup class="title">
-        <h2>@ViewBag.Title.</h2>
-        <h4>@ViewBag.Message</h4>
+        <h2>@Model.ContentData.Title.</h2>
+        <h4>@Model.ContentData.Summary</h4>
     </hgroup>
 }
 @using (Html.BeginForm("Edit", "BuildEventCode", FormMethod.Post, new { @class = "form-horizontal" })) {
@@ -28,13 +28,7 @@
     </div>
 }
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryui")
-    @Scripts.Render("~/bundles/jqueryval")
-    @Scripts.Render("~/bundles/knockout")
-    @Scripts.Render("~/bundles/dataTables")
-    @Scripts.Render("~/bundles/bootstrap")
     <script type="text/javascript">
-        //http://www.softfinity.com/blog/using-ajax-with-knockout-js-and-asp-net-mvc-4-to-load-select-drop-down-options/
         $(document).ready($(function() {
         }));
         $(document).ready($(function() {
