@@ -226,6 +226,9 @@
   <data name="MessageValueValidationExpression" xml:space="preserve">
     <value>Please input Message validation regular expression</value>
   </data>
+  <data name="The_length_of_Message_should_be_0_to_1500" xml:space="preserve">
+    <value>The length of Message should be 0 to 1500</value>
+  </data>
   <data name="EventTimeDescription" xml:space="preserve">
     <value>Event Time</value>
   </data>
@@ -301,14 +304,14 @@
   <data name="Value_Validation_Error_Message_of_property_PubDate_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
     <value>Value Validation Error Message of property PubDate of MSBuildLogsExtended.BuildLog</value>
   </data>
-  <data name="Build_B1_1_Name" xml:space="preserve">
+  <data name="Build_1_Name" xml:space="preserve">
     <value>Build</value>
   </data>
-  <data name="Required_Field_Error_Message_of_property_Build_B1_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
-    <value>Required Field Error Message of property Build_B1_1_Name of MSBuildLogsExtended.BuildLog</value>
+  <data name="Required_Field_Error_Message_of_property_Build_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Build_1_Name of MSBuildLogsExtended.BuildLog</value>
   </data>
-  <data name="Value_Validation_Error_Message_of_property_Build_B1_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
-    <value>Value Validation Error Message of property Build_B1_1_Name of MSBuildLogsExtended.BuildLog</value>
+  <data name="Value_Validation_Error_Message_of_property_Build_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Build_1_Name of MSBuildLogsExtended.BuildLog</value>
   </data>
   <data name="Required_Field_Error_Message_of_property_Id_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
     <value>Required Field Error Message of property Id of MSBuildLogsExtended.BuildLog</value>
@@ -316,32 +319,32 @@
   <data name="Value_Validation_Error_Message_of_property_Id_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
     <value>Value Validation Error Message of property Id of MSBuildLogsExtended.BuildLog</value>
   </data>
-  <data name="Solution_S1_1Id" xml:space="preserve">
+  <data name="Solution_1Id" xml:space="preserve">
     <value>Solution</value>
   </data>
-  <data name="Required_Field_Error_Message_of_property_Solution_S1_1Id_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
-    <value>Required Field Error Message of property Solution_S1_1Id of MSBuildLogsExtended.BuildLog</value>
+  <data name="Required_Field_Error_Message_of_property_Solution_1Id_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Solution_1Id of MSBuildLogsExtended.BuildLog</value>
   </data>
-  <data name="Value_Validation_Error_Message_of_property_Solution_S1_1Id_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
-    <value>Value Validation Error Message of property Solution_S1_1Id of MSBuildLogsExtended.BuildLog</value>
+  <data name="Value_Validation_Error_Message_of_property_Solution_1Id_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Solution_1Id of MSBuildLogsExtended.BuildLog</value>
   </data>
-  <data name="Solution_S1_1_Name" xml:space="preserve">
+  <data name="Solution_1_Name" xml:space="preserve">
     <value>Solution</value>
   </data>
-  <data name="Required_Field_Error_Message_of_property_Solution_S1_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
-    <value>Required Field Error Message of property Solution_S1_1_Name of MSBuildLogsExtended.BuildLog</value>
+  <data name="Required_Field_Error_Message_of_property_Solution_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property Solution_1_Name of MSBuildLogsExtended.BuildLog</value>
   </data>
-  <data name="Value_Validation_Error_Message_of_property_Solution_S1_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
-    <value>Value Validation Error Message of property Solution_S1_1_Name of MSBuildLogsExtended.BuildLog</value>
+  <data name="Value_Validation_Error_Message_of_property_Solution_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property Solution_1_Name of MSBuildLogsExtended.BuildLog</value>
   </data>
-  <data name="BuildEventCode_B2_1_Name" xml:space="preserve">
+  <data name="BuildEventCode_1_Name" xml:space="preserve">
     <value>Build Event Code</value>
   </data>
-  <data name="Required_Field_Error_Message_of_property_BuildEventCode_B2_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
-    <value>Required Field Error Message of property BuildEventCode_B2_1_Name of MSBuildLogsExtended.BuildLog</value>
+  <data name="Required_Field_Error_Message_of_property_BuildEventCode_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Required Field Error Message of property BuildEventCode_1_Name of MSBuildLogsExtended.BuildLog</value>
   </data>
-  <data name="Value_Validation_Error_Message_of_property_BuildEventCode_B2_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
-    <value>Value Validation Error Message of property BuildEventCode_B2_1_Name of MSBuildLogsExtended.BuildLog</value>
+  <data name="Value_Validation_Error_Message_of_property_BuildEventCode_1_Name_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
+    <value>Value Validation Error Message of property BuildEventCode_1_Name of MSBuildLogsExtended.BuildLog</value>
   </data>
   <data name="Required_Field_Error_Message_of_property_BuildId_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
     <value>Required Field Error Message of property BuildId of MSBuildLogsExtended.BuildLog</value>
@@ -376,77 +379,59 @@
   <data name="Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildLogsExtended_BuildLog" xml:space="preserve">
     <value>Value Validation Error Message of property CountPerFK of MSBuildLogsExtended.BuildLog</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_B1_1OfCommon" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon" xml:space="preserve">
     <value>Build</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_B1_1OfCommon" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon" xml:space="preserve">
     <value>Description of Id of Build</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_B1_1OfCommon" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon" xml:space="preserve">
     <value>Tooltip of Id of Build</value>
   </data>
-  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuild_B1_1OfCommon" xml:space="preserve">
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuild_1OfCommon" xml:space="preserve">
     <value>Id of Build</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuild_B1_1OfCommon" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuild_1OfCommon" xml:space="preserve">
     <value>Description of Id of Build</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuild_B1_1OfCommon" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuild_1OfCommon" xml:space="preserve">
     <value>Tooltip of Id of Build</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon" xml:space="preserve">
     <value>Solution</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon" xml:space="preserve">
     <value>Description of Id of Solution</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon" xml:space="preserve">
     <value>Tooltip of Id of Solution</value>
   </data>
-  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" xml:space="preserve">
     <value>Id of Solution</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" xml:space="preserve">
     <value>Description of Id of Solution</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" xml:space="preserve">
     <value>Tooltip of Id of Solution</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_B2_1OfCommon" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_1OfCommon" xml:space="preserve">
     <value>BuildEventCode</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_B2_1OfCommon" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_1OfCommon" xml:space="preserve">
     <value>Description of Id of BuildEventCode</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_B2_1OfCommon" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_1OfCommon" xml:space="preserve">
     <value>Tooltip of Id of BuildEventCode</value>
   </data>
-  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuildEventCode_B2_1OfCommon" xml:space="preserve">
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuildEventCode_1OfCommon" xml:space="preserve">
     <value>Id of BuildEventCode</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuildEventCode_B2_1OfCommon" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuildEventCode_1OfCommon" xml:space="preserve">
     <value>Description of Id of BuildEventCode</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuildEventCode_B2_1OfCommon" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfBuildEventCode_1OfCommon" xml:space="preserve">
     <value>Tooltip of Id of BuildEventCode</value>
-  </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon" xml:space="preserve">
-    <value>Message</value>
-  </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon" xml:space="preserve">
-    <value>Description of Message</value>
-  </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon" xml:space="preserve">
-    <value>Tooltip of Message</value>
-  </data>
-  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon" xml:space="preserve">
-    <value>Message of BuildLog</value>
-  </data>
-  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon" xml:space="preserve">
-    <value>Description of Message of BuildLog</value>
-  </data>
-  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon" xml:space="preserve">
-    <value>Tooltip of Message of BuildLog</value>
   </data>
   <data name="IsToCompare_ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon" xml:space="preserve">
     <value>EventTime</value>
@@ -493,58 +478,76 @@
   <data name="Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundEventTimeCommonOftOfCommon" xml:space="preserve">
     <value>Tooltip of To</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuild_B1_1OfByFKOnly" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon" xml:space="preserve">
+    <value>Description of Message</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of Message</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon" xml:space="preserve">
+    <value>Message of BuildLog</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon" xml:space="preserve">
+    <value>Description of Message of BuildLog</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of Message of BuildLog</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuild_1OfByFKOnly" xml:space="preserve">
     <value>Build</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuild_B1_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuild_1OfByFKOnly" xml:space="preserve">
     <value>Description of Id of Build</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuild_B1_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuild_1OfByFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Build</value>
   </data>
-  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuild_B1_1OfByFKOnly" xml:space="preserve">
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly" xml:space="preserve">
     <value>Id of Build</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuild_B1_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly" xml:space="preserve">
     <value>Description of Id of Build</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuild_B1_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuild_1OfByFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Build</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
     <value>Solution</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
     <value>Description of Id of Solution</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Solution</value>
   </data>
-  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
     <value>Id of Solution</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
     <value>Description of Id of Solution</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Solution</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuildEventCode_B2_1OfByFKOnly" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly" xml:space="preserve">
     <value>BuildEventCode</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuildEventCode_B2_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly" xml:space="preserve">
     <value>Description of Id of BuildEventCode</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuildEventCode_B2_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly" xml:space="preserve">
     <value>Tooltip of Id of BuildEventCode</value>
   </data>
-  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuildEventCode_B2_1OfByFKOnly" xml:space="preserve">
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly" xml:space="preserve">
     <value>Id of BuildEventCode</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuildEventCode_B2_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly" xml:space="preserve">
     <value>Description of Id of BuildEventCode</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuildEventCode_B2_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfBuildEventCode_1OfByFKOnly" xml:space="preserve">
     <value>Tooltip of Id of BuildEventCode</value>
   </data>
   <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">

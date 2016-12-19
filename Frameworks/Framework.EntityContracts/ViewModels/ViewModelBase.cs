@@ -10,7 +10,10 @@ namespace Framework.EntityContracts
     {
         public ViewModelBase()
         {
+            this.ContentData = new Framework.EntityContracts.ContentData();
         }
+
+        public Framework.EntityContracts.ContentData ContentData { get; set; }
         
         public TSearchCriteria Criteria { get; set; }
 
@@ -155,9 +158,10 @@ namespace Framework.EntityContracts
 		public ViewModelBase()
             : base()
         {
-            this.SearchStatus = SearchStatus.Unknown;
+            this.SearchStatus = Framework.EntityContracts.SearchStatus.Unknown;
         }
         public TSearchResult Result {get;set;}
 		public Framework.EntityContracts.SearchStatus SearchStatus { get; set; }
     }
 }
+

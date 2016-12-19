@@ -53,8 +53,6 @@
     <Compile Include="BusinessLogicLayerResponseMessageBase.cs" />
     <Compile Include="IBusinessLogicLayerContextContainer.cs" />
     <Compile Include="SessionVariablesCommon.cs" />
-    <Content Include="Maps\map.1.B.3.vsd" />
-    <Content Include="Maps\map.1.B.3.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj">

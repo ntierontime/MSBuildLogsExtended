@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-#if WINDOWS_PHONE
+#if (WINDOWS_PHONE || XAMARIN)
 #else
 using System.ComponentModel.DataAnnotations;
 #endif
@@ -84,7 +84,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 		#region properties
 
 				[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Id", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution))]
@@ -104,10 +104,11 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "ExternalParentId", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution))]
+		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_ExternalParentId_should_be_0_to_100")]
 #endif
         public System.String ExternalParentId
         {
@@ -123,11 +124,12 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Name", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution))]
 		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution), ErrorMessageResourceName="Name_is_required")]
+		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_100")]
 #endif
         public System.String Name
         {
@@ -143,10 +145,11 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Description", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution))]
+		[StringLengthAttribute(1500, ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_Description_should_be_0_to_1500")]
 #endif
         public System.String Description
         {
@@ -234,6 +237,8 @@ namespace MSBuildLogsExtended.DataSourceEntities
 
         public System.Int32 m_Id;
 
+        public System.String m_Name;
+
 
 			#endregion Storage Fields
 
@@ -246,6 +251,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 			public KeyInformation()
 			{
 				this.Id = default(int);
+				this.Name = null;
 			}
 			/*
 			/// <summary>
@@ -263,7 +269,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 			#region properties
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Id", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution))]
@@ -282,6 +288,27 @@ namespace MSBuildLogsExtended.DataSourceEntities
             }
         }
 
+					[DataMember]
+#if (WINDOWS_PHONE || XAMARIN)
+
+#else
+		[Display(Name = "Name", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution))]
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution), ErrorMessageResourceName="Name_is_required")]
+		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_100")]
+#endif
+        public System.String Name
+        {
+            get
+            {
+                return m_Name;
+            }
+            set
+            {
+                m_Name = value;
+                RaisePropertyChanged("Name");
+            }
+        }
+
 
 			#endregion properties
 
@@ -296,6 +323,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
                 KeyInformation cloned = new KeyInformation();
 
 			cloned.m_Id = m_Id;
+			cloned.m_Name = m_Name;
 
                 return cloned;
             }
@@ -359,3 +387,4 @@ namespace MSBuildLogsExtended.DataSourceEntities
     {
     }
 }
+

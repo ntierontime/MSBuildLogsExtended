@@ -19,6 +19,8 @@ namespace Framework.Xaml
         public ViewModelBaseWithResultAndUIElement()
             : base()
         {
+			this.ContentData = new Framework.EntityContracts.ContentData();
+
             this.SelectionChangedCommand = new RelayCommand(SelectionChanged);
             this.RefreshCurrentEditingItemCommand = new RelayCommand(this.RefreshCurrentEditingItem);
             this.ClearSearchResultCommand = new RelayCommand(ClearSearchResult, CanClearSearchResult);
@@ -716,7 +718,9 @@ namespace Framework.Xaml
 
         #endregion Search
 
-#if WINDOWS_PHONE
+		public Framework.EntityContracts.ContentData ContentData { get; set; }
+
+#if (WINDOWS_PHONE)
 
         #region InfinityScrollingSearch
 
@@ -824,3 +828,4 @@ namespace Framework.Xaml
         #endregion Business Entity Collection + Current Selected or editing Entity
     }
 }
+

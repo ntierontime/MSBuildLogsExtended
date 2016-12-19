@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="MSBuildLogsExtended.AspNetMvc50AngularSPA.Global" Language="C#" %>

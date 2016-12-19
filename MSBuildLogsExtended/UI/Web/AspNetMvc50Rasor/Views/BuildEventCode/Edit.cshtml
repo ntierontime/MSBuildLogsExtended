@@ -1,0 +1,83 @@
+@using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc50Rasor.Helpers.UrlStrings;
+@model MSBuildLogsExtended.AspNetMvc40ViewModel.BuildEventCodeItemVM
+@section featured {
+    <hgroup>
+        <h2>@Model.ContentData.Title.</h2>
+        <h4>@Model.ContentData.Summary</h4>
+    </hgroup>
+}
+@if (Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK && Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
+{
+	<div class="text-danger">@Model.StatusMessageOfResult</div>
+}
+@using (Html.BeginForm(UrlStringsAlias.ActionName_BuildEventCode_Edit, UrlStringsAlias.ControllerName_BuildEventCode, FormMethod.Post, new { @class= "form-horizontal" })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+        <legend>@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.BuildEventCode.</legend>
+@Html.HiddenFor(model => model.Item.Id)  <div class="form-group form-inline">
+			@Html.LabelFor(model => model.Item.EventCode, new { @class = "control-label" })
+			@Html.TextBoxFor(model => model.Item.EventCode, new { @class = "form-control" })
+    </div>
+  <div class="form-group form-inline">
+			@Html.LabelFor(model => model.Item.Description, new { @class = "control-label" })
+			@Html.TextBoxFor(model => model.Item.Description, new { @class = "form-control" })
+    </div>
+    <div class="btn-group" role="group">
+        <input class="btn btn-default" role="button" type="submit" value="@Framework.Resources.UIStringResource.SaveAlternativeText" />
+        <input class="btn btn-default" role="button" type="button" value="@Framework.Resources.UIStringResource.RefreshAlternativeText" onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Edit, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })'" />
+        <input class="btn btn-default" role="button" type="button" value="@Framework.Resources.UIStringResource.BackAlternativeText" onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Index)'" />
+    </div>
+</div>
+}
+@section Scripts {
+    <script type="text/javascript">
+        //http://www.softfinity.com/blog/using-ajax-with-knockout-js-and-asp-net-mvc-4-to-load-select-drop-down-options/
+        $(document).ready($(function() {
+        }));
+        $(document).ready($(function() {
+            $.validator.addMethod(
+                "date",
+                function(value, element) {
+                    var bits = value.match(/([0-9]+)/gi), str;
+                    if (!bits)
+                        return this.optional(element) || false;
+                    str = bits[1] + '/' + bits[0] + '/' + bits[2];
+                    return this.optional(element) || !/Invalid|NaN/.test(new Date(str));
+                },
+                "Please enter a date in the format dd/mm/yyyy"
+            );
+            $("form").validate({
+                onkeyup: false,
+                errorPlacement: function(error, element) {
+                    if (element.attr("name").indexOf("DOB") >= 0) {
+                        error.insertAfter("#DOB_Day");
+                    } else {
+                        error.insertAfter(element);
+                    }
+                },
+                rules: {
+                },
+                messages: {
+                },
+                highlight:
+                    function(element) {
+                        $(element).css('border', '2px solid red');
+                    },
+                unhighlight:
+                    function(element) {
+                        $(element).css('border', '1px solid rgb(170, 170, 170)');
+                    },
+                errorLabelContainer: "#ErrorList",
+                wrapper: "li",
+            });
+        }));
+        //cascaded dropdownlist by knockoutjs
+        function CascadingDDLViewModel() {
+            var self = this;
+        }
+        $(document).ready($(function() {
+            var objVM = new CascadingDDLViewModel();
+            ko.applyBindings(objVM);
+        }));
+    </script>
+}

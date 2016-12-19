@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4A41448F-8D92-435B-9F02-5F1D3A502F4F}</ProjectGuid>
+    <ProjectGuid>{4D615527-E3E4-4DCC-B2BC-0CA77D26451E}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -50,8 +50,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Maps\map.1.B.3.vsd" />
-    <Content Include="Maps\map.1.B.3.vsd.png" />
     <Compile Include="..\..\Frameworks\Framework.DataSourceEntities\DataAccessLayerMessageBase.cs">
       <Link>DataAccessLayerMessageBase.cs</Link>
     </Compile>
@@ -61,11 +59,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework.WP\Framework.WP.csproj">
-      <Project>{8601cd0c-5985-4b2b-a333-52c0a5902ce2}</Project>
+      <Project>{1efe0717-bd17-4781-a7d2-7f0216a3460b}</Project>
       <Name>Framework.WP</Name>
     </ProjectReference>
     <ProjectReference Include="..\Framework.EntityContracts.WP\Framework.EntityContracts.WP.csproj">
-      <Project>{431a4d9a-5861-4b82-aed8-c312bae2a641}</Project>
+      <Project>{5d407e18-cc05-4089-a67b-aff0ea5907ad}</Project>
       <Name>Framework.EntityContracts.WP</Name>
     </ProjectReference>
   </ItemGroup>

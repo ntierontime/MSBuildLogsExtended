@@ -1,12 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{BC804D68-FA13-42D7-980C-317A543A1F8A}</ProjectGuid>
+    <ProjectGuid>{1A018476-EFB6-485D-9DBC-3EA5EA955EEE}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -16,8 +16,7 @@
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>4.0</OldToolsVersion>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
+    <UpgradeBackupLocation />
     <TargetFrameworkProfile />
     <UseIISExpress>false</UseIISExpress>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
@@ -100,6 +99,7 @@
     <Content Include="Atom10Feeds.svc" />
     <Compile Include="Atom10Feeds.svc.cs">
       <DependentUpon>Atom10Feeds.svc</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Content Include="Global.asax" />
     <Compile Include="Global.asax.cs">
@@ -110,38 +110,29 @@
     <Content Include="RssFeeds.svc" />
     <Compile Include="RssFeeds.svc.cs">
       <DependentUpon>RssFeeds.svc</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Content Include="Web.config" />
-    <Content Include="Maps\map.2.C.1.vsd" />
-    <Content Include="Maps\map.2.C.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Frameworks\Framework.Resources\Framework.Resources.csproj">
-      <Project>{c72b898b-b53b-42d5-9f4f-673f84bb485b}</Project>
-      <Name>Framework.Resources</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Frameworks\Framework.Web\Framework.Web.csproj">
-      <Project>{950b9cdb-9286-4a1a-8d88-1df6954a45e3}</Project>
-      <Name>Framework.Web</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Core\CommonBLL\MSBuildLogsExtended.CommonBLL.csproj">
-      <Project>{048f80fd-cf9c-4f55-a0e6-9d9bb131cb3f}</Project>
+      <Project>{b32a7470-a5e0-459b-831f-f598b09b75c7}</Project>
       <Name>MSBuildLogsExtended.CommonBLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\CommonBLLEntities\MSBuildLogsExtended.CommonBLLEntities.csproj">
-      <Project>{de7d8090-bff6-4641-9720-7f44afed1832}</Project>
+      <Project>{f201379d-034b-4892-9aec-927a3d67d260}</Project>
       <Name>MSBuildLogsExtended.CommonBLLEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\DALContracts\MSBuildLogsExtended.DALContracts.csproj">
-      <Project>{c26ef262-08d5-47ae-a0cb-01dabb6b644d}</Project>
+      <Project>{028bd872-f585-4d60-9e45-e5bece93d775}</Project>
       <Name>MSBuildLogsExtended.DALContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\DataSourceEntities\MSBuildLogsExtended.DataSourceEntities.csproj">
-      <Project>{806a9ab2-2edd-42d2-a3ca-a2acba0cedd7}</Project>
+      <Project>{37102465-556b-49e7-8ca2-a7814e45de36}</Project>
       <Name>MSBuildLogsExtended.DataSourceEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\EntityContracts\MSBuildLogsExtended.EntityContracts.csproj">
-      <Project>{d090796d-578a-4c52-b489-3e688ddd5206}</Project>
+      <Project>{a9940920-207f-471d-8164-13d5a4b518ba}</Project>
       <Name>MSBuildLogsExtended.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
@@ -160,12 +151,20 @@
       <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
       <Name>Framework.EntityContracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.Resources\Framework.Resources.csproj">
+      <Project>{c72b898b-b53b-42d5-9f4f-673f84bb485b}</Project>
+      <Name>Framework.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.Web\Framework.Web.csproj">
+      <Project>{950b9cdb-9286-4a1a-8d88-1df6954a45e3}</Project>
+      <Name>Framework.Web</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Core\LinqDAL\MSBuildLogsExtended.LinqDAL.csproj">
-      <Project>{79e8362e-8373-48b6-9d36-e2105659ab4c}</Project>
+      <Project>{d9b82b9c-0ff6-4ac7-ac75-42d8025b2800}</Project>
       <Name>MSBuildLogsExtended.LinqDAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\WcfContracts\MSBuildLogsExtended.WcfContracts.csproj">
-      <Project>{9eb722de-3c2a-43ca-ab84-e2db1f814ea5}</Project>
+      <Project>{23bf8e7c-df8c-43f2-9153-53de5ee23c86}</Project>
       <Name>MSBuildLogsExtended.WcfContracts</Name>
     </ProjectReference>
   </ItemGroup>
@@ -227,8 +226,8 @@
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
-          <AutoAssignPort>False</AutoAssignPort>
-          <DevelopmentServerPort>10605</DevelopmentServerPort>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10805</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

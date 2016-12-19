@@ -1,65 +1,47 @@
-@model MSBuildLogsExtended.DataSourceEntities.BuildLog.Default
-@{
-    ViewBag.Title = @Framework.Resources.UIStringResource.EditAlternativeText;
-}
+@using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.UrlStrings;
+@model MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM
 @section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
-        </div>
-    </section>
+    <hgroup>
+        <h2>@Model.ContentData.Title.</h2>
+        <h4>@Model.ContentData.Summary</h4>
+    </hgroup>
 }
-@using (Html.BeginForm()) {
+@if (Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK && Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
+{
+	<div class="text-danger">@Model.StatusMessageOfResult</div>
+}
+@using (Html.BeginForm(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, FormMethod.Post, new { @class= "form-horizontal" })) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
-    <fieldset>
         <legend>@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog.</legend>
-@Html.HiddenFor(model => model.Build_B1_1_Name)@Html.HiddenFor(model => model.Id)        <div class="editor-label">
-			@Html.LabelFor(model => model.Solution_S1_1Id)
-        </div>
-        <div class="editor-field">
-			@Html.DropDownListFor(model => model.Solution_S1_1Id, (List<SelectListItem>)ViewBag.SelectListOfMSBuildLogsExtended_Solution, MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "onchange", "FetchBuild_B1_1();" } })
-        </div>
-@Html.HiddenFor(model => model.Solution_S1_1_Name)@Html.HiddenFor(model => model.BuildEventCode_B2_1_Name)        <div class="editor-label">
-			@Html.LabelFor(model => model.BuildId)
-        </div>
-        <div class="editor-field">
-			@Html.DropDownListFor(model => model.BuildId, Enumerable.Empty<SelectListItem>(), MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Please_select_Build____, new Dictionary<string,Object>{ { "data-bind", string.Format(@"options:selectListOfBuildId,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedBuildId", MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Please_select_Build____) } })
-        </div>
-        <div class="editor-label">
-			@Html.LabelFor(model => model.BuildEventCodeId)
-        </div>
-        <div class="editor-field">
-			@Html.DropDownListFor(model => model.BuildEventCodeId, (List<SelectListItem>)ViewBag.SelectListOfMSBuildLogsExtended_BuildEventCode, MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.Please_select_BuildEventCode____)
-        </div>
-        <div class="editor-label">
-			@Html.LabelFor(model => model.Message)
-        </div>
-        <div class="editor-field">
-			@Html.EditorFor(model => model.Message)
-        </div>
-        <div class="editor-label">
-			@Html.LabelFor(model => model.EventTime)
-        </div>
-        <div class="editor-field">
-			@Html.TextBoxFor(model => model.EventTime, new { @Value = Model.EventTime.ToString("dd/MM/yyyy") })
-        </div>
-        <div class="buttonContainer">
-            <input type="submit" value="@Framework.Resources.UIStringResource.SaveAlternativeText" class="button" />
-			<input type="button" value="@Framework.Resources.UIStringResource.RefreshAlternativeText" class="button" onclick="location.href='@Url.Action("Edit", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Id })'" />
-			<input type="button" value="@Framework.Resources.UIStringResource.BackAlternativeText" class="button" onclick="location.href='@Url.Action("Index")'" />
-        </div>
-    </fieldset>
+@Html.HiddenFor(model => model.Item.Build_1_Name)@Html.HiddenFor(model => model.Item.Id)  <div class="form-group form-inline">
+			@Html.LabelFor(model => model.Item.Solution_1Id, new { @class = "control-label" })
+			@Html.DropDownListFor(model => model.Item.Solution_1Id, (List<SelectListItem>)ViewBag.SelectListOfMSBuildLogsExtended_Solution, MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "onchange", "FetchBuild_1();" }, { "class", "form-control" } })
+    </div>
+@Html.HiddenFor(model => model.Item.Solution_1_Name)@Html.HiddenFor(model => model.Item.BuildEventCode_1_Name)  <div class="form-group form-inline">
+			@Html.LabelFor(model => model.Item.BuildId, new { @class = "control-label" })
+			@Html.DropDownListFor(model => model.Item.BuildId, Enumerable.Empty<SelectListItem>(), MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Please_select_Build____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfBuildId,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedBuildId", MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Please_select_Build____) } })
+    </div>
+  <div class="form-group form-inline">
+			@Html.LabelFor(model => model.Item.BuildEventCodeId, new { @class = "control-label" })
+			@Html.DropDownListFor(model => model.Item.BuildEventCodeId, (List<SelectListItem>)ViewBag.SelectListOfMSBuildLogsExtended_BuildEventCode, MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.Please_select_BuildEventCode____, new Dictionary<string,Object>{ { "class", "form-control" } })
+    </div>
+  <div class="form-group form-inline">
+			@Html.LabelFor(model => model.Item.Message, new { @class = "control-label" })
+			@Html.TextBoxFor(model => model.Item.Message, new { @class = "form-control" })
+    </div>
+  <div class="form-group form-inline">
+			@Html.LabelFor(model => model.Item.EventTime, new { @class = "control-label" })
+			@Html.TextBoxFor(model => model.Item.EventTime, new { @Value = Model.Item.EventTime.ToString("dd/MM/yyyy"), @class = "form-control" })
+    </div>
+    <div class="btn-group" role="group">
+        <input class="btn btn-default" role="button" type="submit" value="@Framework.Resources.UIStringResource.SaveAlternativeText" />
+        <input class="btn btn-default" role="button" type="button" value="@Framework.Resources.UIStringResource.RefreshAlternativeText" onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })'" />
+        <input class="btn btn-default" role="button" type="button" value="@Framework.Resources.UIStringResource.BackAlternativeText" onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index)'" />
+    </div>
+</div>
 }
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryui")
-    @Scripts.Render("~/bundles/jqueryval")
-    @Scripts.Render("~/bundles/knockout")
-    @Scripts.Render("~/bundles/dataTables")
-    @Scripts.Render("~/bundles/bootstrap")
     <script type="text/javascript">
         //http://www.softfinity.com/blog/using-ajax-with-knockout-js-and-asp-net-mvc-4-to-load-select-drop-down-options/
         $(document).ready($(function() {
@@ -121,11 +103,11 @@
                 wrapper: "li",
             });
         }));
-        function FetchBuild_B1_1() {
-var selectedvalueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly = $("#Solution_S1_1Id").val();
+        function FetchBuild_1() {
+var selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly = $("#Solution_1Id").val();
             var url = "/api/BuildApi/GetCollectionOfNameValuePairOfByFKOnly";
-            var params = BuildCriteriaForFetchBuild_B1_1(selectedvalueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly);
-            if(selectedvalueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly)
+            var params = BuildCriteriaForFetchBuild_1(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly);
+            if(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
             {
                 $.getJSON(url, params, function (data) {
                     objVM.selectListOfBuildId(data);
@@ -133,10 +115,10 @@ var selectedvalueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly = $("#Solution_S1_
                 });
             }
         }
-        function BuildCriteriaForFetchBuild_B1_1(selectedvalueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly) {
+        function BuildCriteriaForFetchBuild_1(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly) {
             var params = {
-                isToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly: true,
-                valueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly,
+                isToCompareIdByFKOnlyOfSolution_1OfByFKOnly: true,
+                valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly: selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly,
                 currentIndex: -1,
                 pageSize: -1,
                 queryOrderByExpression: null
@@ -152,7 +134,7 @@ var selectedvalueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly = $("#Solution_S1_
         $(document).ready($(function() {
             var objVM = new CascadingDDLViewModel();
             ko.applyBindings(objVM);
-$("#Solution_S1_1Id").change();
+$("#Solution_1Id").change();
         }));
     </script>
 }

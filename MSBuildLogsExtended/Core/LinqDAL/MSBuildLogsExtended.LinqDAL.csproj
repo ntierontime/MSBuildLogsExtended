@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{79E8362E-8373-48B6-9D36-E2105659AB4C}</ProjectGuid>
+    <ProjectGuid>{D9B82B9C-0FF6-4AC7-AC75-42D8025B2800}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.LinqDAL</RootNamespace>
@@ -44,25 +44,23 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Compile Include="LinqToSqlDataAccessLayerEntities\LinqToSqlDataAccessLayerEntityBuild.cs" />
-    <Compile Include="LinqToSqlDataAccessLayerEntities\LinqToSqlDataAccessLayerEntityBuildEventCode.cs" />
-    <Compile Include="LinqToSqlDataAccessLayerEntities\LinqToSqlDataAccessLayerEntityBuildLog.cs" />
-    <Compile Include="LinqToSqlDataAccessLayerEntities\LinqToSqlDataAccessLayerEntitySolution.cs" />
+    <Compile Include="BuildRepository.cs" />
+    <Compile Include="BuildEventCodeRepository.cs" />
+    <Compile Include="BuildLogRepository.cs" />
+    <Compile Include="SolutionRepository.cs" />
     <Compile Include="LinqToSqlDataAccessLayerFactory.cs" />
-    <Content Include="Maps\map.2.A.1.vsd" />
-    <Content Include="Maps\map.2.A.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DALContracts\MSBuildLogsExtended.DALContracts.csproj">
-      <Project>{c26ef262-08d5-47ae-a0cb-01dabb6b644d}</Project>
+      <Project>{028bd872-f585-4d60-9e45-e5bece93d775}</Project>
       <Name>MSBuildLogsExtended.DALContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataSourceEntities\MSBuildLogsExtended.DataSourceEntities.csproj">
-      <Project>{806a9ab2-2edd-42d2-a3ca-a2acba0cedd7}</Project>
+      <Project>{37102465-556b-49e7-8ca2-a7814e45de36}</Project>
       <Name>MSBuildLogsExtended.DataSourceEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\EntityContracts\MSBuildLogsExtended.EntityContracts.csproj">
-      <Project>{d090796d-578a-4c52-b489-3e688ddd5206}</Project>
+      <Project>{a9940920-207f-471d-8164-13d5a4b518ba}</Project>
       <Name>MSBuildLogsExtended.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
@@ -86,7 +84,7 @@
       <Name>Framework.LinqDAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\LinqToSqlContexts\MSBuildLogsExtended.LinqToSqlContexts.csproj">
-      <Project>{5f48ec62-60d3-4d77-8f5f-7d5b820227a8}</Project>
+      <Project>{7dea9522-e2e2-4737-8551-9dcbe4d657d2}</Project>
       <Name>MSBuildLogsExtended.LinqToSqlContexts</Name>
     </ProjectReference>
   </ItemGroup>

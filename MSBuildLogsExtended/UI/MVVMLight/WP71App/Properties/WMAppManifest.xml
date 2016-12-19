@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{70ec2724-345a-4957-9964-8506275affd5}" Title="MSBuildLogsExtended.WP71App" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="nTierSketchUp" Description="MSBuildLogsExtended" Publisher="nTierSketchUp">
+  <App xmlns="" ProductID="{e9b2d7c9-66e2-4548-8bbf-95b1ac20bd3a}" Title="MSBuildLogsExtended.WP71App" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="NTIER ON TIME TECHNOLOGIES INC." Description="MSBuildLogsExtended" Publisher="NTIER ON TIME TECHNOLOGIES INC.">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.jpg</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_GAMERSERVICES"/>

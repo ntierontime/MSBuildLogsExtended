@@ -58,7 +58,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
     /// <summary>
     ///  a property defined when <see cref="ISolutionCollection"/> is used in other classes.
     /// </summary>
-	public interface ISolutionCollection
+	public partial interface ISolutionCollection
 	{ 
         /// <summary>
         /// Gets or sets the SolutionCollection
@@ -72,7 +72,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="SolutionCollection"/> and <see cref="Framework.DataSourceEntities.DataAccessLayerMessageBase&lt;T&gt;"/> />
     /// </summary>
-	public class DataAccessLayerMessageOfEntityCollectionSolution
+	public partial class DataAccessLayerMessageOfEntityCollectionSolution
         : Framework.DataSourceEntities.DataAccessLayerMessageBase<SolutionCollection>
     {
     }

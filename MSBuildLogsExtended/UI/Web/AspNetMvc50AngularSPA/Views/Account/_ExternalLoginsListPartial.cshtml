@@ -1,0 +1,29 @@
+@using MSBuildLogsExtended.AspNetMvc50AngularSPA.Models
+@model ExternalLoginListViewModel
+@using Microsoft.Owin.Security
+<h4>@Framework.Resources.UIStringResource.Account__ExternalLoginsListPartial_Useanotherservicetologin</h4>
+<hr />
+@{
+    var loginProviders = Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes();
+    if (loginProviders.Count() == 0)
+    {
+        <div>
+            @Framework.Resources.UIStringResource.Account__ExternalLoginsListPartial_Description
+        </div>
+    }
+    else
+    {
+        using (Html.BeginForm(Model.Action, "Account", new { ReturnUrl = Model.ReturnUrl }))
+        {
+            @Html.AntiForgeryToken()
+            <div id="socialLoginList">
+                <p>
+                @foreach (AuthenticationDescription p in loginProviders)
+                {
+                    <button type="submit" class="btn btn-default" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="@(Framework.Resources.UIStringResource.Account__ExternalLoginsListPartial_Loginusingyouraccountas + ' ' + p.Caption) ">@p.AuthenticationType</button>
+                }
+                </p>
+            </div>
+        }
+    }
+}

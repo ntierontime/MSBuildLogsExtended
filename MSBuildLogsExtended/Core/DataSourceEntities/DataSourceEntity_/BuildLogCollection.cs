@@ -61,7 +61,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         /// </summary>
         /// <param name="criteria">The criteria.</param>
         /// <returns>true if any, otherwise false</returns>
-		public bool ExistsByFKs(DataSourceQueryCriteriaByEntityReferenceBuildLog criteria)
+		public bool ExistsByFKs(BuildLogQueryCriteriaByEntityReference criteria)
 		{
             MSBuildLogsExtended.EntityContracts.QueryPredicateBuildLogByFKs<BuildLog> _PrediacteByFKs = new MSBuildLogsExtended.EntityContracts.QueryPredicateBuildLogByFKs<BuildLog>(criteria);
             return this.Count(_PrediacteByFKs.Predicate) > 0;
@@ -72,7 +72,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         /// </summary>
         /// <param name="criteria">The criteria.</param>
         /// <returns>the first entity if any, otherwise null</returns>
-        public BuildLog GetByFKs(DataSourceQueryCriteriaByEntityReferenceBuildLog criteria)
+        public BuildLog GetByFKs(BuildLogQueryCriteriaByEntityReference criteria)
 		{
             MSBuildLogsExtended.EntityContracts.QueryPredicateBuildLogByFKs<BuildLog> _PrediacteByFKs = new MSBuildLogsExtended.EntityContracts.QueryPredicateBuildLogByFKs<BuildLog>(criteria);
             return this.Single(_PrediacteByFKs.Predicate);
@@ -83,7 +83,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         /// </summary>
         /// <param name="criteria">The criteria.</param>
         /// <returns>a collection</returns>
-        public BuildLogCollection GetCollectionByFKs(DataSourceQueryCriteriaByEntityReferenceBuildLog criteria)
+        public BuildLogCollection GetCollectionByFKs(BuildLogQueryCriteriaByEntityReference criteria)
         {
             MSBuildLogsExtended.EntityContracts.QueryPredicateBuildLogByFKs<BuildLog> _PrediacteByFKs = new MSBuildLogsExtended.EntityContracts.QueryPredicateBuildLogByFKs<BuildLog>(criteria);
             return new BuildLogCollection(this.Where(_PrediacteByFKs.Predicate));
@@ -99,7 +99,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
     /// <summary>
     ///  a property defined when <see cref="IBuildLogCollection"/> is used in other classes.
     /// </summary>
-	public interface IBuildLogCollection
+	public partial interface IBuildLogCollection
 	{ 
         /// <summary>
         /// Gets or sets the BuildLogCollection
@@ -113,7 +113,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="BuildLogCollection"/> and <see cref="Framework.DataSourceEntities.DataAccessLayerMessageBase&lt;T&gt;"/> />
     /// </summary>
-	public class DataAccessLayerMessageOfEntityCollectionBuildLog
+	public partial class DataAccessLayerMessageOfEntityCollectionBuildLog
         : Framework.DataSourceEntities.DataAccessLayerMessageBase<BuildLogCollection>
     {
     }

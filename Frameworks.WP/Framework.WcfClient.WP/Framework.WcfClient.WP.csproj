@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{32D416E1-0A35-47DB-9591-575E3471570F}</ProjectGuid>
+    <ProjectGuid>{867F6131-9974-441A-B6E6-6E58659EB7EF}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -50,8 +50,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Maps\map.1.A.3.vsd" />
-    <Content Include="Maps\map.1.A.3.vsd.png" />
     <Compile Include="..\..\Frameworks\Framework.WcfClient\AuthenticationService.cs">
       <Link>AuthenticationService.cs</Link>
     </Compile>
@@ -61,7 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework.WP\Framework.WP.csproj">
-      <Project>{8601cd0c-5985-4b2b-a333-52c0a5902ce2}</Project>
+      <Project>{1efe0717-bd17-4781-a7d2-7f0216a3460b}</Project>
       <Name>Framework.WP</Name>
     </ProjectReference>
   </ItemGroup>

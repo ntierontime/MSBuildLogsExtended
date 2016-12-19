@@ -283,6 +283,16 @@ namespace MSBuildLogsExtended.Resources {
         /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
+        public static string The_length_of_ExternalParentId_should_be_0_to_100 {
+            get {
+                return ResourceManager.GetString("The_length_of_ExternalParentId_should_be_0_to_100", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to test.
+        /// </summary>
         public static string NameDescription {
             get {
                 return ResourceManager.GetString("NameDescription", resourceCulture);
@@ -353,6 +363,16 @@ namespace MSBuildLogsExtended.Resources {
         /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
+        public static string The_length_of_Name_should_be_0_to_100 {
+            get {
+                return ResourceManager.GetString("The_length_of_Name_should_be_0_to_100", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to test.
+        /// </summary>
         public static string DescriptionDescription {
             get {
                 return ResourceManager.GetString("DescriptionDescription", resourceCulture);
@@ -406,6 +426,16 @@ namespace MSBuildLogsExtended.Resources {
         public static string DescriptionValueValidationExpression {
             get {
                 return ResourceManager.GetString("DescriptionValueValidationExpression", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to test.
+        /// </summary>
+        public static string The_length_of_Description_should_be_0_to_1500 {
+            get {
+                return ResourceManager.GetString("The_length_of_Description_should_be_0_to_1500", resourceCulture);
             }
         }
 

@@ -7,98 +7,98 @@ using System.Text;
 
 namespace MSBuildLogsExtended.WcfContracts
 {
-    public static class WcfServiceResolver
+    public static partial class WcfServiceResolver
     {
 
 
-        public static MSBuildLogsExtended.WcfContracts.IBuildWcfService ResolveWcfServiceBuild()
+        public static MSBuildLogsExtended.WcfContracts.IBuildService ResolveWcfServiceBuild()
         {
             Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer _IBusinessLogicLayerContextContainer = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer>();
             Framework.CommonBLLEntities.BusinessLogicLayerContext _BusinessLogicLayerContext = _IBusinessLogicLayerContextContainer.BusinessLogicLayerContext;
             MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactory _IBusinessLogicLayerFactory = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactory>();
-            MSBuildLogsExtended.WcfContracts.IBuildWcfService _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntityBuild(_BusinessLogicLayerContext);
+            MSBuildLogsExtended.WcfContracts.IBuildService _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntityBuild(_BusinessLogicLayerContext);
             return _BusinessLogicLayerInstance;
         }
 
 
 
-        public static MSBuildLogsExtended.WcfContracts.IBuildEventCodeWcfService ResolveWcfServiceBuildEventCode()
+        public static MSBuildLogsExtended.WcfContracts.IBuildEventCodeService ResolveWcfServiceBuildEventCode()
         {
             Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer _IBusinessLogicLayerContextContainer = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer>();
             Framework.CommonBLLEntities.BusinessLogicLayerContext _BusinessLogicLayerContext = _IBusinessLogicLayerContextContainer.BusinessLogicLayerContext;
             MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactory _IBusinessLogicLayerFactory = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactory>();
-            MSBuildLogsExtended.WcfContracts.IBuildEventCodeWcfService _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntityBuildEventCode(_BusinessLogicLayerContext);
+            MSBuildLogsExtended.WcfContracts.IBuildEventCodeService _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntityBuildEventCode(_BusinessLogicLayerContext);
             return _BusinessLogicLayerInstance;
         }
 
 
 
-        public static MSBuildLogsExtended.WcfContracts.IBuildLogWcfService ResolveWcfServiceBuildLog()
+        public static MSBuildLogsExtended.WcfContracts.IBuildLogService ResolveWcfServiceBuildLog()
         {
             Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer _IBusinessLogicLayerContextContainer = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer>();
             Framework.CommonBLLEntities.BusinessLogicLayerContext _BusinessLogicLayerContext = _IBusinessLogicLayerContextContainer.BusinessLogicLayerContext;
             MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactory _IBusinessLogicLayerFactory = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactory>();
-            MSBuildLogsExtended.WcfContracts.IBuildLogWcfService _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntityBuildLog(_BusinessLogicLayerContext);
+            MSBuildLogsExtended.WcfContracts.IBuildLogService _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntityBuildLog(_BusinessLogicLayerContext);
             return _BusinessLogicLayerInstance;
         }
 
 
 
-        public static MSBuildLogsExtended.WcfContracts.ISolutionWcfService ResolveWcfServiceSolution()
+        public static MSBuildLogsExtended.WcfContracts.ISolutionService ResolveWcfServiceSolution()
         {
             Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer _IBusinessLogicLayerContextContainer = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer>();
             Framework.CommonBLLEntities.BusinessLogicLayerContext _BusinessLogicLayerContext = _IBusinessLogicLayerContextContainer.BusinessLogicLayerContext;
             MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactory _IBusinessLogicLayerFactory = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactory>();
-            MSBuildLogsExtended.WcfContracts.ISolutionWcfService _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntitySolution(_BusinessLogicLayerContext);
+            MSBuildLogsExtended.WcfContracts.ISolutionService _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntitySolution(_BusinessLogicLayerContext);
             return _BusinessLogicLayerInstance;
         }
 
 
     }
 
-    public static class WcfServiceResolverAsyn
+    public static partial class WcfServiceResolverAsyn
     {
 
 
-        public static MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild ResolveWcfServiceBuild()
+        public static MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn ResolveWcfServiceBuild()
         {
             Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer _IBusinessLogicLayerContextContainer = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer>();
             Framework.CommonBLLEntities.BusinessLogicLayerContext _BusinessLogicLayerContext = _IBusinessLogicLayerContextContainer.BusinessLogicLayerContext;
             MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactoryAsyn _IBusinessLogicLayerFactory = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactoryAsyn>();
-            MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntityBuild(_BusinessLogicLayerContext);
+            MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntityBuild(_BusinessLogicLayerContext);
             return _BusinessLogicLayerInstance;
         }
 
 
 
-        public static MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuildEventCode ResolveWcfServiceBuildEventCode()
+        public static MSBuildLogsExtended.WcfContracts.IBuildEventCodeServiceAsyn ResolveWcfServiceBuildEventCode()
         {
             Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer _IBusinessLogicLayerContextContainer = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer>();
             Framework.CommonBLLEntities.BusinessLogicLayerContext _BusinessLogicLayerContext = _IBusinessLogicLayerContextContainer.BusinessLogicLayerContext;
             MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactoryAsyn _IBusinessLogicLayerFactory = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactoryAsyn>();
-            MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuildEventCode _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntityBuildEventCode(_BusinessLogicLayerContext);
+            MSBuildLogsExtended.WcfContracts.IBuildEventCodeServiceAsyn _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntityBuildEventCode(_BusinessLogicLayerContext);
             return _BusinessLogicLayerInstance;
         }
 
 
 
-        public static MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuildLog ResolveWcfServiceBuildLog()
+        public static MSBuildLogsExtended.WcfContracts.IBuildLogServiceAsyn ResolveWcfServiceBuildLog()
         {
             Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer _IBusinessLogicLayerContextContainer = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer>();
             Framework.CommonBLLEntities.BusinessLogicLayerContext _BusinessLogicLayerContext = _IBusinessLogicLayerContextContainer.BusinessLogicLayerContext;
             MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactoryAsyn _IBusinessLogicLayerFactory = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactoryAsyn>();
-            MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuildLog _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntityBuildLog(_BusinessLogicLayerContext);
+            MSBuildLogsExtended.WcfContracts.IBuildLogServiceAsyn _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntityBuildLog(_BusinessLogicLayerContext);
             return _BusinessLogicLayerInstance;
         }
 
 
 
-        public static MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynSolution ResolveWcfServiceSolution()
+        public static MSBuildLogsExtended.WcfContracts.ISolutionServiceAsyn ResolveWcfServiceSolution()
         {
             Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer _IBusinessLogicLayerContextContainer = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer>();
             Framework.CommonBLLEntities.BusinessLogicLayerContext _BusinessLogicLayerContext = _IBusinessLogicLayerContextContainer.BusinessLogicLayerContext;
             MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactoryAsyn _IBusinessLogicLayerFactory = Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Resolve<MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactoryAsyn>();
-            MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynSolution _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntitySolution(_BusinessLogicLayerContext);
+            MSBuildLogsExtended.WcfContracts.ISolutionServiceAsyn _BusinessLogicLayerInstance = _IBusinessLogicLayerFactory.CreateBLLInstanceOfEntitySolution(_BusinessLogicLayerContext);
             return _BusinessLogicLayerInstance;
         }
 

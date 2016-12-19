@@ -210,5 +210,12 @@ namespace Framework.EntityContracts
         }
 
         #endregion properties
+		
+        public override string ToString()
+        {
+            return GetPagingInformationString();
+        }
     }
 }
+
+

@@ -1,37 +1,36 @@
-@model MSBuildLogsExtended.DataSourceEntities.BuildEventCode
+@using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.UrlStrings;
+@model MSBuildLogsExtended.AspNetMvc40ViewModel.BuildEventCodeItemVM
 @{
     ViewBag.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
 }
 @section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
-<h3>@Framework.Resources.UIStringResource.Warning_Areyousureyouwanttodeletethis</h3>
-            </hgroup>
-        </div>
-    </section>
+    <hgroup>
+        <h2>@Model.ContentData.Title.</h2>
+        <h4>@Model.ContentData.Summary</h4>
+        <h3>@Framework.Resources.UIStringResource.Warning_Areyousureyouwanttodeletethis</h3>
+    </hgroup>
 }
-<fieldset>
-    <legend>@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.BuildEventCode.</legend>
-	@Html.HiddenFor(model => model.Id)        <div class="display-label">
-			@Html.LabelFor(model => model.EventCode)
+@if (Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK && Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
+{
+	<div class="text-danger">@Model.StatusMessageOfResult</div>
+}
+	    <legend>@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.BuildEventCode.</legend>
+@using (Html.BeginForm(UrlStringsAlias.ActionName_BuildEventCode_Delete, UrlStringsAlias.ControllerName_BuildEventCode, FormMethod.Post, new { @class= "form-horizontal" })) {
+	@Html.AntiForgeryToken()
+@Html.HiddenFor(model => model.Item.Id)  <div class="form-group form-inline">
+			@Html.LabelFor(model => model.Item.EventCode, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.Item.EventCode)
         </div>
-        <div class="display-field">
-			@Html.DisplayFor(model => model.EventCode)
+    </div>
+  <div class="form-group form-inline">
+			@Html.LabelFor(model => model.Item.Description, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.Item.Description)
         </div>
-        <div class="display-label">
-			@Html.LabelFor(model => model.Description)
-        </div>
-        <div class="display-field">
-			@Html.DisplayFor(model => model.Description)
-        </div>
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    <div class="buttonContainer">
-        <input type="submit" value="@Framework.Resources.UIStringResource.DeleteAlternativeText" class="button" />
-		<input type="button" value="@Framework.Resources.UIStringResource.BackAlternativeText" class="button" onclick="location.href='@Url.Action("Index")'" />
+    </div>
+    <div class="btn-group" role="group">
+        <input class="btn btn-primary" role="button" type="submit" value="@Framework.Resources.UIStringResource.DeleteAlternativeText" />
+        <input class="btn btn-default" role="button" type="button" value="@Framework.Resources.UIStringResource.BackAlternativeText" onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Index)'" />
     </div>
 }
-</fieldset>

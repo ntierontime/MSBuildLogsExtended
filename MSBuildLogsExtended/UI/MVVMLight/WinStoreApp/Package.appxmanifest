@@ -2,12 +2,12 @@
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
 
   <Identity Name="66c838df-eb3f-4456-a725-b6ecdfec8600"
-            Publisher="CN=nTierSketchUp"
+            Publisher="CN=NTIER ON TIME TECHNOLOGIES INC."
             Version="1.0.0.0" />
 
   <Properties>
     <DisplayName>WinStoreApp</DisplayName>
-    <PublisherDisplayName>nTierSketchUp</PublisherDisplayName>
+    <PublisherDisplayName>NTIER ON TIME TECHNOLOGIES INC.</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

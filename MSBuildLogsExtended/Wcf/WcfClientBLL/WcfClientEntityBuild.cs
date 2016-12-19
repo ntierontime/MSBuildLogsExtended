@@ -14,7 +14,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
     /// *4. Channel definition interface, defined in WcfClientBusinessLogicLayer(this) project
     /// 5. WcfClient class, defined in WcfClientBusinessLogicLayer(this) project
     /// </summary>
-    public interface WcfClientEntityBuildChannel : MSBuildLogsExtended.WcfContracts.IBuildWcfService, System.ServiceModel.IClientChannel {
+    public interface WcfClientEntityBuildChannel : MSBuildLogsExtended.WcfContracts.IBuildService, System.ServiceModel.IClientChannel {
     }
 
     /// <summary>
@@ -25,7 +25,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
     /// 4. Channel definition interface, defined in WcfClientBusinessLogicLayer(this) project
     /// *5. WcfClient class, defined in WcfClientBusinessLogicLayer(this) project
     /// </summary>
-    public partial class WcfClientEntityBuild : System.ServiceModel.ClientBase<MSBuildLogsExtended.WcfContracts.IBuildWcfService>, MSBuildLogsExtended.WcfContracts.IBuildWcfService {
+    public partial class WcfClientEntityBuild : System.ServiceModel.ClientBase<MSBuildLogsExtended.WcfContracts.IBuildService>, MSBuildLogsExtended.WcfContracts.IBuildService {
 
 		#region constructors
 
@@ -79,7 +79,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>a message with action result</returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild InsertEntity(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn InsertEntity(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn request)
         {
             return base.Channel.InsertEntity(request);
         }
@@ -89,7 +89,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>a message with action result</returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild UpdateEntity(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn UpdateEntity(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn request)
         {
             return base.Channel.UpdateEntity(request);
         }
@@ -99,7 +99,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>a message with action result</returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild DeleteEntity(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn DeleteEntity(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn request)
         {
             return base.Channel.DeleteEntity(request);
         }
@@ -109,7 +109,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="id">The id.</param>
         /// <returns>a message with action result</returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild DeleteByIdentifierEntity(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInOfIdentifierBuild id)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn DeleteByIdentifierEntity(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltInOfIdentifier id)
         {
             return base.Channel.DeleteByIdentifierEntity(id);
         }
@@ -119,7 +119,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>a message with action result</returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild BatchInsert(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn BatchInsert(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn request)
         {
             return base.Channel.BatchInsert(request);
         }
@@ -129,7 +129,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>a message with action result</returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild BatchDelete(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn BatchDelete(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn request)
         {
             return base.Channel.InsertEntity(request);
         }
@@ -139,7 +139,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>a message with action result</returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild BatchUpdate(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn BatchUpdate(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn request)
         {
             return base.Channel.BatchUpdate(request);
         }		
@@ -158,7 +158,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfCommon(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             return base.Channel.GetCountOfEntityOfCommon(request);
         }
@@ -169,7 +169,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfCommon(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             return base.Channel.ExistsOfEntityOfCommon(request);
 		}
@@ -179,8 +179,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild GetCollectionOfEntityOfCommon(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn GetCollectionOfEntityOfCommon(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             return base.Channel.GetCollectionOfEntityOfCommon(request);
         }
@@ -190,8 +190,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild GetSingleOfEntityOfCommon(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn GetSingleOfEntityOfCommon(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             return base.Channel.GetSingleOfEntityOfCommon(request);
 		}
@@ -209,7 +209,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfCommon(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             return base.Channel.GetCountOfDefaultOfCommon(request);
         }
@@ -220,7 +220,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfCommon(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             return base.Channel.ExistsOfDefaultOfCommon(request);
 		}
@@ -230,8 +230,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default GetCollectionOfDefaultOfCommon(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default GetCollectionOfDefaultOfCommon(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             return base.Channel.GetCollectionOfDefaultOfCommon(request);
         }
@@ -241,8 +241,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default GetSingleOfDefaultOfCommon(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default GetSingleOfDefaultOfCommon(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             return base.Channel.GetSingleOfDefaultOfCommon(request);
 		}
@@ -260,7 +260,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetCountOfEntityOfAll(request);
         }
@@ -271,7 +271,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.ExistsOfEntityOfAll(request);
 		}
@@ -281,8 +281,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild GetCollectionOfEntityOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn GetCollectionOfEntityOfAll(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetCollectionOfEntityOfAll(request);
         }
@@ -292,8 +292,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild GetSingleOfEntityOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn GetSingleOfEntityOfAll(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetSingleOfEntityOfAll(request);
 		}
@@ -311,7 +311,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfNameValuePairOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetCountOfNameValuePairOfAll(request);
         }
@@ -322,7 +322,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.ExistsOfNameValuePairOfAll(request);
 		}
@@ -333,7 +333,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns></returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetCollectionOfNameValuePairOfAll(request);
         }
@@ -344,7 +344,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns></returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetSingleOfNameValuePairOfAll(request);
 		}
@@ -362,7 +362,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfRssItemOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetCountOfRssItemOfAll(request);
         }
@@ -373,7 +373,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfRssItemOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.ExistsOfRssItemOfAll(request);
 		}
@@ -384,7 +384,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns></returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetCollectionOfRssItemOfAll(request);
         }
@@ -395,7 +395,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns></returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetSingleOfRssItemOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetSingleOfRssItemOfAll(request);
 		}
@@ -413,7 +413,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCountOfEntityOfByFKOnly(request);
         }
@@ -424,7 +424,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.ExistsOfEntityOfByFKOnly(request);
 		}
@@ -434,8 +434,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild GetCollectionOfEntityOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn GetCollectionOfEntityOfByFKOnly(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCollectionOfEntityOfByFKOnly(request);
         }
@@ -445,8 +445,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild GetSingleOfEntityOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn GetSingleOfEntityOfByFKOnly(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetSingleOfEntityOfByFKOnly(request);
 		}
@@ -464,7 +464,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfNameValuePairOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCountOfNameValuePairOfByFKOnly(request);
         }
@@ -475,7 +475,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.ExistsOfNameValuePairOfByFKOnly(request);
 		}
@@ -486,7 +486,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns></returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCollectionOfNameValuePairOfByFKOnly(request);
         }
@@ -497,7 +497,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns></returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetSingleOfNameValuePairOfByFKOnly(request);
 		}
@@ -515,7 +515,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfRssItemOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCountOfRssItemOfByFKOnly(request);
         }
@@ -526,7 +526,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfRssItemOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.ExistsOfRssItemOfByFKOnly(request);
 		}
@@ -537,7 +537,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns></returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCollectionOfRssItemOfByFKOnly(request);
         }
@@ -548,7 +548,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns></returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetSingleOfRssItemOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetSingleOfRssItemOfByFKOnly(request);
 		}
@@ -566,7 +566,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCountOfDefaultOfByFKOnly(request);
         }
@@ -577,7 +577,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.ExistsOfDefaultOfByFKOnly(request);
 		}
@@ -587,8 +587,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default GetCollectionOfDefaultOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default GetCollectionOfDefaultOfByFKOnly(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCollectionOfDefaultOfByFKOnly(request);
         }
@@ -598,8 +598,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default GetSingleOfDefaultOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default GetSingleOfDefaultOfByFKOnly(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetSingleOfDefaultOfByFKOnly(request);
 		}
@@ -617,7 +617,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultGroupedDataViewOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCountOfDefaultGroupedDataViewOfByFKOnly(request);
         }
@@ -628,7 +628,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultGroupedDataViewOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.ExistsOfDefaultGroupedDataViewOfByFKOnly(request);
 		}
@@ -638,8 +638,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(request);
         }
@@ -649,8 +649,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView GetSingleOfDefaultGroupedDataViewOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView GetSingleOfDefaultGroupedDataViewOfByFKOnly(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetSingleOfDefaultGroupedDataViewOfByFKOnly(request);
 		}
@@ -668,7 +668,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetCountOfEntityOfByIdentifier(request);
         }
@@ -679,7 +679,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.ExistsOfEntityOfByIdentifier(request);
 		}
@@ -689,8 +689,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild GetCollectionOfEntityOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn GetCollectionOfEntityOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetCollectionOfEntityOfByIdentifier(request);
         }
@@ -700,8 +700,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild GetSingleOfEntityOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn GetSingleOfEntityOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetSingleOfEntityOfByIdentifier(request);
 		}
@@ -719,7 +719,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetCountOfDefaultOfByIdentifier(request);
         }
@@ -730,7 +730,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.ExistsOfDefaultOfByIdentifier(request);
 		}
@@ -740,8 +740,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default GetCollectionOfDefaultOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default GetCollectionOfDefaultOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetCollectionOfDefaultOfByIdentifier(request);
         }
@@ -751,13 +751,64 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default GetSingleOfDefaultOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default GetSingleOfDefaultOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetSingleOfDefaultOfByIdentifier(request);
 		}
 
         #endregion Query Methods Of Default of ByIdentifier 
+
+
+
+
+        #region Query Methods Of UpdateNameRequest of ByIdentifier 
+
+        /// <summary>
+        /// Gets the count of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>the count</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfUpdateNameRequestOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetCountOfUpdateNameRequestOfByIdentifier(request);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>		
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfUpdateNameRequestOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.ExistsOfUpdateNameRequestOfByIdentifier(request);
+		}
+
+        /// <summary>
+        /// Gets the collection of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest GetCollectionOfUpdateNameRequestOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetCollectionOfUpdateNameRequestOfByIdentifier(request);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest GetSingleOfUpdateNameRequestOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetSingleOfUpdateNameRequestOfByIdentifier(request);
+		}
+
+        #endregion Query Methods Of UpdateNameRequest of ByIdentifier 
 
 
 
@@ -770,7 +821,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfKeyInformationOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetCountOfKeyInformationOfByIdentifier(request);
         }
@@ -781,7 +832,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.ExistsOfKeyInformationOfByIdentifier(request);
 		}
@@ -791,8 +842,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation GetCollectionOfKeyInformationOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetCollectionOfKeyInformationOfByIdentifier(request);
         }
@@ -802,8 +853,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation GetSingleOfKeyInformationOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation GetSingleOfKeyInformationOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetSingleOfKeyInformationOfByIdentifier(request);
 		}
@@ -816,9 +867,19 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 
 
+        #region EntityUpdateActionSetting - UpdateNameOnly
+		
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest UpdateNameOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedUpdateNameOnly request)
+        {
+            return base.Channel.UpdateNameOnly(request);
+        }
+
+		#endregion EntityUpdateActionSetting - UpdateNameOnly
+
+
 		
 #if WINDOWS_PHONE
-        protected override MSBuildLogsExtended.WcfContracts.IBuildWcfService CreateChannel()
+        protected override MSBuildLogsExtended.WcfContracts.IBuildService CreateChannel()
         {
             throw new NotImplementedException();
         }

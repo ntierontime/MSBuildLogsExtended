@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{AB98CE94-DC97-4B6E-807C-CE51456A6589}</ProjectGuid>
+    <ProjectGuid>{159E6F3A-0B34-4008-BC6A-2C40B4CE0E50}</ProjectGuid>
     <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -29,8 +29,6 @@
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
     <LinkedServerProject>
     </LinkedServerProject>
-    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\..\</SolutionDir>
-    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <!-- This property group is only here to support building this project using the 
        MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
@@ -160,69 +158,66 @@
     <Compile Include="UserControls\UCCommonOfSolution.xaml.cs">
       <DependentUpon>UCCommonOfSolution.xaml</DependentUpon>
     </Compile>
-    <Content Include="Maps\map.2.D.2.vsd" />
-    <Content Include="Maps\map.2.D.2.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core.SL\CommonBLLEntities.SL\MSBuildLogsExtended.CommonBLLEntities.SL.csproj">
-      <Project>{77e21dc6-7d17-44d1-a444-3482aa1b1656}</Project>
+      <Project>{a50df48c-2a02-41d4-a2b6-a9815b6c3147}</Project>
       <Name>MSBuildLogsExtended.CommonBLLEntities.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core.SL\DataSourceEntities.SL\MSBuildLogsExtended.DataSourceEntities.SL.csproj">
-      <Project>{088d0ce9-8c01-464a-b1c2-34cfa6c76d1b}</Project>
+      <Project>{8d404e22-86bd-4a45-a122-c5c2b5b61e9a}</Project>
       <Name>MSBuildLogsExtended.DataSourceEntities.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core.SL\EntityContracts.SL\MSBuildLogsExtended.EntityContracts.SL.csproj">
-      <Project>{a7599ceb-adb1-406a-ac7c-0155758ab4b2}</Project>
+      <Project>{a109b303-c757-4fa3-be0e-6460dbcf9741}</Project>
       <Name>MSBuildLogsExtended.EntityContracts.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks.SL\Framework.SL\Framework.SL.csproj">
-      <Project>{1888f6cc-7810-45a6-82be-02d7f5d9ca6f}</Project>
+      <Project>{3ad8826f-070f-40dd-8771-8d17ada7ebf2}</Project>
       <Name>Framework.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks.SL\Framework.CommonBLLEntities.SL\Framework.CommonBLLEntities.SL.csproj">
-      <Project>{ef73b5c1-bb21-4a07-864e-e0ebfb2e7c33}</Project>
+      <Project>{4e8e2dda-4989-47ca-848d-3784207bc888}</Project>
       <Name>Framework.CommonBLLEntities.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks.SL\Framework.DataSourceEntities.SL\Framework.DataSourceEntities.SL.csproj">
-      <Project>{8842686f-6006-4e6c-abc7-f0921870b9b7}</Project>
+      <Project>{83b25b4a-62bf-4bf0-a18c-623af31c7bdd}</Project>
       <Name>Framework.DataSourceEntities.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks.SL\Framework.EntityContracts.SL\Framework.EntityContracts.SL.csproj">
-      <Project>{66bbec2c-d9d8-4a2c-92c7-274dfa0096cf}</Project>
+      <Project>{aff249f1-cd55-447c-81a2-0ec80715c391}</Project>
       <Name>Framework.EntityContracts.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks.SL\Framework.Resources.SL\Framework.Resources.SL.csproj">
-      <Project>{f3ad1556-69b4-4b36-ab5d-9dc9015d351d}</Project>
+      <Project>{6fde9471-4e80-469d-b441-bd8cfa62f93e}</Project>
       <Name>Framework.Resources.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks.SL\Framework.WcfClient.SL\Framework.WcfClient.SL.csproj">
-      <Project>{5fbc300e-f583-4af2-8fde-41b37fd1c8ea}</Project>
+      <Project>{615867c3-f394-47c7-b4ff-f40dcfc3cd94}</Project>
       <Name>Framework.WcfClient.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks.SL\Framework.Xaml.SL\Framework.Xaml.SL.csproj">
-      <Project>{32952f65-8442-42b9-9ab1-f462a8f223f2}</Project>
+      <Project>{8c899cac-d4e2-4234-bb3c-2abad08b2f0b}</Project>
       <Name>Framework.Xaml.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Shared.SL\ViewModels.SL\MSBuildLogsExtended.ViewModels.SL.csproj">
-      <Project>{d3a86d4a-aa0f-460f-9db1-f9a1abaa68aa}</Project>
+      <Project>{a28423a8-d0f5-454b-9abe-7cf4125e2e8d}</Project>
       <Name>MSBuildLogsExtended.ViewModels.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core.SL\Resources.SL\MSBuildLogsExtended.Resources.SL.csproj">
-      <Project>{754eb260-3edb-4885-8095-646adde5c9e5}</Project>
+      <Project>{ab89f1f0-e4b6-4538-8df5-3cd1e1bfeb2d}</Project>
       <Name>MSBuildLogsExtended.Resources.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Wcf.SL\WcfClientBLL.SL\MSBuildLogsExtended.WcfClientBLL.SL.csproj">
-      <Project>{fa96500c-fbac-47a3-ba55-a186785a6303}</Project>
+      <Project>{2e695896-7032-4a4d-bdbf-e9f7911d5860}</Project>
       <Name>MSBuildLogsExtended.WcfClientBLL.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core.SL\WcfContracts.SL\MSBuildLogsExtended.WcfContracts.SL.csproj">
-      <Project>{fc7bddb1-4de0-4ef2-b47b-6d40974a67dd}</Project>
+      <Project>{48d0515f-5c99-48c4-a53f-aebb2cf558c8}</Project>
       <Name>MSBuildLogsExtended.WcfContracts.SL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="mscorlib" />
     <Reference Include="system" />
     <Reference Include="System.ComponentModel.Composition, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -234,6 +229,7 @@
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Controls.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
     <Reference Include="System.Windows.Controls.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Controls.Navigation, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -303,11 +299,4 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-  </Target>
 </Project>

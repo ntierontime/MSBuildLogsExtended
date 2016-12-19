@@ -208,6 +208,9 @@
   <data name="Name_is_required" xml:space="preserve">
     <value>Name is required</value>
   </data>
+  <data name="The_length_of_Name_should_be_0_to_100" xml:space="preserve">
+    <value>The length of Name should be 0 to 100</value>
+  </data>
   <data name="DescriptionDescription" xml:space="preserve">
     <value>Description</value>
   </data>
@@ -225,6 +228,9 @@
   </data>
   <data name="DescriptionValueValidationExpression" xml:space="preserve">
     <value>Please input Description validation regular expression</value>
+  </data>
+  <data name="The_length_of_Description_should_be_0_to_1500" xml:space="preserve">
+    <value>The length of Description should be 0 to 1500</value>
   </data>
   <data name="BuildStartTimeDescription" xml:space="preserve">
     <value>Build Start Time</value>
@@ -295,14 +301,14 @@
   <data name="Value_Validation_Error_Message_of_property_PubDate_of_MSBuildLogsExtended_Build" xml:space="preserve">
     <value>Value Validation Error Message of property PubDate of MSBuildLogsExtended.Build</value>
   </data>
-  <data name="Solution_S1_1_Name" xml:space="preserve">
+  <data name="Solution_1_Name" xml:space="preserve">
     <value>Solution</value>
   </data>
-  <data name="Required_Field_Error_Message_of_property_Solution_S1_1_Name_of_MSBuildLogsExtended_Build" xml:space="preserve">
-    <value>Required Field Error Message of property Solution_S1_1_Name of MSBuildLogsExtended.Build</value>
+  <data name="Required_Field_Error_Message_of_property_Solution_1_Name_of_MSBuildLogsExtended_Build" xml:space="preserve">
+    <value>Required Field Error Message of property Solution_1_Name of MSBuildLogsExtended.Build</value>
   </data>
-  <data name="Value_Validation_Error_Message_of_property_Solution_S1_1_Name_of_MSBuildLogsExtended_Build" xml:space="preserve">
-    <value>Value Validation Error Message of property Solution_S1_1_Name of MSBuildLogsExtended.Build</value>
+  <data name="Value_Validation_Error_Message_of_property_Solution_1_Name_of_MSBuildLogsExtended_Build" xml:space="preserve">
+    <value>Value Validation Error Message of property Solution_1_Name of MSBuildLogsExtended.Build</value>
   </data>
   <data name="Required_Field_Error_Message_of_property_Id_of_MSBuildLogsExtended_Build" xml:space="preserve">
     <value>Required Field Error Message of property Id of MSBuildLogsExtended.Build</value>
@@ -331,59 +337,35 @@
   <data name="Value_Validation_Error_Message_of_property_CountPerFK_of_MSBuildLogsExtended_Build" xml:space="preserve">
     <value>Value Validation Error Message of property CountPerFK of MSBuildLogsExtended.Build</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+  <data name="UpdateNameOnly_ButtonText" xml:space="preserve">
+    <value>UpdateNameOnly</value>
+  </data>
+  <data name="UpdateNameOnly_Description" xml:space="preserve">
+    <value>UpdateNameOnly</value>
+  </data>
+  <data name="UpdateNameOnly_Success" xml:space="preserve">
+    <value>UpdateNameOnly success.</value>
+  </data>
+  <data name="UpdateNameOnly_Failed" xml:space="preserve">
+    <value>UpdateNameOnly failed.</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon" xml:space="preserve">
     <value>Solution</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon" xml:space="preserve">
     <value>Description of Id of Solution</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon" xml:space="preserve">
     <value>Tooltip of Id of Solution</value>
   </data>
-  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" xml:space="preserve">
     <value>Id of Solution</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" xml:space="preserve">
     <value>Description of Id of Solution</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_S1_1OfCommon" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" xml:space="preserve">
     <value>Tooltip of Id of Solution</value>
-  </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon" xml:space="preserve">
-    <value>Description of Name</value>
-  </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon" xml:space="preserve">
-    <value>Tooltip of Name</value>
-  </data>
-  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon" xml:space="preserve">
-    <value>Name of Build</value>
-  </data>
-  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon" xml:space="preserve">
-    <value>Description of Name of Build</value>
-  </data>
-  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon" xml:space="preserve">
-    <value>Tooltip of Name of Build</value>
-  </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon" xml:space="preserve">
-    <value>Description</value>
-  </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon" xml:space="preserve">
-    <value>Description of Description</value>
-  </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon" xml:space="preserve">
-    <value>Tooltip of Description</value>
-  </data>
-  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon" xml:space="preserve">
-    <value>Description of Build</value>
-  </data>
-  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon" xml:space="preserve">
-    <value>Description of Description of Build</value>
-  </data>
-  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon" xml:space="preserve">
-    <value>Tooltip of Description of Build</value>
   </data>
   <data name="IsToCompare_ID_CheckBox_Search_isToCompareBuildStartTimeCommonOftOfCommon" xml:space="preserve">
     <value>BuildStartTime</value>
@@ -430,22 +412,58 @@
   <data name="Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundBuildStartTimeCommonOftOfCommon" xml:space="preserve">
     <value>Tooltip of To</value>
   </data>
-  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon" xml:space="preserve">
+    <value>Description of Name</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of Name</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon" xml:space="preserve">
+    <value>Name of Build</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon" xml:space="preserve">
+    <value>Description of Name of Build</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of Name of Build</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon" xml:space="preserve">
+    <value>Description of Description</value>
+  </data>
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of Description</value>
+  </data>
+  <data name="ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon" xml:space="preserve">
+    <value>Description of Build</value>
+  </data>
+  <data name="Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon" xml:space="preserve">
+    <value>Description of Description of Build</value>
+  </data>
+  <data name="Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon" xml:space="preserve">
+    <value>Tooltip of Description of Build</value>
+  </data>
+  <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
     <value>Solution</value>
   </data>
-  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
     <value>Description of Id of Solution</value>
   </data>
-  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Solution</value>
   </data>
-  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+  <data name="ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
     <value>Id of Solution</value>
   </data>
-  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+  <data name="Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
     <value>Description of Id of Solution</value>
   </data>
-  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly" xml:space="preserve">
+  <data name="Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly" xml:space="preserve">
     <value>Tooltip of Id of Solution</value>
   </data>
   <data name="IsToCompare_ID_CheckBox_Search_isToCompareIdByIdentifierOftOfByIdentifier" xml:space="preserve">

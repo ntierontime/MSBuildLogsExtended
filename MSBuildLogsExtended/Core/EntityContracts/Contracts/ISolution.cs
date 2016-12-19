@@ -6,7 +6,7 @@ namespace MSBuildLogsExtended.EntityContracts
     /// <summary>
     /// definition of Solution with parameters of .Net value type.
     /// </summary>
-	public interface ISolution : ISolutionIdentifier
+	public partial interface ISolution : ISolutionIdentifier
 	{ 
 
         System.String ExternalParentId { get; set; }
@@ -23,7 +23,7 @@ namespace MSBuildLogsExtended.EntityContracts
     /// a property defined when <see cref="WithEntityContractSolution"/> is used in other classes.
     /// </summary>
     /// <typeparam name="T">a type inherits from <see cref="WithEntityContractSolution"/></typeparam>
-	public interface WithEntityContractSolution<T>
+	public partial interface WithEntityContractSolution<T>
         where T : ISolution
     {
         /// <summary>

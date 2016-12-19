@@ -63,8 +63,6 @@
     <Compile Include="WebFormApplicationSessionVariables.cs" />
     <Compile Include="AppEngine\WebFormApplicationUploadFilePathBuilder.cs" />
     <Compile Include="AppEngine\WebFormApplicationWikiPlexHelper.cs" />
-    <Content Include="Maps\map.1.D.1.vsd" />
-    <Content Include="Maps\map.1.D.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj">
@@ -89,7 +87,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -99,6 +96,7 @@
     <Reference Include="System.Data.Services.Client" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>

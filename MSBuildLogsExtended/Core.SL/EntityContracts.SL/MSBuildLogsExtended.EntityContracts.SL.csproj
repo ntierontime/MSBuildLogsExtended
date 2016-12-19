@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A7599CEB-ADB1-406A-AC7C-0155758AB4B2}</ProjectGuid>
+    <ProjectGuid>{A109B303-C757-4FA3-BE0E-6460DBCF9741}</ProjectGuid>
     <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -54,8 +54,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Maps\map.2.B.3.vsd" />
-    <Content Include="Maps\map.2.B.3.vsd.png" />
     <Compile Include="..\..\Core\EntityContracts\Contracts\IBuild.cs">
       <Link>Contracts\IBuild.cs</Link>
     </Compile>
@@ -113,15 +111,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks.SL\Framework.SL\Framework.SL.csproj">
-      <Project>{1888f6cc-7810-45a6-82be-02d7f5d9ca6f}</Project>
+      <Project>{3ad8826f-070f-40dd-8771-8d17ada7ebf2}</Project>
       <Name>Framework.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.SL\Framework.DataSourceEntities.SL\Framework.DataSourceEntities.SL.csproj">
-      <Project>{8842686f-6006-4e6c-abc7-f0921870b9b7}</Project>
+      <Project>{83b25b4a-62bf-4bf0-a18c-623af31c7bdd}</Project>
       <Name>Framework.DataSourceEntities.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.SL\Framework.EntityContracts.SL\Framework.EntityContracts.SL.csproj">
-      <Project>{66bbec2c-d9d8-4a2c-92c7-274dfa0096cf}</Project>
+      <Project>{aff249f1-cd55-447c-81a2-0ec80715c391}</Project>
       <Name>Framework.EntityContracts.SL</Name>
     </ProjectReference>
   </ItemGroup>
@@ -149,7 +147,7 @@
         <SilverlightProjectProperties />
       </FlavorProperties>
       <!-- For ProjectLinker -->
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="d090796d-578a-4c52-b489-3e688ddd5206" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="a9940920-207f-471d-8164-13d5a4b518ba" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

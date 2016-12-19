@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E179E71C-55F6-468C-BDF1-9A62CFDB39A9}</ProjectGuid>
+    <ProjectGuid>{F9F6AFDD-CBC4-42C9-AD50-F3D721C11058}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.ViewModels</RootNamespace>
@@ -13,8 +13,6 @@
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
-    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\..\..\</SolutionDir>
-    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,24 +52,22 @@
     <Compile Include="ViewModelLocator.cs" />
     <Compile Include="AccountViewModel.cs" />
     <Compile Include="LocalizedStrings.cs" />
-    <Content Include="Maps\map.2.D.1.vsd" />
-    <Content Include="Maps\map.2.D.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Core\CommonBLLEntities\MSBuildLogsExtended.CommonBLLEntities.csproj">
-      <Project>{de7d8090-bff6-4641-9720-7f44afed1832}</Project>
+      <Project>{f201379d-034b-4892-9aec-927a3d67d260}</Project>
       <Name>MSBuildLogsExtended.CommonBLLEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Core\CommonBLLIoC\MSBuildLogsExtended.CommonBLLIoC.csproj">
-      <Project>{9919e99e-ea70-4994-b415-f5a727020d78}</Project>
+      <Project>{8a12c259-5b56-47af-a21c-0e709f5e8e54}</Project>
       <Name>MSBuildLogsExtended.CommonBLLIoC</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Core\DataSourceEntities\MSBuildLogsExtended.DataSourceEntities.csproj">
-      <Project>{806a9ab2-2edd-42d2-a3ca-a2acba0cedd7}</Project>
+      <Project>{37102465-556b-49e7-8ca2-a7814e45de36}</Project>
       <Name>MSBuildLogsExtended.DataSourceEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Core\EntityContracts\MSBuildLogsExtended.EntityContracts.csproj">
-      <Project>{d090796d-578a-4c52-b489-3e688ddd5206}</Project>
+      <Project>{a9940920-207f-471d-8164-13d5a4b518ba}</Project>
       <Name>MSBuildLogsExtended.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\..\Frameworks\Framework\Framework.csproj">
@@ -103,15 +99,15 @@
       <Name>Framework.Xaml</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Core\Resources\MSBuildLogsExtended.Resources.csproj">
-      <Project>{4072ddfc-04fb-4b21-b602-00678070187a}</Project>
+      <Project>{ada3b560-c0b9-42d0-92ff-a76462e8d524}</Project>
       <Name>MSBuildLogsExtended.Resources</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Wcf\WcfClientBLL\MSBuildLogsExtended.WcfClientBLL.csproj">
-      <Project>{eab3bd98-6149-4d2e-a71d-f9aa5a3946ae}</Project>
+      <Project>{794ea58e-d8ee-422c-b6fb-d9965e175aa3}</Project>
       <Name>MSBuildLogsExtended.WcfClientBLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Core\WcfContracts\MSBuildLogsExtended.WcfContracts.csproj">
-      <Project>{9eb722de-3c2a-43ca-ab84-e2db1f814ea5}</Project>
+      <Project>{23bf8e7c-df8c-43f2-9153-53de5ee23c86}</Project>
       <Name>MSBuildLogsExtended.WcfContracts</Name>
     </ProjectReference>
   </ItemGroup>
@@ -154,13 +150,6 @@
     <PostBuildEvent>rem copy $(TargetPath) $(SolutionDir)BuiltResults\*.* /y</PostBuildEvent>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-  </Target>
   <!--
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -50,9 +50,8 @@
     <Compile Include="PagerHtmlRenderer.cs" />
     <Compile Include="ViewModelBaseWithResultAndUIElement.cs" />
     <Compile Include="ViewModels\MultipleFileUploadModel.cs" />
+    <Compile Include="ViewModels\ViewModelItemBase.cs" />
     <Compile Include="MvcHelper.cs" />
-    <Content Include="Maps\map.1.D.1.vsd" />
-    <Content Include="Maps\map.1.D.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj">

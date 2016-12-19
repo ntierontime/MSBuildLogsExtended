@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{048F80FD-CF9C-4F55-A0E6-9D9BB131CB3F}</ProjectGuid>
+    <ProjectGuid>{B32A7470-A5E0-459B-831F-F598B09B75C7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.CommonBLL</RootNamespace>
@@ -44,42 +44,36 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Compile Include="BusinessLogicLayerEntity\BusinessLogicLayerEntityBuild.cs" />
-    <Compile Include="BusinessLogicLayerEntity\BusinessLogicLayerEntityBuildEventCode.cs" />
-    <Compile Include="BusinessLogicLayerEntity\BusinessLogicLayerEntityBuildLog.cs" />
-    <Compile Include="BusinessLogicLayerEntity\BusinessLogicLayerEntitySolution.cs" />
+    <Compile Include="Services\BuildService.cs" />
+    <Compile Include="Services\BuildEventCodeService.cs" />
+    <Compile Include="Services\BuildLogService.cs" />
+    <Compile Include="Services\SolutionService.cs" />
     <Compile Include="BusinessLogicLayerFactory.cs" />
-    <Compile Include="Charting\ChartBuilderBuild.cs" />
-    <Compile Include="Charting\ChartBuilderBuildEventCode.cs" />
-    <Compile Include="Charting\ChartBuilderBuildLog.cs" />
-    <Compile Include="Charting\ChartBuilderSolution.cs" />
-    <Compile Include="DataStreamServiceProviders\DataStreamServiceProviderBuild.cs" />
-    <Compile Include="DataStreamServiceProviders\DataStreamServiceProviderBuildEventCode.cs" />
-    <Compile Include="DataStreamServiceProviders\DataStreamServiceProviderBuildLog.cs" />
-    <Compile Include="DataStreamServiceProviders\DataStreamServiceProviderSolution.cs" />
+    <Compile Include="ChartingService\BuildChartBuilder.cs" />
+    <Compile Include="ChartingService\BuildEventCodeChartBuilder.cs" />
+    <Compile Include="ChartingService\BuildLogChartBuilder.cs" />
+    <Compile Include="ChartingService\SolutionChartBuilder.cs" />
+    <Compile Include="DataStreamServiceProviders\BuildDataStreamService.cs" />
+    <Compile Include="DataStreamServiceProviders\BuildEventCodeDataStreamService.cs" />
+    <Compile Include="DataStreamServiceProviders\BuildLogDataStreamService.cs" />
+    <Compile Include="DataStreamServiceProviders\SolutionDataStreamService.cs" />
     <Compile Include="SyndicationFeedFacade.cs" />
-    <Content Include="Maps\map.2.B.2.vsd" />
-    <Content Include="Maps\map.2.B.2.vsd.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Resources\MSBuildLogsExtended.Resources.csproj">
-      <Project>{4072ddfc-04fb-4b21-b602-00678070187a}</Project>
-      <Name>MSBuildLogsExtended.Resources</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CommonBLLEntities\MSBuildLogsExtended.CommonBLLEntities.csproj">
-      <Project>{de7d8090-bff6-4641-9720-7f44afed1832}</Project>
+      <Project>{f201379d-034b-4892-9aec-927a3d67d260}</Project>
       <Name>MSBuildLogsExtended.CommonBLLEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\DALContracts\MSBuildLogsExtended.DALContracts.csproj">
-      <Project>{c26ef262-08d5-47ae-a0cb-01dabb6b644d}</Project>
+      <Project>{028bd872-f585-4d60-9e45-e5bece93d775}</Project>
       <Name>MSBuildLogsExtended.DALContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataSourceEntities\MSBuildLogsExtended.DataSourceEntities.csproj">
-      <Project>{806a9ab2-2edd-42d2-a3ca-a2acba0cedd7}</Project>
+      <Project>{37102465-556b-49e7-8ca2-a7814e45de36}</Project>
       <Name>MSBuildLogsExtended.DataSourceEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\EntityContracts\MSBuildLogsExtended.EntityContracts.csproj">
-      <Project>{d090796d-578a-4c52-b489-3e688ddd5206}</Project>
+      <Project>{a9940920-207f-471d-8164-13d5a4b518ba}</Project>
       <Name>MSBuildLogsExtended.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
@@ -106,25 +100,21 @@
       <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
       <Name>Framework.EntityContracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.Services\Framework.Services.csproj">
+      <Project>{3ef91dc7-12c9-47f3-bb18-ad3d85d1b624}</Project>
+      <Name>Framework.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks\Framework.Web\Framework.Web.csproj">
       <Project>{950b9cdb-9286-4a1a-8d88-1df6954a45e3}</Project>
       <Name>Framework.Web</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LinqDAL\MSBuildLogsExtended.LinqDAL.csproj">
-      <Project>{79e8362e-8373-48b6-9d36-e2105659ab4c}</Project>
-      <Name>MSBuildLogsExtended.LinqDAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LinqToSqlContexts\MSBuildLogsExtended.LinqToSqlContexts.csproj">
-      <Project>{5f48ec62-60d3-4d77-8f5f-7d5b820227a8}</Project>
-      <Name>MSBuildLogsExtended.LinqToSqlContexts</Name>
+    <ProjectReference Include="..\Resources\MSBuildLogsExtended.Resources.csproj">
+      <Project>{ada3b560-c0b9-42d0-92ff-a76462e8d524}</Project>
+      <Name>MSBuildLogsExtended.Resources</Name>
     </ProjectReference>
     <ProjectReference Include="..\WcfContracts\MSBuildLogsExtended.WcfContracts.csproj">
-      <Project>{9eb722de-3c2a-43ca-ab84-e2db1f814ea5}</Project>
+      <Project>{23bf8e7c-df8c-43f2-9153-53de5ee23c86}</Project>
       <Name>MSBuildLogsExtended.WcfContracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Frameworks\Framework.Services\Framework.Services.csproj">
-      <Project>{3ef91dc7-12c9-47f3-bb18-ad3d85d1b624}</Project>
-      <Name>Framework.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -46,8 +46,6 @@
     <None Include="packages.config" />
     <Compile Include="AuthenticationService.cs" />
     <Compile Include="AuthenticationServiceAsyn.cs" />
-    <Content Include="Maps\map.1.A.3.vsd" />
-    <Content Include="Maps\map.1.A.3.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj">

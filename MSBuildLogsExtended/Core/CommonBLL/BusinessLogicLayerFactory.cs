@@ -8,7 +8,7 @@ namespace MSBuildLogsExtended.CommonBLL
     /// <summary>
     /// is to factory class to create instances of business layer classes
     /// </summary>
-	public class BusinessLogicLayerFactory : MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactory
+	public partial class BusinessLogicLayerFactory : MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactory
     {
         #region Entity related
 
@@ -17,10 +17,10 @@ namespace MSBuildLogsExtended.CommonBLL
         /// Creates the BLL instance of entity <see cref="MSBuildLogsExtended.Build"/> tables for change notification.
         /// </summary>
         /// <param name="businessLogicLayerContext">The business logic layer context.</param>
-        /// <returns>Instance of BusinessLogicLayerEntityBuild</returns>
-        public MSBuildLogsExtended.WcfContracts.IBuildWcfService CreateBLLInstanceOfEntityBuild(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
+        /// <returns>Instance of BuildService</returns>
+        public MSBuildLogsExtended.WcfContracts.IBuildService CreateBLLInstanceOfEntityBuild(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
         {
-            return new BusinessLogicLayerEntityBuild(businessLogicLayerContext);
+            return new BuildService(businessLogicLayerContext);
         }
 
 
@@ -28,10 +28,10 @@ namespace MSBuildLogsExtended.CommonBLL
         /// Creates the BLL instance of entity <see cref="MSBuildLogsExtended.BuildEventCode"/> tables for change notification.
         /// </summary>
         /// <param name="businessLogicLayerContext">The business logic layer context.</param>
-        /// <returns>Instance of BusinessLogicLayerEntityBuildEventCode</returns>
-        public MSBuildLogsExtended.WcfContracts.IBuildEventCodeWcfService CreateBLLInstanceOfEntityBuildEventCode(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
+        /// <returns>Instance of BuildEventCodeService</returns>
+        public MSBuildLogsExtended.WcfContracts.IBuildEventCodeService CreateBLLInstanceOfEntityBuildEventCode(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
         {
-            return new BusinessLogicLayerEntityBuildEventCode(businessLogicLayerContext);
+            return new BuildEventCodeService(businessLogicLayerContext);
         }
 
 
@@ -39,10 +39,10 @@ namespace MSBuildLogsExtended.CommonBLL
         /// Creates the BLL instance of entity <see cref="MSBuildLogsExtended.BuildLog"/> tables for change notification.
         /// </summary>
         /// <param name="businessLogicLayerContext">The business logic layer context.</param>
-        /// <returns>Instance of BusinessLogicLayerEntityBuildLog</returns>
-        public MSBuildLogsExtended.WcfContracts.IBuildLogWcfService CreateBLLInstanceOfEntityBuildLog(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
+        /// <returns>Instance of BuildLogService</returns>
+        public MSBuildLogsExtended.WcfContracts.IBuildLogService CreateBLLInstanceOfEntityBuildLog(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
         {
-            return new BusinessLogicLayerEntityBuildLog(businessLogicLayerContext);
+            return new BuildLogService(businessLogicLayerContext);
         }
 
 
@@ -50,10 +50,10 @@ namespace MSBuildLogsExtended.CommonBLL
         /// Creates the BLL instance of entity <see cref="MSBuildLogsExtended.Solution"/> tables for change notification.
         /// </summary>
         /// <param name="businessLogicLayerContext">The business logic layer context.</param>
-        /// <returns>Instance of BusinessLogicLayerEntitySolution</returns>
-        public MSBuildLogsExtended.WcfContracts.ISolutionWcfService CreateBLLInstanceOfEntitySolution(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
+        /// <returns>Instance of SolutionService</returns>
+        public MSBuildLogsExtended.WcfContracts.ISolutionService CreateBLLInstanceOfEntitySolution(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
         {
-            return new BusinessLogicLayerEntitySolution(businessLogicLayerContext);
+            return new SolutionService(businessLogicLayerContext);
         }
 
 

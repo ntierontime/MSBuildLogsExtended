@@ -47,8 +47,6 @@
     <Compile Include="DataAccessLayerContractBase.cs" />
     <Compile Include="DataAccessLayerPickListTemplateContract.cs" />
     <Compile Include="StatusChangeLinqQuerySetBase.cs" />
-    <Content Include="Maps\map.1.A.1.vsd" />
-    <Content Include="Maps\map.1.A.1.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework.DataSourceEntities\Framework.DataSourceEntities.csproj">

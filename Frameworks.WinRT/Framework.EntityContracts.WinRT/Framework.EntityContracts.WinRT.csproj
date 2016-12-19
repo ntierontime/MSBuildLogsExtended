@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DD91A540-0344-4E8E-9183-C0D230D5CF4C}</ProjectGuid>
+    <ProjectGuid>{6A07BDB8-D8D2-43E9-8791-80C4A3A91788}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Framework.EntityContracts</RootNamespace>
@@ -101,8 +101,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Maps\map.1.B.3.vsd" />
-    <Content Include="Maps\map.1.B.3.vsd.png" />
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\AlphabeticalOrderCategory.cs">
       <Link>AlphabeticalOrderCategory.cs</Link>
     </Compile>
@@ -139,6 +137,9 @@
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\SummaryData.cs">
       <Link>SummaryData.cs</Link>
     </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\ContentData.cs">
+      <Link>ViewModels\ContentData.cs</Link>
+    </Compile>
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\IViewModelBase.cs">
       <Link>ViewModels\IViewModelBase.cs</Link>
     </Compile>
@@ -172,7 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework.WinRT\Framework.WinRT.csproj">
-      <Project>{219c261b-3f94-43f4-819c-bd0faa3e6e12}</Project>
+      <Project>{460fe8b2-17ec-4a7e-83f8-b77b88e8b284}</Project>
       <Name>Framework.WinRT</Name>
     </ProjectReference>
   </ItemGroup>

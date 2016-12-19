@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-#if WINDOWS_PHONE
+#if (WINDOWS_PHONE || XAMARIN)
 #else
 using System.ComponentModel.DataAnnotations;
 #endif
@@ -90,7 +90,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 		#region properties
 
 				[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Id", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
@@ -110,7 +110,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "SolutionId", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
@@ -130,11 +130,12 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Name", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
 		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild), ErrorMessageResourceName="Name_is_required")]
+		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_100")]
 #endif
         public System.String Name
         {
@@ -150,10 +151,11 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Description", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
+		[StringLengthAttribute(1500, ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild), ErrorMessageResourceName="The_length_of_Description_should_be_0_to_1500")]
 #endif
         public System.String Description
         {
@@ -169,7 +171,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 				[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "BuildStartTime", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
@@ -248,7 +250,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 
 		#endregion Method of Build GetAClone()
 
-		#region Nested Views classes and their collection classes 3
+		#region Nested Views classes and their collection classes 4
 
 
         /// <summary>
@@ -259,7 +261,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 
 			#region Storage Fields
 
-        public System.String m_Solution_S1_1_Name;
+        public System.String m_Solution_1_Name;
 
         public System.Int64 m_Id;
 
@@ -282,7 +284,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildLogsExtended.EntityContracts.IBuild"/></param>
 			public Default()
 			{
-				this.Solution_S1_1_Name = null;
+				this.Solution_1_Name = null;
 				this.Id = default(long);
 				this.SolutionId = default(int);
 				this.Name = null;
@@ -305,26 +307,26 @@ namespace MSBuildLogsExtended.DataSourceEntities
 			#region properties
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
-		[Display(Name = "Solution_S1_1_Name", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
+		[Display(Name = "Solution_1_Name", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
 #endif
-        public System.String Solution_S1_1_Name
+        public System.String Solution_1_Name
         {
             get
             {
-                return m_Solution_S1_1_Name;
+                return m_Solution_1_Name;
             }
             set
             {
-                m_Solution_S1_1_Name = value;
-                RaisePropertyChanged("Solution_S1_1_Name");
+                m_Solution_1_Name = value;
+                RaisePropertyChanged("Solution_1_Name");
             }
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Id", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
@@ -344,7 +346,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "SolutionId", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
@@ -363,11 +365,12 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Name", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
 		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild), ErrorMessageResourceName="Name_is_required")]
+		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_100")]
 #endif
         public System.String Name
         {
@@ -383,10 +386,11 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Description", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
+		[StringLengthAttribute(1500, ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild), ErrorMessageResourceName="The_length_of_Description_should_be_0_to_1500")]
 #endif
         public System.String Description
         {
@@ -402,7 +406,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "BuildStartTime", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
@@ -434,7 +438,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
             {
                 Default cloned = new Default();
 
-			cloned.m_Solution_S1_1_Name = m_Solution_S1_1_Name;
+			cloned.m_Solution_1_Name = m_Solution_1_Name;
 			cloned.m_Id = m_Id;
 			cloned.m_SolutionId = m_SolutionId;
 			cloned.m_Name = m_Name;
@@ -518,7 +522,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 			#region properties
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "SolutionId", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
@@ -538,7 +542,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "CountPerFK", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
@@ -557,7 +561,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Name", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
@@ -625,14 +629,16 @@ namespace MSBuildLogsExtended.DataSourceEntities
 
 
         /// <summary>
-        /// View "KeyInformation" class of <see cref="Build"/>, used across the solution. 
+        /// View "UpdateNameRequest" class of <see cref="Build"/>, used across the solution. 
         /// </summary>
-		public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildLogsExtended.EntityContracts.IBuildIdentifier
+		public partial class UpdateNameRequest :Framework.PropertyChangedNotifier, MSBuildLogsExtended.EntityContracts.IBuildIdentifier
 		{
 
 			#region Storage Fields
 
         public System.Int64 m_Id;
+
+        public System.String m_Name;
 
 
 			#endregion Storage Fields
@@ -643,18 +649,19 @@ namespace MSBuildLogsExtended.DataSourceEntities
 			/// Initializes/clone a new instance of the <see cref=" Build"/> class.
 			/// </summary>
 			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildLogsExtended.EntityContracts.IBuild"/></param>
-			public KeyInformation()
+			public UpdateNameRequest()
 			{
 				this.Id = default(long);
+				this.Name = null;
 			}
 			/*
 			/// <summary>
 			/// Initializes/clone a new instance of the <see cref=" Build"/> class.
 			/// </summary>
 			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildLogsExtended.EntityContracts.IBuild"/></param>
-			public KeyInformation(MSBuildLogsExtended.EntityContracts.IBuild item)
+			public UpdateNameRequest(MSBuildLogsExtended.EntityContracts.IBuild item)
 			{
-				MSBuildLogsExtended.EntityContracts.IBuildHelper.Copy<MSBuildLogsExtended.EntityContracts.IBuild, KeyInformation>(item, this);
+				MSBuildLogsExtended.EntityContracts.IBuildHelper.Copy<MSBuildLogsExtended.EntityContracts.IBuild, UpdateNameRequest>(item, this);
 			}
 			*/
 			#endregion Constructors
@@ -663,7 +670,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 			#region properties
 
 					[DataMember]
-#if (WINDOWS_PHONE)
+#if (WINDOWS_PHONE || XAMARIN)
 
 #else
 		[Display(Name = "Id", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
@@ -682,6 +689,157 @@ namespace MSBuildLogsExtended.DataSourceEntities
             }
         }
 
+					[DataMember]
+#if (WINDOWS_PHONE || XAMARIN)
+
+#else
+		[Display(Name = "Name", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild), ErrorMessageResourceName="Name_is_required")]
+		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_100")]
+#endif
+        public System.String Name
+        {
+            get
+            {
+                return m_Name;
+            }
+            set
+            {
+                m_Name = value;
+                RaisePropertyChanged("Name");
+            }
+        }
+
+
+			#endregion properties
+
+            #region Method of Build.UpdateNameRequest  GetAClone()
+
+            /// <summary>
+            /// Gets the A clone.
+            /// </summary>
+            /// <returns>a new instance with same value</returns>
+            public UpdateNameRequest GetAClone()
+            {
+                UpdateNameRequest cloned = new UpdateNameRequest();
+
+			cloned.m_Id = m_Id;
+			cloned.m_Name = m_Name;
+
+                return cloned;
+            }
+
+
+            #endregion Method of Build.UpdateNameRequest  GetAClone()
+		}
+
+        /// <summary>
+        /// View "UpdateNameRequest" class of <see cref="Build"/>, used across the solution. 
+        /// </summary>
+		public partial class UpdateNameRequestCollection
+			:  List<UpdateNameRequest>
+		{ 
+		}
+
+        /// <summary>
+        /// message definition of "UpdateNameRequest", pass single entry, from database, to business logic layer. <see cref="Build"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
+        /// </summary>
+		public class DataAccessLayerMessageOfUpdateNameRequest
+			: Framework.DataSourceEntities.DataAccessLayerMessageBase<UpdateNameRequest>
+		{
+		}
+
+        /// <summary>
+        /// message definition of "UpdateNameRequest", pass a collection of instances, from database, to business logic layer. <see cref="Build"/> and <see cref="Framework.DataAccessLayerMessageBase&lt;T&gt;"/>
+        /// </summary>
+		public class DataAccessLayerMessageOfUpdateNameRequestCollection
+			: Framework.DataSourceEntities.DataAccessLayerMessageBase<UpdateNameRequestCollection>
+		{
+		}
+
+
+        /// <summary>
+        /// View "KeyInformation" class of <see cref="Build"/>, used across the solution. 
+        /// </summary>
+		public partial class KeyInformation :Framework.PropertyChangedNotifier, MSBuildLogsExtended.EntityContracts.IBuildIdentifier
+		{
+
+			#region Storage Fields
+
+        public System.Int64 m_Id;
+
+        public System.String m_Name;
+
+
+			#endregion Storage Fields
+
+			#region Constructors
+
+			/// <summary>
+			/// Initializes/clone a new instance of the <see cref=" Build"/> class.
+			/// </summary>
+			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildLogsExtended.EntityContracts.IBuild"/></param>
+			public KeyInformation()
+			{
+				this.Id = default(long);
+				this.Name = null;
+			}
+			/*
+			/// <summary>
+			/// Initializes/clone a new instance of the <see cref=" Build"/> class.
+			/// </summary>
+			/// <param name="item">an entity instance with same contract of <see cref=" MSBuildLogsExtended.EntityContracts.IBuild"/></param>
+			public KeyInformation(MSBuildLogsExtended.EntityContracts.IBuild item)
+			{
+				MSBuildLogsExtended.EntityContracts.IBuildHelper.Copy<MSBuildLogsExtended.EntityContracts.IBuild, KeyInformation>(item, this);
+			}
+			*/
+			#endregion Constructors
+
+
+			#region properties
+
+					[DataMember]
+#if (WINDOWS_PHONE || XAMARIN)
+
+#else
+		[Display(Name = "Id", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild), ErrorMessageResourceName="Id_is_required")]
+#endif
+        public System.Int64 Id
+        {
+            get
+            {
+                return m_Id;
+            }
+            set
+            {
+                m_Id = value;
+                RaisePropertyChanged("Id");
+            }
+        }
+
+					[DataMember]
+#if (WINDOWS_PHONE || XAMARIN)
+
+#else
+		[Display(Name = "Name", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild))]
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild), ErrorMessageResourceName="Name_is_required")]
+		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild), ErrorMessageResourceName="The_length_of_Name_should_be_0_to_100")]
+#endif
+        public System.String Name
+        {
+            get
+            {
+                return m_Name;
+            }
+            set
+            {
+                m_Name = value;
+                RaisePropertyChanged("Name");
+            }
+        }
+
 
 			#endregion properties
 
@@ -696,6 +854,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
                 KeyInformation cloned = new KeyInformation();
 
 			cloned.m_Id = m_Id;
+			cloned.m_Name = m_Name;
 
                 return cloned;
             }
@@ -731,7 +890,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 
 
 
-		#endregion Nested Views classes and their collection classes 3
+		#endregion Nested Views classes and their collection classes 4
 
 	}
 
@@ -759,3 +918,4 @@ namespace MSBuildLogsExtended.DataSourceEntities
     {
     }
 }
+

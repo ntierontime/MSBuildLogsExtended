@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8601CD0C-5985-4B2B-A333-52C0A5902CE2}</ProjectGuid>
+    <ProjectGuid>{1EFE0717-BD17-4781-A7D2-7F0216A3460B}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -50,6 +50,15 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
+    <Compile Include="..\..\Frameworks\Framework\BinaryRelated\BinaryFile.cs">
+      <Link>BinaryRelated\BinaryFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\BinaryRelated\BinaryFileHelper.cs">
+      <Link>BinaryRelated\BinaryFileHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\DateTimePeriodHelper.cs">
+      <Link>DateTimePeriodHelper.cs</Link>
+    </Compile>
     <Compile Include="..\..\Frameworks\Framework\DataServiceTypes.cs">
       <Link>DataServiceTypes.cs</Link>
     </Compile>
@@ -58,6 +67,9 @@
     </Compile>
     <Compile Include="..\..\Frameworks\Framework\IDataStreamServiceProviderBase.cs">
       <Link>IDataStreamServiceProviderBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\Models\MenuTreeItem.cs">
+      <Link>Models\MenuTreeItem.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework\NavigationSetting.cs">
       <Link>NavigationSetting.cs</Link>
@@ -76,33 +88,35 @@
     </Compile>
     <Compile Include="..\..\Frameworks\Framework\IoCContainerWrapper.cs">
       <Link>IoCContainerWrapper.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\BinaryRelated\BinaryFile.cs">
-      <Link>BinaryRelated\BinaryFile.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\BinaryRelated\BinaryFileHelper.cs">
-      <Link>BinaryRelated\BinaryFileHelper.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\DateTimePeriodHelper.cs">
-      <Link>DateTimePeriodHelper.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\Models\MenuTreeItem.cs">
-      <Link>Models\MenuTreeItem.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\LoggingOptions.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\LoggingOptions.cs">
       <Link>LoggingOptions.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\BinaryRelated\MIMEContentTypeToFileExtensionMappingCollection.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\BinaryRelated\MIMEContentTypeToFileExtensionMappingCollection.cs">
       <Link>BinaryRelated\MIMEContentTypeToFileExtensionMappingCollection.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\Models\ChangePasswordModel.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\Models\ChangePasswordModel.cs">
       <Link>Models\ChangePasswordModel.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\Models\LogOnModel.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\Models\LogOnModel.cs">
       <Link>Models\LogOnModel.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\Models\RegisterModel.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\Models\RegisterModel.cs">
       <Link>Models\RegisterModel.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\NameValuePair.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\NameValuePair.cs">
       <Link>NameValuePair.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\PagingPageSizeOption.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\PagingPageSizeOption.cs">
       <Link>PagingPageSizeOption.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\RssItem.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\RssItem.cs">
       <Link>RssItem.cs</Link>
-    </Compile>    <Compile Include="..\..\Frameworks\Framework\Common\Singleton.cs">
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\Common\Singleton.cs">
       <Link>Common\Singleton.cs</Link>
-    </Compile>  </ItemGroup>
+    </Compile>
+  </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>

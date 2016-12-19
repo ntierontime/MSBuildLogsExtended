@@ -44,20 +44,20 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
+    <Compile Include="BinaryRelated\BinaryFile.cs" />
+    <Compile Include="BinaryRelated\BinaryFileHelper.cs" />
+    <Compile Include="DateTimePeriodHelper.cs" />
     <Compile Include="AssemblyHelper.cs" />
     <Compile Include="DataServiceTypes.cs" />
     <Compile Include="DataStreamServiceResult.cs" />
     <Compile Include="IDataStreamServiceProviderBase.cs" />
+    <Compile Include="Models\MenuTreeItem.cs" />
     <Compile Include="NavigationSetting.cs" />
     <Compile Include="PropertyChangedNotifier.cs" />
     <Compile Include="UIAction.cs" />
     <Compile Include="UIActionStatus.cs" />
     <Compile Include="UIActionStatusMessage.cs" />
     <Compile Include="IoCContainerWrapper.cs" />
-    <Compile Include="BinaryRelated\BinaryFile.cs" />
-    <Compile Include="BinaryRelated\BinaryFileHelper.cs" />
-    <Compile Include="DateTimePeriodHelper.cs" />
-    <Compile Include="Models\MenuTreeItem.cs" />
     <Compile Include="LoggingOptions.cs" />
     <Compile Include="BinaryRelated\MIMEContentTypeToFileExtensionMappingCollection.cs" />
     <Compile Include="Models\ChangePasswordModel.cs" />
@@ -71,9 +71,6 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System.Xml" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -81,6 +78,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="LINQtoCSV">

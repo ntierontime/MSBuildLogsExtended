@@ -1,0 +1,54 @@
+@using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc50Rasor.Helpers.UrlStrings;
+@model MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM
+@{
+    ViewBag.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
+}
+@section featured {
+    <hgroup>
+        <h2>@Model.ContentData.Title.</h2>
+        <h4>@Model.ContentData.Summary</h4>
+        <h3>@Framework.Resources.UIStringResource.Warning_Areyousureyouwanttodeletethis</h3>
+    </hgroup>
+}
+@if (Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK && Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
+{
+	<div class="text-danger">@Model.StatusMessageOfResult</div>
+}
+	    <legend>@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog.</legend>
+@using (Html.BeginForm(UrlStringsAlias.ActionName_BuildLog_Delete, UrlStringsAlias.ControllerName_BuildLog, FormMethod.Post, new { @class= "form-horizontal" })) {
+	@Html.AntiForgeryToken()
+<div class="form-group form-inline">
+			@Html.LabelFor(model => model.Item.Build_1_Name, new { @class = "control-label" })
+        <div class="form-control">
+@Html.ActionLink(Model.Item.Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.BuildId }, null)
+        </div>
+    </div>
+@Html.HiddenFor(model => model.Item.Id)@Html.HiddenFor(model => model.Item.Solution_1Id)  <div class="form-group form-inline">
+			@Html.LabelFor(model => model.Item.Solution_1_Name, new { @class = "control-label" })
+        <div class="form-control">
+@Html.ActionLink(Model.Item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Solution_1Id }, null)
+        </div>
+    </div>
+  <div class="form-group form-inline">
+			@Html.LabelFor(model => model.Item.BuildEventCode_1_Name, new { @class = "control-label" })
+        <div class="form-control">
+@Html.ActionLink(Model.Item.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.BuildEventCodeId }, null)
+        </div>
+    </div>
+@Html.HiddenFor(model => model.Item.BuildId)@Html.HiddenFor(model => model.Item.BuildEventCodeId)  <div class="form-group form-inline">
+			@Html.LabelFor(model => model.Item.Message, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.Item.Message)
+        </div>
+    </div>
+  <div class="form-group form-inline">
+			@Html.LabelFor(model => model.Item.EventTime, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.Item.EventTime)
+        </div>
+    </div>
+    <div class="btn-group" role="group">
+        <input class="btn btn-primary" role="button" type="submit" value="@Framework.Resources.UIStringResource.DeleteAlternativeText" />
+        <input class="btn btn-default" role="button" type="button" value="@Framework.Resources.UIStringResource.BackAlternativeText" onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index)'" />
+    </div>
+}

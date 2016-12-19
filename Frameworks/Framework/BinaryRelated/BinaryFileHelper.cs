@@ -150,7 +150,7 @@ namespace Framework
             return _retval;
         }                  
 
-#if WINDOWS_PHONE
+#if (WINDOWS_PHONE || XAMARIN)
 #elif NETFX_CORE
 #else
         /// <summary>

@@ -56,6 +56,7 @@
     <Compile Include="KnownMathCalculations.cs" />
     <Compile Include="Queries\QueryPagingResult.cs" />
     <Compile Include="SummaryData.cs" />
+    <Compile Include="ViewModels\ContentData.cs" />
     <Compile Include="ViewModels\IViewModelBase.cs" />
     <Compile Include="ViewModels\SearchStatus.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
@@ -66,8 +67,6 @@
     <Compile Include="Queries\QueryPredicateBase.cs" />
     <Compile Include="Queries\IQueryPredicate.cs" />
     <Compile Include="Queries\QueryPredicateTypes.cs" />
-    <Content Include="Maps\map.1.B.3.vsd" />
-    <Content Include="Maps\map.1.B.3.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj">

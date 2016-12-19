@@ -1,0 +1,34 @@
+{
+	"String_PerApplication": {
+		"Application_Title" : "MSBuildLogsExtended",
+		"Description_Of_Common_of_MSBuildLogsExtended_Build" : "Description Of Common of MSBuildLogsExtended.Build",
+		"Common_of_MSBuildLogsExtended_Build" : "Common of MSBuildLogsExtended.Build",
+		"ToolTip_Of_Common_of_MSBuildLogsExtended_Build" : "ToolTip Of Common of MSBuildLogsExtended.Build",
+		"Description_Of_EntityRelated_of_MSBuildLogsExtended_Build" : "Description Of EntityRelated of MSBuildLogsExtended.Build",
+		"EntityRelated_of_MSBuildLogsExtended_Build" : "EntityRelated of MSBuildLogsExtended.Build",
+		"ToolTip_Of_EntityRelated_of_MSBuildLogsExtended_Build" : "ToolTip Of EntityRelated of MSBuildLogsExtended.Build",
+		"Description_Of_UpdateNameOnly_of_MSBuildLogsExtended_Build" : "Description Of UpdateNameOnly of MSBuildLogsExtended.Build",
+		"UpdateNameOnly_of_MSBuildLogsExtended_Build" : "UpdateNameOnly of MSBuildLogsExtended.Build",
+		"ToolTip_Of_UpdateNameOnly_of_MSBuildLogsExtended_Build" : "ToolTip Of UpdateNameOnly of MSBuildLogsExtended.Build",
+		"Description_Of_Common_of_MSBuildLogsExtended_BuildEventCode" : "Description Of Common of MSBuildLogsExtended.BuildEventCode",
+		"Common_of_MSBuildLogsExtended_BuildEventCode" : "Common of MSBuildLogsExtended.BuildEventCode",
+		"ToolTip_Of_Common_of_MSBuildLogsExtended_BuildEventCode" : "ToolTip Of Common of MSBuildLogsExtended.BuildEventCode",
+		"Description_Of_EntityRelated_of_MSBuildLogsExtended_BuildEventCode" : "Description Of EntityRelated of MSBuildLogsExtended.BuildEventCode",
+		"EntityRelated_of_MSBuildLogsExtended_BuildEventCode" : "EntityRelated of MSBuildLogsExtended.BuildEventCode",
+		"ToolTip_Of_EntityRelated_of_MSBuildLogsExtended_BuildEventCode" : "ToolTip Of EntityRelated of MSBuildLogsExtended.BuildEventCode",
+		"Description_Of_Common_of_MSBuildLogsExtended_BuildLog" : "Description Of Common of MSBuildLogsExtended.BuildLog",
+		"Common_of_MSBuildLogsExtended_BuildLog" : "Common of MSBuildLogsExtended.BuildLog",
+		"ToolTip_Of_Common_of_MSBuildLogsExtended_BuildLog" : "ToolTip Of Common of MSBuildLogsExtended.BuildLog",
+		"Description_Of_EntityRelated_of_MSBuildLogsExtended_BuildLog" : "Description Of EntityRelated of MSBuildLogsExtended.BuildLog",
+		"EntityRelated_of_MSBuildLogsExtended_BuildLog" : "EntityRelated of MSBuildLogsExtended.BuildLog",
+		"ToolTip_Of_EntityRelated_of_MSBuildLogsExtended_BuildLog" : "ToolTip Of EntityRelated of MSBuildLogsExtended.BuildLog",
+		"Description_Of_Common_of_MSBuildLogsExtended_Solution" : "Description Of Common of MSBuildLogsExtended.Solution",
+		"Common_of_MSBuildLogsExtended_Solution" : "Common of MSBuildLogsExtended.Solution",
+		"ToolTip_Of_Common_of_MSBuildLogsExtended_Solution" : "ToolTip Of Common of MSBuildLogsExtended.Solution",
+		"Description_Of_EntityRelated_of_MSBuildLogsExtended_Solution" : "Description Of EntityRelated of MSBuildLogsExtended.Solution",
+		"EntityRelated_of_MSBuildLogsExtended_Solution" : "EntityRelated of MSBuildLogsExtended.Solution",
+		"ToolTip_Of_EntityRelated_of_MSBuildLogsExtended_Solution" : "ToolTip Of EntityRelated of MSBuildLogsExtended.Solution"
+
+	}
+}
+

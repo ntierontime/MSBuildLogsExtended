@@ -1,0 +1,20 @@
+@using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc50Rasor.Helpers.UrlStrings;
+@{
+    ViewBag.Title = Framework.Resources.UIStringResource.ImportAlternativeText;
+}
+@section featured {
+	<hgroup>
+		<h2>@ViewBag.Title</h2>
+		<h4>@Framework.Resources.UIStringResource.Data_Import_DescriptionText</h4>
+		<h3>@ViewBag.Message</h3>
+	</hgroup>
+}
+@using (Html.BeginForm(UrlStringsAlias.ActionName_BuildEventCode_Import, UrlStringsAlias.ControllerName_BuildEventCode, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+	<div class="btn-group">
+		<input type="file" name="file" id="file" />
+		<input class="btn btn-default" role="button" type="submit" name="Import" value="@Framework.Resources.UIStringResource.ImportAlternativeText" />
+	</div>
+}

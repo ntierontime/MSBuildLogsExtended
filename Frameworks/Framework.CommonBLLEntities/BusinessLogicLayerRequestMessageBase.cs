@@ -161,5 +161,16 @@ namespace Framework.CommonBLLEntities
         public Framework.DataServiceTypes DataServiceType { get; set; }
 
         #endregion Properties
+
+        public override string ToString()
+        {
+            return string.Format("ID:{4};Key:{5};RequestType:{0};Type:{1};Paging:{2};Order:{3}"
+                , this.BusinessLogicLayerRequestTypes
+                , typeof(TQueryCriteria)
+                , this.QueryPagingSetting != null ? this.QueryPagingSetting.ToString() : ""
+                , this.QueryOrderBySettingCollection != null ? this.QueryOrderBySettingCollection.GetOrderByExpression() : ""
+                , this.BusinessLogicLayerRequestID
+                , this.BusinessLogicLayerRequestTypeKey);
+        }
     }
 }

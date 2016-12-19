@@ -1,1 +1,1 @@
-<%@ Application Codebehind="Global.asax.cs" Inherits="MSBuildLogsExtended.AspNetMvc40Controller.MvcApplication" Language="C#" %>
+<%@ Application Codebehind="Global.asax.cs" Inherits="MSBuildLogsExtended.AspNetMvc40Rasor.Global" Language="C#" %>

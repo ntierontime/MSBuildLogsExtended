@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A4C9BD93-7D2F-4EC7-A1C2-C0F558255599}</ProjectGuid>
+    <ProjectGuid>{B868BDED-285C-4D5F-ACE2-91676B8093E5}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -50,34 +50,32 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Maps\map.2.B.2.vsd" />
-    <Content Include="Maps\map.2.B.2.vsd.png" />
     <Compile Include="..\..\Core\WcfContracts\IBusinessLogicLayerFactory.cs">
       <Link>IBusinessLogicLayerFactory.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\WcfContracts\IBuildWcfService.cs">
-      <Link>IBuildWcfService.cs</Link>
+    <Compile Include="..\..\Core\WcfContracts\IBuildService.cs">
+      <Link>IBuildService.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\WcfContracts\IBuildEventCodeWcfService.cs">
-      <Link>IBuildEventCodeWcfService.cs</Link>
+    <Compile Include="..\..\Core\WcfContracts\IBuildEventCodeService.cs">
+      <Link>IBuildEventCodeService.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\WcfContracts\IBuildLogWcfService.cs">
-      <Link>IBuildLogWcfService.cs</Link>
+    <Compile Include="..\..\Core\WcfContracts\IBuildLogService.cs">
+      <Link>IBuildLogService.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\WcfContracts\ISolutionWcfService.cs">
-      <Link>ISolutionWcfService.cs</Link>
+    <Compile Include="..\..\Core\WcfContracts\ISolutionService.cs">
+      <Link>ISolutionService.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\WcfContracts\WcfServiceContractAsynBuild.cs">
-      <Link>WcfServiceContractAsynBuild.cs</Link>
+    <Compile Include="..\..\Core\WcfContracts\IBuildServiceAsyn.cs">
+      <Link>IBuildServiceAsyn.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\WcfContracts\WcfServiceContractAsynBuildEventCode.cs">
-      <Link>WcfServiceContractAsynBuildEventCode.cs</Link>
+    <Compile Include="..\..\Core\WcfContracts\IBuildEventCodeServiceAsyn.cs">
+      <Link>IBuildEventCodeServiceAsyn.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\WcfContracts\WcfServiceContractAsynBuildLog.cs">
-      <Link>WcfServiceContractAsynBuildLog.cs</Link>
+    <Compile Include="..\..\Core\WcfContracts\IBuildLogServiceAsyn.cs">
+      <Link>IBuildLogServiceAsyn.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\WcfContracts\WcfServiceContractAsynSolution.cs">
-      <Link>WcfServiceContractAsynSolution.cs</Link>
+    <Compile Include="..\..\Core\WcfContracts\ISolutionServiceAsyn.cs">
+      <Link>ISolutionServiceAsyn.cs</Link>
     </Compile>
     <Compile Include="..\..\Core\WcfContracts\WcfServiceResolver.cs">
       <Link>WcfServiceResolver.cs</Link>
@@ -85,39 +83,39 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonBLLEntities.WP\MSBuildLogsExtended.CommonBLLEntities.WP.csproj">
-      <Project>{3e86aaf1-27ce-4e33-a775-14f87171dfb9}</Project>
+      <Project>{f5569cbc-0af2-4756-9caf-dd1cb6e72884}</Project>
       <Name>MSBuildLogsExtended.CommonBLLEntities.WP</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataSourceEntities.WP\MSBuildLogsExtended.DataSourceEntities.WP.csproj">
-      <Project>{f2cf108e-0f66-4960-9033-1ec60d653f9b}</Project>
+      <Project>{68304e34-97d5-49e1-8670-fc62f94ccf0e}</Project>
       <Name>MSBuildLogsExtended.DataSourceEntities.WP</Name>
     </ProjectReference>
     <ProjectReference Include="..\EntityContracts.WP\MSBuildLogsExtended.EntityContracts.WP.csproj">
-      <Project>{ed9fcb70-6226-43b5-b0ac-8c13e135e177}</Project>
+      <Project>{9d6244c9-c3b9-421c-a1e4-dc4492a3e354}</Project>
       <Name>MSBuildLogsExtended.EntityContracts.WP</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.WP\Framework.WP\Framework.WP.csproj">
-      <Project>{8601cd0c-5985-4b2b-a333-52c0a5902ce2}</Project>
+      <Project>{1efe0717-bd17-4781-a7d2-7f0216a3460b}</Project>
       <Name>Framework.WP</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.WP\Framework.CommonBLLEntities.WP\Framework.CommonBLLEntities.WP.csproj">
-      <Project>{5ac413c2-e516-448d-adff-0b248f0e2112}</Project>
+      <Project>{642b975b-a490-40e4-a322-b63b88ba8829}</Project>
       <Name>Framework.CommonBLLEntities.WP</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.WP\Framework.DataSourceEntities.WP\Framework.DataSourceEntities.WP.csproj">
-      <Project>{4a41448f-8d92-435b-9f02-5f1d3a502f4f}</Project>
+      <Project>{4d615527-e3e4-4dcc-b2bc-0ca77d26451e}</Project>
       <Name>Framework.DataSourceEntities.WP</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.WP\Framework.EntityContracts.WP\Framework.EntityContracts.WP.csproj">
-      <Project>{431a4d9a-5861-4b82-aed8-c312bae2a641}</Project>
+      <Project>{5d407e18-cc05-4089-a67b-aff0ea5907ad}</Project>
       <Name>Framework.EntityContracts.WP</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="mscorlib.Extensions" />
     <Reference Include="system" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Servicemodel" />
   </ItemGroup>
   <ItemGroup>
@@ -136,7 +134,7 @@
   <ProjectExtensions>
     <VisualStudio>
       <!-- For ProjectLinker -->
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="9eb722de-3c2a-43ca-ab84-e2db1f814ea5" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="23bf8e7c-df8c-43f2-9153-53de5ee23c86" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

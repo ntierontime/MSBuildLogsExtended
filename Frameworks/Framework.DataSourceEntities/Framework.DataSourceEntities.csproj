@@ -46,8 +46,6 @@
     <None Include="packages.config" />
     <Compile Include="DataAccessLayerMessageBase.cs" />
     <Compile Include="StatusChangeLinqQueryResultBase.cs" />
-    <Content Include="Maps\map.1.B.3.vsd" />
-    <Content Include="Maps\map.1.B.3.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework\Framework.csproj">

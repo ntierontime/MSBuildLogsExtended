@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4072DDFC-04FB-4B21-B602-00678070187A}</ProjectGuid>
+    <ProjectGuid>{ADA3B560-C0B9-42D0-92FF-A76462E8D524}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.Resources</RootNamespace>
@@ -74,8 +74,6 @@
       <DependentUpon>UIStringResourcePerEntitySolution.resx</DependentUpon>
       <SubType>RESXCodeBehind</SubType>
     </Compile>
-    <Content Include="Maps\map.2.D.2.vsd" />
-    <Content Include="Maps\map.2.D.2.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
@@ -84,7 +82,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -92,6 +89,7 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>

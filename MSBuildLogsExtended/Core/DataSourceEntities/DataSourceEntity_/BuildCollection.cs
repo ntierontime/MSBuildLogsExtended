@@ -61,7 +61,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         /// </summary>
         /// <param name="criteria">The criteria.</param>
         /// <returns>true if any, otherwise false</returns>
-		public bool ExistsByFKs(DataSourceQueryCriteriaByEntityReferenceBuild criteria)
+		public bool ExistsByFKs(BuildQueryCriteriaByEntityReference criteria)
 		{
             MSBuildLogsExtended.EntityContracts.QueryPredicateBuildByFKs<Build> _PrediacteByFKs = new MSBuildLogsExtended.EntityContracts.QueryPredicateBuildByFKs<Build>(criteria);
             return this.Count(_PrediacteByFKs.Predicate) > 0;
@@ -72,7 +72,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         /// </summary>
         /// <param name="criteria">The criteria.</param>
         /// <returns>the first entity if any, otherwise null</returns>
-        public Build GetByFKs(DataSourceQueryCriteriaByEntityReferenceBuild criteria)
+        public Build GetByFKs(BuildQueryCriteriaByEntityReference criteria)
 		{
             MSBuildLogsExtended.EntityContracts.QueryPredicateBuildByFKs<Build> _PrediacteByFKs = new MSBuildLogsExtended.EntityContracts.QueryPredicateBuildByFKs<Build>(criteria);
             return this.Single(_PrediacteByFKs.Predicate);
@@ -83,7 +83,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         /// </summary>
         /// <param name="criteria">The criteria.</param>
         /// <returns>a collection</returns>
-        public BuildCollection GetCollectionByFKs(DataSourceQueryCriteriaByEntityReferenceBuild criteria)
+        public BuildCollection GetCollectionByFKs(BuildQueryCriteriaByEntityReference criteria)
         {
             MSBuildLogsExtended.EntityContracts.QueryPredicateBuildByFKs<Build> _PrediacteByFKs = new MSBuildLogsExtended.EntityContracts.QueryPredicateBuildByFKs<Build>(criteria);
             return new BuildCollection(this.Where(_PrediacteByFKs.Predicate));
@@ -99,7 +99,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
     /// <summary>
     ///  a property defined when <see cref="IBuildCollection"/> is used in other classes.
     /// </summary>
-	public interface IBuildCollection
+	public partial interface IBuildCollection
 	{ 
         /// <summary>
         /// Gets or sets the BuildCollection
@@ -113,7 +113,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="BuildCollection"/> and <see cref="Framework.DataSourceEntities.DataAccessLayerMessageBase&lt;T&gt;"/> />
     /// </summary>
-	public class DataAccessLayerMessageOfEntityCollectionBuild
+	public partial class DataAccessLayerMessageOfEntityCollectionBuild
         : Framework.DataSourceEntities.DataAccessLayerMessageBase<BuildCollection>
     {
     }

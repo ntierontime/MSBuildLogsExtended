@@ -1,19 +1,20 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 
 namespace Framework
 {
     public class RegisterModel
     {
-#if WINDOWS_PHONE
+#if (WINDOWS_PHONE || XAMARIN)
 #else
         [System.ComponentModel.DataAnnotations.Required]
         [System.ComponentModel.DataAnnotations.Display(Name = "User name")]
 #endif
         public string UserName { get; set; }
 
-#if WINDOWS_PHONE
+#if (WINDOWS_PHONE || XAMARIN)
 #else
         [System.ComponentModel.DataAnnotations.Required]
         [System.ComponentModel.DataAnnotations.DataType(System.ComponentModel.DataAnnotations.DataType.EmailAddress)]
@@ -21,7 +22,7 @@ namespace Framework
 #endif
         public string Email { get; set; }
 
-#if WINDOWS_PHONE
+#if (WINDOWS_PHONE || XAMARIN)
 #else
         [System.ComponentModel.DataAnnotations.Required]
         [System.ComponentModel.DataAnnotations.StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
@@ -30,7 +31,7 @@ namespace Framework
 #endif
         public string Password { get; set; }
 
-#if WINDOWS_PHONE
+#if (WINDOWS_PHONE || XAMARIN)
 #else
         [System.ComponentModel.DataAnnotations.DataType(System.ComponentModel.DataAnnotations.DataType.Password)]
         [System.ComponentModel.DataAnnotations.Display(Name = "Confirm password")]
@@ -39,3 +40,4 @@ namespace Framework
         public string ConfirmPassword { get; set; }
     }
 }
+
