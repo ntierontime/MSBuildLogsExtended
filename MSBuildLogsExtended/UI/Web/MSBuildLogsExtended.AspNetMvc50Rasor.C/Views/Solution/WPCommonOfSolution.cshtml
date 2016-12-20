@@ -1,0 +1,155 @@
+@using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.UrlStrings;
+@using Framework.Mvc;
+@model MSBuildLogsExtended.AspNetMvc40ViewModel.WPCommonOfSolutionVM
+@{
+    // http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
+    // http://dotnetmentors.com/mvc/paging-and-sorting-in-asp-net-mvc-and-entity-framework-application.aspx
+    ViewBag.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Solution;
+    RouteValueDictionary queryStringDictionary = new RouteValueDictionary(Request.QueryString.AllKeys.ToDictionary(key => key, key => (object)Request.QueryString[key]));
+}
+@section featured {
+<div class="row">
+    <div class="col-xs-12">
+        <div class="page-header">
+			<h1>@ViewBag.Title.<small>@ViewBag.Message</small></h1>
+        </div>
+    </div>
+</div>
+}
+<article>
+<div>
+<div class="col-sm-12 col-md-3">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Filter</h3>
+        </div>
+        <div class="panel-body">
+@using (Html.BeginForm()){
+            <div class="panel-heading">
+				<h3 class="panel-title">Filter</h3>
+		<input class="btn btn-default btn-Search" type="submit" name="SearchToolBarUp" value="@Framework.Resources.UIStringResource.SearchAlternativeText" />
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_AddNew, UrlStringsAlias.ControllerName_Solution)'" class="btn btn-default btn-AddNew" role="button" type="button" name="AddNewToolBarUp" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
+<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_WPCommonOfSolution_Export, UrlStringsAlias.ControllerName_Solution, new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="btn btn-default btn-Export" role="button" type="button" name="ExportToolBarUp" value="@Framework.Resources.UIStringResource.ExportAlternativeText" />
+<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_WPCommonOfSolution_Export, UrlStringsAlias.ControllerName_Solution, new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="btn btn-default btn-ExportToExcel" role="button" type="button" name="ExportToExcelToolBarUp" value="@Framework.Resources.UIStringResource.ExportToExcelAlternativeText" />
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_Import, UrlStringsAlias.ControllerName_Solution)'" class="btn btn-default btn-Import" role="button" type="button" name="ImportToolBarUp" value="@Framework.Resources.UIStringResource.ImportAlternativeText" />
+            </div>
+			<div class="panel-body">
+ <div class="form-group">
+</div>
+<div class="form-group">
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareDescriptionCommonOftOfCommon, new { style="display:display;", @class="form-control" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon
+@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedDescriptionCommonOftOfCommon, new { @class = "form-control" })
+</div>
+<div class="form-group">
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareNameCommonOftOfCommon, new { style="display:display;", @class="form-control" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon
+@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedNameCommonOftOfCommon, new { @class = "form-control" })
+</div>
+<div class="form-group">
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareExternalParentIdCommonOftOfCommon, new { style="display:display;", @class="form-control" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareExternalParentIdCommonOftOfCommon
+@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedExternalParentIdCommonOftOfCommon, new { @class = "form-control" })
+</div>
+<div class="form-group form-inline">
+    <span>Items per page : </span>
+	@Html.DropDownListFor(model => model.QueryPagingSetting.PageSize, Model.SelectListOfPageSize, new Dictionary<string, Object> { { "class", "form-control" }, { "onchange", "this.form.submit();" } })
+	<span>Sort by:</span>
+    @Html.DropDownListFor(model => model.QueryOrderBySettingCollecionInString, Model.SelectListOfQueryOrderBySettingCollecionInString, new Dictionary<string, Object> { { "class", "form-control" }, { "onchange", "this.form.submit();" } })
+    @Model.QueryPagingSetting.GetPagingInformationString()>
+</div>
+            </div>
+			<div class="panel-footer">
+		<input class="btn btn-default btn-Search" type="submit" name="SearchToolBarBottom" value="@Framework.Resources.UIStringResource.SearchAlternativeText" />
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_AddNew, UrlStringsAlias.ControllerName_Solution)'" class="btn btn-default btn-AddNew" role="button" type="button" name="AddNewToolBarBottom" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
+<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_WPCommonOfSolution_Export, UrlStringsAlias.ControllerName_Solution, new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="btn btn-default btn-Export" role="button" type="button" name="ExportToolBarBottom" value="@Framework.Resources.UIStringResource.ExportAlternativeText" />
+<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_WPCommonOfSolution_Export, UrlStringsAlias.ControllerName_Solution, new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="btn btn-default btn-ExportToExcel" role="button" type="button" name="ExportToExcelToolBarBottom" value="@Framework.Resources.UIStringResource.ExportToExcelAlternativeText" />
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_Import, UrlStringsAlias.ControllerName_Solution)'" class="btn btn-default btn-Import" role="button" type="button" name="ImportToolBarBottom" value="@Framework.Resources.UIStringResource.ImportAlternativeText" />
+            </div>
+}
+        </div>
+    </div>
+</div>
+@Html.PagedListPager(pagedResult, currentPage => Url.Action(UrlStringsAlias.ActionName_Solution_WPCommonOfSolution, new { currentPage = currentPage }), PagedListRenderOptions.OnlyShowFivePagesAtATime)
+    <div class="table-responsive">
+<table id="MasterDataControl0" name="MasterDataControl0" class="table table-hover">
+ <tr><th class="sorting"></th>
+<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.ExternalParentId</th>
+<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Name</th>
+<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Description</th>
+<th class="sorting"></th></tr>
+    @if (Model != null && Model.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+    {
+		int index = 0;
+        foreach (var item in Model.Result)
+        {
+			index++;
+<tr><td ></td>
+<td >@Html.DisplayFor(modelItem => item.ExternalParentId)</td>
+<td >@Html.DisplayFor(modelItem => item.Name)</td>
+<td >@Html.DisplayFor(modelItem => item.Description)</td>
+<td ><div class="btn-group">
+<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" class="btn btn-default btn-FullDetails" role="button" type="button" name="DetailsToolBarRightInList" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_Edit, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" class="btn btn-default btn-Edit" role="button" type="button" name="EditToolBarRightInList" value="@Framework.Resources.UIStringResource.EditAlternativeText" />
+</div></td></tr>
+        }
+    }
+    else
+    {
+<tr><td colspan="50" ><div class="error-label">@Model.StatusMessageOfResult</div>
+</td></tr>
+    }
+</table>
+    </div>
+    @Html.PagedListPager(pagedResult, currentPage => Url.Action(UrlStringsAlias.ActionName_Solution_WPCommonOfSolution, new { currentPage = currentPage }), PagedListRenderOptions.OnlyShowFivePagesAtATime)
+</div>
+</article>
+@section Scripts {
+    <script type="text/javascript">
+        //http://www.softfinity.com/blog/using-ajax-with-knockout-js-and-asp-net-mvc-4-to-load-select-drop-down-options/
+        $(document).ready($(function() {
+        }));
+        $(document).ready($(function() {
+            $.validator.addMethod(
+                "date",
+                function(value, element) {
+                    var bits = value.match(/([0-9]+)/gi), str;
+                    if (!bits)
+                        return this.optional(element) || false;
+                    str = bits[1] + '/' + bits[0] + '/' + bits[2];
+                    return this.optional(element) || !/Invalid|NaN/.test(new Date(str));
+                },
+                "Please enter a date in the format dd/mm/yyyy"
+            );
+            $("form").validate({
+                onkeyup: false,
+                errorPlacement: function(error, element) {
+                    if (element.attr("name").indexOf("DOB") >= 0) {
+                        error.insertAfter("#DOB_Day");
+                    } else {
+                        error.insertAfter(element);
+                    }
+                },
+                rules: {
+                },
+                messages: {
+                },
+                highlight:
+                    function(element) {
+                        $(element).css('border', '2px solid red');
+                    },
+                unhighlight:
+                    function(element) {
+                        $(element).css('border', '1px solid rgb(170, 170, 170)');
+                    },
+                errorLabelContainer: "#ErrorList",
+                wrapper: "li",
+            });
+        }));
+        //cascaded dropdownlist by knockoutjs
+        function CascadingDDLViewModel() {
+            var self = this;
+        }
+        $(document).ready($(function() {
+            var objVM = new CascadingDDLViewModel();
+            ko.applyBindings(objVM);
+        }));
+    </script>
+}

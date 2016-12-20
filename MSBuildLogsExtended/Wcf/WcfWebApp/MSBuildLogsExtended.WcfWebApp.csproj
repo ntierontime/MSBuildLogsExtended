@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -12,7 +12,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.WcfWebApp</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.WcfWebApp</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>4.0</OldToolsVersion>
@@ -25,6 +25,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -99,7 +100,6 @@
     <Content Include="Atom10Feeds.svc" />
     <Compile Include="Atom10Feeds.svc.cs">
       <DependentUpon>Atom10Feeds.svc</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Content Include="Global.asax" />
     <Compile Include="Global.asax.cs">
@@ -110,7 +110,6 @@
     <Content Include="RssFeeds.svc" />
     <Compile Include="RssFeeds.svc.cs">
       <DependentUpon>RssFeeds.svc</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Content Include="Web.config" />
   </ItemGroup>
@@ -158,10 +157,6 @@
     <ProjectReference Include="..\..\..\Frameworks\Framework.Web\Framework.Web.csproj">
       <Project>{950b9cdb-9286-4a1a-8d88-1df6954a45e3}</Project>
       <Name>Framework.Web</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Core\LinqDAL\MSBuildLogsExtended.LinqDAL.csproj">
-      <Project>{d9b82b9c-0ff6-4ac7-ac75-42d8025b2800}</Project>
-      <Name>MSBuildLogsExtended.LinqDAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\WcfContracts\MSBuildLogsExtended.WcfContracts.csproj">
       <Project>{23bf8e7c-df8c-43f2-9153-53de5ee23c86}</Project>

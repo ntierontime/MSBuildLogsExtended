@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MSBuildLogsExtended.AspNetMvc40ViewModel
 {
-    public partial class BuildLogItemVM : Framework.Mvc.ViewModelItemBase<MSBuildLogsExtended.DataSourceEntities.BuildLogIdentifier, MSBuildLogsExtended.DataSourceEntities.BuildLog>
+    public partial class BuildLogItemVM : Framework.Mvc.ViewModelItemBase<MSBuildLogsExtended.DataSourceEntities.BuildLogIdentifier, MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>
     {
         #region log4net
 
@@ -23,8 +23,8 @@ namespace MSBuildLogsExtended.AspNetMvc40ViewModel
             {
                 log.Info(string.Format("{0}: Details", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-                MSBuildLogsExtended.CommonBLLEntities.BuildLogResponseMessageBuiltIn _Response =
-                    MSBuildLogsExtended.CommonBLLIoC.IoCBuildLog.GetMessageOfEntityOfByIdentifier(new QuerySystemInt64EqualsCriteria(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier), -1, -1, null);
+                MSBuildLogsExtended.CommonBLLEntities.BuildLogResponseMessageBuiltIn.Default _Response =
+                    MSBuildLogsExtended.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier && valueToCompareIdByIdentifierOftOfByIdentifier != default(System.Int64), valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
 
                 if (_Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK || _Response.BusinessLogicLayerResponseStatus == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
                 {
@@ -51,7 +51,7 @@ namespace MSBuildLogsExtended.AspNetMvc40ViewModel
             return vm;
         }
 
-        public static BuildLogItemVM CreateNewViewModel(MSBuildLogsExtended.DataSourceEntities.BuildLog entity)
+        public static BuildLogItemVM CreateNewViewModel(MSBuildLogsExtended.DataSourceEntities.BuildLog.Default entity)
         {
             Framework.UIAction uiAction = Framework.UIAction.Create;
             BuildLogItemVM vm = new BuildLogItemVM();
@@ -65,4 +65,3 @@ namespace MSBuildLogsExtended.AspNetMvc40ViewModel
         }
 	}
 }
-

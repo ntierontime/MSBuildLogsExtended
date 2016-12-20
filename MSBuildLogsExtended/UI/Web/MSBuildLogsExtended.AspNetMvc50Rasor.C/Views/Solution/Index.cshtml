@@ -1,0 +1,21 @@
+@using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.UrlStrings;
+@{
+    ViewBag.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Solution;
+}
+@section featured {
+    <h2>@ViewBag.Title</h2>
+    <h4>@ViewBag.Message</h4>
+	<p>@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Solution</p>
+}
+<div class="row">
+	<div class="col-md-12">
+		<ol>
+			<li>@Html.ActionLink(Framework.Resources.UIStringResource.AddNewAlternativeText, UrlStringsAlias.ActionName_Solution_AddNew)</li>
+			<li>@Html.ActionLink(Framework.Resources.UIStringResource.DeleteAlternativeText, UrlStringsAlias.ActionName_Solution_Delete) - Please add parameters to load this page </li>
+			<li>@Html.ActionLink(Framework.Resources.UIStringResource.EditAlternativeText, UrlStringsAlias.ActionName_Solution_Edit) - Please add parameters to load this page </li>
+			<li>@Html.ActionLink(Framework.Resources.UIStringResource.DetailsAlternativeText, UrlStringsAlias.ActionName_Solution_Details) - Please add parameters to load this page </li>
+			<li>@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_Solution, UrlStringsAlias.ActionName_Solution_WPCommonOfSolution)</li>
+			<li>@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerApp.EntityRelated_of_MSBuildLogsExtended_Solution, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution)</li>
+		</ol>
+	</div>
+</div>

@@ -1,0 +1,265 @@
+@using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.UrlStrings;
+@using Framework.Mvc;
+@model MSBuildLogsExtended.AspNetMvc40ViewModel.WPEntityRelatedOfBuildLogVM
+@{
+    // http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
+    // http://dotnetmentors.com/mvc/paging-and-sorting-in-asp-net-mvc-and-entity-framework-application.aspx
+    ViewBag.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog;
+    RouteValueDictionary queryStringDictionary = new RouteValueDictionary(Request.QueryString.AllKeys.ToDictionary(key => key, key => (object)Request.QueryString[key]));
+}
+@section featured {
+<div class="row">
+    <div class="col-xs-12">
+        <div class="page-header">
+			<h1>@ViewBag.Title.<small>@ViewBag.Message</small></h1>
+        </div>
+    </div>
+</div>
+}
+<article>
+</article>
+<aside>
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                @MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog
+            </h4>
+		</div>
+        <div class="panel-body">
+@if (Model.StatusOfMasterEntity == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+{ // Item
+<div class="btn-group">
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })'" class="btn btn-default btn-Edit" role="button" type="button" name="EditToolBarUp" value="@Framework.Resources.UIStringResource.EditAlternativeText" />
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)'" class="btn btn-default btn-AddNew" role="button" type="button" name="AddNewToolBarUp" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_Copy, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })'" class="btn btn-default btn-Copy" role="button" type="button" name="CopyToolBarUp" value="@Framework.Resources.UIStringResource.CopyAlternativeText" />
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_Details, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })'" class="btn btn-default btn-Details" role="button" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index, UrlStringsAlias.ControllerName_BuildLog)'" class="btn btn-default btn-GotoSearch" role="button" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+</div>
+<div class="form-group form-inline">
+			@Html.LabelFor(model => model.MasterEntity.Build_1_Name, new { @class = "control-label" })
+        <div class="form-control">
+@Html.ActionLink(Model.MasterEntity.Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.BuildId }, null)
+        </div>
+    </div>
+<div class="form-group form-inline">
+			@Html.LabelFor(model => model.MasterEntity.Id, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.MasterEntity.Id)
+        </div>
+    </div>
+<div class="form-group form-inline">
+			@Html.LabelFor(model => model.MasterEntity.Solution_1_Name, new { @class = "control-label" })
+        <div class="form-control">
+@Html.ActionLink(Model.MasterEntity.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Solution_1Id }, null)
+        </div>
+    </div>
+<div class="form-group form-inline">
+			@Html.LabelFor(model => model.MasterEntity.BuildEventCode_1_Name, new { @class = "control-label" })
+        <div class="form-control">
+@Html.ActionLink(Model.MasterEntity.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.BuildEventCodeId }, null)
+        </div>
+    </div>
+<div class="form-group form-inline">
+			@Html.LabelFor(model => model.MasterEntity.Message, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.MasterEntity.Message)
+        </div>
+    </div>
+<div class="form-group form-inline">
+			@Html.LabelFor(model => model.MasterEntity.EventTime, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.MasterEntity.EventTime)
+        </div>
+    </div>
+@Html.HiddenFor(model => model.MasterEntity.Solution_1Id)
+@Html.HiddenFor(model => model.MasterEntity.BuildId)
+@Html.HiddenFor(model => model.MasterEntity.BuildEventCodeId)
+}
+@if (Model.StatusOfMasterEntity != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfMasterEntity != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+{
+<div class="btn-group">
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_AddNew, UrlStringsAlias.ControllerName_BuildLog)'" class="btn btn-default btn-AddNew" role="button" type="button" name="AddNewToolBarUp" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
+<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })'" class="btn btn-default btn-FullDetails" role="button" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index, UrlStringsAlias.ControllerName_BuildLog)'" class="btn btn-default btn-GotoSearch" role="button" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+</div>
+<div class="error-label">@Model.StatusMessageOfMasterEntity</div>
+}
+    </div>
+</div>
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapseBuild_1">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Build</a>
+            </h4>
+        </div>
+        <div id="collapse_Build_1" class="panel-collapse collapse">
+            <div class="panel-body">
+@if (Model.StatusOfBuild_1 == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+{ // Item
+<div class="btn-group">
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Build_Index, UrlStringsAlias.ControllerName_Build)'" class="btn btn-default btn-GotoSearch" role="button" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Build_1.Id })'" class="btn btn-default btn-FullDetails" role="button" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+</div>
+<div class="form-group form-inline">
+			@Html.LabelFor(model => model.Build_1.Id, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.Build_1.Id)
+        </div>
+    </div>
+<div class="form-group form-inline">
+			@Html.LabelFor(model => model.Build_1.Name, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.Build_1.Name)
+        </div>
+    </div>
+}
+@if (Model.StatusOfBuild_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfBuild_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+{
+<div class="btn-group">
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Build_Index, UrlStringsAlias.ControllerName_Build)'" class="btn btn-default btn-GotoSearch" role="button" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Build_1.Id })'" class="btn btn-default btn-FullDetails" role="button" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+</div>
+<div class="error-label">@Model.StatusMessageOfBuild_1</div>
+}
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+</div>
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapseSolution_2">@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Solution</a>
+            </h4>
+        </div>
+        <div id="collapse_Solution_2" class="panel-collapse collapse">
+            <div class="panel-body">
+@if (Model.StatusOfSolution_1 == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+{ // Item
+<div class="btn-group">
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_Index, UrlStringsAlias.ControllerName_Solution)'" class="btn btn-default btn-GotoSearch" role="button" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_1.Id })'" class="btn btn-default btn-FullDetails" role="button" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+</div>
+<div class="form-group form-inline">
+			@Html.LabelFor(model => model.Solution_1.Id, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.Solution_1.Id)
+        </div>
+    </div>
+<div class="form-group form-inline">
+			@Html.LabelFor(model => model.Solution_1.Name, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.Solution_1.Name)
+        </div>
+    </div>
+}
+@if (Model.StatusOfSolution_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfSolution_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+{
+<div class="btn-group">
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_Index, UrlStringsAlias.ControllerName_Solution)'" class="btn btn-default btn-GotoSearch" role="button" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_1.Id })'" class="btn btn-default btn-FullDetails" role="button" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+</div>
+<div class="error-label">@Model.StatusMessageOfSolution_1</div>
+}
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+</div>
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapseBuildEventCode_3">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.BuildEventCode</a>
+            </h4>
+        </div>
+        <div id="collapse_BuildEventCode_3" class="panel-collapse collapse">
+            <div class="panel-body">
+@if (Model.StatusOfBuildEventCode_1 == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+{ // Item
+<div class="btn-group">
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Index, UrlStringsAlias.ControllerName_BuildEventCode)'" class="btn btn-default btn-GotoSearch" role="button" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.BuildEventCode_1.Id })'" class="btn btn-default btn-FullDetails" role="button" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+</div>
+<div class="form-group form-inline">
+			@Html.LabelFor(model => model.BuildEventCode_1.Id, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.BuildEventCode_1.Id)
+        </div>
+    </div>
+<div class="form-group form-inline">
+			@Html.LabelFor(model => model.BuildEventCode_1.EventCode, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.BuildEventCode_1.EventCode)
+        </div>
+    </div>
+}
+@if (Model.StatusOfBuildEventCode_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfBuildEventCode_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+{
+<div class="btn-group">
+		<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Index, UrlStringsAlias.ControllerName_BuildEventCode)'" class="btn btn-default btn-GotoSearch" role="button" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+<input onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.BuildEventCode_1.Id })'" class="btn btn-default btn-FullDetails" role="button" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+</div>
+<div class="error-label">@Model.StatusMessageOfBuildEventCode_1</div>
+}
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+</div>
+</aside>
+@section Scripts {
+    <script type="text/javascript">
+        //http://www.softfinity.com/blog/using-ajax-with-knockout-js-and-asp-net-mvc-4-to-load-select-drop-down-options/
+        $(document).ready($(function() {
+        }));
+        $(document).ready($(function() {
+            $.validator.addMethod(
+                "date",
+                function(value, element) {
+                    var bits = value.match(/([0-9]+)/gi), str;
+                    if (!bits)
+                        return this.optional(element) || false;
+                    str = bits[1] + '/' + bits[0] + '/' + bits[2];
+                    return this.optional(element) || !/Invalid|NaN/.test(new Date(str));
+                },
+                "Please enter a date in the format dd/mm/yyyy"
+            );
+            $("form").validate({
+                onkeyup: false,
+                errorPlacement: function(error, element) {
+                    if (element.attr("name").indexOf("DOB") >= 0) {
+                        error.insertAfter("#DOB_Day");
+                    } else {
+                        error.insertAfter(element);
+                    }
+                },
+                rules: {
+                },
+                messages: {
+                },
+                highlight:
+                    function(element) {
+                        $(element).css('border', '2px solid red');
+                    },
+                unhighlight:
+                    function(element) {
+                        $(element).css('border', '1px solid rgb(170, 170, 170)');
+                    },
+                errorLabelContainer: "#ErrorList",
+                wrapper: "li",
+            });
+        }));
+        //cascaded dropdownlist by knockoutjs
+        function CascadingDDLViewModel() {
+            var self = this;
+        }
+        $(document).ready($(function() {
+            var objVM = new CascadingDDLViewModel();
+            ko.applyBindings(objVM);
+        }));
+    </script>
+}

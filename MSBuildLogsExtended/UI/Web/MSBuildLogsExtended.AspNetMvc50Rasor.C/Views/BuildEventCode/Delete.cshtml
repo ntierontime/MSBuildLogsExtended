@@ -1,0 +1,36 @@
+@using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.UrlStrings;
+@model MSBuildLogsExtended.AspNetMvc40ViewModel.BuildEventCodeItemVM
+@{
+    ViewBag.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
+}
+@section featured {
+    <hgroup>
+        <h2>@Model.ContentData.Title.</h2>
+        <h4>@Model.ContentData.Summary</h4>
+        <h3>@Framework.Resources.UIStringResource.Warning_Areyousureyouwanttodeletethis</h3>
+    </hgroup>
+}
+@if (Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK && Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
+{
+	<div class="text-danger">@Model.StatusMessageOfResult</div>
+}
+	    <legend>@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.BuildEventCode.</legend>
+@using (Html.BeginForm(UrlStringsAlias.ActionName_BuildEventCode_Delete, UrlStringsAlias.ControllerName_BuildEventCode, FormMethod.Post, new { @class= "form-horizontal" })) {
+	@Html.AntiForgeryToken()
+@Html.HiddenFor(model => model.Item.Id)  <div class="form-group form-inline">
+			@Html.LabelFor(model => model.Item.EventCode, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.Item.EventCode)
+        </div>
+    </div>
+  <div class="form-group form-inline">
+			@Html.LabelFor(model => model.Item.Description, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.Item.Description)
+        </div>
+    </div>
+    <div class="btn-group" role="group">
+        <input class="btn btn-primary" role="button" type="submit" value="@Framework.Resources.UIStringResource.DeleteAlternativeText" />
+        <input class="btn btn-default" role="button" type="button" value="@Framework.Resources.UIStringResource.BackAlternativeText" onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Index)'" />
+    </div>
+}

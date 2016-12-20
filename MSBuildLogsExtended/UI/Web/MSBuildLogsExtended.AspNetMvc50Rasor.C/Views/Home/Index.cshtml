@@ -1,0 +1,38 @@
+@{
+    ViewBag.Title = Framework.Resources.UIStringResource.Home_TitleText;
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>@Framework.Resources.UIStringResource.Home_TitleText
+            </p>
+        </div>
+    </section>
+}
+<div>
+	<h2>MSBuildLogsExtended.Build</h2>
+	<ol>
+		<li><a href="~/Build/WPCommonOfBuild" >WPCommonOfBuild</a></li>
+		<li><a href="~/Build/WPEntityRelatedOfBuild" >WPEntityRelatedOfBuild</a></li>
+		<li><a href="~/Build/WPUpdateNameOnlyOfBuild" >WPUpdateNameOnlyOfBuild</a></li>
+	</ol>
+	<h2>MSBuildLogsExtended.BuildEventCode</h2>
+	<ol>
+		<li><a href="~/BuildEventCode/WPCommonOfBuildEventCode" >WPCommonOfBuildEventCode</a></li>
+		<li><a href="~/BuildEventCode/WPEntityRelatedOfBuildEventCode" >WPEntityRelatedOfBuildEventCode</a></li>
+	</ol>
+	<h2>MSBuildLogsExtended.BuildLog</h2>
+	<ol>
+		<li><a href="~/BuildLog/WPCommonOfBuildLog" >WPCommonOfBuildLog</a></li>
+		<li><a href="~/BuildLog/WPEntityRelatedOfBuildLog" >WPEntityRelatedOfBuildLog</a></li>
+	</ol>
+	<h2>MSBuildLogsExtended.Solution</h2>
+	<ol>
+		<li><a href="~/Solution/WPCommonOfSolution" >WPCommonOfSolution</a></li>
+		<li><a href="~/Solution/WPEntityRelatedOfSolution" >WPEntityRelatedOfSolution</a></li>
+	</ol>
+</div>
