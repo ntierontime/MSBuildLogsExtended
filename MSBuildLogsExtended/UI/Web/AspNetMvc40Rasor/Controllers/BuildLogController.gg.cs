@@ -80,6 +80,14 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
 #endif
             }
 
+			if (viewModel.Result != null)
+            {
+                ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>(viewModel.Result, viewModel.QueryPagingSetting.CurrentPage, viewModel.QueryPagingSetting.PageSize, viewModel.QueryPagingSetting.CountOfRecords);
+            }
+
+			viewModel.ContentData.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildEventCode;
+            viewModel.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Description;
+
             return View(viewModel);
         }
 
@@ -211,7 +219,7 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
             MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM vm = MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resources.UIStringResource.DetailsAlternativeText;
-            vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Details_BuildLog;
+            vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Details_BuildLog;
 
             return View(vm);
         }
@@ -235,7 +243,7 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
 			ViewBag.SelectListOfMSBuildLogsExtended_BuildEventCode = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(nameValueCollectionOfMSBuildLogsExtended_BuildEventCode);
 
 
-            MSBuildLogsExtended.DataSourceEntities.BuildLog entity = CreateEmptyEntityOrGetFromTempData(TempDataKey_BuildLogController_Copy);
+            var entity = CreateEmptyEntityOrGetFromTempData(TempDataKey_BuildLogController_Copy);
 
             MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM vm = MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM.CreateNewViewModel(entity);
 
@@ -249,15 +257,15 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
         /// <returns></returns>
         [HttpPost]
 		[MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_AddNew)]
-        public ActionResult AddNew(MSBuildLogsExtended.DataSourceEntities.BuildLog.Default input)
+        public ActionResult AddNew(MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM vm)
         {
 			try
             {
                 log.Info(string.Format("{0}: AddNew", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-				MSBuildLogsExtended.DataSourceEntities.BuildLog entity = MSBuildLogsExtended.EntityContracts.IBuildLogHelper.Clone<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default, MSBuildLogsExtended.DataSourceEntities.BuildLog>(input);
+				MSBuildLogsExtended.DataSourceEntities.BuildLog entity = MSBuildLogsExtended.EntityContracts.IBuildLogHelper.Clone<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default, MSBuildLogsExtended.DataSourceEntities.BuildLog>(vm.Item);
 
-                var _Response = MSBuildLogsExtended.CommonBLLIoC.IoCBuildLog.InsertEntity(input.Item);
+                var _Response = MSBuildLogsExtended.CommonBLLIoC.IoCBuildLog.InsertEntity(entity);
 
 
 
@@ -271,7 +279,7 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
             {
                 Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
                 var entity = CreateEmptyEntityOrGetFromTempData(TempDataKey_BuildLogController_Copy);
-                MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM vm = MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM.CreateNewViewModel(entity);
+                vm = MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM.CreateNewViewModel(entity);
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
                 vm.StatusMessageOfResult = ex.Message;
                 vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Failed);
@@ -319,10 +327,10 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
 			ViewBag.SelectListOfMSBuildLogsExtended_BuildEventCode = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(nameValueCollectionOfMSBuildLogsExtended_BuildEventCode);
 
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus uiAction = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.Update;
+            Framework.UIAction uiAction = Framework.UIAction.Update;
             MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM vm = MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resources.UIStringResource.EditAlternativeText;
-            vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Edit_BuildLog;
+            vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Edit_BuildLog;
 
             return View(vm);
         }
@@ -334,13 +342,14 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
         /// <returns></returns>
         [HttpPost]
 		[MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Edit)]
-        public ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier, MSBuildLogsExtended.DataSourceEntities.BuildLog.Default input)
+        public ActionResult Edit(MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM vm)
         {
 		    try
             {
                 log.Info(string.Format("{0}: Edit", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-                var _Response = MSBuildLogsExtended.CommonBLLIoC.IoCBuildLog.UpdateEntity(vm.Item);
+				MSBuildLogsExtended.DataSourceEntities.BuildLog entity = MSBuildLogsExtended.EntityContracts.IBuildLogHelper.Clone<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default, MSBuildLogsExtended.DataSourceEntities.BuildLog>(vm.Item);
+                var _Response = MSBuildLogsExtended.CommonBLLIoC.IoCBuildLog.UpdateEntity(entity);
 
 
                 log.Info(string.Format("{0}: Edit", Framework.LoggingOptions.UI_Process_Ended.ToString()));
@@ -350,7 +359,7 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
             {
                 Framework.UIAction uiAction = Framework.UIAction.Update;
                 vm.ContentData.Title = Framework.Resources.UIStringResource.EditAlternativeText;
-                vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Edit_BuildLog;
+                vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Edit_BuildLog;
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
                 vm.StatusMessageOfResult = ex.Message;
                 vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Failed);
@@ -372,10 +381,10 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
 		[MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Delete)]
         public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus uiAction = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.Delete;
+            Framework.UIAction uiAction = Framework.UIAction.Delete;
             MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM vm = MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
-            vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Delete_BuildLog;
+            vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Delete_BuildLog;
             return View(vm);
         }
 		
@@ -386,7 +395,7 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
         /// <returns></returns>
 		[HttpPost]
 		[MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_BuildLog_Delete)]
-        public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier, FormCollection collection)
+        public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int64 valueToCompareIdByIdentifierOftOfByIdentifier, MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM vm, FormCollection collection)
         {
             try
             {
@@ -394,7 +403,8 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
 				var _Response = MSBuildLogsExtended.CommonBLLIoC.IoCBuildLog.ExistsOfEntityOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
 				if (_Response)
                 {
-                    MSBuildLogsExtended.CommonBLLIoC.IoCBuildLog.DeleteEntity(vm.Item);
+					MSBuildLogsExtended.DataSourceEntities.BuildLog entity = MSBuildLogsExtended.EntityContracts.IBuildLogHelper.Clone<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default, MSBuildLogsExtended.DataSourceEntities.BuildLog>(vm.Item);
+                    MSBuildLogsExtended.CommonBLLIoC.IoCBuildLog.DeleteEntity(entity);
 					log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Ended.ToString()));
                 }
 				else
@@ -406,9 +416,9 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
             }
             catch (Exception ex)
             {
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus uiAction = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.Delete;
+                Framework.UIAction uiAction = Framework.UIAction.Delete;
                 vm.ContentData.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
-                vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Delete_BuildLog;
+                vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Delete_BuildLog;
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
                 vm.StatusMessageOfResult = ex.Message;
                 vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Failed);
@@ -434,6 +444,29 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
         }
 
 		#endregion GoBackList()
+
+        private MSBuildLogsExtended.DataSourceEntities.BuildLog.Default CreateEmptyEntityOrGetFromTempData(string tempDataKey_BuildLogController_Copy)
+        {
+            MSBuildLogsExtended.DataSourceEntities.BuildLog.Default entity;
+            if (TempData.ContainsKey(tempDataKey_BuildLogController_Copy) && TempData[tempDataKey_BuildLogController_Copy] != null)
+            {
+                try
+                {
+                    entity = (MSBuildLogsExtended.DataSourceEntities.BuildLog.Default)TempData[tempDataKey_BuildLogController_Copy];
+                    TempData.Keep(tempDataKey_BuildLogController_Copy);
+                }
+                catch
+                {
+                    entity = new MSBuildLogsExtended.DataSourceEntities.BuildLog.Default();
+                }
+            }
+            else
+            {
+                entity = new MSBuildLogsExtended.DataSourceEntities.BuildLog.Default();
+            }
+
+            return entity;
+        }
     }
 }
 

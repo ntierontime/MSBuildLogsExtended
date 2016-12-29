@@ -201,11 +201,12 @@ namespace Framework.EntityContracts
         {
             if (this.RecordCountOfCurrentPage == 0)
             {
-                return string.Format("0 Record in Current Page");
+                return string.Format(Framework.Resources.UIStringResource.Pagination_NoData);
             }
             else
             {
-                return string.Format("Total Pages: {4}. {0} Record in Current Page: ({1} - {2}) / {3}", this.RecordCountOfCurrentPage, this.CurrentIndex + 1, this.EndIndex, this.CountOfRecords, this.CountOfPages);
+                
+                return string.Format(Framework.Resources.UIStringResource.Pagination_PagingInformation, this.RecordCountOfCurrentPage, this.CurrentIndex + 1, this.EndIndex, this.CountOfRecords, this.CountOfPages, this.CurrentPage);
             }
         }
 

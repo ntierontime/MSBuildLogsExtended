@@ -320,7 +320,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
 			}
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 		            //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -382,7 +382,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             else
             {
                 //log.Error(string.Format("{0}: GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-	            //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+	            //.Process("IoCSolution", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -430,7 +430,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 //log.Error(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
@@ -479,7 +479,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "ExistsOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "ExistsOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
@@ -528,7 +528,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCollectionOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCollectionOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -637,7 +637,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetSingleOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetSingleOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -711,7 +711,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
 			}
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 		            //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -769,7 +769,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             else
             {
                 //log.Error(string.Format("{0}: GetPageCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-	            //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+	            //.Process("IoCSolution", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -817,7 +817,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 //log.Error(string.Format("{0}: GetCountOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
@@ -868,7 +868,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "ExistsOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "ExistsOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: ExistsOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
@@ -918,7 +918,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCollectionOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCollectionOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetCollectionOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -1005,7 +1005,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetSingleOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetSingleOfEntityOfCommon", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetSingleOfEntityOfCommon", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -1087,7 +1087,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
 			}
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 		            //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -1149,7 +1149,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             else
             {
                 //log.Error(string.Format("{0}: GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-	            //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+	            //.Process("IoCSolution", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -1197,7 +1197,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 //log.Error(string.Format("{0}: GetCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
@@ -1246,7 +1246,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "ExistsOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "ExistsOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: ExistsOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
@@ -1295,7 +1295,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCollectionOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCollectionOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -1404,7 +1404,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetSingleOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetSingleOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetSingleOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -1468,7 +1468,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
 			}
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 		            //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -1516,7 +1516,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             else
             {
                 //log.Error(string.Format("{0}: GetPageCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-	            //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+	            //.Process("IoCSolution", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -1554,7 +1554,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 //log.Error(string.Format("{0}: GetCountOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
@@ -1595,7 +1595,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "ExistsOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "ExistsOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: ExistsOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
@@ -1635,7 +1635,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCollectionOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCollectionOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetCollectionOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -1702,7 +1702,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetSingleOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetSingleOfEntityOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetSingleOfEntityOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -1784,7 +1784,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
 			}
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 		            //log.Error(string.Format("{0}: GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -1846,7 +1846,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             else
             {
                 //log.Error(string.Format("{0}: GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-	            //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+	            //.Process("IoCSolution", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -1894,7 +1894,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 //log.Error(string.Format("{0}: GetCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
@@ -1943,7 +1943,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "ExistsOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "ExistsOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: ExistsOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
@@ -1992,7 +1992,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCollectionOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCollectionOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -2101,7 +2101,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetSingleOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetSingleOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -2165,7 +2165,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
 			}
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 		            //log.Error(string.Format("{0}: GetPageNumberListOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -2213,7 +2213,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             else
             {
                 //log.Error(string.Format("{0}: GetPageCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-	            //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+	            //.Process("IoCSolution", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -2251,7 +2251,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 //log.Error(string.Format("{0}: GetCountOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
@@ -2292,7 +2292,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "ExistsOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "ExistsOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: ExistsOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
@@ -2332,7 +2332,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCollectionOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCollectionOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetCollectionOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -2399,7 +2399,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetSingleOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetSingleOfNameValuePairOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetSingleOfNameValuePairOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -2481,7 +2481,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
 			}
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 		            //log.Error(string.Format("{0}: GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -2543,7 +2543,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             else
             {
                 //log.Error(string.Format("{0}: GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-	            //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+	            //.Process("IoCSolution", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -2591,7 +2591,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 //log.Error(string.Format("{0}: GetCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
@@ -2640,7 +2640,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "ExistsOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "ExistsOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: ExistsOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
@@ -2689,7 +2689,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCollectionOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCollectionOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -2798,7 +2798,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetSingleOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetSingleOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetSingleOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -2862,7 +2862,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
 			}
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 		            //log.Error(string.Format("{0}: GetPageNumberListOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -2910,7 +2910,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             else
             {
                 //log.Error(string.Format("{0}: GetPageCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-	            //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+	            //.Process("IoCSolution", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -2948,7 +2948,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 //log.Error(string.Format("{0}: GetCountOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
@@ -2989,7 +2989,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "ExistsOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "ExistsOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: ExistsOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
@@ -3029,7 +3029,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCollectionOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCollectionOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetCollectionOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -3096,7 +3096,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetSingleOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetSingleOfRssItemOfAll", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetSingleOfRssItemOfAll", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -3178,7 +3178,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
 			}
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 		            //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -3240,7 +3240,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             else
             {
                 //log.Error(string.Format("{0}: GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-	            //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+	            //.Process("IoCSolution", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -3288,7 +3288,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 //log.Error(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
@@ -3337,7 +3337,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "ExistsOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "ExistsOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
@@ -3386,7 +3386,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCollectionOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCollectionOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -3495,7 +3495,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetSingleOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetSingleOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -3561,7 +3561,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
 			}
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 		            //log.Error(string.Format("{0}: GetPageNumberListOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -3611,7 +3611,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             else
             {
                 //log.Error(string.Format("{0}: GetPageCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-	            //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+	            //.Process("IoCSolution", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -3651,7 +3651,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 //log.Error(string.Format("{0}: GetCountOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
@@ -3694,7 +3694,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "ExistsOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "ExistsOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: ExistsOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
@@ -3736,7 +3736,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCollectionOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCollectionOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetCollectionOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -3807,7 +3807,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetSingleOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetSingleOfEntityOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetSingleOfEntityOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -3889,7 +3889,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
 			}
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 		            //log.Error(string.Format("{0}: GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -3951,7 +3951,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             else
             {
                 //log.Error(string.Format("{0}: GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-	            //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+	            //.Process("IoCSolution", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -3999,7 +3999,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 //log.Error(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
@@ -4048,7 +4048,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "ExistsOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "ExistsOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
@@ -4097,7 +4097,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCollectionOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCollectionOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -4206,7 +4206,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetSingleOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetSingleOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -4272,7 +4272,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
 			}
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 		            //log.Error(string.Format("{0}: GetPageNumberListOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -4322,7 +4322,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             else
             {
                 //log.Error(string.Format("{0}: GetPageCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
-	            //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+	            //.Process("IoCSolution", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 return 0;
             }
         }
@@ -4362,7 +4362,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCountOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
                 //log.Error(string.Format("{0}: GetCountOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return 0;
             }
@@ -4405,7 +4405,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "ExistsOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "ExistsOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: ExistsOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return false;
             }
@@ -4447,7 +4447,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetCollectionOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetCollectionOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetCollectionOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }
@@ -4518,7 +4518,7 @@ namespace MSBuildLogsExtended.CommonBLLIoC
             }
             else
             {
-                //Framework.Web.WebFormApplicationExceptionHandler.Process("IoCSolution", "GetSingleOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
+                //.Process("IoCSolution", "GetSingleOfKeyInformationOfByIdentifier", _Response.BusinessLogicLayerResponseStatus.ToString(), _Response.ServerErrorMessage);
 	            //log.Error(string.Format("{0}: GetSingleOfKeyInformationOfByIdentifier", Framework.LoggingOptions.UI_Process_Failed.ToString()));
                 return null;
             }

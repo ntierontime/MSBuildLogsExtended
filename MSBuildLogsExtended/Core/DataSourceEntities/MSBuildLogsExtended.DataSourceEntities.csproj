@@ -102,14 +102,6 @@
     <Reference Include="LINQtoCSV, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\LINQtoCSV.1.5.0.0\lib\net35\LINQtoCSV.dll</HintPath>
     </Reference>
-    <Reference Include="LinqToLdap, Version=3.3.2.0, Culture=neutral, PublicKeyToken=d4ffa016fc97ad84, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\LinqToLdap.3.3.2\lib\net45\LinqToLdap.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="LinqToLdap.Contrib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d4ffa016fc97ad84, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\LinqToLdap.3.3.2\lib\net45\LinqToLdap.Contrib.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent>rem copy $(TargetPath) $(SolutionDir)BuiltResults\*.* /y</PostBuildEvent>

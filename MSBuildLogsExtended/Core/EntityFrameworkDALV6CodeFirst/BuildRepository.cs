@@ -360,7 +360,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
 						&&
 							(
 							(criteriaOfNameOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfNameOftOfCommonOfCommonOfCommon.IsToCompare && t.Name.Contains(criteriaOfNameOftOfCommonOfCommonOfCommon.ValueToBeContained))
-							||
+							&&
 							(criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare && t.Description.Contains(criteriaOfDescriptionOftOfCommonOfCommonOfCommon.ValueToBeContained))
 							)
 						)
@@ -772,7 +772,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
 						&&
 							(
 							(criteriaOfNameOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfNameOftOfCommonOfCommonOfCommon.IsToCompare && t.Name.Contains(criteriaOfNameOftOfCommonOfCommonOfCommon.ValueToBeContained))
-							||
+							&&
 							(criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare && t.Description.Contains(criteriaOfDescriptionOftOfCommonOfCommonOfCommon.ValueToBeContained))
 							)
 						)

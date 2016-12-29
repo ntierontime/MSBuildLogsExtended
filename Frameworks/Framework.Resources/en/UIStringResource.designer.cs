@@ -1289,6 +1289,16 @@ namespace Framework.Resources {
 
 
         /// <summary>
+        ///   Looks up a localized string similar to "Filter"".
+        /// </summary>
+        public static string Common_Filter {
+            get {
+                return resourceLoader.GetString("Common_Filter");
+            }
+        }
+
+
+        /// <summary>
         ///   Looks up a localized string similar to "Phone"".
         /// </summary>
         public static string Contact_PhoneText {
@@ -1614,6 +1624,46 @@ namespace Framework.Resources {
         public static string YouHaveNoPermissionToDelete {
             get {
                 return resourceLoader.GetString("YouHaveNoPermissionToDelete");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Items per page : "".
+        /// </summary>
+        public static string Pagination_ItemsPerPage {
+            get {
+                return resourceLoader.GetString("Pagination_ItemsPerPage");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Sort By"".
+        /// </summary>
+        public static string Pagination_SortBy {
+            get {
+                return resourceLoader.GetString("Pagination_SortBy");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "0 Record in Current Page"".
+        /// </summary>
+        public static string Pagination_NoData {
+            get {
+                return resourceLoader.GetString("Pagination_NoData");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Page# {5} out of {4}. {0} Records: ({1} - {2}) out of {3}"".
+        /// </summary>
+        public static string Pagination_PagingInformation {
+            get {
+                return resourceLoader.GetString("Pagination_PagingInformation");
             }
         }
 

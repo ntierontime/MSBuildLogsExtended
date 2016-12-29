@@ -80,6 +80,14 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
 #endif
             }
 
+			if (viewModel.Result != null)
+            {
+                ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildLogsExtended.DataSourceEntities.Solution>(viewModel.Result, viewModel.QueryPagingSetting.CurrentPage, viewModel.QueryPagingSetting.PageSize, viewModel.QueryPagingSetting.CountOfRecords);
+            }
+
+			viewModel.ContentData.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.BuildEventCode;
+            viewModel.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Description;
+
             return View(viewModel);
         }
 
@@ -210,7 +218,7 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
             MSBuildLogsExtended.AspNetMvc40ViewModel.SolutionItemVM vm = MSBuildLogsExtended.AspNetMvc40ViewModel.SolutionItemVM.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resources.UIStringResource.DetailsAlternativeText;
-            vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Details_Solution;
+            vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Details_Solution;
 
             return View(vm);
         }
@@ -229,7 +237,7 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
         {
 
 
-            MSBuildLogsExtended.DataSourceEntities.Solution entity = CreateEmptyEntityOrGetFromTempData(TempDataKey_SolutionController_Copy);
+            var entity = CreateEmptyEntityOrGetFromTempData(TempDataKey_SolutionController_Copy);
 
             MSBuildLogsExtended.AspNetMvc40ViewModel.SolutionItemVM vm = MSBuildLogsExtended.AspNetMvc40ViewModel.SolutionItemVM.CreateNewViewModel(entity);
 
@@ -243,15 +251,15 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
         /// <returns></returns>
         [HttpPost]
 		[MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_AddNew)]
-        public ActionResult AddNew(MSBuildLogsExtended.DataSourceEntities.Solution input)
+        public ActionResult AddNew(MSBuildLogsExtended.AspNetMvc40ViewModel.SolutionItemVM vm)
         {
 			try
             {
                 log.Info(string.Format("{0}: AddNew", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-				MSBuildLogsExtended.DataSourceEntities.Solution entity = input;
+				MSBuildLogsExtended.DataSourceEntities.Solution entity = vm.Item;
 
-                var _Response = MSBuildLogsExtended.CommonBLLIoC.IoCSolution.InsertEntity(input.Item);
+                var _Response = MSBuildLogsExtended.CommonBLLIoC.IoCSolution.InsertEntity(entity);
 
 
 
@@ -265,7 +273,7 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
             {
                 Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
                 var entity = CreateEmptyEntityOrGetFromTempData(TempDataKey_SolutionController_Copy);
-                MSBuildLogsExtended.AspNetMvc40ViewModel.SolutionItemVM vm = MSBuildLogsExtended.AspNetMvc40ViewModel.SolutionItemVM.CreateNewViewModel(entity);
+                vm = MSBuildLogsExtended.AspNetMvc40ViewModel.SolutionItemVM.CreateNewViewModel(entity);
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
                 vm.StatusMessageOfResult = ex.Message;
                 vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(MSBuildLogsExtended.AspNetMvc40ViewModel.SolutionItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Failed);
@@ -308,10 +316,10 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
         {
 
 
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus uiAction = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.Update;
+            Framework.UIAction uiAction = Framework.UIAction.Update;
             MSBuildLogsExtended.AspNetMvc40ViewModel.SolutionItemVM vm = MSBuildLogsExtended.AspNetMvc40ViewModel.SolutionItemVM.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resources.UIStringResource.EditAlternativeText;
-            vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Edit_Solution;
+            vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Edit_Solution;
 
             return View(vm);
         }
@@ -323,13 +331,14 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
         /// <returns></returns>
         [HttpPost]
 		[MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_Edit)]
-        public ActionResult Edit(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier, MSBuildLogsExtended.DataSourceEntities.Solution input)
+        public ActionResult Edit(MSBuildLogsExtended.AspNetMvc40ViewModel.SolutionItemVM vm)
         {
 		    try
             {
                 log.Info(string.Format("{0}: Edit", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-                var _Response = MSBuildLogsExtended.CommonBLLIoC.IoCSolution.UpdateEntity(vm.Item);
+				MSBuildLogsExtended.DataSourceEntities.Solution entity = vm.Item;
+                var _Response = MSBuildLogsExtended.CommonBLLIoC.IoCSolution.UpdateEntity(entity);
 
 
                 log.Info(string.Format("{0}: Edit", Framework.LoggingOptions.UI_Process_Ended.ToString()));
@@ -339,7 +348,7 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
             {
                 Framework.UIAction uiAction = Framework.UIAction.Update;
                 vm.ContentData.Title = Framework.Resources.UIStringResource.EditAlternativeText;
-                vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Edit_Solution;
+                vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Edit_Solution;
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
                 vm.StatusMessageOfResult = ex.Message;
                 vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(MSBuildLogsExtended.AspNetMvc40ViewModel.SolutionItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Failed);
@@ -361,10 +370,10 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
 		[MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_Delete)]
         public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus uiAction = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.Delete;
+            Framework.UIAction uiAction = Framework.UIAction.Delete;
             MSBuildLogsExtended.AspNetMvc40ViewModel.SolutionItemVM vm = MSBuildLogsExtended.AspNetMvc40ViewModel.SolutionItemVM.Load(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, uiAction);
             vm.ContentData.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
-            vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Delete_Solution;
+            vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Delete_Solution;
             return View(vm);
         }
 		
@@ -375,7 +384,7 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
         /// <returns></returns>
 		[HttpPost]
 		[MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.WebAuthorizationAttribute(Permissions = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.PermissionVariables.PermissionName_Solution_Delete)]
-        public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier, FormCollection collection)
+        public ActionResult Delete(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier, MSBuildLogsExtended.AspNetMvc40ViewModel.SolutionItemVM vm, FormCollection collection)
         {
             try
             {
@@ -383,7 +392,8 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
 				var _Response = MSBuildLogsExtended.CommonBLLIoC.IoCSolution.ExistsOfEntityOfByIdentifier(isToCompareIdByIdentifierOftOfByIdentifier, valueToCompareIdByIdentifierOftOfByIdentifier, -1, -1, null);
 				if (_Response)
                 {
-                    MSBuildLogsExtended.CommonBLLIoC.IoCSolution.DeleteEntity(vm.Item);
+					MSBuildLogsExtended.DataSourceEntities.Solution entity = vm.Item;
+                    MSBuildLogsExtended.CommonBLLIoC.IoCSolution.DeleteEntity(entity);
 					log.Info(string.Format("{0}: Delete", Framework.LoggingOptions.UI_Process_Ended.ToString()));
                 }
 				else
@@ -395,9 +405,9 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
             }
             catch (Exception ex)
             {
-                Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus uiAction = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.Delete;
+                Framework.UIAction uiAction = Framework.UIAction.Delete;
                 vm.ContentData.Title = Framework.Resources.UIStringResource.DeleteAlternativeText;
-                vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Delete_Solution;
+                vm.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Delete_Solution;
                 vm.StatusOfResult = Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageErrorDetected;
                 vm.StatusMessageOfResult = ex.Message;
                 vm.UIActionStatusMessage = new Framework.UIActionStatusMessage(typeof(MSBuildLogsExtended.AspNetMvc40ViewModel.SolutionItemVM).FullName, uiAction.ToString(), uiAction, Framework.UIActionStatus.Failed);
@@ -423,6 +433,29 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
         }
 
 		#endregion GoBackList()
+
+        private MSBuildLogsExtended.DataSourceEntities.Solution CreateEmptyEntityOrGetFromTempData(string tempDataKey_SolutionController_Copy)
+        {
+            MSBuildLogsExtended.DataSourceEntities.Solution entity;
+            if (TempData.ContainsKey(tempDataKey_SolutionController_Copy) && TempData[tempDataKey_SolutionController_Copy] != null)
+            {
+                try
+                {
+                    entity = (MSBuildLogsExtended.DataSourceEntities.Solution)TempData[tempDataKey_SolutionController_Copy];
+                    TempData.Keep(tempDataKey_SolutionController_Copy);
+                }
+                catch
+                {
+                    entity = new MSBuildLogsExtended.DataSourceEntities.Solution();
+                }
+            }
+            else
+            {
+                entity = new MSBuildLogsExtended.DataSourceEntities.Solution();
+            }
+
+            return entity;
+        }
     }
 }
 

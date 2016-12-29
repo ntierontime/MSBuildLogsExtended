@@ -1,16 +1,17 @@
 @using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc50Rasor.Helpers.UrlStrings;
 @model MSBuildLogsExtended.AspNetMvc40ViewModel.BuildEventCodeItemVM
-@section featured {
-    <hgroup>
-        <h2>@Model.ContentData.Title.</h2>
-        <h4>@Model.ContentData.Summary</h4>
-    </hgroup>
-}
+<div class="row">
+    <div class="col-sm-12 col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2>@Model.ContentData.Title.</h2>
+                <h4>@Model.ContentData.Summary</h4>
+            </div>
+            <div class="panel-body">
 @if (Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK && Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
 {
 	<div class="text-danger">@Model.StatusMessageOfResult</div>
 }
-	<legend>@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.BuildEventCode.</legend>
 @Html.HiddenFor(model => model.Item.Id)  <div class="form-group form-inline">
 			@Html.LabelFor(model => model.Item.EventCode, new { @class = "control-label" })
         <div class="form-control">
@@ -23,9 +24,31 @@
 			@Html.DisplayFor(model => model.Item.Description)
         </div>
     </div>
-    <div class="btn-group" role="group">
-        <input class="btn btn-default" role="button" type="button" value="@Framework.Resources.UIStringResource.EditAlternativeText" onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Edit, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })'" />
-        <input class="btn btn-default" role="button" type="button" value="@Framework.Resources.UIStringResource.DeleteAlternativeText" onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Delete, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })'" />
-        <input class="btn btn-default" role="button" type="button" value="@Framework.Resources.UIStringResource.BackAlternativeText" onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Index)'" />
-        <input class="btn btn-default" role="button" type="button" value="@Framework.Resources.UIStringResource.CopyAlternativeText" onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Copy, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })'" />
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 pull-right nopadding">
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <div class="btn-group">
+							<a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Edit, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
+								<span class="glyphicon glyphicon-edit"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resources.UIStringResource.EditAlternativeText</span>
+							</a>
+                        </div>
+                        <div class="btn-group">
+							<a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Delete, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
+								<span class="glyphicon glyphicon-trash"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resources.UIStringResource.DeleteAlternativeText</span>
+							</a>
+                        </div>
+                        <div class="btn-group">
+							<a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Index)" class="btn btn-default" role="button" type="button">
+								<span class="glyphicon glyphicon-ban-circle"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resources.UIStringResource.BackAlternativeText</span>
+							</a>
+                        </div>
+                        <div class="btn-group">
+							<a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Copy, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
+								<span class="glyphicon glyphicon-copy"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resources.UIStringResource.CopyAlternativeText</span>
+							</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>

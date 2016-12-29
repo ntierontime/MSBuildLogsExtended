@@ -1311,6 +1311,16 @@ namespace Framework.Resources {
 
 
         /// <summary>
+        ///   Looks up a localized string similar to "Filter"".
+        /// </summary>
+        public static string Common_Filter {
+            get {
+                return ResourceManager.GetString("Common_Filter", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
         ///   Looks up a localized string similar to "Phone"".
         /// </summary>
         public static string Contact_PhoneText {
@@ -1636,6 +1646,46 @@ namespace Framework.Resources {
         public static string YouHaveNoPermissionToDelete {
             get {
                 return ResourceManager.GetString("YouHaveNoPermissionToDelete", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Items per page : "".
+        /// </summary>
+        public static string Pagination_ItemsPerPage {
+            get {
+                return ResourceManager.GetString("Pagination_ItemsPerPage", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Sort By"".
+        /// </summary>
+        public static string Pagination_SortBy {
+            get {
+                return ResourceManager.GetString("Pagination_SortBy", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "0 Record in Current Page"".
+        /// </summary>
+        public static string Pagination_NoData {
+            get {
+                return ResourceManager.GetString("Pagination_NoData", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Page# {5} out of {4}. {0} Records: ({1} - {2}) out of {3}"".
+        /// </summary>
+        public static string Pagination_PagingInformation {
+            get {
+                return ResourceManager.GetString("Pagination_PagingInformation", resourceCulture);
             }
         }
 

@@ -1,19 +1,20 @@
 @using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc50Rasor.Helpers.UrlStrings;
 @model MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM
-@section featured {
-    <hgroup>
-        <h2>@Model.ContentData.Title.</h2>
-        <h4>@Model.ContentData.Summary</h4>
-    </hgroup>
-}
+<div class="row">
+    <div class="col-sm-12 col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2>@Model.ContentData.Title.</h2>
+                <h4>@Model.ContentData.Summary</h4>
+            </div>
+            <div class="panel-body">
 @if (Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK && Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
 {
 	<div class="text-danger">@Model.StatusMessageOfResult</div>
 }
-@using (Html.BeginForm(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, FormMethod.Post, new { @class= "form-horizontal" })) {
+@using (Html.BeginForm(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, FormMethod.Post, new { @class= "form" })) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
-        <legend>@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog.</legend>
 @Html.HiddenFor(model => model.Item.Build_1_Name)@Html.HiddenFor(model => model.Item.Id)  <div class="form-group form-inline">
 			@Html.LabelFor(model => model.Item.Solution_1Id, new { @class = "control-label" })
 			@Html.DropDownListFor(model => model.Item.Solution_1Id, (List<SelectListItem>)ViewBag.SelectListOfMSBuildLogsExtended_Solution, MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "onchange", "FetchBuild_1();" }, { "class", "form-control" } })
@@ -29,18 +30,38 @@
   <div class="form-group form-inline">
 			@Html.LabelFor(model => model.Item.Message, new { @class = "control-label" })
 			@Html.TextBoxFor(model => model.Item.Message, new { @class = "form-control" })
+			@Html.ValidationMessageFor(model => model.Item.Message, null, new { @class = "text-danger" })
     </div>
   <div class="form-group form-inline">
 			@Html.LabelFor(model => model.Item.EventTime, new { @class = "control-label" })
 			@Html.TextBoxFor(model => model.Item.EventTime, new { @Value = Model.Item.EventTime.ToString("dd/MM/yyyy"), @class = "form-control" })
+			@Html.ValidationMessageFor(model => model.Item.EventTime, null, new { @class = "text-danger" })
     </div>
-    <div class="btn-group" role="group">
-        <input class="btn btn-default" role="button" type="submit" value="@Framework.Resources.UIStringResource.SaveAlternativeText" />
-        <input class="btn btn-default" role="button" type="button" value="@Framework.Resources.UIStringResource.RefreshAlternativeText" onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })'" />
-        <input class="btn btn-default" role="button" type="button" value="@Framework.Resources.UIStringResource.BackAlternativeText" onclick="location.href='@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index)'" />
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 pull-right nopadding">
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <div class="btn-group">
+							<button class="btn btn-primary" role="button" type="submit">
+								<span class="glyphicon glyphicon-ok-sign"></span>
+								<span class="submit-text hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resources.UIStringResource.SaveAlternativeText</span>
+							</button>
+                        </div>
+                        <div class="btn-group">
+							<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
+								<span class="glyphicon glyphicon-refresh"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resources.UIStringResource.RefreshAlternativeText</span>
+							</a>
+                        </div>
+                        <div class="btn-group">
+							<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index)" class="btn btn-default" role="button" type="button">
+								<span class="glyphicon glyphicon-ban-circle"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resources.UIStringResource.BackAlternativeText</span>
+							</a>
+                        </div>
+                    </div>
+                </div>
+}
+            </div>
+        </div>
     </div>
 </div>
-}
 @section Scripts {
     <script type="text/javascript">
         //http://www.softfinity.com/blog/using-ajax-with-knockout-js-and-asp-net-mvc-4-to-load-select-drop-down-options/

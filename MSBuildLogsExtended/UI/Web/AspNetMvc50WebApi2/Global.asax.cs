@@ -22,7 +22,6 @@ namespace MSBuildLogsExtended.AspNetMvc50WebApi2
             MSBuildLogsExtended.AspNetMvc50WebApi2.FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             MSBuildLogsExtended.AspNetMvc50WebApi2.RouteConfig.RegisterRoutes(RouteTable.Routes);
             MSBuildLogsExtended.AspNetMvc50WebApi2.BundleConfig.RegisterBundles(BundleTable.Bundles);
-            MSBuildLogsExtended.AspNetMvc50WebApi2.AuthConfig.RegisterAuth();
 
 			GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
 			GlobalConfiguration.Configuration.Formatters.JsonFormatter.MediaTypeMappings.Add(new System.Net.Http.Formatting.QueryStringMapping("json", "true", "application/json"));
@@ -36,7 +35,7 @@ namespace MSBuildLogsExtended.AspNetMvc50WebApi2
             Framework.CommonBLLEntities.BusinessLogicLayerMemberShip _BusinessLogicLayerMemberShip = new Framework.CommonBLLEntities.BusinessLogicLayerMemberShip();
             //Framework.Web.WebFormApplicationSessionVariables.BusinessLogicLayerContext = new Framework.CommonBLLEntities.BusinessLogicLayerContext(
             //    _BusinessLogicLayerMemberShip 
-            //    , MSBuildLogsExtended.LinqDAL.LinqToSqlDataAccessLayerFactorySingleton.Instance);
+            //    , MSBuildLogsExtended.EntityFrameworkDAL.EFDataAccessLayerFactorySingleton.Instance);
             List<Framework.CommonBLLEntities.BusinessLogicLayerContextSetting> _BusinessLogicLayerContextSettingCollection = new List<Framework.CommonBLLEntities.BusinessLogicLayerContextSetting>();
             _BusinessLogicLayerContextSettingCollection.Add(new Framework.CommonBLLEntities.BusinessLogicLayerContextSetting(
 				"MSBuildLogsExtended"

@@ -347,7 +347,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
 						(
 							(
 							(criteriaOfEventCodeOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfEventCodeOftOfCommonOfCommonOfCommon.IsToCompare && t.EventCode.Contains(criteriaOfEventCodeOftOfCommonOfCommonOfCommon.ValueToBeContained))
-							||
+							&&
 							(criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare && t.Description.Contains(criteriaOfDescriptionOftOfCommonOfCommonOfCommon.ValueToBeContained))
 							)
 						)

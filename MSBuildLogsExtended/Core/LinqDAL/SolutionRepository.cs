@@ -378,9 +378,9 @@ namespace MSBuildLogsExtended.LinqDAL
 						(
 							(
 							(criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon.IsToCompare && t.ExternalParentId.Contains(criteriaOfExternalParentIdOftOfCommonOfCommonOfCommon.ValueToBeContained))
-							||
+							&&
 							(criteriaOfNameOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfNameOftOfCommonOfCommonOfCommon.IsToCompare && t.Name.Contains(criteriaOfNameOftOfCommonOfCommonOfCommon.ValueToBeContained))
-							||
+							&&
 							(criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare == false || criteriaOfDescriptionOftOfCommonOfCommonOfCommon.IsToCompare && t.Description.Contains(criteriaOfDescriptionOftOfCommonOfCommonOfCommon.ValueToBeContained))
 							)
 						)
