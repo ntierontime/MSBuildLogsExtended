@@ -13,6 +13,7 @@
 </hgroup>
 }
 <aside>
+<!-- Aside.01.Start. MSBuildLogsExtended.BuildLog => MasterViewAsideKeyInformation -->
 <div class="panel-group">
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -25,7 +26,7 @@
 { // Item
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarUp" title="@Framework.Resources.UIStringResource.EditAlternativeText">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarUp" title="@Framework.Resources.UIStringResource.EditAlternativeText">
         <span class="glyphicon glyphicon-edit"></span>
     </a>
 </div>
@@ -35,12 +36,12 @@
 	</a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="CopyToolBarUp" title="@Framework.Resources.UIStringResource.CopyAlternativeText">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Copy, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="CopyToolBarUp" title="@Framework.Resources.UIStringResource.CopyAlternativeText">
         <span class="glyphicon glyphicon-copy"></span>
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="DetailsToolBarUp" title="@Framework.Resources.UIStringResource.DetailsAlternativeText">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Details, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="DetailsToolBarUp" title="@Framework.Resources.UIStringResource.DetailsAlternativeText">
         <span class="glyphicon glyphicon-file"></span>
     </a>
 </div>
@@ -113,6 +114,8 @@
 }
     </div>
 </div>
+<!-- Aside.01.End. MSBuildLogsExtended.BuildLog => MasterViewAsideKeyInformation -->
+<!-- Aside.11.Start. MSBuildLogsExtended.Build => RelatedEntityWhenMasterViewIsFKEntity -->
 <div class="panel-group">
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -170,6 +173,8 @@
         </div>
     </div>
 </div>
+<!-- Aside.11.End. MSBuildLogsExtended.Build => RelatedEntityWhenMasterViewIsFKEntity -->
+<!-- Aside.21.Start. MSBuildLogsExtended.Solution => RelatedEntityWhenMasterViewIsFKEntity -->
 <div class="panel-group">
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -227,6 +232,8 @@
         </div>
     </div>
 </div>
+<!-- Aside.21.End. MSBuildLogsExtended.Solution => RelatedEntityWhenMasterViewIsFKEntity -->
+<!-- Aside.31.Start. MSBuildLogsExtended.BuildEventCode => RelatedEntityWhenMasterViewIsFKEntity -->
 <div class="panel-group">
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -284,6 +291,7 @@
         </div>
     </div>
 </div>
+<!-- Aside.31.End. MSBuildLogsExtended.BuildEventCode => RelatedEntityWhenMasterViewIsFKEntity -->
 </aside>
 @section Scripts {
     <script type="text/javascript">

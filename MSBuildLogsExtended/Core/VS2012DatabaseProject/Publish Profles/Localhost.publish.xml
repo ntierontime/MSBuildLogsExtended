@@ -2,9 +2,9 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
-    <TargetDatabaseName>Besure</TargetDatabaseName>
+    <TargetDatabaseName>MSBuildLogsExtended</TargetDatabaseName>
     <DeployScriptFileName>VS2012DatabaseProject.sql</DeployScriptFileName>
-    <TargetConnectionString>Data Source=Localhost;Initial Catalog=Besure;UID=sa;PWD=Qwer~123;</TargetConnectionString>
+    <TargetConnectionString>Data Source=Localhost;Initial Catalog=MSBuildLogsExtended;UID=sa;PWD=Qwer~123;</TargetConnectionString>
     <ProfileVersionNumber>1</ProfileVersionNumber>
     <ScriptDatabaseOptions>True</ScriptDatabaseOptions>
     <BlockOnPossibleDataLoss>True</BlockOnPossibleDataLoss>

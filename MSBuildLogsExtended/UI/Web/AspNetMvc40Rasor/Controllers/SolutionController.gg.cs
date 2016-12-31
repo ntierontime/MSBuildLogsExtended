@@ -71,6 +71,8 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
 
 				TempData[TempDataKey_WPCommonOfSolution] = viewModel.GetPrimaryInformationEntity();
 				TempData.Keep(TempDataKey_WPCommonOfSolution); 
+
+				ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildLogsExtended.DataSourceEntities.Solution>(searchResult.Message, currentPage, searchResult.QueryPagingResult.PageSize, searchResult.QueryPagingResult.CountOfRecords);
 			}
             else
             {
@@ -85,7 +87,7 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
                 ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildLogsExtended.DataSourceEntities.Solution>(viewModel.Result, viewModel.QueryPagingSetting.CurrentPage, viewModel.QueryPagingSetting.PageSize, viewModel.QueryPagingSetting.CountOfRecords);
             }
 
-			viewModel.ContentData.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.BuildEventCode;
+			viewModel.ContentData.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Solution;
             viewModel.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Description;
 
             return View(viewModel);

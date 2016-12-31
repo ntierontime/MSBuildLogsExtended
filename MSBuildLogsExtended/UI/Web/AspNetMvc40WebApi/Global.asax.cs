@@ -14,8 +14,14 @@ namespace MSBuildLogsExtended.AspNetMvc40WebApi
 
     public class Global : System.Web.HttpApplication
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         protected void Application_Start()
         {
+            string log4netConfig = Server.MapPath("~/log4net.config");
+            log4net.Config.XmlConfigurator.Configure(new System.IO.FileInfo(log4netConfig));
+            log.Info("Application starting");
+
             AreaRegistration.RegisterAllAreas();
 			
             MSBuildLogsExtended.AspNetMvc40WebApi.WebApiConfig.Register(GlobalConfiguration.Configuration);
@@ -49,6 +55,8 @@ namespace MSBuildLogsExtended.AspNetMvc40WebApi
                 object _BusinessLogicLayerContext = Activator.CreateInstance(_BusinessLogicLayerContextSetting.TypeOfBusinessLogicLayerContext, _Params);
                 _BusinessLogicLayerContextSetting.TypeOfTargetUser.GetProperty("BusinessLogicLayerContext").SetValue(null, _BusinessLogicLayerContext, null);
             }
+
+			log.Info("Application started");
         }
     }
 }

@@ -85,7 +85,7 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
                 ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>(viewModel.Result, viewModel.QueryPagingSetting.CurrentPage, viewModel.QueryPagingSetting.PageSize, viewModel.QueryPagingSetting.CountOfRecords);
             }
 
-			viewModel.ContentData.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildEventCode;
+			viewModel.ContentData.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog;
             viewModel.ContentData.Summary = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Description;
 
             return View(viewModel);

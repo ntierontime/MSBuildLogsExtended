@@ -176,6 +176,10 @@
       <Project>{460fe8b2-17ec-4a7e-83f8-b77b88e8b284}</Project>
       <Name>Framework.WinRT</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Framework.Resources.WinRT\Framework.Resources.WinRT.csproj">
+      <Project>{23311ee2-a0cd-46f6-9766-652a04a7602f}</Project>
+      <Name>Framework.Resources.WinRT</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

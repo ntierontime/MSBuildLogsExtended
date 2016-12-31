@@ -83,6 +83,15 @@
                     </Rectangle>
                 </WPToolkit:ExpanderView.Expander>
             </WPToolkit:ExpanderView>
+			</Grid>
+<Grid Width="960">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
 <ScrollViewer HorizontalAlignment="Stretch" Grid.Row="1" Name="scrollViewerOfSearchResult" VerticalScrollBarVisibility="Visible" Height="600" >
 <fvm:InfiniteListBox Name="V_Common" HorizontalAlignment="Stretch" VerticalAlignment="Center" DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildCollectionVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM.CurrentDefault, Mode=TwoWay, Source={StaticResource Locator}}" SelectionMode="Single" CompressionBottomCommand="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM.InfinityScrollingSearchCommand, Source={StaticResource Locator}}">
   <fvm:InfiniteListBox.ItemsPanel>

@@ -54,38 +54,38 @@
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareMessageCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon<label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareMessageCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon</label>
 </div>
 @Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedMessageCommonOftOfCommon, new { @class = "form-control" })
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareEventTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon<label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareEventTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon</label>
 </div><input type="text" rangepickername="datefilter" value="" class="form-control" />
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareLowerBoundEventTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundEventTimeCommonOftOfCommon<label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareLowerBoundEventTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundEventTimeCommonOftOfCommon</label>
 </div>
 @Html.TextBox("lowerBoundEventTimeCommonOftOfCommon", Model.Criteria.LowerBoundEventTimeCommonOftOfCommon.ToString(), new { @readonly = "readonly", @class = "form-control" })
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareUpperBoundEventTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundEventTimeCommonOftOfCommon<label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareUpperBoundEventTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundEventTimeCommonOftOfCommon</label>
 </div>
 @Html.TextBox("upperBoundEventTimeCommonOftOfCommon", Model.Criteria.UpperBoundEventTimeCommonOftOfCommon.ToString(), new { @readonly = "readonly", @class = "form-control" })
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfBuildEventCode_1OfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_1OfCommon<label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfBuildEventCode_1OfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_1OfCommon</label>
 </div>
 @Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfBuildEventCode_1OfCommon, (List<SelectListItem>)Model.SelectListOfMSBuildLogsExtended_BuildEventCode, MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.Please_select_BuildEventCode____, new Dictionary<string,Object>{ { "class", "form-control" } })
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfSolution_1OfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon<label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfSolution_1OfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon</label>
 </div>
 @Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfSolution_1OfCommon, (List<SelectListItem>)Model.SelectListOfMSBuildLogsExtended_Solution, MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "class", "form-control" }, { "onchange", "FetchBuild_1();" } })
 </div>
 <div class="form-group">
 <div class="checkbox checkbox-info">
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfBuild_1OfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon<label>
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfBuild_1OfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon</label>
 </div>
 @Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfBuild_1OfCommon, Enumerable.Empty<SelectListItem>(), MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Please_select_Build____, new Dictionary<string,Object>{ { "class", "form-control" }, { "data-bind", string.Format(@"options:selectListOfvalueToCompareIdCommonOfBuild_1OfCommon,optionsCaption:'{0}',optionsText:'name',optionsValue:'value',value:selectedvalueToCompareIdCommonOfBuild_1OfCommon", MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Please_select_Build____) } })
 </div>
@@ -141,13 +141,13 @@
             <div class="table-responsive">
 <table id="MasterDataControl1" name="MasterDataControl1" class="table table-hover table-bordered table-striped">
 <thead>
- <tr><th  class="hidden-xs visible-smvisible-md visible-lg"></th>
+ <tr><th  class="hidden-xs visible-sm"></th>
 <th >@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Build_1_Name</th>
 <th >@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Solution_1_Name</th>
 <th >@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name</th>
 <th  class="hidden-xs visible-smvisible-md visible-lg">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Message</th>
 <th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.EventTime</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg"></th></tr>
+<th  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"></th></tr>
 </thead>
 <tbody>
     @if (Model != null && Model.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -156,20 +156,20 @@
         foreach (var item in Model.Result)
         {
 			index++;
-<tr><td ></td>
+<tr><td  class="hidden-xs visible-sm"></td>
 <td >@Html.ActionLink(item.Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildId }, null)</td>
 <td >@Html.ActionLink(item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Solution_1Id }, null)</td>
 <td >@Html.ActionLink(item.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildEventCodeId }, null)</td>
 <td >@Html.DisplayFor(modelItem => item.Message)</td>
 <td >@Html.DisplayFor(modelItem => item.EventTime)</td>
-<td ><div class="btn-group btn-group-justified" role="group" aria-label="...">
+<td  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
 	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
 		<span class="glyphicon glyphicon-briefcase"></span>
 	</a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resources.UIStringResource.EditAlternativeText">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resources.UIStringResource.EditAlternativeText">
         <span class="glyphicon glyphicon-edit"></span>
     </a>
 </div>

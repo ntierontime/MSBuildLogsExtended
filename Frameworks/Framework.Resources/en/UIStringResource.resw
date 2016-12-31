@@ -493,6 +493,9 @@
   <data name="Common_Workspaces" xml:space="preserve">
     <value>Workspaces</value>
   </data>
+  <data name="Common_Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
   <data name="Contact_PhoneText" xml:space="preserve">
     <value>Phone</value>
   </data>
@@ -591,6 +594,18 @@
   </data>
   <data name="YouHaveNoPermissionToDelete" xml:space="preserve">
     <value>You Have No Permission To Delete</value>
+  </data>
+  <data name="Pagination_ItemsPerPage" xml:space="preserve">
+    <value>Items per page : </value>
+  </data>
+  <data name="Pagination_SortBy" xml:space="preserve">
+    <value>Sort By</value>
+  </data>
+  <data name="Pagination_NoData" xml:space="preserve">
+    <value>0 Record in Current Page</value>
+  </data>
+  <data name="Pagination_PagingInformation" xml:space="preserve">
+    <value>Page# {5} out of {4}. {0} Records: ({1} - {2}) out of {3}</value>
   </data>
   <data name="AddNewAlternativeText" xml:space="preserve">
     <value>AddNew</value>

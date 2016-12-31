@@ -1,19 +1,25 @@
-﻿.left-nav {
-    position: fixed;
-    left: 20px;
-    top: 70px;
-    width: 150px
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
-.page-content {
-    position: absolute;
-    right: 0;
-    top: 70px;
-    width: calc(100vw - 150px);
-    padding: 0 15px;
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.nopadding {
+    padding: 0;
+}
+.nomargin {
+    margin: 0;
 }

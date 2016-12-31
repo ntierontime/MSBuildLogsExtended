@@ -129,6 +129,10 @@
       <Project>{3ad8826f-070f-40dd-8771-8d17ada7ebf2}</Project>
       <Name>Framework.SL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Framework.Resources.SL\Framework.Resources.SL.csproj">
+      <Project>{6fde9471-4e80-469d-b441-bd8cfa62f93e}</Project>
+      <Name>Framework.Resources.SL</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

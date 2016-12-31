@@ -22,13 +22,13 @@
             <div class="table-responsive">
 <table id="MasterDataControl0" name="MasterDataControl0" class="table table-hover table-bordered table-striped">
 <thead>
- <tr><th  class="hidden-xs visible-smvisible-md visible-lg"></th>
+ <tr><th  class="hidden-xs visible-sm"></th>
 <th >@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Build_1_Name</th>
 <th >@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Solution_1_Name</th>
 <th >@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name</th>
 <th  class="hidden-xs visible-smvisible-md visible-lg">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Message</th>
 <th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.EventTime</th>
-<th  class="hidden-xs hidden-sm visible-md visible-lg"></th></tr>
+<th  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"></th></tr>
 </thead>
 <tbody>
     @if (Model != null && Model.StatusOfFK_BuildLog_BuildEventCode == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
@@ -37,20 +37,20 @@
         foreach (var item in Model.FK_BuildLog_BuildEventCode)
         {
 			index++;
-<tr><td ></td>
+<tr><td  class="hidden-xs visible-sm"></td>
 <td >@Html.ActionLink(item.Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildId }, null)</td>
 <td >@Html.ActionLink(item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Solution_1Id }, null)</td>
 <td >@Html.ActionLink(item.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildEventCodeId }, null)</td>
 <td >@Html.DisplayFor(modelItem => item.Message)</td>
 <td >@Html.DisplayFor(modelItem => item.EventTime)</td>
-<td ><div class="btn-group btn-group-justified" role="group" aria-label="...">
+<td  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
 	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
 		<span class="glyphicon glyphicon-briefcase"></span>
 	</a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resources.UIStringResource.EditAlternativeText">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resources.UIStringResource.EditAlternativeText">
         <span class="glyphicon glyphicon-edit"></span>
     </a>
 </div>
@@ -71,6 +71,7 @@
     </div>
 </div>
 <aside>
+<!-- Aside.01.Start. MSBuildLogsExtended.BuildEventCode => MasterViewAsideKeyInformation -->
 <div class="panel-group">
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -83,7 +84,7 @@
 { // Item
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarUp" title="@Framework.Resources.UIStringResource.EditAlternativeText">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Edit, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarUp" title="@Framework.Resources.UIStringResource.EditAlternativeText">
         <span class="glyphicon glyphicon-edit"></span>
     </a>
 </div>
@@ -93,12 +94,12 @@
 	</a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="CopyToolBarUp" title="@Framework.Resources.UIStringResource.CopyAlternativeText">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Copy, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="CopyToolBarUp" title="@Framework.Resources.UIStringResource.CopyAlternativeText">
         <span class="glyphicon glyphicon-copy"></span>
     </a>
 </div>
 <div class="btn-group">
-    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="DetailsToolBarUp" title="@Framework.Resources.UIStringResource.DetailsAlternativeText">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildEventCode_Details, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="DetailsToolBarUp" title="@Framework.Resources.UIStringResource.DetailsAlternativeText">
         <span class="glyphicon glyphicon-file"></span>
     </a>
 </div>
@@ -150,6 +151,7 @@
 }
     </div>
 </div>
+<!-- Aside.01.End. MSBuildLogsExtended.BuildEventCode => MasterViewAsideKeyInformation -->
 </aside>
 @section Scripts {
     <script type="text/javascript">

@@ -32,16 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Runtime.Serialization" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <None Include="App.config" />
@@ -54,7 +44,6 @@
     <None Include="EFEntityDataModel.Context.tt" />
     <Compile Include="EFEntityDataModel.Context.cs">
       <DependentUpon>EFEntityDataModel.Context.tt</DependentUpon>
-      <SubType>RESXCodeBehind</SubType>
     </Compile>
     <Compile Include="EFEntityDataModel.Generated.cs" />
     <None Include="EFEntityDataModel.txt" />

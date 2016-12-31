@@ -125,6 +125,10 @@
       <Project>{1efe0717-bd17-4781-a7d2-7f0216a3460b}</Project>
       <Name>Framework.WP</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Framework.Resources.WP\Framework.Resources.WP.csproj">
+      <Project>{e711039f-7408-49fc-8049-c756ac6852ca}</Project>
+      <Name>Framework.Resources.WP</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib.Extensions" />

@@ -84,7 +84,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildLogsExtended.WPF4App
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildLogsExtended.Resources", "MSBuildLogsExtended\Core\Resources\MSBuildLogsExtended.Resources.csproj", "{ADA3B560-C0B9-42D0-92FF-A76462E8D524}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MSBuildLogsExtended.VS2012DatabaseProject", "MSBuildLogsExtended\Core\VS2012DatabaseProject\MSBuildLogsExtended.VS2012DatabaseProject.sqlproj", "{6C51BF0B-42F0-4670-9F20-A47BB0EA8866}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildLogsExtended.VS2012DatabaseProject", "MSBuildLogsExtended\Core\VS2012DatabaseProject\MSBuildLogsExtended.VS2012DatabaseProject.sqlproj", "{6C51BF0B-42F0-4670-9F20-A47BB0EA8866}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildLogsExtended.WcfClientBLL", "MSBuildLogsExtended\Wcf\WcfClientBLL\MSBuildLogsExtended.WcfClientBLL.csproj", "{794EA58E-D8EE-422C-B6FB-D9965E175AA3}"
 EndProject

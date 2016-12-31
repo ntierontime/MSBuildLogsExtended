@@ -1,9 +1,0 @@
-namespace MSBuildLogsExtended.AspNetMvc50WebApi2.Areas.HelpPage.ModelDescriptions
-{
-    public class KeyValuePairModelDescription : ModelDescription
-    {
-        public ModelDescription KeyModelDescription { get; set; }
-
-        public ModelDescription ValueModelDescription { get; set; }
-    }
-}

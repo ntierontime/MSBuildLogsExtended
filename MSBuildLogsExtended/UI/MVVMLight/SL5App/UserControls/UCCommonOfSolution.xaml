@@ -42,6 +42,16 @@
 <CheckBox Name="ID_CheckBox_Search_isToCompareExternalParentIdCommonOftOfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareExternalParentIdCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" IsChecked="{Binding Path=Criteria.SolutionQueryCriteriaCommon.ExternalParentIdCommonOft.IsToCompare, Mode=TwoWay}" />
 <TextBox Name="ID_TextBox_Search_valueToBeContainedExternalParentIdCommonOftOfCommon" Text="{Binding Path=Criteria.SolutionQueryCriteriaCommon.ExternalParentIdCommonOft.ValueToBeContained, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" />
         </Grid>
+	</Grid>
+<Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 <slsdk:DataGrid Grid.Row="1" Height="100" HorizontalAlignment="Stretch" Name="V_Common" VerticalAlignment="Top" DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM_Static, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollection}" SelectedItem="{Binding Path=Current}">
             </slsdk:DataGrid>
 	</Grid>
