@@ -99,7 +99,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <None Include="Views\Web.config" />
+    <Content Include="Views\Web.config" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -121,7 +121,7 @@
     <Compile Include="Helpers\CustomizedClaimTypes.cs" />
     <Compile Include="Helpers\WebAuthorizationAttribute.cs" />
     <Compile Include="Models\AccountModels.cs" />
-    <None Include="Web.config" />
+    <Content Include="Web.config" />
     <Content Include="Views\Build\WPCommonOfBuild.cshtml" />
     <Content Include="Views\Build\WPEntityRelatedOfBuild.cshtml" />
     <Content Include="Views\Build\WPUpdateNameOnlyOfBuild.cshtml" />

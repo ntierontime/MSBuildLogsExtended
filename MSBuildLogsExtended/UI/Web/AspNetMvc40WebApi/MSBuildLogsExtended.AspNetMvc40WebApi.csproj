@@ -15,7 +15,7 @@
     <AssemblyName>MSBuildLogsExtended.AspNetMvc40WebApi</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -50,7 +50,6 @@
     <Content Include="Global.asax" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <None Include="Web.config" />
     <None Include="Properties\PublishProfiles\VS2012PublishProfile.pubxml" />
@@ -417,9 +416,9 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>10812</DevelopmentServerPort>
+          <DevelopmentServerPort>20812</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:10812/</IISUrl>
+          <IISUrl>http://localhost:20812/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

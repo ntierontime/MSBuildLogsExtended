@@ -1,19 +1,19 @@
 @using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.UrlStrings;
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Linq.Expressions;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
 @using Framework.Mvc;
 @using PagedList.Mvc;
 @model MSBuildLogsExtended.AspNetMvc40ViewModel.WPCommonOfBuildLogVM
 @{
-    ViewBag.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog;
     RouteValueDictionary queryStringDictionary = new RouteValueDictionary(Request.QueryString.AllKeys.ToDictionary(key => key, key => (object)Request.QueryString[key]));
 }
-@section featured {
-<hgroup>
-    <h2>@ViewBag.Title.</h2>
-    <h4>@ViewBag.Message</h4>
-</hgroup>
-}
  <div class="row">
- <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 nopadding">
+ <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
         @using (Html.BeginForm())
         {
             <div class="panel panel-default">
@@ -133,10 +133,7 @@
  <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 nopadding">
         <div class="panel panel-default">
             <div class="panel-heading clearfix">
-                <h3 style="display: inline;">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog</h3>
-<div class="pull-right">
-                    @Model.QueryPagingSetting.GetPagingInformationString()
-                </div>
+                <h3 style="display: inline;">@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog, "WPCommonOfBuildLog", "BuildLog")
             </div>
             <div class="table-responsive">
 <table id="MasterDataControl1" name="MasterDataControl1" class="table table-hover table-bordered table-striped">

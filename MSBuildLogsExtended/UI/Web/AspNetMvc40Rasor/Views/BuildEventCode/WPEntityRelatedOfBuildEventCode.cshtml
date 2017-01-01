@@ -1,23 +1,22 @@
 @using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.UrlStrings;
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Linq.Expressions;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
 @using Framework.Mvc;
 @using PagedList.Mvc;
 @model MSBuildLogsExtended.AspNetMvc40ViewModel.WPEntityRelatedOfBuildEventCodeVM
 @{
-    ViewBag.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.BuildEventCode;
     RouteValueDictionary queryStringDictionary = new RouteValueDictionary(Request.QueryString.AllKeys.ToDictionary(key => key, key => (object)Request.QueryString[key]));
 }
-@section featured {
-<hgroup>
-    <h2>@ViewBag.Title.</h2>
-    <h4>@ViewBag.Message</h4>
-</hgroup>
-}
-<div class="col-md-8">
-    <div class="row">
-		<h2>@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog, "WPCommonOfBuildLog", "BuildLog")</h2>
+ <div class="row">
+ <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 nopadding">
         <div class="panel panel-default">
             <div class="panel-heading clearfix">
-                <h3 style="display: inline;">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog</h3>
+                <h3 style="display: inline;">@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog, "WPCommonOfBuildLog", "BuildLog")
             </div>
             <div class="table-responsive">
 <table id="MasterDataControl0" name="MasterDataControl0" class="table table-hover table-bordered table-striped">
@@ -68,18 +67,16 @@
             <div class="pull-right">
             </div>
         </div>
-    </div>
-</div>
-<aside>
+ </div>
+ <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 <!-- Aside.01.Start. MSBuildLogsExtended.BuildEventCode => MasterViewAsideKeyInformation -->
 <div class="panel-group">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 class="panel-title">
+            <h3 style="display: inline;">
                 @MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.BuildEventCode
-            </h4>
+            </h3>
 		</div>
-        <div class="panel-body">
 @if (Model.StatusOfMasterEntity == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
 { // Item
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
@@ -109,24 +106,26 @@
 	</a>
 </div>
 </div>
-<div class="form-group form-inline">
+        <div class="panel-body">
+<div class="form-group">
 			@Html.LabelFor(model => model.MasterEntity.Id, new { @class = "control-label" })
         <div class="form-control">
 			@Html.DisplayFor(model => model.MasterEntity.Id)
         </div>
     </div>
-<div class="form-group form-inline">
+<div class="form-group">
 			@Html.LabelFor(model => model.MasterEntity.EventCode, new { @class = "control-label" })
         <div class="form-control">
 			@Html.DisplayFor(model => model.MasterEntity.EventCode)
         </div>
     </div>
-<div class="form-group form-inline">
+<div class="form-group">
 			@Html.LabelFor(model => model.MasterEntity.Description, new { @class = "control-label" })
         <div class="form-control">
 			@Html.DisplayFor(model => model.MasterEntity.Description)
         </div>
     </div>
+        </div>
 }
 @if (Model.StatusOfMasterEntity != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfMasterEntity != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
 {
@@ -152,7 +151,8 @@
     </div>
 </div>
 <!-- Aside.01.End. MSBuildLogsExtended.BuildEventCode => MasterViewAsideKeyInformation -->
-</aside>
+ </div>
+ </div>
 @section Scripts {
     <script type="text/javascript">
         //http://www.softfinity.com/blog/using-ajax-with-knockout-js-and-asp-net-mvc-4-to-load-select-drop-down-options/
