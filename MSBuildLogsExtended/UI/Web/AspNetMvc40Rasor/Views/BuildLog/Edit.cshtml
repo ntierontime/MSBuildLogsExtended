@@ -66,7 +66,6 @@
 </div>
 @section Scripts {
     <script type="text/javascript">
-        //http://www.softfinity.com/blog/using-ajax-with-knockout-js-and-asp-net-mvc-4-to-load-select-drop-down-options/
         $(document).ready($(function() {
             $('input[name=EventTime]').datepicker({
                 autoclose: true,
@@ -127,14 +126,14 @@
             });
         }));
         function FetchBuild_1() {
-var selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly = $("#Solution_1Id").val();
+var selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly = $("#Item_Solution_1Id").val();
             var url = "/api/BuildApi/GetCollectionOfNameValuePairOfByFKOnly";
             var params = BuildCriteriaForFetchBuild_1(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly);
             if(selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly)
             {
                 $.getJSON(url, params, function (data) {
                     objVM.selectListOfBuildId(data);
-                    objVM.selectedBuildId(@Model.BuildId);
+                    objVM.selectedBuildId(@Model.Item.BuildId);
                 });
             }
         }
@@ -154,10 +153,8 @@ var selectedvalueToCompareIdByFKOnlyOfSolution_1OfByFKOnly = $("#Solution_1Id").
             self.selectListOfBuildId = ko.observableArray([]);
             self.selectedBuildId = ko.observable();
         }
-        $(document).ready($(function() {
-            var objVM = new CascadingDDLViewModel();
-            ko.applyBindings(objVM);
-$("#Solution_1Id").change();
-        }));
+        var objVM = new CascadingDDLViewModel();
+        ko.applyBindings(objVM);
+$("#Item_Solution_1Id").change();
     </script>
 }

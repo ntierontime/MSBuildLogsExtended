@@ -54,7 +54,6 @@
 </div>
 @section Scripts {
     <script type="text/javascript">
-        //http://www.softfinity.com/blog/using-ajax-with-knockout-js-and-asp-net-mvc-4-to-load-select-drop-down-options/
         $(document).ready($(function() {
         }));
         $(document).ready($(function() {
@@ -98,9 +97,7 @@
         function CascadingDDLViewModel() {
             var self = this;
         }
-        $(document).ready($(function() {
-            var objVM = new CascadingDDLViewModel();
-            ko.applyBindings(objVM);
-        }));
+        var objVM = new CascadingDDLViewModel();
+        ko.applyBindings(objVM);
     </script>
 }
