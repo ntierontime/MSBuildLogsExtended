@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -48,6 +48,10 @@
     <Compile Include="MenuTreeItem.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Framework.ViewModels\Framework.ViewModels.csproj">
+      <Project>{2def4f9f-015d-40c4-b153-6c687c308152}</Project>
+      <Name>Framework.ViewModels</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Framework\Framework.csproj">
       <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
       <Name>Framework</Name>

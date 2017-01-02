@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -45,6 +45,10 @@
     <Compile Include="SolutionWorkspaceVM.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.ViewModels\Framework.ViewModels.csproj">
+      <Project>{2def4f9f-015d-40c4-b153-6c687c308152}</Project>
+      <Name>Framework.ViewModels</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Core\CommonBLL\MSBuildLogsExtended.CommonBLL.csproj">
       <Project>{b32a7470-a5e0-459b-831f-f598b09b75c7}</Project>
       <Name>MSBuildLogsExtended.CommonBLL</Name>

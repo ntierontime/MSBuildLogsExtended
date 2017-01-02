@@ -133,6 +133,10 @@
     <Content Include="Views\Solution\WPEntityRelatedOfSolution.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.ViewModels\Framework.ViewModels.csproj">
+      <Project>{2def4f9f-015d-40c4-b153-6c687c308152}</Project>
+      <Name>Framework.ViewModels</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AspNetMvc40ApiController\MSBuildLogsExtended.AspNetMvc40ApiController.csproj">
       <Project>{a895c92c-862c-4be8-8753-f42fcfd19e7c}</Project>
       <Name>MSBuildLogsExtended.AspNetMvc40ApiController</Name>
