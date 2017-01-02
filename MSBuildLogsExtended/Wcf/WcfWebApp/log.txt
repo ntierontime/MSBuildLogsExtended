@@ -1,0 +1,452 @@
+2017-01-02 09:23:17,743 [22] INFO  MSBuildLogsExtended.WcfWebApp.Global [(null)] - Application_Started
+2017-01-02 09:23:54,259 [29] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfEntityOfCommon
+2017-01-02 09:23:54,261 [29] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfEntityOfCommon
+2017-01-02 09:23:57,696 [29] ERROR MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Failed: GetCollectionOfEntityOfCommon
+System.NotSupportedException: The method 'Skip' is only supported for sorted input in LINQ to Entities. The method 'OrderBy' must be called before the method 'Skip'.
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.PassthroughOrderByLifter.Skip(DbExpression k)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SkipTranslator.TranslatePagingOperator(ExpressionConverter parent, DbExpression operand, DbExpression count)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.PagingTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.AggregateTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Count[TSource](IQueryable`1 source)
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._GetCountOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 442
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._ExistsOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 394
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository.GetCollectionOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 640
+2017-01-02 09:23:57,703 [29] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfEntityOfCommon
+2017-01-02 09:23:57,704 [29] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfEntityOfCommon
+2017-01-02 09:24:00,419 [29] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfEntityOfCommon
+2017-01-02 09:24:00,420 [29] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfEntityOfCommon
+2017-01-02 09:24:00,438 [29] ERROR MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Failed: GetCollectionOfEntityOfCommon
+System.NotSupportedException: The method 'Skip' is only supported for sorted input in LINQ to Entities. The method 'OrderBy' must be called before the method 'Skip'.
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.PassthroughOrderByLifter.Skip(DbExpression k)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SkipTranslator.TranslatePagingOperator(ExpressionConverter parent, DbExpression operand, DbExpression count)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.PagingTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.AggregateTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Count[TSource](IQueryable`1 source)
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._GetCountOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 442
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._ExistsOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 394
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository.GetCollectionOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 640
+2017-01-02 09:24:00,439 [29] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfEntityOfCommon
+2017-01-02 09:24:00,439 [29] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfEntityOfCommon
+2017-01-02 09:24:01,213 [21] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfEntityOfCommon
+2017-01-02 09:24:01,214 [21] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfEntityOfCommon
+2017-01-02 09:24:01,232 [21] ERROR MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Failed: GetCollectionOfEntityOfCommon
+System.NotSupportedException: The method 'Skip' is only supported for sorted input in LINQ to Entities. The method 'OrderBy' must be called before the method 'Skip'.
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.PassthroughOrderByLifter.Skip(DbExpression k)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SkipTranslator.TranslatePagingOperator(ExpressionConverter parent, DbExpression operand, DbExpression count)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.PagingTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.AggregateTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Count[TSource](IQueryable`1 source)
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._GetCountOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 442
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._ExistsOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 394
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository.GetCollectionOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 640
+2017-01-02 09:24:01,234 [21] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfEntityOfCommon
+2017-01-02 09:24:01,234 [21] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfEntityOfCommon
+2017-01-02 09:26:03,039 [29] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfEntityOfCommon
+2017-01-02 09:26:03,041 [29] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfEntityOfCommon
+2017-01-02 09:26:03,058 [29] ERROR MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Failed: GetCollectionOfEntityOfCommon
+System.NotSupportedException: The method 'Skip' is only supported for sorted input in LINQ to Entities. The method 'OrderBy' must be called before the method 'Skip'.
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.PassthroughOrderByLifter.Skip(DbExpression k)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SkipTranslator.TranslatePagingOperator(ExpressionConverter parent, DbExpression operand, DbExpression count)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.PagingTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.AggregateTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Count[TSource](IQueryable`1 source)
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._GetCountOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 442
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._ExistsOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 394
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository.GetCollectionOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 640
+2017-01-02 09:26:03,059 [29] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfEntityOfCommon
+2017-01-02 09:26:03,059 [29] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfEntityOfCommon
+2017-01-02 09:27:57,536 [22] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfEntityOfCommon
+2017-01-02 09:27:57,536 [22] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfEntityOfCommon
+2017-01-02 09:27:57,558 [22] ERROR MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Failed: GetCollectionOfEntityOfCommon
+System.NotSupportedException: The method 'Skip' is only supported for sorted input in LINQ to Entities. The method 'OrderBy' must be called before the method 'Skip'.
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.PassthroughOrderByLifter.Skip(DbExpression k)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SkipTranslator.TranslatePagingOperator(ExpressionConverter parent, DbExpression operand, DbExpression count)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.PagingTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.AggregateTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Count[TSource](IQueryable`1 source)
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._GetCountOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 442
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._ExistsOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 394
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository.GetCollectionOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 640
+2017-01-02 09:27:57,559 [22] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfEntityOfCommon
+2017-01-02 09:27:57,559 [22] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfEntityOfCommon
+2017-01-02 09:29:08,354 [21] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfEntityOfCommon
+2017-01-02 09:29:12,527 [21] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfEntityOfCommon
+2017-01-02 09:29:12,544 [21] ERROR MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Failed: GetCollectionOfEntityOfCommon
+System.NotSupportedException: The method 'Skip' is only supported for sorted input in LINQ to Entities. The method 'OrderBy' must be called before the method 'Skip'.
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.PassthroughOrderByLifter.Skip(DbExpression k)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SkipTranslator.TranslatePagingOperator(ExpressionConverter parent, DbExpression operand, DbExpression count)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.PagingTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.AggregateTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Count[TSource](IQueryable`1 source)
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._GetCountOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 442
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._ExistsOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 394
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository.GetCollectionOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 640
+2017-01-02 09:29:12,545 [21] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfEntityOfCommon
+2017-01-02 09:29:25,538 [21] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfEntityOfCommon
+2017-01-02 09:29:33,077 [21] ERROR MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Failed: GetCollectionOfEntityOfCommon
+System.NotSupportedException: The method 'Skip' is only supported for sorted input in LINQ to Entities. The method 'OrderBy' must be called before the method 'Skip'.
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.PassthroughOrderByLifter.Skip(DbExpression k)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SkipTranslator.TranslatePagingOperator(ExpressionConverter parent, DbExpression operand, DbExpression count)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.PagingTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.AggregateTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Count[TSource](IQueryable`1 source)
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._GetCountOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 442
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._ExistsOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 394
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository.GetCollectionOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 640
+2017-01-02 09:29:34,969 [21] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfEntityOfCommon
+2017-01-02 09:29:45,551 [21] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfEntityOfCommon
+2017-01-02 09:29:49,589 [21] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfEntityOfCommon
+2017-01-02 09:44:42,063 [21] ERROR MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Failed: GetCollectionOfEntityOfCommon
+System.NotSupportedException: The method 'Skip' is only supported for sorted input in LINQ to Entities. The method 'OrderBy' must be called before the method 'Skip'.
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.PassthroughOrderByLifter.Skip(DbExpression k)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SkipTranslator.TranslatePagingOperator(ExpressionConverter parent, DbExpression operand, DbExpression count)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.PagingTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.AggregateTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Count[TSource](IQueryable`1 source)
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._GetCountOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 442
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._ExistsOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 394
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository.GetCollectionOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 640
+2017-01-02 09:44:42,064 [21] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfEntityOfCommon
+2017-01-02 09:44:42,064 [21] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfEntityOfCommon
+2017-01-02 09:45:02,490 [22] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-02 09:45:02,492 [22] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-02 09:45:02,576 [22] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-02 09:45:02,577 [22] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-02 09:46:57,617 [29] INFO  MSBuildLogsExtended.CommonBLL.BuildService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfDefaultOfCommon
+2017-01-02 09:46:57,619 [29] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfDefaultOfCommon
+2017-01-02 09:46:57,726 [29] ERROR MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Failed: GetCollectionOfDefaultOfCommon
+Syntax error '{' (at index 0)
+2017-01-02 09:46:57,727 [29] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfDefaultOfCommon
+2017-01-02 09:46:57,727 [29] INFO  MSBuildLogsExtended.CommonBLL.BuildService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:00,388 [29] INFO  MSBuildLogsExtended.CommonBLL.BuildService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:00,388 [29] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:00,402 [29] ERROR MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Failed: GetCollectionOfDefaultOfCommon
+Syntax error '{' (at index 0)
+2017-01-02 09:47:00,403 [29] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:00,403 [29] INFO  MSBuildLogsExtended.CommonBLL.BuildService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:03,371 [29] INFO  MSBuildLogsExtended.CommonBLL.BuildService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:03,371 [29] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:03,388 [29] ERROR MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Failed: GetCollectionOfDefaultOfCommon
+Syntax error '{' (at index 0)
+2017-01-02 09:47:03,388 [29] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:03,388 [29] INFO  MSBuildLogsExtended.CommonBLL.BuildService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:04,013 [78] INFO  MSBuildLogsExtended.CommonBLL.BuildService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:04,013 [78] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:04,029 [78] ERROR MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Failed: GetCollectionOfDefaultOfCommon
+Syntax error '{' (at index 0)
+2017-01-02 09:47:04,029 [78] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:04,029 [78] INFO  MSBuildLogsExtended.CommonBLL.BuildService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:05,443 [78] INFO  MSBuildLogsExtended.CommonBLL.BuildService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:05,444 [78] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:05,459 [78] ERROR MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Failed: GetCollectionOfDefaultOfCommon
+Syntax error '{' (at index 0)
+2017-01-02 09:47:05,460 [78] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:05,460 [78] INFO  MSBuildLogsExtended.CommonBLL.BuildService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:06,602 [78] INFO  MSBuildLogsExtended.CommonBLL.BuildService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:06,602 [78] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:06,617 [78] ERROR MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Failed: GetCollectionOfDefaultOfCommon
+Syntax error '{' (at index 0)
+2017-01-02 09:47:06,618 [78] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:06,618 [78] INFO  MSBuildLogsExtended.CommonBLL.BuildService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:07,828 [78] INFO  MSBuildLogsExtended.CommonBLL.BuildService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:07,828 [78] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:07,843 [78] ERROR MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Failed: GetCollectionOfDefaultOfCommon
+Syntax error '{' (at index 0)
+2017-01-02 09:47:07,844 [78] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfDefaultOfCommon
+2017-01-02 09:47:07,844 [78] INFO  MSBuildLogsExtended.CommonBLL.BuildService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfDefaultOfCommon
+2017-01-02 09:49:59,341 [79] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfEntityOfCommon
+2017-01-02 09:50:00,640 [79] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfEntityOfCommon
+2017-01-02 09:50:00,669 [79] ERROR MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Failed: GetCollectionOfEntityOfCommon
+System.NotSupportedException: The method 'Skip' is only supported for sorted input in LINQ to Entities. The method 'OrderBy' must be called before the method 'Skip'.
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.PassthroughOrderByLifter.Skip(DbExpression k)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.OrderByLifter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Skip(DbExpressionBinding input, DbExpression skipCount)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SkipTranslator.TranslatePagingOperator(ExpressionConverter parent, DbExpression operand, DbExpression count)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.PagingTranslator.TranslateUnary(ExpressionConverter parent, DbExpression operand, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.UnarySequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.AggregateTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Count[TSource](IQueryable`1 source)
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._GetCountOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 442
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository._ExistsOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 394
+   at MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository.GetCollectionOfEntityOfCommon(QuerySystemStringContainsCriteria criteriaOfEventCodeOftOfCommonOfCommonOfCommon, QuerySystemStringContainsCriteria criteriaOfDescriptionOftOfCommonOfCommonOfCommon, Int32 currentIndex, Int32 pageSize, QueryOrderBySettingCollection queryOrderBySettingCollection) in D:\Github\MSBuildLogsExtended\MSBuildLogsExtended\Core\EntityFrameworkDALV6CodeFirst\BuildEventCodeRepository.cs:line 640
+2017-01-02 09:50:00,670 [79] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfEntityOfCommon
+2017-01-02 09:50:00,670 [79] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfEntityOfCommon
+2017-01-02 09:56:24,400 [78] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-02 09:56:24,402 [78] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-02 09:56:24,406 [78] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-02 09:56:24,406 [78] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-02 09:56:30,923 [22] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-02 09:56:30,923 [22] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-02 09:56:30,928 [22] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-02 09:56:30,929 [22] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-02 09:56:30,930 [29] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-02 09:56:30,931 [29] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-02 09:56:30,942 [29] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-02 09:56:30,943 [29] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
