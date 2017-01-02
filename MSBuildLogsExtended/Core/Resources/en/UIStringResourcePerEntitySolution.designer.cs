@@ -248,6 +248,16 @@ namespace MSBuildLogsExtended.Resources {
 
 
         /// <summary>
+        ///   Looks up a localized string similar to "The length of ExternalParentId should be 0 to 100"".
+        /// </summary>
+        public static string The_length_of_ExternalParentId_should_be_0_to_100 {
+            get {
+                return resourceLoader.GetString("The_length_of_ExternalParentId_should_be_0_to_100");
+            }
+        }
+
+
+        /// <summary>
         ///   Looks up a localized string similar to "Name"".
         /// </summary>
         public static string NameDescription {
@@ -318,6 +328,16 @@ namespace MSBuildLogsExtended.Resources {
 
 
         /// <summary>
+        ///   Looks up a localized string similar to "The length of Name should be 0 to 100"".
+        /// </summary>
+        public static string The_length_of_Name_should_be_0_to_100 {
+            get {
+                return resourceLoader.GetString("The_length_of_Name_should_be_0_to_100");
+            }
+        }
+
+
+        /// <summary>
         ///   Looks up a localized string similar to "Description"".
         /// </summary>
         public static string DescriptionDescription {
@@ -373,6 +393,16 @@ namespace MSBuildLogsExtended.Resources {
         public static string DescriptionValueValidationExpression {
             get {
                 return resourceLoader.GetString("DescriptionValueValidationExpression");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "The length of Description should be 0 to 1500"".
+        /// </summary>
+        public static string The_length_of_Description_should_be_0_to_1500 {
+            get {
+                return resourceLoader.GetString("The_length_of_Description_should_be_0_to_1500");
             }
         }
 

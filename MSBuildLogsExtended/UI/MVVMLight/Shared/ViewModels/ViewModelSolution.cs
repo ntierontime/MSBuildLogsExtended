@@ -25,7 +25,7 @@ namespace MSBuildLogsExtended.ViewModels
     /// </para>
     /// </summary>
     public class WPCommonOfSolutionVM
-		: Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntitySolutionCommon, MSBuildLogsExtended.DataSourceEntities.SolutionCollection, MSBuildLogsExtended.DataSourceEntities.Solution>
+		: Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildLogsExtended.CommonBLLEntities.SolutionChainedQueryCriteriaCommon, MSBuildLogsExtended.DataSourceEntities.SolutionCollection, MSBuildLogsExtended.DataSourceEntities.Solution>
     {
         #region fields and properties
 
@@ -151,7 +151,7 @@ namespace MSBuildLogsExtended.ViewModels
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 
-            MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynSolution _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceSolution();
+            MSBuildLogsExtended.WcfContracts.ISolutionServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceSolution();
 
             AsyncCallback asyncCallback = delegate(IAsyncResult result)
             {
@@ -183,7 +183,7 @@ namespace MSBuildLogsExtended.ViewModels
                 AssignSelectedValueFromSelectedItemToEntity(this.m_CurrentInEditing);
 #endif
 
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInSolution _Request = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInSolution()
+                MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageBuiltIn _Request = new MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageBuiltIn()
 				{
 					Critieria = new MSBuildLogsExtended.DataSourceEntities.SolutionCollection(),
 					BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
@@ -202,7 +202,7 @@ namespace MSBuildLogsExtended.ViewModels
             #region Syncronized wcf method call -- not in use/WPF only
 
             /*
-            MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticSolution.UpdateEntity(this.m_Current);
+            MSBuildLogsExtended.CommonBLLIoC.IoCSolution.UpdateEntity(this.m_Current);
 			*/
 
             #endregion Syncronized wcf method call -- not in use/WPF only
@@ -236,7 +236,7 @@ namespace MSBuildLogsExtended.ViewModels
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 			            
-			MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynSolution _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceSolution();
+			MSBuildLogsExtended.WcfContracts.ISolutionServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceSolution();
 
             AsyncCallback asyncCallback = delegate(IAsyncResult result)
             {
@@ -271,7 +271,7 @@ namespace MSBuildLogsExtended.ViewModels
                 AssignSelectedValueFromSelectedItemToEntity(this.m_NewItem);
 #endif
 
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInSolution _Request = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInSolution()
+                MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageBuiltIn _Request = new MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageBuiltIn()
 				{
 					Critieria = new MSBuildLogsExtended.DataSourceEntities.SolutionCollection(),
 					BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
@@ -292,7 +292,7 @@ namespace MSBuildLogsExtended.ViewModels
             /*
             MSBuildLogsExtended.DataSourceEntities.Solution _NewItem = new MSBuildLogsExtended.DataSourceEntities.Solution();
             this.m_EntityCollection.Add(_NewItem);
-            MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticSolution.InsertEntity(_NewItemDefault);
+            MSBuildLogsExtended.CommonBLLIoC.IoCSolution.InsertEntity(_NewItemDefault);
 			*/
 
             #endregion Syncronized wcf method call -- not in use/WPF only
@@ -314,7 +314,7 @@ namespace MSBuildLogsExtended.ViewModels
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 
-			MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynSolution _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceSolution();
+			MSBuildLogsExtended.WcfContracts.ISolutionServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceSolution();
 
             AsyncCallback asyncCallback = delegate(IAsyncResult result)
             {
@@ -347,7 +347,7 @@ namespace MSBuildLogsExtended.ViewModels
                 AssignSelectedValueFromSelectedItemToEntity(this.m_CurrentInEditing);
 #endif
 
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInSolution _Request = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInSolution()
+                MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageBuiltIn _Request = new MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageBuiltIn()
 				{
 		            Critieria = new MSBuildLogsExtended.DataSourceEntities.SolutionCollection(),
 					BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
@@ -366,7 +366,7 @@ namespace MSBuildLogsExtended.ViewModels
             #region Syncronized wcf method call -- not in use/WPF only
 
             /*
-            MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticSolution.DeleteEntity(this.m_Current);//
+            MSBuildLogsExtended.CommonBLLIoC.IoCSolution.DeleteEntity(this.m_Current);//
             this.m_EntityCollection.Remove(this.m_Current);
 			*/
 
@@ -411,7 +411,7 @@ namespace MSBuildLogsExtended.ViewModels
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 
-            MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynSolution _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceSolution();
+            MSBuildLogsExtended.WcfContracts.ISolutionServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceSolution();
 
             AsyncCallback asyncCallback = delegate(IAsyncResult result)
             {
@@ -475,7 +475,7 @@ namespace MSBuildLogsExtended.ViewModels
             try
             {
 
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedSolutionOfCommon _Request = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedSolutionOfCommon()
+                MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageUserDefinedOfCommon _Request = new MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageUserDefinedOfCommon()
 				{
 					Critieria = this.Criteria,
 					QueryPagingSetting = this.QueryPagingSetting,
@@ -503,7 +503,7 @@ namespace MSBuildLogsExtended.ViewModels
 
             this.m_EntityCollection.Clear();
 
-            MSBuildLogsExtended.DataSourceEntities.SolutionCollection collection = MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticSolution.GetCollectionOfEntityOfCommon(m_CriteriaOfGetCollectionOfEntityOfCommon, this.m_QueryPagingSetting, this.m_QueryOrderBySettingCollection);
+            MSBuildLogsExtended.DataSourceEntities.SolutionCollection collection = MSBuildLogsExtended.CommonBLLIoC.IoCSolution.GetCollectionOfEntityOfCommon(m_CriteriaOfGetCollectionOfEntityOfCommon, this.m_QueryPagingSetting, this.m_QueryOrderBySettingCollection);
             if(collection != null)
             {
                 foreach (MSBuildLogsExtended.DataSourceEntities.Solution item in collection)

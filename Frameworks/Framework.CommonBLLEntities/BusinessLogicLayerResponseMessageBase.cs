@@ -84,6 +84,16 @@ namespace Framework.CommonBLLEntities
         {
             return Framework.Resources.UIStringResource.ResourceManager.GetString(this.BusinessLogicLayerResponseStatus.ToString());
         }
+
+        public override string ToString()
+        {
+            return string.Format("ResponseStatus:{0};PagingResult:{1}"
+                , this.BusinessLogicLayerResponseStatus
+                , this.QueryPagingResult != null ? this.QueryPagingResult.ToString() : ""
+                , this.BusinessLogicLayerRequestID
+                , this.BusinessLogicLayerResponseID
+                , typeof(TResponse));
+        }
     }
 
     /// <summary>

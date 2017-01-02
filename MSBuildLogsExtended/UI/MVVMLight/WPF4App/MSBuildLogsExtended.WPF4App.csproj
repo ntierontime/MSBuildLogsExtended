@@ -1,23 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{43F11204-746F-4317-A761-69CDBAA5F9A4}</ProjectGuid>
+    <ProjectGuid>{5BCAE2FB-5C8C-4538-9BA9-CC643082583B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.WPF4App</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.WPF4App</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
-    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\..\</SolutionDir>
-    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -372,20 +370,18 @@
     <Compile Include="UserControls\UCCommonOfSolution.xaml.cs">
       <DependentUpon>UCCommonOfSolution.xaml</DependentUpon>
     </Compile>
-    <Content Include="Maps\map.2.D.2.vsd" />
-    <Content Include="Maps\map.2.D.2.vsd.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Core\DataSourceEntities\MSBuildLogsExtended.DataSourceEntities.csproj">
-      <Project>{806a9ab2-2edd-42d2-a3ca-a2acba0cedd7}</Project>
-      <Name>MSBuildLogsExtended.DataSourceEntities</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\Core\CommonBLLEntities\MSBuildLogsExtended.CommonBLLEntities.csproj">
-      <Project>{de7d8090-bff6-4641-9720-7f44afed1832}</Project>
+      <Project>{f201379d-034b-4892-9aec-927a3d67d260}</Project>
       <Name>MSBuildLogsExtended.CommonBLLEntities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\DataSourceEntities\MSBuildLogsExtended.DataSourceEntities.csproj">
+      <Project>{37102465-556b-49e7-8ca2-a7814e45de36}</Project>
+      <Name>MSBuildLogsExtended.DataSourceEntities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Core\EntityContracts\MSBuildLogsExtended.EntityContracts.csproj">
-      <Project>{d090796d-578a-4c52-b489-3e688ddd5206}</Project>
+      <Project>{a9940920-207f-471d-8164-13d5a4b518ba}</Project>
       <Name>MSBuildLogsExtended.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks\Framework\Framework.csproj">
@@ -417,66 +413,27 @@
       <Name>Framework.Xaml</Name>
     </ProjectReference>
     <ProjectReference Include="..\Shared\ViewModels\MSBuildLogsExtended.ViewModels.csproj">
-      <Project>{e179e71c-55f6-468c-bdf1-9a62cfdb39a9}</Project>
+      <Project>{f9f6afdd-cbc4-42c9-ad50-f3d721c11058}</Project>
       <Name>MSBuildLogsExtended.ViewModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\Resources\MSBuildLogsExtended.Resources.csproj">
-      <Project>{4072ddfc-04fb-4b21-b602-00678070187a}</Project>
+      <Project>{ada3b560-c0b9-42d0-92ff-a76462e8d524}</Project>
       <Name>MSBuildLogsExtended.Resources</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Wcf\WcfClientBLL\MSBuildLogsExtended.WcfClientBLL.csproj">
-      <Project>{eab3bd98-6149-4d2e-a71d-f9aa5a3946ae}</Project>
+      <Project>{794ea58e-d8ee-422c-b6fb-d9965e175aa3}</Project>
       <Name>MSBuildLogsExtended.WcfClientBLL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\WcfContracts\MSBuildLogsExtended.WcfContracts.csproj">
-      <Project>{9eb722de-3c2a-43ca-ab84-e2db1f814ea5}</Project>
+      <Project>{23bf8e7c-df8c-43f2-9153-53de5ee23c86}</Project>
       <Name>MSBuildLogsExtended.WcfContracts</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="WindowsBase" />
-    <Reference Include="PresentationCore" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="GalaSoft.MvvmLight, Version=4.4.32.39728, Culture=neutral, PublicKeyToken=eabbf6a5f5af5004, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\MvvmLightLibs.4.4.32.7\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="GalaSoft.MvvmLight.Extras, Version=4.4.32.39728, Culture=neutral, PublicKeyToken=0e27b6f8be9b2ef7, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\MvvmLightLibs.4.4.32.7\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>..\..\..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject">
-      <HintPath>..\..\..\..\packages\Ninject.3.0.1.10\lib\sl5\Ninject.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\MvvmLightLibs.4.4.32.7\lib\net45\System.Windows.Interactivity.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-  </Target>
   <!--
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

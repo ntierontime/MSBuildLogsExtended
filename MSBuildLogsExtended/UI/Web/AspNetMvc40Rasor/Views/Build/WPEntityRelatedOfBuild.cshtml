@@ -1,145 +1,236 @@
+@using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.UrlStrings;
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Linq.Expressions;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
 @using Framework.Mvc;
+@using PagedList.Mvc;
 @model MSBuildLogsExtended.AspNetMvc40ViewModel.WPEntityRelatedOfBuildVM
 @{
-    ViewBag.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Build;
     RouteValueDictionary queryStringDictionary = new RouteValueDictionary(Request.QueryString.AllKeys.ToDictionary(key => key, key => (object)Request.QueryString[key]));
 }
-@section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h2>@ViewBag.Title.</h2>
-                <h4>@ViewBag.Message</h4>
-            </hgroup>
-        </div>
-    </section>
-}
-<article>
-<div class="default">
-<div><h4>@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog, "WPCommonOfBuildLog", "BuildLog")</h4></div>
-<div>
-<table id="MasterDataControl0" name="MasterDataControl0" >
-<tr><th class="sorting"></th>
-<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Build_B1_1_Name</th>
-<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Solution_S1_1_Name</th>
-<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildEventCode_B2_1_Name</th>
-<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Message</th>
-<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.EventTime</th>
-<th class="sorting"></th></tr>
+ <div class="row">
+ <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 nopadding">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                <h3 style="display: inline;">@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog, "WPCommonOfBuildLog", "BuildLog")
+            </div>
+            <div class="table-responsive">
+<table id="MasterDataControl0" name="MasterDataControl0" class="table table-hover table-bordered table-striped">
+<thead>
+ <tr><th  class="hidden-xs visible-sm"></th>
+<th >@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Build_1_Name</th>
+<th >@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Solution_1_Name</th>
+<th >@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name</th>
+<th  class="hidden-xs visible-smvisible-md visible-lg">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.Message</th>
+<th  class="hidden-xs hidden-sm visible-md visible-lg">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.EventTime</th>
+<th  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"></th></tr>
+</thead>
+<tbody>
     @if (Model != null && Model.StatusOfFK_BuildLog_Build == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
     {
 		int index = 0;
         foreach (var item in Model.FK_BuildLog_Build)
         {
 			index++;
-<tr><td ></td>
-<td >@Html.ActionLink(item.Build_B1_1_Name, "WPEntityRelatedOfBuild", "Build", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildId }, null)</td>
-<td >@Html.ActionLink(item.Solution_S1_1_Name, "WPEntityRelatedOfSolution", "Solution", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Solution_S1_1Id }, null)</td>
-<td >@Html.ActionLink(item.BuildEventCode_B2_1_Name, "WPEntityRelatedOfBuildEventCode", "BuildEventCode", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildEventCodeId }, null)</td>
+<tr><td  class="hidden-xs visible-sm"></td>
+<td >@Html.ActionLink(item.Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildId }, null)</td>
+<td >@Html.ActionLink(item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Solution_1Id }, null)</td>
+<td >@Html.ActionLink(item.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.BuildEventCodeId }, null)</td>
 <td >@Html.DisplayFor(modelItem => item.Message)</td>
 <td >@Html.DisplayFor(modelItem => item.EventTime)</td>
-<td ><div class="contextMenu-buttonContainer">
-<input onclick="location.href='@Url.Action("WPEntityRelatedOfBuildLog", "BuildLog", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" class="button button-Details" type="button" name="DetailsToolBarRightInList" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
-<input onclick="location.href='@Url.Action("Edit", "BuildLog", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" class="button button-Edit" type="button" name="EditToolBarRightInList" value="@Framework.Resources.UIStringResource.EditAlternativeText" />
+<td  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+		<span class="glyphicon glyphicon-briefcase"></span>
+	</a>
+</div>
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, UrlStringsAlias.ControllerName_BuildLog, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resources.UIStringResource.EditAlternativeText">
+        <span class="glyphicon glyphicon-edit"></span>
+    </a>
+</div>
 </div></td></tr>
         }
     }
     else
     {
-<tr><td colspan="50" ><div class="error-label">@Model.StatusMessageOfFK_BuildLog_Build</div></td></tr>
+<tr><td colspan="50" ><div class="text-danger">@Model.StatusMessageOfFK_BuildLog_Build</div>
+</td></tr>
     }
+</tbody>
 </table>
-</div>
-</div>
-</article>
-<aside>
-<label class="no-toggle-box">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Build</label>
-<div class="default">
+            </div>
+            <div class="pull-right">
+            </div>
+        </div>
+ </div>
+ <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+<!-- Aside.01.Start. MSBuildLogsExtended.Build => MasterViewAsideKeyInformation -->
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 style="display: inline;">
+                @MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Build
+            </h3>
+		</div>
 @if (Model.StatusOfMasterEntity == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
 { // Item
-<div class="aside-buttonContainer">
-<input onclick="location.href='@Url.Action("Edit", "Build", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })'" class="aside-button aside-button-Edit" type="button" name="EditToolBarUp" value="@Framework.Resources.UIStringResource.EditAlternativeText" />
-<input onclick="location.href='@Url.Action("AddNew", "Build")'" class="aside-button aside-button-AddNew" type="button" name="AddNewToolBarUp" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
-<input onclick="location.href='@Url.Action("Copy", "Build", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })'" class="aside-button aside-button-Copy" type="button" name="CopyToolBarUp" value="@Framework.Resources.UIStringResource.CopyAlternativeText" />
-<input onclick="location.href='@Url.Action("Details", "Build", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
-<input onclick="location.href='@Url.Action("Index", "Build")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Edit, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarUp" title="@Framework.Resources.UIStringResource.EditAlternativeText">
+        <span class="glyphicon glyphicon-edit"></span>
+    </a>
 </div>
-<div class="aside-display-label">
-			@Html.LabelFor(model => model.MasterEntity.Solution_S1_1_Name)
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_AddNew, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resources.UIStringResource.AddNewAlternativeText">
+		<span class="glyphicon glyphicon-plus"></span>
+	</a>
+</div>
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Copy, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="CopyToolBarUp" title="@Framework.Resources.UIStringResource.CopyAlternativeText">
+        <span class="glyphicon glyphicon-copy"></span>
+    </a>
+</div>
+<div class="btn-group">
+	<a href="location.href='@Url.Action(UrlStringsAlias.ActionName_Build_WPUpdateNameOnlyOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })'" class="btn btn-default" role="button" type="button" name="EntityUpdateActionsUpdateNameOnly" title="@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.UpdateNameOnly_ButtonText">
+		<span class="glyphicon glyphicon-random"></span>
+	</a>
+</div>
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Details, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="DetailsToolBarUp" title="@Framework.Resources.UIStringResource.DetailsAlternativeText">
+        <span class="glyphicon glyphicon-file"></span>
+    </a>
+</div>
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_Index, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
+		<span class="glyphicon glyphicon-search"></span>
+	</a>
+</div>
+</div>
+        <div class="panel-body">
+<div class="form-group">
+			@Html.LabelFor(model => model.MasterEntity.Solution_1_Name, new { @class = "control-label" })
+        <div class="form-control">
+@Html.ActionLink(Model.MasterEntity.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.SolutionId }, null)
         </div>
-        <div class="aside-display-field">
-@Html.ActionLink(Model.MasterEntity.Solution_S1_1_Name, "WPEntityRelatedOfSolution", "Solution", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.SolutionId }, null)
-        </div>
-<div class="aside-display-label">
-			@Html.LabelFor(model => model.MasterEntity.Id)
-        </div>
-        <div class="aside-display-field">
+    </div>
+<div class="form-group">
+			@Html.LabelFor(model => model.MasterEntity.Id, new { @class = "control-label" })
+        <div class="form-control">
 			@Html.DisplayFor(model => model.MasterEntity.Id)
         </div>
-<div class="aside-display-label">
-			@Html.LabelFor(model => model.MasterEntity.Name)
-        </div>
-        <div class="aside-display-field">
+    </div>
+<div class="form-group">
+			@Html.LabelFor(model => model.MasterEntity.Name, new { @class = "control-label" })
+        <div class="form-control">
 			@Html.DisplayFor(model => model.MasterEntity.Name)
         </div>
-<div class="aside-display-label">
-			@Html.LabelFor(model => model.MasterEntity.Description)
-        </div>
-        <div class="aside-display-field">
+    </div>
+<div class="form-group">
+			@Html.LabelFor(model => model.MasterEntity.Description, new { @class = "control-label" })
+        <div class="form-control">
 			@Html.DisplayFor(model => model.MasterEntity.Description)
         </div>
-<div class="aside-display-label">
-			@Html.LabelFor(model => model.MasterEntity.BuildStartTime)
-        </div>
-        <div class="aside-display-field">
+    </div>
+<div class="form-group">
+			@Html.LabelFor(model => model.MasterEntity.BuildStartTime, new { @class = "control-label" })
+        <div class="form-control">
 			@Html.DisplayFor(model => model.MasterEntity.BuildStartTime)
         </div>
+    </div>
 @Html.HiddenFor(model => model.MasterEntity.SolutionId)
+        </div>
 }
 @if (Model.StatusOfMasterEntity != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfMasterEntity != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
 {
-<div class="aside-buttonContainer">
-<input onclick="location.href='@Url.Action("AddNew", "Build")'" class="aside-button aside-button-AddNew" type="button" name="AddNewToolBarUp" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
-<input onclick="location.href='@Url.Action("WPEntityRelatedOfBuild", "Build", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
-<input onclick="location.href='@Url.Action("Index", "Build")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_AddNew, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resources.UIStringResource.AddNewAlternativeText">
+		<span class="glyphicon glyphicon-plus"></span>
+	</a>
 </div>
-<div class="error-label">@Model.StatusMessageOfMasterEntity</div>
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.MasterEntity.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+		<span class="glyphicon glyphicon-briefcase"></span>
+	</a>
+</div>
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_Index, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
+		<span class="glyphicon glyphicon-search"></span>
+	</a>
+</div>
+</div>
+<div class="text-danger">@Model.StatusMessageOfMasterEntity</div>
 }
+    </div>
 </div>
-<input class="toggle-box" id="header1" type="checkbox" />
-<label for="header1">@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Solution</label>
-<div class="default">
-@if (Model.StatusOfSolution_S1_1 == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+<!-- Aside.01.End. MSBuildLogsExtended.Build => MasterViewAsideKeyInformation -->
+<!-- Aside.11.Start. MSBuildLogsExtended.Solution => RelatedEntityWhenMasterViewIsFKEntity -->
+<div class="panel-group">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 style="display: inline;">
+                <a data-toggle="collapse" href="#collapseSolution_1">@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Solution</a>
+            </h3>
+        </div>
+        <div id="collapseSolution_1" class="panel-collapse collapse">
+@if (Model.StatusOfSolution_1 == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
 { // Item
-<div class="aside-buttonContainer">
-<input onclick="location.href='@Url.Action("Index", "Solution")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
-<input onclick="location.href='@Url.Action("WPEntityRelatedOfSolution", "Solution", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_S1_1.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Index, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
+		<span class="glyphicon glyphicon-search"></span>
+	</a>
 </div>
-<div class="aside-display-label">
-			@Html.LabelFor(model => model.Solution_S1_1.Id)
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+		<span class="glyphicon glyphicon-briefcase"></span>
+	</a>
+</div>
+</div>
+        <div class="panel-body">
+<div class="form-group">
+			@Html.LabelFor(model => model.Solution_1.Id, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.Solution_1.Id)
         </div>
-        <div class="aside-display-field">
-			@Html.DisplayFor(model => model.Solution_S1_1.Id)
+    </div>
+<div class="form-group">
+			@Html.LabelFor(model => model.Solution_1.Name, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.Solution_1.Name)
+        </div>
+    </div>
         </div>
 }
-@if (Model.StatusOfSolution_S1_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfSolution_S1_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
+@if (Model.StatusOfSolution_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady && Model.StatusOfSolution_1 != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
 {
-<div class="aside-buttonContainer">
-<input onclick="location.href='@Url.Action("Index", "Solution")'" class="aside-button aside-button-GotoSearch" type="button" name="GotoSearchToolBarUp" value="@Framework.Resources.UIStringResource.GotoSearchAlternativeText" />
-<input onclick="location.href='@Url.Action("WPEntityRelatedOfSolution", "Solution", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_S1_1.Id })'" class="aside-button aside-button-Details" type="button" name="DetailsToolBarUp" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Index, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="GotoSearchToolBarUp" title="@Framework.Resources.UIStringResource.GotoSearchAlternativeText">
+		<span class="glyphicon glyphicon-search"></span>
+	</a>
 </div>
-<div class="error-label">@Model.StatusMessageOfSolution_S1_1</div>
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Solution_1.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarUp" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+		<span class="glyphicon glyphicon-briefcase"></span>
+	</a>
+</div>
+</div>
+<div class="text-danger">@Model.StatusMessageOfSolution_1</div>
 }
+        </div>
+    </div>
 </div>
-</aside>
+<!-- Aside.11.End. MSBuildLogsExtended.Solution => RelatedEntityWhenMasterViewIsFKEntity -->
+ </div>
+ </div>
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryui")
-    @Scripts.Render("~/bundles/jqueryval")
-    @Scripts.Render("~/bundles/knockout")
-    @Scripts.Render("~/bundles/dataTables")
-    @Scripts.Render("~/bundles/bootstrap")
     <script type="text/javascript">
-        //http://www.softfinity.com/blog/using-ajax-with-knockout-js-and-asp-net-mvc-4-to-load-select-drop-down-options/
         $(document).ready($(function() {
         }));
         $(document).ready($(function() {
@@ -183,9 +274,7 @@
         function CascadingDDLViewModel() {
             var self = this;
         }
-        $(document).ready($(function() {
-            var objVM = new CascadingDDLViewModel();
-            ko.applyBindings(objVM);
-        }));
+        var objVM = new CascadingDDLViewModel();
+        ko.applyBindings(objVM);
     </script>
 }

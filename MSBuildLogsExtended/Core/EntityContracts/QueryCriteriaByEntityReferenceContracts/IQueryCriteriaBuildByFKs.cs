@@ -8,7 +8,7 @@ namespace MSBuildLogsExtended.EntityContracts
     /// <summary>
     /// Interaction logic for IQueryCriteriaBuildByFKs
     /// </summary>
-	public interface IQueryCriteriaBuildByFKs
+	public partial interface IQueryCriteriaBuildByFKs
 	{
 
         		bool IsToCompareSolutionId { get; set; }

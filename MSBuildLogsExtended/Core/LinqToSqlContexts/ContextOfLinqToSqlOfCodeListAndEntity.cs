@@ -47,7 +47,7 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 		#region tables
 
 
-		public System.Data.Linq.Table<Build> Build
+		public System.Data.Linq.Table<Build> Builds
 		{
 			get
 			{
@@ -57,7 +57,7 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 
 
 
-		public System.Data.Linq.Table<BuildEventCode> BuildEventCode
+		public System.Data.Linq.Table<BuildEventCode> BuildEventCodes
 		{
 			get
 			{
@@ -67,7 +67,7 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 
 
 
-		public System.Data.Linq.Table<BuildLog> BuildLog
+		public System.Data.Linq.Table<BuildLog> BuildLogs
 		{
 			get
 			{
@@ -77,7 +77,7 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 
 
 
-		public System.Data.Linq.Table<Solution> Solution
+		public System.Data.Linq.Table<Solution> Solutions
 		{
 			get
 			{
@@ -128,7 +128,7 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 		#endregion Extensibility Method Definitions
 
 	}
-#region Type of dbo.Build, the Member is Build, the type is Build
+#region Type of dbo.Build, the Member is Builds, the type is Build
 
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Build")]
 	public partial class Build : INotifyPropertyChanging, INotifyPropertyChanged
@@ -151,7 +151,7 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 			#region initialize fields for Association, not a FK
 
 
-			this._BuildLog = new EntitySet<BuildLog>(new Action<BuildLog>(this.attach_BuildLog), new Action<BuildLog>(this.detach_BuildLog));
+			this._BuildLogs = new EntitySet<BuildLog>(new Action<BuildLog>(this.attach_BuildLogs), new Action<BuildLog>(this.detach_BuildLogs));
 
 
 
@@ -193,13 +193,13 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 
 
 
-		private void attach_BuildLog(BuildLog entity)
+		private void attach_BuildLogs(BuildLog entity)
 		{
 			this.SendPropertyChanging();
 			entity.Build = this;
 		}
 		
-		private void detach_BuildLog(BuildLog entity)
+		private void detach_BuildLogs(BuildLog entity)
 		{
 			this.SendPropertyChanging();
 			entity.Build = null;
@@ -243,7 +243,7 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 		#region fields, storage for Association, not a FK
 
 
-		private EntitySet<BuildLog> _BuildLog;
+		private EntitySet<BuildLog> _BuildLogs;
 
 
 
@@ -388,12 +388,12 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 					if ((previousValue != null))
 					{
 						this._Solution.Entity = null;
-						previousValue.Build.Remove(this);
+						previousValue.Builds.Remove(this);
 					}
 					this._Solution.Entity = value;
 					if ((value != null))
 					{
-						value.Build.Add(this);
+						value.Builds.Add(this);
 						this._SolutionId = value.Id;
 					}
 					else
@@ -413,16 +413,16 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 		#region Properties for Association, not a FK
 
 
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_BuildLog_Build", Storage="_BuildLog", ThisKey="Id", OtherKey="BuildId")]
-		public EntitySet<BuildLog> BuildLog
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_BuildLog_Build", Storage="_BuildLogs", ThisKey="Id", OtherKey="BuildId")]
+		public EntitySet<BuildLog> BuildLogs
 		{
 			get
 			{
-				return this._BuildLog;
+				return this._BuildLogs;
 			}
 			set
 			{
-				this._BuildLog.Assign(value);
+				this._BuildLogs.Assign(value);
 			}
 		}
 
@@ -459,8 +459,8 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 		#endregion Extensibility Method Definitions
 	}
 
-	#endregion Type of dbo.Build, the Member is Build, the type is Build
-	#region Type of dbo.BuildEventCode, the Member is BuildEventCode, the type is BuildEventCode
+	#endregion Type of dbo.Build, the Member is Builds, the type is Build
+	#region Type of dbo.BuildEventCode, the Member is BuildEventCodes, the type is BuildEventCode
 
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BuildEventCode")]
 	public partial class BuildEventCode : INotifyPropertyChanging, INotifyPropertyChanged
@@ -480,7 +480,7 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 			#region initialize fields for Association, not a FK
 
 
-			this._BuildLog = new EntitySet<BuildLog>(new Action<BuildLog>(this.attach_BuildLog), new Action<BuildLog>(this.detach_BuildLog));
+			this._BuildLogs = new EntitySet<BuildLog>(new Action<BuildLog>(this.attach_BuildLogs), new Action<BuildLog>(this.detach_BuildLogs));
 
 
 
@@ -522,13 +522,13 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 
 
 
-		private void attach_BuildLog(BuildLog entity)
+		private void attach_BuildLogs(BuildLog entity)
 		{
 			this.SendPropertyChanging();
 			entity.BuildEventCode = this;
 		}
 		
-		private void detach_BuildLog(BuildLog entity)
+		private void detach_BuildLogs(BuildLog entity)
 		{
 			this.SendPropertyChanging();
 			entity.BuildEventCode = null;
@@ -563,7 +563,7 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 		#region fields, storage for Association, not a FK
 
 
-		private EntitySet<BuildLog> _BuildLog;
+		private EntitySet<BuildLog> _BuildLogs;
 
 
 
@@ -651,16 +651,16 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 		#region Properties for Association, not a FK
 
 
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_BuildLog_BuildEventCode", Storage="_BuildLog", ThisKey="Id", OtherKey="BuildEventCodeId")]
-		public EntitySet<BuildLog> BuildLog
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_BuildLog_BuildEventCode", Storage="_BuildLogs", ThisKey="Id", OtherKey="BuildEventCodeId")]
+		public EntitySet<BuildLog> BuildLogs
 		{
 			get
 			{
-				return this._BuildLog;
+				return this._BuildLogs;
 			}
 			set
 			{
-				this._BuildLog.Assign(value);
+				this._BuildLogs.Assign(value);
 			}
 		}
 
@@ -689,8 +689,8 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 		#endregion Extensibility Method Definitions
 	}
 
-	#endregion Type of dbo.BuildEventCode, the Member is BuildEventCode, the type is BuildEventCode
-	#region Type of dbo.BuildLog, the Member is BuildLog, the type is BuildLog
+	#endregion Type of dbo.BuildEventCode, the Member is BuildEventCodes, the type is BuildEventCode
+	#region Type of dbo.BuildLog, the Member is BuildLogs, the type is BuildLog
 
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BuildLog")]
 	public partial class BuildLog : INotifyPropertyChanging, INotifyPropertyChanged
@@ -939,12 +939,12 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 					if ((previousValue != null))
 					{
 						this._Build.Entity = null;
-						previousValue.BuildLog.Remove(this);
+						previousValue.BuildLogs.Remove(this);
 					}
 					this._Build.Entity = value;
 					if ((value != null))
 					{
-						value.BuildLog.Add(this);
+						value.BuildLogs.Add(this);
 						this._BuildId = value.Id;
 					}
 					else
@@ -974,12 +974,12 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 					if ((previousValue != null))
 					{
 						this._BuildEventCode.Entity = null;
-						previousValue.BuildLog.Remove(this);
+						previousValue.BuildLogs.Remove(this);
 					}
 					this._BuildEventCode.Entity = value;
 					if ((value != null))
 					{
-						value.BuildLog.Add(this);
+						value.BuildLogs.Add(this);
 						this._BuildEventCodeId = value.Id;
 					}
 					else
@@ -1031,8 +1031,8 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 		#endregion Extensibility Method Definitions
 	}
 
-	#endregion Type of dbo.BuildLog, the Member is BuildLog, the type is BuildLog
-	#region Type of dbo.Solution, the Member is Solution, the type is Solution
+	#endregion Type of dbo.BuildLog, the Member is BuildLogs, the type is BuildLog
+	#region Type of dbo.Solution, the Member is Solutions, the type is Solution
 
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Solution")]
 	public partial class Solution : INotifyPropertyChanging, INotifyPropertyChanged
@@ -1052,7 +1052,7 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 			#region initialize fields for Association, not a FK
 
 
-			this._Build = new EntitySet<Build>(new Action<Build>(this.attach_Build), new Action<Build>(this.detach_Build));
+			this._Builds = new EntitySet<Build>(new Action<Build>(this.attach_Builds), new Action<Build>(this.detach_Builds));
 
 
 
@@ -1094,13 +1094,13 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 
 
 
-		private void attach_Build(Build entity)
+		private void attach_Builds(Build entity)
 		{
 			this.SendPropertyChanging();
 			entity.Solution = this;
 		}
 		
-		private void detach_Build(Build entity)
+		private void detach_Builds(Build entity)
 		{
 			this.SendPropertyChanging();
 			entity.Solution = null;
@@ -1138,7 +1138,7 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 		#region fields, storage for Association, not a FK
 
 
-		private EntitySet<Build> _Build;
+		private EntitySet<Build> _Builds;
 
 
 
@@ -1248,16 +1248,16 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 		#region Properties for Association, not a FK
 
 
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_Build_Solution", Storage="_Build", ThisKey="Id", OtherKey="SolutionId")]
-		public EntitySet<Build> Build
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FK_Build_Solution", Storage="_Builds", ThisKey="Id", OtherKey="SolutionId")]
+		public EntitySet<Build> Builds
 		{
 			get
 			{
-				return this._Build;
+				return this._Builds;
 			}
 			set
 			{
-				this._Build.Assign(value);
+				this._Builds.Assign(value);
 			}
 		}
 
@@ -1290,7 +1290,7 @@ namespace MSBuildLogsExtended.LinqToSqlContexts
 		#endregion Extensibility Method Definitions
 	}
 
-	#endregion Type of dbo.Solution, the Member is Solution, the type is Solution
+	#endregion Type of dbo.Solution, the Member is Solutions, the type is Solution
 
 
 

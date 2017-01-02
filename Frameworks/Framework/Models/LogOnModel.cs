@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 
 namespace Framework
@@ -28,3 +29,5 @@ namespace Framework
         public bool RememberMe { get; set; }
     }
 }
+
+

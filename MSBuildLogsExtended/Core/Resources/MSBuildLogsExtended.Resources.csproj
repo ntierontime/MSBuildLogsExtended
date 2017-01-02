@@ -1,16 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4072DDFC-04FB-4B21-B602-00678070187A}</ProjectGuid>
+    <ProjectGuid>{ADA3B560-C0B9-42D0-92FF-A76462E8D524}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.Resources</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.Resources</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -32,65 +32,38 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Runtime.Serialization" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UIStringResourcePerApp1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UIStringResourcePerApp.resx</DependentUpon>
-    </Compile>
-    <Compile Include="UIStringResourcePerEntityBuild.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UIStringResourcePerEntityBuild.resx</DependentUpon>
-    </Compile>
-    <Compile Include="UIStringResourcePerEntityBuildEventCode.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UIStringResourcePerEntityBuildEventCode.resx</DependentUpon>
-    </Compile>
-    <Compile Include="UIStringResourcePerEntityBuildLog.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UIStringResourcePerEntityBuildLog.resx</DependentUpon>
-    </Compile>
-    <Compile Include="UIStringResourcePerEntitySolution.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UIStringResourcePerEntitySolution.resx</DependentUpon>
-    </Compile>
     <None Include="packages.config" />
     <EmbeddedResource Include="UIStringResourcePerApp.resx">
-      <LastGenOutput>UIStringResourcePerApp1.Designer.cs</LastGenOutput>
-      <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
+    <Compile Include="UIStringResourcePerApp.designer.cs">
+      <DependentUpon>UIStringResourcePerApp.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
     <EmbeddedResource Include="UIStringResourcePerEntityBuild.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>UIStringResourcePerEntityBuild.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Compile Include="UIStringResourcePerEntityBuild.designer.cs">
+      <DependentUpon>UIStringResourcePerEntityBuild.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
     <EmbeddedResource Include="UIStringResourcePerEntityBuildEventCode.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>UIStringResourcePerEntityBuildEventCode.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Compile Include="UIStringResourcePerEntityBuildEventCode.designer.cs">
+      <DependentUpon>UIStringResourcePerEntityBuildEventCode.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
     <EmbeddedResource Include="UIStringResourcePerEntityBuildLog.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>UIStringResourcePerEntityBuildLog.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Compile Include="UIStringResourcePerEntityBuildLog.designer.cs">
+      <DependentUpon>UIStringResourcePerEntityBuildLog.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
     <EmbeddedResource Include="UIStringResourcePerEntitySolution.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>UIStringResourcePerEntitySolution.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Content Include="Maps\map.2.D.2.vsd" />
-    <Content Include="Maps\map.2.D.2.vsd.png" />
+    <Compile Include="UIStringResourcePerEntitySolution.designer.cs">
+      <DependentUpon>UIStringResourcePerEntitySolution.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
@@ -99,7 +72,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -107,6 +79,7 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>

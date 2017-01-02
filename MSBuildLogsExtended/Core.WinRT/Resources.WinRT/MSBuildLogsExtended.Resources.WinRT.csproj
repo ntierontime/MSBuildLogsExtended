@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B79781A2-9C33-4213-81C3-1562B914AD7F}</ProjectGuid>
+    <ProjectGuid>{AE8B8166-23AB-4308-B637-C88651D8C4E9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.Resources</RootNamespace>
@@ -104,8 +104,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Maps\map.2.D.2.vsd" />
-    <Content Include="Maps\map.2.D.2.vsd.png" />
     <PRIResource Include="..\..\Core\Resources\en\UIStringResourcePerApp.resw">
       <Link>en\UIStringResourcePerApp.resw</Link>
     </PRIResource>
@@ -149,7 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks.WinRT\Framework.WinRT\Framework.WinRT.csproj">
-      <Project>{219c261b-3f94-43f4-819c-bd0faa3e6e12}</Project>
+      <Project>{460fe8b2-17ec-4a7e-83f8-b77b88e8b284}</Project>
       <Name>Framework.WinRT</Name>
     </ProjectReference>
   </ItemGroup>
@@ -162,7 +160,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="4072ddfc-04fb-4b21-b602-00678070187a" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="ada3b560-c0b9-42d0-92ff-a76462e8d524" />
     </VisualStudio>
   </ProjectExtensions>
   <!--

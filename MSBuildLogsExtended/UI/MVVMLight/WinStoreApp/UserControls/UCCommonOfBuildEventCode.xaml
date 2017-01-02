@@ -33,11 +33,21 @@
 				<RowDefinition Height="30" />
 				<RowDefinition Height="30" />
 				<RowDefinition Height="30" />            </Grid.RowDefinitions>
-<CheckBox Name="ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildEventCode.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" IsChecked="{Binding Path=Criteria.BusinessLogicLayerQueryCriteriaEntityBuildEventCodeCommon.DescriptionCommonOft.IsToCompare, Mode=TwoWay}" />
-<TextBox Name="ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon" Text="{Binding Path=Criteria.BusinessLogicLayerQueryCriteriaEntityBuildEventCodeCommon.DescriptionCommonOft.ValueToBeContained, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" fvm:TextBoxUpdateSourceBehaviour.BindingSource="Criteria.BusinessLogicLayerQueryCriteriaEntityBuildEventCodeCommon.DescriptionCommonOft.ValueToBeContained" />
-<CheckBox Name="ID_CheckBox_Search_isToCompareEventCodeCommonOftOfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildEventCode.IsToCompare_ID_CheckBox_Search_isToCompareEventCodeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" IsChecked="{Binding Path=Criteria.BusinessLogicLayerQueryCriteriaEntityBuildEventCodeCommon.EventCodeCommonOft.IsToCompare, Mode=TwoWay}" />
-<TextBox Name="ID_TextBox_Search_valueToBeContainedEventCodeCommonOftOfCommon" Text="{Binding Path=Criteria.BusinessLogicLayerQueryCriteriaEntityBuildEventCodeCommon.EventCodeCommonOft.ValueToBeContained, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" fvm:TextBoxUpdateSourceBehaviour.BindingSource="Criteria.BusinessLogicLayerQueryCriteriaEntityBuildEventCodeCommon.EventCodeCommonOft.ValueToBeContained" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildEventCode.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" IsChecked="{Binding Path=Criteria.BuildEventCodeQueryCriteriaCommon.DescriptionCommonOft.IsToCompare, Mode=TwoWay}" />
+<TextBox Name="ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon" Text="{Binding Path=Criteria.BuildEventCodeQueryCriteriaCommon.DescriptionCommonOft.ValueToBeContained, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" fvm:TextBoxUpdateSourceBehaviour.BindingSource="Criteria.BuildEventCodeQueryCriteriaCommon.DescriptionCommonOft.ValueToBeContained" />
+<CheckBox Name="ID_CheckBox_Search_isToCompareEventCodeCommonOftOfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildEventCode.IsToCompare_ID_CheckBox_Search_isToCompareEventCodeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" IsChecked="{Binding Path=Criteria.BuildEventCodeQueryCriteriaCommon.EventCodeCommonOft.IsToCompare, Mode=TwoWay}" />
+<TextBox Name="ID_TextBox_Search_valueToBeContainedEventCodeCommonOftOfCommon" Text="{Binding Path=Criteria.BuildEventCodeQueryCriteriaCommon.EventCodeCommonOft.ValueToBeContained, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" fvm:TextBoxUpdateSourceBehaviour.BindingSource="Criteria.BuildEventCodeQueryCriteriaCommon.EventCodeCommonOft.ValueToBeContained" />
         </Grid>
+	</Grid>
+<Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 <ListView Name="V_Common" Height="800" Width="600" Margin="12,12,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildEventCodeCollectionVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollection}" SelectedItem="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildEventCodeVM.Current, Mode=TwoWay, Source={StaticResource Locator}}">
   <wrtb:Interaction.Behaviors>
                     <w8lnb:EventToBoundCommandBehavior Event="Tapped" Command="{Binding MSBuildLogsExtended_ViewModels_ViewModelBuildEventCode_Static.SelectionChangedCommand, Source={StaticResource Locator}}" />

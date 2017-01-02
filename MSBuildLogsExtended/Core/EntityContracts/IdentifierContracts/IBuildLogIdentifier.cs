@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace MSBuildLogsExtended.EntityContracts
 {
 
-	public interface IBuildLogIdentifier
+	public partial interface IBuildLogIdentifier
 	{ 
 
         System.Int64 Id { get; set; }
@@ -34,7 +34,7 @@ namespace MSBuildLogsExtended.EntityContracts
     /// <summary>
     ///  a property defined when <see cref="BuildLogIdentifier"/> is used in other classes.
     /// </summary>
-    public interface WithIdentifierContractBuildLog<T>
+    public partial interface WithIdentifierContractBuildLog<T>
         where T : IBuildLogIdentifier
     {
         T BuildLogIdentifier { get; set; }

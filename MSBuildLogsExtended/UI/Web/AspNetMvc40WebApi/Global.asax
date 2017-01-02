@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="MSBuildLogsExtended.AspNetMvc40WebApi.Global" Language="C#" %>

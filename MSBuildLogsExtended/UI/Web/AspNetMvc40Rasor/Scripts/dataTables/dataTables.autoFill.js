@@ -1,11 +1,11 @@
-/*! AutoFill 2.1.2
+/*! AutoFill 2.1.1
  * ©2008-2015 SpryMedia Ltd - datatables.net/license
  */
 
 /**
  * @summary     AutoFill
  * @description Add Excel like click and drag auto-fill options to DataTables
- * @version     2.1.2
+ * @version     2.1.1
  * @file        dataTables.autoFill.js
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
@@ -193,7 +193,6 @@ $.extend( AutoFill.prototype, {
 		var handle = this.dom.handle;
 		var handleDim = this.s.handle;
 		var dtScroll = $('div.dataTables_scrollBody', this.s.dt.table().container() );
-		var scrollOffsetX=0, scrollOffsetY=0;
 
 		if ( ! idx || dt.columns( this.c.columns ).indexes().indexOf( idx.column ) === -1 ) {
 			this._detach();
@@ -214,18 +213,11 @@ $.extend( AutoFill.prototype, {
 
 		var offset = $(node).position();
 
-		// If scrolling, and the table is not itself the offset parent, need to
-		// offset for the scrolling position
-		if ( dtScroll.length && this.dom.offsetParent[0] !== dt.table().node() ) {
-			scrollOffsetY = dtScroll.scrollTop();
-			scrollOffsetX = dtScroll.scrollLeft();
-		}
-
 		this.dom.attachedTo = node;
 		handle
 			.css( {
-				top: offset.top + node.offsetHeight - handleDim.height + scrollOffsetY,
-				left: offset.left + node.offsetWidth - handleDim.width + scrollOffsetX
+				top: offset.top + node.offsetHeight - handleDim.height + dtScroll.scrollTop(),
+				left: offset.left + node.offsetWidth - handleDim.width + dtScroll.scrollLeft()
 			} )
 			.appendTo( this.dom.offsetParent );
 	},
@@ -353,7 +345,7 @@ $.extend( AutoFill.prototype, {
 		width  = right.position().left + right.outerWidth() - left;
 
 		var dtScroll = this.dom.dtScroll;
-		if ( dtScroll && this.dom.offsetParent[0] !== dt.table().node() ) {
+		if ( dtScroll ) {
 			top += dtScroll.scrollTop();
 			left += dtScroll.scrollLeft();
 		}
@@ -970,7 +962,7 @@ AutoFill.actions = {
  * @static
  * @type      String
  */
-AutoFill.version = '2.1.2';
+AutoFill.version = '2.1.1';
 
 
 /**

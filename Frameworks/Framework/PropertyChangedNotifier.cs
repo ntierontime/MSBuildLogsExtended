@@ -8,8 +8,8 @@ namespace Framework
     /// We use this class for model classes.
     /// It should be serializable.
     /// </summary>
-#if SILVERLIGHT || XAMARIN
-#elif NETFX_CORE
+#if (SILVERLIGHT || XAMARIN)
+#elif (NETFX_CORE)
 #else
     [Serializable]
 #endif
@@ -18,8 +18,8 @@ namespace Framework
         /// <summary>
         /// Occurs when a property value changes.
         /// </summary>
-#if SILVERLIGHT || XAMARIN
-#elif NETFX_CORE
+#if (SILVERLIGHT || XAMARIN)
+#elif (NETFX_CORE)
 #else
         [field: NonSerialized]
 #endif
@@ -41,3 +41,5 @@ namespace Framework
         }
     }
 }
+
+

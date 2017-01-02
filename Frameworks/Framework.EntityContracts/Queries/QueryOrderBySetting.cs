@@ -100,7 +100,7 @@ namespace Framework.EntityContracts
                         if (string.IsNullOrWhiteSpace(_Splitted1Item) == false)
                         {
                             string[] _Splitted2 = _Splitted1Item.Trim().Split("~".ToCharArray());
-#if (NETFX_CORE || XAMARIN)
+#if (NETFX_CORE || XAMARIN)  
                             if (_Splitted2.Length == 1)
                             {
                                 this.Add(_Splitted2[0], "Ascending");
@@ -143,7 +143,7 @@ namespace Framework.EntityContracts
             }
 		}
 
-        #endregion constructors
+		#endregion constructors
 
         /// <summary>
         /// Adds one item of QueryOrderBySetting to this collection
@@ -196,3 +196,4 @@ namespace Framework.EntityContracts
         }
     }
 }
+

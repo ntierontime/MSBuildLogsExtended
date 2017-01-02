@@ -1,16 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{806A9AB2-2EDD-42D2-A3CA-A2ACBA0CEDD7}</ProjectGuid>
+    <ProjectGuid>{37102465-556B-49E7-8CA2-A7814E45DE36}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.DataSourceEntities</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.DataSourceEntities</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -32,59 +32,47 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Runtime.Serialization" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="DataSourceEntityHelpers\DataSourceEntityHelperBuild.cs" />
-    <Compile Include="DataSourceEntityHelpers\DataSourceEntityHelperBuildEventCode.cs" />
-    <Compile Include="DataSourceEntityHelpers\DataSourceEntityHelperBuildLog.cs" />
-    <Compile Include="DataSourceEntityHelpers\DataSourceEntityHelperSolution.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
     <Compile Include="DataSourceEntity_\Build.cs" />
-    <Compile Include="DataSourceEntity_\BuildCollection.cs" />
     <Compile Include="DataSourceEntity_\BuildEventCode.cs" />
-    <Compile Include="DataSourceEntity_\BuildEventCodeCollection.cs" />
     <Compile Include="DataSourceEntity_\BuildLog.cs" />
-    <Compile Include="DataSourceEntity_\BuildLogCollection.cs" />
     <Compile Include="DataSourceEntity_\Solution.cs" />
+    <Compile Include="DataSourceEntity_\BuildCollection.cs" />
+    <Compile Include="DataSourceEntity_\BuildEventCodeCollection.cs" />
+    <Compile Include="DataSourceEntity_\BuildLogCollection.cs" />
     <Compile Include="DataSourceEntity_\SolutionCollection.cs" />
-    <Compile Include="DataSourceIdentifiers\BuildEventCodeIdentifier.cs" />
+    <Compile Include="DataSourceEntityHelpers\BuildHelper.cs" />
+    <Compile Include="DataSourceEntityHelpers\BuildEventCodeHelper.cs" />
+    <Compile Include="DataSourceEntityHelpers\BuildLogHelper.cs" />
+    <Compile Include="DataSourceEntityHelpers\SolutionHelper.cs" />
     <Compile Include="DataSourceIdentifiers\BuildIdentifier.cs" />
+    <Compile Include="DataSourceIdentifiers\BuildEventCodeIdentifier.cs" />
     <Compile Include="DataSourceIdentifiers\BuildLogIdentifier.cs" />
     <Compile Include="DataSourceIdentifiers\SolutionIdentifier.cs" />
-    <Compile Include="DataSourceQueryCriteriaByEntityReferences\DataSourceQueryCriteriaByEntityReferenceBuild.cs" />
-    <Compile Include="DataSourceQueryCriteriaByEntityReferences\DataSourceQueryCriteriaByEntityReferenceBuildLog.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="Maps\map.2.B.3.vsd" />
-    <Content Include="Maps\map.2.B.3.vsd.png" />
-    <None Include="packages.config" />
+    <Compile Include="DataSourceQueryCriteriaByEntityReferences\BuildQueryCriteriaByEntityReference.cs" />
+    <Compile Include="DataSourceQueryCriteriaByEntityReferences\BuildLogQueryCriteriaByEntityReference.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EntityContracts\MSBuildLogsExtended.EntityContracts.csproj">
-      <Project>{d090796d-578a-4c52-b489-3e688ddd5206}</Project>
+      <Project>{a9940920-207f-471d-8164-13d5a4b518ba}</Project>
       <Name>MSBuildLogsExtended.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
       <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
       <Name>Framework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.DAL\Framework.DAL.csproj">
+      <Project>{525678c4-fdc1-4a5d-9d8a-d7e78309335f}</Project>
+      <Name>Framework.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks\Framework.DataSourceEntities\Framework.DataSourceEntities.csproj">
       <Project>{f85a14d5-64e0-4cfc-88da-27fe9d0dd664}</Project>
       <Name>Framework.DataSourceEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\Resources\MSBuildLogsExtended.Resources.csproj">
-      <Project>{4072ddfc-04fb-4b21-b602-00678070187a}</Project>
+      <Project>{ada3b560-c0b9-42d0-92ff-a76462e8d524}</Project>
       <Name>MSBuildLogsExtended.Resources</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Frameworks\Framework.DAL\Framework.DAL.csproj">
-      <Project>{525678c4-fdc1-4a5d-9d8a-d7e78309335f}</Project>
-      <Name>Framework.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -101,14 +89,6 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="LinqToLdap.Contrib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d4ffa016fc97ad84, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\LinqToLdap.3.3.2\lib\net45\LinqToLdap.Contrib.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="LinqToLdap, Version=3.3.2.0, Culture=neutral, PublicKeyToken=d4ffa016fc97ad84, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\LinqToLdap.3.3.2\lib\net45\LinqToLdap.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="LINQtoCSV, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\LINQtoCSV.1.5.0.0\lib\net35\LINQtoCSV.dll</HintPath>
     </Reference>

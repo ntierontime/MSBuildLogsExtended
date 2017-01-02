@@ -5,13 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D53B35B3-7244-41B5-B8F7-2E6DC46B257B}</ProjectGuid>
+    <ProjectGuid>{005AF74C-D514-4060-8E60-3514C782B706}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.Resources</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.Resources.WP</AssemblyName>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <SilverlightVersion>
     </SilverlightVersion>
     <TargetFrameworkProfile>
@@ -25,7 +25,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
-    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -41,7 +41,6 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <DefaultLanguage>en-US</DefaultLanguage>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -91,49 +90,52 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerApp1.Designer.cs">
-      <Link>UIStringResourcePerApp1.Designer.cs</Link>
-      <DependentUpon>UIStringResourcePerApp.resx</DependentUpon>
-    </Compile>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuild.Designer.cs">
-      <Link>UIStringResourcePerEntityBuild.Designer.cs</Link>
-      <DependentUpon>UIStringResourcePerEntityBuild.resx</DependentUpon>
-    </Compile>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuildEventCode.Designer.cs">
-      <Link>UIStringResourcePerEntityBuildEventCode.Designer.cs</Link>
-      <DependentUpon>UIStringResourcePerEntityBuildEventCode.resx</DependentUpon>
-    </Compile>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuildLog.Designer.cs">
-      <Link>UIStringResourcePerEntityBuildLog.Designer.cs</Link>
-      <DependentUpon>UIStringResourcePerEntityBuildLog.resx</DependentUpon>
-    </Compile>
-    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntitySolution.Designer.cs">
-      <Link>UIStringResourcePerEntitySolution.Designer.cs</Link>
-      <DependentUpon>UIStringResourcePerEntitySolution.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Maps\map.2.D.2.vsd" />
-    <Content Include="Maps\map.2.D.2.vsd.png" />
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerApp.resx">
       <Link>UIStringResourcePerApp.resx</Link>
     </EmbeddedResource>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerApp.designer.cs">
+      <Link>UIStringResourcePerApp.designer.cs</Link>
+      <DependentUpon>UIStringResourcePerApp.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntityBuild.resx">
       <Link>UIStringResourcePerEntityBuild.resx</Link>
     </EmbeddedResource>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuild.designer.cs">
+      <Link>UIStringResourcePerEntityBuild.designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntityBuild.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntityBuildEventCode.resx">
       <Link>UIStringResourcePerEntityBuildEventCode.resx</Link>
     </EmbeddedResource>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuildEventCode.designer.cs">
+      <Link>UIStringResourcePerEntityBuildEventCode.designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntityBuildEventCode.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntityBuildLog.resx">
       <Link>UIStringResourcePerEntityBuildLog.resx</Link>
     </EmbeddedResource>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntityBuildLog.designer.cs">
+      <Link>UIStringResourcePerEntityBuildLog.designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntityBuildLog.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerEntitySolution.resx">
       <Link>UIStringResourcePerEntitySolution.resx</Link>
     </EmbeddedResource>
+    <Compile Include="..\..\Core\Resources\UIStringResourcePerEntitySolution.designer.cs">
+      <Link>UIStringResourcePerEntitySolution.designer.cs</Link>
+      <DependentUpon>UIStringResourcePerEntitySolution.resx</DependentUpon>
+      <SubType>RESXCodeBehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks.WP\Framework.WP\Framework.WP.csproj">
-      <Project>{8601cd0c-5985-4b2b-a333-52c0a5902ce2}</Project>
+      <Project>{1efe0717-bd17-4781-a7d2-7f0216a3460b}</Project>
       <Name>Framework.WP</Name>
     </ProjectReference>
   </ItemGroup>
@@ -164,7 +166,7 @@
   -->
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="4072ddfc-04fb-4b21-b602-00678070187a" />
+      <UserProperties ProjectLinkReference="ada3b560-c0b9-42d0-92ff-a76462e8d524" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

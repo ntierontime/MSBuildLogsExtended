@@ -1,11 +1,11 @@
-/*! KeyTable 2.1.2
+/*! KeyTable 2.1.1
  * ©2009-2016 SpryMedia Ltd - datatables.net/license
  */
 
 /**
  * @summary     KeyTable
  * @description Spreadsheet like keyboard navigation for DataTables
- * @version     2.1.2
+ * @version     2.1.1
  * @file        dataTables.keyTable.js
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
@@ -177,7 +177,7 @@ $.extend( KeyTable.prototype, {
 				return;
 			}
 
-			that._focus( cell, null, false );
+			that._focus( cell );
 		} );
 
 		// Key events
@@ -334,12 +334,6 @@ $.extend( KeyTable.prototype, {
 
 		orig.stopPropagation();
 
-		// Return key should do nothing - for textareas's it would empty the
-		// contents
-		if ( key === 13 ) {
-			orig.preventDefault();
-		}
-
 		editor.inline( this.s.lastFocus.index() );
 
 		// Excel style - select all text
@@ -390,10 +384,9 @@ $.extend( KeyTable.prototype, {
 	 * @param  {integer} [column] Not required if a cell is given as the first
 	 *   parameter. Otherwise this is the column data index for the cell to
 	 *   focus on
-	 * @param {boolean} [shift=true] Should the viewport be moved to show cell
 	 * @private
 	 */
-	_focus: function ( row, column, shift )
+	_focus: function ( row, column )
 	{
 		var that = this;
 		var dt = this.s.dt;
@@ -464,15 +457,13 @@ $.extend( KeyTable.prototype, {
 		node.addClass( this.c.className );
 
 		// Shift viewpoint and page to make cell visible
-		if ( shift === undefined || shift === true ) {
-			this._scroll( $(window), $(document.body), node, 'offset' );
+		this._scroll( $(window), $(document.body), node, 'offset' );
 
-			var bodyParent = dt.table().body().parentNode;
-			if ( bodyParent !== dt.table().header().parentNode ) {
-				var parent = $(bodyParent.parentNode);
+		var bodyParent = dt.table().body().parentNode;
+		if ( bodyParent !== dt.table().header().parentNode ) {
+			var parent = $(bodyParent.parentNode);
 
-				this._scroll( parent, parent, node, 'position' );
-			}
+			this._scroll( parent, parent, node, 'position' );
 		}
 
 		// Event and finish
@@ -611,12 +602,12 @@ $.extend( KeyTable.prototype, {
 		}
 
 		// Bottom correction
-		if ( offset.top + height > scrollTop + containerHeight && height < containerHeight ) {
+		if ( offset.top + height > scrollTop + containerHeight ) {
 			scroller.scrollTop( offset.top + height - containerHeight );
 		}
 
 		// Right correction
-		if ( offset.left + width > scrollLeft + containerWidth && width < containerWidth ) {
+		if ( offset.left + width > scrollLeft + containerWidth ) {
 			scroller.scrollLeft( offset.left + width - containerWidth );
 		}
 	},
@@ -798,7 +789,7 @@ KeyTable.defaults = {
 
 
 
-KeyTable.version = "2.1.2";
+KeyTable.version = "2.1.1";
 
 
 $.fn.dataTable.KeyTable = KeyTable;

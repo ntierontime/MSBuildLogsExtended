@@ -1,12 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DE0E8095-BA36-494C-8B7C-17898D0172DA}</ProjectGuid>
+    <ProjectGuid>{DCAAF26D-B0D9-44C7-A312-08BB46E6D04C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.WcfClientBLL</RootNamespace>
@@ -14,9 +14,6 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetPlatformVersion>8.1</TargetPlatformVersion>
-    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
-    <TargetFrameworkVersion />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -104,8 +101,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Maps\map.2.A.3.vsd" />
-    <Content Include="Maps\map.2.A.3.vsd.png" />
     <Compile Include="..\..\Wcf\WcfClientBLL\WcfClientEntityBuild.cs">
       <Link>WcfClientEntityBuild.cs</Link>
     </Compile>
@@ -136,35 +131,35 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core.WinRT\CommonBLLEntities.WinRT\MSBuildLogsExtended.CommonBLLEntities.WinRT.csproj">
-      <Project>{c1c01211-e430-4333-86cb-4111e92fde99}</Project>
+      <Project>{c5ef7139-7e1c-49c6-8d3d-03c0fc592ff7}</Project>
       <Name>MSBuildLogsExtended.CommonBLLEntities.WinRT</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core.WinRT\DataSourceEntities.WinRT\MSBuildLogsExtended.DataSourceEntities.WinRT.csproj">
-      <Project>{89679f44-ca0e-466d-a965-0e320d8fc37d}</Project>
+      <Project>{00b55318-aea3-4f17-955d-81851b8071f1}</Project>
       <Name>MSBuildLogsExtended.DataSourceEntities.WinRT</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core.WinRT\EntityContracts.WinRT\MSBuildLogsExtended.EntityContracts.WinRT.csproj">
-      <Project>{c4a2686f-3130-43d9-98e5-135ddf4521f5}</Project>
+      <Project>{871e68c5-1a97-446a-862c-391a3ecd8b6f}</Project>
       <Name>MSBuildLogsExtended.EntityContracts.WinRT</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.WinRT\Framework.WinRT\Framework.WinRT.csproj">
-      <Project>{219c261b-3f94-43f4-819c-bd0faa3e6e12}</Project>
+      <Project>{460fe8b2-17ec-4a7e-83f8-b77b88e8b284}</Project>
       <Name>Framework.WinRT</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.WinRT\Framework.CommonBLLEntities.WinRT\Framework.CommonBLLEntities.WinRT.csproj">
-      <Project>{e189a7b8-4b21-4d39-989e-5911f424519e}</Project>
+      <Project>{776d82b5-9bcd-4e41-8dd9-51da6cb4ec9e}</Project>
       <Name>Framework.CommonBLLEntities.WinRT</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.WinRT\Framework.DataSourceEntities.WinRT\Framework.DataSourceEntities.WinRT.csproj">
-      <Project>{23ed95ea-5bab-442b-990b-b925426863d8}</Project>
+      <Project>{7e03e94e-cd7b-4261-9ff3-cfb6d5df2adf}</Project>
       <Name>Framework.DataSourceEntities.WinRT</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.WinRT\Framework.EntityContracts.WinRT\Framework.EntityContracts.WinRT.csproj">
-      <Project>{dd91a540-0344-4e8e-9183-c0d230d5cf4c}</Project>
+      <Project>{6a07bdb8-d8d2-43e9-8791-80c4a3a91788}</Project>
       <Name>Framework.EntityContracts.WinRT</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core.WinRT\WcfContracts.WinRT\MSBuildLogsExtended.WcfContracts.WinRT.csproj">
-      <Project>{34eb5495-f90c-44f9-bb43-147c79ee970f}</Project>
+      <Project>{2b963791-4bf7-41c3-819f-42df56bec6c2}</Project>
       <Name>MSBuildLogsExtended.WcfContracts.WinRT</Name>
     </ProjectReference>
   </ItemGroup>
@@ -172,13 +167,13 @@
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
-  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
-    <VisualStudioVersion>12.0</VisualStudioVersion>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkReference="eab3bd98-6149-4d2e-a71d-f9aa5a3946ae" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="794ea58e-d8ee-422c-b6fb-d9965e175aa3" />
     </VisualStudio>
   </ProjectExtensions>
   <!--

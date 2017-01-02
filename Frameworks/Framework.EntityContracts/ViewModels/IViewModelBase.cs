@@ -4,7 +4,7 @@ namespace Framework.EntityContracts
     public interface IViewModelBase<TSearchCriteria>
      where TSearchCriteria : class, new()
     {
-        ContentData ContentData { get; set; }
+		Framework.EntityContracts.ContentData ContentData { get; set; }
         TSearchCriteria Criteria { get; set; }
         Framework.NameValueCollection ListOfDataExport { get; set; }
         Framework.NameValueCollection ListOfQueryOrderBySettingCollecionInString { get; set; }
@@ -27,3 +27,5 @@ namespace Framework.EntityContracts
 		Framework.EntityContracts.SearchStatus SearchStatus { get; set; }
     }
 }
+
+

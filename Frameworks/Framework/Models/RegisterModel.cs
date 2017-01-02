@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 
 namespace Framework
@@ -39,3 +40,4 @@ namespace Framework
         public string ConfirmPassword { get; set; }
     }
 }
+

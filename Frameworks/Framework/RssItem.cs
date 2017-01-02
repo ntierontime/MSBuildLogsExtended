@@ -267,7 +267,6 @@ namespace Framework
         }
 
         #endregion Constructors
-
     }
 }
 

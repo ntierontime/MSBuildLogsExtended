@@ -293,6 +293,8 @@ input[type="radio"].styled:checked + input[type="hidden"] + label:after,
 
 input[type="checkbox"].styled:checked label:after,
 input[type="radio"].styled:checked label:after,
+input[type="checkbox"].styled:checked + input[type="hidden"] label:after,
+input[type="radio"].styled:checked + input[type="hidden"] label:after,
 .checkbox label:after {
     padding-left: 4px;
     padding-top: 2px;

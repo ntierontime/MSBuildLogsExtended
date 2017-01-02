@@ -5,13 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8601CD0C-5985-4B2B-A333-52C0A5902CE2}</ProjectGuid>
+    <ProjectGuid>{1EFE0717-BD17-4781-A7D2-7F0216A3460B}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Framework</RootNamespace>
     <AssemblyName>Framework.WP</AssemblyName>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <SilverlightVersion>
     </SilverlightVersion>
     <TargetFrameworkProfile>
@@ -25,7 +25,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
-    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -41,7 +41,6 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <DefaultLanguage>en-US</DefaultLanguage>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -91,20 +90,16 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\..\Frameworks\Framework\AssemblyHelper.cs">
-      <Link>AssemblyHelper.cs</Link>
-    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
     <Compile Include="..\..\Frameworks\Framework\BinaryRelated\BinaryFile.cs">
       <Link>BinaryRelated\BinaryFile.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework\BinaryRelated\BinaryFileHelper.cs">
       <Link>BinaryRelated\BinaryFileHelper.cs</Link>
     </Compile>
-    <Compile Include="..\..\Frameworks\Framework\BinaryRelated\MIMEContentTypeToFileExtensionMappingCollection.cs">
-      <Link>BinaryRelated\MIMEContentTypeToFileExtensionMappingCollection.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework\Common\Singleton.cs">
-      <Link>Common\Singleton.cs</Link>
+    <Compile Include="..\..\Frameworks\Framework\DateTimePeriodHelper.cs">
+      <Link>DateTimePeriodHelper.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework\DataServiceTypes.cs">
       <Link>DataServiceTypes.cs</Link>
@@ -112,44 +107,17 @@
     <Compile Include="..\..\Frameworks\Framework\DataStreamServiceResult.cs">
       <Link>DataStreamServiceResult.cs</Link>
     </Compile>
-    <Compile Include="..\..\Frameworks\Framework\DateTimePeriodHelper.cs">
-      <Link>DateTimePeriodHelper.cs</Link>
-    </Compile>
     <Compile Include="..\..\Frameworks\Framework\IDataStreamServiceProviderBase.cs">
       <Link>IDataStreamServiceProviderBase.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework\IoCContainerWrapper.cs">
-      <Link>IoCContainerWrapper.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework\LoggingOptions.cs">
-      <Link>LoggingOptions.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework\Models\ChangePasswordModel.cs">
-      <Link>Models\ChangePasswordModel.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework\Models\LogOnModel.cs">
-      <Link>Models\LogOnModel.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework\Models\MenuTreeItem.cs">
       <Link>Models\MenuTreeItem.cs</Link>
     </Compile>
-    <Compile Include="..\..\Frameworks\Framework\Models\RegisterModel.cs">
-      <Link>Models\RegisterModel.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework\NameValuePair.cs">
-      <Link>NameValuePair.cs</Link>
-    </Compile>
     <Compile Include="..\..\Frameworks\Framework\NavigationSetting.cs">
       <Link>NavigationSetting.cs</Link>
     </Compile>
-    <Compile Include="..\..\Frameworks\Framework\PagingPageSizeOption.cs">
-      <Link>PagingPageSizeOption.cs</Link>
-    </Compile>
     <Compile Include="..\..\Frameworks\Framework\PropertyChangedNotifier.cs">
       <Link>PropertyChangedNotifier.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework\RssItem.cs">
-      <Link>RssItem.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework\UIAction.cs">
       <Link>UIAction.cs</Link>
@@ -160,8 +128,36 @@
     <Compile Include="..\..\Frameworks\Framework\UIActionStatusMessage.cs">
       <Link>UIActionStatusMessage.cs</Link>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
+    <Compile Include="..\..\Frameworks\Framework\IoCContainerWrapper.cs">
+      <Link>IoCContainerWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\LoggingOptions.cs">
+      <Link>LoggingOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\BinaryRelated\MIMEContentTypeToFileExtensionMappingCollection.cs">
+      <Link>BinaryRelated\MIMEContentTypeToFileExtensionMappingCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\Models\ChangePasswordModel.cs">
+      <Link>Models\ChangePasswordModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\Models\LogOnModel.cs">
+      <Link>Models\LogOnModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\Models\RegisterModel.cs">
+      <Link>Models\RegisterModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\NameValuePair.cs">
+      <Link>NameValuePair.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\PagingPageSizeOption.cs">
+      <Link>PagingPageSizeOption.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\RssItem.cs">
+      <Link>RssItem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework\Common\Singleton.cs">
+      <Link>Common\Singleton.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -192,7 +188,7 @@
   -->
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="6d25aa30-c3af-4ae0-b567-0f2653120cdc" />
+      <UserProperties ProjectLinkReference="6d25aa30-c3af-4ae0-b567-0f2653120cdc" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

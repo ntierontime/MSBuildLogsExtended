@@ -1,150 +1,192 @@
+@using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.UrlStrings;
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Linq.Expressions;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
 @using Framework.Mvc;
+@using PagedList.Mvc;
 @model MSBuildLogsExtended.AspNetMvc40ViewModel.WPCommonOfBuildVM
 @{
-    // http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
-    // http://dotnetmentors.com/mvc/paging-and-sorting-in-asp-net-mvc-and-entity-framework-application.aspx
-    ViewBag.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Build;
     RouteValueDictionary queryStringDictionary = new RouteValueDictionary(Request.QueryString.AllKeys.ToDictionary(key => key, key => (object)Request.QueryString[key]));
 }
-@section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h2>@ViewBag.Title.</h2>
-                <h4>@ViewBag.Message</h4>
-            </hgroup>
-        </div>
-    </section>
-}
-<article>
-<div>
-<div class="default">
-@using (Html.BeginForm()){
-<div>
-<div class="buttonContainer">
-<input class="button button-Search" type="submit" name="SearchToolBarUp" value="@Framework.Resources.UIStringResource.SearchAlternativeText" />
-<input onclick="location.href='@Url.Action("AddNew", "Build")'" class="button button-AddNew" type="button" name="AddNewToolBarUp" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
-<input onclick="location.href='@Url.Action("WPCommonOfBuild_Export", "Build", new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="button button-Export" type="button" name="ExportToolBarUp" value="@Framework.Resources.UIStringResource.ExportAlternativeText" />
-<input onclick="location.href='@Url.Action("WPCommonOfBuild_Export", "Build", new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="button button-ExportToExcel" type="button" name="ExportToExcelToolBarUp" value="@Framework.Resources.UIStringResource.ExportToExcelAlternativeText" />
-<input onclick="location.href='@Url.Action("Import", "Build")'" class="button button-Import" type="button" name="ImportToolBarUp" value="@Framework.Resources.UIStringResource.ImportAlternativeText" />
+ <div class="row">
+ <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+        @using (Html.BeginForm())
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <h3 style="display: inline;">@Framework.Resources.UIStringResource.Common_Filter</h3>
+                </div>
+                <div class="panel-footer nopadding">
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+    <button class="btn btn-default" role="button" type="submit" name="SearchToolBarUp" title="@Framework.Resources.UIStringResource.SearchAlternativeText">
+        <span class="glyphicon glyphicon-search"></span>
+    </button>
 </div>
-<div>
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_AddNew, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resources.UIStringResource.AddNewAlternativeText">
+		<span class="glyphicon glyphicon-plus"></span>
+	</a>
 </div>
-<div>
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareBuildStartTimeCommonOftOfCommon, new { style="display:display;" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareBuildStartTimeCommonOftOfCommon
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareLowerBoundBuildStartTimeCommonOftOfCommon, new { style="display:display;" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundBuildStartTimeCommonOftOfCommon
-@Html.TextBox("lowerBoundBuildStartTimeCommonOftOfCommon", Model.Criteria.LowerBoundBuildStartTimeCommonOftOfCommon.ToString(), new { @readonly = "readonly" })
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareUpperBoundBuildStartTimeCommonOftOfCommon, new { style="display:display;" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundBuildStartTimeCommonOftOfCommon
-@Html.TextBox("upperBoundBuildStartTimeCommonOftOfCommon", Model.Criteria.UpperBoundBuildStartTimeCommonOftOfCommon.ToString(), new { @readonly = "readonly" })
+<div class="btn-group">
+	<a href="location.href='@Url.Action(UrlStringsAlias.ActionName_Build_WPCommonOfBuild_Export, UrlStringsAlias.ControllerName_Build, new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="btn btn-default" role="button" type="button" name="ExportToolBarUp" title="@Framework.Resources.UIStringResource.ExportAlternativeText">
+        <span class="glyphicon glyphicon-export"></span>
+    </a>
 </div>
-<div>
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareDescriptionCommonOftOfCommon, new { style="display:display;" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon
-@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedDescriptionCommonOftOfCommon)
+<div class="btn-group">
+	<a href="location.href='@Url.Action(UrlStringsAlias.ActionName_Build_WPCommonOfBuild_Export, UrlStringsAlias.ControllerName_Build, new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="btn btn-default" role="button" type="button" name="ExportToExcelToolBarUp" title="@Framework.Resources.UIStringResource.ExportToExcelAlternativeText">
+        <span class="glyphicon glyphicon-export"></span>
+    </a>
 </div>
-<div>
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareNameCommonOftOfCommon, new { style="display:display;" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon
-@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedNameCommonOftOfCommon)
-</div>
-<div>
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfSolution_S1_1OfCommon, new { style="display:display;" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_S1_1OfCommon
-@Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfSolution_S1_1OfCommon, (List<SelectListItem>)Model.SelectListOfMSBuildLogsExtended_Solution, MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Please_select_Solution____)
-</div>
-<div class="buttonContainer">
-    <div class="paging-label">Items per page : </div><div class="paging-field">@Html.DropDownListFor(model=>model.QueryPagingSetting.PageSize, Model.SelectListOfPageSize, new Dictionary<string,Object>{ { "onchange", "this.form.submit();" } })
-    </div><div class="paging-label">Sort by:</div><div class="paging-field">@Html.DropDownListFor(model => model.QueryOrderBySettingCollecionInString, Model.SelectListOfQueryOrderBySettingCollecionInString, new Dictionary<string, Object> { { "onchange", "this.form.submit();" } })
-    </div><div class="paging-field-right">@Model.QueryPagingSetting.GetPagingInformationString()</div>
-</div>
-<div class="buttonContainer">
-<input class="button button-Search" type="submit" name="SearchToolBarBottom" value="@Framework.Resources.UIStringResource.SearchAlternativeText" />
-<input onclick="location.href='@Url.Action("AddNew", "Build")'" class="button button-AddNew" type="button" name="AddNewToolBarBottom" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
-<input onclick="location.href='@Url.Action("WPCommonOfBuild_Export", "Build", new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="button button-Export" type="button" name="ExportToolBarBottom" value="@Framework.Resources.UIStringResource.ExportAlternativeText" />
-<input onclick="location.href='@Url.Action("WPCommonOfBuild_Export", "Build", new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="button button-ExportToExcel" type="button" name="ExportToExcelToolBarBottom" value="@Framework.Resources.UIStringResource.ExportToExcelAlternativeText" />
-<input onclick="location.href='@Url.Action("Import", "Build")'" class="button button-Import" type="button" name="ImportToolBarBottom" value="@Framework.Resources.UIStringResource.ImportAlternativeText" />
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_Import, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="ImportToolBarUp" title="@Framework.Resources.UIStringResource.ImportAlternativeText">
+		<span class="glyphicon glyphicon-import"></span>
+	</a>
 </div>
 </div>
-}
+                </div>
+                <div class="panel-body">
+ <div class="form-group">
 </div>
-<div class="default">
-<div>
-    @Html.PagedListPager(Url
-        , new PagerHtmlRenderer(
-        //Constructor mandatory values
-                currentPageNumber: Model.QueryPagingSetting.CurrentPage,
-                pageSize: Model.QueryPagingSetting.PageSize,
-                totalNumberOfItems: Model.QueryPagingSetting.CountOfRecords,
-                actionName: "WPCommonOfBuild",
-                controllerName: "Build",
-                routeValues: new RouteValueDictionary() { { "currentPage", "" } },
-                pageRouteValueName: "currentPage")
-                {
-                    //Properties
-                    PreviousLinkInnerHtml = "<strong>Previous</strong>",
-                    NextLinkInnerHtml = "<strong>Next<strong>",
-                    FirstLinkInnerHtml = "<strong>First</strong>",
-                    LastLinkInnerHtml = "<strong>Last</strong>"
-                });
+<div class="form-group">
+<div class="checkbox checkbox-info">
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareDescriptionCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon</label>
 </div>
-<div>
-<table id="MasterDataControl0" name="MasterDataControl0" >
-<tr><th class="sorting"></th>
-<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Solution_S1_1_Name</th>
-<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Name</th>
-<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Description</th>
-<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.BuildStartTime</th>
-<th class="sorting"></th></tr>
+@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedDescriptionCommonOftOfCommon, new { @class = "form-control" })
+</div>
+<div class="form-group">
+<div class="checkbox checkbox-info">
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareNameCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon</label>
+</div>
+@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedNameCommonOftOfCommon, new { @class = "form-control" })
+</div>
+<div class="form-group">
+<div class="checkbox checkbox-info">
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareBuildStartTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareBuildStartTimeCommonOftOfCommon</label>
+</div><input type="text" rangepickername="datefilter" value="" class="form-control" />
+<div class="checkbox checkbox-info">
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareLowerBoundBuildStartTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundBuildStartTimeCommonOftOfCommon</label>
+</div>
+@Html.TextBox("lowerBoundBuildStartTimeCommonOftOfCommon", Model.Criteria.LowerBoundBuildStartTimeCommonOftOfCommon.ToString(), new { @readonly = "readonly", @class = "form-control" })
+<div class="checkbox checkbox-info">
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareUpperBoundBuildStartTimeCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundBuildStartTimeCommonOftOfCommon</label>
+</div>
+@Html.TextBox("upperBoundBuildStartTimeCommonOftOfCommon", Model.Criteria.UpperBoundBuildStartTimeCommonOftOfCommon.ToString(), new { @readonly = "readonly", @class = "form-control" })
+</div>
+<div class="form-group">
+<div class="checkbox checkbox-info">
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareIdCommonOfSolution_1OfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon</label>
+</div>
+@Html.DropDownListFor(model => model.Criteria.ValueToCompareIdCommonOfSolution_1OfCommon, (List<SelectListItem>)Model.SelectListOfMSBuildLogsExtended_Solution, MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Please_select_Solution____, new Dictionary<string,Object>{ { "class", "form-control" } })
+</div>
+                    <div class="form-group form-inline">
+                        <label class="control-label">Items per page : </label>
+                        @Html.DropDownListFor(model => model.QueryPagingSetting.PageSize, Model.SelectListOfPageSize, new Dictionary<string, Object> { { "class", "form-control" }, { "onchange", "this.form.submit();" } })
+                    </div>
+                    <div class="form-group form-inline">
+                        <label class="control-label">Sort by:</label>
+                        @Html.DropDownListFor(model => model.QueryOrderBySettingCollecionInString, Model.SelectListOfQueryOrderBySettingCollecionInString, new Dictionary<string, Object> { { "class", "form-control" }, { "onchange", "this.form.submit();" } })
+                    </div>
+                </div>
+                <div class="panel-footer nopadding">
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+    <button class="btn btn-default" role="button" type="submit" name="SearchToolBarBottom" title="@Framework.Resources.UIStringResource.SearchAlternativeText">
+        <span class="glyphicon glyphicon-search"></span>
+    </button>
+</div>
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_AddNew, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="AddNewToolBarBottom" title="@Framework.Resources.UIStringResource.AddNewAlternativeText">
+		<span class="glyphicon glyphicon-plus"></span>
+	</a>
+</div>
+<div class="btn-group">
+	<a href="location.href='@Url.Action(UrlStringsAlias.ActionName_Build_WPCommonOfBuild_Export, UrlStringsAlias.ControllerName_Build, new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="btn btn-default" role="button" type="button" name="ExportToolBarBottom" title="@Framework.Resources.UIStringResource.ExportAlternativeText">
+        <span class="glyphicon glyphicon-export"></span>
+    </a>
+</div>
+<div class="btn-group">
+	<a href="location.href='@Url.Action(UrlStringsAlias.ActionName_Build_WPCommonOfBuild_Export, UrlStringsAlias.ControllerName_Build, new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="btn btn-default" role="button" type="button" name="ExportToExcelToolBarBottom" title="@Framework.Resources.UIStringResource.ExportToExcelAlternativeText">
+        <span class="glyphicon glyphicon-export"></span>
+    </a>
+</div>
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_Import, UrlStringsAlias.ControllerName_Build)" class="btn btn-default" role="button" type="button" name="ImportToolBarBottom" title="@Framework.Resources.UIStringResource.ImportAlternativeText">
+		<span class="glyphicon glyphicon-import"></span>
+	</a>
+</div>
+</div>
+                </div>
+            </div>
+		}
+ </div>
+ <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 nopadding">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                <h3 style="display: inline;">@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Build, "WPCommonOfBuild", "Build")
+            </div>
+            <div class="table-responsive">
+<table id="MasterDataControl1" name="MasterDataControl1" class="table table-hover table-bordered table-striped">
+<thead>
+ <tr><th  class="hidden-xs visible-sm"></th>
+<th >@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Solution_1_Name</th>
+<th >@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Name</th>
+<th >@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.Description</th>
+<th  class="hidden-xs visible-smvisible-md visible-lg">@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.BuildStartTime</th>
+<th  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"></th></tr>
+</thead>
+<tbody>
     @if (Model != null && Model.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
     {
 		int index = 0;
         foreach (var item in Model.Result)
         {
 			index++;
-<tr><td ></td>
-<td >@Html.ActionLink(item.Solution_S1_1_Name, "WPEntityRelatedOfSolution", "Solution", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.SolutionId }, null)</td>
+<tr><td  class="hidden-xs visible-sm"></td>
+<td >@Html.ActionLink(item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.SolutionId }, null)</td>
 <td >@Html.DisplayFor(modelItem => item.Name)</td>
 <td >@Html.DisplayFor(modelItem => item.Description)</td>
 <td >@Html.DisplayFor(modelItem => item.BuildStartTime)</td>
-<td ><div class="buttonContainer">
-<input onclick="location.href='@Url.Action("WPEntityRelatedOfBuild", "Build", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" class="button button-Details" type="button" name="DetailsToolBarRightInList" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
-<input onclick="location.href='@Url.Action("Edit", "Build", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" class="button button-Edit" type="button" name="EditToolBarRightInList" value="@Framework.Resources.UIStringResource.EditAlternativeText" />
+<td  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+		<span class="glyphicon glyphicon-briefcase"></span>
+	</a>
+</div>
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Build_Edit, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resources.UIStringResource.EditAlternativeText">
+        <span class="glyphicon glyphicon-edit"></span>
+    </a>
+</div>
 </div></td></tr>
         }
     }
     else
     {
-<tr><td colspan="50" ><div class="error-label">@Model.StatusMessageOfResult</div></td></tr>
+<tr><td colspan="50" ><div class="text-danger">@Model.StatusMessageOfResult</div>
+</td></tr>
     }
+</tbody>
 </table>
-</div>
-<div>
-    @Html.PagedListPager(Url
-        , new PagerHtmlRenderer(
-        //Constructor mandatory values
-                currentPageNumber: Model.QueryPagingSetting.CurrentPage,
-                pageSize: Model.QueryPagingSetting.PageSize,
-                totalNumberOfItems: Model.QueryPagingSetting.CountOfRecords,
-                actionName: "WPCommonOfBuild",
-                controllerName: "Build",
-                routeValues: new RouteValueDictionary() { { "currentPage", "" } },
-                pageRouteValueName: "currentPage")
-                {
-                    //Properties
-                    PreviousLinkInnerHtml = "<strong>Previous</strong>",
-                    NextLinkInnerHtml = "<strong>Next<strong>",
-                    FirstLinkInnerHtml = "<strong>First</strong>",
-                    LastLinkInnerHtml = "<strong>Last</strong>"
-                });
-</div>
-</div>
-</div>
-</article>
+            </div>
+            <div class="pull-right">
+    @if (Model.Result != null)
+    {
+        var pagedResult = (PagedList.StaticPagedList<MSBuildLogsExtended.DataSourceEntities.Build.Default>)ViewBag.StaticPagedResult;
+        <text>
+            @Html.PagedListPager(pagedResult, currentPage => Url.Action(UrlStringsAlias.ActionName_Build_WPCommonOfBuild, new { currentPage = currentPage }), PagedList.Mvc.PagedListRenderOptions.OnlyShowFivePagesAtATime)
+        </text>
+    }
+            </div>
+        </div>
+ </div>
+ </div>
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryui")
-    @Scripts.Render("~/bundles/jqueryval")
-    @Scripts.Render("~/bundles/knockout")
-    @Scripts.Render("~/bundles/dataTables")
-    @Scripts.Render("~/bundles/bootstrap")
     <script type="text/javascript">
-        //http://www.softfinity.com/blog/using-ajax-with-knockout-js-and-asp-net-mvc-4-to-load-select-drop-down-options/
         $(document).ready($(function() {
             $('input[name=upperBoundBuildStartTimeCommonOftOfCommon]').datepicker({
                 autoclose: true,
@@ -185,6 +227,52 @@
                 todayBtn: false,
                 todayHighlight: false,
                 weekStart: 0
+            });
+            // Daterangepicker init
+            $(function() {
+                $('input[rangepickername="datefilter"]').daterangepicker({
+                    autoUpdateInput: false,
+                    locale: {
+                                cancelLabel: 'Clear'
+                            },
+                    ranges: {
+                               'Today': [moment(), moment()],
+                               'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                               'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                               'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                               'This Month': [moment().startOf('month'), moment().endOf('month')],
+                               'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                            }
+                });
+                $('input[rangepickername="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+                    var filterCheckbox = $(this).siblings(".input-group-addon").children('input');
+                    if (filterCheckbox.prop( "checked", false )) {
+                        filterCheckbox.trigger('click');
+                    }
+                    $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+                    $(this).next().children("input:text").first().val(picker.startDate.format('MM/DD/YYYY'));
+                    $(this).next().children("input:text").last().val(picker.endDate.format('MM/DD/YYYY'));
+                });
+                $('input[rangepickername="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+                    $(this).val('');
+                    var filterCheckbox = $(this).siblings(".input-group-addon").children('input');
+                    if (filterCheckbox.prop( "checked" )) {
+                        filterCheckbox.trigger('click');
+                    }
+                    $(this).next().children("input:text").first().val(picker.startDate.format('MM/DD/YYYY'));
+                    $(this).next().children("input:text").last().val(picker.endDate.format('MM/DD/YYYY'));
+                });
+                // Set daterange to reflect hidden inputs
+                $('input[rangepickername="datefilter"]').each(function(){
+                    var startDate = $(this).next().children("input:text").first().val()
+                    var endDate = $(this).next().children("input:text").last().val()
+                    if (startDate != '1/1/0001 12:00:00 AM') {
+                        $(this).data('daterangepicker').setStartDate( startDate );
+                    }
+                    if (endDate != '1/1/0001 12:00:00 AM') {
+                        $(this).data('daterangepicker').setEndDate( endDate );
+                    }
+                });
             });
         }));
         $(document).ready($(function() {
@@ -246,9 +334,7 @@
         function CascadingDDLViewModel() {
             var self = this;
         }
-        $(document).ready($(function() {
-            var objVM = new CascadingDDLViewModel();
-            ko.applyBindings(objVM);
-        }));
+        var objVM = new CascadingDDLViewModel();
+        ko.applyBindings(objVM);
     </script>
 }

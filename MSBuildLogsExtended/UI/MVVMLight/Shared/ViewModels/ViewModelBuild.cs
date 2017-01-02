@@ -2,11 +2,8 @@ using System;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using GalaSoft.MvvmLight.Messaging;
-#if (XAMARIN)
-#else
 using GalaSoft.MvvmLight.Threading;
-#endif
+using GalaSoft.MvvmLight.Messaging;
 
 namespace MSBuildLogsExtended.ViewModels
 {
@@ -25,7 +22,7 @@ namespace MSBuildLogsExtended.ViewModels
     /// </para>
     /// </summary>
     public class WPCommonOfBuildVM
-		: Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildCommon, MSBuildLogsExtended.DataSourceEntities.BuildCollection, MSBuildLogsExtended.DataSourceEntities.Build, MSBuildLogsExtended.DataSourceEntities.Build.DefaultCollection, MSBuildLogsExtended.DataSourceEntities.Build.Default>
+		: Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildLogsExtended.CommonBLLEntities.BuildChainedQueryCriteriaCommon, MSBuildLogsExtended.DataSourceEntities.BuildCollection, MSBuildLogsExtended.DataSourceEntities.Build, MSBuildLogsExtended.DataSourceEntities.Build.DefaultCollection, MSBuildLogsExtended.DataSourceEntities.Build.Default>
     {
         #region fields and properties
 
@@ -59,7 +56,7 @@ namespace MSBuildLogsExtended.ViewModels
 
 		#region Commands for Cascading ComboBox
 
-            this.GetDropDownContentsOfSolution_S1_1Command = new RelayCommand(this.GetDropDownContentsOfSolution_S1_1);
+            this.GetDropDownContentsOfSolution_1Command = new RelayCommand(this.GetDropDownContentsOfSolution_1);
 
 
 		#endregion Commands for Cascading ComboBox
@@ -159,7 +156,7 @@ namespace MSBuildLogsExtended.ViewModels
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 
-            MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuild();
+            MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuild();
 
             AsyncCallback asyncCallback = delegate(IAsyncResult result)
             {
@@ -191,7 +188,7 @@ namespace MSBuildLogsExtended.ViewModels
                 AssignSelectedValueFromSelectedItemToEntity(this.m_CurrentInEditingDefault);
 #endif
 
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild _Request = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild()
+                MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn _Request = new MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn()
 				{
 					Critieria = new MSBuildLogsExtended.DataSourceEntities.BuildCollection(),
 					BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
@@ -210,7 +207,7 @@ namespace MSBuildLogsExtended.ViewModels
             #region Syncronized wcf method call -- not in use/WPF only
 
             /*
-            MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuild.UpdateEntity(this.m_CurrentDefault);
+            MSBuildLogsExtended.CommonBLLIoC.IoCBuild.UpdateEntity(this.m_CurrentDefault);
 			*/
 
             #endregion Syncronized wcf method call -- not in use/WPF only
@@ -244,7 +241,7 @@ namespace MSBuildLogsExtended.ViewModels
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 			            
-			MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuild();
+			MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuild();
 
             AsyncCallback asyncCallback = delegate(IAsyncResult result)
             {
@@ -279,7 +276,7 @@ namespace MSBuildLogsExtended.ViewModels
                 AssignSelectedValueFromSelectedItemToEntity(this.m_NewItemDefault);
 #endif
 
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild _Request = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild()
+                MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn _Request = new MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn()
 				{
 					Critieria = new MSBuildLogsExtended.DataSourceEntities.BuildCollection(),
 					BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
@@ -300,7 +297,7 @@ namespace MSBuildLogsExtended.ViewModels
             /*
             MSBuildLogsExtended.DataSourceEntities.Build.Default _NewItem = new MSBuildLogsExtended.DataSourceEntities.Build.Default();
             this.m_EntityCollectionDefault.Add(_NewItem);
-            MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuild.InsertEntity(_NewItemDefault);
+            MSBuildLogsExtended.CommonBLLIoC.IoCBuild.InsertEntity(_NewItemDefault);
 			*/
 
             #endregion Syncronized wcf method call -- not in use/WPF only
@@ -322,7 +319,7 @@ namespace MSBuildLogsExtended.ViewModels
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 
-			MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuild();
+			MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuild();
 
             AsyncCallback asyncCallback = delegate(IAsyncResult result)
             {
@@ -355,7 +352,7 @@ namespace MSBuildLogsExtended.ViewModels
                 AssignSelectedValueFromSelectedItemToEntity(this.m_CurrentInEditingDefault);
 #endif
 
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild _Request = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild()
+                MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn _Request = new MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn()
 				{
 		            Critieria = new MSBuildLogsExtended.DataSourceEntities.BuildCollection(),
 					BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
@@ -374,7 +371,7 @@ namespace MSBuildLogsExtended.ViewModels
             #region Syncronized wcf method call -- not in use/WPF only
 
             /*
-            MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuild.DeleteEntity(this.m_CurrentDefault);//
+            MSBuildLogsExtended.CommonBLLIoC.IoCBuild.DeleteEntity(this.m_CurrentDefault);//
             this.m_EntityCollectionDefault.Remove(this.m_CurrentDefault);
 			*/
 
@@ -401,14 +398,14 @@ namespace MSBuildLogsExtended.ViewModels
         /// <param name="entity">The entity.</param>
         private void AssignSelectedValueFromSelectedItemToEntity(MSBuildLogsExtended.DataSourceEntities.Build.Default entity)
         {
-            entity.SolutionId = this.ParseDropDownContentsOfSolution_S1_1SelectedItem();
+            entity.SolutionId = this.ParseDropDownContentsOfSolution_1SelectedItem();
 
         }	
 #endif
 #if WINDOWS_PHONE
 		private void AssignSelectedValueFromSelectedItemToCritieriaOfDefault()
         {
-            this.m_Criteria.BusinessLogicLayerQueryCriteriaEntityBuildCommon.IdCommonOfSolution_S1_1.ValueToCompare = this.ParseDropDownContentsOfSolution_S1_1SelectedItem();
+            this.m_Criteria.BuildQueryCriteriaCommon.IdCommonOfSolution_1.ValueToCompare = this.ParseDropDownContentsOfSolution_1SelectedItem();
 			
         }
 #endif
@@ -426,7 +423,7 @@ namespace MSBuildLogsExtended.ViewModels
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 
-            MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuild();
+            MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuild();
 
             AsyncCallback asyncCallback = delegate(IAsyncResult result)
             {
@@ -492,7 +489,7 @@ namespace MSBuildLogsExtended.ViewModels
 #if WINDOWS_PHONE
 				this.AssignSelectedValueFromSelectedItemToCritieriaOfDefault();
 #endif
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon _Request = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon()
+                MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon _Request = new MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon()
 				{
 					Critieria = this.Criteria,
 					QueryPagingSetting = this.QueryPagingSetting,
@@ -520,7 +517,7 @@ namespace MSBuildLogsExtended.ViewModels
 
             this.m_EntityCollectionDefault.Clear();
 
-            MSBuildLogsExtended.DataSourceEntities.Build.DefaultCollection collection = MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuild.GetCollectionOfDefaultOfCommon(m_CriteriaOfGetCollectionOfDefaultOfCommon, this.m_QueryPagingSetting, this.m_QueryOrderBySettingCollection);
+            MSBuildLogsExtended.DataSourceEntities.Build.DefaultCollection collection = MSBuildLogsExtended.CommonBLLIoC.IoCBuild.GetCollectionOfDefaultOfCommon(m_CriteriaOfGetCollectionOfDefaultOfCommon, this.m_QueryPagingSetting, this.m_QueryOrderBySettingCollection);
             if(collection != null)
             {
                 foreach (MSBuildLogsExtended.DataSourceEntities.Build.Default item in collection)
@@ -548,73 +545,72 @@ namespace MSBuildLogsExtended.ViewModels
 
 		#region Commands for Cascading ComboBox
 
-        public ObservableCollection<Framework.NameValuePair> m_DropDownContentsOfSolution_S1_1 = new ObservableCollection<Framework.NameValuePair>();
+        public ObservableCollection<Framework.NameValuePair> m_DropDownContentsOfSolution_1 = new ObservableCollection<Framework.NameValuePair>();
 
-        public ObservableCollection<Framework.NameValuePair> DropDownContentsOfSolution_S1_1
+        public ObservableCollection<Framework.NameValuePair> DropDownContentsOfSolution_1
         {
             get
             {
-                return this.m_DropDownContentsOfSolution_S1_1;
+                return this.m_DropDownContentsOfSolution_1;
             }
             set
             {
-                if (this.m_DropDownContentsOfSolution_S1_1 == value)
+                if (this.m_DropDownContentsOfSolution_1 == value)
                 {
                     return;
                 }
 
-                this.m_DropDownContentsOfSolution_S1_1 = value;
-                RaisePropertyChanged("DropDownContentsOfSolution_S1_1");
+                this.m_DropDownContentsOfSolution_1 = value;
+                RaisePropertyChanged("DropDownContentsOfSolution_1");
             }
         }
 
 #if WINDOWS_PHONE
-        public Framework.NameValuePair m_DropDownContentsOfSolution_S1_1SelectedItem;
+        public Framework.NameValuePair m_DropDownContentsOfSolution_1SelectedItem;
         /// <summary>
         /// For Windows Phone PickList for now only
         /// </summary>
-        public Framework.NameValuePair DropDownContentsOfSolution_S1_1SelectedItem 
+        public Framework.NameValuePair DropDownContentsOfSolution_1SelectedItem 
         {
             get
             {
-                return this.m_DropDownContentsOfSolution_S1_1SelectedItem;
+                return this.m_DropDownContentsOfSolution_1SelectedItem;
             }
             set
             {
-                if (this.m_DropDownContentsOfSolution_S1_1SelectedItem == value)
+                if (this.m_DropDownContentsOfSolution_1SelectedItem == value)
                 {
                     return;
                 }
 
-                this.m_DropDownContentsOfSolution_S1_1SelectedItem = value;
-                RaisePropertyChanged("DropDownContentsOfSolution_S1_1SelectedItem");
+                this.m_DropDownContentsOfSolution_1SelectedItem = value;
+                RaisePropertyChanged("DropDownContentsOfSolution_1SelectedItem");
             }
         }
 
-        private System.Int32 ParseDropDownContentsOfSolution_S1_1SelectedItem()
+        private System.Int32 ParseDropDownContentsOfSolution_1SelectedItem()
         {
-            if (this.m_DropDownContentsOfSolution_S1_1SelectedItem == null)
+            if (this.m_DropDownContentsOfSolution_1SelectedItem == null)
             {
                 return default(System.Int32);
             }
             else
             {
-                return this.m_DropDownContentsOfSolution_S1_1SelectedItem.ParseToSystemInt32(this.DropDownContentsOfSolution_S1_1[0].Value);
+                return this.m_DropDownContentsOfSolution_1SelectedItem.ParseToSystemInt32(this.DropDownContentsOfSolution_1[0].Value);
             }
         }
 #endif
 
-#if ANDROID || __IOS__ || XAMARIN
-#elif NETFX_CORE
-        public RelayCommand<Windows.UI.Xaml.Controls.SelectionChangedEventArgs> GetDropDownContentsOfSolution_S1_1SelectionChangedCommand { get; private set; }
+#if NETFX_CORE
+        public RelayCommand<Windows.UI.Xaml.Controls.SelectionChangedEventArgs> GetDropDownContentsOfSolution_1SelectionChangedCommand { get; private set; }
 #else
-        public RelayCommand<System.Windows.Controls.SelectionChangedEventArgs> GetDropDownContentsOfSolution_S1_1SelectionChangedCommand { get; private set; }
+        public RelayCommand<System.Windows.Controls.SelectionChangedEventArgs> GetDropDownContentsOfSolution_1SelectionChangedCommand { get; private set; }
 #endif
 
-        public RelayCommand GetDropDownContentsOfSolution_S1_1Command { get; private set; }
-        public void GetDropDownContentsOfSolution_S1_1()
+        public RelayCommand GetDropDownContentsOfSolution_1Command { get; private set; }
+        public void GetDropDownContentsOfSolution_1()
         {
-            MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynSolution _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceSolution();
+            MSBuildLogsExtended.WcfContracts.ISolutionServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceSolution();
 
             AsyncCallback asyncCallback = delegate(IAsyncResult result)
             {
@@ -627,12 +623,12 @@ namespace MSBuildLogsExtended.ViewModels
                     {
                         var responseMessage = _Instance.EndGetCollectionOfNameValuePairOfAll(result);
                         Framework.NameValueCollection collection = responseMessage.Message;
-                        this.DropDownContentsOfSolution_S1_1.Clear();
+                        this.DropDownContentsOfSolution_1.Clear();
                         if (collection != null)
                         {
                             foreach (Framework.NameValuePair item in collection)
                             {
-                                this.DropDownContentsOfSolution_S1_1.Add(item);
+                                this.DropDownContentsOfSolution_1.Add(item);
                             }
                         }
                     });
@@ -645,9 +641,9 @@ namespace MSBuildLogsExtended.ViewModels
 
             try
             {
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedSolutionOfAll _Request = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedSolutionOfAll()
+                MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageUserDefinedOfAll _Request = new MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageUserDefinedOfAll()
                 {
-                    Critieria = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntitySolutionAll(),
+                    Critieria = new MSBuildLogsExtended.CommonBLLEntities.SolutionChainedQueryCriteriaAll(),
                     QueryPagingSetting = new Framework.EntityContracts.QueryPagingSetting(-1, -1),
                     QueryOrderBySettingCollection = new Framework.EntityContracts.QueryOrderBySettingCollection(null),
                     BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),

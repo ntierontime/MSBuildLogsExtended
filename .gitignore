@@ -6,7 +6,6 @@
 # User-specific files
 *.suo
 *.user
-*.csproj.user
 *.userosscache
 *.sln.docstates
 *.vcxproj.filters
@@ -44,11 +43,11 @@ TestResult.xml
 [Rr]eleasePS/
 dlldata.c
 
-# DNX
+# .NET Core
 project.lock.json
 project.fragment.lock.json
 artifacts/
-Properties/launchSettings.json
+**/Properties/launchSettings.json
 
 *_i.c
 *_p.c
@@ -197,6 +196,10 @@ ClientBin/
 ~$*
 *~
 *.dbmdl
+<<<<<<< HEAD
+=======
+*.jfm
+>>>>>>> refs/remotes/origin/AspNetMvc5
 *.dbproj.schemaview
 *.jfm
 *.pfx
@@ -274,5 +277,3 @@ __pycache__/
 
 # Cake - Uncomment if you are using it
 # tools/
-MSBuildLogsExtended/Wcf/WcfWebApp/log.txt
-MSBuildLogsExtended/Wcf/WcfWebApp/log.txt

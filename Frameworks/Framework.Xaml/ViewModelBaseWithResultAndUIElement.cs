@@ -5,7 +5,6 @@ using System.Text;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
 using System.Collections.ObjectModel;
-using Framework.EntityContracts;
 
 namespace Framework.Xaml
 {
@@ -20,7 +19,7 @@ namespace Framework.Xaml
         public ViewModelBaseWithResultAndUIElement()
             : base()
         {
-            this.ContentData = new Framework.EntityContracts.ContentData();
+			this.ContentData = new Framework.EntityContracts.ContentData();
 
             this.SelectionChangedCommand = new RelayCommand(SelectionChanged);
             this.RefreshCurrentEditingItemCommand = new RelayCommand(this.RefreshCurrentEditingItem);
@@ -719,10 +718,9 @@ namespace Framework.Xaml
 
         #endregion Search
 
-        public ContentData ContentData { get; set; }
+		public Framework.EntityContracts.ContentData ContentData { get; set; }
 
-
-#if WINDOWS_PHONE
+#if (WINDOWS_PHONE)
 
         #region InfinityScrollingSearch
 
@@ -741,7 +739,7 @@ namespace Framework.Xaml
         #endregion InfinityScrollingSearch
 
 #endif
-
+		
         #region Cleanup()
 
         public virtual void Cleanup()
@@ -830,3 +828,4 @@ namespace Framework.Xaml
         #endregion Business Entity Collection + Current Selected or editing Entity
     }
 }
+

@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 
 namespace Framework
 {
     public class ChangePasswordModel
     {
-
 #if (WINDOWS_PHONE || XAMARIN)
 #else
         [System.ComponentModel.DataAnnotations.Required]
@@ -33,3 +33,5 @@ namespace Framework
         public string ConfirmPassword { get; set; }
     }
 }
+
+

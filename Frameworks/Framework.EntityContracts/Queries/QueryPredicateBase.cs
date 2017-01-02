@@ -26,6 +26,11 @@ namespace Framework.EntityContracts
         public QueryPredicateBase()
         {
         }
+
+        public override string ToString()
+        {
+            return this.PredicateTypes.ToString();
+        }
     }
 
     /// <summary>
@@ -74,6 +79,11 @@ namespace Framework.EntityContracts
         }
 
         #endregion constructors
+
+        public override string ToString()
+        {
+            return string.Format("PredicateType:Framework.EntityContracts;Type:QueryPredicateBase", this.PredicateTypes.ToString(), typeof(TQueryEqualCriteria));
+        }
     }
 
     /// <summary>

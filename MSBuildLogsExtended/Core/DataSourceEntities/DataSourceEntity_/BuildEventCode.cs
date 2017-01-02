@@ -103,6 +103,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 #else
 		[Display(Name = "EventCode", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode))]
 		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode), ErrorMessageResourceName="EventCode_is_required")]
+		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode), ErrorMessageResourceName="The_length_of_EventCode_should_be_0_to_100")]
 #endif
         public System.String EventCode
         {
@@ -122,6 +123,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 
 #else
 		[Display(Name = "Description", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode))]
+		[StringLengthAttribute(1500, ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode), ErrorMessageResourceName="The_length_of_Description_should_be_0_to_1500")]
 #endif
         public System.String Description
         {
@@ -209,6 +211,8 @@ namespace MSBuildLogsExtended.DataSourceEntities
 
         public System.Int32 m_Id;
 
+        public System.String m_EventCode;
+
 
 			#endregion Storage Fields
 
@@ -221,6 +225,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
 			public KeyInformation()
 			{
 				this.Id = default(int);
+				this.EventCode = null;
 			}
 			/*
 			/// <summary>
@@ -257,6 +262,27 @@ namespace MSBuildLogsExtended.DataSourceEntities
             }
         }
 
+					[DataMember]
+#if (WINDOWS_PHONE || XAMARIN)
+
+#else
+		[Display(Name = "EventCode", ResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode))]
+		[RequiredAttribute(ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode), ErrorMessageResourceName="EventCode_is_required")]
+		[StringLengthAttribute(100, ErrorMessageResourceType = typeof(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode), ErrorMessageResourceName="The_length_of_EventCode_should_be_0_to_100")]
+#endif
+        public System.String EventCode
+        {
+            get
+            {
+                return m_EventCode;
+            }
+            set
+            {
+                m_EventCode = value;
+                RaisePropertyChanged("EventCode");
+            }
+        }
+
 
 			#endregion properties
 
@@ -271,6 +297,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
                 KeyInformation cloned = new KeyInformation();
 
 			cloned.m_Id = m_Id;
+			cloned.m_EventCode = m_EventCode;
 
                 return cloned;
             }
@@ -334,3 +361,4 @@ namespace MSBuildLogsExtended.DataSourceEntities
     {
     }
 }
+

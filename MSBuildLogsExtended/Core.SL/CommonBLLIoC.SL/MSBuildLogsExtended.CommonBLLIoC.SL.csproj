@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{974D7164-DB3C-409D-8CAB-8028B2B859F6}</ProjectGuid>
+    <ProjectGuid>{3975DF0E-CCC6-470B-A7B0-B5B777FF70C9}</ProjectGuid>
     <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -54,52 +54,50 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Maps\map.2.C.2.vsd" />
-    <Content Include="Maps\map.2.C.2.vsd.png" />
-    <Compile Include="..\..\Core\CommonBLLIoC\Static\BusinessLogicLayerEntityStaticBuild.cs">
-      <Link>Static\BusinessLogicLayerEntityStaticBuild.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLIoC\IoCBuild.cs">
+      <Link>IoCBuild.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLIoC\Static\BusinessLogicLayerEntityStaticBuildEventCode.cs">
-      <Link>Static\BusinessLogicLayerEntityStaticBuildEventCode.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLIoC\IoCBuildEventCode.cs">
+      <Link>IoCBuildEventCode.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLIoC\Static\BusinessLogicLayerEntityStaticBuildLog.cs">
-      <Link>Static\BusinessLogicLayerEntityStaticBuildLog.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLIoC\IoCBuildLog.cs">
+      <Link>IoCBuildLog.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLIoC\Static\BusinessLogicLayerEntityStaticSolution.cs">
-      <Link>Static\BusinessLogicLayerEntityStaticSolution.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLIoC\IoCSolution.cs">
+      <Link>IoCSolution.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Frameworks.SL\Framework.CommonBLLEntities.SL\Framework.CommonBLLEntities.SL.csproj">
-      <Project>{ef73b5c1-bb21-4a07-864e-e0ebfb2e7c33}</Project>
-      <Name>Framework.CommonBLLEntities.SL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CommonBLLEntities.SL\MSBuildLogsExtended.CommonBLLEntities.SL.csproj">
-      <Project>{77e21dc6-7d17-44d1-a444-3482aa1b1656}</Project>
+      <Project>{a50df48c-2a02-41d4-a2b6-a9815b6c3147}</Project>
       <Name>MSBuildLogsExtended.CommonBLLEntities.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataSourceEntities.SL\MSBuildLogsExtended.DataSourceEntities.SL.csproj">
-      <Project>{088d0ce9-8c01-464a-b1c2-34cfa6c76d1b}</Project>
+      <Project>{8d404e22-86bd-4a45-a122-c5c2b5b61e9a}</Project>
       <Name>MSBuildLogsExtended.DataSourceEntities.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\EntityContracts.SL\MSBuildLogsExtended.EntityContracts.SL.csproj">
-      <Project>{a7599ceb-adb1-406a-ac7c-0155758ab4b2}</Project>
+      <Project>{a109b303-c757-4fa3-be0e-6460dbcf9741}</Project>
       <Name>MSBuildLogsExtended.EntityContracts.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.SL\Framework.SL\Framework.SL.csproj">
-      <Project>{1888f6cc-7810-45a6-82be-02d7f5d9ca6f}</Project>
+      <Project>{3ad8826f-070f-40dd-8771-8d17ada7ebf2}</Project>
       <Name>Framework.SL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.SL\Framework.CommonBLLEntities.SL\Framework.CommonBLLEntities.SL.csproj">
+      <Project>{4e8e2dda-4989-47ca-848d-3784207bc888}</Project>
+      <Name>Framework.CommonBLLEntities.SL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.SL\Framework.DataSourceEntities.SL\Framework.DataSourceEntities.SL.csproj">
-      <Project>{8842686f-6006-4e6c-abc7-f0921870b9b7}</Project>
+      <Project>{83b25b4a-62bf-4bf0-a18c-623af31c7bdd}</Project>
       <Name>Framework.DataSourceEntities.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.SL\Framework.EntityContracts.SL\Framework.EntityContracts.SL.csproj">
-      <Project>{66bbec2c-d9d8-4a2c-92c7-274dfa0096cf}</Project>
+      <Project>{aff249f1-cd55-447c-81a2-0ec80715c391}</Project>
       <Name>Framework.EntityContracts.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\WcfContracts.SL\MSBuildLogsExtended.WcfContracts.SL.csproj">
-      <Project>{fc7bddb1-4de0-4ef2-b47b-6d40974a67dd}</Project>
+      <Project>{48d0515f-5c99-48c4-a53f-aebb2cf558c8}</Project>
       <Name>MSBuildLogsExtended.WcfContracts.SL</Name>
     </ProjectReference>
   </ItemGroup>
@@ -127,7 +125,7 @@
         <SilverlightProjectProperties />
       </FlavorProperties>
       <!-- For ProjectLinker -->
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="9919e99e-ea70-4994-b415-f5a727020d78" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="8a12c259-5b56-47af-a21c-0e709f5e8e54" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -238,14 +238,6 @@
       <Project>{d090796d-578a-4c52-b489-3e688ddd5206}</Project>
       <Name>MSBuildLogsExtended.EntityContracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\EntityFrameworkContext\MSBuildLogsExtended.EntityFrameworkContext.csproj">
-      <Project>{3dfd1dda-7d6f-497c-b4ad-caf679239390}</Project>
-      <Name>MSBuildLogsExtended.EntityFrameworkContext</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\EntityFrameworkDAL\MSBuildLogsExtended.EntityFrameworkDAL.csproj">
-      <Project>{e1175d88-a441-403e-8806-14bd0c0924b4}</Project>
-      <Name>MSBuildLogsExtended.EntityFrameworkDAL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\Core\Resources\MSBuildLogsExtended.Resources.csproj">
       <Project>{4072ddfc-04fb-4b21-b602-00678070187a}</Project>
       <Name>MSBuildLogsExtended.Resources</Name>
@@ -253,10 +245,6 @@
     <ProjectReference Include="..\..\..\Core\WcfContracts\MSBuildLogsExtended.WcfContracts.csproj">
       <Project>{9eb722de-3c2a-43ca-ab84-e2db1f814ea5}</Project>
       <Name>MSBuildLogsExtended.WcfContracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AspNetMvc40Controller\MSBuildLogsExtended.AspNetMvc40Controller.csproj">
-      <Project>{d3aa041b-2333-46fe-a5c4-c39f0ff8e9b6}</Project>
-      <Name>MSBuildLogsExtended.AspNetMvc40Controller</Name>
     </ProjectReference>
     <ProjectReference Include="..\AspNetMvc40ViewModel\MSBuildLogsExtended.AspNetMvc40ViewModel.csproj">
       <Project>{ac276481-ddf6-472d-9893-d7533629669b}</Project>

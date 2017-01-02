@@ -17,8 +17,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// Creates the BLL instance of entity <see cref="MSBuildLogsExtended.Build"/> tables for change notification.
         /// </summary>
         /// <param name="businessLogicLayerContext">The business logic layer context.</param>
-        /// <returns>Instance of MSBuildLogsExtended.WcfContracts.IBuildWcfService</returns>
-        public MSBuildLogsExtended.WcfContracts.IBuildWcfService CreateBLLInstanceOfEntityBuild(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
+        /// <returns>Instance of MSBuildLogsExtended.WcfContracts.IBuildService</returns>
+        public MSBuildLogsExtended.WcfContracts.IBuildService CreateBLLInstanceOfEntityBuild(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
 		{
 			return new MSBuildLogsExtended.WcfClientBLL.WcfClientEntityBuild();
 		}
@@ -29,8 +29,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// Creates the BLL instance of entity <see cref="MSBuildLogsExtended.BuildEventCode"/> tables for change notification.
         /// </summary>
         /// <param name="businessLogicLayerContext">The business logic layer context.</param>
-        /// <returns>Instance of MSBuildLogsExtended.WcfContracts.IBuildEventCodeWcfService</returns>
-        public MSBuildLogsExtended.WcfContracts.IBuildEventCodeWcfService CreateBLLInstanceOfEntityBuildEventCode(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
+        /// <returns>Instance of MSBuildLogsExtended.WcfContracts.IBuildEventCodeService</returns>
+        public MSBuildLogsExtended.WcfContracts.IBuildEventCodeService CreateBLLInstanceOfEntityBuildEventCode(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
 		{
 			return new MSBuildLogsExtended.WcfClientBLL.WcfClientEntityBuildEventCode();
 		}
@@ -41,8 +41,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// Creates the BLL instance of entity <see cref="MSBuildLogsExtended.BuildLog"/> tables for change notification.
         /// </summary>
         /// <param name="businessLogicLayerContext">The business logic layer context.</param>
-        /// <returns>Instance of MSBuildLogsExtended.WcfContracts.IBuildLogWcfService</returns>
-        public MSBuildLogsExtended.WcfContracts.IBuildLogWcfService CreateBLLInstanceOfEntityBuildLog(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
+        /// <returns>Instance of MSBuildLogsExtended.WcfContracts.IBuildLogService</returns>
+        public MSBuildLogsExtended.WcfContracts.IBuildLogService CreateBLLInstanceOfEntityBuildLog(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
 		{
 			return new MSBuildLogsExtended.WcfClientBLL.WcfClientEntityBuildLog();
 		}
@@ -53,8 +53,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// Creates the BLL instance of entity <see cref="MSBuildLogsExtended.Solution"/> tables for change notification.
         /// </summary>
         /// <param name="businessLogicLayerContext">The business logic layer context.</param>
-        /// <returns>Instance of MSBuildLogsExtended.WcfContracts.ISolutionWcfService</returns>
-        public MSBuildLogsExtended.WcfContracts.ISolutionWcfService CreateBLLInstanceOfEntitySolution(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
+        /// <returns>Instance of MSBuildLogsExtended.WcfContracts.ISolutionService</returns>
+        public MSBuildLogsExtended.WcfContracts.ISolutionService CreateBLLInstanceOfEntitySolution(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
 		{
 			return new MSBuildLogsExtended.WcfClientBLL.WcfClientEntitySolution();
 		}
@@ -82,31 +82,31 @@ namespace MSBuildLogsExtended.WcfClientBLL
 #if NETFX_CORE && DEBUG
 //  for WinRT/NETFX_CORE debug, because no app.config file
 
-        public const string Url_MSBuildLogsExtended_WcfClientBLL_WcfClientEntityAsynBuild = "http://localhost:10605/WcfMarkupBuild.svc";    
+        public const string Url_MSBuildLogsExtended_WcfClientBLL_WcfClientEntityAsynBuild = "http://localhost:10805/WcfMarkupBuild.svc";    
 
 
-        public const string Url_MSBuildLogsExtended_WcfClientBLL_WcfClientEntityAsynBuildEventCode = "http://localhost:10605/WcfMarkupBuildEventCode.svc";    
+        public const string Url_MSBuildLogsExtended_WcfClientBLL_WcfClientEntityAsynBuildEventCode = "http://localhost:10805/WcfMarkupBuildEventCode.svc";    
 
 
-        public const string Url_MSBuildLogsExtended_WcfClientBLL_WcfClientEntityAsynBuildLog = "http://localhost:10605/WcfMarkupBuildLog.svc";    
+        public const string Url_MSBuildLogsExtended_WcfClientBLL_WcfClientEntityAsynBuildLog = "http://localhost:10805/WcfMarkupBuildLog.svc";    
 
 
-        public const string Url_MSBuildLogsExtended_WcfClientBLL_WcfClientEntityAsynSolution = "http://localhost:10605/WcfMarkupSolution.svc";    
+        public const string Url_MSBuildLogsExtended_WcfClientBLL_WcfClientEntityAsynSolution = "http://localhost:10805/WcfMarkupSolution.svc";    
 
 
 #elif NETFX_CORE
 // for WinRT/NETFX_CORE release, because no app.config file
 
-        public const string Url_MSBuildLogsExtended_WcfClientBLL_WcfClientEntityAsynBuild = "http://localhost:10605/WcfMarkupBuild.svc";    
+        public const string Url_MSBuildLogsExtended_WcfClientBLL_WcfClientEntityAsynBuild = "http://localhost:10805/WcfMarkupBuild.svc";    
 
 
-        public const string Url_MSBuildLogsExtended_WcfClientBLL_WcfClientEntityAsynBuildEventCode = "http://localhost:10605/WcfMarkupBuildEventCode.svc";    
+        public const string Url_MSBuildLogsExtended_WcfClientBLL_WcfClientEntityAsynBuildEventCode = "http://localhost:10805/WcfMarkupBuildEventCode.svc";    
 
 
-        public const string Url_MSBuildLogsExtended_WcfClientBLL_WcfClientEntityAsynBuildLog = "http://localhost:10605/WcfMarkupBuildLog.svc";    
+        public const string Url_MSBuildLogsExtended_WcfClientBLL_WcfClientEntityAsynBuildLog = "http://localhost:10805/WcfMarkupBuildLog.svc";    
 
 
-        public const string Url_MSBuildLogsExtended_WcfClientBLL_WcfClientEntityAsynSolution = "http://localhost:10605/WcfMarkupSolution.svc";    
+        public const string Url_MSBuildLogsExtended_WcfClientBLL_WcfClientEntityAsynSolution = "http://localhost:10805/WcfMarkupSolution.svc";    
 
     
 #endif
@@ -117,8 +117,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// Creates the BLL instance of entity <see cref="MSBuildLogsExtended.Build"/> tables for change notification.
         /// </summary>
         /// <param name="businessLogicLayerContext">The business logic layer context.</param>
-        /// <returns>Instance of MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild</returns>
-        public MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild CreateBLLInstanceOfEntityBuild(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
+        /// <returns>Instance of MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn</returns>
+        public MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn CreateBLLInstanceOfEntityBuild(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
 		{
 #if NETFX_CORE
 // for WinRT/NETFX_CORE release, because no app.config file, initialize WcfClient with Url
@@ -134,8 +134,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// Creates the BLL instance of entity <see cref="MSBuildLogsExtended.BuildEventCode"/> tables for change notification.
         /// </summary>
         /// <param name="businessLogicLayerContext">The business logic layer context.</param>
-        /// <returns>Instance of MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuildEventCode</returns>
-        public MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuildEventCode CreateBLLInstanceOfEntityBuildEventCode(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
+        /// <returns>Instance of MSBuildLogsExtended.WcfContracts.IBuildEventCodeServiceAsyn</returns>
+        public MSBuildLogsExtended.WcfContracts.IBuildEventCodeServiceAsyn CreateBLLInstanceOfEntityBuildEventCode(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
 		{
 #if NETFX_CORE
 // for WinRT/NETFX_CORE release, because no app.config file, initialize WcfClient with Url
@@ -151,8 +151,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// Creates the BLL instance of entity <see cref="MSBuildLogsExtended.BuildLog"/> tables for change notification.
         /// </summary>
         /// <param name="businessLogicLayerContext">The business logic layer context.</param>
-        /// <returns>Instance of MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuildLog</returns>
-        public MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuildLog CreateBLLInstanceOfEntityBuildLog(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
+        /// <returns>Instance of MSBuildLogsExtended.WcfContracts.IBuildLogServiceAsyn</returns>
+        public MSBuildLogsExtended.WcfContracts.IBuildLogServiceAsyn CreateBLLInstanceOfEntityBuildLog(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
 		{
 #if NETFX_CORE
 // for WinRT/NETFX_CORE release, because no app.config file, initialize WcfClient with Url
@@ -168,8 +168,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// Creates the BLL instance of entity <see cref="MSBuildLogsExtended.Solution"/> tables for change notification.
         /// </summary>
         /// <param name="businessLogicLayerContext">The business logic layer context.</param>
-        /// <returns>Instance of MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynSolution</returns>
-        public MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynSolution CreateBLLInstanceOfEntitySolution(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
+        /// <returns>Instance of MSBuildLogsExtended.WcfContracts.ISolutionServiceAsyn</returns>
+        public MSBuildLogsExtended.WcfContracts.ISolutionServiceAsyn CreateBLLInstanceOfEntitySolution(Framework.CommonBLLEntities.BusinessLogicLayerContext businessLogicLayerContext)
 		{
 #if NETFX_CORE
 // for WinRT/NETFX_CORE release, because no app.config file, initialize WcfClient with Url
