@@ -56,7 +56,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
     /// <summary>
     ///  a property defined when <see cref="IBuildEventCodeCollection"/> is used in other classes.
     /// </summary>
-	public interface IBuildEventCodeCollection
+	public partial interface IBuildEventCodeCollection
 	{ 
         /// <summary>
         /// Gets or sets the BuildEventCodeCollection
@@ -70,7 +70,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
     /// <summary>
     /// message definition, pass single entry, pulled from database, to business logic layer. <see cref="BuildEventCodeCollection"/> and <see cref="Framework.DataSourceEntities.DataAccessLayerMessageBase&lt;T&gt;"/> />
     /// </summary>
-	public class DataAccessLayerMessageOfEntityCollectionBuildEventCode
+	public partial class DataAccessLayerMessageOfEntityCollectionBuildEventCode
         : Framework.DataSourceEntities.DataAccessLayerMessageBase<BuildEventCodeCollection>
     {
     }

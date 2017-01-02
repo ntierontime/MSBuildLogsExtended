@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("MSBuildLogsExtended.LinqToSqlContexts")]
 [assembly: AssemblyDescription("MSBuildLogsExtended.LinqToSqlContexts")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("nTierSketchUp")]
+[assembly: AssemblyCompany("NTIER ON TIME TECHNOLOGIES INC.")]
 [assembly: AssemblyProduct("MSBuildLogsExtended")]
-[assembly: AssemblyCopyright("Copyright © nTierSketchUp 2015")]
+[assembly: AssemblyCopyright("Copyright © NTIER ON TIME TECHNOLOGIES INC. 2016")]
 [assembly: AssemblyTrademark("MSBuildLogsExtended")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5f48ec62-60d3-4d77-8f5f-7d5b820227a8")]
+[assembly: Guid("7dea9522-e2e2-4737-8551-9dcbe4d657d2")]
 
 // Version information for an assembly consists of the following four values:
 //

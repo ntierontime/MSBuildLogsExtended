@@ -7,7 +7,7 @@ namespace MSBuildLogsExtended.EntityContracts
     /// <summary>
     /// provides common methods/actions/stubs on an entity. 
     /// </summary>
-	public static class IBuildLogHelper
+	public static partial class IBuildLogHelper
 	{
 
 		#region Copy<...>(...), Equals<...>(...), Clone<...>(...), ToString<...>(...), 

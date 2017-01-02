@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Framework.Xaml.SL")]
 [assembly: AssemblyDescription("Framework.Xaml")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("nTierSketchUp")]
+[assembly: AssemblyCompany("NTIER ON TIME TECHNOLOGIES INC.")]
 [assembly: AssemblyProduct("MSBuildLogsExtended")]
-[assembly: AssemblyCopyright("Copyright © nTierSketchUp 2015")]
+[assembly: AssemblyCopyright("Copyright © NTIER ON TIME TECHNOLOGIES INC. 2016")]
 [assembly: AssemblyTrademark("MSBuildLogsExtended")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("32952f65-8442-42b9-9ab1-f462a8f223f2")]
+[assembly: Guid("8c899cac-d4e2-4234-bb3c-2abad08b2f0b")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -1,25 +1,21 @@
+@using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.UrlStrings;
 @{
     ViewBag.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog;
 }
 @section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
-            <p>@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog
-            </p>
-        </div>
-    </section>
+    <h2>@ViewBag.Title</h2>
+    <h4>@ViewBag.Message</h4>
+	<p>@MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.BuildLog</p>
 }
-<div>
-	<ol>
-		<li>@Html.ActionLink(Framework.Resources.UIStringResource.AddNewAlternativeText, "Create")</li>
-		<li>@Html.ActionLink(Framework.Resources.UIStringResource.DeleteAlternativeText, "Delete") - Please add parameters to load this page </li>
-		<li>@Html.ActionLink(Framework.Resources.UIStringResource.EditAlternativeText, "Edit") - Please add parameters to load this page </li>
-		<li>@Html.ActionLink(Framework.Resources.UIStringResource.DetailsAlternativeText, "Details") - Please add parameters to load this page </li>
-		<li>@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_BuildLog, "WPCommonOfBuildLog")</li>
-		<li>@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerApp.EntityRelated_of_MSBuildLogsExtended_BuildLog, "WPEntityRelatedOfBuildLog")</li>
-	</ol>
+<div class="row">
+	<div class="col-md-12">
+		<ol>
+			<li>@Html.ActionLink(Framework.Resources.UIStringResource.AddNewAlternativeText, UrlStringsAlias.ActionName_BuildLog_AddNew)</li>
+			<li>@Html.ActionLink(Framework.Resources.UIStringResource.DeleteAlternativeText, UrlStringsAlias.ActionName_BuildLog_Delete) - Please add parameters to load this page </li>
+			<li>@Html.ActionLink(Framework.Resources.UIStringResource.EditAlternativeText, UrlStringsAlias.ActionName_BuildLog_Edit) - Please add parameters to load this page </li>
+			<li>@Html.ActionLink(Framework.Resources.UIStringResource.DetailsAlternativeText, UrlStringsAlias.ActionName_BuildLog_Details) - Please add parameters to load this page </li>
+			<li>@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_BuildLog, UrlStringsAlias.ActionName_BuildLog_WPCommonOfBuildLog)</li>
+			<li>@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerApp.EntityRelated_of_MSBuildLogsExtended_BuildLog, UrlStringsAlias.ActionName_BuildLog_WPEntityRelatedOfBuildLog)</li>
+		</ol>
+	</div>
 </div>

@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{431A4D9A-5861-4B82-AED8-C312BAE2A641}</ProjectGuid>
+    <ProjectGuid>{5D407E18-CC05-4089-A67B-AFF0EA5907AD}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -50,8 +50,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Maps\map.1.B.3.vsd" />
-    <Content Include="Maps\map.1.B.3.vsd.png" />
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\AlphabeticalOrderCategory.cs">
       <Link>AlphabeticalOrderCategory.cs</Link>
     </Compile>
@@ -88,6 +86,9 @@
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\SummaryData.cs">
       <Link>SummaryData.cs</Link>
     </Compile>
+    <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\ContentData.cs">
+      <Link>ViewModels\ContentData.cs</Link>
+    </Compile>
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\IViewModelBase.cs">
       <Link>ViewModels\IViewModelBase.cs</Link>
     </Compile>
@@ -121,16 +122,20 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework.WP\Framework.WP.csproj">
-      <Project>{8601cd0c-5985-4b2b-a333-52c0a5902ce2}</Project>
+      <Project>{1efe0717-bd17-4781-a7d2-7f0216a3460b}</Project>
       <Name>Framework.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Resources.WP\Framework.Resources.WP.csproj">
+      <Project>{e711039f-7408-49fc-8049-c756ac6852ca}</Project>
+      <Name>Framework.Resources.WP</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="mscorlib.Extensions" />
+    <Reference Include="system" />
     <Reference Include="System.Net" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Servicemodel" />
-    <Reference Include="mscorlib.Extensions" />
-    <Reference Include="system" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

@@ -25,18 +25,11 @@
             <RowDefinition   Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Solution_S1_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
-		<TextBlock Text="{Binding Path=Solution_S1_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Solution_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
+		<TextBlock Text="{Binding Path=Solution_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
 		<TextBlock Text="{Binding Path=Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.SolutionId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
-		<ComboBox ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntitySolution.Build, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM.DropDownContentsOfSolution_S1_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=SolutionId}">
-                  <i:Interaction.Triggers>
-                    <i:EventTrigger EventName="Loaded">
-                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM.GetDropDownContentsOfSolution_S1_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
-                    </i:EventTrigger>
-                </i:Interaction.Triggers>
-</ComboBox>
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
 		<TextBox Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="3" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Description, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />

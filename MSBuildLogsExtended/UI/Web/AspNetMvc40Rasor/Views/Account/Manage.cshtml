@@ -1,9 +1,9 @@
-@model MSBuildLogsExtended.AspNetMvc40Common.Models.LocalPasswordModel
+@model MSBuildLogsExtended.AspNetMvc40Rasor.Models.LocalPasswordModel
 @{
     ViewBag.Title = Framework.Resources.UIStringResource.Account_Manage_TitleText;
 }
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
+<hgroup>
+    <h2>@ViewBag.Title.</h2>
 </hgroup>
 <p class="message-success">@ViewBag.StatusMessage</p>
 <p>@Framework.Resources.UIStringResource.Account_Manage_Youreloggedinas <strong>@User.Identity.Name</strong>.</p>
@@ -20,6 +20,3 @@ else
     <h3>@Framework.Resources.UIStringResource.Account_Manage_Addanexternallogin</h3>
     @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
 </section>
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

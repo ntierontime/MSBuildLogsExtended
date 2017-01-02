@@ -7,7 +7,7 @@ namespace MSBuildLogsExtended.EntityContracts
     /// <summary>
     /// provides common methods/actions/stubs on an identifier of an entity.
     /// </summary>
-	public static class IBuildEventCodeIdentifierHelper
+	public static partial class IBuildEventCodeIdentifierHelper
 	{
 
 		#region Create new Identifier instance from Framework.NameValueCollection

@@ -22,7 +22,7 @@ namespace MSBuildLogsExtended.ViewModels
     /// </para>
     /// </summary>
     public class WPCommonOfBuildEventCodeVM
-		: Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerChainedQueryCriteriaEntityBuildEventCodeCommon, MSBuildLogsExtended.DataSourceEntities.BuildEventCodeCollection, MSBuildLogsExtended.DataSourceEntities.BuildEventCode>
+		: Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon, MSBuildLogsExtended.DataSourceEntities.BuildEventCodeCollection, MSBuildLogsExtended.DataSourceEntities.BuildEventCode>
     {
         #region fields and properties
 
@@ -148,7 +148,7 @@ namespace MSBuildLogsExtended.ViewModels
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 
-            MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuildEventCode _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuildEventCode();
+            MSBuildLogsExtended.WcfContracts.IBuildEventCodeServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuildEventCode();
 
             AsyncCallback asyncCallback = delegate(IAsyncResult result)
             {
@@ -180,7 +180,7 @@ namespace MSBuildLogsExtended.ViewModels
                 AssignSelectedValueFromSelectedItemToEntity(this.m_CurrentInEditing);
 #endif
 
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuildEventCode _Request = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuildEventCode()
+                MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeRequestMessageBuiltIn _Request = new MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeRequestMessageBuiltIn()
 				{
 					Critieria = new MSBuildLogsExtended.DataSourceEntities.BuildEventCodeCollection(),
 					BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
@@ -199,7 +199,7 @@ namespace MSBuildLogsExtended.ViewModels
             #region Syncronized wcf method call -- not in use/WPF only
 
             /*
-            MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuildEventCode.UpdateEntity(this.m_Current);
+            MSBuildLogsExtended.CommonBLLIoC.IoCBuildEventCode.UpdateEntity(this.m_Current);
 			*/
 
             #endregion Syncronized wcf method call -- not in use/WPF only
@@ -233,7 +233,7 @@ namespace MSBuildLogsExtended.ViewModels
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 			            
-			MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuildEventCode _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuildEventCode();
+			MSBuildLogsExtended.WcfContracts.IBuildEventCodeServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuildEventCode();
 
             AsyncCallback asyncCallback = delegate(IAsyncResult result)
             {
@@ -268,7 +268,7 @@ namespace MSBuildLogsExtended.ViewModels
                 AssignSelectedValueFromSelectedItemToEntity(this.m_NewItem);
 #endif
 
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuildEventCode _Request = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuildEventCode()
+                MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeRequestMessageBuiltIn _Request = new MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeRequestMessageBuiltIn()
 				{
 					Critieria = new MSBuildLogsExtended.DataSourceEntities.BuildEventCodeCollection(),
 					BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
@@ -289,7 +289,7 @@ namespace MSBuildLogsExtended.ViewModels
             /*
             MSBuildLogsExtended.DataSourceEntities.BuildEventCode _NewItem = new MSBuildLogsExtended.DataSourceEntities.BuildEventCode();
             this.m_EntityCollection.Add(_NewItem);
-            MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuildEventCode.InsertEntity(_NewItemDefault);
+            MSBuildLogsExtended.CommonBLLIoC.IoCBuildEventCode.InsertEntity(_NewItemDefault);
 			*/
 
             #endregion Syncronized wcf method call -- not in use/WPF only
@@ -311,7 +311,7 @@ namespace MSBuildLogsExtended.ViewModels
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 
-			MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuildEventCode _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuildEventCode();
+			MSBuildLogsExtended.WcfContracts.IBuildEventCodeServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuildEventCode();
 
             AsyncCallback asyncCallback = delegate(IAsyncResult result)
             {
@@ -344,7 +344,7 @@ namespace MSBuildLogsExtended.ViewModels
                 AssignSelectedValueFromSelectedItemToEntity(this.m_CurrentInEditing);
 #endif
 
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuildEventCode _Request = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuildEventCode()
+                MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeRequestMessageBuiltIn _Request = new MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeRequestMessageBuiltIn()
 				{
 		            Critieria = new MSBuildLogsExtended.DataSourceEntities.BuildEventCodeCollection(),
 					BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
@@ -363,7 +363,7 @@ namespace MSBuildLogsExtended.ViewModels
             #region Syncronized wcf method call -- not in use/WPF only
 
             /*
-            MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuildEventCode.DeleteEntity(this.m_Current);//
+            MSBuildLogsExtended.CommonBLLIoC.IoCBuildEventCode.DeleteEntity(this.m_Current);//
             this.m_EntityCollection.Remove(this.m_Current);
 			*/
 
@@ -408,7 +408,7 @@ namespace MSBuildLogsExtended.ViewModels
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 
-            MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuildEventCode _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuildEventCode();
+            MSBuildLogsExtended.WcfContracts.IBuildEventCodeServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuildEventCode();
 
             AsyncCallback asyncCallback = delegate(IAsyncResult result)
             {
@@ -472,7 +472,7 @@ namespace MSBuildLogsExtended.ViewModels
             try
             {
 
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildEventCodeOfCommon _Request = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildEventCodeOfCommon()
+                MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon _Request = new MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon()
 				{
 					Critieria = this.Criteria,
 					QueryPagingSetting = this.QueryPagingSetting,
@@ -500,7 +500,7 @@ namespace MSBuildLogsExtended.ViewModels
 
             this.m_EntityCollection.Clear();
 
-            MSBuildLogsExtended.DataSourceEntities.BuildEventCodeCollection collection = MSBuildLogsExtended.CommonBLLIoC.BusinessLogicLayerEntityStaticBuildEventCode.GetCollectionOfEntityOfCommon(m_CriteriaOfGetCollectionOfEntityOfCommon, this.m_QueryPagingSetting, this.m_QueryOrderBySettingCollection);
+            MSBuildLogsExtended.DataSourceEntities.BuildEventCodeCollection collection = MSBuildLogsExtended.CommonBLLIoC.IoCBuildEventCode.GetCollectionOfEntityOfCommon(m_CriteriaOfGetCollectionOfEntityOfCommon, this.m_QueryPagingSetting, this.m_QueryOrderBySettingCollection);
             if(collection != null)
             {
                 foreach (MSBuildLogsExtended.DataSourceEntities.BuildEventCode item in collection)

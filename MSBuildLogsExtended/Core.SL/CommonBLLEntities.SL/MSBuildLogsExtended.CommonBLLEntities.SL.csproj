@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{77E21DC6-7D17-44D1-A444-3482AA1B1656}</ProjectGuid>
+    <ProjectGuid>{A50DF48C-2A02-41D4-A2B6-A9815B6C3147}</ProjectGuid>
     <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -54,112 +54,110 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Maps\map.2.B.2.vsd" />
-    <Content Include="Maps\map.2.B.2.vsd.png" />
-    <Compile Include="..\..\Core\CommonBLLEntities\ChainedQueryCriteria\BusinessLogicLayerChainedQueryCriteriaEntityBuild.cs">
-      <Link>ChainedQueryCriteria\BusinessLogicLayerChainedQueryCriteriaEntityBuild.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\ChainedQueryCriteria\BuildChainedQueryCriteria.cs">
+      <Link>ChainedQueryCriteria\BuildChainedQueryCriteria.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\ChainedQueryCriteria\BusinessLogicLayerChainedQueryCriteriaEntityBuildEventCode.cs">
-      <Link>ChainedQueryCriteria\BusinessLogicLayerChainedQueryCriteriaEntityBuildEventCode.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\ChainedQueryCriteria\BuildEventCodeChainedQueryCriteria.cs">
+      <Link>ChainedQueryCriteria\BuildEventCodeChainedQueryCriteria.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\ChainedQueryCriteria\BusinessLogicLayerChainedQueryCriteriaEntityBuildLog.cs">
-      <Link>ChainedQueryCriteria\BusinessLogicLayerChainedQueryCriteriaEntityBuildLog.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\ChainedQueryCriteria\BuildLogChainedQueryCriteria.cs">
+      <Link>ChainedQueryCriteria\BuildLogChainedQueryCriteria.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\ChainedQueryCriteria\BusinessLogicLayerChainedQueryCriteriaEntitySolution.cs">
-      <Link>ChainedQueryCriteria\BusinessLogicLayerChainedQueryCriteriaEntitySolution.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\ChainedQueryCriteria\SolutionChainedQueryCriteria.cs">
+      <Link>ChainedQueryCriteria\SolutionChainedQueryCriteria.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\QueryCriteria\BusinessLogicLayerQueryCriteriaEntityBuild.cs">
-      <Link>QueryCriteria\BusinessLogicLayerQueryCriteriaEntityBuild.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\QueryCriteria\BuildQueryCriteria.cs">
+      <Link>QueryCriteria\BuildQueryCriteria.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\QueryCriteria\BusinessLogicLayerQueryCriteriaEntityBuildEventCode.cs">
-      <Link>QueryCriteria\BusinessLogicLayerQueryCriteriaEntityBuildEventCode.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\QueryCriteria\BuildEventCodeQueryCriteria.cs">
+      <Link>QueryCriteria\BuildEventCodeQueryCriteria.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\QueryCriteria\BusinessLogicLayerQueryCriteriaEntityBuildLog.cs">
-      <Link>QueryCriteria\BusinessLogicLayerQueryCriteriaEntityBuildLog.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\QueryCriteria\BuildLogQueryCriteria.cs">
+      <Link>QueryCriteria\BuildLogQueryCriteria.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\QueryCriteria\BusinessLogicLayerQueryCriteriaEntitySolution.cs">
-      <Link>QueryCriteria\BusinessLogicLayerQueryCriteriaEntitySolution.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\QueryCriteria\SolutionQueryCriteria.cs">
+      <Link>QueryCriteria\SolutionQueryCriteria.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesBuiltIn\BusinessLogicLayerRequestMessageBuiltInBuild.cs">
-      <Link>RequestMessagesBuiltIn\BusinessLogicLayerRequestMessageBuiltInBuild.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesBuiltIn\BuildRequestMessageBuiltIn.cs">
+      <Link>RequestMessagesBuiltIn\BuildRequestMessageBuiltIn.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesBuiltIn\BusinessLogicLayerRequestMessageBuiltInBuildEventCode.cs">
-      <Link>RequestMessagesBuiltIn\BusinessLogicLayerRequestMessageBuiltInBuildEventCode.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesBuiltIn\BuildEventCodeRequestMessageBuiltIn.cs">
+      <Link>RequestMessagesBuiltIn\BuildEventCodeRequestMessageBuiltIn.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesBuiltIn\BusinessLogicLayerRequestMessageBuiltInBuildLog.cs">
-      <Link>RequestMessagesBuiltIn\BusinessLogicLayerRequestMessageBuiltInBuildLog.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesBuiltIn\BuildLogRequestMessageBuiltIn.cs">
+      <Link>RequestMessagesBuiltIn\BuildLogRequestMessageBuiltIn.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesBuiltIn\BusinessLogicLayerRequestMessageBuiltInSolution.cs">
-      <Link>RequestMessagesBuiltIn\BusinessLogicLayerRequestMessageBuiltInSolution.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesBuiltIn\SolutionRequestMessageBuiltIn.cs">
+      <Link>RequestMessagesBuiltIn\SolutionRequestMessageBuiltIn.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesUserDefined\BusinessLogicLayerRequestMessageUserDefinedBuild.cs">
-      <Link>RequestMessagesUserDefined\BusinessLogicLayerRequestMessageUserDefinedBuild.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesUserDefined\BuildRequestMessageUserDefined.cs">
+      <Link>RequestMessagesUserDefined\BuildRequestMessageUserDefined.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesUserDefined\BusinessLogicLayerRequestMessageUserDefinedBuildEventCode.cs">
-      <Link>RequestMessagesUserDefined\BusinessLogicLayerRequestMessageUserDefinedBuildEventCode.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesUserDefined\BuildEventCodeRequestMessageUserDefined.cs">
+      <Link>RequestMessagesUserDefined\BuildEventCodeRequestMessageUserDefined.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesUserDefined\BusinessLogicLayerRequestMessageUserDefinedBuildLog.cs">
-      <Link>RequestMessagesUserDefined\BusinessLogicLayerRequestMessageUserDefinedBuildLog.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesUserDefined\BuildLogRequestMessageUserDefined.cs">
+      <Link>RequestMessagesUserDefined\BuildLogRequestMessageUserDefined.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesUserDefined\BusinessLogicLayerRequestMessageUserDefinedSolution.cs">
-      <Link>RequestMessagesUserDefined\BusinessLogicLayerRequestMessageUserDefinedSolution.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\RequestMessagesUserDefined\SolutionRequestMessageUserDefined.cs">
+      <Link>RequestMessagesUserDefined\SolutionRequestMessageUserDefined.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesBuiltIn\BusinessLogicLayerResponseMessageBuiltInBuild.cs">
-      <Link>ResponseMessagesBuiltIn\BusinessLogicLayerResponseMessageBuiltInBuild.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesBuiltIn\BuildResponseMessageBuiltIn.cs">
+      <Link>ResponseMessagesBuiltIn\BuildResponseMessageBuiltIn.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesBuiltIn\BusinessLogicLayerResponseMessageBuiltInBuildEventCode.cs">
-      <Link>ResponseMessagesBuiltIn\BusinessLogicLayerResponseMessageBuiltInBuildEventCode.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesBuiltIn\BuildEventCodeResponseMessageBuiltIn.cs">
+      <Link>ResponseMessagesBuiltIn\BuildEventCodeResponseMessageBuiltIn.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesBuiltIn\BusinessLogicLayerResponseMessageBuiltInBuildLog.cs">
-      <Link>ResponseMessagesBuiltIn\BusinessLogicLayerResponseMessageBuiltInBuildLog.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesBuiltIn\BuildLogResponseMessageBuiltIn.cs">
+      <Link>ResponseMessagesBuiltIn\BuildLogResponseMessageBuiltIn.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesBuiltIn\BusinessLogicLayerResponseMessageBuiltInSolution.cs">
-      <Link>ResponseMessagesBuiltIn\BusinessLogicLayerResponseMessageBuiltInSolution.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesBuiltIn\SolutionResponseMessageBuiltIn.cs">
+      <Link>ResponseMessagesBuiltIn\SolutionResponseMessageBuiltIn.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesUserDefined\BusinessLogicLayerResponseMessageUserDefinedBuild.cs">
-      <Link>ResponseMessagesUserDefined\BusinessLogicLayerResponseMessageUserDefinedBuild.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesUserDefined\BuildResponseMessageUserDefined.cs">
+      <Link>ResponseMessagesUserDefined\BuildResponseMessageUserDefined.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesUserDefined\BusinessLogicLayerResponseMessageUserDefinedBuildEventCode.cs">
-      <Link>ResponseMessagesUserDefined\BusinessLogicLayerResponseMessageUserDefinedBuildEventCode.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesUserDefined\BuildEventCodeResponseMessageUserDefined.cs">
+      <Link>ResponseMessagesUserDefined\BuildEventCodeResponseMessageUserDefined.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesUserDefined\BusinessLogicLayerResponseMessageUserDefinedBuildLog.cs">
-      <Link>ResponseMessagesUserDefined\BusinessLogicLayerResponseMessageUserDefinedBuildLog.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesUserDefined\BuildLogResponseMessageUserDefined.cs">
+      <Link>ResponseMessagesUserDefined\BuildLogResponseMessageUserDefined.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesUserDefined\BusinessLogicLayerResponseMessageUserDefinedSolution.cs">
-      <Link>ResponseMessagesUserDefined\BusinessLogicLayerResponseMessageUserDefinedSolution.cs</Link>
+    <Compile Include="..\..\Core\CommonBLLEntities\ResponseMessagesUserDefined\SolutionResponseMessageUserDefined.cs">
+      <Link>ResponseMessagesUserDefined\SolutionResponseMessageUserDefined.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataSourceEntities.SL\MSBuildLogsExtended.DataSourceEntities.SL.csproj">
-      <Project>{088d0ce9-8c01-464a-b1c2-34cfa6c76d1b}</Project>
+      <Project>{8d404e22-86bd-4a45-a122-c5c2b5b61e9a}</Project>
       <Name>MSBuildLogsExtended.DataSourceEntities.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\EntityContracts.SL\MSBuildLogsExtended.EntityContracts.SL.csproj">
-      <Project>{a7599ceb-adb1-406a-ac7c-0155758ab4b2}</Project>
+      <Project>{a109b303-c757-4fa3-be0e-6460dbcf9741}</Project>
       <Name>MSBuildLogsExtended.EntityContracts.SL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks.SL\Framework.SL\Framework.SL.csproj">
+      <Project>{3ad8826f-070f-40dd-8771-8d17ada7ebf2}</Project>
+      <Name>Framework.SL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.SL\Framework.CommonBLLEntities.SL\Framework.CommonBLLEntities.SL.csproj">
-      <Project>{ef73b5c1-bb21-4a07-864e-e0ebfb2e7c33}</Project>
+      <Project>{4e8e2dda-4989-47ca-848d-3784207bc888}</Project>
       <Name>Framework.CommonBLLEntities.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.SL\Framework.DataSourceEntities.SL\Framework.DataSourceEntities.SL.csproj">
-      <Project>{8842686f-6006-4e6c-abc7-f0921870b9b7}</Project>
+      <Project>{83b25b4a-62bf-4bf0-a18c-623af31c7bdd}</Project>
       <Name>Framework.DataSourceEntities.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.SL\Framework.EntityContracts.SL\Framework.EntityContracts.SL.csproj">
-      <Project>{66bbec2c-d9d8-4a2c-92c7-274dfa0096cf}</Project>
+      <Project>{aff249f1-cd55-447c-81a2-0ec80715c391}</Project>
       <Name>Framework.EntityContracts.SL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Frameworks.SL\Framework.SL\Framework.SL.csproj">
-      <Project>{1888f6cc-7810-45a6-82be-02d7f5d9ca6f}</Project>
-      <Name>Framework.SL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="mscorlib" />
     <Reference Include="system" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Servicemodel" />
-    <Reference Include="mscorlib" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
@@ -179,7 +177,7 @@
         <SilverlightProjectProperties />
       </FlavorProperties>
       <!-- For ProjectLinker -->
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="de7d8090-bff6-4641-9720-7f44afed1832" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="f201379d-034b-4892-9aec-927a3d67d260" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

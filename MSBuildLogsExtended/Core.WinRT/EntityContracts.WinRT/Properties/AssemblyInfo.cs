@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("MSBuildLogsExtended.EntityContracts.WinRT")]
 [assembly: AssemblyDescription("MSBuildLogsExtended.EntityContracts")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("nTierSketchUp")]
+[assembly: AssemblyCompany("NTIER ON TIME TECHNOLOGIES INC.")]
 [assembly: AssemblyProduct("MSBuildLogsExtended")]
-[assembly: AssemblyCopyright("Copyright © nTierSketchUp 2015")]
+[assembly: AssemblyCopyright("Copyright © NTIER ON TIME TECHNOLOGIES INC. 2016")]
 [assembly: AssemblyTrademark("MSBuildLogsExtended")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c4a2686f-3130-43d9-98e5-135ddf4521f5")]
+[assembly: Guid("871e68c5-1a97-446a-862c-391a3ecd8b6f")]
 
 // Version information for an assembly consists of the following four values:
 //

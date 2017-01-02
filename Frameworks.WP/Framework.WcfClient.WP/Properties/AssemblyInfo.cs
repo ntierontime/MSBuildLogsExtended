@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Framework.WcfClient.WP")]
 [assembly: AssemblyDescription("Framework.WcfClient")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("nTierSketchUp")]
+[assembly: AssemblyCompany("NTIER ON TIME TECHNOLOGIES INC.")]
 [assembly: AssemblyProduct("MSBuildLogsExtended")]
-[assembly: AssemblyCopyright("Copyright © nTierSketchUp 2015")]
+[assembly: AssemblyCopyright("Copyright © NTIER ON TIME TECHNOLOGIES INC. 2016")]
 [assembly: AssemblyTrademark("MSBuildLogsExtended")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("32d416e1-0a35-47db-9591-575e3471570f")]
+[assembly: Guid("867f6131-9974-441a-b6e6-6e58659eb7ef")]
 
 // Version information for an assembly consists of the following four values:
 //

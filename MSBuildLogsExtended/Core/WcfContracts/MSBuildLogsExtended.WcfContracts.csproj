@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9EB722DE-3C2A-43CA-AB84-E2DB1F814EA5}</ProjectGuid>
+    <ProjectGuid>{23BF8E7C-DF8C-43F2-9153-53DE5EE23C86}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.WcfContracts</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.WcfContracts</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -32,42 +32,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Runtime.Serialization" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <Compile Include="IBusinessLogicLayerFactory.cs" />
-    <Compile Include="IBuildWcfService.cs" />
-    <Compile Include="IBuildEventCodeWcfService.cs" />
-    <Compile Include="IBuildLogWcfService.cs" />
-    <Compile Include="ISolutionWcfService.cs" />
-    <Compile Include="WcfServiceContractAsynBuild.cs" />
-    <Compile Include="WcfServiceContractAsynBuildEventCode.cs" />
-    <Compile Include="WcfServiceContractAsynBuildLog.cs" />
-    <Compile Include="WcfServiceContractAsynSolution.cs" />
+    <Compile Include="IBuildService.cs" />
+    <Compile Include="IBuildEventCodeService.cs" />
+    <Compile Include="IBuildLogService.cs" />
+    <Compile Include="ISolutionService.cs" />
+    <Compile Include="IBuildServiceAsyn.cs" />
+    <Compile Include="IBuildEventCodeServiceAsyn.cs" />
+    <Compile Include="IBuildLogServiceAsyn.cs" />
+    <Compile Include="ISolutionServiceAsyn.cs" />
     <Compile Include="WcfServiceResolver.cs" />
-    <Content Include="Maps\map.2.B.2.vsd" />
-    <Content Include="Maps\map.2.B.2.vsd.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonBLLEntities\MSBuildLogsExtended.CommonBLLEntities.csproj">
-      <Project>{de7d8090-bff6-4641-9720-7f44afed1832}</Project>
+      <Project>{f201379d-034b-4892-9aec-927a3d67d260}</Project>
       <Name>MSBuildLogsExtended.CommonBLLEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataSourceEntities\MSBuildLogsExtended.DataSourceEntities.csproj">
-      <Project>{806a9ab2-2edd-42d2-a3ca-a2acba0cedd7}</Project>
+      <Project>{37102465-556b-49e7-8ca2-a7814e45de36}</Project>
       <Name>MSBuildLogsExtended.DataSourceEntities</Name>
     </ProjectReference>
     <ProjectReference Include="..\EntityContracts\MSBuildLogsExtended.EntityContracts.csproj">
-      <Project>{d090796d-578a-4c52-b489-3e688ddd5206}</Project>
+      <Project>{a9940920-207f-471d-8164-13d5a4b518ba}</Project>
       <Name>MSBuildLogsExtended.EntityContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
@@ -88,15 +76,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

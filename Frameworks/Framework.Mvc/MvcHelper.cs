@@ -15,7 +15,7 @@ namespace Framework.Mvc
             {
                 foreach (Framework.NameValuePair nvp in input)
                 {
-                    selectList.Add(new SelectListItem { Text = nvp.Name, Value = nvp.Value });
+                    selectList.Add(new SelectListItem { Text = nvp.Name, Value = nvp.Value.Trim() });
                 }
             }
             return selectList;
@@ -45,3 +45,5 @@ namespace Framework.Mvc
         }
     }
 }
+
+

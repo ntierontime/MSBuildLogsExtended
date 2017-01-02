@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D53B35B3-7244-41B5-B8F7-2E6DC46B257B}</ProjectGuid>
+    <ProjectGuid>{005AF74C-D514-4060-8E60-3514C782B706}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -50,8 +50,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Maps\map.2.D.2.vsd" />
-    <Content Include="Maps\map.2.D.2.vsd.png" />
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerApp.resx">
       <Link>UIStringResourcePerApp.resx</Link>
     </EmbeddedResource>
@@ -95,7 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks.WP\Framework.WP\Framework.WP.csproj">
-      <Project>{8601cd0c-5985-4b2b-a333-52c0a5902ce2}</Project>
+      <Project>{1efe0717-bd17-4781-a7d2-7f0216a3460b}</Project>
       <Name>Framework.WP</Name>
     </ProjectReference>
   </ItemGroup>
@@ -122,7 +120,7 @@
   <ProjectExtensions>
     <VisualStudio>
       <!-- For ProjectLinker -->
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="4072ddfc-04fb-4b21-b602-00678070187a" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="ada3b560-c0b9-42d0-92ff-a76462e8d524" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

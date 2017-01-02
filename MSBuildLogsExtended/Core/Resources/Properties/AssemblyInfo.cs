@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("MSBuildLogsExtended.Resources")]
 [assembly: AssemblyDescription("MSBuildLogsExtended.Resources")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("nTierSketchUp")]
+[assembly: AssemblyCompany("NTIER ON TIME TECHNOLOGIES INC.")]
 [assembly: AssemblyProduct("MSBuildLogsExtended")]
-[assembly: AssemblyCopyright("Copyright © nTierSketchUp 2015")]
+[assembly: AssemblyCopyright("Copyright © NTIER ON TIME TECHNOLOGIES INC. 2016")]
 [assembly: AssemblyTrademark("MSBuildLogsExtended")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("4072ddfc-04fb-4b21-b602-00678070187a")]
+[assembly: Guid("ada3b560-c0b9-42d0-92ff-a76462e8d524")]
 
 // Version information for an assembly consists of the following four values:
 //

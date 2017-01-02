@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{754EB260-3EDB-4885-8095-646ADDE5C9E5}</ProjectGuid>
+    <ProjectGuid>{AB89F1F0-E4B6-4538-8DF5-3CD1E1BFEB2D}</ProjectGuid>
     <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -54,8 +54,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Maps\map.2.D.2.vsd" />
-    <Content Include="Maps\map.2.D.2.vsd.png" />
     <EmbeddedResource Include="..\..\Core\Resources\UIStringResourcePerApp.resx">
       <Link>UIStringResourcePerApp.resx</Link>
     </EmbeddedResource>
@@ -99,15 +97,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks.SL\Framework.SL\Framework.SL.csproj">
-      <Project>{1888f6cc-7810-45a6-82be-02d7f5d9ca6f}</Project>
+      <Project>{3ad8826f-070f-40dd-8771-8d17ada7ebf2}</Project>
       <Name>Framework.SL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
+    <Reference Include="system" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Servicemodel" />
-    <Reference Include="system" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
@@ -127,7 +125,7 @@
         <SilverlightProjectProperties />
       </FlavorProperties>
       <!-- For ProjectLinker -->
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="4072ddfc-04fb-4b21-b602-00678070187a" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="ada3b560-c0b9-42d0-92ff-a76462e8d524" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

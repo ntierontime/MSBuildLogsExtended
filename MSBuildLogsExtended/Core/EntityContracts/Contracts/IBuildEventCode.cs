@@ -6,7 +6,7 @@ namespace MSBuildLogsExtended.EntityContracts
     /// <summary>
     /// definition of BuildEventCode with parameters of .Net value type.
     /// </summary>
-	public interface IBuildEventCode : IBuildEventCodeIdentifier
+	public partial interface IBuildEventCode : IBuildEventCodeIdentifier
 	{ 
 
         System.String EventCode { get; set; }
@@ -20,7 +20,7 @@ namespace MSBuildLogsExtended.EntityContracts
     /// a property defined when <see cref="WithEntityContractBuildEventCode"/> is used in other classes.
     /// </summary>
     /// <typeparam name="T">a type inherits from <see cref="WithEntityContractBuildEventCode"/></typeparam>
-	public interface WithEntityContractBuildEventCode<T>
+	public partial interface WithEntityContractBuildEventCode<T>
         where T : IBuildEventCode
     {
         /// <summary>

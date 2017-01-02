@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FC7BDDB1-4DE0-4EF2-B47B-6D40974A67DD}</ProjectGuid>
+    <ProjectGuid>{48D0515F-5C99-48C4-A53F-AEBB2CF558C8}</ProjectGuid>
     <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -54,34 +54,32 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Maps\map.2.B.2.vsd" />
-    <Content Include="Maps\map.2.B.2.vsd.png" />
     <Compile Include="..\..\Core\WcfContracts\IBusinessLogicLayerFactory.cs">
       <Link>IBusinessLogicLayerFactory.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\WcfContracts\IBuildWcfService.cs">
-      <Link>IBuildWcfService.cs</Link>
+    <Compile Include="..\..\Core\WcfContracts\IBuildService.cs">
+      <Link>IBuildService.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\WcfContracts\IBuildEventCodeWcfService.cs">
-      <Link>IBuildEventCodeWcfService.cs</Link>
+    <Compile Include="..\..\Core\WcfContracts\IBuildEventCodeService.cs">
+      <Link>IBuildEventCodeService.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\WcfContracts\IBuildLogWcfService.cs">
-      <Link>IBuildLogWcfService.cs</Link>
+    <Compile Include="..\..\Core\WcfContracts\IBuildLogService.cs">
+      <Link>IBuildLogService.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\WcfContracts\ISolutionWcfService.cs">
-      <Link>ISolutionWcfService.cs</Link>
+    <Compile Include="..\..\Core\WcfContracts\ISolutionService.cs">
+      <Link>ISolutionService.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\WcfContracts\WcfServiceContractAsynBuild.cs">
-      <Link>WcfServiceContractAsynBuild.cs</Link>
+    <Compile Include="..\..\Core\WcfContracts\IBuildServiceAsyn.cs">
+      <Link>IBuildServiceAsyn.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\WcfContracts\WcfServiceContractAsynBuildEventCode.cs">
-      <Link>WcfServiceContractAsynBuildEventCode.cs</Link>
+    <Compile Include="..\..\Core\WcfContracts\IBuildEventCodeServiceAsyn.cs">
+      <Link>IBuildEventCodeServiceAsyn.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\WcfContracts\WcfServiceContractAsynBuildLog.cs">
-      <Link>WcfServiceContractAsynBuildLog.cs</Link>
+    <Compile Include="..\..\Core\WcfContracts\IBuildLogServiceAsyn.cs">
+      <Link>IBuildLogServiceAsyn.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\WcfContracts\WcfServiceContractAsynSolution.cs">
-      <Link>WcfServiceContractAsynSolution.cs</Link>
+    <Compile Include="..\..\Core\WcfContracts\ISolutionServiceAsyn.cs">
+      <Link>ISolutionServiceAsyn.cs</Link>
     </Compile>
     <Compile Include="..\..\Core\WcfContracts\WcfServiceResolver.cs">
       <Link>WcfServiceResolver.cs</Link>
@@ -89,31 +87,31 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonBLLEntities.SL\MSBuildLogsExtended.CommonBLLEntities.SL.csproj">
-      <Project>{77e21dc6-7d17-44d1-a444-3482aa1b1656}</Project>
+      <Project>{a50df48c-2a02-41d4-a2b6-a9815b6c3147}</Project>
       <Name>MSBuildLogsExtended.CommonBLLEntities.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataSourceEntities.SL\MSBuildLogsExtended.DataSourceEntities.SL.csproj">
-      <Project>{088d0ce9-8c01-464a-b1c2-34cfa6c76d1b}</Project>
+      <Project>{8d404e22-86bd-4a45-a122-c5c2b5b61e9a}</Project>
       <Name>MSBuildLogsExtended.DataSourceEntities.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\EntityContracts.SL\MSBuildLogsExtended.EntityContracts.SL.csproj">
-      <Project>{a7599ceb-adb1-406a-ac7c-0155758ab4b2}</Project>
+      <Project>{a109b303-c757-4fa3-be0e-6460dbcf9741}</Project>
       <Name>MSBuildLogsExtended.EntityContracts.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.SL\Framework.SL\Framework.SL.csproj">
-      <Project>{1888f6cc-7810-45a6-82be-02d7f5d9ca6f}</Project>
+      <Project>{3ad8826f-070f-40dd-8771-8d17ada7ebf2}</Project>
       <Name>Framework.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.SL\Framework.CommonBLLEntities.SL\Framework.CommonBLLEntities.SL.csproj">
-      <Project>{ef73b5c1-bb21-4a07-864e-e0ebfb2e7c33}</Project>
+      <Project>{4e8e2dda-4989-47ca-848d-3784207bc888}</Project>
       <Name>Framework.CommonBLLEntities.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.SL\Framework.DataSourceEntities.SL\Framework.DataSourceEntities.SL.csproj">
-      <Project>{8842686f-6006-4e6c-abc7-f0921870b9b7}</Project>
+      <Project>{83b25b4a-62bf-4bf0-a18c-623af31c7bdd}</Project>
       <Name>Framework.DataSourceEntities.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.SL\Framework.EntityContracts.SL\Framework.EntityContracts.SL.csproj">
-      <Project>{66bbec2c-d9d8-4a2c-92c7-274dfa0096cf}</Project>
+      <Project>{aff249f1-cd55-447c-81a2-0ec80715c391}</Project>
       <Name>Framework.EntityContracts.SL</Name>
     </ProjectReference>
   </ItemGroup>
@@ -141,7 +139,7 @@
         <SilverlightProjectProperties />
       </FlavorProperties>
       <!-- For ProjectLinker -->
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="9eb722de-3c2a-43ca-ab84-e2db1f814ea5" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="23bf8e7c-df8c-43f2-9153-53de5ee23c86" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

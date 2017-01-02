@@ -6,7 +6,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
     /// <summary>
     /// table/entity identifier, inherit from entity interface, <see cref="MSBuildLogsExtended.EntityContracts.ISolutionIdentifier"/>
     /// </summary>
-	public class SolutionIdentifier 
+	public partial class SolutionIdentifier 
 		: MSBuildLogsExtended.EntityContracts.ISolutionIdentifier
 	{ 
 
@@ -109,7 +109,7 @@ System.Int32 id)
     /// <summary>
     ///  a property defined when <see cref="WithIdentifierContractSolution"/> is used in other classes.
     /// </summary>
-    public interface WithIdentifierContractSolution
+    public partial interface WithIdentifierContractSolution
     {
         /// <summary>
         /// Gets or sets the SolutionIdentifier

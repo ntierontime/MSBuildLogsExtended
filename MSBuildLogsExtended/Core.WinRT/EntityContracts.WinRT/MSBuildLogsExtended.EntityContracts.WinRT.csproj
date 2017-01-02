@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C4A2686F-3130-43D9-98E5-135DDF4521F5}</ProjectGuid>
+    <ProjectGuid>{871E68C5-1A97-446A-862C-391A3ECD8B6F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.EntityContracts</RootNamespace>
@@ -101,8 +101,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Maps\map.2.B.3.vsd" />
-    <Content Include="Maps\map.2.B.3.vsd.png" />
     <Compile Include="..\..\Core\EntityContracts\Contracts\IBuild.cs">
       <Link>Contracts\IBuild.cs</Link>
     </Compile>
@@ -160,15 +158,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Frameworks.WinRT\Framework.WinRT\Framework.WinRT.csproj">
-      <Project>{219c261b-3f94-43f4-819c-bd0faa3e6e12}</Project>
+      <Project>{460fe8b2-17ec-4a7e-83f8-b77b88e8b284}</Project>
       <Name>Framework.WinRT</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.WinRT\Framework.DataSourceEntities.WinRT\Framework.DataSourceEntities.WinRT.csproj">
-      <Project>{23ed95ea-5bab-442b-990b-b925426863d8}</Project>
+      <Project>{7e03e94e-cd7b-4261-9ff3-cfb6d5df2adf}</Project>
       <Name>Framework.DataSourceEntities.WinRT</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.WinRT\Framework.EntityContracts.WinRT\Framework.EntityContracts.WinRT.csproj">
-      <Project>{dd91a540-0344-4e8e-9183-c0d230d5cf4c}</Project>
+      <Project>{6a07bdb8-d8d2-43e9-8791-80c4a3a91788}</Project>
       <Name>Framework.EntityContracts.WinRT</Name>
     </ProjectReference>
   </ItemGroup>
@@ -182,7 +180,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="d090796d-578a-4c52-b489-3e688ddd5206" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="a9940920-207f-471d-8164-13d5a4b518ba" />
     </VisualStudio>
   </ProjectExtensions>
   <!--

@@ -411,9 +411,9 @@ namespace Framework
         /// The value.
         /// </value>
 		[DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT)
+#if (WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
 #else
-            [LINQtoCSV.CsvColumn()]
+        [LINQtoCSV.CsvColumn()]
 #endif
         public string Value { get; set; }
         /// <summary>
@@ -423,9 +423,9 @@ namespace Framework
         /// The name.
         /// </value>
 		[DataMember]
-#if(WINDOWS_PHONE || SILVERLIGHT)
+#if (WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
 #else
-            [LINQtoCSV.CsvColumn()]
+        [LINQtoCSV.CsvColumn()]
 #endif
         public string Name { get; set; }
 
@@ -837,3 +837,4 @@ namespace Framework
 
     #endregion class NameValuePair and NameValueCollection
 }
+

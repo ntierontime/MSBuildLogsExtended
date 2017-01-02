@@ -31,29 +31,18 @@
             <RowDefinition   Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Build_B1_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
-		<TextBlock Text="{Binding Path=Build_B1_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Build_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
+		<TextBlock Text="{Binding Path=Build_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
 		<TextBlock Text="{Binding Path=Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
-		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_S1_1Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
-		<ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.DropDownContentsOfSolution_S1_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Solution_S1_1Id, Mode=TwoWay}">
-                  <wrtb:Interaction.Behaviors>
-                  <w8lnb:EventToBoundCommandBehavior Event="Loaded" Command="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.GetDropDownContentsOfSolution_S1_1Command, Source={StaticResource Locator}}" />
-                  <w8lnb:EventToBoundCommandBehavior Event="SelectionChanged" Command="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.GetDropDownContentsOfSolution_S1_1SelectionChangedCommand, Source={StaticResource Locator}}" />
-                </wrtb:Interaction.Behaviors>
-</ComboBox>
-		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_S1_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
-		<TextBlock Text="{Binding Path=Solution_S1_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" />
-		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCode_B2_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
-		<TextBlock Text="{Binding Path=BuildEventCode_B2_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_1Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
+		<TextBlock Text="{Binding Path=Solution_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
+		<TextBlock Text="{Binding Path=BuildEventCode_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
-		<ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.DropDownContentsOfBuild_B1_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=BuildId, Mode=TwoWay}" />
+		<ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.DropDownContentsOfBuild_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=BuildId, Mode=TwoWay}" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCodeId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
-		<ComboBox HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="6" ItemsSource="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.DropDownContentsOfBuildEventCode_B2_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=BuildEventCodeId, Mode=TwoWay}">
-                  <wrtb:Interaction.Behaviors>
-                  <w8lnb:EventToBoundCommandBehavior Event="Loaded" Command="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.GetDropDownContentsOfBuildEventCode_B2_1Command, Source={StaticResource Locator}}" />
-                </wrtb:Interaction.Behaviors>
-</ComboBox>
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Message, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
 		<TextBox Text="{Binding Path=Message, Mode=TwoWay}" Grid.Column="1" Grid.Row="7" fvm:TextBoxUpdateSourceBehaviour.BindingSource="Message" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />

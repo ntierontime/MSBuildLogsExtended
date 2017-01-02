@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5AC413C2-E516-448D-ADFF-0B248F0E2112}</ProjectGuid>
+    <ProjectGuid>{642B975B-A490-40E4-A322-B63B88BA8829}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -50,8 +50,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Maps\map.1.B.3.vsd" />
-    <Content Include="Maps\map.1.B.3.vsd.png" />
     <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerContext.cs">
       <Link>BusinessLogicLayerContext.cs</Link>
     </Compile>
@@ -82,19 +80,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Framework.WP\Framework.WP.csproj">
-      <Project>{8601cd0c-5985-4b2b-a333-52c0a5902ce2}</Project>
+      <Project>{1efe0717-bd17-4781-a7d2-7f0216a3460b}</Project>
       <Name>Framework.WP</Name>
     </ProjectReference>
     <ProjectReference Include="..\Framework.DataSourceEntities.WP\Framework.DataSourceEntities.WP.csproj">
-      <Project>{4a41448f-8d92-435b-9f02-5f1d3a502f4f}</Project>
+      <Project>{4d615527-e3e4-4dcc-b2bc-0ca77d26451e}</Project>
       <Name>Framework.DataSourceEntities.WP</Name>
     </ProjectReference>
     <ProjectReference Include="..\Framework.EntityContracts.WP\Framework.EntityContracts.WP.csproj">
-      <Project>{431a4d9a-5861-4b82-aed8-c312bae2a641}</Project>
+      <Project>{5d407e18-cc05-4089-a67b-aff0ea5907ad}</Project>
       <Name>Framework.EntityContracts.WP</Name>
     </ProjectReference>
     <ProjectReference Include="..\Framework.Resources.WP\Framework.Resources.WP.csproj">
-      <Project>{2c2c8dbe-ea36-429e-afae-3a5cfc481ac9}</Project>
+      <Project>{e711039f-7408-49fc-8049-c756ac6852ca}</Project>
       <Name>Framework.Resources.WP</Name>
     </ProjectReference>
   </ItemGroup>

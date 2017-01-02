@@ -40,31 +40,31 @@
 
 
 
-            <endpoint address="http://localhost:10605/WcfMarkupBuild.svc" 
+            <endpoint address="http://localhost:10805/WcfMarkupBuild.svc" 
                 binding="basicHttpBinding"
                 bindingConfiguration="BasicHttpBinding_WcfClientEntityAsynBuild"
-                contract="MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild"
+                contract="MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn"
                 name="BasicHttpBinding_WcfClientEntityAsynBuild" />
 
 
-            <endpoint address="http://localhost:10605/WcfMarkupBuildEventCode.svc" 
+            <endpoint address="http://localhost:10805/WcfMarkupBuildEventCode.svc" 
                 binding="basicHttpBinding"
                 bindingConfiguration="BasicHttpBinding_WcfClientEntityAsynBuildEventCode"
-                contract="MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuildEventCode"
+                contract="MSBuildLogsExtended.WcfContracts.IBuildEventCodeServiceAsyn"
                 name="BasicHttpBinding_WcfClientEntityAsynBuildEventCode" />
 
 
-            <endpoint address="http://localhost:10605/WcfMarkupBuildLog.svc" 
+            <endpoint address="http://localhost:10805/WcfMarkupBuildLog.svc" 
                 binding="basicHttpBinding"
                 bindingConfiguration="BasicHttpBinding_WcfClientEntityAsynBuildLog"
-                contract="MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuildLog"
+                contract="MSBuildLogsExtended.WcfContracts.IBuildLogServiceAsyn"
                 name="BasicHttpBinding_WcfClientEntityAsynBuildLog" />
 
 
-            <endpoint address="http://localhost:10605/WcfMarkupSolution.svc" 
+            <endpoint address="http://localhost:10805/WcfMarkupSolution.svc" 
                 binding="basicHttpBinding"
                 bindingConfiguration="BasicHttpBinding_WcfClientEntityAsynSolution"
-                contract="MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynSolution"
+                contract="MSBuildLogsExtended.WcfContracts.ISolutionServiceAsyn"
                 name="BasicHttpBinding_WcfClientEntityAsynSolution" />
 
 

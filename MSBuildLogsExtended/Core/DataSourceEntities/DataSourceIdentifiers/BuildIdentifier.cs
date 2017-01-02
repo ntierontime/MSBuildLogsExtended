@@ -6,7 +6,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
     /// <summary>
     /// table/entity identifier, inherit from entity interface, <see cref="MSBuildLogsExtended.EntityContracts.IBuildIdentifier"/>
     /// </summary>
-	public class BuildIdentifier 
+	public partial class BuildIdentifier 
 		: MSBuildLogsExtended.EntityContracts.IBuildIdentifier
 	{ 
 
@@ -109,7 +109,7 @@ System.Int64 id)
     /// <summary>
     ///  a property defined when <see cref="WithIdentifierContractBuild"/> is used in other classes.
     /// </summary>
-    public interface WithIdentifierContractBuild
+    public partial interface WithIdentifierContractBuild
     {
         /// <summary>
         /// Gets or sets the BuildIdentifier

@@ -1,1 +1,1 @@
-<%@ ServiceHost Language="C#" Debug="true" Service="MSBuildLogsExtended.CommonBLL.BusinessLogicLayerEntityBuildLog, MSBuildLogsExtended.CommonBLL" %>
+<%@ ServiceHost Language="C#" Debug="true" Service="MSBuildLogsExtended.CommonBLL.BuildLogService, MSBuildLogsExtended.CommonBLL" %>

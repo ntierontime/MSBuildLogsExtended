@@ -11,13 +11,13 @@
 namespace MSBuildLogsExtended.WcfClientBLL
 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface WcfServiceContractAsynBuildChannel : MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild, System.ServiceModel.IClientChannel {
+    public interface IBuildServiceAsynChannel : MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn, System.ServiceModel.IClientChannel {
     }
 
 
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class WcfClientEntityAsynBuild : System.ServiceModel.ClientBase<MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild>, MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild
+    public partial class WcfClientEntityAsynBuild : System.ServiceModel.ClientBase<MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn>, MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn
     {
 
 		#region Framework.DAL.DataAccessLayerContractBase<MSBuildLogsExtended.DataSourceEntities.BuildCollection,MSBuildLogsExtended.DataSourceEntities.Build,MSBuildLogsExtended.DataSourceEntities.BuildIdentifier> Members
@@ -33,10 +33,10 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
         
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild Result {
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn Result {
 				get {
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(this.results[0]));
 				}
 			}
 		}
@@ -53,10 +53,10 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
         
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild Result {
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn Result {
 				get {
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(this.results[0]));
 				}
 			}
 		}
@@ -73,10 +73,10 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
         
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild Result {
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn Result {
 				get {
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(this.results[0]));
 				}
 			}
 		}
@@ -92,10 +92,10 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
         
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild Result {
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn Result {
 				get {
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(this.results[0]));
 				}
 			}
 		}
@@ -112,10 +112,10 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
         
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild Result {
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn Result {
 				get {
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(this.results[0]));
 				}
 			}
 		}
@@ -131,10 +131,10 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
         
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild Result {
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn Result {
 				get {
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(this.results[0]));
 				}
 			}
 		}
@@ -150,10 +150,10 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
         
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild Result {
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn Result {
 				get {
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(this.results[0]));
 				}
 			}
 		}	
@@ -273,12 +273,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(this.results[0]));
 				}
 			}
 		}
@@ -296,12 +296,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(this.results[0]));
 				}
 			}
 		}
@@ -394,12 +394,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default)(this.results[0]));
 				}
 			}
 		}
@@ -417,12 +417,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default)(this.results[0]));
 				}
 			}
 		}
@@ -515,12 +515,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(this.results[0]));
 				}
 			}
 		}
@@ -538,12 +538,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(this.results[0]));
 				}
 			}
 		}
@@ -878,12 +878,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(this.results[0]));
 				}
 			}
 		}
@@ -901,12 +901,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(this.results[0]));
 				}
 			}
 		}
@@ -1241,12 +1241,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default)(this.results[0]));
 				}
 			}
 		}
@@ -1264,12 +1264,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default)(this.results[0]));
 				}
 			}
 		}
@@ -1362,12 +1362,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView)(this.results[0]));
 				}
 			}
 		}
@@ -1385,12 +1385,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView)(this.results[0]));
 				}
 			}
 		}
@@ -1483,12 +1483,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(this.results[0]));
 				}
 			}
 		}
@@ -1506,12 +1506,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(this.results[0]));
 				}
 			}
 		}
@@ -1604,12 +1604,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default)(this.results[0]));
 				}
 			}
 		}
@@ -1627,12 +1627,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default)(this.results[0]));
 				}
 			}
 		}
@@ -1662,6 +1662,127 @@ namespace MSBuildLogsExtended.WcfClientBLL
         private System.Threading.SendOrPostCallback onGetSingleOfDefaultOfByIdentifierCompletedDelegate;
 
 		#endregion Query Methods Of Default of ByIdentifier 
+
+
+		#region Query Methods Of UpdateNameRequest of ByIdentifier 
+
+		[System.Diagnostics.DebuggerStepThroughAttribute()]
+		[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+		public partial class GetCountOfUpdateNameRequestOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+		{
+
+			private object[] results;
+
+			public GetCountOfUpdateNameRequestOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+				base(exception, cancelled, userState)
+			{
+				this.results = results;
+			}
+
+			public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger Result
+			{
+				get
+				{
+					base.RaiseExceptionIfNecessary();
+					return ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(this.results[0]));
+				}
+			}
+		}
+
+		[System.Diagnostics.DebuggerStepThroughAttribute()]
+		[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+		public partial class ExistsOfUpdateNameRequestOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+		{
+
+			private object[] results;
+
+			public ExistsOfUpdateNameRequestOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+				base(exception, cancelled, userState)
+			{
+				this.results = results;
+			}
+
+			public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean Result
+			{
+				get
+				{
+					base.RaiseExceptionIfNecessary();
+					return ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(this.results[0]));
+				}
+			}
+		}
+
+		[System.Diagnostics.DebuggerStepThroughAttribute()]
+		[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+		public partial class GetCollectionOfUpdateNameRequestOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+		{
+
+			private object[] results;
+
+			public GetCollectionOfUpdateNameRequestOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+				base(exception, cancelled, userState)
+			{
+				this.results = results;
+			}
+
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest Result
+			{
+				get
+				{
+					base.RaiseExceptionIfNecessary();
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest)(this.results[0]));
+				}
+			}
+		}
+
+		[System.Diagnostics.DebuggerStepThroughAttribute()]
+		[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+		public partial class GetSingleOfUpdateNameRequestOfByIdentifierCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+		{
+
+			private object[] results;
+
+			public GetSingleOfUpdateNameRequestOfByIdentifierCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+				base(exception, cancelled, userState)
+			{
+				this.results = results;
+			}
+
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest Result
+			{
+				get
+				{
+					base.RaiseExceptionIfNecessary();
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest)(this.results[0]));
+				}
+			}
+		}
+
+        private BeginOperationDelegate onBeginGetCountOfUpdateNameRequestOfByIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetCountOfUpdateNameRequestOfByIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCountOfUpdateNameRequestOfByIdentifierCompletedDelegate;
+
+        private BeginOperationDelegate onBeginExistsOfUpdateNameRequestOfByIdentifierDelegate;
+
+        private EndOperationDelegate onEndExistsOfUpdateNameRequestOfByIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onExistsOfUpdateNameRequestOfByIdentifierCompletedDelegate;
+
+        private BeginOperationDelegate onBeginGetCollectionOfUpdateNameRequestOfByIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetCollectionOfUpdateNameRequestOfByIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetCollectionOfUpdateNameRequestOfByIdentifierCompletedDelegate;
+
+        private BeginOperationDelegate onBeginGetSingleOfUpdateNameRequestOfByIdentifierDelegate;
+
+        private EndOperationDelegate onEndGetSingleOfUpdateNameRequestOfByIdentifierDelegate;
+
+        private System.Threading.SendOrPostCallback onGetSingleOfUpdateNameRequestOfByIdentifierCompletedDelegate;
+
+		#endregion Query Methods Of UpdateNameRequest of ByIdentifier 
 
 
 		#region Query Methods Of KeyInformation of ByIdentifier 
@@ -1725,12 +1846,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation)(this.results[0]));
 				}
 			}
 		}
@@ -1748,12 +1869,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
 				this.results = results;
 			}
 
-			public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation Result
+			public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation Result
 			{
 				get
 				{
 					base.RaiseExceptionIfNecessary();
-					return ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation)(this.results[0]));
+					return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation)(this.results[0]));
 				}
 			}
 		}
@@ -2079,6 +2200,21 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 
 
+		#region Query Methods Of UpdateNameRequest of ByIdentifier 
+
+        public event System.EventHandler<GetCountOfUpdateNameRequestOfByIdentifierCompletedEventArgs> GetCountOfUpdateNameRequestOfByIdentifierCompleted;
+
+        public event System.EventHandler<ExistsOfUpdateNameRequestOfByIdentifierCompletedEventArgs> ExistsOfUpdateNameRequestOfByIdentifierCompleted;
+
+        public event System.EventHandler<GetCollectionOfUpdateNameRequestOfByIdentifierCompletedEventArgs> GetCollectionOfUpdateNameRequestOfByIdentifierCompleted;
+
+        public event System.EventHandler<GetSingleOfUpdateNameRequestOfByIdentifierCompletedEventArgs> GetSingleOfUpdateNameRequestOfByIdentifierCompleted;
+
+		#endregion Query Methods Of UpdateNameRequest of ByIdentifier 
+
+
+
+
 		#region Query Methods Of KeyInformation of ByIdentifier 
 
         public event System.EventHandler<GetCountOfKeyInformationOfByIdentifierCompletedEventArgs> GetCountOfKeyInformationOfByIdentifierCompleted;
@@ -2120,7 +2256,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>a message with action result</returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild InsertEntity(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn InsertEntity(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn request)
         {
             return base.Channel.InsertEntity(request);
         }
@@ -2130,7 +2266,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>a message with action result</returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild UpdateEntity(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn UpdateEntity(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn request)
         {
             return base.Channel.UpdateEntity(request);
         }
@@ -2140,7 +2276,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>a message with action result</returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild DeleteEntity(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn DeleteEntity(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn request)
         {
             return base.Channel.DeleteEntity(request);
         }
@@ -2150,7 +2286,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="id">The id.</param>
         /// <returns>a message with action result</returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild DeleteByIdentifierEntity(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInOfIdentifierBuild id)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn DeleteByIdentifierEntity(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltInOfIdentifier id)
         {
             return base.Channel.DeleteByIdentifierEntity(id);
         }
@@ -2160,7 +2296,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>a message with action result</returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild BatchInsert(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn BatchInsert(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn request)
         {
             return base.Channel.BatchInsert(request);
         }
@@ -2170,7 +2306,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>a message with action result</returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild BatchDelete(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn BatchDelete(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn request)
         {
             return base.Channel.InsertEntity(request);
         }
@@ -2180,7 +2316,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns>a message with action result</returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild BatchUpdate(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn BatchUpdate(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn request)
         {
             return base.Channel.BatchUpdate(request);
         }		
@@ -2188,26 +2324,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
 #endif
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginInsertEntity(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginInsertEntity(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginInsertEntity(input, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndInsertEntity(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndInsertEntity(System.IAsyncResult result)
         {
             return base.Channel.EndInsertEntity(result);
         }
 
         private System.IAsyncResult OnBeginInsertEntity(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild)(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginInsertEntity(input, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn)(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginInsertEntity(input, callback, asyncState);
         }
 
         private object[] OnEndInsertEntity(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndInsertEntity(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndInsertEntity(result);
             return new object[] {
                     retVal};
         }
@@ -2221,12 +2357,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void InsertEntityAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input)
+        public void InsertEntityAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input)
         {
             this.InsertEntityAsync(input, null);
         }
 
-        public void InsertEntityAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, object userState)
+        public void InsertEntityAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, object userState)
         {
             if ((this.onBeginInsertEntityDelegate == null))
             {
@@ -2246,26 +2382,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginUpdateEntity(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginUpdateEntity(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginUpdateEntity(input, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndUpdateEntity(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndUpdateEntity(System.IAsyncResult result)
         {
             return base.Channel.EndUpdateEntity(result);
         }
 
         private System.IAsyncResult OnBeginUpdateEntity(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild)(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginUpdateEntity(input, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn)(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginUpdateEntity(input, callback, asyncState);
         }
 
         private object[] OnEndUpdateEntity(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndUpdateEntity(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndUpdateEntity(result);
             return new object[] {
                     retVal};
         }
@@ -2279,12 +2415,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void UpdateEntityAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input)
+        public void UpdateEntityAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input)
         {
             this.UpdateEntityAsync(input, null);
         }
 
-        public void UpdateEntityAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, object userState)
+        public void UpdateEntityAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, object userState)
         {
             if ((this.onBeginUpdateEntityDelegate == null))
             {
@@ -2304,26 +2440,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
 		
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginDeleteEntity(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginDeleteEntity(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginDeleteEntity(input, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndDeleteEntity(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndDeleteEntity(System.IAsyncResult result)
         {
             return base.Channel.EndDeleteEntity(result);
         }
 
         private System.IAsyncResult OnBeginDeleteEntity(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild)(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginDeleteEntity(input, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn)(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginDeleteEntity(input, callback, asyncState);
         }
 
         private object[] OnEndDeleteEntity(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndDeleteEntity(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndDeleteEntity(result);
             return new object[] {
                     retVal};
         }
@@ -2337,12 +2473,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void DeleteEntityAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input)
+        public void DeleteEntityAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input)
         {
             this.DeleteEntityAsync(input, null);
         }
 
-        public void DeleteEntityAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, object userState)
+        public void DeleteEntityAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, object userState)
         {
             if ((this.onBeginDeleteEntityDelegate == null))
             {
@@ -2361,26 +2497,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginDeleteByIdentifierEntity(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInOfIdentifierBuild id, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginDeleteByIdentifierEntity(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltInOfIdentifier id, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginDeleteByIdentifierEntity(id, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndDeleteByIdentifierEntity(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndDeleteByIdentifierEntity(System.IAsyncResult result)
         {
             return base.Channel.EndDeleteByIdentifierEntity(result);
         }
 
         private System.IAsyncResult OnBeginDeleteByIdentifierEntity(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInOfIdentifierBuild id = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInOfIdentifierBuild)(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginDeleteByIdentifierEntity(id, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltInOfIdentifier id = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltInOfIdentifier)(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginDeleteByIdentifierEntity(id, callback, asyncState);
         }
 
         private object[] OnEndDeleteByIdentifierEntity(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndDeleteByIdentifierEntity(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndDeleteByIdentifierEntity(result);
             return new object[] {
                     retVal};
         }
@@ -2394,12 +2530,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void DeleteByIdentifierEntityAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInOfIdentifierBuild id)
+        public void DeleteByIdentifierEntityAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltInOfIdentifier id)
         {
             this.DeleteByIdentifierEntityAsync(id, null);
         }
 
-        public void DeleteByIdentifierEntityAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInOfIdentifierBuild id, object userState)
+        public void DeleteByIdentifierEntityAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltInOfIdentifier id, object userState)
         {
             if ((this.onBeginDeleteByIdentifierEntityDelegate == null))
             {
@@ -2420,26 +2556,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginBatchInsert(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginBatchInsert(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginBatchInsert(input, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndBatchInsert(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndBatchInsert(System.IAsyncResult result)
         {
             return base.Channel.EndBatchInsert(result);
         }
 
         private System.IAsyncResult OnBeginBatchInsert(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild)(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginBatchInsert(input, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn)(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginBatchInsert(input, callback, asyncState);
         }
 
         private object[] OnEndBatchInsert(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndBatchInsert(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndBatchInsert(result);
             return new object[] {
                     retVal};
         }
@@ -2453,12 +2589,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void BatchInsertAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input)
+        public void BatchInsertAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input)
         {
             this.BatchInsertAsync(input, null);
         }
 
-        public void BatchInsertAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, object userState)
+        public void BatchInsertAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, object userState)
         {
             if ((this.onBeginBatchInsertDelegate == null))
             {
@@ -2477,26 +2613,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginBatchDelete(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginBatchDelete(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginBatchDelete(input, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndBatchDelete(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndBatchDelete(System.IAsyncResult result)
         {
             return base.Channel.EndBatchDelete(result);
         }
 
         private System.IAsyncResult OnBeginBatchDelete(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild)(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginBatchDelete(input, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn)(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginBatchDelete(input, callback, asyncState);
         }
 
         private object[] OnEndBatchDelete(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndBatchDelete(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndBatchDelete(result);
             return new object[] {
                     retVal};
         }
@@ -2510,12 +2646,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void BatchDeleteAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input)
+        public void BatchDeleteAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input)
         {
             this.BatchDeleteAsync(input, null);
         }
 
-        public void BatchDeleteAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, object userState)
+        public void BatchDeleteAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, object userState)
         {
             if ((this.onBeginBatchDeleteDelegate == null))
             {
@@ -2534,26 +2670,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginBatchUpdate(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginBatchUpdate(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginBatchUpdate(input, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndBatchUpdate(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndBatchUpdate(System.IAsyncResult result)
         {
             return base.Channel.EndBatchUpdate(result);
         }
 
         private System.IAsyncResult OnBeginBatchUpdate(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild)(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginBatchUpdate(input, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn)(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginBatchUpdate(input, callback, asyncState);
         }
 
         private object[] OnEndBatchUpdate(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndBatchUpdate(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndBatchUpdate(result);
             return new object[] {
                     retVal};
         }
@@ -2567,12 +2703,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void BatchUpdateAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input)
+        public void BatchUpdateAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input)
         {
             this.BatchUpdateAsync(input, null);
         }
 
-        public void BatchUpdateAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, object userState)
+        public void BatchUpdateAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, object userState)
         {
             if ((this.onBeginBatchUpdateDelegate == null))
             {
@@ -2614,7 +2750,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfCommon(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             return base.Channel.GetCountOfEntityOfCommon(request);
         }
@@ -2625,7 +2761,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfCommon(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             return base.Channel.ExistsOfEntityOfCommon(request);
 		}
@@ -2635,8 +2771,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild GetCollectionOfEntityOfCommon(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn GetCollectionOfEntityOfCommon(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             return base.Channel.GetCollectionOfEntityOfCommon(request);
         }
@@ -2646,8 +2782,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild GetSingleOfEntityOfCommon(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn GetSingleOfEntityOfCommon(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             return base.Channel.GetSingleOfEntityOfCommon(request);
 		}
@@ -2655,26 +2791,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
 #endif
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCountOfEntityOfCommon(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCountOfEntityOfCommon(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCountOfEntityOfCommon(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCountOfEntityOfCommon(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCountOfEntityOfCommon(System.IAsyncResult result)
         {
             return base.Channel.EndGetCountOfEntityOfCommon(result);
         }
 
         private System.IAsyncResult OnBeginGetCountOfEntityOfCommon(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCountOfEntityOfCommon(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCountOfEntityOfCommon(request, callback, asyncState);
         }
 
         private object[] OnEndGetCountOfEntityOfCommon(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCountOfEntityOfCommon(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCountOfEntityOfCommon(result);
             return new object[] {
                     retVal};
         }
@@ -2688,12 +2824,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCountOfEntityOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+        public void GetCountOfEntityOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             this.GetCountOfEntityOfCommonAsync(request, null);
         }
 
-        public void GetCountOfEntityOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, object userState)
+        public void GetCountOfEntityOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, object userState)
         {
             if ((this.onBeginGetCountOfEntityOfCommonDelegate == null))
             {
@@ -2712,26 +2848,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginExistsOfEntityOfCommon(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginExistsOfEntityOfCommon(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginExistsOfEntityOfCommon(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndExistsOfEntityOfCommon(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndExistsOfEntityOfCommon(System.IAsyncResult result)
         {
             return base.Channel.EndExistsOfEntityOfCommon(result);
         }
 
         private System.IAsyncResult OnBeginExistsOfEntityOfCommon(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginExistsOfEntityOfCommon(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginExistsOfEntityOfCommon(request, callback, asyncState);
         }
 
         private object[] OnEndExistsOfEntityOfCommon(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndExistsOfEntityOfCommon(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndExistsOfEntityOfCommon(result);
             return new object[] {
                     retVal};
         }
@@ -2745,12 +2881,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void ExistsOfEntityOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+        public void ExistsOfEntityOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             this.ExistsOfEntityOfCommonAsync(request, null);
         }
 
-        public void ExistsOfEntityOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, object userState)
+        public void ExistsOfEntityOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, object userState)
         {
             if ((this.onBeginExistsOfEntityOfCommonDelegate == null))
             {
@@ -2769,26 +2905,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCollectionOfEntityOfCommon(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCollectionOfEntityOfCommon(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCollectionOfEntityOfCommon(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCollectionOfEntityOfCommon(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCollectionOfEntityOfCommon(System.IAsyncResult result)
         {
             return base.Channel.EndGetCollectionOfEntityOfCommon(result);
         }
 
         private System.IAsyncResult OnBeginGetCollectionOfEntityOfCommon(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCollectionOfEntityOfCommon(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCollectionOfEntityOfCommon(request, callback, asyncState);
         }
 
         private object[] OnEndGetCollectionOfEntityOfCommon(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCollectionOfEntityOfCommon(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCollectionOfEntityOfCommon(result);
             return new object[] {
                     retVal};
         }
@@ -2802,12 +2938,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCollectionOfEntityOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+        public void GetCollectionOfEntityOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             this.GetCollectionOfEntityOfCommonAsync(request, null);
         }
 
-        public void GetCollectionOfEntityOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, object userState)
+        public void GetCollectionOfEntityOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, object userState)
         {
             if ((this.onBeginGetCollectionOfEntityOfCommonDelegate == null))
             {
@@ -2826,26 +2962,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetSingleOfEntityOfCommon(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetSingleOfEntityOfCommon(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetSingleOfEntityOfCommon(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetSingleOfEntityOfCommon(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetSingleOfEntityOfCommon(System.IAsyncResult result)
         {
             return base.Channel.EndGetSingleOfEntityOfCommon(result);
         }
 
         private System.IAsyncResult OnBeginGetSingleOfEntityOfCommon(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetSingleOfEntityOfCommon(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetSingleOfEntityOfCommon(request, callback, asyncState);
         }
 
         private object[] OnEndGetSingleOfEntityOfCommon(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetSingleOfEntityOfCommon(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetSingleOfEntityOfCommon(result);
             return new object[] {
                     retVal};
         }
@@ -2859,12 +2995,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetSingleOfEntityOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+        public void GetSingleOfEntityOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             this.GetSingleOfEntityOfCommonAsync(request, null);
         }
 
-        public void GetSingleOfEntityOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, object userState)
+        public void GetSingleOfEntityOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, object userState)
         {
             if ((this.onBeginGetSingleOfEntityOfCommonDelegate == null))
             {
@@ -2898,7 +3034,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfCommon(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             return base.Channel.GetCountOfDefaultOfCommon(request);
         }
@@ -2909,7 +3045,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfCommon(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             return base.Channel.ExistsOfDefaultOfCommon(request);
 		}
@@ -2919,8 +3055,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default GetCollectionOfDefaultOfCommon(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default GetCollectionOfDefaultOfCommon(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             return base.Channel.GetCollectionOfDefaultOfCommon(request);
         }
@@ -2930,8 +3066,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default GetSingleOfDefaultOfCommon(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default GetSingleOfDefaultOfCommon(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             return base.Channel.GetSingleOfDefaultOfCommon(request);
 		}
@@ -2939,26 +3075,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
 #endif
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCountOfDefaultOfCommon(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCountOfDefaultOfCommon(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCountOfDefaultOfCommon(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCountOfDefaultOfCommon(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCountOfDefaultOfCommon(System.IAsyncResult result)
         {
             return base.Channel.EndGetCountOfDefaultOfCommon(result);
         }
 
         private System.IAsyncResult OnBeginGetCountOfDefaultOfCommon(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCountOfDefaultOfCommon(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCountOfDefaultOfCommon(request, callback, asyncState);
         }
 
         private object[] OnEndGetCountOfDefaultOfCommon(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCountOfDefaultOfCommon(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCountOfDefaultOfCommon(result);
             return new object[] {
                     retVal};
         }
@@ -2972,12 +3108,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCountOfDefaultOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+        public void GetCountOfDefaultOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             this.GetCountOfDefaultOfCommonAsync(request, null);
         }
 
-        public void GetCountOfDefaultOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, object userState)
+        public void GetCountOfDefaultOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, object userState)
         {
             if ((this.onBeginGetCountOfDefaultOfCommonDelegate == null))
             {
@@ -2996,26 +3132,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginExistsOfDefaultOfCommon(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginExistsOfDefaultOfCommon(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginExistsOfDefaultOfCommon(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndExistsOfDefaultOfCommon(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndExistsOfDefaultOfCommon(System.IAsyncResult result)
         {
             return base.Channel.EndExistsOfDefaultOfCommon(result);
         }
 
         private System.IAsyncResult OnBeginExistsOfDefaultOfCommon(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginExistsOfDefaultOfCommon(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginExistsOfDefaultOfCommon(request, callback, asyncState);
         }
 
         private object[] OnEndExistsOfDefaultOfCommon(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndExistsOfDefaultOfCommon(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndExistsOfDefaultOfCommon(result);
             return new object[] {
                     retVal};
         }
@@ -3029,12 +3165,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void ExistsOfDefaultOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+        public void ExistsOfDefaultOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             this.ExistsOfDefaultOfCommonAsync(request, null);
         }
 
-        public void ExistsOfDefaultOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, object userState)
+        public void ExistsOfDefaultOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, object userState)
         {
             if ((this.onBeginExistsOfDefaultOfCommonDelegate == null))
             {
@@ -3053,26 +3189,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCollectionOfDefaultOfCommon(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCollectionOfDefaultOfCommon(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCollectionOfDefaultOfCommon(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCollectionOfDefaultOfCommon(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCollectionOfDefaultOfCommon(System.IAsyncResult result)
         {
             return base.Channel.EndGetCollectionOfDefaultOfCommon(result);
         }
 
         private System.IAsyncResult OnBeginGetCollectionOfDefaultOfCommon(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCollectionOfDefaultOfCommon(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCollectionOfDefaultOfCommon(request, callback, asyncState);
         }
 
         private object[] OnEndGetCollectionOfDefaultOfCommon(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCollectionOfDefaultOfCommon(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCollectionOfDefaultOfCommon(result);
             return new object[] {
                     retVal};
         }
@@ -3086,12 +3222,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCollectionOfDefaultOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+        public void GetCollectionOfDefaultOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             this.GetCollectionOfDefaultOfCommonAsync(request, null);
         }
 
-        public void GetCollectionOfDefaultOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, object userState)
+        public void GetCollectionOfDefaultOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, object userState)
         {
             if ((this.onBeginGetCollectionOfDefaultOfCommonDelegate == null))
             {
@@ -3110,26 +3246,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetSingleOfDefaultOfCommon(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetSingleOfDefaultOfCommon(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetSingleOfDefaultOfCommon(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetSingleOfDefaultOfCommon(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetSingleOfDefaultOfCommon(System.IAsyncResult result)
         {
             return base.Channel.EndGetSingleOfDefaultOfCommon(result);
         }
 
         private System.IAsyncResult OnBeginGetSingleOfDefaultOfCommon(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetSingleOfDefaultOfCommon(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetSingleOfDefaultOfCommon(request, callback, asyncState);
         }
 
         private object[] OnEndGetSingleOfDefaultOfCommon(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetSingleOfDefaultOfCommon(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetSingleOfDefaultOfCommon(result);
             return new object[] {
                     retVal};
         }
@@ -3143,12 +3279,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetSingleOfDefaultOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request)
+        public void GetSingleOfDefaultOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request)
         {
             this.GetSingleOfDefaultOfCommonAsync(request, null);
         }
 
-        public void GetSingleOfDefaultOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, object userState)
+        public void GetSingleOfDefaultOfCommonAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, object userState)
         {
             if ((this.onBeginGetSingleOfDefaultOfCommonDelegate == null))
             {
@@ -3182,7 +3318,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetCountOfEntityOfAll(request);
         }
@@ -3193,7 +3329,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.ExistsOfEntityOfAll(request);
 		}
@@ -3203,8 +3339,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild GetCollectionOfEntityOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn GetCollectionOfEntityOfAll(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetCollectionOfEntityOfAll(request);
         }
@@ -3214,8 +3350,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild GetSingleOfEntityOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn GetSingleOfEntityOfAll(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetSingleOfEntityOfAll(request);
 		}
@@ -3223,26 +3359,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
 #endif
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCountOfEntityOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCountOfEntityOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCountOfEntityOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCountOfEntityOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCountOfEntityOfAll(System.IAsyncResult result)
         {
             return base.Channel.EndGetCountOfEntityOfAll(result);
         }
 
         private System.IAsyncResult OnBeginGetCountOfEntityOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCountOfEntityOfAll(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCountOfEntityOfAll(request, callback, asyncState);
         }
 
         private object[] OnEndGetCountOfEntityOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCountOfEntityOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCountOfEntityOfAll(result);
             return new object[] {
                     retVal};
         }
@@ -3256,12 +3392,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCountOfEntityOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+        public void GetCountOfEntityOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             this.GetCountOfEntityOfAllAsync(request, null);
         }
 
-        public void GetCountOfEntityOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, object userState)
+        public void GetCountOfEntityOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, object userState)
         {
             if ((this.onBeginGetCountOfEntityOfAllDelegate == null))
             {
@@ -3280,26 +3416,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginExistsOfEntityOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginExistsOfEntityOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginExistsOfEntityOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndExistsOfEntityOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndExistsOfEntityOfAll(System.IAsyncResult result)
         {
             return base.Channel.EndExistsOfEntityOfAll(result);
         }
 
         private System.IAsyncResult OnBeginExistsOfEntityOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginExistsOfEntityOfAll(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginExistsOfEntityOfAll(request, callback, asyncState);
         }
 
         private object[] OnEndExistsOfEntityOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndExistsOfEntityOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndExistsOfEntityOfAll(result);
             return new object[] {
                     retVal};
         }
@@ -3313,12 +3449,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void ExistsOfEntityOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+        public void ExistsOfEntityOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             this.ExistsOfEntityOfAllAsync(request, null);
         }
 
-        public void ExistsOfEntityOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, object userState)
+        public void ExistsOfEntityOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, object userState)
         {
             if ((this.onBeginExistsOfEntityOfAllDelegate == null))
             {
@@ -3337,26 +3473,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCollectionOfEntityOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCollectionOfEntityOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCollectionOfEntityOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCollectionOfEntityOfAll(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCollectionOfEntityOfAll(System.IAsyncResult result)
         {
             return base.Channel.EndGetCollectionOfEntityOfAll(result);
         }
 
         private System.IAsyncResult OnBeginGetCollectionOfEntityOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCollectionOfEntityOfAll(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCollectionOfEntityOfAll(request, callback, asyncState);
         }
 
         private object[] OnEndGetCollectionOfEntityOfAll(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCollectionOfEntityOfAll(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCollectionOfEntityOfAll(result);
             return new object[] {
                     retVal};
         }
@@ -3370,12 +3506,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCollectionOfEntityOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+        public void GetCollectionOfEntityOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             this.GetCollectionOfEntityOfAllAsync(request, null);
         }
 
-        public void GetCollectionOfEntityOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, object userState)
+        public void GetCollectionOfEntityOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, object userState)
         {
             if ((this.onBeginGetCollectionOfEntityOfAllDelegate == null))
             {
@@ -3394,26 +3530,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetSingleOfEntityOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetSingleOfEntityOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetSingleOfEntityOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetSingleOfEntityOfAll(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetSingleOfEntityOfAll(System.IAsyncResult result)
         {
             return base.Channel.EndGetSingleOfEntityOfAll(result);
         }
 
         private System.IAsyncResult OnBeginGetSingleOfEntityOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetSingleOfEntityOfAll(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetSingleOfEntityOfAll(request, callback, asyncState);
         }
 
         private object[] OnEndGetSingleOfEntityOfAll(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetSingleOfEntityOfAll(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetSingleOfEntityOfAll(result);
             return new object[] {
                     retVal};
         }
@@ -3427,12 +3563,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetSingleOfEntityOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+        public void GetSingleOfEntityOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             this.GetSingleOfEntityOfAllAsync(request, null);
         }
 
-        public void GetSingleOfEntityOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, object userState)
+        public void GetSingleOfEntityOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, object userState)
         {
             if ((this.onBeginGetSingleOfEntityOfAllDelegate == null))
             {
@@ -3466,7 +3602,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfNameValuePairOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetCountOfNameValuePairOfAll(request);
         }
@@ -3477,7 +3613,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.ExistsOfNameValuePairOfAll(request);
 		}
@@ -3488,7 +3624,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns></returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetCollectionOfNameValuePairOfAll(request);
         }
@@ -3499,7 +3635,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns></returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetSingleOfNameValuePairOfAll(request);
 		}
@@ -3507,26 +3643,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
 #endif
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCountOfNameValuePairOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCountOfNameValuePairOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCountOfNameValuePairOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCountOfNameValuePairOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCountOfNameValuePairOfAll(System.IAsyncResult result)
         {
             return base.Channel.EndGetCountOfNameValuePairOfAll(result);
         }
 
         private System.IAsyncResult OnBeginGetCountOfNameValuePairOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCountOfNameValuePairOfAll(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCountOfNameValuePairOfAll(request, callback, asyncState);
         }
 
         private object[] OnEndGetCountOfNameValuePairOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCountOfNameValuePairOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCountOfNameValuePairOfAll(result);
             return new object[] {
                     retVal};
         }
@@ -3540,12 +3676,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCountOfNameValuePairOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+        public void GetCountOfNameValuePairOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             this.GetCountOfNameValuePairOfAllAsync(request, null);
         }
 
-        public void GetCountOfNameValuePairOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, object userState)
+        public void GetCountOfNameValuePairOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, object userState)
         {
             if ((this.onBeginGetCountOfNameValuePairOfAllDelegate == null))
             {
@@ -3564,26 +3700,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginExistsOfNameValuePairOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginExistsOfNameValuePairOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginExistsOfNameValuePairOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndExistsOfNameValuePairOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndExistsOfNameValuePairOfAll(System.IAsyncResult result)
         {
             return base.Channel.EndExistsOfNameValuePairOfAll(result);
         }
 
         private System.IAsyncResult OnBeginExistsOfNameValuePairOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginExistsOfNameValuePairOfAll(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginExistsOfNameValuePairOfAll(request, callback, asyncState);
         }
 
         private object[] OnEndExistsOfNameValuePairOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndExistsOfNameValuePairOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndExistsOfNameValuePairOfAll(result);
             return new object[] {
                     retVal};
         }
@@ -3597,12 +3733,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void ExistsOfNameValuePairOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+        public void ExistsOfNameValuePairOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             this.ExistsOfNameValuePairOfAllAsync(request, null);
         }
 
-        public void ExistsOfNameValuePairOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, object userState)
+        public void ExistsOfNameValuePairOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, object userState)
         {
             if ((this.onBeginExistsOfNameValuePairOfAllDelegate == null))
             {
@@ -3621,26 +3757,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCollectionOfNameValuePairOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCollectionOfNameValuePairOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCollectionOfNameValuePairOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCollectionOfNameValuePairOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCollectionOfNameValuePairOfAll(System.IAsyncResult result)
         {
             return base.Channel.EndGetCollectionOfNameValuePairOfAll(result);
         }
 
         private System.IAsyncResult OnBeginGetCollectionOfNameValuePairOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCollectionOfNameValuePairOfAll(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCollectionOfNameValuePairOfAll(request, callback, asyncState);
         }
 
         private object[] OnEndGetCollectionOfNameValuePairOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCollectionOfNameValuePairOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCollectionOfNameValuePairOfAll(result);
             return new object[] {
                     retVal};
         }
@@ -3654,12 +3790,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCollectionOfNameValuePairOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+        public void GetCollectionOfNameValuePairOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             this.GetCollectionOfNameValuePairOfAllAsync(request, null);
         }
 
-        public void GetCollectionOfNameValuePairOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, object userState)
+        public void GetCollectionOfNameValuePairOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, object userState)
         {
             if ((this.onBeginGetCollectionOfNameValuePairOfAllDelegate == null))
             {
@@ -3678,26 +3814,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetSingleOfNameValuePairOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetSingleOfNameValuePairOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetSingleOfNameValuePairOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetSingleOfNameValuePairOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetSingleOfNameValuePairOfAll(System.IAsyncResult result)
         {
             return base.Channel.EndGetSingleOfNameValuePairOfAll(result);
         }
 
         private System.IAsyncResult OnBeginGetSingleOfNameValuePairOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetSingleOfNameValuePairOfAll(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetSingleOfNameValuePairOfAll(request, callback, asyncState);
         }
 
         private object[] OnEndGetSingleOfNameValuePairOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetSingleOfNameValuePairOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetSingleOfNameValuePairOfAll(result);
             return new object[] {
                     retVal};
         }
@@ -3711,12 +3847,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetSingleOfNameValuePairOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+        public void GetSingleOfNameValuePairOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             this.GetSingleOfNameValuePairOfAllAsync(request, null);
         }
 
-        public void GetSingleOfNameValuePairOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, object userState)
+        public void GetSingleOfNameValuePairOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, object userState)
         {
             if ((this.onBeginGetSingleOfNameValuePairOfAllDelegate == null))
             {
@@ -3750,7 +3886,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfRssItemOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetCountOfRssItemOfAll(request);
         }
@@ -3761,7 +3897,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfRssItemOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.ExistsOfRssItemOfAll(request);
 		}
@@ -3772,7 +3908,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns></returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetCollectionOfRssItemOfAll(request);
         }
@@ -3783,7 +3919,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns></returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetSingleOfRssItemOfAll(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             return base.Channel.GetSingleOfRssItemOfAll(request);
 		}
@@ -3791,26 +3927,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
 #endif
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCountOfRssItemOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCountOfRssItemOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCountOfRssItemOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCountOfRssItemOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCountOfRssItemOfAll(System.IAsyncResult result)
         {
             return base.Channel.EndGetCountOfRssItemOfAll(result);
         }
 
         private System.IAsyncResult OnBeginGetCountOfRssItemOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCountOfRssItemOfAll(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCountOfRssItemOfAll(request, callback, asyncState);
         }
 
         private object[] OnEndGetCountOfRssItemOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCountOfRssItemOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCountOfRssItemOfAll(result);
             return new object[] {
                     retVal};
         }
@@ -3824,12 +3960,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCountOfRssItemOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+        public void GetCountOfRssItemOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             this.GetCountOfRssItemOfAllAsync(request, null);
         }
 
-        public void GetCountOfRssItemOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, object userState)
+        public void GetCountOfRssItemOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, object userState)
         {
             if ((this.onBeginGetCountOfRssItemOfAllDelegate == null))
             {
@@ -3848,26 +3984,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginExistsOfRssItemOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginExistsOfRssItemOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginExistsOfRssItemOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndExistsOfRssItemOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndExistsOfRssItemOfAll(System.IAsyncResult result)
         {
             return base.Channel.EndExistsOfRssItemOfAll(result);
         }
 
         private System.IAsyncResult OnBeginExistsOfRssItemOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginExistsOfRssItemOfAll(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginExistsOfRssItemOfAll(request, callback, asyncState);
         }
 
         private object[] OnEndExistsOfRssItemOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndExistsOfRssItemOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndExistsOfRssItemOfAll(result);
             return new object[] {
                     retVal};
         }
@@ -3881,12 +4017,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void ExistsOfRssItemOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+        public void ExistsOfRssItemOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             this.ExistsOfRssItemOfAllAsync(request, null);
         }
 
-        public void ExistsOfRssItemOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, object userState)
+        public void ExistsOfRssItemOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, object userState)
         {
             if ((this.onBeginExistsOfRssItemOfAllDelegate == null))
             {
@@ -3905,26 +4041,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCollectionOfRssItemOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCollectionOfRssItemOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCollectionOfRssItemOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCollectionOfRssItemOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCollectionOfRssItemOfAll(System.IAsyncResult result)
         {
             return base.Channel.EndGetCollectionOfRssItemOfAll(result);
         }
 
         private System.IAsyncResult OnBeginGetCollectionOfRssItemOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCollectionOfRssItemOfAll(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCollectionOfRssItemOfAll(request, callback, asyncState);
         }
 
         private object[] OnEndGetCollectionOfRssItemOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCollectionOfRssItemOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCollectionOfRssItemOfAll(result);
             return new object[] {
                     retVal};
         }
@@ -3938,12 +4074,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCollectionOfRssItemOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+        public void GetCollectionOfRssItemOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             this.GetCollectionOfRssItemOfAllAsync(request, null);
         }
 
-        public void GetCollectionOfRssItemOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, object userState)
+        public void GetCollectionOfRssItemOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, object userState)
         {
             if ((this.onBeginGetCollectionOfRssItemOfAllDelegate == null))
             {
@@ -3962,26 +4098,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetSingleOfRssItemOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetSingleOfRssItemOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetSingleOfRssItemOfAll(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetSingleOfRssItemOfAll(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetSingleOfRssItemOfAll(System.IAsyncResult result)
         {
             return base.Channel.EndGetSingleOfRssItemOfAll(result);
         }
 
         private System.IAsyncResult OnBeginGetSingleOfRssItemOfAll(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetSingleOfRssItemOfAll(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetSingleOfRssItemOfAll(request, callback, asyncState);
         }
 
         private object[] OnEndGetSingleOfRssItemOfAll(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetSingleOfRssItemOfAll(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetSingleOfRssItemOfAll(result);
             return new object[] {
                     retVal};
         }
@@ -3995,12 +4131,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetSingleOfRssItemOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request)
+        public void GetSingleOfRssItemOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request)
         {
             this.GetSingleOfRssItemOfAllAsync(request, null);
         }
 
-        public void GetSingleOfRssItemOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, object userState)
+        public void GetSingleOfRssItemOfAllAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, object userState)
         {
             if ((this.onBeginGetSingleOfRssItemOfAllDelegate == null))
             {
@@ -4034,7 +4170,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCountOfEntityOfByFKOnly(request);
         }
@@ -4045,7 +4181,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.ExistsOfEntityOfByFKOnly(request);
 		}
@@ -4055,8 +4191,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild GetCollectionOfEntityOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn GetCollectionOfEntityOfByFKOnly(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCollectionOfEntityOfByFKOnly(request);
         }
@@ -4066,8 +4202,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild GetSingleOfEntityOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn GetSingleOfEntityOfByFKOnly(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetSingleOfEntityOfByFKOnly(request);
 		}
@@ -4075,26 +4211,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
 #endif
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCountOfEntityOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCountOfEntityOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCountOfEntityOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCountOfEntityOfByFKOnly(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCountOfEntityOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndGetCountOfEntityOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginGetCountOfEntityOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCountOfEntityOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCountOfEntityOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndGetCountOfEntityOfByFKOnly(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCountOfEntityOfByFKOnly(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCountOfEntityOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -4108,12 +4244,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCountOfEntityOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void GetCountOfEntityOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.GetCountOfEntityOfByFKOnlyAsync(request, null);
         }
 
-        public void GetCountOfEntityOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void GetCountOfEntityOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginGetCountOfEntityOfByFKOnlyDelegate == null))
             {
@@ -4132,26 +4268,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginExistsOfEntityOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginExistsOfEntityOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginExistsOfEntityOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndExistsOfEntityOfByFKOnly(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndExistsOfEntityOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndExistsOfEntityOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginExistsOfEntityOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginExistsOfEntityOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginExistsOfEntityOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndExistsOfEntityOfByFKOnly(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndExistsOfEntityOfByFKOnly(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndExistsOfEntityOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -4165,12 +4301,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void ExistsOfEntityOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void ExistsOfEntityOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.ExistsOfEntityOfByFKOnlyAsync(request, null);
         }
 
-        public void ExistsOfEntityOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void ExistsOfEntityOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginExistsOfEntityOfByFKOnlyDelegate == null))
             {
@@ -4189,26 +4325,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCollectionOfEntityOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCollectionOfEntityOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCollectionOfEntityOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCollectionOfEntityOfByFKOnly(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCollectionOfEntityOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndGetCollectionOfEntityOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginGetCollectionOfEntityOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCollectionOfEntityOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCollectionOfEntityOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndGetCollectionOfEntityOfByFKOnly(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCollectionOfEntityOfByFKOnly(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCollectionOfEntityOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -4222,12 +4358,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCollectionOfEntityOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void GetCollectionOfEntityOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.GetCollectionOfEntityOfByFKOnlyAsync(request, null);
         }
 
-        public void GetCollectionOfEntityOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void GetCollectionOfEntityOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginGetCollectionOfEntityOfByFKOnlyDelegate == null))
             {
@@ -4246,26 +4382,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetSingleOfEntityOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetSingleOfEntityOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetSingleOfEntityOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetSingleOfEntityOfByFKOnly(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetSingleOfEntityOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndGetSingleOfEntityOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginGetSingleOfEntityOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetSingleOfEntityOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetSingleOfEntityOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndGetSingleOfEntityOfByFKOnly(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetSingleOfEntityOfByFKOnly(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetSingleOfEntityOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -4279,12 +4415,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetSingleOfEntityOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void GetSingleOfEntityOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.GetSingleOfEntityOfByFKOnlyAsync(request, null);
         }
 
-        public void GetSingleOfEntityOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void GetSingleOfEntityOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginGetSingleOfEntityOfByFKOnlyDelegate == null))
             {
@@ -4318,7 +4454,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfNameValuePairOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCountOfNameValuePairOfByFKOnly(request);
         }
@@ -4329,7 +4465,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfNameValuePairOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.ExistsOfNameValuePairOfByFKOnly(request);
 		}
@@ -4340,7 +4476,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns></returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetCollectionOfNameValuePairOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCollectionOfNameValuePairOfByFKOnly(request);
         }
@@ -4351,7 +4487,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns></returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection GetSingleOfNameValuePairOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetSingleOfNameValuePairOfByFKOnly(request);
 		}
@@ -4359,26 +4495,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
 #endif
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCountOfNameValuePairOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCountOfNameValuePairOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCountOfNameValuePairOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCountOfNameValuePairOfByFKOnly(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCountOfNameValuePairOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndGetCountOfNameValuePairOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginGetCountOfNameValuePairOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCountOfNameValuePairOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCountOfNameValuePairOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndGetCountOfNameValuePairOfByFKOnly(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCountOfNameValuePairOfByFKOnly(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCountOfNameValuePairOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -4392,12 +4528,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCountOfNameValuePairOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void GetCountOfNameValuePairOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.GetCountOfNameValuePairOfByFKOnlyAsync(request, null);
         }
 
-        public void GetCountOfNameValuePairOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void GetCountOfNameValuePairOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginGetCountOfNameValuePairOfByFKOnlyDelegate == null))
             {
@@ -4416,26 +4552,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginExistsOfNameValuePairOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginExistsOfNameValuePairOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginExistsOfNameValuePairOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndExistsOfNameValuePairOfByFKOnly(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndExistsOfNameValuePairOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndExistsOfNameValuePairOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginExistsOfNameValuePairOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginExistsOfNameValuePairOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginExistsOfNameValuePairOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndExistsOfNameValuePairOfByFKOnly(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndExistsOfNameValuePairOfByFKOnly(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndExistsOfNameValuePairOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -4449,12 +4585,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void ExistsOfNameValuePairOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void ExistsOfNameValuePairOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.ExistsOfNameValuePairOfByFKOnlyAsync(request, null);
         }
 
-        public void ExistsOfNameValuePairOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void ExistsOfNameValuePairOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginExistsOfNameValuePairOfByFKOnlyDelegate == null))
             {
@@ -4473,26 +4609,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCollectionOfNameValuePairOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCollectionOfNameValuePairOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCollectionOfNameValuePairOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCollectionOfNameValuePairOfByFKOnly(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCollectionOfNameValuePairOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndGetCollectionOfNameValuePairOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginGetCollectionOfNameValuePairOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCollectionOfNameValuePairOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCollectionOfNameValuePairOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndGetCollectionOfNameValuePairOfByFKOnly(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCollectionOfNameValuePairOfByFKOnly(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCollectionOfNameValuePairOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -4506,12 +4642,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCollectionOfNameValuePairOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void GetCollectionOfNameValuePairOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.GetCollectionOfNameValuePairOfByFKOnlyAsync(request, null);
         }
 
-        public void GetCollectionOfNameValuePairOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void GetCollectionOfNameValuePairOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginGetCollectionOfNameValuePairOfByFKOnlyDelegate == null))
             {
@@ -4530,26 +4666,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetSingleOfNameValuePairOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetSingleOfNameValuePairOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetSingleOfNameValuePairOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetSingleOfNameValuePairOfByFKOnly(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetSingleOfNameValuePairOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndGetSingleOfNameValuePairOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginGetSingleOfNameValuePairOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetSingleOfNameValuePairOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetSingleOfNameValuePairOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndGetSingleOfNameValuePairOfByFKOnly(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetSingleOfNameValuePairOfByFKOnly(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageNameValuePairCollection retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetSingleOfNameValuePairOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -4563,12 +4699,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetSingleOfNameValuePairOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void GetSingleOfNameValuePairOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.GetSingleOfNameValuePairOfByFKOnlyAsync(request, null);
         }
 
-        public void GetSingleOfNameValuePairOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void GetSingleOfNameValuePairOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginGetSingleOfNameValuePairOfByFKOnlyDelegate == null))
             {
@@ -4602,7 +4738,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfRssItemOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCountOfRssItemOfByFKOnly(request);
         }
@@ -4613,7 +4749,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfRssItemOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.ExistsOfRssItemOfByFKOnly(request);
 		}
@@ -4624,7 +4760,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns></returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetCollectionOfRssItemOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCollectionOfRssItemOfByFKOnly(request);
         }
@@ -4635,7 +4771,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns></returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection GetSingleOfRssItemOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetSingleOfRssItemOfByFKOnly(request);
 		}
@@ -4643,26 +4779,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
 #endif
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCountOfRssItemOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCountOfRssItemOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCountOfRssItemOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCountOfRssItemOfByFKOnly(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCountOfRssItemOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndGetCountOfRssItemOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginGetCountOfRssItemOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCountOfRssItemOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCountOfRssItemOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndGetCountOfRssItemOfByFKOnly(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCountOfRssItemOfByFKOnly(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCountOfRssItemOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -4676,12 +4812,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCountOfRssItemOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void GetCountOfRssItemOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.GetCountOfRssItemOfByFKOnlyAsync(request, null);
         }
 
-        public void GetCountOfRssItemOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void GetCountOfRssItemOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginGetCountOfRssItemOfByFKOnlyDelegate == null))
             {
@@ -4700,26 +4836,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginExistsOfRssItemOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginExistsOfRssItemOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginExistsOfRssItemOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndExistsOfRssItemOfByFKOnly(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndExistsOfRssItemOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndExistsOfRssItemOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginExistsOfRssItemOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginExistsOfRssItemOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginExistsOfRssItemOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndExistsOfRssItemOfByFKOnly(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndExistsOfRssItemOfByFKOnly(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndExistsOfRssItemOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -4733,12 +4869,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void ExistsOfRssItemOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void ExistsOfRssItemOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.ExistsOfRssItemOfByFKOnlyAsync(request, null);
         }
 
-        public void ExistsOfRssItemOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void ExistsOfRssItemOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginExistsOfRssItemOfByFKOnlyDelegate == null))
             {
@@ -4757,26 +4893,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCollectionOfRssItemOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCollectionOfRssItemOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCollectionOfRssItemOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCollectionOfRssItemOfByFKOnly(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCollectionOfRssItemOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndGetCollectionOfRssItemOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginGetCollectionOfRssItemOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCollectionOfRssItemOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCollectionOfRssItemOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndGetCollectionOfRssItemOfByFKOnly(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCollectionOfRssItemOfByFKOnly(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCollectionOfRssItemOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -4790,12 +4926,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCollectionOfRssItemOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void GetCollectionOfRssItemOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.GetCollectionOfRssItemOfByFKOnlyAsync(request, null);
         }
 
-        public void GetCollectionOfRssItemOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void GetCollectionOfRssItemOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginGetCollectionOfRssItemOfByFKOnlyDelegate == null))
             {
@@ -4814,26 +4950,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetSingleOfRssItemOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetSingleOfRssItemOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetSingleOfRssItemOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetSingleOfRssItemOfByFKOnly(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetSingleOfRssItemOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndGetSingleOfRssItemOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginGetSingleOfRssItemOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetSingleOfRssItemOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetSingleOfRssItemOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndGetSingleOfRssItemOfByFKOnly(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetSingleOfRssItemOfByFKOnly(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageRssItemCollection retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetSingleOfRssItemOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -4847,12 +4983,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetSingleOfRssItemOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void GetSingleOfRssItemOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.GetSingleOfRssItemOfByFKOnlyAsync(request, null);
         }
 
-        public void GetSingleOfRssItemOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void GetSingleOfRssItemOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginGetSingleOfRssItemOfByFKOnlyDelegate == null))
             {
@@ -4886,7 +5022,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCountOfDefaultOfByFKOnly(request);
         }
@@ -4897,7 +5033,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.ExistsOfDefaultOfByFKOnly(request);
 		}
@@ -4907,8 +5043,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default GetCollectionOfDefaultOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default GetCollectionOfDefaultOfByFKOnly(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCollectionOfDefaultOfByFKOnly(request);
         }
@@ -4918,8 +5054,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default GetSingleOfDefaultOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default GetSingleOfDefaultOfByFKOnly(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetSingleOfDefaultOfByFKOnly(request);
 		}
@@ -4927,26 +5063,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
 #endif
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCountOfDefaultOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCountOfDefaultOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCountOfDefaultOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCountOfDefaultOfByFKOnly(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCountOfDefaultOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndGetCountOfDefaultOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginGetCountOfDefaultOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCountOfDefaultOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCountOfDefaultOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndGetCountOfDefaultOfByFKOnly(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCountOfDefaultOfByFKOnly(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCountOfDefaultOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -4960,12 +5096,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCountOfDefaultOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void GetCountOfDefaultOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.GetCountOfDefaultOfByFKOnlyAsync(request, null);
         }
 
-        public void GetCountOfDefaultOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void GetCountOfDefaultOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginGetCountOfDefaultOfByFKOnlyDelegate == null))
             {
@@ -4984,26 +5120,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginExistsOfDefaultOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginExistsOfDefaultOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginExistsOfDefaultOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndExistsOfDefaultOfByFKOnly(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndExistsOfDefaultOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndExistsOfDefaultOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginExistsOfDefaultOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginExistsOfDefaultOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginExistsOfDefaultOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndExistsOfDefaultOfByFKOnly(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndExistsOfDefaultOfByFKOnly(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndExistsOfDefaultOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -5017,12 +5153,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void ExistsOfDefaultOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void ExistsOfDefaultOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.ExistsOfDefaultOfByFKOnlyAsync(request, null);
         }
 
-        public void ExistsOfDefaultOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void ExistsOfDefaultOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginExistsOfDefaultOfByFKOnlyDelegate == null))
             {
@@ -5041,26 +5177,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCollectionOfDefaultOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCollectionOfDefaultOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCollectionOfDefaultOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCollectionOfDefaultOfByFKOnly(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCollectionOfDefaultOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndGetCollectionOfDefaultOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginGetCollectionOfDefaultOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCollectionOfDefaultOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCollectionOfDefaultOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndGetCollectionOfDefaultOfByFKOnly(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCollectionOfDefaultOfByFKOnly(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCollectionOfDefaultOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -5074,12 +5210,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCollectionOfDefaultOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void GetCollectionOfDefaultOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.GetCollectionOfDefaultOfByFKOnlyAsync(request, null);
         }
 
-        public void GetCollectionOfDefaultOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void GetCollectionOfDefaultOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginGetCollectionOfDefaultOfByFKOnlyDelegate == null))
             {
@@ -5098,26 +5234,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetSingleOfDefaultOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetSingleOfDefaultOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetSingleOfDefaultOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetSingleOfDefaultOfByFKOnly(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetSingleOfDefaultOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndGetSingleOfDefaultOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginGetSingleOfDefaultOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetSingleOfDefaultOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetSingleOfDefaultOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndGetSingleOfDefaultOfByFKOnly(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetSingleOfDefaultOfByFKOnly(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetSingleOfDefaultOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -5131,12 +5267,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetSingleOfDefaultOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void GetSingleOfDefaultOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.GetSingleOfDefaultOfByFKOnlyAsync(request, null);
         }
 
-        public void GetSingleOfDefaultOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void GetSingleOfDefaultOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginGetSingleOfDefaultOfByFKOnlyDelegate == null))
             {
@@ -5170,7 +5306,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultGroupedDataViewOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCountOfDefaultGroupedDataViewOfByFKOnly(request);
         }
@@ -5181,7 +5317,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultGroupedDataViewOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.ExistsOfDefaultGroupedDataViewOfByFKOnly(request);
 		}
@@ -5191,8 +5327,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView GetCollectionOfDefaultGroupedDataViewOfByFKOnly(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetCollectionOfDefaultGroupedDataViewOfByFKOnly(request);
         }
@@ -5202,8 +5338,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView GetSingleOfDefaultGroupedDataViewOfByFKOnly(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView GetSingleOfDefaultGroupedDataViewOfByFKOnly(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             return base.Channel.GetSingleOfDefaultGroupedDataViewOfByFKOnly(request);
 		}
@@ -5211,26 +5347,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
 #endif
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCountOfDefaultGroupedDataViewOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCountOfDefaultGroupedDataViewOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCountOfDefaultGroupedDataViewOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCountOfDefaultGroupedDataViewOfByFKOnly(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCountOfDefaultGroupedDataViewOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndGetCountOfDefaultGroupedDataViewOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginGetCountOfDefaultGroupedDataViewOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCountOfDefaultGroupedDataViewOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCountOfDefaultGroupedDataViewOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndGetCountOfDefaultGroupedDataViewOfByFKOnly(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCountOfDefaultGroupedDataViewOfByFKOnly(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCountOfDefaultGroupedDataViewOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -5244,12 +5380,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCountOfDefaultGroupedDataViewOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void GetCountOfDefaultGroupedDataViewOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.GetCountOfDefaultGroupedDataViewOfByFKOnlyAsync(request, null);
         }
 
-        public void GetCountOfDefaultGroupedDataViewOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void GetCountOfDefaultGroupedDataViewOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginGetCountOfDefaultGroupedDataViewOfByFKOnlyDelegate == null))
             {
@@ -5268,26 +5404,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginExistsOfDefaultGroupedDataViewOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginExistsOfDefaultGroupedDataViewOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginExistsOfDefaultGroupedDataViewOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndExistsOfDefaultGroupedDataViewOfByFKOnly(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndExistsOfDefaultGroupedDataViewOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndExistsOfDefaultGroupedDataViewOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginExistsOfDefaultGroupedDataViewOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginExistsOfDefaultGroupedDataViewOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginExistsOfDefaultGroupedDataViewOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndExistsOfDefaultGroupedDataViewOfByFKOnly(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndExistsOfDefaultGroupedDataViewOfByFKOnly(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndExistsOfDefaultGroupedDataViewOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -5301,12 +5437,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void ExistsOfDefaultGroupedDataViewOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void ExistsOfDefaultGroupedDataViewOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.ExistsOfDefaultGroupedDataViewOfByFKOnlyAsync(request, null);
         }
 
-        public void ExistsOfDefaultGroupedDataViewOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void ExistsOfDefaultGroupedDataViewOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginExistsOfDefaultGroupedDataViewOfByFKOnlyDelegate == null))
             {
@@ -5325,26 +5461,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCollectionOfDefaultGroupedDataViewOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCollectionOfDefaultGroupedDataViewOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCollectionOfDefaultGroupedDataViewOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCollectionOfDefaultGroupedDataViewOfByFKOnly(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCollectionOfDefaultGroupedDataViewOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndGetCollectionOfDefaultGroupedDataViewOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginGetCollectionOfDefaultGroupedDataViewOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCollectionOfDefaultGroupedDataViewOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCollectionOfDefaultGroupedDataViewOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndGetCollectionOfDefaultGroupedDataViewOfByFKOnly(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCollectionOfDefaultGroupedDataViewOfByFKOnly(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCollectionOfDefaultGroupedDataViewOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -5358,12 +5494,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCollectionOfDefaultGroupedDataViewOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void GetCollectionOfDefaultGroupedDataViewOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.GetCollectionOfDefaultGroupedDataViewOfByFKOnlyAsync(request, null);
         }
 
-        public void GetCollectionOfDefaultGroupedDataViewOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void GetCollectionOfDefaultGroupedDataViewOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginGetCollectionOfDefaultGroupedDataViewOfByFKOnlyDelegate == null))
             {
@@ -5382,26 +5518,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetSingleOfDefaultGroupedDataViewOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetSingleOfDefaultGroupedDataViewOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetSingleOfDefaultGroupedDataViewOfByFKOnly(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetSingleOfDefaultGroupedDataViewOfByFKOnly(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetSingleOfDefaultGroupedDataViewOfByFKOnly(System.IAsyncResult result)
         {
             return base.Channel.EndGetSingleOfDefaultGroupedDataViewOfByFKOnly(result);
         }
 
         private System.IAsyncResult OnBeginGetSingleOfDefaultGroupedDataViewOfByFKOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetSingleOfDefaultGroupedDataViewOfByFKOnly(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetSingleOfDefaultGroupedDataViewOfByFKOnly(request, callback, asyncState);
         }
 
         private object[] OnEndGetSingleOfDefaultGroupedDataViewOfByFKOnly(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetSingleOfDefaultGroupedDataViewOfByFKOnly(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetSingleOfDefaultGroupedDataViewOfByFKOnly(result);
             return new object[] {
                     retVal};
         }
@@ -5415,12 +5551,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetSingleOfDefaultGroupedDataViewOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request)
+        public void GetSingleOfDefaultGroupedDataViewOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request)
         {
             this.GetSingleOfDefaultGroupedDataViewOfByFKOnlyAsync(request, null);
         }
 
-        public void GetSingleOfDefaultGroupedDataViewOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, object userState)
+        public void GetSingleOfDefaultGroupedDataViewOfByFKOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, object userState)
         {
             if ((this.onBeginGetSingleOfDefaultGroupedDataViewOfByFKOnlyDelegate == null))
             {
@@ -5454,7 +5590,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfEntityOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetCountOfEntityOfByIdentifier(request);
         }
@@ -5465,7 +5601,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfEntityOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.ExistsOfEntityOfByIdentifier(request);
 		}
@@ -5475,8 +5611,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild GetCollectionOfEntityOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn GetCollectionOfEntityOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetCollectionOfEntityOfByIdentifier(request);
         }
@@ -5486,8 +5622,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild GetSingleOfEntityOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn GetSingleOfEntityOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetSingleOfEntityOfByIdentifier(request);
 		}
@@ -5495,26 +5631,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
 #endif
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCountOfEntityOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCountOfEntityOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCountOfEntityOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCountOfEntityOfByIdentifier(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCountOfEntityOfByIdentifier(System.IAsyncResult result)
         {
             return base.Channel.EndGetCountOfEntityOfByIdentifier(result);
         }
 
         private System.IAsyncResult OnBeginGetCountOfEntityOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCountOfEntityOfByIdentifier(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCountOfEntityOfByIdentifier(request, callback, asyncState);
         }
 
         private object[] OnEndGetCountOfEntityOfByIdentifier(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCountOfEntityOfByIdentifier(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCountOfEntityOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
@@ -5528,12 +5664,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCountOfEntityOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public void GetCountOfEntityOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             this.GetCountOfEntityOfByIdentifierAsync(request, null);
         }
 
-        public void GetCountOfEntityOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, object userState)
+        public void GetCountOfEntityOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
             if ((this.onBeginGetCountOfEntityOfByIdentifierDelegate == null))
             {
@@ -5552,26 +5688,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginExistsOfEntityOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginExistsOfEntityOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginExistsOfEntityOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndExistsOfEntityOfByIdentifier(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndExistsOfEntityOfByIdentifier(System.IAsyncResult result)
         {
             return base.Channel.EndExistsOfEntityOfByIdentifier(result);
         }
 
         private System.IAsyncResult OnBeginExistsOfEntityOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginExistsOfEntityOfByIdentifier(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginExistsOfEntityOfByIdentifier(request, callback, asyncState);
         }
 
         private object[] OnEndExistsOfEntityOfByIdentifier(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndExistsOfEntityOfByIdentifier(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndExistsOfEntityOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
@@ -5585,12 +5721,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void ExistsOfEntityOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public void ExistsOfEntityOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             this.ExistsOfEntityOfByIdentifierAsync(request, null);
         }
 
-        public void ExistsOfEntityOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, object userState)
+        public void ExistsOfEntityOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
             if ((this.onBeginExistsOfEntityOfByIdentifierDelegate == null))
             {
@@ -5609,26 +5745,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCollectionOfEntityOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCollectionOfEntityOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCollectionOfEntityOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCollectionOfEntityOfByIdentifier(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCollectionOfEntityOfByIdentifier(System.IAsyncResult result)
         {
             return base.Channel.EndGetCollectionOfEntityOfByIdentifier(result);
         }
 
         private System.IAsyncResult OnBeginGetCollectionOfEntityOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCollectionOfEntityOfByIdentifier(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCollectionOfEntityOfByIdentifier(request, callback, asyncState);
         }
 
         private object[] OnEndGetCollectionOfEntityOfByIdentifier(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCollectionOfEntityOfByIdentifier(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCollectionOfEntityOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
@@ -5642,12 +5778,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCollectionOfEntityOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public void GetCollectionOfEntityOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             this.GetCollectionOfEntityOfByIdentifierAsync(request, null);
         }
 
-        public void GetCollectionOfEntityOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, object userState)
+        public void GetCollectionOfEntityOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
             if ((this.onBeginGetCollectionOfEntityOfByIdentifierDelegate == null))
             {
@@ -5666,26 +5802,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetSingleOfEntityOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetSingleOfEntityOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetSingleOfEntityOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetSingleOfEntityOfByIdentifier(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetSingleOfEntityOfByIdentifier(System.IAsyncResult result)
         {
             return base.Channel.EndGetSingleOfEntityOfByIdentifier(result);
         }
 
         private System.IAsyncResult OnBeginGetSingleOfEntityOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetSingleOfEntityOfByIdentifier(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetSingleOfEntityOfByIdentifier(request, callback, asyncState);
         }
 
         private object[] OnEndGetSingleOfEntityOfByIdentifier(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetSingleOfEntityOfByIdentifier(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetSingleOfEntityOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
@@ -5699,12 +5835,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetSingleOfEntityOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public void GetSingleOfEntityOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             this.GetSingleOfEntityOfByIdentifierAsync(request, null);
         }
 
-        public void GetSingleOfEntityOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, object userState)
+        public void GetSingleOfEntityOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
             if ((this.onBeginGetSingleOfEntityOfByIdentifierDelegate == null))
             {
@@ -5738,7 +5874,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfDefaultOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetCountOfDefaultOfByIdentifier(request);
         }
@@ -5749,7 +5885,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfDefaultOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.ExistsOfDefaultOfByIdentifier(request);
 		}
@@ -5759,8 +5895,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default GetCollectionOfDefaultOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default GetCollectionOfDefaultOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetCollectionOfDefaultOfByIdentifier(request);
         }
@@ -5770,8 +5906,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default GetSingleOfDefaultOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default GetSingleOfDefaultOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetSingleOfDefaultOfByIdentifier(request);
 		}
@@ -5779,26 +5915,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
 #endif
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCountOfDefaultOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCountOfDefaultOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCountOfDefaultOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCountOfDefaultOfByIdentifier(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCountOfDefaultOfByIdentifier(System.IAsyncResult result)
         {
             return base.Channel.EndGetCountOfDefaultOfByIdentifier(result);
         }
 
         private System.IAsyncResult OnBeginGetCountOfDefaultOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCountOfDefaultOfByIdentifier(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCountOfDefaultOfByIdentifier(request, callback, asyncState);
         }
 
         private object[] OnEndGetCountOfDefaultOfByIdentifier(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCountOfDefaultOfByIdentifier(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCountOfDefaultOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
@@ -5812,12 +5948,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCountOfDefaultOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public void GetCountOfDefaultOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             this.GetCountOfDefaultOfByIdentifierAsync(request, null);
         }
 
-        public void GetCountOfDefaultOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, object userState)
+        public void GetCountOfDefaultOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
             if ((this.onBeginGetCountOfDefaultOfByIdentifierDelegate == null))
             {
@@ -5836,26 +5972,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginExistsOfDefaultOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginExistsOfDefaultOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginExistsOfDefaultOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndExistsOfDefaultOfByIdentifier(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndExistsOfDefaultOfByIdentifier(System.IAsyncResult result)
         {
             return base.Channel.EndExistsOfDefaultOfByIdentifier(result);
         }
 
         private System.IAsyncResult OnBeginExistsOfDefaultOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginExistsOfDefaultOfByIdentifier(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginExistsOfDefaultOfByIdentifier(request, callback, asyncState);
         }
 
         private object[] OnEndExistsOfDefaultOfByIdentifier(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndExistsOfDefaultOfByIdentifier(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndExistsOfDefaultOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
@@ -5869,12 +6005,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void ExistsOfDefaultOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public void ExistsOfDefaultOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             this.ExistsOfDefaultOfByIdentifierAsync(request, null);
         }
 
-        public void ExistsOfDefaultOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, object userState)
+        public void ExistsOfDefaultOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
             if ((this.onBeginExistsOfDefaultOfByIdentifierDelegate == null))
             {
@@ -5893,26 +6029,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCollectionOfDefaultOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCollectionOfDefaultOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCollectionOfDefaultOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCollectionOfDefaultOfByIdentifier(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCollectionOfDefaultOfByIdentifier(System.IAsyncResult result)
         {
             return base.Channel.EndGetCollectionOfDefaultOfByIdentifier(result);
         }
 
         private System.IAsyncResult OnBeginGetCollectionOfDefaultOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCollectionOfDefaultOfByIdentifier(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCollectionOfDefaultOfByIdentifier(request, callback, asyncState);
         }
 
         private object[] OnEndGetCollectionOfDefaultOfByIdentifier(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCollectionOfDefaultOfByIdentifier(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCollectionOfDefaultOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
@@ -5926,12 +6062,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCollectionOfDefaultOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public void GetCollectionOfDefaultOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             this.GetCollectionOfDefaultOfByIdentifierAsync(request, null);
         }
 
-        public void GetCollectionOfDefaultOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, object userState)
+        public void GetCollectionOfDefaultOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
             if ((this.onBeginGetCollectionOfDefaultOfByIdentifierDelegate == null))
             {
@@ -5950,26 +6086,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetSingleOfDefaultOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetSingleOfDefaultOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetSingleOfDefaultOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetSingleOfDefaultOfByIdentifier(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetSingleOfDefaultOfByIdentifier(System.IAsyncResult result)
         {
             return base.Channel.EndGetSingleOfDefaultOfByIdentifier(result);
         }
 
         private System.IAsyncResult OnBeginGetSingleOfDefaultOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetSingleOfDefaultOfByIdentifier(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetSingleOfDefaultOfByIdentifier(request, callback, asyncState);
         }
 
         private object[] OnEndGetSingleOfDefaultOfByIdentifier(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetSingleOfDefaultOfByIdentifier(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetSingleOfDefaultOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
@@ -5983,12 +6119,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetSingleOfDefaultOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public void GetSingleOfDefaultOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             this.GetSingleOfDefaultOfByIdentifierAsync(request, null);
         }
 
-        public void GetSingleOfDefaultOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, object userState)
+        public void GetSingleOfDefaultOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
             if ((this.onBeginGetSingleOfDefaultOfByIdentifierDelegate == null))
             {
@@ -6011,6 +6147,290 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 
 
+		#region Query Methods Of UpdateNameRequest of ByIdentifier 
+
+#if SILVERLIGHT
+#else
+
+        /// <summary>
+        /// Gets the count of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>the count</returns>
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfUpdateNameRequestOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetCountOfUpdateNameRequestOfByIdentifier(request);
+        }
+
+        /// <summary>
+        /// Exists the of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>true if exists any, otherwise false</returns>		
+        public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfUpdateNameRequestOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.ExistsOfUpdateNameRequestOfByIdentifier(request);
+		}
+
+        /// <summary>
+        /// Gets the collection of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest GetCollectionOfUpdateNameRequestOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetCollectionOfUpdateNameRequestOfByIdentifier(request);
+        }
+
+        /// <summary>
+        /// Gets the single of entity of "ByIdentifier".
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns></returns>
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest GetSingleOfUpdateNameRequestOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            return base.Channel.GetSingleOfUpdateNameRequestOfByIdentifier(request);
+		}
+
+#endif
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCountOfUpdateNameRequestOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginGetCountOfUpdateNameRequestOfByIdentifier(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCountOfUpdateNameRequestOfByIdentifier(System.IAsyncResult result)
+        {
+            return base.Channel.EndGetCountOfUpdateNameRequestOfByIdentifier(result);
+        }
+
+        private System.IAsyncResult OnBeginGetCountOfUpdateNameRequestOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCountOfUpdateNameRequestOfByIdentifier(request, callback, asyncState);
+        }
+
+        private object[] OnEndGetCountOfUpdateNameRequestOfByIdentifier(System.IAsyncResult result)
+        {
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCountOfUpdateNameRequestOfByIdentifier(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnGetCountOfUpdateNameRequestOfByIdentifierCompleted(object state)
+        {
+            if ((this.GetCountOfUpdateNameRequestOfByIdentifierCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetCountOfUpdateNameRequestOfByIdentifierCompleted(this, new GetCountOfUpdateNameRequestOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void GetCountOfUpdateNameRequestOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            this.GetCountOfUpdateNameRequestOfByIdentifierAsync(request, null);
+        }
+
+        public void GetCountOfUpdateNameRequestOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, object userState)
+        {
+            if ((this.onBeginGetCountOfUpdateNameRequestOfByIdentifierDelegate == null))
+            {
+                this.onBeginGetCountOfUpdateNameRequestOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBeginGetCountOfUpdateNameRequestOfByIdentifier);
+            }
+            if ((this.onEndGetCountOfUpdateNameRequestOfByIdentifierDelegate == null))
+            {
+                this.onEndGetCountOfUpdateNameRequestOfByIdentifierDelegate = new EndOperationDelegate(this.OnEndGetCountOfUpdateNameRequestOfByIdentifier);
+            }
+            if ((this.onGetCountOfUpdateNameRequestOfByIdentifierCompletedDelegate == null))
+            {
+                this.onGetCountOfUpdateNameRequestOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCountOfUpdateNameRequestOfByIdentifierCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetCountOfUpdateNameRequestOfByIdentifierDelegate, new object[] {
+                        request}, this.onEndGetCountOfUpdateNameRequestOfByIdentifierDelegate, this.onGetCountOfUpdateNameRequestOfByIdentifierCompletedDelegate, userState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginExistsOfUpdateNameRequestOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginExistsOfUpdateNameRequestOfByIdentifier(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndExistsOfUpdateNameRequestOfByIdentifier(System.IAsyncResult result)
+        {
+            return base.Channel.EndExistsOfUpdateNameRequestOfByIdentifier(result);
+        }
+
+        private System.IAsyncResult OnBeginExistsOfUpdateNameRequestOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginExistsOfUpdateNameRequestOfByIdentifier(request, callback, asyncState);
+        }
+
+        private object[] OnEndExistsOfUpdateNameRequestOfByIdentifier(System.IAsyncResult result)
+        {
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndExistsOfUpdateNameRequestOfByIdentifier(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnExistsOfUpdateNameRequestOfByIdentifierCompleted(object state)
+        {
+            if ((this.ExistsOfUpdateNameRequestOfByIdentifierCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ExistsOfUpdateNameRequestOfByIdentifierCompleted(this, new ExistsOfUpdateNameRequestOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void ExistsOfUpdateNameRequestOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            this.ExistsOfUpdateNameRequestOfByIdentifierAsync(request, null);
+        }
+
+        public void ExistsOfUpdateNameRequestOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, object userState)
+        {
+            if ((this.onBeginExistsOfUpdateNameRequestOfByIdentifierDelegate == null))
+            {
+                this.onBeginExistsOfUpdateNameRequestOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBeginExistsOfUpdateNameRequestOfByIdentifier);
+            }
+            if ((this.onEndExistsOfUpdateNameRequestOfByIdentifierDelegate == null))
+            {
+                this.onEndExistsOfUpdateNameRequestOfByIdentifierDelegate = new EndOperationDelegate(this.OnEndExistsOfUpdateNameRequestOfByIdentifier);
+            }
+            if ((this.onExistsOfUpdateNameRequestOfByIdentifierCompletedDelegate == null))
+            {
+                this.onExistsOfUpdateNameRequestOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnExistsOfUpdateNameRequestOfByIdentifierCompleted);
+            }
+            base.InvokeAsync(this.onBeginExistsOfUpdateNameRequestOfByIdentifierDelegate, new object[] {
+                        request}, this.onEndExistsOfUpdateNameRequestOfByIdentifierDelegate, this.onExistsOfUpdateNameRequestOfByIdentifierCompletedDelegate, userState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCollectionOfUpdateNameRequestOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginGetCollectionOfUpdateNameRequestOfByIdentifier(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCollectionOfUpdateNameRequestOfByIdentifier(System.IAsyncResult result)
+        {
+            return base.Channel.EndGetCollectionOfUpdateNameRequestOfByIdentifier(result);
+        }
+
+        private System.IAsyncResult OnBeginGetCollectionOfUpdateNameRequestOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCollectionOfUpdateNameRequestOfByIdentifier(request, callback, asyncState);
+        }
+
+        private object[] OnEndGetCollectionOfUpdateNameRequestOfByIdentifier(System.IAsyncResult result)
+        {
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCollectionOfUpdateNameRequestOfByIdentifier(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnGetCollectionOfUpdateNameRequestOfByIdentifierCompleted(object state)
+        {
+            if ((this.GetCollectionOfUpdateNameRequestOfByIdentifierCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetCollectionOfUpdateNameRequestOfByIdentifierCompleted(this, new GetCollectionOfUpdateNameRequestOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void GetCollectionOfUpdateNameRequestOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            this.GetCollectionOfUpdateNameRequestOfByIdentifierAsync(request, null);
+        }
+
+        public void GetCollectionOfUpdateNameRequestOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, object userState)
+        {
+            if ((this.onBeginGetCollectionOfUpdateNameRequestOfByIdentifierDelegate == null))
+            {
+                this.onBeginGetCollectionOfUpdateNameRequestOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBeginGetCollectionOfUpdateNameRequestOfByIdentifier);
+            }
+            if ((this.onEndGetCollectionOfUpdateNameRequestOfByIdentifierDelegate == null))
+            {
+                this.onEndGetCollectionOfUpdateNameRequestOfByIdentifierDelegate = new EndOperationDelegate(this.OnEndGetCollectionOfUpdateNameRequestOfByIdentifier);
+            }
+            if ((this.onGetCollectionOfUpdateNameRequestOfByIdentifierCompletedDelegate == null))
+            {
+                this.onGetCollectionOfUpdateNameRequestOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetCollectionOfUpdateNameRequestOfByIdentifierCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetCollectionOfUpdateNameRequestOfByIdentifierDelegate, new object[] {
+                        request}, this.onEndGetCollectionOfUpdateNameRequestOfByIdentifierDelegate, this.onGetCollectionOfUpdateNameRequestOfByIdentifierCompletedDelegate, userState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetSingleOfUpdateNameRequestOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginGetSingleOfUpdateNameRequestOfByIdentifier(request, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetSingleOfUpdateNameRequestOfByIdentifier(System.IAsyncResult result)
+        {
+            return base.Channel.EndGetSingleOfUpdateNameRequestOfByIdentifier(result);
+        }
+
+        private System.IAsyncResult OnBeginGetSingleOfUpdateNameRequestOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetSingleOfUpdateNameRequestOfByIdentifier(request, callback, asyncState);
+        }
+
+        private object[] OnEndGetSingleOfUpdateNameRequestOfByIdentifier(System.IAsyncResult result)
+        {
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetSingleOfUpdateNameRequestOfByIdentifier(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnGetSingleOfUpdateNameRequestOfByIdentifierCompleted(object state)
+        {
+            if ((this.GetSingleOfUpdateNameRequestOfByIdentifierCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetSingleOfUpdateNameRequestOfByIdentifierCompleted(this, new GetSingleOfUpdateNameRequestOfByIdentifierCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void GetSingleOfUpdateNameRequestOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
+        {
+            this.GetSingleOfUpdateNameRequestOfByIdentifierAsync(request, null);
+        }
+
+        public void GetSingleOfUpdateNameRequestOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, object userState)
+        {
+            if ((this.onBeginGetSingleOfUpdateNameRequestOfByIdentifierDelegate == null))
+            {
+                this.onBeginGetSingleOfUpdateNameRequestOfByIdentifierDelegate = new BeginOperationDelegate(this.OnBeginGetSingleOfUpdateNameRequestOfByIdentifier);
+            }
+            if ((this.onEndGetSingleOfUpdateNameRequestOfByIdentifierDelegate == null))
+            {
+                this.onEndGetSingleOfUpdateNameRequestOfByIdentifierDelegate = new EndOperationDelegate(this.OnEndGetSingleOfUpdateNameRequestOfByIdentifier);
+            }
+            if ((this.onGetSingleOfUpdateNameRequestOfByIdentifierCompletedDelegate == null))
+            {
+                this.onGetSingleOfUpdateNameRequestOfByIdentifierCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetSingleOfUpdateNameRequestOfByIdentifierCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetSingleOfUpdateNameRequestOfByIdentifierDelegate, new object[] {
+                        request}, this.onEndGetSingleOfUpdateNameRequestOfByIdentifierDelegate, this.onGetSingleOfUpdateNameRequestOfByIdentifierCompletedDelegate, userState);
+        }
+
+		#endregion Query Methods Of UpdateNameRequest of ByIdentifier 
+
+
+
+
 		#region Query Methods Of KeyInformation of ByIdentifier 
 
 #if SILVERLIGHT
@@ -6022,7 +6442,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>the count</returns>
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger GetCountOfKeyInformationOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetCountOfKeyInformationOfByIdentifier(request);
         }
@@ -6033,7 +6453,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// <param name="request">The request.</param>
         /// <returns>true if exists any, otherwise false</returns>		
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean ExistsOfKeyInformationOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.ExistsOfKeyInformationOfByIdentifier(request);
 		}
@@ -6043,8 +6463,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation GetCollectionOfKeyInformationOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation GetCollectionOfKeyInformationOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetCollectionOfKeyInformationOfByIdentifier(request);
         }
@@ -6054,8 +6474,8 @@ namespace MSBuildLogsExtended.WcfClientBLL
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation GetSingleOfKeyInformationOfByIdentifier(
-			MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation GetSingleOfKeyInformationOfByIdentifier(
+			MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             return base.Channel.GetSingleOfKeyInformationOfByIdentifier(request);
 		}
@@ -6063,26 +6483,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
 #endif
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCountOfKeyInformationOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCountOfKeyInformationOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCountOfKeyInformationOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCountOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCountOfKeyInformationOfByIdentifier(System.IAsyncResult result)
         {
             return base.Channel.EndGetCountOfKeyInformationOfByIdentifier(result);
         }
 
         private System.IAsyncResult OnBeginGetCountOfKeyInformationOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCountOfKeyInformationOfByIdentifier(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCountOfKeyInformationOfByIdentifier(request, callback, asyncState);
         }
 
         private object[] OnEndGetCountOfKeyInformationOfByIdentifier(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCountOfKeyInformationOfByIdentifier(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCountOfKeyInformationOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
@@ -6096,12 +6516,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCountOfKeyInformationOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public void GetCountOfKeyInformationOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             this.GetCountOfKeyInformationOfByIdentifierAsync(request, null);
         }
 
-        public void GetCountOfKeyInformationOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, object userState)
+        public void GetCountOfKeyInformationOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
             if ((this.onBeginGetCountOfKeyInformationOfByIdentifierDelegate == null))
             {
@@ -6120,26 +6540,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginExistsOfKeyInformationOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginExistsOfKeyInformationOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginExistsOfKeyInformationOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndExistsOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+        Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndExistsOfKeyInformationOfByIdentifier(System.IAsyncResult result)
         {
             return base.Channel.EndExistsOfKeyInformationOfByIdentifier(result);
         }
 
         private System.IAsyncResult OnBeginExistsOfKeyInformationOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginExistsOfKeyInformationOfByIdentifier(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginExistsOfKeyInformationOfByIdentifier(request, callback, asyncState);
         }
 
         private object[] OnEndExistsOfKeyInformationOfByIdentifier(System.IAsyncResult result)
         {
-            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndExistsOfKeyInformationOfByIdentifier(result);
+            Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndExistsOfKeyInformationOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
@@ -6153,12 +6573,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void ExistsOfKeyInformationOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public void ExistsOfKeyInformationOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             this.ExistsOfKeyInformationOfByIdentifierAsync(request, null);
         }
 
-        public void ExistsOfKeyInformationOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, object userState)
+        public void ExistsOfKeyInformationOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
             if ((this.onBeginExistsOfKeyInformationOfByIdentifierDelegate == null))
             {
@@ -6177,26 +6597,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetCollectionOfKeyInformationOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetCollectionOfKeyInformationOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetCollectionOfKeyInformationOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetCollectionOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetCollectionOfKeyInformationOfByIdentifier(System.IAsyncResult result)
         {
             return base.Channel.EndGetCollectionOfKeyInformationOfByIdentifier(result);
         }
 
         private System.IAsyncResult OnBeginGetCollectionOfKeyInformationOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetCollectionOfKeyInformationOfByIdentifier(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetCollectionOfKeyInformationOfByIdentifier(request, callback, asyncState);
         }
 
         private object[] OnEndGetCollectionOfKeyInformationOfByIdentifier(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetCollectionOfKeyInformationOfByIdentifier(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetCollectionOfKeyInformationOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
@@ -6210,12 +6630,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetCollectionOfKeyInformationOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public void GetCollectionOfKeyInformationOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             this.GetCollectionOfKeyInformationOfByIdentifierAsync(request, null);
         }
 
-        public void GetCollectionOfKeyInformationOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, object userState)
+        public void GetCollectionOfKeyInformationOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
             if ((this.onBeginGetCollectionOfKeyInformationOfByIdentifierDelegate == null))
             {
@@ -6234,26 +6654,26 @@ namespace MSBuildLogsExtended.WcfClientBLL
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.BeginGetSingleOfKeyInformationOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginGetSingleOfKeyInformationOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
         {
             return base.Channel.BeginGetSingleOfKeyInformationOfByIdentifier(request, callback, asyncState);
         }
 
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild.EndGetSingleOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndGetSingleOfKeyInformationOfByIdentifier(System.IAsyncResult result)
         {
             return base.Channel.EndGetSingleOfKeyInformationOfByIdentifier(result);
         }
 
         private System.IAsyncResult OnBeginGetSingleOfKeyInformationOfByIdentifier(object[] inValues, System.AsyncCallback callback, object asyncState)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier )(inValues[0]));
-            return ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).BeginGetSingleOfKeyInformationOfByIdentifier(request, callback, asyncState);
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier )(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginGetSingleOfKeyInformationOfByIdentifier(request, callback, asyncState);
         }
 
         private object[] OnEndGetSingleOfKeyInformationOfByIdentifier(System.IAsyncResult result)
         {
-            MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation retVal = ((MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild)(this)).EndGetSingleOfKeyInformationOfByIdentifier(result);
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndGetSingleOfKeyInformationOfByIdentifier(result);
             return new object[] {
                     retVal};
         }
@@ -6267,12 +6687,12 @@ namespace MSBuildLogsExtended.WcfClientBLL
             }
         }
 
-        public void GetSingleOfKeyInformationOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request)
+        public void GetSingleOfKeyInformationOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request)
         {
             this.GetSingleOfKeyInformationOfByIdentifierAsync(request, null);
         }
 
-        public void GetSingleOfKeyInformationOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, object userState)
+        public void GetSingleOfKeyInformationOfByIdentifierAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, object userState)
         {
             if ((this.onBeginGetSingleOfKeyInformationOfByIdentifierDelegate == null))
             {
@@ -6392,17 +6812,17 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 #if WINDOWS_PHONE
 
-        protected override MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild CreateChannel()
+        protected override MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn CreateChannel()
         {
             return new WcfClientEntityAsynBuildChannel(this);
         }
 
-        private class WcfClientEntityAsynBuildChannel : ChannelBase<MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild>, MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild
+        private class WcfClientEntityAsynBuildChannel : ChannelBase<MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn>, MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn
         {
 
 			#region constructor
 
-            public WcfClientEntityAsynBuildChannel(System.ServiceModel.ClientBase<MSBuildLogsExtended.WcfContracts.WcfServiceContractAsynBuild> client) :
+            public WcfClientEntityAsynBuildChannel(System.ServiceModel.ClientBase<MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn> client) :
                 base(client)
             {
             }
@@ -6411,7 +6831,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 		    #region Framework.DAL.DataAccessLayerContractBase<MSBuildLogsExtended.DataSourceEntities.BuildCollection,MSBuildLogsExtended.DataSourceEntities.Build,MSBuildLogsExtended.DataSourceEntities.BuildIdentifier> Members
 
-            public System.IAsyncResult BeginInsertEntity(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginInsertEntity(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = input;
@@ -6419,14 +6839,14 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild EndInsertEntity(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn EndInsertEntity(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(base.EndInvoke("InsertEntity", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(base.EndInvoke("InsertEntity", _args, result)));
                 return _result;
             }
 			
-            public System.IAsyncResult BeginUpdateEntity(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginUpdateEntity(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = input;
@@ -6434,14 +6854,14 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild EndUpdateEntity(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn EndUpdateEntity(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(base.EndInvoke("UpdateEntity", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(base.EndInvoke("UpdateEntity", _args, result)));
                 return _result;
             }
 			
-            public System.IAsyncResult BeginDeleteEntity(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginDeleteEntity(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = input;
@@ -6449,14 +6869,14 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild EndDeleteEntity(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn EndDeleteEntity(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(base.EndInvoke("DeleteEntity", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(base.EndInvoke("DeleteEntity", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginDeleteByIdentifierEntity(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInOfIdentifierBuild id, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginDeleteByIdentifierEntity(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltInOfIdentifier id, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = id;
@@ -6464,14 +6884,14 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild EndDeleteByIdentifierEntity(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn EndDeleteByIdentifierEntity(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(base.EndInvoke("DeleteByIdentifierEntity", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(base.EndInvoke("DeleteByIdentifierEntity", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginBatchInsert(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginBatchInsert(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = input;
@@ -6479,14 +6899,14 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild EndBatchInsert(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn EndBatchInsert(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(base.EndInvoke("BatchInsert", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(base.EndInvoke("BatchInsert", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginBatchDelete(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginBatchDelete(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = input;
@@ -6494,14 +6914,14 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild EndBatchDelete(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn EndBatchDelete(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(base.EndInvoke("BatchDelete", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(base.EndInvoke("BatchDelete", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginBatchUpdate(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageBuiltInBuild input, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginBatchUpdate(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageBuiltIn input, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = input;
@@ -6509,10 +6929,10 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild EndBatchUpdate(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn EndBatchUpdate(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(base.EndInvoke("BatchUpdate", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(base.EndInvoke("BatchUpdate", _args, result)));
                 return _result;
             }			
 
@@ -6530,7 +6950,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 			#region Query Methods Of Entity of Common 
 
-            public System.IAsyncResult BeginGetCountOfEntityOfCommon(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCountOfEntityOfCommon(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6545,7 +6965,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfEntityOfCommon(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginExistsOfEntityOfCommon(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6560,7 +6980,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfEntityOfCommon(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCollectionOfEntityOfCommon(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6568,14 +6988,14 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild EndGetCollectionOfEntityOfCommon(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn EndGetCollectionOfEntityOfCommon(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(base.EndInvoke("GetCollectionOfEntityOfCommon", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(base.EndInvoke("GetCollectionOfEntityOfCommon", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfEntityOfCommon(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetSingleOfEntityOfCommon(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6583,10 +7003,10 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild EndGetSingleOfEntityOfCommon(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn EndGetSingleOfEntityOfCommon(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(base.EndInvoke("GetSingleOfEntityOfCommon", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(base.EndInvoke("GetSingleOfEntityOfCommon", _args, result)));
                 return _result;
             }
 
@@ -6597,7 +7017,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 			#region Query Methods Of Default of Common 
 
-            public System.IAsyncResult BeginGetCountOfDefaultOfCommon(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCountOfDefaultOfCommon(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6612,7 +7032,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfDefaultOfCommon(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginExistsOfDefaultOfCommon(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6627,7 +7047,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfDefaultOfCommon(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCollectionOfDefaultOfCommon(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6635,14 +7055,14 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default EndGetCollectionOfDefaultOfCommon(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default EndGetCollectionOfDefaultOfCommon(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default)(base.EndInvoke("GetCollectionOfDefaultOfCommon", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default)(base.EndInvoke("GetCollectionOfDefaultOfCommon", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfDefaultOfCommon(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfCommon request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetSingleOfDefaultOfCommon(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6650,10 +7070,10 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default EndGetSingleOfDefaultOfCommon(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default EndGetSingleOfDefaultOfCommon(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default)(base.EndInvoke("GetSingleOfDefaultOfCommon", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default)(base.EndInvoke("GetSingleOfDefaultOfCommon", _args, result)));
                 return _result;
             }
 
@@ -6664,7 +7084,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 			#region Query Methods Of Entity of All 
 
-            public System.IAsyncResult BeginGetCountOfEntityOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCountOfEntityOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6679,7 +7099,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfEntityOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginExistsOfEntityOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6694,7 +7114,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfEntityOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCollectionOfEntityOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6702,14 +7122,14 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild EndGetCollectionOfEntityOfAll(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn EndGetCollectionOfEntityOfAll(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(base.EndInvoke("GetCollectionOfEntityOfAll", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(base.EndInvoke("GetCollectionOfEntityOfAll", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfEntityOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetSingleOfEntityOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6717,10 +7137,10 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild EndGetSingleOfEntityOfAll(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn EndGetSingleOfEntityOfAll(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(base.EndInvoke("GetSingleOfEntityOfAll", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(base.EndInvoke("GetSingleOfEntityOfAll", _args, result)));
                 return _result;
             }
 
@@ -6731,7 +7151,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 			#region Query Methods Of NameValuePair of All 
 
-            public System.IAsyncResult BeginGetCountOfNameValuePairOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCountOfNameValuePairOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6746,7 +7166,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfNameValuePairOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginExistsOfNameValuePairOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6761,7 +7181,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfNameValuePairOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCollectionOfNameValuePairOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6776,7 +7196,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfNameValuePairOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetSingleOfNameValuePairOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6798,7 +7218,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 			#region Query Methods Of RssItem of All 
 
-            public System.IAsyncResult BeginGetCountOfRssItemOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCountOfRssItemOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6813,7 +7233,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfRssItemOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginExistsOfRssItemOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6828,7 +7248,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfRssItemOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCollectionOfRssItemOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6843,7 +7263,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfRssItemOfAll(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetSingleOfRssItemOfAll(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6865,7 +7285,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 			#region Query Methods Of Entity of ByFKOnly 
 
-            public System.IAsyncResult BeginGetCountOfEntityOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCountOfEntityOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6880,7 +7300,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfEntityOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginExistsOfEntityOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6895,7 +7315,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfEntityOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCollectionOfEntityOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6903,14 +7323,14 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild EndGetCollectionOfEntityOfByFKOnly(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn EndGetCollectionOfEntityOfByFKOnly(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(base.EndInvoke("GetCollectionOfEntityOfByFKOnly", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(base.EndInvoke("GetCollectionOfEntityOfByFKOnly", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfEntityOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetSingleOfEntityOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6918,10 +7338,10 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild EndGetSingleOfEntityOfByFKOnly(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn EndGetSingleOfEntityOfByFKOnly(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(base.EndInvoke("GetSingleOfEntityOfByFKOnly", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(base.EndInvoke("GetSingleOfEntityOfByFKOnly", _args, result)));
                 return _result;
             }
 
@@ -6932,7 +7352,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 			#region Query Methods Of NameValuePair of ByFKOnly 
 
-            public System.IAsyncResult BeginGetCountOfNameValuePairOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCountOfNameValuePairOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6947,7 +7367,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfNameValuePairOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginExistsOfNameValuePairOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6962,7 +7382,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfNameValuePairOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCollectionOfNameValuePairOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6977,7 +7397,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfNameValuePairOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetSingleOfNameValuePairOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -6999,7 +7419,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 			#region Query Methods Of RssItem of ByFKOnly 
 
-            public System.IAsyncResult BeginGetCountOfRssItemOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCountOfRssItemOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7014,7 +7434,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfRssItemOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginExistsOfRssItemOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7029,7 +7449,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfRssItemOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCollectionOfRssItemOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7044,7 +7464,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfRssItemOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetSingleOfRssItemOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7066,7 +7486,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 			#region Query Methods Of Default of ByFKOnly 
 
-            public System.IAsyncResult BeginGetCountOfDefaultOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCountOfDefaultOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7081,7 +7501,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfDefaultOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginExistsOfDefaultOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7096,7 +7516,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfDefaultOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCollectionOfDefaultOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7104,14 +7524,14 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default EndGetCollectionOfDefaultOfByFKOnly(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default EndGetCollectionOfDefaultOfByFKOnly(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default)(base.EndInvoke("GetCollectionOfDefaultOfByFKOnly", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default)(base.EndInvoke("GetCollectionOfDefaultOfByFKOnly", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfDefaultOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetSingleOfDefaultOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7119,10 +7539,10 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default EndGetSingleOfDefaultOfByFKOnly(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default EndGetSingleOfDefaultOfByFKOnly(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default)(base.EndInvoke("GetSingleOfDefaultOfByFKOnly", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default)(base.EndInvoke("GetSingleOfDefaultOfByFKOnly", _args, result)));
                 return _result;
             }
 
@@ -7133,7 +7553,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 			#region Query Methods Of DefaultGroupedDataView of ByFKOnly 
 
-            public System.IAsyncResult BeginGetCountOfDefaultGroupedDataViewOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCountOfDefaultGroupedDataViewOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7148,7 +7568,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfDefaultGroupedDataViewOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginExistsOfDefaultGroupedDataViewOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7163,7 +7583,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfDefaultGroupedDataViewOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCollectionOfDefaultGroupedDataViewOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7171,14 +7591,14 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView EndGetCollectionOfDefaultGroupedDataViewOfByFKOnly(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView EndGetCollectionOfDefaultGroupedDataViewOfByFKOnly(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView)(base.EndInvoke("GetCollectionOfDefaultGroupedDataViewOfByFKOnly", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView)(base.EndInvoke("GetCollectionOfDefaultGroupedDataViewOfByFKOnly", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfDefaultGroupedDataViewOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByFKOnly request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetSingleOfDefaultGroupedDataViewOfByFKOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7186,10 +7606,10 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView EndGetSingleOfDefaultGroupedDataViewOfByFKOnly(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView EndGetSingleOfDefaultGroupedDataViewOfByFKOnly(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.DefaultGroupedDataView)(base.EndInvoke("GetSingleOfDefaultGroupedDataViewOfByFKOnly", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.DefaultGroupedDataView)(base.EndInvoke("GetSingleOfDefaultGroupedDataViewOfByFKOnly", _args, result)));
                 return _result;
             }
 
@@ -7200,7 +7620,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 			#region Query Methods Of Entity of ByIdentifier 
 
-            public System.IAsyncResult BeginGetCountOfEntityOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCountOfEntityOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7215,7 +7635,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfEntityOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginExistsOfEntityOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7230,7 +7650,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfEntityOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCollectionOfEntityOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7238,14 +7658,14 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild EndGetCollectionOfEntityOfByIdentifier(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn EndGetCollectionOfEntityOfByIdentifier(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(base.EndInvoke("GetCollectionOfEntityOfByIdentifier", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(base.EndInvoke("GetCollectionOfEntityOfByIdentifier", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfEntityOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetSingleOfEntityOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7253,10 +7673,10 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild EndGetSingleOfEntityOfByIdentifier(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn EndGetSingleOfEntityOfByIdentifier(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild)(base.EndInvoke("GetSingleOfEntityOfByIdentifier", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn)(base.EndInvoke("GetSingleOfEntityOfByIdentifier", _args, result)));
                 return _result;
             }
 
@@ -7267,7 +7687,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 			#region Query Methods Of Default of ByIdentifier 
 
-            public System.IAsyncResult BeginGetCountOfDefaultOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCountOfDefaultOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7282,7 +7702,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfDefaultOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginExistsOfDefaultOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7297,7 +7717,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfDefaultOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCollectionOfDefaultOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7305,14 +7725,14 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default EndGetCollectionOfDefaultOfByIdentifier(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default EndGetCollectionOfDefaultOfByIdentifier(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default)(base.EndInvoke("GetCollectionOfDefaultOfByIdentifier", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default)(base.EndInvoke("GetCollectionOfDefaultOfByIdentifier", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfDefaultOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetSingleOfDefaultOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7320,10 +7740,10 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default EndGetSingleOfDefaultOfByIdentifier(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default EndGetSingleOfDefaultOfByIdentifier(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.Default)(base.EndInvoke("GetSingleOfDefaultOfByIdentifier", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.Default)(base.EndInvoke("GetSingleOfDefaultOfByIdentifier", _args, result)));
                 return _result;
             }
 
@@ -7332,9 +7752,76 @@ namespace MSBuildLogsExtended.WcfClientBLL
 
 
 
+			#region Query Methods Of UpdateNameRequest of ByIdentifier 
+
+            public System.IAsyncResult BeginGetCountOfUpdateNameRequestOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("GetCountOfUpdateNameRequestOfByIdentifier", _args, callback, asyncState);
+                return _result;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger EndGetCountOfUpdateNameRequestOfByIdentifier(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageInteger)(base.EndInvoke("GetCountOfUpdateNameRequestOfByIdentifier", _args, result)));
+                return _result;
+            }
+
+            public System.IAsyncResult BeginExistsOfUpdateNameRequestOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("ExistsOfUpdateNameRequestOfByIdentifier", _args, callback, asyncState);
+                return _result;
+            }
+
+            public Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean EndExistsOfUpdateNameRequestOfByIdentifier(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean _result = ((Framework.CommonBLLEntities.BusinessLogicLayerResponseMessageBoolean)(base.EndInvoke("ExistsOfUpdateNameRequestOfByIdentifier", _args, result)));
+                return _result;
+            }
+
+            public System.IAsyncResult BeginGetCollectionOfUpdateNameRequestOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("GetCollectionOfUpdateNameRequestOfByIdentifier", _args, callback, asyncState);
+                return _result;
+            }
+
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest EndGetCollectionOfUpdateNameRequestOfByIdentifier(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest)(base.EndInvoke("GetCollectionOfUpdateNameRequestOfByIdentifier", _args, result)));
+                return _result;
+            }
+
+            public System.IAsyncResult BeginGetSingleOfUpdateNameRequestOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = request;
+                System.IAsyncResult _result = base.BeginInvoke("GetSingleOfUpdateNameRequestOfByIdentifier", _args, callback, asyncState);
+                return _result;
+            }
+
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest EndGetSingleOfUpdateNameRequestOfByIdentifier(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest)(base.EndInvoke("GetSingleOfUpdateNameRequestOfByIdentifier", _args, result)));
+                return _result;
+            }
+
+			#endregion Query Methods Of UpdateNameRequest of ByIdentifier 
+
+
+
+
 			#region Query Methods Of KeyInformation of ByIdentifier 
 
-            public System.IAsyncResult BeginGetCountOfKeyInformationOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCountOfKeyInformationOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7349,7 +7836,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginExistsOfKeyInformationOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginExistsOfKeyInformationOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7364,7 +7851,7 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetCollectionOfKeyInformationOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetCollectionOfKeyInformationOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7372,14 +7859,14 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation EndGetCollectionOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation EndGetCollectionOfKeyInformationOfByIdentifier(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation)(base.EndInvoke("GetCollectionOfKeyInformationOfByIdentifier", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation)(base.EndInvoke("GetCollectionOfKeyInformationOfByIdentifier", _args, result)));
                 return _result;
             }
 
-            public System.IAsyncResult BeginGetSingleOfKeyInformationOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfByIdentifier request, System.AsyncCallback callback, object asyncState)
+            public System.IAsyncResult BeginGetSingleOfKeyInformationOfByIdentifier(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByIdentifier request, System.AsyncCallback callback, object asyncState)
             {
                 object[] _args = new object[1];
                 _args[0] = request;
@@ -7387,10 +7874,10 @@ namespace MSBuildLogsExtended.WcfClientBLL
                 return _result;
             }
 
-            public MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation EndGetSingleOfKeyInformationOfByIdentifier(System.IAsyncResult result)
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation EndGetSingleOfKeyInformationOfByIdentifier(System.IAsyncResult result)
             {
                 object[] _args = new object[0];
-                MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation _result = ((MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerResponseMessageBuiltInBuild.KeyInformation)(base.EndInvoke("GetSingleOfKeyInformationOfByIdentifier", _args, result)));
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.KeyInformation)(base.EndInvoke("GetSingleOfKeyInformationOfByIdentifier", _args, result)));
                 return _result;
             }
 
@@ -7408,9 +7895,140 @@ namespace MSBuildLogsExtended.WcfClientBLL
 			#endregion GetAscendantAndDescendant
 
 
+			#region EntityUpdateActionSetting - UpdateNameOnly
+
+            public System.IAsyncResult BeginUpdateNameOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedUpdateNameOnly input, System.AsyncCallback callback, object asyncState)
+            {
+                object[] _args = new object[1];
+                _args[0] = input;
+                System.IAsyncResult _result = base.BeginInvoke("UpdateNameOnly", _args, callback, asyncState);
+                return _result;
+            }
+
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest EndUpdateNameOnly(System.IAsyncResult result)
+            {
+                object[] _args = new object[0];
+                MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest _result = ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest)(base.EndInvoke("UpdateNameOnly", _args, result)));
+                return _result;
+            }
+			        
+			#endregion EntityUpdateActionSetting - UpdateNameOnly
+
+
 
         }
 #endif
+
+
+        #region EntityUpdateActionSetting - UpdateNameOnly
+
+        [System.Diagnostics.DebuggerStepThroughAttribute()]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        public partial class UpdateNameOnlyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+        {
+
+            private object[] results;
+
+            public UpdateNameOnlyCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+            {
+                this.results = results;
+            }
+
+            public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest Result
+            {
+                get
+                {
+                    base.RaiseExceptionIfNecessary();
+                    return ((MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest)(this.results[0]));
+                }
+            }
+        }
+        
+        private BeginOperationDelegate onBeginUpdateNameOnlyDelegate;
+
+        private EndOperationDelegate onEndUpdateNameOnlyDelegate;
+
+        private System.Threading.SendOrPostCallback onUpdateNameOnlyCompletedDelegate;
+
+        public event System.EventHandler<UpdateNameOnlyCompletedEventArgs> UpdateNameOnlyCompleted;
+
+
+#if SILVERLIGHT
+#else
+
+        /// <summary>
+        /// Inserts the specified input.
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>a message with action result</returns>
+        public MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest UpdateNameOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedUpdateNameOnly request)
+        {
+            return base.Channel.UpdateNameOnly(request);
+        }
+
+#endif
+
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.BeginUpdateNameOnly(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedUpdateNameOnly input, System.AsyncCallback callback, object asyncState)
+        {
+            return base.Channel.BeginUpdateNameOnly(input, callback, asyncState);
+        }
+
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn.EndUpdateNameOnly(System.IAsyncResult result)
+        {
+            return base.Channel.EndUpdateNameOnly(result);
+        }
+
+        private System.IAsyncResult OnBeginUpdateNameOnly(object[] inValues, System.AsyncCallback callback, object asyncState)
+        {
+            MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedUpdateNameOnly input = ((MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedUpdateNameOnly)(inValues[0]));
+            return ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).BeginUpdateNameOnly(input, callback, asyncState);
+        }
+
+        private object[] OnEndUpdateNameOnly(System.IAsyncResult result)
+        {
+            MSBuildLogsExtended.CommonBLLEntities.BuildResponseMessageBuiltIn.UpdateNameRequest retVal = ((MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn)(this)).EndUpdateNameOnly(result);
+            return new object[] {
+                    retVal};
+        }
+
+        private void OnUpdateNameOnlyCompleted(object state)
+        {
+            if ((this.UpdateNameOnlyCompleted != null))
+            {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.UpdateNameOnlyCompleted(this, new UpdateNameOnlyCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+
+        public void UpdateNameOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedUpdateNameOnly input)
+        {
+            this.UpdateNameOnlyAsync(input, null);
+        }
+
+        public void UpdateNameOnlyAsync(MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedUpdateNameOnly input, object userState)
+        {
+            if ((this.onBeginUpdateNameOnlyDelegate == null))
+            {
+                this.onBeginUpdateNameOnlyDelegate = new BeginOperationDelegate(this.OnBeginUpdateNameOnly);
+            }
+            if ((this.onEndUpdateNameOnlyDelegate == null))
+            {
+                this.onEndUpdateNameOnlyDelegate = new EndOperationDelegate(this.OnEndUpdateNameOnly);
+            }
+            if ((this.onUpdateNameOnlyCompletedDelegate == null))
+            {
+                this.onUpdateNameOnlyCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnUpdateNameOnlyCompleted);
+            }
+            base.InvokeAsync(this.onBeginUpdateNameOnlyDelegate, new object[] {
+                        input}, this.onEndUpdateNameOnlyDelegate, this.onUpdateNameOnlyCompletedDelegate, userState);
+        }
+				
+		#endregion EntityUpdateActionSetting - UpdateNameOnly
+
 
 
 

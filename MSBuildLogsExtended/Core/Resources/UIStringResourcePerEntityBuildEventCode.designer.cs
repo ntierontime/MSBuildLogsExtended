@@ -293,6 +293,16 @@ namespace MSBuildLogsExtended.Resources {
         /// <summary>
         ///   Looks up a localized string similar to test.
         /// </summary>
+        public static string The_length_of_EventCode_should_be_0_to_100 {
+            get {
+                return ResourceManager.GetString("The_length_of_EventCode_should_be_0_to_100", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to test.
+        /// </summary>
         public static string DescriptionDescription {
             get {
                 return ResourceManager.GetString("DescriptionDescription", resourceCulture);
@@ -346,6 +356,16 @@ namespace MSBuildLogsExtended.Resources {
         public static string DescriptionValueValidationExpression {
             get {
                 return ResourceManager.GetString("DescriptionValueValidationExpression", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to test.
+        /// </summary>
+        public static string The_length_of_Description_should_be_0_to_1500 {
+            get {
+                return ResourceManager.GetString("The_length_of_Description_should_be_0_to_1500", resourceCulture);
             }
         }
 
@@ -506,6 +526,26 @@ namespace MSBuildLogsExtended.Resources {
         public static string Value_Validation_Error_Message_of_property_Id_of_MSBuildLogsExtended_BuildEventCode {
             get {
                 return ResourceManager.GetString("Value_Validation_Error_Message_of_property_Id_of_MSBuildLogsExtended_BuildEventCode", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to test.
+        /// </summary>
+        public static string Required_Field_Error_Message_of_property_EventCode_of_MSBuildLogsExtended_BuildEventCode {
+            get {
+                return ResourceManager.GetString("Required_Field_Error_Message_of_property_EventCode_of_MSBuildLogsExtended_BuildEventCode", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to test.
+        /// </summary>
+        public static string Value_Validation_Error_Message_of_property_EventCode_of_MSBuildLogsExtended_BuildEventCode {
+            get {
+                return ResourceManager.GetString("Value_Validation_Error_Message_of_property_EventCode_of_MSBuildLogsExtended_BuildEventCode", resourceCulture);
             }
         }
 

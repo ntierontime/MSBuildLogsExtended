@@ -46,45 +46,45 @@ namespace MSBuildLogsExtended.LinqDAL
 
 
         /// <summary>
-        /// method to create an data access layer class instance of <see cref="MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractBuild"/>
+        /// method to create an data access layer class instance of <see cref="MSBuildLogsExtended.DALContracts.IBuildRepository"/>
         /// </summary>
-        /// <returns>a new instance of <see cref="MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractBuild"/>.</returns>
-        public MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractBuild CreateDALInstanceOfBuild()
+        /// <returns>a new instance of <see cref="MSBuildLogsExtended.DALContracts.IBuildRepository"/>.</returns>
+        public MSBuildLogsExtended.DALContracts.IBuildRepository CreateDALInstanceOfBuild()
         {
-            return new MSBuildLogsExtended.LinqDAL.LinqToSqlDataAccessLayerEntityBuild(new MSBuildLogsExtended.LinqToSqlContexts.MSBuildLogsExtendedContext(this.ConnectionString));
+            return new MSBuildLogsExtended.LinqDAL.BuildRepository(new MSBuildLogsExtended.LinqToSqlContexts.MSBuildLogsExtendedContext(this.ConnectionString));
         }
 
 
 
         /// <summary>
-        /// method to create an data access layer class instance of <see cref="MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractBuildEventCode"/>
+        /// method to create an data access layer class instance of <see cref="MSBuildLogsExtended.DALContracts.IBuildEventCodeRepository"/>
         /// </summary>
-        /// <returns>a new instance of <see cref="MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractBuildEventCode"/>.</returns>
-        public MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractBuildEventCode CreateDALInstanceOfBuildEventCode()
+        /// <returns>a new instance of <see cref="MSBuildLogsExtended.DALContracts.IBuildEventCodeRepository"/>.</returns>
+        public MSBuildLogsExtended.DALContracts.IBuildEventCodeRepository CreateDALInstanceOfBuildEventCode()
         {
-            return new MSBuildLogsExtended.LinqDAL.LinqToSqlDataAccessLayerEntityBuildEventCode(new MSBuildLogsExtended.LinqToSqlContexts.MSBuildLogsExtendedContext(this.ConnectionString));
+            return new MSBuildLogsExtended.LinqDAL.BuildEventCodeRepository(new MSBuildLogsExtended.LinqToSqlContexts.MSBuildLogsExtendedContext(this.ConnectionString));
         }
 
 
 
         /// <summary>
-        /// method to create an data access layer class instance of <see cref="MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractBuildLog"/>
+        /// method to create an data access layer class instance of <see cref="MSBuildLogsExtended.DALContracts.IBuildLogRepository"/>
         /// </summary>
-        /// <returns>a new instance of <see cref="MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractBuildLog"/>.</returns>
-        public MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractBuildLog CreateDALInstanceOfBuildLog()
+        /// <returns>a new instance of <see cref="MSBuildLogsExtended.DALContracts.IBuildLogRepository"/>.</returns>
+        public MSBuildLogsExtended.DALContracts.IBuildLogRepository CreateDALInstanceOfBuildLog()
         {
-            return new MSBuildLogsExtended.LinqDAL.LinqToSqlDataAccessLayerEntityBuildLog(new MSBuildLogsExtended.LinqToSqlContexts.MSBuildLogsExtendedContext(this.ConnectionString));
+            return new MSBuildLogsExtended.LinqDAL.BuildLogRepository(new MSBuildLogsExtended.LinqToSqlContexts.MSBuildLogsExtendedContext(this.ConnectionString));
         }
 
 
 
         /// <summary>
-        /// method to create an data access layer class instance of <see cref="MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractSolution"/>
+        /// method to create an data access layer class instance of <see cref="MSBuildLogsExtended.DALContracts.ISolutionRepository"/>
         /// </summary>
-        /// <returns>a new instance of <see cref="MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractSolution"/>.</returns>
-        public MSBuildLogsExtended.DALContracts.DataAccessLayerEntityContractSolution CreateDALInstanceOfSolution()
+        /// <returns>a new instance of <see cref="MSBuildLogsExtended.DALContracts.ISolutionRepository"/>.</returns>
+        public MSBuildLogsExtended.DALContracts.ISolutionRepository CreateDALInstanceOfSolution()
         {
-            return new MSBuildLogsExtended.LinqDAL.LinqToSqlDataAccessLayerEntitySolution(new MSBuildLogsExtended.LinqToSqlContexts.MSBuildLogsExtendedContext(this.ConnectionString));
+            return new MSBuildLogsExtended.LinqDAL.SolutionRepository(new MSBuildLogsExtended.LinqToSqlContexts.MSBuildLogsExtendedContext(this.ConnectionString));
         }
 
 

@@ -1,141 +1,177 @@
+@using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc40Rasor.Helpers.UrlStrings;
+@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Linq.Expressions;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Html;
+@using System.Web.Routing;
 @using Framework.Mvc;
+@using PagedList.Mvc;
 @model MSBuildLogsExtended.AspNetMvc40ViewModel.WPCommonOfSolutionVM
 @{
-    // http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
-    // http://dotnetmentors.com/mvc/paging-and-sorting-in-asp-net-mvc-and-entity-framework-application.aspx
-    ViewBag.Title = MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Solution;
     RouteValueDictionary queryStringDictionary = new RouteValueDictionary(Request.QueryString.AllKeys.ToDictionary(key => key, key => (object)Request.QueryString[key]));
 }
-@section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
-        </div>
-    </section>
-}
-<article>
-<div>
-<div class="default">
-@using (Html.BeginForm()){
-<div>
-<div class="buttonContainer">
-<input class="button button-Search" type="submit" name="SearchToolBarUp" value="@Framework.Resources.UIStringResource.SearchAlternativeText" />
-<input onclick="location.href='@Url.Action("AddNew", "Solution")'" class="button button-AddNew" type="button" name="AddNewToolBarUp" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
-<input onclick="location.href='@Url.Action("WPCommonOfSolution_Export", "Solution", new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="button button-Export" type="button" name="ExportToolBarUp" value="@Framework.Resources.UIStringResource.ExportAlternativeText" />
-<input onclick="location.href='@Url.Action("WPCommonOfSolution_Export", "Solution", new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="button button-ExportToExcel" type="button" name="ExportToExcelToolBarUp" value="@Framework.Resources.UIStringResource.ExportToExcelAlternativeText" />
-<input onclick="location.href='@Url.Action("Import", "Solution")'" class="button button-Import" type="button" name="ImportToolBarUp" value="@Framework.Resources.UIStringResource.ImportAlternativeText" />
+ <div class="row">
+ <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+        @using (Html.BeginForm())
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <h3 style="display: inline;">@Framework.Resources.UIStringResource.Common_Filter</h3>
+                </div>
+                <div class="panel-footer nopadding">
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+    <button class="btn btn-default" role="button" type="submit" name="SearchToolBarUp" title="@Framework.Resources.UIStringResource.SearchAlternativeText">
+        <span class="glyphicon glyphicon-search"></span>
+    </button>
 </div>
-<div>
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_AddNew, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="AddNewToolBarUp" title="@Framework.Resources.UIStringResource.AddNewAlternativeText">
+		<span class="glyphicon glyphicon-plus"></span>
+	</a>
 </div>
-<div>
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareDescriptionCommonOftOfCommon, new { style="display:display;" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon
-@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedDescriptionCommonOftOfCommon)
+<div class="btn-group">
+	<a href="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_WPCommonOfSolution_Export, UrlStringsAlias.ControllerName_Solution, new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="btn btn-default" role="button" type="button" name="ExportToolBarUp" title="@Framework.Resources.UIStringResource.ExportAlternativeText">
+        <span class="glyphicon glyphicon-export"></span>
+    </a>
 </div>
-<div>
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareNameCommonOftOfCommon, new { style="display:display;" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon
-@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedNameCommonOftOfCommon)
+<div class="btn-group">
+	<a href="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_WPCommonOfSolution_Export, UrlStringsAlias.ControllerName_Solution, new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="btn btn-default" role="button" type="button" name="ExportToExcelToolBarUp" title="@Framework.Resources.UIStringResource.ExportToExcelAlternativeText">
+        <span class="glyphicon glyphicon-export"></span>
+    </a>
 </div>
-<div>
-@Html.CheckBoxFor(model=>model.Criteria.IsToCompareExternalParentIdCommonOftOfCommon, new { style="display:display;" })@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareExternalParentIdCommonOftOfCommon
-@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedExternalParentIdCommonOftOfCommon)
-</div>
-<div class="buttonContainer">
-    <div class="paging-label">Items per page : </div><div class="paging-field">@Html.DropDownListFor(model=>model.QueryPagingSetting.PageSize, Model.SelectListOfPageSize, new Dictionary<string,Object>{ { "onchange", "this.form.submit();" } })
-    </div><div class="paging-label">Sort by:</div><div class="paging-field">@Html.DropDownListFor(model => model.QueryOrderBySettingCollecionInString, Model.SelectListOfQueryOrderBySettingCollecionInString, new Dictionary<string, Object> { { "onchange", "this.form.submit();" } })
-    </div><div class="paging-field-right">@Model.QueryPagingSetting.GetPagingInformationString()</div>
-</div>
-<div class="buttonContainer">
-<input class="button button-Search" type="submit" name="SearchToolBarBottom" value="@Framework.Resources.UIStringResource.SearchAlternativeText" />
-<input onclick="location.href='@Url.Action("AddNew", "Solution")'" class="button button-AddNew" type="button" name="AddNewToolBarBottom" value="@Framework.Resources.UIStringResource.AddNewAlternativeText" />
-<input onclick="location.href='@Url.Action("WPCommonOfSolution_Export", "Solution", new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="button button-Export" type="button" name="ExportToolBarBottom" value="@Framework.Resources.UIStringResource.ExportAlternativeText" />
-<input onclick="location.href='@Url.Action("WPCommonOfSolution_Export", "Solution", new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="button button-ExportToExcel" type="button" name="ExportToExcelToolBarBottom" value="@Framework.Resources.UIStringResource.ExportToExcelAlternativeText" />
-<input onclick="location.href='@Url.Action("Import", "Solution")'" class="button button-Import" type="button" name="ImportToolBarBottom" value="@Framework.Resources.UIStringResource.ImportAlternativeText" />
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Import, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="ImportToolBarUp" title="@Framework.Resources.UIStringResource.ImportAlternativeText">
+		<span class="glyphicon glyphicon-import"></span>
+	</a>
 </div>
 </div>
-}
+                </div>
+                <div class="panel-body">
+ <div class="form-group">
 </div>
-<div class="default">
-<div>
-    @Html.PagedListPager(Url
-        , new PagerHtmlRenderer(
-        //Constructor mandatory values
-                currentPageNumber: Model.QueryPagingSetting.CurrentPage,
-                pageSize: Model.QueryPagingSetting.PageSize,
-                totalNumberOfItems: Model.QueryPagingSetting.CountOfRecords,
-                actionName: "WPCommonOfSolution",
-                controllerName: "Solution",
-                routeValues: new RouteValueDictionary() { { "currentPage", "" } },
-                pageRouteValueName: "currentPage")
-                {
-                    //Properties
-                    PreviousLinkInnerHtml = "<strong>Previous</strong>",
-                    NextLinkInnerHtml = "<strong>Next<strong>",
-                    FirstLinkInnerHtml = "<strong>First</strong>",
-                    LastLinkInnerHtml = "<strong>Last</strong>"
-                });
+<div class="form-group">
+<div class="checkbox checkbox-info">
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareDescriptionCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon</label>
 </div>
-<div>
-<table id="MasterDataControl0" name="MasterDataControl0" >
-<tr><th class="sorting"></th>
-<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.ExternalParentId</th>
-<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Name</th>
-<th class="sorting">@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Description</th>
-<th class="sorting"></th></tr>
+@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedDescriptionCommonOftOfCommon, new { @class = "form-control" })
+</div>
+<div class="form-group">
+<div class="checkbox checkbox-info">
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareNameCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon</label>
+</div>
+@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedNameCommonOftOfCommon, new { @class = "form-control" })
+</div>
+<div class="form-group">
+<div class="checkbox checkbox-info">
+@Html.CheckBoxFor(model=>model.Criteria.IsToCompareExternalParentIdCommonOftOfCommon, new { @class="styled" })<label class="control-label">@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareExternalParentIdCommonOftOfCommon</label>
+</div>
+@Html.TextBoxFor(model=>model.Criteria.ValueToBeContainedExternalParentIdCommonOftOfCommon, new { @class = "form-control" })
+</div>
+                    <div class="form-group form-inline">
+                        <label class="control-label">Items per page : </label>
+                        @Html.DropDownListFor(model => model.QueryPagingSetting.PageSize, Model.SelectListOfPageSize, new Dictionary<string, Object> { { "class", "form-control" }, { "onchange", "this.form.submit();" } })
+                    </div>
+                    <div class="form-group form-inline">
+                        <label class="control-label">Sort by:</label>
+                        @Html.DropDownListFor(model => model.QueryOrderBySettingCollecionInString, Model.SelectListOfQueryOrderBySettingCollecionInString, new Dictionary<string, Object> { { "class", "form-control" }, { "onchange", "this.form.submit();" } })
+                    </div>
+                </div>
+                <div class="panel-footer nopadding">
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+    <button class="btn btn-default" role="button" type="submit" name="SearchToolBarBottom" title="@Framework.Resources.UIStringResource.SearchAlternativeText">
+        <span class="glyphicon glyphicon-search"></span>
+    </button>
+</div>
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_AddNew, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="AddNewToolBarBottom" title="@Framework.Resources.UIStringResource.AddNewAlternativeText">
+		<span class="glyphicon glyphicon-plus"></span>
+	</a>
+</div>
+<div class="btn-group">
+	<a href="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_WPCommonOfSolution_Export, UrlStringsAlias.ControllerName_Solution, new RouteValueDictionary { { "dataServiceType", "Csv" } })'" class="btn btn-default" role="button" type="button" name="ExportToolBarBottom" title="@Framework.Resources.UIStringResource.ExportAlternativeText">
+        <span class="glyphicon glyphicon-export"></span>
+    </a>
+</div>
+<div class="btn-group">
+	<a href="location.href='@Url.Action(UrlStringsAlias.ActionName_Solution_WPCommonOfSolution_Export, UrlStringsAlias.ControllerName_Solution, new RouteValueDictionary { { "dataServiceType", "Excel2010" } })'" class="btn btn-default" role="button" type="button" name="ExportToExcelToolBarBottom" title="@Framework.Resources.UIStringResource.ExportToExcelAlternativeText">
+        <span class="glyphicon glyphicon-export"></span>
+    </a>
+</div>
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Import, UrlStringsAlias.ControllerName_Solution)" class="btn btn-default" role="button" type="button" name="ImportToolBarBottom" title="@Framework.Resources.UIStringResource.ImportAlternativeText">
+		<span class="glyphicon glyphicon-import"></span>
+	</a>
+</div>
+</div>
+                </div>
+            </div>
+		}
+ </div>
+ <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 nopadding">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                <h3 style="display: inline;">@Html.ActionLink(MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Solution, "WPCommonOfSolution", "Solution")
+            </div>
+            <div class="table-responsive">
+<table id="MasterDataControl1" name="MasterDataControl1" class="table table-hover table-bordered table-striped">
+<thead>
+ <tr><th  class="hidden-xs visible-sm"></th>
+<th >@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.ExternalParentId</th>
+<th >@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Name</th>
+<th >@MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.Description</th>
+<th  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"></th></tr>
+</thead>
+<tbody>
     @if (Model != null && Model.StatusOfResult == Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK)
     {
 		int index = 0;
         foreach (var item in Model.Result)
         {
 			index++;
-<tr><td ></td>
+<tr><td  class="hidden-xs visible-sm"></td>
 <td >@Html.DisplayFor(modelItem => item.ExternalParentId)</td>
 <td >@Html.DisplayFor(modelItem => item.Name)</td>
 <td >@Html.DisplayFor(modelItem => item.Description)</td>
-<td ><div class="buttonContainer">
-<input onclick="location.href='@Url.Action("WPEntityRelatedOfSolution", "Solution", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" class="button button-Details" type="button" name="DetailsToolBarRightInList" value="@Framework.Resources.UIStringResource.DetailsAlternativeText" />
-<input onclick="location.href='@Url.Action("Edit", "Solution", new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })'" class="button button-Edit" type="button" name="EditToolBarRightInList" value="@Framework.Resources.UIStringResource.EditAlternativeText" />
+<td  class="col-xs-4 col-sm-3 col-md-2 col-lg-2"><div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group">
+	<a href="@Url.Action(UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="FullDetailsToolBarRightInList" title="@Framework.Resources.UIStringResource.FullDetailsAlternativeText">
+		<span class="glyphicon glyphicon-briefcase"></span>
+	</a>
+</div>
+<div class="btn-group">
+    <a href="@Url.Action(UrlStringsAlias.ActionName_Solution_Edit, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = item.Id })" class="btn btn-default" role="button" type="button" name="EditToolBarRightInList" title="@Framework.Resources.UIStringResource.EditAlternativeText">
+        <span class="glyphicon glyphicon-edit"></span>
+    </a>
+</div>
 </div></td></tr>
         }
     }
     else
     {
-<tr><td colspan="50" ><div class="error-label">@Model.StatusMessageOfResult</div></td></tr>
+<tr><td colspan="50" ><div class="text-danger">@Model.StatusMessageOfResult</div>
+</td></tr>
     }
+</tbody>
 </table>
-</div>
-<div>
-    @Html.PagedListPager(Url
-        , new PagerHtmlRenderer(
-        //Constructor mandatory values
-                currentPageNumber: Model.QueryPagingSetting.CurrentPage,
-                pageSize: Model.QueryPagingSetting.PageSize,
-                totalNumberOfItems: Model.QueryPagingSetting.CountOfRecords,
-                actionName: "WPCommonOfSolution",
-                controllerName: "Solution",
-                routeValues: new RouteValueDictionary() { { "currentPage", "" } },
-                pageRouteValueName: "currentPage")
-                {
-                    //Properties
-                    PreviousLinkInnerHtml = "<strong>Previous</strong>",
-                    NextLinkInnerHtml = "<strong>Next<strong>",
-                    FirstLinkInnerHtml = "<strong>First</strong>",
-                    LastLinkInnerHtml = "<strong>Last</strong>"
-                });
-</div>
-</div>
-</div>
-</article>
+            </div>
+            <div class="pull-right">
+    @if (Model.Result != null)
+    {
+        var pagedResult = (PagedList.StaticPagedList<MSBuildLogsExtended.DataSourceEntities.Solution>)ViewBag.StaticPagedResult;
+        <text>
+            @Html.PagedListPager(pagedResult, currentPage => Url.Action(UrlStringsAlias.ActionName_Solution_WPCommonOfSolution, new { currentPage = currentPage }), PagedList.Mvc.PagedListRenderOptions.OnlyShowFivePagesAtATime)
+        </text>
+    }
+            </div>
+        </div>
+ </div>
+ </div>
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryui")
-    @Scripts.Render("~/bundles/jqueryval")
-    @Scripts.Render("~/bundles/knockout")
-    @Scripts.Render("~/bundles/dataTables")
-    @Scripts.Render("~/bundles/bootstrap")
     <script type="text/javascript">
-        //http://www.softfinity.com/blog/using-ajax-with-knockout-js-and-asp-net-mvc-4-to-load-select-drop-down-options/
         $(document).ready($(function() {
         }));
         $(document).ready($(function() {
@@ -179,9 +215,7 @@
         function CascadingDDLViewModel() {
             var self = this;
         }
-        $(document).ready($(function() {
-            var objVM = new CascadingDDLViewModel();
-            ko.applyBindings(objVM);
-        }));
+        var objVM = new CascadingDDLViewModel();
+        ko.applyBindings(objVM);
     </script>
 }

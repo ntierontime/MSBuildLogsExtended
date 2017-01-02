@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{088D0CE9-8C01-464A-B1C2-34CFA6C76D1B}</ProjectGuid>
+    <ProjectGuid>{8D404E22-86BD-4A45-A122-C5C2B5B61E9A}</ProjectGuid>
     <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -54,8 +54,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Maps\map.2.B.3.vsd" />
-    <Content Include="Maps\map.2.B.3.vsd.png" />
     <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntity_\Build.cs">
       <Link>DataSourceEntity_\Build.cs</Link>
     </Compile>
@@ -80,17 +78,17 @@
     <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntity_\SolutionCollection.cs">
       <Link>DataSourceEntity_\SolutionCollection.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntityHelpers\DataSourceEntityHelperBuild.cs">
-      <Link>DataSourceEntityHelpers\DataSourceEntityHelperBuild.cs</Link>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntityHelpers\BuildHelper.cs">
+      <Link>DataSourceEntityHelpers\BuildHelper.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntityHelpers\DataSourceEntityHelperBuildEventCode.cs">
-      <Link>DataSourceEntityHelpers\DataSourceEntityHelperBuildEventCode.cs</Link>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntityHelpers\BuildEventCodeHelper.cs">
+      <Link>DataSourceEntityHelpers\BuildEventCodeHelper.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntityHelpers\DataSourceEntityHelperBuildLog.cs">
-      <Link>DataSourceEntityHelpers\DataSourceEntityHelperBuildLog.cs</Link>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntityHelpers\BuildLogHelper.cs">
+      <Link>DataSourceEntityHelpers\BuildLogHelper.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntityHelpers\DataSourceEntityHelperSolution.cs">
-      <Link>DataSourceEntityHelpers\DataSourceEntityHelperSolution.cs</Link>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceEntityHelpers\SolutionHelper.cs">
+      <Link>DataSourceEntityHelpers\SolutionHelper.cs</Link>
     </Compile>
     <Compile Include="..\..\Core\DataSourceEntities\DataSourceIdentifiers\BuildIdentifier.cs">
       <Link>DataSourceIdentifiers\BuildIdentifier.cs</Link>
@@ -104,37 +102,37 @@
     <Compile Include="..\..\Core\DataSourceEntities\DataSourceIdentifiers\SolutionIdentifier.cs">
       <Link>DataSourceIdentifiers\SolutionIdentifier.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\DataSourceEntities\DataSourceQueryCriteriaByEntityReferences\DataSourceQueryCriteriaByEntityReferenceBuild.cs">
-      <Link>DataSourceQueryCriteriaByEntityReferences\DataSourceQueryCriteriaByEntityReferenceBuild.cs</Link>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceQueryCriteriaByEntityReferences\BuildQueryCriteriaByEntityReference.cs">
+      <Link>DataSourceQueryCriteriaByEntityReferences\BuildQueryCriteriaByEntityReference.cs</Link>
     </Compile>
-    <Compile Include="..\..\Core\DataSourceEntities\DataSourceQueryCriteriaByEntityReferences\DataSourceQueryCriteriaByEntityReferenceBuildLog.cs">
-      <Link>DataSourceQueryCriteriaByEntityReferences\DataSourceQueryCriteriaByEntityReferenceBuildLog.cs</Link>
+    <Compile Include="..\..\Core\DataSourceEntities\DataSourceQueryCriteriaByEntityReferences\BuildLogQueryCriteriaByEntityReference.cs">
+      <Link>DataSourceQueryCriteriaByEntityReferences\BuildLogQueryCriteriaByEntityReference.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EntityContracts.SL\MSBuildLogsExtended.EntityContracts.SL.csproj">
-      <Project>{a7599ceb-adb1-406a-ac7c-0155758ab4b2}</Project>
+      <Project>{a109b303-c757-4fa3-be0e-6460dbcf9741}</Project>
       <Name>MSBuildLogsExtended.EntityContracts.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.SL\Framework.SL\Framework.SL.csproj">
-      <Project>{1888f6cc-7810-45a6-82be-02d7f5d9ca6f}</Project>
+      <Project>{3ad8826f-070f-40dd-8771-8d17ada7ebf2}</Project>
       <Name>Framework.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Frameworks.SL\Framework.DataSourceEntities.SL\Framework.DataSourceEntities.SL.csproj">
-      <Project>{8842686f-6006-4e6c-abc7-f0921870b9b7}</Project>
+      <Project>{83b25b4a-62bf-4bf0-a18c-623af31c7bdd}</Project>
       <Name>Framework.DataSourceEntities.SL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Resources.SL\MSBuildLogsExtended.Resources.SL.csproj">
-      <Project>{754eb260-3edb-4885-8095-646adde5c9e5}</Project>
+      <Project>{ab89f1f0-e4b6-4538-8df5-3cd1e1bfeb2d}</Project>
       <Name>MSBuildLogsExtended.Resources.SL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="mscorlib" />
     <Reference Include="system" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Servicemodel" />
-    <Reference Include="mscorlib" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
@@ -154,7 +152,7 @@
         <SilverlightProjectProperties />
       </FlavorProperties>
       <!-- For ProjectLinker -->
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="806a9ab2-2edd-42d2-a3ca-a2acba0cedd7" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="37102465-556b-49e7-8ca2-a7814e45de36" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

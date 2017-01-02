@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><Database Name="MSBuildLogsExtendedContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Table Name="dbo.Build" Member="Build">
+  <Table Name="dbo.Build" Member="Builds">
     <Type Name="Build">
       <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" Member="Id" />
       <Column Name="SolutionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" Member="SolutionId" />
@@ -7,18 +7,18 @@
       <Column Name="Description" Type="System.String" DbType="NVarChar(1500) NULL" CanBeNull="true" Member="Description" />
       <Column Name="BuildStartTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" Member="BuildStartTime" />
       <Association Name="FK_Build_Solution" Member="Solution" ThisKey="SolutionId" OtherKey="Id" Type="Solution" IsForeignKey="true" />
-      <Association Name="FK_BuildLog_Build" Member="BuildLog" ThisKey="Id" OtherKey="BuildId" Type="BuildLog" IsForeignKey="false" />
+      <Association Name="FK_BuildLog_Build" Member="BuildLogs" ThisKey="Id" OtherKey="BuildId" Type="BuildLog" IsForeignKey="false" />
     </Type>
   </Table>
-  <Table Name="dbo.BuildEventCode" Member="BuildEventCode">
+  <Table Name="dbo.BuildEventCode" Member="BuildEventCodes">
     <Type Name="BuildEventCode">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" Member="Id" />
       <Column Name="EventCode" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" Member="EventCode" />
       <Column Name="Description" Type="System.String" DbType="NVarChar(1500) NULL" CanBeNull="true" Member="Description" />
-      <Association Name="FK_BuildLog_BuildEventCode" Member="BuildLog" ThisKey="Id" OtherKey="BuildEventCodeId" Type="BuildLog" IsForeignKey="false" />
+      <Association Name="FK_BuildLog_BuildEventCode" Member="BuildLogs" ThisKey="Id" OtherKey="BuildEventCodeId" Type="BuildLog" IsForeignKey="false" />
     </Type>
   </Table>
-  <Table Name="dbo.BuildLog" Member="BuildLog">
+  <Table Name="dbo.BuildLog" Member="BuildLogs">
     <Type Name="BuildLog">
       <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" Member="Id" />
       <Column Name="BuildId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" Member="BuildId" />
@@ -29,13 +29,13 @@
       <Association Name="FK_BuildLog_BuildEventCode" Member="BuildEventCode" ThisKey="BuildEventCodeId" OtherKey="Id" Type="BuildEventCode" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Solution" Member="Solution">
+  <Table Name="dbo.Solution" Member="Solutions">
     <Type Name="Solution">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" Member="Id" />
       <Column Name="ExternalParentId" Type="System.String" DbType="NVarChar(100) NULL" CanBeNull="true" Member="ExternalParentId" />
       <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" Member="Name" />
       <Column Name="Description" Type="System.String" DbType="NVarChar(1500) NULL" CanBeNull="true" Member="Description" />
-      <Association Name="FK_Build_Solution" Member="Build" ThisKey="Id" OtherKey="SolutionId" Type="Build" IsForeignKey="false" />
+      <Association Name="FK_Build_Solution" Member="Builds" ThisKey="Id" OtherKey="SolutionId" Type="Build" IsForeignKey="false" />
     </Type>
   </Table>
 </Database>

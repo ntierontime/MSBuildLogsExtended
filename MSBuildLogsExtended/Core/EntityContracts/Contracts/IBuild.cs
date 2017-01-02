@@ -6,7 +6,7 @@ namespace MSBuildLogsExtended.EntityContracts
     /// <summary>
     /// definition of Build with parameters of .Net value type.
     /// </summary>
-	public interface IBuild : IBuildIdentifier
+	public partial interface IBuild : IBuildIdentifier
 	{ 
 
         System.Int32 SolutionId { get; set; }
@@ -26,7 +26,7 @@ namespace MSBuildLogsExtended.EntityContracts
     /// a property defined when <see cref="WithEntityContractBuild"/> is used in other classes.
     /// </summary>
     /// <typeparam name="T">a type inherits from <see cref="WithEntityContractBuild"/></typeparam>
-	public interface WithEntityContractBuild<T>
+	public partial interface WithEntityContractBuild<T>
         where T : IBuild
     {
         /// <summary>

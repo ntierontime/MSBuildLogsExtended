@@ -17,9 +17,9 @@ namespace MSBuildLogsExtended.CommonBLL
             //feed.Authors.Add(new SyndicationPerson(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.));
             //feed.Categories.Add(new SyndicationCategory(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuild.));
 
-            MSBuildLogsExtended.CommonBLL.BusinessLogicLayerEntityBuild instance = new MSBuildLogsExtended.CommonBLL.BusinessLogicLayerEntityBuild();
+            MSBuildLogsExtended.CommonBLL.BuildService instance = new MSBuildLogsExtended.CommonBLL.BuildService();
 
-            var request = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildOfAll();
+            var request = new MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfAll();
             request.QueryPagingSetting = new Framework.EntityContracts.QueryPagingSetting(1, 10);
             request.QueryOrderBySettingCollection = new Framework.EntityContracts.QueryOrderBySettingCollection("LastModifiedDateTime:DESC");
             var fromDataSource = instance.GetCollectionOfRssItemOfAll(request);
@@ -54,9 +54,9 @@ namespace MSBuildLogsExtended.CommonBLL
             //feed.Authors.Add(new SyndicationPerson(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.));
             //feed.Categories.Add(new SyndicationCategory(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildEventCode.));
 
-            MSBuildLogsExtended.CommonBLL.BusinessLogicLayerEntityBuildEventCode instance = new MSBuildLogsExtended.CommonBLL.BusinessLogicLayerEntityBuildEventCode();
+            MSBuildLogsExtended.CommonBLL.BuildEventCodeService instance = new MSBuildLogsExtended.CommonBLL.BuildEventCodeService();
 
-            var request = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildEventCodeOfAll();
+            var request = new MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfAll();
             request.QueryPagingSetting = new Framework.EntityContracts.QueryPagingSetting(1, 10);
             request.QueryOrderBySettingCollection = new Framework.EntityContracts.QueryOrderBySettingCollection("LastModifiedDateTime:DESC");
             var fromDataSource = instance.GetCollectionOfRssItemOfAll(request);
@@ -91,9 +91,9 @@ namespace MSBuildLogsExtended.CommonBLL
             //feed.Authors.Add(new SyndicationPerson(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.));
             //feed.Categories.Add(new SyndicationCategory(MSBuildLogsExtended.Resources.UIStringResourcePerEntityBuildLog.));
 
-            MSBuildLogsExtended.CommonBLL.BusinessLogicLayerEntityBuildLog instance = new MSBuildLogsExtended.CommonBLL.BusinessLogicLayerEntityBuildLog();
+            MSBuildLogsExtended.CommonBLL.BuildLogService instance = new MSBuildLogsExtended.CommonBLL.BuildLogService();
 
-            var request = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedBuildLogOfAll();
+            var request = new MSBuildLogsExtended.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfAll();
             request.QueryPagingSetting = new Framework.EntityContracts.QueryPagingSetting(1, 10);
             request.QueryOrderBySettingCollection = new Framework.EntityContracts.QueryOrderBySettingCollection("LastModifiedDateTime:DESC");
             var fromDataSource = instance.GetCollectionOfRssItemOfAll(request);
@@ -128,9 +128,9 @@ namespace MSBuildLogsExtended.CommonBLL
             //feed.Authors.Add(new SyndicationPerson(MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.));
             //feed.Categories.Add(new SyndicationCategory(MSBuildLogsExtended.Resources.UIStringResourcePerEntitySolution.));
 
-            MSBuildLogsExtended.CommonBLL.BusinessLogicLayerEntitySolution instance = new MSBuildLogsExtended.CommonBLL.BusinessLogicLayerEntitySolution();
+            MSBuildLogsExtended.CommonBLL.SolutionService instance = new MSBuildLogsExtended.CommonBLL.SolutionService();
 
-            var request = new MSBuildLogsExtended.CommonBLLEntities.BusinessLogicLayerRequestMessageUserDefinedSolutionOfAll();
+            var request = new MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageUserDefinedOfAll();
             request.QueryPagingSetting = new Framework.EntityContracts.QueryPagingSetting(1, 10);
             request.QueryOrderBySettingCollection = new Framework.EntityContracts.QueryOrderBySettingCollection("LastModifiedDateTime:DESC");
             var fromDataSource = instance.GetCollectionOfRssItemOfAll(request);

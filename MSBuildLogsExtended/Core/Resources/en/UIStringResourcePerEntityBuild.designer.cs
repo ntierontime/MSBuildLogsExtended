@@ -328,6 +328,16 @@ namespace MSBuildLogsExtended.Resources {
 
 
         /// <summary>
+        ///   Looks up a localized string similar to "The length of Name should be 0 to 100"".
+        /// </summary>
+        public static string The_length_of_Name_should_be_0_to_100 {
+            get {
+                return resourceLoader.GetString("The_length_of_Name_should_be_0_to_100");
+            }
+        }
+
+
+        /// <summary>
         ///   Looks up a localized string similar to "Description"".
         /// </summary>
         public static string DescriptionDescription {
@@ -383,6 +393,16 @@ namespace MSBuildLogsExtended.Resources {
         public static string DescriptionValueValidationExpression {
             get {
                 return resourceLoader.GetString("DescriptionValueValidationExpression");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "The length of Description should be 0 to 1500"".
+        /// </summary>
+        public static string The_length_of_Description_should_be_0_to_1500 {
+            get {
+                return resourceLoader.GetString("The_length_of_Description_should_be_0_to_1500");
             }
         }
 
@@ -620,29 +640,29 @@ namespace MSBuildLogsExtended.Resources {
         /// <summary>
         ///   Looks up a localized string similar to "Solution"".
         /// </summary>
-        public static string Solution_S1_1_Name {
+        public static string Solution_1_Name {
             get {
-                return resourceLoader.GetString("Solution_S1_1_Name");
+                return resourceLoader.GetString("Solution_1_Name");
             }
         }
 
 
         /// <summary>
-        ///   Looks up a localized string similar to "Required Field Error Message of property Solution_S1_1_Name of MSBuildLogsExtended.Build"".
+        ///   Looks up a localized string similar to "Required Field Error Message of property Solution_1_Name of MSBuildLogsExtended.Build"".
         /// </summary>
-        public static string Required_Field_Error_Message_of_property_Solution_S1_1_Name_of_MSBuildLogsExtended_Build {
+        public static string Required_Field_Error_Message_of_property_Solution_1_Name_of_MSBuildLogsExtended_Build {
             get {
-                return resourceLoader.GetString("Required_Field_Error_Message_of_property_Solution_S1_1_Name_of_MSBuildLogsExtended_Build");
+                return resourceLoader.GetString("Required_Field_Error_Message_of_property_Solution_1_Name_of_MSBuildLogsExtended_Build");
             }
         }
 
 
         /// <summary>
-        ///   Looks up a localized string similar to "Value Validation Error Message of property Solution_S1_1_Name of MSBuildLogsExtended.Build"".
+        ///   Looks up a localized string similar to "Value Validation Error Message of property Solution_1_Name of MSBuildLogsExtended.Build"".
         /// </summary>
-        public static string Value_Validation_Error_Message_of_property_Solution_S1_1_Name_of_MSBuildLogsExtended_Build {
+        public static string Value_Validation_Error_Message_of_property_Solution_1_Name_of_MSBuildLogsExtended_Build {
             get {
-                return resourceLoader.GetString("Value_Validation_Error_Message_of_property_Solution_S1_1_Name_of_MSBuildLogsExtended_Build");
+                return resourceLoader.GetString("Value_Validation_Error_Message_of_property_Solution_1_Name_of_MSBuildLogsExtended_Build");
             }
         }
 
@@ -738,11 +758,51 @@ namespace MSBuildLogsExtended.Resources {
 
 
         /// <summary>
+        ///   Looks up a localized string similar to "UpdateNameOnly"".
+        /// </summary>
+        public static string UpdateNameOnly_ButtonText {
+            get {
+                return resourceLoader.GetString("UpdateNameOnly_ButtonText");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "UpdateNameOnly"".
+        /// </summary>
+        public static string UpdateNameOnly_Description {
+            get {
+                return resourceLoader.GetString("UpdateNameOnly_Description");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "UpdateNameOnly success."".
+        /// </summary>
+        public static string UpdateNameOnly_Success {
+            get {
+                return resourceLoader.GetString("UpdateNameOnly_Success");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "UpdateNameOnly failed."".
+        /// </summary>
+        public static string UpdateNameOnly_Failed {
+            get {
+                return resourceLoader.GetString("UpdateNameOnly_Failed");
+            }
+        }
+
+
+        /// <summary>
         ///   Looks up a localized string similar to "Solution"".
         /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_S1_1OfCommon {
+        public static string IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon {
             get {
-                return resourceLoader.GetString("IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_S1_1OfCommon");
+                return resourceLoader.GetString("IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon");
             }
         }
 
@@ -750,9 +810,9 @@ namespace MSBuildLogsExtended.Resources {
         /// <summary>
         ///   Looks up a localized string similar to "Description of Id of Solution"".
         /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_S1_1OfCommon {
+        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon {
             get {
-                return resourceLoader.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_S1_1OfCommon");
+                return resourceLoader.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon");
             }
         }
 
@@ -760,9 +820,9 @@ namespace MSBuildLogsExtended.Resources {
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of Id of Solution"".
         /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_S1_1OfCommon {
+        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon {
             get {
-                return resourceLoader.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_S1_1OfCommon");
+                return resourceLoader.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon");
             }
         }
 
@@ -770,9 +830,9 @@ namespace MSBuildLogsExtended.Resources {
         /// <summary>
         ///   Looks up a localized string similar to "Id of Solution"".
         /// </summary>
-        public static string ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_S1_1OfCommon {
+        public static string ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon {
             get {
-                return resourceLoader.GetString("ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_S1_1OfCommon");
+                return resourceLoader.GetString("ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon");
             }
         }
 
@@ -780,9 +840,9 @@ namespace MSBuildLogsExtended.Resources {
         /// <summary>
         ///   Looks up a localized string similar to "Description of Id of Solution"".
         /// </summary>
-        public static string Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_S1_1OfCommon {
+        public static string Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon {
             get {
-                return resourceLoader.GetString("Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_S1_1OfCommon");
+                return resourceLoader.GetString("Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon");
             }
         }
 
@@ -790,129 +850,9 @@ namespace MSBuildLogsExtended.Resources {
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of Id of Solution"".
         /// </summary>
-        public static string Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_S1_1OfCommon {
+        public static string Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon {
             get {
-                return resourceLoader.GetString("Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_S1_1OfCommon");
-            }
-        }
-
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Name"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon {
-            get {
-                return resourceLoader.GetString("IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon");
-            }
-        }
-
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of Name"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon {
-            get {
-                return resourceLoader.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon");
-            }
-        }
-
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of Name"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon {
-            get {
-                return resourceLoader.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon");
-            }
-        }
-
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Name of Build"".
-        /// </summary>
-        public static string ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon {
-            get {
-                return resourceLoader.GetString("ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon");
-            }
-        }
-
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of Name of Build"".
-        /// </summary>
-        public static string Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon {
-            get {
-                return resourceLoader.GetString("Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon");
-            }
-        }
-
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of Name of Build"".
-        /// </summary>
-        public static string Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon {
-            get {
-                return resourceLoader.GetString("Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon");
-            }
-        }
-
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description"".
-        /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon {
-            get {
-                return resourceLoader.GetString("IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon");
-            }
-        }
-
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of Description"".
-        /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon {
-            get {
-                return resourceLoader.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon");
-            }
-        }
-
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of Description"".
-        /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon {
-            get {
-                return resourceLoader.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon");
-            }
-        }
-
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of Build"".
-        /// </summary>
-        public static string ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon {
-            get {
-                return resourceLoader.GetString("ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon");
-            }
-        }
-
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Description of Description of Build"".
-        /// </summary>
-        public static string Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon {
-            get {
-                return resourceLoader.GetString("Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon");
-            }
-        }
-
-
-        /// <summary>
-        ///   Looks up a localized string similar to "Tooltip of Description of Build"".
-        /// </summary>
-        public static string Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon {
-            get {
-                return resourceLoader.GetString("Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon");
+                return resourceLoader.GetString("Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon");
             }
         }
 
@@ -1068,11 +1008,131 @@ namespace MSBuildLogsExtended.Resources {
 
 
         /// <summary>
+        ///   Looks up a localized string similar to "Name"".
+        /// </summary>
+        public static string IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon {
+            get {
+                return resourceLoader.GetString("IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description of Name"".
+        /// </summary>
+        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon {
+            get {
+                return resourceLoader.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Tooltip of Name"".
+        /// </summary>
+        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon {
+            get {
+                return resourceLoader.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Name of Build"".
+        /// </summary>
+        public static string ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon {
+            get {
+                return resourceLoader.GetString("ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description of Name of Build"".
+        /// </summary>
+        public static string Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon {
+            get {
+                return resourceLoader.GetString("Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Tooltip of Name of Build"".
+        /// </summary>
+        public static string Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon {
+            get {
+                return resourceLoader.GetString("Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description"".
+        /// </summary>
+        public static string IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon {
+            get {
+                return resourceLoader.GetString("IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description of Description"".
+        /// </summary>
+        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon {
+            get {
+                return resourceLoader.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Tooltip of Description"".
+        /// </summary>
+        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon {
+            get {
+                return resourceLoader.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareDescriptionCommonOftOfCommon");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description of Build"".
+        /// </summary>
+        public static string ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon {
+            get {
+                return resourceLoader.GetString("ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Description of Description of Build"".
+        /// </summary>
+        public static string Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon {
+            get {
+                return resourceLoader.GetString("Description_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Tooltip of Description of Build"".
+        /// </summary>
+        public static string Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon {
+            get {
+                return resourceLoader.GetString("Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedDescriptionCommonOftOfCommon");
+            }
+        }
+
+
+        /// <summary>
         ///   Looks up a localized string similar to "Solution"".
         /// </summary>
-        public static string IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly {
+        public static string IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly {
             get {
-                return resourceLoader.GetString("IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly");
+                return resourceLoader.GetString("IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly");
             }
         }
 
@@ -1080,9 +1140,9 @@ namespace MSBuildLogsExtended.Resources {
         /// <summary>
         ///   Looks up a localized string similar to "Description of Id of Solution"".
         /// </summary>
-        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly {
+        public static string Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly {
             get {
-                return resourceLoader.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly");
+                return resourceLoader.GetString("Description_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly");
             }
         }
 
@@ -1090,9 +1150,9 @@ namespace MSBuildLogsExtended.Resources {
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of Id of Solution"".
         /// </summary>
-        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly {
+        public static string Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly {
             get {
-                return resourceLoader.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly");
+                return resourceLoader.GetString("Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdByFKOnlyOfSolution_1OfByFKOnly");
             }
         }
 
@@ -1100,9 +1160,9 @@ namespace MSBuildLogsExtended.Resources {
         /// <summary>
         ///   Looks up a localized string similar to "Id of Solution"".
         /// </summary>
-        public static string ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly {
+        public static string ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly {
             get {
-                return resourceLoader.GetString("ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly");
+                return resourceLoader.GetString("ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly");
             }
         }
 
@@ -1110,9 +1170,9 @@ namespace MSBuildLogsExtended.Resources {
         /// <summary>
         ///   Looks up a localized string similar to "Description of Id of Solution"".
         /// </summary>
-        public static string Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly {
+        public static string Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly {
             get {
-                return resourceLoader.GetString("Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly");
+                return resourceLoader.GetString("Description_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly");
             }
         }
 
@@ -1120,9 +1180,9 @@ namespace MSBuildLogsExtended.Resources {
         /// <summary>
         ///   Looks up a localized string similar to "Tooltip of Id of Solution"".
         /// </summary>
-        public static string Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly {
+        public static string Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly {
             get {
-                return resourceLoader.GetString("Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_S1_1OfByFKOnly");
+                return resourceLoader.GetString("Tooltip_of_ValueToCompare_ID_DropDownList_Search_valueToCompareIdByFKOnlyOfSolution_1OfByFKOnly");
             }
         }
 

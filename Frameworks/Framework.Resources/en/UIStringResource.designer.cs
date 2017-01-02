@@ -21,6 +21,18 @@ namespace Framework.Resources {
     public class UIStringResource {
         
         private static ResourceLoader resourceLoader = new ResourceLoader("Framework.Resources.WinRT/UIStringResource");
+
+        public static ResourceLoader ResourceManager
+        {
+            get 
+            {
+                return resourceLoader;
+            }
+            set
+            {
+                resourceLoader = value;
+            }
+        }
         
         public UIStringResource() {
         }
@@ -627,6 +639,356 @@ namespace Framework.Resources {
 
 
         /// <summary>
+        ///   Looks up a localized string similar to "You're logged in as "".
+        /// </summary>
+        public static string Account__ChangePasswordPartial_Youreloggedinas {
+            get {
+                return resourceLoader.GetString("Account__ChangePasswordPartial_Youreloggedinas");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Change Password Form "".
+        /// </summary>
+        public static string Account__ChangePasswordPartial_Description {
+            get {
+                return resourceLoader.GetString("Account__ChangePasswordPartial_Description");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Change password"".
+        /// </summary>
+        public static string Account__ChangePasswordPartial_SubmitValue {
+            get {
+                return resourceLoader.GetString("Account__ChangePasswordPartial_SubmitValue");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Use another service to log in."".
+        /// </summary>
+        public static string Account__ExternalLoginsListPartial_Useanotherservicetologin {
+            get {
+                return resourceLoader.GetString("Account__ExternalLoginsListPartial_Useanotherservicetologin");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "There are no external authentication services configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=313242">this article</a> for details on setting up this ASP.NET application to support logging in via external services."".
+        /// </summary>
+        public static string Account__ExternalLoginsListPartial_Description {
+            get {
+                return resourceLoader.GetString("Account__ExternalLoginsListPartial_Description");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Log in using your account as ."".
+        /// </summary>
+        public static string Account__ExternalLoginsListPartial_Loginusingyouraccountas {
+            get {
+                return resourceLoader.GetString("Account__ExternalLoginsListPartial_Loginusingyouraccountas");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Registered Logins"".
+        /// </summary>
+        public static string Account__RemoveAccountPartial_Title {
+            get {
+                return resourceLoader.GetString("Account__RemoveAccountPartial_Title");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Remove login from your account:"".
+        /// </summary>
+        public static string Account__RemoveAccountPartial_ButtonText {
+            get {
+                return resourceLoader.GetString("Account__RemoveAccountPartial_ButtonText");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "You do not have a local username/password for this site. Add a local account so you can log in without an external login."".
+        /// </summary>
+        public static string Account__SetPasswordPartial_Description {
+            get {
+                return resourceLoader.GetString("Account__SetPasswordPartial_Description");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Create Local Login"".
+        /// </summary>
+        public static string Account__SetPasswordPartial_Title {
+            get {
+                return resourceLoader.GetString("Account__SetPasswordPartial_Title");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Set password"".
+        /// </summary>
+        public static string Account__SetPasswordPartial_SubmitValue {
+            get {
+                return resourceLoader.GetString("Account__SetPasswordPartial_SubmitValue");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Confirm Account"".
+        /// </summary>
+        public static string Account_ConfirmEmail_ConfirmAccount {
+            get {
+                return resourceLoader.GetString("Account_ConfirmEmail_ConfirmAccount");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Thank you for confirming your account. Please"".
+        /// </summary>
+        public static string Account_ConfirmEmail_ThankyouforconfirmingyouraccountPlease {
+            get {
+                return resourceLoader.GetString("Account_ConfirmEmail_ThankyouforconfirmingyouraccountPlease");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Click Here To Log In"".
+        /// </summary>
+        public static string Account_ConfirmEmail_ClickHereToLogIn {
+            get {
+                return resourceLoader.GetString("Account_ConfirmEmail_ClickHereToLogIn");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Register"".
+        /// </summary>
+        public static string Account_ExternalLoginConfirmation_Title {
+            get {
+                return resourceLoader.GetString("Account_ExternalLoginConfirmation_Title");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "You've successfully authenticated with "".
+        /// </summary>
+        public static string Account_ExternalLoginConfirmation_SuccessDescripionPart1 {
+            get {
+                return resourceLoader.GetString("Account_ExternalLoginConfirmation_SuccessDescripionPart1");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Please enter a user name for this site below and click the Register button to finish logging in. "".
+        /// </summary>
+        public static string Account_ExternalLoginConfirmation_SuccessDescripionPart2 {
+            get {
+                return resourceLoader.GetString("Account_ExternalLoginConfirmation_SuccessDescripionPart2");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Associate your account of "".
+        /// </summary>
+        public static string Account_ExternalLoginConfirmation_Associateyouraccountof {
+            get {
+                return resourceLoader.GetString("Account_ExternalLoginConfirmation_Associateyouraccountof");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Register"".
+        /// </summary>
+        public static string Account_ExternalLoginConfirmation_SubmitValue {
+            get {
+                return resourceLoader.GetString("Account_ExternalLoginConfirmation_SubmitValue");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Unsuccessful login with service."".
+        /// </summary>
+        public static string Account_ExternalLoginFailure_Description {
+            get {
+                return resourceLoader.GetString("Account_ExternalLoginFailure_Description");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Login Failure"".
+        /// </summary>
+        public static string Account_ExternalLoginFailure_Title {
+            get {
+                return resourceLoader.GetString("Account_ExternalLoginFailure_Title");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Forget your email."".
+        /// </summary>
+        public static string Account_ForgotPassword_Title {
+            get {
+                return resourceLoader.GetString("Account_ForgotPassword_Title");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Enter your email."".
+        /// </summary>
+        public static string Account_ForgotPassword_Description {
+            get {
+                return resourceLoader.GetString("Account_ForgotPassword_Description");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Continue."".
+        /// </summary>
+        public static string Account_ForgotPassword_SubmitValue {
+            get {
+                return resourceLoader.GetString("Account_ForgotPassword_SubmitValue");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Please check your email to reset your password."".
+        /// </summary>
+        public static string Account_ForgotPasswordConfirmation_Description {
+            get {
+                return resourceLoader.GetString("Account_ForgotPasswordConfirmation_Description");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Forgot Password Confirmation"".
+        /// </summary>
+        public static string Account_ForgotPasswordConfirmation_Title {
+            get {
+                return resourceLoader.GetString("Account_ForgotPasswordConfirmation_Title");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Register as a new user"".
+        /// </summary>
+        public static string Account_LogIn_Registerasanewuser {
+            get {
+                return resourceLoader.GetString("Account_LogIn_Registerasanewuser");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Enable this once you have account confirmation enabled for password reset functionality"".
+        /// </summary>
+        public static string Account_LogIn_Enablethisonceyouhaveaccountconfirmationenabledforpasswordresetfunctionality {
+            get {
+                return resourceLoader.GetString("Account_LogIn_Enablethisonceyouhaveaccountconfirmationenabledforpasswordresetfunctionality");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Use a local account to log in."".
+        /// </summary>
+        public static string Account_LogIn_Description {
+            get {
+                return resourceLoader.GetString("Account_LogIn_Description");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Reset password"".
+        /// </summary>
+        public static string Account_ResetPassword_Title {
+            get {
+                return resourceLoader.GetString("Account_ResetPassword_Title");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Reset your password."".
+        /// </summary>
+        public static string Account_ResetPassword_Description {
+            get {
+                return resourceLoader.GetString("Account_ResetPassword_Description");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Reset"".
+        /// </summary>
+        public static string Account_ResetPassword_SubmitValue {
+            get {
+                return resourceLoader.GetString("Account_ResetPassword_SubmitValue");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Reset password confirmation"".
+        /// </summary>
+        public static string Account_ResetPasswordConfirmation_Title {
+            get {
+                return resourceLoader.GetString("Account_ResetPasswordConfirmation_Title");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Your password has been reset. Please "".
+        /// </summary>
+        public static string Account_ResetPasswordConfirmation_Description {
+            get {
+                return resourceLoader.GetString("Account_ResetPasswordConfirmation_Description");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "click here to log in"".
+        /// </summary>
+        public static string Account_ResetPasswordConfirmation_clickheretologin {
+            get {
+                return resourceLoader.GetString("Account_ResetPasswordConfirmation_clickheretologin");
+            }
+        }
+
+
+        /// <summary>
         ///   Looks up a localized string similar to "Back to List"".
         /// </summary>
         public static string BacktoList {
@@ -667,7 +1029,7 @@ namespace Framework.Resources {
 
 
         /// <summary>
-        ///   Looks up a localized string similar to "Confirm Password:"".
+        ///   Looks up a localized string similar to "Confirm Password"".
         /// </summary>
         public static string Common_ConfirmPasswordLabelText {
             get {
@@ -707,7 +1069,7 @@ namespace Framework.Resources {
 
 
         /// <summary>
-        ///   Looks up a localized string similar to "Email:"".
+        ///   Looks up a localized string similar to "Email"".
         /// </summary>
         public static string Common_EmailLabelText {
             get {
@@ -747,7 +1109,7 @@ namespace Framework.Resources {
 
 
         /// <summary>
-        ///   Looks up a localized string similar to "Password:"".
+        ///   Looks up a localized string similar to "Password"".
         /// </summary>
         public static string Common_PasswordLabelText {
             get {
@@ -809,9 +1171,9 @@ namespace Framework.Resources {
         /// <summary>
         ///   Looks up a localized string similar to "Submit"".
         /// </summary>
-        public static string Common_SubmitButtonText {
+        public static string Common_SubmitValue {
             get {
-                return resourceLoader.GetString("Common_SubmitButtonText");
+                return resourceLoader.GetString("Common_SubmitValue");
             }
         }
 
@@ -922,6 +1284,16 @@ namespace Framework.Resources {
         public static string Common_Workspaces {
             get {
                 return resourceLoader.GetString("Common_Workspaces");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Filter"".
+        /// </summary>
+        public static string Common_Filter {
+            get {
+                return resourceLoader.GetString("Common_Filter");
             }
         }
 
@@ -1256,2042 +1628,1015 @@ namespace Framework.Resources {
         }
 
 
+        /// <summary>
+        ///   Looks up a localized string similar to "Items per page : "".
+        /// </summary>
+        public static string Pagination_ItemsPerPage {
+            get {
+                return resourceLoader.GetString("Pagination_ItemsPerPage");
+            }
+        }
 
 
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Sort By"".
+        /// </summary>
+        public static string Pagination_SortBy {
+            get {
+                return resourceLoader.GetString("Pagination_SortBy");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "0 Record in Current Page"".
+        /// </summary>
+        public static string Pagination_NoData {
+            get {
+                return resourceLoader.GetString("Pagination_NoData");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Page# {5} out of {4}. {0} Records: ({1} - {2}) out of {3}"".
+        /// </summary>
+        public static string Pagination_PagingInformation {
+            get {
+                return resourceLoader.GetString("Pagination_PagingInformation");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "AddNew"".
         /// </summary>
         public static string AddNewAlternativeText {
             get {
                 return resourceLoader.GetString("AddNewAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string AddNewUrl {
-            get {
-                return resourceLoader.GetString("AddNewUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Attachment"".
         /// </summary>
         public static string AttachmentAlternativeText {
             get {
                 return resourceLoader.GetString("AttachmentAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string AttachmentUrl {
-            get {
-                return resourceLoader.GetString("AttachmentUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Back"".
         /// </summary>
         public static string BackAlternativeText {
             get {
                 return resourceLoader.GetString("BackAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string BackUrl {
-            get {
-                return resourceLoader.GetString("BackUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Bookmark"".
         /// </summary>
         public static string BookmarkAlternativeText {
             get {
                 return resourceLoader.GetString("BookmarkAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string BookmarkUrl {
-            get {
-                return resourceLoader.GetString("BookmarkUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Calendar"".
         /// </summary>
         public static string CalendarAlternativeText {
             get {
                 return resourceLoader.GetString("CalendarAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string CalendarUrl {
-            get {
-                return resourceLoader.GetString("CalendarUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Cancel"".
         /// </summary>
         public static string CancelAlternativeText {
             get {
                 return resourceLoader.GetString("CancelAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string CancelUrl {
-            get {
-                return resourceLoader.GetString("CancelUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "ChangePassword"".
         /// </summary>
         public static string ChangePasswordAlternativeText {
             get {
                 return resourceLoader.GetString("ChangePasswordAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string ChangePasswordUrl {
-            get {
-                return resourceLoader.GetString("ChangePasswordUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Chart"".
         /// </summary>
         public static string ChartAlternativeText {
             get {
                 return resourceLoader.GetString("ChartAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string ChartUrl {
-            get {
-                return resourceLoader.GetString("ChartUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Checkbox_Checked"".
         /// </summary>
         public static string Checkbox_CheckedAlternativeText {
             get {
                 return resourceLoader.GetString("Checkbox_CheckedAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string Checkbox_CheckedUrl {
-            get {
-                return resourceLoader.GetString("Checkbox_CheckedUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Checkbox_Unchecked"".
         /// </summary>
         public static string Checkbox_UncheckedAlternativeText {
             get {
                 return resourceLoader.GetString("Checkbox_UncheckedAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string Checkbox_UncheckedUrl {
-            get {
-                return resourceLoader.GetString("Checkbox_UncheckedUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Clock"".
         /// </summary>
         public static string ClockAlternativeText {
             get {
                 return resourceLoader.GetString("ClockAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string ClockUrl {
-            get {
-                return resourceLoader.GetString("ClockUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Close"".
         /// </summary>
         public static string CloseAlternativeText {
             get {
                 return resourceLoader.GetString("CloseAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string CloseUrl {
-            get {
-                return resourceLoader.GetString("CloseUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Comment"".
         /// </summary>
         public static string CommentAlternativeText {
             get {
                 return resourceLoader.GetString("CommentAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string CommentUrl {
-            get {
-                return resourceLoader.GetString("CommentUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Comments"".
         /// </summary>
         public static string CommentsAlternativeText {
             get {
                 return resourceLoader.GetString("CommentsAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string CommentsUrl {
-            get {
-                return resourceLoader.GetString("CommentsUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Confirm"".
         /// </summary>
         public static string ConfirmAlternativeText {
             get {
                 return resourceLoader.GetString("ConfirmAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string ConfirmUrl {
-            get {
-                return resourceLoader.GetString("ConfirmUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "CreateUser"".
         /// </summary>
         public static string CreateUserAlternativeText {
             get {
                 return resourceLoader.GetString("CreateUserAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string CreateUserUrl {
-            get {
-                return resourceLoader.GetString("CreateUserUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Delete"".
         /// </summary>
         public static string DeleteAlternativeText {
             get {
                 return resourceLoader.GetString("DeleteAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string DeleteUrl {
-            get {
-                return resourceLoader.GetString("DeleteUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Details"".
         /// </summary>
         public static string DetailsAlternativeText {
             get {
                 return resourceLoader.GetString("DetailsAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string DetailsUrl {
-            get {
-                return resourceLoader.GetString("DetailsUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Down"".
         /// </summary>
         public static string DownAlternativeText {
             get {
                 return resourceLoader.GetString("DownAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string DownUrl {
-            get {
-                return resourceLoader.GetString("DownUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Download"".
         /// </summary>
         public static string DownloadAlternativeText {
             get {
                 return resourceLoader.GetString("DownloadAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string DownloadUrl {
-            get {
-                return resourceLoader.GetString("DownloadUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Edit"".
         /// </summary>
         public static string EditAlternativeText {
             get {
                 return resourceLoader.GetString("EditAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string EditUrl {
-            get {
-                return resourceLoader.GetString("EditUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Exit"".
         /// </summary>
         public static string ExitAlternativeText {
             get {
                 return resourceLoader.GetString("ExitAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string ExitUrl {
-            get {
-                return resourceLoader.GetString("ExitUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Export"".
         /// </summary>
         public static string ExportAlternativeText {
             get {
                 return resourceLoader.GetString("ExportAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string ExportUrl {
-            get {
-                return resourceLoader.GetString("ExportUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "ExportToExcel"".
         /// </summary>
         public static string ExportToExcelAlternativeText {
             get {
                 return resourceLoader.GetString("ExportToExcelAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string ExportToExcelUrl {
-            get {
-                return resourceLoader.GetString("ExportToExcelUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Favorite"".
         /// </summary>
         public static string FavoriteAlternativeText {
             get {
                 return resourceLoader.GetString("FavoriteAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string FavoriteUrl {
-            get {
-                return resourceLoader.GetString("FavoriteUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "FileReplace"".
         /// </summary>
         public static string FileReplaceAlternativeText {
             get {
                 return resourceLoader.GetString("FileReplaceAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string FileReplaceUrl {
-            get {
-                return resourceLoader.GetString("FileReplaceUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "First"".
         /// </summary>
         public static string FirstAlternativeText {
             get {
                 return resourceLoader.GetString("FirstAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string FirstUrl {
-            get {
-                return resourceLoader.GetString("FirstUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Forward"".
         /// </summary>
         public static string ForwardAlternativeText {
             get {
                 return resourceLoader.GetString("ForwardAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string ForwardUrl {
-            get {
-                return resourceLoader.GetString("ForwardUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Go"".
         /// </summary>
         public static string GoAlternativeText {
             get {
                 return resourceLoader.GetString("GoAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string GoUrl {
-            get {
-                return resourceLoader.GetString("GoUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Heart"".
         /// </summary>
         public static string HeartAlternativeText {
             get {
                 return resourceLoader.GetString("HeartAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string HeartUrl {
-            get {
-                return resourceLoader.GetString("HeartUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Help"".
         /// </summary>
         public static string HelpAlternativeText {
             get {
                 return resourceLoader.GetString("HelpAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string HelpUrl {
-            get {
-                return resourceLoader.GetString("HelpUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Home"".
         /// </summary>
         public static string HomeAlternativeText {
             get {
                 return resourceLoader.GetString("HomeAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string HomeUrl {
-            get {
-                return resourceLoader.GetString("HomeUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Import"".
         /// </summary>
         public static string ImportAlternativeText {
             get {
                 return resourceLoader.GetString("ImportAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string ImportUrl {
-            get {
-                return resourceLoader.GetString("ImportUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Index"".
         /// </summary>
         public static string IndexAlternativeText {
             get {
                 return resourceLoader.GetString("IndexAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string IndexUrl {
-            get {
-                return resourceLoader.GetString("IndexUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Information"".
         /// </summary>
         public static string InformationAlternativeText {
             get {
                 return resourceLoader.GetString("InformationAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string InformationUrl {
-            get {
-                return resourceLoader.GetString("InformationUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Insert"".
         /// </summary>
         public static string InsertAlternativeText {
             get {
                 return resourceLoader.GetString("InsertAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string InsertUrl {
-            get {
-                return resourceLoader.GetString("InsertUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Last"".
         /// </summary>
         public static string LastAlternativeText {
             get {
                 return resourceLoader.GetString("LastAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string LastUrl {
-            get {
-                return resourceLoader.GetString("LastUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "LoadFile"".
         /// </summary>
         public static string LoadFileAlternativeText {
             get {
                 return resourceLoader.GetString("LoadFileAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string LoadFileUrl {
-            get {
-                return resourceLoader.GetString("LoadFileUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Lock"".
         /// </summary>
         public static string LockAlternativeText {
             get {
                 return resourceLoader.GetString("LockAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string LockUrl {
-            get {
-                return resourceLoader.GetString("LockUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Mail"".
         /// </summary>
         public static string MailAlternativeText {
             get {
                 return resourceLoader.GetString("MailAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string MailUrl {
-            get {
-                return resourceLoader.GetString("MailUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "MailLock"".
         /// </summary>
         public static string MailLockAlternativeText {
             get {
                 return resourceLoader.GetString("MailLockAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string MailLockUrl {
-            get {
-                return resourceLoader.GetString("MailLockUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "MailReceive"".
         /// </summary>
         public static string MailReceiveAlternativeText {
             get {
                 return resourceLoader.GetString("MailReceiveAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string MailReceiveUrl {
-            get {
-                return resourceLoader.GetString("MailReceiveUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "MailSearch"".
         /// </summary>
         public static string MailSearchAlternativeText {
             get {
                 return resourceLoader.GetString("MailSearchAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string MailSearchUrl {
-            get {
-                return resourceLoader.GetString("MailSearchUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "MailSend"".
         /// </summary>
         public static string MailSendAlternativeText {
             get {
                 return resourceLoader.GetString("MailSendAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string MailSendUrl {
-            get {
-                return resourceLoader.GetString("MailSendUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Minus"".
         /// </summary>
         public static string MinusAlternativeText {
             get {
                 return resourceLoader.GetString("MinusAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string MinusUrl {
-            get {
-                return resourceLoader.GetString("MinusUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Money"".
         /// </summary>
         public static string MoneyAlternativeText {
             get {
                 return resourceLoader.GetString("MoneyAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string MoneyUrl {
-            get {
-                return resourceLoader.GetString("MoneyUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "NewFile"".
         /// </summary>
         public static string NewFileAlternativeText {
             get {
                 return resourceLoader.GetString("NewFileAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string NewFileUrl {
-            get {
-                return resourceLoader.GetString("NewFileUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Next"".
         /// </summary>
         public static string NextAlternativeText {
             get {
                 return resourceLoader.GetString("NextAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string NextUrl {
-            get {
-                return resourceLoader.GetString("NextUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "NumericDown"".
         /// </summary>
         public static string NumericDownAlternativeText {
             get {
                 return resourceLoader.GetString("NumericDownAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string NumericDownUrl {
-            get {
-                return resourceLoader.GetString("NumericDownUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "NumericUp"".
         /// </summary>
         public static string NumericUpAlternativeText {
             get {
                 return resourceLoader.GetString("NumericUpAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string NumericUpUrl {
-            get {
-                return resourceLoader.GetString("NumericUpUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Open"".
         /// </summary>
         public static string OpenAlternativeText {
             get {
                 return resourceLoader.GetString("OpenAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string OpenUrl {
-            get {
-                return resourceLoader.GetString("OpenUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "PageSize"".
         /// </summary>
         public static string PageSizeAlternativeText {
             get {
                 return resourceLoader.GetString("PageSizeAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string PageSizeUrl {
-            get {
-                return resourceLoader.GetString("PageSizeUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "PasswordRecovery"".
         /// </summary>
         public static string PasswordRecoveryAlternativeText {
             get {
                 return resourceLoader.GetString("PasswordRecoveryAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string PasswordRecoveryUrl {
-            get {
-                return resourceLoader.GetString("PasswordRecoveryUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Pause"".
         /// </summary>
         public static string PauseAlternativeText {
             get {
                 return resourceLoader.GetString("PauseAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string PauseUrl {
-            get {
-                return resourceLoader.GetString("PauseUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "PieChart"".
         /// </summary>
         public static string PieChartAlternativeText {
             get {
                 return resourceLoader.GetString("PieChartAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string PieChartUrl {
-            get {
-                return resourceLoader.GetString("PieChartUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Play"".
         /// </summary>
         public static string PlayAlternativeText {
             get {
                 return resourceLoader.GetString("PlayAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string PlayUrl {
-            get {
-                return resourceLoader.GetString("PlayUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Plus"".
         /// </summary>
         public static string PlusAlternativeText {
             get {
                 return resourceLoader.GetString("PlusAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string PlusUrl {
-            get {
-                return resourceLoader.GetString("PlusUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Previous"".
         /// </summary>
         public static string PreviousAlternativeText {
             get {
                 return resourceLoader.GetString("PreviousAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string PreviousUrl {
-            get {
-                return resourceLoader.GetString("PreviousUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Process"".
         /// </summary>
         public static string ProcessAlternativeText {
             get {
                 return resourceLoader.GetString("ProcessAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string ProcessUrl {
-            get {
-                return resourceLoader.GetString("ProcessUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Promotion"".
         /// </summary>
         public static string PromotionAlternativeText {
             get {
                 return resourceLoader.GetString("PromotionAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string PromotionUrl {
-            get {
-                return resourceLoader.GetString("PromotionUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Protection"".
         /// </summary>
         public static string ProtectionAlternativeText {
             get {
                 return resourceLoader.GetString("ProtectionAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string ProtectionUrl {
-            get {
-                return resourceLoader.GetString("ProtectionUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Question"".
         /// </summary>
         public static string QuestionAlternativeText {
             get {
                 return resourceLoader.GetString("QuestionAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string QuestionUrl {
-            get {
-                return resourceLoader.GetString("QuestionUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Record"".
         /// </summary>
         public static string RecordAlternativeText {
             get {
                 return resourceLoader.GetString("RecordAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string RecordUrl {
-            get {
-                return resourceLoader.GetString("RecordUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Recycle"".
         /// </summary>
         public static string RecycleAlternativeText {
             get {
                 return resourceLoader.GetString("RecycleAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string RecycleUrl {
-            get {
-                return resourceLoader.GetString("RecycleUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Redo"".
         /// </summary>
         public static string RedoAlternativeText {
             get {
                 return resourceLoader.GetString("RedoAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string RedoUrl {
-            get {
-                return resourceLoader.GetString("RedoUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Refresh"".
         /// </summary>
         public static string RefreshAlternativeText {
             get {
                 return resourceLoader.GetString("RefreshAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string RefreshUrl {
-            get {
-                return resourceLoader.GetString("RefreshUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Register"".
         /// </summary>
         public static string RegisterAlternativeText {
             get {
                 return resourceLoader.GetString("RegisterAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string RegisterUrl {
-            get {
-                return resourceLoader.GetString("RegisterUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Repeat"".
         /// </summary>
         public static string RepeatAlternativeText {
             get {
                 return resourceLoader.GetString("RepeatAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string RepeatUrl {
-            get {
-                return resourceLoader.GetString("RepeatUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "RSS"".
         /// </summary>
         public static string RSSAlternativeText {
             get {
                 return resourceLoader.GetString("RSSAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string RSSUrl {
-            get {
-                return resourceLoader.GetString("RSSUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Save"".
         /// </summary>
         public static string SaveAlternativeText {
             get {
                 return resourceLoader.GetString("SaveAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string SaveUrl {
-            get {
-                return resourceLoader.GetString("SaveUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Search"".
         /// </summary>
         public static string SearchAlternativeText {
             get {
                 return resourceLoader.GetString("SearchAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string SearchUrl {
-            get {
-                return resourceLoader.GetString("SearchUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "SearchPage"".
         /// </summary>
         public static string SearchPageAlternativeText {
             get {
                 return resourceLoader.GetString("SearchPageAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string SearchPageUrl {
-            get {
-                return resourceLoader.GetString("SearchPageUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Setting"".
         /// </summary>
         public static string SettingAlternativeText {
             get {
                 return resourceLoader.GetString("SettingAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string SettingUrl {
-            get {
-                return resourceLoader.GetString("SettingUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "ShoppingCart"".
         /// </summary>
         public static string ShoppingCartAlternativeText {
             get {
                 return resourceLoader.GetString("ShoppingCartAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string ShoppingCartUrl {
-            get {
-                return resourceLoader.GetString("ShoppingCartUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "SignUp"".
         /// </summary>
         public static string SignUpAlternativeText {
             get {
                 return resourceLoader.GetString("SignUpAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string SignUpUrl {
-            get {
-                return resourceLoader.GetString("SignUpUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Stop"".
         /// </summary>
         public static string StopAlternativeText {
             get {
                 return resourceLoader.GetString("StopAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string StopUrl {
-            get {
-                return resourceLoader.GetString("StopUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "TagBlue"".
         /// </summary>
         public static string TagBlueAlternativeText {
             get {
                 return resourceLoader.GetString("TagBlueAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string TagBlueUrl {
-            get {
-                return resourceLoader.GetString("TagBlueUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "TagGreen"".
         /// </summary>
         public static string TagGreenAlternativeText {
             get {
                 return resourceLoader.GetString("TagGreenAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string TagGreenUrl {
-            get {
-                return resourceLoader.GetString("TagGreenUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "TextPage"".
         /// </summary>
         public static string TextPageAlternativeText {
             get {
                 return resourceLoader.GetString("TextPageAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string TextPageUrl {
-            get {
-                return resourceLoader.GetString("TextPageUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Title"".
         /// </summary>
         public static string TitleAlternativeText {
             get {
                 return resourceLoader.GetString("TitleAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string TitleUrl {
-            get {
-                return resourceLoader.GetString("TitleUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "ToggleButton_Checked"".
         /// </summary>
         public static string ToggleButton_CheckedAlternativeText {
             get {
                 return resourceLoader.GetString("ToggleButton_CheckedAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string ToggleButton_CheckedUrl {
-            get {
-                return resourceLoader.GetString("ToggleButton_CheckedUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "ToggleButton_Unchecked"".
         /// </summary>
         public static string ToggleButton_UncheckedAlternativeText {
             get {
                 return resourceLoader.GetString("ToggleButton_UncheckedAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string ToggleButton_UncheckedUrl {
-            get {
-                return resourceLoader.GetString("ToggleButton_UncheckedUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Tutorial"".
         /// </summary>
         public static string TutorialAlternativeText {
             get {
                 return resourceLoader.GetString("TutorialAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string TutorialUrl {
-            get {
-                return resourceLoader.GetString("TutorialUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Undo"".
         /// </summary>
         public static string UndoAlternativeText {
             get {
                 return resourceLoader.GetString("UndoAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string UndoUrl {
-            get {
-                return resourceLoader.GetString("UndoUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Unlock"".
         /// </summary>
         public static string UnlockAlternativeText {
             get {
                 return resourceLoader.GetString("UnlockAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string UnlockUrl {
-            get {
-                return resourceLoader.GetString("UnlockUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Up"".
         /// </summary>
         public static string UpAlternativeText {
             get {
                 return resourceLoader.GetString("UpAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string UpUrl {
-            get {
-                return resourceLoader.GetString("UpUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Update"".
         /// </summary>
         public static string UpdateAlternativeText {
             get {
                 return resourceLoader.GetString("UpdateAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string UpdateUrl {
-            get {
-                return resourceLoader.GetString("UpdateUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "User"".
         /// </summary>
         public static string UserAlternativeText {
             get {
                 return resourceLoader.GetString("UserAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string UserUrl {
-            get {
-                return resourceLoader.GetString("UserUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Users"".
         /// </summary>
         public static string UsersAlternativeText {
             get {
                 return resourceLoader.GetString("UsersAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string UsersUrl {
-            get {
-                return resourceLoader.GetString("UsersUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Warning"".
         /// </summary>
         public static string WarningAlternativeText {
             get {
                 return resourceLoader.GetString("WarningAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string WarningUrl {
-            get {
-                return resourceLoader.GetString("WarningUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "ZoomIn"".
         /// </summary>
         public static string ZoomInAlternativeText {
             get {
                 return resourceLoader.GetString("ZoomInAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string ZoomInUrl {
-            get {
-                return resourceLoader.GetString("ZoomInUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "ZoomOut"".
         /// </summary>
         public static string ZoomOutAlternativeText {
             get {
                 return resourceLoader.GetString("ZoomOutAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string ZoomOutUrl {
-            get {
-                return resourceLoader.GetString("ZoomOutUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Copy"".
         /// </summary>
         public static string CopyAlternativeText {
             get {
                 return resourceLoader.GetString("CopyAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string CopyUrl {
-            get {
-                return resourceLoader.GetString("CopyUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "Paste"".
         /// </summary>
         public static string PasteAlternativeText {
             get {
                 return resourceLoader.GetString("PasteAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string PasteUrl {
-            get {
-                return resourceLoader.GetString("PasteUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "More"".
         /// </summary>
         public static string MoreAlternativeText {
             get {
                 return resourceLoader.GetString("MoreAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string MoreUrl {
-            get {
-                return resourceLoader.GetString("MoreUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "FullDetails"".
         /// </summary>
         public static string FullDetailsAlternativeText {
             get {
                 return resourceLoader.GetString("FullDetailsAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string FullDetailsUrl {
-            get {
-                return resourceLoader.GetString("FullDetailsUrl");
-            }
-        }
 
 
-
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
+        /// <summary>
+        ///   Looks up a localized string similar to "GotoSearch"".
         /// </summary>
         public static string GotoSearchAlternativeText {
             get {
                 return resourceLoader.GetString("GotoSearchAlternativeText");
             }
         }
-		
-		/// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        public static string GotoSearchUrl {
-            get {
-                return resourceLoader.GetString("GotoSearchUrl");
-            }
-        }
+
 
 
 
