@@ -5,7 +5,7 @@ using System.Linq.Dynamic;
 using System.Linq.Expressions;
 using System.Text;
 using LinqKit;
-using MathNet.Numerics.LinqExtensions;
+//using MathNet.Numerics.LinqExtensions;
 using System.Data.SqlClient;
 using System.Data;
 
