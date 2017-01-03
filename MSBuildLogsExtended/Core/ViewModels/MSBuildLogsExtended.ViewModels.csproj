@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBFB54D9-21DC-4C53-96F3-2F6828BCF59E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSBuildLogsExtended.ViewModels</RootNamespace>
+    <AssemblyName>MSBuildLogsExtended.ViewModels</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildEventCodeItemVM.cs" />
+    <Compile Include="BuildEventCodeWorkspaceVM.cs" />
+    <Compile Include="BuildItemVM.cs" />
+    <Compile Include="BuildLogItemVM.cs" />
+    <Compile Include="BuildLogWorkspaceVM.cs" />
+    <Compile Include="BuildWorkspaceVM.cs" />
+    <Compile Include="Common\OrderByLists.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SolutionItemVM.cs" />
+    <Compile Include="SolutionWorkspaceVM.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.CommonBLLEntities\Framework.CommonBLLEntities.csproj">
+      <Project>{ba8c8c0b-470a-4d3c-b3da-9e28599799b5}</Project>
+      <Name>Framework.CommonBLLEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.DataSourceEntities\Framework.DataSourceEntities.csproj">
+      <Project>{f85a14d5-64e0-4cfc-88da-27fe9d0dd664}</Project>
+      <Name>Framework.DataSourceEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.EntityContracts\Framework.EntityContracts.csproj">
+      <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
+      <Name>Framework.EntityContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.Resources\Framework.Resources.csproj">
+      <Project>{c72b898b-b53b-42d5-9f4f-673f84bb485b}</Project>
+      <Name>Framework.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.ViewModels\Framework.ViewModels.csproj">
+      <Project>{2def4f9f-015d-40c4-b153-6c687c308152}</Project>
+      <Name>Framework.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frameworks\Framework\Framework.csproj">
+      <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonBLLEntities\MSBuildLogsExtended.CommonBLLEntities.csproj">
+      <Project>{f201379d-034b-4892-9aec-927a3d67d260}</Project>
+      <Name>MSBuildLogsExtended.CommonBLLEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonBLLIoC\MSBuildLogsExtended.CommonBLLIoC.csproj">
+      <Project>{8a12c259-5b56-47af-a21c-0e709f5e8e54}</Project>
+      <Name>MSBuildLogsExtended.CommonBLLIoC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DALContracts\MSBuildLogsExtended.DALContracts.csproj">
+      <Project>{028bd872-f585-4d60-9e45-e5bece93d775}</Project>
+      <Name>MSBuildLogsExtended.DALContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataSourceEntities\MSBuildLogsExtended.DataSourceEntities.csproj">
+      <Project>{37102465-556b-49e7-8ca2-a7814e45de36}</Project>
+      <Name>MSBuildLogsExtended.DataSourceEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityContracts\MSBuildLogsExtended.EntityContracts.csproj">
+      <Project>{a9940920-207f-471d-8164-13d5a4b518ba}</Project>
+      <Name>MSBuildLogsExtended.EntityContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Resources\MSBuildLogsExtended.Resources.csproj">
+      <Project>{ada3b560-c0b9-42d0-92ff-a76462e8d524}</Project>
+      <Name>MSBuildLogsExtended.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

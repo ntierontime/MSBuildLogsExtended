@@ -432,9 +432,9 @@
       <Project>{e5302713-0022-4657-85d8-9620818071df}</Project>
       <Name>Framework.Xaml</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Shared\ViewModels\MSBuildLogsExtended.ViewModels.csproj">
+    <ProjectReference Include="..\Shared\ViewModels\MSBuildLogsExtended.MVViewModels.csproj">
       <Project>{f9f6afdd-cbc4-42c9-ad50-f3d721c11058}</Project>
-      <Name>MSBuildLogsExtended.ViewModels</Name>
+      <Name>MSBuildLogsExtended.MVViewModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\Resources\MSBuildLogsExtended.Resources.csproj">
       <Project>{ada3b560-c0b9-42d0-92ff-a76462e8d524}</Project>

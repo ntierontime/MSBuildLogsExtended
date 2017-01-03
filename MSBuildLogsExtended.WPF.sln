@@ -91,11 +91,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVVMLight", "MVVMLight", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{6CADE149-4BD4-476C-952E-C6E62B8CE216}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildLogsExtended.ViewModels", "MSBuildLogsExtended\UI\MVVMLight\Shared\ViewModels\MSBuildLogsExtended.ViewModels.csproj", "{F9F6AFDD-CBC4-42C9-AD50-F3D721C11058}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildLogsExtended.MVViewModels", "MSBuildLogsExtended\UI\MVVMLight\Shared\ViewModels\MSBuildLogsExtended.MVViewModels.csproj", "{F9F6AFDD-CBC4-42C9-AD50-F3D721C11058}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildLogsExtended.WPF4App", "MSBuildLogsExtended\UI\MVVMLight\WPF4App\MSBuildLogsExtended.WPF4App.csproj", "{5BCAE2FB-5C8C-4538-9BA9-CC643082583B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.ViewModels", "Frameworks\Framework.ViewModels\Framework.ViewModels.csproj", "{2DEF4F9F-015D-40C4-B153-6C687C308152}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildLogsExtended.ViewModels", "MSBuildLogsExtended\Core\ViewModels\MSBuildLogsExtended.ViewModels.csproj", "{EBFB54D9-21DC-4C53-96F3-2F6828BCF59E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -555,6 +557,18 @@ Global
 		{2DEF4F9F-015D-40C4-B153-6C687C308152}.Release|ARM.Build.0 = Release|Any CPU
 		{2DEF4F9F-015D-40C4-B153-6C687C308152}.Release|x86.ActiveCfg = Release|Any CPU
 		{2DEF4F9F-015D-40C4-B153-6C687C308152}.Release|x86.Build.0 = Release|Any CPU
+		{EBFB54D9-21DC-4C53-96F3-2F6828BCF59E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBFB54D9-21DC-4C53-96F3-2F6828BCF59E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBFB54D9-21DC-4C53-96F3-2F6828BCF59E}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{EBFB54D9-21DC-4C53-96F3-2F6828BCF59E}.Debug|ARM.Build.0 = Debug|Any CPU
+		{EBFB54D9-21DC-4C53-96F3-2F6828BCF59E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EBFB54D9-21DC-4C53-96F3-2F6828BCF59E}.Debug|x86.Build.0 = Debug|Any CPU
+		{EBFB54D9-21DC-4C53-96F3-2F6828BCF59E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBFB54D9-21DC-4C53-96F3-2F6828BCF59E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBFB54D9-21DC-4C53-96F3-2F6828BCF59E}.Release|ARM.ActiveCfg = Release|Any CPU
+		{EBFB54D9-21DC-4C53-96F3-2F6828BCF59E}.Release|ARM.Build.0 = Release|Any CPU
+		{EBFB54D9-21DC-4C53-96F3-2F6828BCF59E}.Release|x86.ActiveCfg = Release|Any CPU
+		{EBFB54D9-21DC-4C53-96F3-2F6828BCF59E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -600,5 +614,6 @@ Global
 		{F9F6AFDD-CBC4-42C9-AD50-F3D721C11058} = {6CADE149-4BD4-476C-952E-C6E62B8CE216}
 		{5BCAE2FB-5C8C-4538-9BA9-CC643082583B} = {E5082893-F224-4832-821B-449A39506C25}
 		{2DEF4F9F-015D-40C4-B153-6C687C308152} = {662EE4A1-46AA-4924-A874-5CB73C6232E0}
+		{EBFB54D9-21DC-4C53-96F3-2F6828BCF59E} = {836E16FA-397D-4397-B68C-8FD6B955D721}
 	EndGlobalSection
 EndGlobal
