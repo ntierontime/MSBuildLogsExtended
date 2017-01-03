@@ -7,10 +7,133 @@ xmlns:cmd="http://www.galasoft.ch/mvvmlight"
         xmlns:vm="clr-namespace:MSBuildLogsExtended.ViewModels;assembly=MSBuildLogsExtended.ViewModels"
         xmlns:fresx="clr-namespace:Framework.Resources;assembly=Framework.Resources"
 		xmlns:eresx="clr-namespace:MSBuildLogsExtended.Resources;assembly=MSBuildLogsExtended.Resources"
-        Title="MainWindow"
-		WindowState="Maximized"
-        DataContext="{Binding Main, Source={StaticResource Locator}}">
+        Title="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerApp.Application_Title, Source={StaticResource LocalizedStrings}}"
+        DataContext="{Binding Main, Source={StaticResource Locator}}"
+        WindowStyle="None">
     <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Skins/MainSkin.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="{x:Type TextBlock}">
+                <Setter Property="FontFamily" Value="Calibri" />
+                <Setter Property="FontSize" Value="10pt" />
+            </Style>
+            <DataTemplate x:Key="SamplesListItemTemplate">
+                <StackPanel>
+                    <TextBlock Text="{Binding XPath=@Title}" />
+                </StackPanel>
+            </DataTemplate>
+            <Style x:Key="SamplesListBox" TargetType="{x:Type ListBox}">
+                <Setter Property="ItemTemplate" Value="{DynamicResource SamplesListItemTemplate}" />
+                <Setter Property="ItemContainerStyle" Value="{DynamicResource SamplesListBoxItem}" />
+                <Setter Property="BorderBrush" Value="Transparent" />
+                <Setter Property="Width" Value="186" />
+            </Style>
+            <Style x:Key="SamplesListBoxItem" TargetType="{x:Type ListBoxItem}">
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="Margin" Value="1" />
+                <Setter Property="Cursor" Value="Hand" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                            <Grid>
+                                <Rectangle x:Name="ListBG" Fill="{TemplateBinding Background}" RadiusX="5" RadiusY="5" Stroke="transparent" />
+                                <Rectangle x:Name="GelShine" Margin="2,2,2,0" VerticalAlignment="top" RadiusX="3" RadiusY="3" Opacity="0" Fill="#ccffffff" Stroke="transparent" Height="15px" />
+                                <ContentPresenter x:Name="ContentSite" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="15,5,5,5" />
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsSelected" Value="true" />
+                                <Trigger Property="IsFocused" Value="true">
+                                    <Setter Property="Background" Value="sc#1.000000, 0.769689, 0.831936, 1.000000" />
+                                    <Setter Property="FontWeight" Value="bold" />
+                                    <Setter Property="Foreground" Value="black" />
+                                    <Setter TargetName="ListBG" Property="Rectangle.Stroke" Value="sc#1.000000, 0.250141, 0.333404, 0.884413" />
+                                    <Setter TargetName="GelShine" Property="Rectangle.Opacity" Value="1" />
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <Setter Property="Background" Value="sc#1.000000, 0.769689, 0.831936, 1.000000" />
+                                    <Setter Property="Foreground" Value="black" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid  Background="sc#1.000000, 0.769689, 0.831936, 1.000000" Name="DocumentRoot" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+            <TextBlock  Grid.RowSpan="2"  Margin="20,5,20,5" TextAlignment="left"  Foreground="sc#1.000000, 0.250141, 0.333404, 0.884413" FontStyle="Italic" FontSize="30pt" FontFamily="Calibri" FontWeight="bold">MSBuildLogsExtended</TextBlock>
+            <Grid Grid.Row="1">
+                <Rectangle Fill="white" RadiusX="14" RadiusY="14" Margin="10" Stroke="sc#1.000000, 0.250141, 0.333404, 0.884413" StrokeDashArray="2"/>
+                <DockPanel LastChildFill="True"   Margin="20">
+                    <Grid  Width="200px">
+                        <Rectangle Fill="sc#1.000000, 0.769689, 0.831936, 1.000000" RadiusX="10" RadiusY="10" Stroke="sc#1.000000, 0.250141, 0.333404, 0.884413" StrokeDashArray="2" />
+                        <DockPanel Margin="7" LastChildFill="False">
+                            <TextBlock Margin="0,0,0,10"   Text="Sample Library" Foreground="sc#1.000000, 0.250141, 0.333404, 0.884413" TextAlignment="center"   FontWeight="Bold" FontSize="14pt"   DockPanel.Dock="top"  />
+                            <Expander  Margin="0,0,0,10" DockPanel.Dock="top" Background="white" FocusVisualStyle="{x:Null}">
+                                <Expander.Header>
+                                    <TextBlock Margin="10,0,0,0"  FontFamily="Calibri" FontWeight="bold" Text="{Binding Path=Framework_Resources_UIStringResource.Common_Workspaces, Source={StaticResource LocalizedStrings}}" />
+                                </Expander.Header>
+
+                                <ListBox Name="LayoutListBox" Style="{DynamicResource SamplesListBox}"  IsSynchronizedWithCurrentItem="True" HorizontalContentAlignment="Stretch">
+                                    <ListBoxItem>
+                                        <Button BorderThickness="0" HorizontalContentAlignment="Left" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Build, Mode=OneWay, Source={StaticResource LocalizedStrings}}">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="Click">
+                                                    <cmd:EventToCommand Command="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}" PassEventArgsToCommand="True" />
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </Button>
+                                    </ListBoxItem>
+                                    <ListBoxItem>
+                                        <Button BorderThickness="0" HorizontalContentAlignment="Left" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildEventCode.BuildEventCode, Mode=OneWay, Source={StaticResource LocalizedStrings}}">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="Click">
+                                                    <cmd:EventToCommand Command="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildEventCodeVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}" PassEventArgsToCommand="True" />
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </Button>
+                                    </ListBoxItem>
+                                    <ListBoxItem>
+                                        <Button BorderThickness="0" HorizontalContentAlignment="Left" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildLog, Mode=OneWay, Source={StaticResource LocalizedStrings}}" >
+                                                <i:Interaction.Triggers>
+                                                    <i:EventTrigger EventName="Click">
+                                                        <cmd:EventToCommand Command="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}" PassEventArgsToCommand="True" />
+                                                    </i:EventTrigger>
+                                                </i:Interaction.Triggers>
+                                            </Button>
+                                    </ListBoxItem>
+                                    <ListBoxItem>
+                                        <Button BorderThickness="0" HorizontalContentAlignment="Left" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntitySolution.Solution, Mode=OneWay, Source={StaticResource LocalizedStrings}}">
+                                                    <i:Interaction.Triggers>
+                                                    <i:EventTrigger EventName="Click">
+                                                        <cmd:EventToCommand Command="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}"
+									PassEventArgsToCommand="True" />
+                                                    </i:EventTrigger>
+                                                </i:Interaction.Triggers>
+                                            </Button>
+                                    </ListBoxItem>
+                                </ListBox>
+                            </Expander>
+                        </DockPanel>
+                    </Grid>
+                    <DockPanel Name="Details" LastChildFill="True">
+                        <Frame Name="_mainFrame" DockPanel.Dock="Right" />
+                    </DockPanel>
+                </DockPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+    <!--<Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Skins/MainSkin.xaml" />
@@ -144,31 +267,5 @@ xmlns:cmd="http://www.galasoft.ch/mvvmlight"
             </Expander>
         </StackPanel>
         <Frame Name="_mainFrame" DockPanel.Dock="Right" />
-    </DockPanel>
-<!--
-    <Grid x:Name="LayoutRoot">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="100"></RowDefinition>
-                <RowDefinition Height="30"></RowDefinition>
-                <RowDefinition Height="30"></RowDefinition>
-                <RowDefinition Height="30"></RowDefinition>
-                <RowDefinition Height="30"></RowDefinition>
-        </Grid.RowDefinitions>
-        <TextBlock FontSize="36"
-                   FontWeight="Bold"
-                   Foreground="Purple"
-                   Text="{Binding Welcome}"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   TextWrapping="Wrap"
-				   Grid.Row="0"/>
-            <Button Name="Button_MSBuildLogsExtended_Build" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Build, Source={StaticResource LocalizedStrings}}" ToolTip="" Click="Button_MSBuildLogsExtended_Build_Clicked" Height="25" Width="75" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1" />
-            <Button Name="Button_MSBuildLogsExtended_BuildEventCode" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildEventCode.BuildEventCode, Source={StaticResource LocalizedStrings}}" ToolTip="" Click="Button_MSBuildLogsExtended_BuildEventCode_Clicked" Height="25" Width="75" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="2" />
-            <Button Name="Button_MSBuildLogsExtended_BuildLog" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildLog, Source={StaticResource LocalizedStrings}}" ToolTip="" Click="Button_MSBuildLogsExtended_BuildLog_Clicked" Height="25" Width="75" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="3" />
-            <Button Name="Button_MSBuildLogsExtended_Solution" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntitySolution.Solution, Source={StaticResource LocalizedStrings}}" ToolTip="" Click="Button_MSBuildLogsExtended_Solution_Clicked" Height="25" Width="75" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="4" />
-    </Grid>
--->
+    </DockPanel>-->
 </Window>

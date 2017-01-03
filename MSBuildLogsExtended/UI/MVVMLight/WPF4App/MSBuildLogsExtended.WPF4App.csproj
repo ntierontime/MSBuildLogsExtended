@@ -75,7 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
     <Page Include="Pages\Build\Create.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -329,6 +328,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <SubType>RESXCodeBehind</SubType>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings" />
     <Compile Include="Properties\Settings.designer.cs">
       <DependentUpon>Settings.settings</DependentUpon>
