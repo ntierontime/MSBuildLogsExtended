@@ -4,13 +4,14 @@ using System;
 using System.Linq;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Messaging;
+using MahApps.Metro.Controls;
 
 namespace MSBuildLogsExtended.WPF4App
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         /// <summary>
         /// Initializes a new instance of the MainWindow class.
