@@ -450,3 +450,30 @@ System.NotSupportedException: The method 'Skip' is only supported for sorted inp
 2017-01-02 09:56:30,931 [29] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
 2017-01-02 09:56:30,942 [29] INFO  MSBuildLogsExtended.EntityFrameworkDAL.BuildEventCodeRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
 2017-01-02 09:56:30,943 [29] INFO  MSBuildLogsExtended.CommonBLL.BuildEventCodeService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-04 10:24:23,770 [1] INFO  MSBuildLogsExtended.WcfWebApp.Global [(null)] - Application_Started
+2017-01-05 09:25:25,571 [36] INFO  MSBuildLogsExtended.WcfWebApp.Global [(null)] - Application_Started
+2017-01-05 09:25:27,890 [36] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-05 09:25:27,892 [36] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-05 09:25:30,810 [36] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-05 09:25:30,812 [36] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:14:25,481 [33] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:14:25,482 [33] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:14:25,519 [33] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:14:25,519 [33] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:36:28,845 [1] INFO  MSBuildLogsExtended.WcfWebApp.Global [(null)] - Application_Started
+2017-01-05 11:37:34,452 [21] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:37:34,454 [21] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:37:37,639 [21] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:37:37,641 [21] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:47:29,525 [37] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:47:29,525 [37] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:47:29,534 [37] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:47:29,535 [37] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:49:20,229 [44] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:49:20,230 [44] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:49:20,234 [44] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:49:20,235 [44] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:50:25,585 [45] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:50:25,585 [45] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Started: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:50:25,592 [45] INFO  MSBuildLogsExtended.EntityFrameworkDAL.SolutionRepository [(null)] - Data_Access_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll
+2017-01-05 11:50:25,593 [45] INFO  MSBuildLogsExtended.CommonBLL.SolutionService [(null)] - Business_Logic_Layer_Process_Ended: GetCollectionOfNameValuePairOfAll

@@ -35,16 +35,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <EmbeddedResource Include="UIImageResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIImageResource1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="UIImageResource.designer.cs">
       <DependentUpon>UIImageResource.resx</DependentUpon>
       <SubType>RESXCodeBehind</SubType>
     </Compile>
     <EmbeddedResource Include="UIStringResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIStringResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="UIStringResource.designer.cs">
       <DependentUpon>UIStringResource.resx</DependentUpon>
-      <SubType>RESXCodeBehind</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
   </ItemGroup>
   <ItemGroup>

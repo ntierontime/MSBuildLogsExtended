@@ -5,6 +5,7 @@ using System.Linq;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Messaging;
 using MahApps.Metro.Controls;
+using MahApps.Metro.Controls.Dialogs;
 
 namespace MSBuildLogsExtended.WPF4App
 {
@@ -13,13 +14,14 @@ namespace MSBuildLogsExtended.WPF4App
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
+        private bool _shutdown;
+
         /// <summary>
         /// Initializes a new instance of the MainWindow class.
         /// </summary>
         public MainWindow()
         {
             InitializeComponent();
-            Closing += (s, e) => MSBuildLogsExtended.ViewModels.ViewModelLocator.Cleanup();
 
             // The MVVM Light Messenger In-Depth: http://msdn.microsoft.com/en-us/magazine/dn745866.aspx
 
@@ -164,6 +166,34 @@ MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.NavigationSettingColl
 
             #endregion Create, Update and Delete, Details of MSBuildLogsExtended.Solution
 
+        }
+
+
+        private async void MetroWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (e.Cancel) return;
+            e.Cancel = !_shutdown && MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.QuitConfirmationEnabled;
+            if (_shutdown) return;
+
+            var mySettings = new MetroDialogSettings()
+            {
+                AffirmativeButtonText = Framework.Resources.UIStringResource.Quit,
+                NegativeButtonText = Framework.Resources.UIStringResource.CancelAlternativeText,
+                AnimateShow = true,
+                AnimateHide = false
+            };
+
+            var result = await this.ShowMessageAsync(Framework.Resources.UIStringResource.QuitApplication,
+                Framework.Resources.UIStringResource.QuitApplicationMessage,
+                MessageDialogStyle.AffirmativeAndNegative, mySettings);
+
+            _shutdown = result == MessageDialogResult.Affirmative;
+
+            if (_shutdown)
+            {
+                MSBuildLogsExtended.ViewModels.ViewModelLocator.Cleanup();
+                Application.Current.Shutdown();
+            }
         }
     }
 }
