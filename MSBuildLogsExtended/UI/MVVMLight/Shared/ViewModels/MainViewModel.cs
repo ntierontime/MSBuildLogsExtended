@@ -63,8 +63,8 @@ namespace MSBuildLogsExtended.ViewModels
         }
         
         /// <summary>
-                 /// Initializes a new instance of the MainViewModel class.
-                 /// </summary>
+        /// Initializes a new instance of the MainViewModel class.
+        /// </summary>
         public MainViewModel()
         {
             if (IsInDesignMode)
@@ -94,7 +94,7 @@ namespace MSBuildLogsExtended.ViewModels
 
             //#endregion 3. Initialize MenuItemSelectedCommand
 
-            _quitConfirmationEnabled = true;
+            _quitConfirmationEnabled = false;
         }
 
         ////public override void Cleanup()

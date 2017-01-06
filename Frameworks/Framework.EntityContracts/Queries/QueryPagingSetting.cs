@@ -60,6 +60,14 @@ namespace Framework.EntityContracts
             }
         }
 
+        public bool CanChangeCurrentPage
+        {
+            get
+            {
+                return !(this.IsEmptyResult || this.IsOnlyOnePage);
+            }
+        }
+
         public bool IsMoreThanOnePage
         {
             get

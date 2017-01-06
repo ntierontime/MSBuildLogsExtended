@@ -183,6 +183,10 @@ namespace Framework.Xaml
         public virtual Framework.EntityContracts.QueryPagingSetting GetDefaultQueryPagingSetting()
         {
             Framework.EntityContracts.QueryPagingSetting queryPagingSetting = new Framework.EntityContracts.QueryPagingSetting();
+            if (queryPagingSetting.CountOfPages == 0 || queryPagingSetting.CountOfRecords == 0)
+            {
+                queryPagingSetting.CurrentPage = 0;
+            }
             return queryPagingSetting;
         }
 
@@ -264,7 +268,14 @@ namespace Framework.Xaml
         public string QueryOrderBySettingCollecionInString
         {
             get
-            { return this.m_QueryOrderBySettingCollecionInString; }
+            {
+                if(string.IsNullOrWhiteSpace(this.m_QueryOrderBySettingCollecionInString) && this.ListOfQueryOrderBySettingCollecionInString != null && this.ListOfQueryOrderBySettingCollecionInString.Count > 0)
+                    // select first order by.
+                {
+                    this.m_QueryOrderBySettingCollecionInString = this.ListOfQueryOrderBySettingCollecionInString[0].Value;
+                }
+                return this.m_QueryOrderBySettingCollecionInString;
+            }
             set
             {
                 if (this.m_QueryOrderBySettingCollecionInString != value)
