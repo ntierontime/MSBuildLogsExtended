@@ -441,6 +441,10 @@ namespace MSBuildLogsExtended.ViewModels
 						{
 							this.m_EntityCollectionDefault = new ObservableCollection<MSBuildLogsExtended.DataSourceEntities.Build.Default>();
 						}
+                        else
+                        {
+                            this.m_EntityCollectionDefault.Clear();
+                        }
 
 #if WINDOWS_PHONE
                         if (this.IsToClearExistingCollection)

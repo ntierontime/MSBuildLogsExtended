@@ -104,7 +104,7 @@ xmlns:cmd="http://www.galasoft.ch/mvvmlight"
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Width="140">
+                        <GridViewColumn Width="auto">
                             <GridViewColumnHeader Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Description, Source={StaticResource LocalizedStrings}}" Tag="Description" />
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>

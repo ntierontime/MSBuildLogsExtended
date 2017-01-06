@@ -8,13 +8,13 @@
 		    xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras"
 		    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
 		    xmlns:vm="clr-namespace:MSBuildLogsExtended.ViewModels;assembly=MSBuildLogsExtended.ViewModels"
-			xmlns:fresx="clr-namespace:Framework.Resources;assembly=Framework.Resources"
-			xmlns:eresx="clr-namespace:MSBuildLogsExtended.Resources;assembly=MSBuildLogsExtended.Resources"
+			xmlns:fresx="clr-namespace:Framework.Resources;assembly=Framework.Resourcesa"
+			xmlns:eresx="clr-namespace:MSBuildLogsExtended.Resources;assembly=MSBuildLogsExtended.Resourcesa"
             >
     <Grid DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM.CurrentDefault, Source={StaticResource Locator}}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition   Width="Auto" />
-            <ColumnDefinition   Width="Auto" />
+            <ColumnDefinition   Width="250" />
+            <ColumnDefinition   Width="*" MaxWidth="400" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition   Height="Auto" />
