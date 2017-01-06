@@ -489,6 +489,10 @@ namespace MSBuildLogsExtended.ViewModels
 #if WINDOWS_PHONE
 				this.AssignSelectedValueFromSelectedItemToCritieriaOfDefault();
 #endif
+                if (this.QueryPagingSetting != null && this.QueryPagingSetting.CurrentPage == 0)
+                {
+                    this.QueryPagingSetting.CurrentPage = 1;
+                }
                 MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon _Request = new MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfCommon()
 				{
 					Critieria = this.Criteria,
