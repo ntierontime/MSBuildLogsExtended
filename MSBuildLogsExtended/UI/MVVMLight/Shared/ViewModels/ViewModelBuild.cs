@@ -679,9 +679,6 @@ namespace MSBuildLogsExtended.ViewModels
         }
 
     }
-
-
-
 }
 
 

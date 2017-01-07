@@ -19,19 +19,22 @@
         </Grid.RowDefinitions>
         <ToolBarTray  Grid.Row="0" Background="LightBlue" HorizontalAlignment="Stretch" >
             <ToolBar>
-                <Button     Name="Update" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM_Static.SaveCommand, Source={StaticResource Locator}}" Width="75" Height="25" >
+                <Button     Name="Update" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM_Static.SaveCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.SaveAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
+                        <iconPacks:PackIconFontAwesome Kind="Check" HorizontalAlignment="Center" />
                         <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.SaveAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button     Name="Refresh" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM_Static.RefreshCurrentEditingItemCommand, Source={StaticResource Locator}}" Width="75" Height="25" >
+                <Button     Name="Refresh" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM_Static.RefreshCurrentEditingItemCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.RefreshAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
+                        <iconPacks:PackIconFontAwesome Kind="Refresh" HorizontalAlignment="Center" />
                         <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.RefreshAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button     Name="Close" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM_Static.CloseEditViewCommand, Source={StaticResource Locator}}" Width="75" Height="25" >
+                <Button     Name="Close" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM_Static.CloseEditViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.BackAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
-                        <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.CloseAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                        <iconPacks:PackIconEntypo Kind="Back" HorizontalAlignment="Center" />
+                        <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.BackAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
             </ToolBar>

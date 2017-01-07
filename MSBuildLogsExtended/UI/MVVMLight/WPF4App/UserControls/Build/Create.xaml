@@ -5,15 +5,15 @@
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
             mc:Ignorable="d"
-		    xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras"
+            xmlns:cmd="http://www.galasoft.ch/mvvmlight"
 		    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
 		    xmlns:vm="clr-namespace:MSBuildLogsExtended.ViewModels;assembly=MSBuildLogsExtended.ViewModels"
 			xmlns:fresx="clr-namespace:Framework.Resources;assembly=Framework.Resourcesa"
 			xmlns:eresx="clr-namespace:MSBuildLogsExtended.Resources;assembly=MSBuildLogsExtended.Resourcesa"
             >
-    <Grid DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM.NewItemDefault, Source={StaticResource Locator}}">
+    <Grid DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM, Source={StaticResource Locator}}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition   Width="250" />
+            <ColumnDefinition   Width="150"/>
             <ColumnDefinition   Width="*" MaxWidth="400" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -25,28 +25,36 @@
             <RowDefinition   Height="35" />
             <RowDefinition Height="35" />
         </Grid.RowDefinitions>
-        <Border Background="LightBlue" Grid.Row="0" Grid.Column="0"></Border>
-        <Border Background="LightGray" Grid.Row="0" Grid.Column="1"></Border>
-        <Border Background="LightGray" Grid.Row="1" Grid.Column="0"></Border>
-        <Border Background="LightBlue" Grid.Row="1" Grid.Column="1"></Border>
-        <Border Background="LightBlue" Grid.Row="2" Grid.Column="0"></Border>
-        <Border Background="LightGray" Grid.Row="2" Grid.Column="1"></Border>
-        <Border Background="LightGray" Grid.Row="3" Grid.Column="0"></Border>
-        <Border Background="LightBlue" Grid.Row="3" Grid.Column="1"></Border>
-        <Border Background="LightBlue" Grid.Row="4" Grid.Column="0"></Border>
-        <Border Background="LightGray" Grid.Row="4" Grid.Column="1"></Border>
-        <Border Background="LightGray" Grid.Row="5" Grid.Column="0"></Border>
-        <Border Background="LightBlue" Grid.Row="5" Grid.Column="1"></Border>
-        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Solution_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
-		<TextBlock Text="{Binding Path=Solution_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
-        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
-		<TextBlock Text="{Binding Path=Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
-        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.SolutionId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
-        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
-		<TextBox Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="3" />
-        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Description, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
-		<TextBox Text="{Binding Path=Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="4" />
-        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.BuildStartTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
-        <DatePicker HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="5" SelectedDate="{Binding Path=BuildStartTime, Mode=TwoWay}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
+        <Border Background="LightBlue" Grid.Row="0" Grid.Column="0" Padding="10"></Border>
+        <Border Background="LightGray" Grid.Row="0" Grid.Column="1" Padding="10"></Border>
+        <Border Background="LightGray" Grid.Row="1" Grid.Column="0" Padding="10"></Border>
+        <Border Background="LightBlue" Grid.Row="1" Grid.Column="1" Padding="10"></Border>
+        <Border Background="LightBlue" Grid.Row="2" Grid.Column="0" Padding="10"></Border>
+        <Border Background="LightGray" Grid.Row="2" Grid.Column="1" Padding="10">
+        </Border>
+        <Border Background="LightGray" Grid.Row="3" Grid.Column="0" Padding="10"></Border>
+        <Border Background="LightBlue" Grid.Row="3" Grid.Column="1" Padding="10"></Border>
+        <Border Background="LightBlue" Grid.Row="4" Grid.Column="0" Padding="10"></Border>
+        <Border Background="LightGray" Grid.Row="4" Grid.Column="1" Padding="10"></Border>
+        <Border Background="LightGray" Grid.Row="5" Grid.Column="0" Padding="10"></Border>
+        <Border Background="LightBlue" Grid.Row="5" Grid.Column="1" Padding="10"></Border>
+        <TextBlock Padding="4" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Solution_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
+        <TextBlock Padding="4" VerticalAlignment="Center" Text="{Binding Path=NewItemDefault.Solution_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
+        <TextBlock Padding="4" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
+        <TextBlock Padding="4" VerticalAlignment="Center" Text="{Binding Path=NewItemDefault.Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
+        <TextBlock Padding="4" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.SolutionId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
+        <ComboBox VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" SelectedValue="{Binding Path=NewItemDefault.SolutionId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=DropDownContentsOfSolution_1}" DisplayMemberPath="Name" SelectedValuePath="Value">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Loaded">
+                    <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=GetDropDownContentsOfSolution_1Command}" PassEventArgsToCommand="True"></cmd:EventToCommand>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </ComboBox>
+        <TextBlock Padding="4" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
+        <TextBox Padding="4" VerticalAlignment="Center" Text="{Binding Path=NewItemDefault.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="3" />
+        <TextBlock Padding="4" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Description, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
+        <TextBox Padding="4" VerticalAlignment="Center" Text="{Binding Path=NewItemDefault.Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="4" />
+        <TextBlock Padding="4" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.BuildStartTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
+        <DatePicker Padding="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="5" SelectedDate="{Binding Path=NewItemDefault.BuildStartTime, Mode=TwoWay}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
     </Grid>
 </UserControl>
