@@ -51,7 +51,7 @@
                     </StackPanel>
                 </Button>
                 <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
-                    <TextBox Width="50" Text="{Binding Path=QueryPagingSetting.CurrentPage, Mode=TwoWay}" HorizontalAlignment="Right" VerticalAlignment="Center" IsEnabled="{Binding Path=QueryPagingSetting.CanChangeCurrentPage, Mode=OneWay}"></TextBox>
+                    <TextBox Width="50" Text="{Binding Path=QueryPagingSetting.CurrentPage, Mode=TwoWay}" VerticalAlignment="Center" HorizontalContentAlignment="Right" IsEnabled="{Binding Path=QueryPagingSetting.CanChangeCurrentPage, Mode=OneWay}"></TextBox>
                     <TextBlock Text="/" Width="20" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="8,0,0,0"></TextBlock>
                     <TextBlock Width="Auto" Text="{Binding Path=QueryPagingSetting.CountOfPages}" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
                 </WrapPanel>
