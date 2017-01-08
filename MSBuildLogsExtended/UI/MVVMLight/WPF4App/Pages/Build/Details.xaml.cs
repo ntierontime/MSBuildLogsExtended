@@ -25,3 +25,4 @@ namespace MSBuildLogsExtended.WPF4App.Pages.Build
         }
     }
 }
+

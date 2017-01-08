@@ -5,21 +5,18 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:cmd="http://www.galasoft.ch/mvvmlight"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"		  
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:vm="clr-namespace:MSBuildLogsExtended.ViewModels;assembly=MSBuildLogsExtended.ViewModels"
-        xmlns:fresx="clr-namespace:Framework.Resources;assembly=Framework.Resources"
-        xmlns:eresx="clr-namespace:MSBuildLogsExtended.Resources;assembly=MSBuildLogsExtended.Resources"
         mc:Ignorable="d"
         xmlns:my="clr-namespace:MSBuildLogsExtended.WPF4App.UserControls"
-		Title="Workspace of Common" 
+		Title="Workspace of Common"
 		>
-    <Grid>
+	<Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"  />
-            <RowDefinition Height="Auto"  />
-        </Grid.RowDefinitions>
-
+			<RowDefinition Height="Auto"  />
+			<RowDefinition Height="Auto"  />
+		</Grid.RowDefinitions>
         <ToolBarTray DockPanel.Dock="Top" Grid.Row="0" Background="LightBlue" HorizontalAlignment="Stretch">
             <ToolBar DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildCollectionVM, Source={StaticResource Locator}}">
                 <Button     Name="Search" Command="{Binding SearchCommand}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.SearchAlternativeText, Source={StaticResource LocalizedStrings}}">
@@ -79,7 +76,6 @@
                         <i:EventTrigger EventName="SelectionChanged">
                             <cmd:EventToCommand Command="{Binding Path=SearchCommand}" PassEventArgsToCommand="True"></cmd:EventToCommand>
                         </i:EventTrigger>
-
                     </i:Interaction.Triggers>
                 </ComboBox>
                 <Separator />
@@ -88,11 +84,10 @@
                         <i:EventTrigger EventName="SelectionChanged">
                             <cmd:EventToCommand Command="{Binding Path=SearchCommand}" PassEventArgsToCommand="True"></cmd:EventToCommand>
                         </i:EventTrigger>
-
                     </i:Interaction.Triggers>
                 </ComboBox>
             </ToolBar>
         </ToolBarTray>
-        <my:UCCommonOfBuild x:Name="UCCommonOfBuild1" Grid.Row="1" HorizontalAlignment="Stretch" Height="{Binding ElementName=LayoutRoot, Path=ActualHeight}" />
-    </Grid>
+<my:UCCommonOfBuild x:Name="UCCommonOfBuild1" Grid.Row="1" HorizontalAlignment="Stretch" Height="{Binding ElementName=LayoutRoot, Path=ActualHeight}" />
+	</Grid>
 </Page>

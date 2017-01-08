@@ -26,3 +26,5 @@ namespace MSBuildLogsExtended.WPF4App.UserControls.BuildEventCode
         }
     }
 }
+
+

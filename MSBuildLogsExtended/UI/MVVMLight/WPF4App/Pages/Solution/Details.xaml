@@ -2,43 +2,47 @@
         x:Class="MSBuildLogsExtended.WPF4App.Pages.Solution.Details"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-		xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras"
-		xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:cmd="http://www.galasoft.ch/mvvmlight"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
 		xmlns:vm="clr-namespace:MSBuildLogsExtended.ViewModels;assembly=MSBuildLogsExtended.ViewModels"
-		xmlns:fresx="clr-namespace:Framework.Resources;assembly=Framework.Resources"
-		xmlns:eresx="clr-namespace:MSBuildLogsExtended.Resources;assembly=MSBuildLogsExtended.Resources"
 		xmlns:Solution="clr-namespace:MSBuildLogsExtended.WPF4App.UserControls.Solution"
         Title="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntitySolution.Solution_Details, Source={StaticResource LocalizedStrings}}"
         >
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="35"  />
+            <RowDefinition Height="Auto"  />
             <RowDefinition Height="Auto"  />
         </Grid.RowDefinitions>
-        <ToolBarTray Grid.Row="0" >
+        <ToolBarTray Grid.Row="0" Background="LightBlue" HorizontalAlignment="Stretch">
             <ToolBar>
-                <Button     Name="Edit" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM.LaunchEditViewCommand, Source={StaticResource Locator}}" Width="75" Height="25" >
+                <Button     Name="Edit" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM.LaunchEditViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.EditAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
+                        <iconPacks:PackIconModern Kind="Edit" />
                         <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.EditAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button     Name="Copy" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM.LaunchCopyViewCommand, Source={StaticResource Locator}}" Width="75" Height="25" >
+                <Button     Name="Copy" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM.LaunchCopyViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.CopyAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
+                        <iconPacks:PackIconMaterial Kind="ContentDuplicate" />
                         <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.CopyAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button     Name="Delete" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM.LaunchDeleteViewCommand, Source={StaticResource Locator}}" Width="75" Height="25" >
+                <Button     Name="Delete" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM.LaunchDeleteViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.DeleteAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
+                        <iconPacks:PackIconMaterial Kind="Delete" HorizontalAlignment="Center" />
                         <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.DeleteAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button     Name="Close" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM.CloseViewDetailsViewCommand, Source={StaticResource Locator}}" Width="75" Height="25" >
+                <Button     Name="Close" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM.CloseViewDetailsViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.BackAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
-                        <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.CloseAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                        <iconPacks:PackIconEntypo Kind="Back" HorizontalAlignment="Center" />
+                        <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.BackAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
             </ToolBar>
         </ToolBarTray>
-        <Solution:Details Grid.Row="1" />
+        <Solution:Details Grid.Row="1" HorizontalAlignment="Stretch" />
     </Grid>
 </Page>
