@@ -92,6 +92,9 @@
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=SolutionId}" ToolTip="" />
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=SolutionId}" ToolTip="" />
+                                    <Button Style="{StaticResource LinkButton}" >
+                                        <TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=SolutionId}" ToolTip="" />
+                                    </Button>
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=SolutionId}" />-->
                                 </Grid>
