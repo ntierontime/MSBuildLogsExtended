@@ -470,6 +470,10 @@ namespace MSBuildLogsExtended.ViewModels
 						{
 							this.m_EntityCollectionDefault = new ObservableCollection<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>();
 						}
+                        else
+                        {
+                            this.m_EntityCollectionDefault.Clear();
+                        }
 
 #if WINDOWS_PHONE
                         if (this.IsToClearExistingCollection)
@@ -518,6 +522,10 @@ namespace MSBuildLogsExtended.ViewModels
 #if WINDOWS_PHONE
 				this.AssignSelectedValueFromSelectedItemToCritieriaOfDefault();
 #endif
+                if (this.QueryPagingSetting != null && this.QueryPagingSetting.CurrentPage == 0)
+                {
+                    this.QueryPagingSetting.CurrentPage = 1;
+                }
                 MSBuildLogsExtended.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon _Request = new MSBuildLogsExtended.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfCommon()
 				{
 					Critieria = this.Criteria,
@@ -903,13 +911,11 @@ namespace MSBuildLogsExtended.ViewModels
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();
-            list.Add("{0}~ASC", "{0} A-Z");
-					list.Add("{0}~DESC", "{0} Z-A");
+            list.Add("Build_1_Name~ASC", "Build_1_Name A-Z");
+					list.Add("Build_1_Name~DESC", "Build_1_Name Z-A");
             return list;
         }
-
     }
-
 
 
 }

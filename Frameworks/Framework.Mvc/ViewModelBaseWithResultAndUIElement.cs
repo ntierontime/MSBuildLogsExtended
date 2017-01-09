@@ -7,7 +7,7 @@ using System.Web.Mvc;
 namespace Framework.Mvc
 {
     public abstract class ViewModelBaseWithResultAndUIElement<TSearchCriteria, TSearchResult>
-        : Framework.EntityContracts.ViewModelBase<TSearchCriteria>
+        : Framework.ViewModels.ViewModelBase<TSearchCriteria>
         where TSearchCriteria : class, new()
         where TSearchResult : class, new()
     {
@@ -24,7 +24,7 @@ namespace Framework.Mvc
 		public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfResult { get; set; }
         public string StatusMessageOfResult { get; set; }
 
-        public override void PopulateAllUIElements(Framework.EntityContracts.IViewModelBase<TSearchCriteria> vmFromTempData, int currentPage)
+        public override void PopulateAllUIElements(Framework.ViewModels.IViewModelBase<TSearchCriteria> vmFromTempData, int currentPage)
         {
 			base.PopulateAllUIElements(vmFromTempData, currentPage);
             this.SelectListOfQueryOrderBySettingCollecionInString = Framework.Mvc.MvcHelper.BuildListOfSelectListItem(this.ListOfQueryOrderBySettingCollecionInString);

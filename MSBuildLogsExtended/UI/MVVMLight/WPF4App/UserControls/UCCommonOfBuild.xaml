@@ -39,12 +39,12 @@
 <CheckBox Name="ID_CheckBox_Search_isToCompareNameCommonOftOfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareNameCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" IsChecked="{Binding Path=Criteria.BuildQueryCriteriaCommon.NameCommonOft.IsToCompare}" />
 <TextBox Name="ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon" Text="{Binding Path=Criteria.BuildQueryCriteriaCommon.NameCommonOft.ValueToBeContained}" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedNameCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" />
 <CheckBox Name="ID_CheckBox_Search_isToCompareBuildStartTimeCommonOftOfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareBuildStartTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareBuildStartTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" IsChecked="{Binding Path=Criteria.BuildQueryCriteriaCommon.BuildStartTimeCommonOft.IsToCompare}" />
-            <StackPanel  Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Stretch" >
+<WrapPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch">
 <CheckBox Name="ID_CheckBox_Search_isToCompareLowerBoundBuildStartTimeCommonOftOfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Tooltip_of_IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundBuildStartTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=Criteria.BuildQueryCriteriaCommon.BuildStartTimeCommonOft.IsToCompareLowerBound}" />
-<DatePicker Name="ID_DatePicker_Search_lowerBoundBuildStartTimeCommonOftOfCommon" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundBuildStartTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectedDate="{Binding Path=Criteria.BuildQueryCriteriaCommon.BuildStartTimeCommonOft.LowerBound}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" HorizontalContentAlignment="Stretch" />
+<DatePicker Name="ID_DatePicker_Search_lowerBoundBuildStartTimeCommonOftOfCommon" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Tooltip_of_LowerBound_ID_TextBox_Search_lowerBoundBuildStartTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectedDate="{Binding Path=Criteria.BuildQueryCriteriaCommon.BuildStartTimeCommonOft.LowerBound}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
 <CheckBox Name="ID_CheckBox_Search_isToCompareUpperBoundBuildStartTimeCommonOftOfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Tooltip_of_IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundBuildStartTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding Path=Criteria.BuildQueryCriteriaCommon.BuildStartTimeCommonOft.IsToCompareUpperBound}" />
-                <DatePicker Name="ID_DatePicker_Search_upperBoundBuildStartTimeCommonOftOfCommon" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundBuildStartTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectedDate="{Binding Path=Criteria.BuildQueryCriteriaCommon.BuildStartTimeCommonOft.UpperBound}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" HorizontalContentAlignment="Stretch" />
-</StackPanel>
+<DatePicker Name="ID_DatePicker_Search_upperBoundBuildStartTimeCommonOftOfCommon" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Tooltip_of_UpperBound_ID_TextBox_Search_upperBoundBuildStartTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectedDate="{Binding Path=Criteria.BuildQueryCriteriaCommon.BuildStartTimeCommonOft.UpperBound}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
+</WrapPanel>
 <CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" IsChecked="{Binding Path=Criteria.BuildQueryCriteriaCommon.IdCommonOfSolution_1.IsToCompare}" />
 <ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntitySolution.Build, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" ItemsSource="{Binding Path=DropDownContentsOfSolution_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildQueryCriteriaCommon.IdCommonOfSolution_1.ValueToCompare}">
                   <i:Interaction.Triggers>
@@ -60,14 +60,16 @@
     <cmd:EventToCommand Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM.SelectionChangedCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="True" />
   </i:EventTrigger>
 </i:Interaction.Triggers>            <ListView.View>
-<GridView ColumnHeaderToolTip="Build" AllowsColumnReorder="true" >
+<GridView ColumnHeaderToolTip="Build" AllowsColumnReorder="true">
   					<GridViewColumn Width="140">
 						<GridViewColumnHeader Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Solution_1_Name, Source={StaticResource LocalizedStrings}}" Tag="Solution_1_Name" />
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Solution_1_Name}" ToolTip="" />
-                                    <TextBlock Style="{StaticResource GridEditStyle}" Text="{Binding Path=Solution_1_Name}" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Solution_1_Name}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Solution_1_Name}" />-->
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -77,7 +79,9 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Id}" ToolTip="" />
-                                    <!--<TextBlock Style="{StaticResource GridEditStyle}" Text="{Binding Path=Id}" />-->
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Id}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Id}" />-->
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -87,7 +91,9 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=SolutionId}" ToolTip="" />
-                                    <TextBlock Style="{StaticResource GridEditStyle}" Text="{Binding Path=SolutionId}" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=SolutionId}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=SolutionId}" />-->
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -97,7 +103,9 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Name}" ToolTip="" />
-                                    <TextBlock Style="{StaticResource GridEditStyle}" Text="{Binding Path=Name}" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Name}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Name}" />-->
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -107,7 +115,9 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Description}" ToolTip="" />
-                                    <TextBlock Style="{StaticResource GridEditStyle}" Text="{Binding Path=Description}" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Description}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Description}" />-->
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -117,7 +127,9 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildStartTime}" ToolTip="" />
-                                    <TextBlock Style="{StaticResource GridEditStyle}" Text="{Binding Path=BuildStartTime}" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildStartTime}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=BuildStartTime}" />-->
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>

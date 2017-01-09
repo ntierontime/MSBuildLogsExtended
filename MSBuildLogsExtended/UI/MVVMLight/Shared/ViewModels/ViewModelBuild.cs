@@ -673,12 +673,13 @@ namespace MSBuildLogsExtended.ViewModels
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();
-            list.Add(string.Format("{0}~ASC", "Name"), string.Format("{0} A-Z", "Name"));
-					list.Add(string.Format("{0}~DESC", "Name"), string.Format("{0} Z-A", "Name"));
+            list.Add("Solution_1_Name~ASC", "Solution_1_Name A-Z");
+					list.Add("Solution_1_Name~DESC", "Solution_1_Name Z-A");
             return list;
         }
-
     }
+
+
 }
 
 

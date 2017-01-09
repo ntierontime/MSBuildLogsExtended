@@ -57,8 +57,6 @@ namespace MSBuildLogsExtended.ViewModels
         /// </summary>        
         public RelayCommand LogonCommand { get; private set; }
 
-#if (XAMARIN)
-#else
         /// <summary>
         /// Logon action.
         /// </summary>
@@ -85,8 +83,6 @@ namespace MSBuildLogsExtended.ViewModels
         {
             return this.m_LogOnModel != null;
         }
-
-#endif
 
         #endregion LogonCommand
 

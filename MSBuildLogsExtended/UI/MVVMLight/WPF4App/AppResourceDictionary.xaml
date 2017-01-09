@@ -74,7 +74,7 @@
     <Style TargetType="{x:Type ToolBarTray}" x:Key="ToolBarTrayStyle">
         <Setter Property="Background" Value="LightBlue" />
         <Setter Property="HorizontalAlignment" Value="Stretch" />
-    </Style>    
+    </Style>
 	<Style TargetType="ToolTip">
 	  <Setter Property = "HorizontalOffset" Value="10"/>
 	  <Setter Property = "VerticalOffset" Value="10"/>

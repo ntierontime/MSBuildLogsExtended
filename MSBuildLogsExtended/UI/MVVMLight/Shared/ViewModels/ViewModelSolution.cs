@@ -2,11 +2,8 @@ using System;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using GalaSoft.MvvmLight.Messaging;
-#if (XAMARIN)
-#else
 using GalaSoft.MvvmLight.Threading;
-#endif
+using GalaSoft.MvvmLight.Messaging;
 
 namespace MSBuildLogsExtended.ViewModels
 {
@@ -429,6 +426,10 @@ namespace MSBuildLogsExtended.ViewModels
 						{
 							this.m_EntityCollection = new ObservableCollection<MSBuildLogsExtended.DataSourceEntities.Solution>();
 						}
+                        else
+                        {
+                            this.m_EntityCollection.Clear();
+                        }
 
 #if WINDOWS_PHONE
                         if (this.IsToClearExistingCollection)
@@ -475,6 +476,10 @@ namespace MSBuildLogsExtended.ViewModels
             try
             {
 
+                if (this.QueryPagingSetting != null && this.QueryPagingSetting.CurrentPage == 0)
+                {
+                    this.QueryPagingSetting.CurrentPage = 1;
+                }
                 MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageUserDefinedOfCommon _Request = new MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageUserDefinedOfCommon()
 				{
 					Critieria = this.Criteria,
@@ -533,13 +538,11 @@ namespace MSBuildLogsExtended.ViewModels
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();
-            list.Add("{0}~ASC", "{0} A-Z");
-					list.Add("{0}~DESC", "{0} Z-A");
+            list.Add("ExternalParentId~ASC", "ExternalParentId A-Z");
+					list.Add("ExternalParentId~DESC", "ExternalParentId Z-A");
             return list;
         }
-
     }
-
 
 
 }

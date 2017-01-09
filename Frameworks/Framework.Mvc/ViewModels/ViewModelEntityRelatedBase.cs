@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Framework.ViewModels
+namespace Framework.Mvc
 {
     public class ViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity, TStatusOfLoadMasterEntity> : IViewModelEntityRelatedBase<TMasterEntity, TCriteriaOfMasterEntity, TStatusOfLoadMasterEntity>
         where TMasterEntity : class, new()

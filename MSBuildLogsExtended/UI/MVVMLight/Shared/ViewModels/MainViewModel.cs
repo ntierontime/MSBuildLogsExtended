@@ -18,6 +18,7 @@ namespace MSBuildLogsExtended.ViewModels
     /// </summary>
     public class MainViewModel : ViewModelBase
     {
+        public bool QuitConfirmationEnabled { get; set; }
         public string Welcome
         {
             get
@@ -50,18 +51,6 @@ namespace MSBuildLogsExtended.ViewModels
 
         public Framework.NavigationSettingCollection NavigationSettingCollection { get; set; }
 
-        private bool _quitConfirmationEnabled;
-        public bool QuitConfirmationEnabled
-        {
-            get { return _quitConfirmationEnabled; }
-            set
-            {
-                if (value.Equals(_quitConfirmationEnabled)) return;
-                _quitConfirmationEnabled = value;
-                RaisePropertyChanged("QuitConfirmationEnabled");
-            }
-        }
-        
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
@@ -93,8 +82,6 @@ namespace MSBuildLogsExtended.ViewModels
             this.MenuItemSelectedCommand = new RelayCommand(MenuItemSelected);
 
             //#endregion 3. Initialize MenuItemSelectedCommand
-
-            _quitConfirmationEnabled = false;
         }
 
         ////public override void Cleanup()

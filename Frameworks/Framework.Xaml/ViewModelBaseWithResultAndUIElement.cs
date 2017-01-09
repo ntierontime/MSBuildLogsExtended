@@ -9,7 +9,7 @@ using System.Collections.ObjectModel;
 namespace Framework.Xaml
 {
     public abstract class ViewModelBaseWithResultAndUIElement<TSearchCriteria, TSearchResultEntityCollection, TSearchResultEntityItem>
-        : GalaSoft.MvvmLight.ViewModelBase, Framework.EntityContracts.IViewModelBase<TSearchCriteria>
+        : GalaSoft.MvvmLight.ViewModelBase, Framework.ViewModels.IViewModelBase<TSearchCriteria>
         where TSearchCriteria : class, new()
         where TSearchResultEntityCollection : List<TSearchResultEntityItem>, new()
         where TSearchResultEntityItem : class, new()
@@ -345,10 +345,10 @@ namespace Framework.Xaml
 
         #region GetPrimaryInformationEntity()
 
-        public Framework.EntityContracts.IViewModelBase<TSearchCriteria> GetPrimaryInformationEntity()
+        public Framework.ViewModels.IViewModelBase<TSearchCriteria> GetPrimaryInformationEntity()
         {
-            Framework.EntityContracts.ViewModelBase<TSearchCriteria> vm;
-            vm = new Framework.EntityContracts.ViewModelBase<TSearchCriteria>
+            Framework.ViewModels.ViewModelBase<TSearchCriteria> vm;
+            vm = new Framework.ViewModels.ViewModelBase<TSearchCriteria>
             {
                 Criteria = this.Criteria,
                 ListOfQueryOrderBySettingCollecionInString = this.ListOfQueryOrderBySettingCollecionInString,
@@ -364,7 +364,7 @@ namespace Framework.Xaml
 
         #region PopulateAllUIElements(...)
 
-        public virtual void PopulateAllUIElements(Framework.EntityContracts.IViewModelBase<TSearchCriteria> vmFromTempData, int currentPage)
+        public virtual void PopulateAllUIElements(Framework.ViewModels.IViewModelBase<TSearchCriteria> vmFromTempData, int currentPage)
         {
             // 1. Criteria
             if (this.Criteria == null)

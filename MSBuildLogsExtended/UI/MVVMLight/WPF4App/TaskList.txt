@@ -23,4 +23,7 @@
 6. DataAnnotation validation
 6.1. https://code.msdn.microsoft.com/windowsdesktop/Validation-in-MVVM-using-12dafef3
 7. (Done)Add ToolBarTrayStyle
-8. 
+8. Change Project Name:
+8.1. Framework.Resources -> Framework.ResourceLib
+8.2. XXX.Resources -> XXX.ResourceLib
+8.3. MVVMLightViewModels, from ViewModels -> MVVMLightViewModels

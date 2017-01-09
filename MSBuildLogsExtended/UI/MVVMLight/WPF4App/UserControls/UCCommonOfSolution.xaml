@@ -40,7 +40,7 @@
 <CheckBox Name="ID_CheckBox_Search_isToCompareExternalParentIdCommonOftOfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntitySolution.IsToCompare_ID_CheckBox_Search_isToCompareExternalParentIdCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntitySolution.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareExternalParentIdCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" IsChecked="{Binding Path=Criteria.SolutionQueryCriteriaCommon.ExternalParentIdCommonOft.IsToCompare}" />
 <TextBox Name="ID_TextBox_Search_valueToBeContainedExternalParentIdCommonOftOfCommon" Text="{Binding Path=Criteria.SolutionQueryCriteriaCommon.ExternalParentIdCommonOft.ValueToBeContained}" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntitySolution.Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedExternalParentIdCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" />
         </Grid>
-<ListView Name="V_Common" Height="800" Width="600" Margin="12,12,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfSolutionCollectionVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollection}" SelectedItem="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM.Current, Mode=TwoWay, Source={StaticResource Locator}}">
+<ListView Name="V_Common" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfSolutionCollectionVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollection}" SelectedItem="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM.Current, Mode=TwoWay, Source={StaticResource Locator}}">
   <i:Interaction.Triggers>
   <i:EventTrigger EventName="SelectionChanged">
     <cmd:EventToCommand Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM.SelectionChangedCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="True" />
@@ -53,7 +53,9 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Id}" ToolTip="" />
-									<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Id}" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Id}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Id}" />-->
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -63,7 +65,9 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=ExternalParentId}" ToolTip="" />
-									<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=ExternalParentId}" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=ExternalParentId}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=ExternalParentId}" />-->
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -73,7 +77,9 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Name}" ToolTip="" />
-									<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Name}" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Name}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Name}" />-->
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -83,7 +89,9 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Description}" ToolTip="" />
-									<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Description}" />
+									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Description}" ToolTip="" />
+									<!-- You can un-comment to enable editing in list -->
+									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Description}" />-->
                                 </Grid>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>

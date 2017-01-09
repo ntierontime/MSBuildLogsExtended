@@ -1,5 +1,5 @@
 using System;
-namespace Framework.ViewModels
+namespace Framework.EntityContracts
 {
     public interface IViewModelBase<TSearchCriteria>
      where TSearchCriteria : class, new()

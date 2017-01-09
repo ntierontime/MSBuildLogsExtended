@@ -705,7 +705,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
 						_retval = _Query.Skip(currentIndex).Take(pageSize);
 					}
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
@@ -1117,7 +1117,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
 						_retval = _Query.Skip(currentIndex).Take(pageSize);
 					}
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
@@ -1455,7 +1455,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
 						_retval = _Query.Skip(currentIndex).Take(pageSize);
 					}
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
@@ -1794,7 +1794,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
 						_retval = _Query.Skip(currentIndex).Take(pageSize);
 					}
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
@@ -2133,7 +2133,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
 						_retval = _Query.Skip(currentIndex).Take(pageSize);
 					}
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
@@ -2492,7 +2492,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
 						_retval = _Query.Skip(currentIndex).Take(pageSize);
 					}
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
@@ -2852,7 +2852,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
 						_retval = _Query.Skip(currentIndex).Take(pageSize);
 					}
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
@@ -3212,7 +3212,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
 						_retval = _Query.Skip(currentIndex).Take(pageSize);
 					}
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
@@ -3571,7 +3571,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
 						_retval = _Query.Skip(currentIndex).Take(pageSize);
 					}
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
@@ -3932,7 +3932,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
 						_retval = _Query.Skip(currentIndex).Take(pageSize);
 					}
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
@@ -4291,7 +4291,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
 						_retval = _Query.Skip(currentIndex).Take(pageSize);
 					}
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
@@ -4650,7 +4650,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
 						_retval = _Query.Skip(currentIndex).Take(pageSize);
 					}
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
@@ -5009,7 +5009,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
 						_retval = _Query.Skip(currentIndex).Take(pageSize);
 					}
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;
@@ -5368,7 +5368,7 @@ namespace MSBuildLogsExtended.EntityFrameworkDAL
 						_retval = _Query.Skip(currentIndex).Take(pageSize);
 					}
                     _retMessage.DataAccessLayerMessageStatus = Framework.DataSourceEntities.DataAccessLayerMessageStatus.Success;
-                    _retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
+					_retMessage.QueryPagingResult = new Framework.EntityContracts.QueryPagingResult();
                     _retMessage.QueryPagingResult.PageSize = pageSize;
                     _retMessage.QueryPagingResult.RecordCountOfCurrentPage = _retval.Count();
                     _retMessage.QueryPagingResult.CurrentIndexOfStartRecord = currentIndex;

@@ -37,3 +37,4 @@ namespace MSBuildLogsExtended.EntityFrameworkContext
 
     }
 }
+

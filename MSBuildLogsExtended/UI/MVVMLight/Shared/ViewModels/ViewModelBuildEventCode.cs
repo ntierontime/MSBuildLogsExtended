@@ -2,12 +2,8 @@ using System;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using GalaSoft.MvvmLight.Messaging;
-
-#if (XAMARIN)
-#else
 using GalaSoft.MvvmLight.Threading;
-#endif
+using GalaSoft.MvvmLight.Messaging;
 
 namespace MSBuildLogsExtended.ViewModels
 {
@@ -28,13 +24,13 @@ namespace MSBuildLogsExtended.ViewModels
     public class WPCommonOfBuildEventCodeVM
 		: Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon, MSBuildLogsExtended.DataSourceEntities.BuildEventCodeCollection, MSBuildLogsExtended.DataSourceEntities.BuildEventCode>
     {
-#region fields and properties
+        #region fields and properties
 
         public const string EntityName_Static = "WPCommonOfBuildEventCodeVM";
 		
-#endregion fields and properties
+        #endregion fields and properties
 		
-#region Implement abstract EntityName
+        #region Implement abstract EntityName
 
         public override string EntityName
         {
@@ -44,9 +40,9 @@ namespace MSBuildLogsExtended.ViewModels
             }
         }
 
-#endregion Implement abstract EntityName
+        #endregion Implement abstract EntityName
 
-#region Constructor
+        #region Constructor
 
         /// <summary>
         /// Initializes a new instance of the ViewModelBuildEventCode class.
@@ -69,9 +65,9 @@ namespace MSBuildLogsExtended.ViewModels
             ////}
         }
 
-#endregion Constructor
+        #endregion Constructor
 
-#region RefreshCurrentEditingItem
+		#region RefreshCurrentEditingItem
 
         protected override void RefreshCurrentEditingItem()
         {
@@ -92,9 +88,9 @@ namespace MSBuildLogsExtended.ViewModels
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
         }
 
-#endregion RefreshCurrentEditingItem
+		#endregion RefreshCurrentEditingItem
 
-#region RefreshNewItem
+		#region RefreshNewItem
 
         protected override void RefreshNewItem()
         {
@@ -108,9 +104,9 @@ namespace MSBuildLogsExtended.ViewModels
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
         }
 
-#endregion RefreshNewItem
+		#endregion RefreshNewItem
 
-#region ClearSearchResult
+        #region ClearSearchResult
 
         /// <summary>
         /// Clears the search result in this.EntityCollection.
@@ -127,25 +123,25 @@ namespace MSBuildLogsExtended.ViewModels
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
         }
 
-#endregion ClearSearchResult
+        #endregion ClearSearchResult
 		
-#region Copy
+        #region Copy
 
         protected override void PrepareCopyView()
         {
             this.NewItem = this.Current.GetAClone();
         }
 
-#endregion Copy
+        #endregion Copy
 
-#region Save
+		#region Save
 		
         /// <summary>
         /// update a MSBuildLogsExtended.DataSourceEntities.BuildEventCode.
         /// </summary>
         protected override void Save()
         {
-#region Asyncronized wcf method call
+            #region Asyncronized wcf method call
 
 			string viewName = ViewName_Edit;
 			Framework.UIAction uiAction = Framework.UIAction.Update;
@@ -198,15 +194,15 @@ namespace MSBuildLogsExtended.ViewModels
 				Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
             }
 
-#endregion Asyncronized wcf method call
+            #endregion Asyncronized wcf method call
 
-#region Syncronized wcf method call -- not in use/WPF only
+            #region Syncronized wcf method call -- not in use/WPF only
 
             /*
             MSBuildLogsExtended.CommonBLLIoC.IoCBuildEventCode.UpdateEntity(this.m_Current);
 			*/
 
-#endregion Syncronized wcf method call -- not in use/WPF only
+            #endregion Syncronized wcf method call -- not in use/WPF only
 
         }
 
@@ -221,16 +217,16 @@ namespace MSBuildLogsExtended.ViewModels
             return this.m_Current != null;
         }
 
-#endregion Save
+		#endregion Save
 		
-#region Add
+		#region Add
 
         /// <summary>
         /// Adds a MSBuildLogsExtended.DataSourceEntities.BuildEventCode to the list and repo.
         /// </summary>
         protected override void Add()
         {
-#region Asyncronized wcf method call
+			#region Asyncronized wcf method call
 
 			string viewName = ViewName_Create;
 			Framework.UIAction uiAction = Framework.UIAction.Create;
@@ -286,9 +282,9 @@ namespace MSBuildLogsExtended.ViewModels
 				Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
             }
 
-#endregion Asyncronized wcf method call
+            #endregion Asyncronized wcf method call
 
-#region Syncronized wcf method call -- not in use/WPF only
+            #region Syncronized wcf method call -- not in use/WPF only
 
             /*
             MSBuildLogsExtended.DataSourceEntities.BuildEventCode _NewItem = new MSBuildLogsExtended.DataSourceEntities.BuildEventCode();
@@ -296,19 +292,19 @@ namespace MSBuildLogsExtended.ViewModels
             MSBuildLogsExtended.CommonBLLIoC.IoCBuildEventCode.InsertEntity(_NewItemDefault);
 			*/
 
-#endregion Syncronized wcf method call -- not in use/WPF only
+            #endregion Syncronized wcf method call -- not in use/WPF only
         }
 
-#endregion Add
+		#endregion Add
 
-#region Delete
+		#region Delete
 
         /// <summary>,
         /// delete a MSBuildLogsExtended.DataSourceEntities.BuildEventCode.
         /// </summary>
         protected override void Delete()
         {
-#region Asyncronized wcf method call
+			#region Asyncronized wcf method call
 
 			string viewName = ViewName_Delete;
 			Framework.UIAction uiAction = Framework.UIAction.Delete;            
@@ -362,16 +358,16 @@ namespace MSBuildLogsExtended.ViewModels
 				Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
 			}
 
-#endregion Asyncronized wcf method call
+            #endregion Asyncronized wcf method call
 
-#region Syncronized wcf method call -- not in use/WPF only
+            #region Syncronized wcf method call -- not in use/WPF only
 
             /*
             MSBuildLogsExtended.CommonBLLIoC.IoCBuildEventCode.DeleteEntity(this.m_Current);//
             this.m_EntityCollection.Remove(this.m_Current);
 			*/
 
-#endregion Syncronized wcf method call -- not in use/WPF only
+            #endregion Syncronized wcf method call -- not in use/WPF only
         }
 
         /// <summary>
@@ -385,7 +381,7 @@ namespace MSBuildLogsExtended.ViewModels
             return this.m_Current != null;
         }
 
-#endregion Delete
+		#endregion Delete
 
 #if WINDOWS_PHONE
         /// <summary>
@@ -399,13 +395,13 @@ namespace MSBuildLogsExtended.ViewModels
 #endif
 
 
-#region Implement abstract Search
+        #region Implement abstract Search
 
         protected override void Search()
         {
             this.SearchStatus = Framework.EntityContracts.SearchStatus.Searching;
 
-#region Asyncronized wcf method call
+            #region Asyncronized wcf method call
 
             string viewName = ViewName_SearchResult;
             Framework.UIAction uiAction = Framework.UIAction.Search;
@@ -430,6 +426,10 @@ namespace MSBuildLogsExtended.ViewModels
 						{
 							this.m_EntityCollection = new ObservableCollection<MSBuildLogsExtended.DataSourceEntities.BuildEventCode>();
 						}
+                        else
+                        {
+                            this.m_EntityCollection.Clear();
+                        }
 
 #if WINDOWS_PHONE
                         if (this.IsToClearExistingCollection)
@@ -476,6 +476,10 @@ namespace MSBuildLogsExtended.ViewModels
             try
             {
 
+                if (this.QueryPagingSetting != null && this.QueryPagingSetting.CurrentPage == 0)
+                {
+                    this.QueryPagingSetting.CurrentPage = 1;
+                }
                 MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon _Request = new MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeRequestMessageUserDefinedOfCommon()
 				{
 					Critieria = this.Criteria,
@@ -492,9 +496,9 @@ namespace MSBuildLogsExtended.ViewModels
 				Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
             }
 
-#endregion Asyncronized wcf method call
+            #endregion Asyncronized wcf method call
 
-#region Syncronized wcf method call -- not in use/WPF only
+            #region Syncronized wcf method call -- not in use/WPF only
 
             /*
             if (this.m_EntityCollection == null)
@@ -513,7 +517,7 @@ namespace MSBuildLogsExtended.ViewModels
                 }
             }
             */
-#endregion Syncronized wcf method call -- not in use/WPF only
+            #endregion Syncronized wcf method call -- not in use/WPF only
         }
 
 #if WINDOWS_PHONE
@@ -527,20 +531,18 @@ namespace MSBuildLogsExtended.ViewModels
         //}
 #endif
 
-#endregion Implement abstract Search
+        #endregion Implement abstract Search
 
 
 
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {
             Framework.NameValueCollection list = new Framework.NameValueCollection();
-            list.Add("{0}~ASC", "{0} A-Z");
-					list.Add("{0}~DESC", "{0} Z-A");
+            list.Add("EventCode~ASC", "EventCode A-Z");
+					list.Add("EventCode~DESC", "EventCode Z-A");
             return list;
         }
-
     }
-
 
 
 }

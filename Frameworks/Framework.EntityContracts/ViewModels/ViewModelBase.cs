@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Framework.ViewModels
+namespace Framework.EntityContracts
 {
-    public class ViewModelBase<TSearchCriteria> : Framework.ViewModels.IViewModelBase<TSearchCriteria>
+    public class ViewModelBase<TSearchCriteria> : Framework.EntityContracts.IViewModelBase<TSearchCriteria>
         where TSearchCriteria : class, new()
     {
         public ViewModelBase()
@@ -24,7 +24,7 @@ namespace Framework.ViewModels
         public Framework.NameValueCollection ListOfDataExport { get; set; }
         public Framework.EntityContracts.QueryOrderBySettingCollection QueryOrderBySettingCollection { get; set; }
 
-        public Framework.ViewModels.IViewModelBase<TSearchCriteria> GetPrimaryInformationEntity()
+        public Framework.EntityContracts.IViewModelBase<TSearchCriteria> GetPrimaryInformationEntity()
         {
             ViewModelBase<TSearchCriteria> vm;
             vm = new ViewModelBase<TSearchCriteria>
@@ -40,7 +40,7 @@ namespace Framework.ViewModels
         }
 
 
-        public virtual void PopulateAllUIElements(Framework.ViewModels.IViewModelBase<TSearchCriteria> vmFromTempData, int currentPage)
+        public virtual void PopulateAllUIElements(Framework.EntityContracts.IViewModelBase<TSearchCriteria> vmFromTempData, int currentPage)
         {
             // 1. Criteria
             if (this.Criteria == null)
@@ -152,7 +152,7 @@ namespace Framework.ViewModels
         }
     }
     
-    public class ViewModelBase<TSearchCriteria, TSearchResult> : ViewModelBase<TSearchCriteria>, Framework.ViewModels.IViewModelBase<TSearchCriteria, TSearchResult>
+    public class ViewModelBase<TSearchCriteria, TSearchResult> : ViewModelBase<TSearchCriteria>, Framework.EntityContracts.IViewModelBase<TSearchCriteria, TSearchResult>
         where TSearchCriteria : class, new()
     {
 		public ViewModelBase()
