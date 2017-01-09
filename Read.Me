@@ -9,3 +9,27 @@ Sample batch file to run msbuild with SqlLogger:
 
 @path=%windir%\Microsoft.NET\Framework\v4.0.30319;%windir%\Microsoft.NET\Framework\v3.5;%path%
 msbuild <%path to you solution or project file%> /l:SqlLogger,MSBuild.ExtensionPack.Loggers.dll;BID=123;BN=Log4Net,Deploy_Log4Net_AspNetMvc40Rasor_%date:~-4,4%%date:~-10,2%%date:~-7,2%_%time:~0,2%%time:~3,2%%time:~6,2%;DS=localhost;IC=MSBuildLogsExtended;SP=msbep_SqlLogger;CL;/p:Configuration=Release;DeployOnBuild=true;PublishProfile=Z1_WebSitePublishProfiles\Log4Net.AspNetMvc40Rasor.Publish.xml
+
+
+MVVM Light and EventToCommand gives Invalid Markup in VS2015
+
+Intelisense error:
+The type 'EventToCommand' from assembly 'GalaSoft.MvvmLight.Platform' is built with an older version of the Blend SDK, and is not supported in a Windows Presentation Framework 4 project.
+Cannot add instance of type 'EventToCommand' to a collection of type 'TriggerActionCollection'. Only items of type 'T' are allowed.
+http://stackoverflow.com/questions/32477728/mvvm-light-and-eventtocommand-gives-invalid-markup-in-vs2015
+1. Uninstall nuget packages MvvmLightLibs and CommonServiceLocator.
+2. Reinstall nuget packages MvvmLightLibs and CommonServiceLocator.
+3. Goto $Solution Folder$\packages\MvvmLightLibs.5.3.0.0\lib\net45
+4. Run gacutil -i System.Windows.Interactivity.dll
+
+
+Could not load file or assembly 'Framework.Resources, Version=1.0.0.0 Culture=neutral PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+Could not load file or assembly 'ABC.Resources, Version=1.0.0.0 Culture=neutral PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+Please look at, 
+http://stackoverflow.com/questions/32298895/wpf-could-not-load-file-or-assembly-or-one-of-its-dependencies
+The reason is the work "Resources" can not be in assembly name.
+
+May have to change Resources assembly name to something else, to make strings viewable in designer.
+
+For more WPF examples:
+https://github.com/Microsoft/WPF-Samples/

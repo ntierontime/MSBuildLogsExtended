@@ -27,3 +27,10 @@
 8.1. Framework.Resources -> Framework.ResourceLib
 8.2. XXX.Resources -> XXX.ResourceLib
 8.3. MVVMLightViewModels, from ViewModels -> MVVMLightViewModels
+9. Bugs:
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	CS0117	'UIStringResource' does not contain a definition for 'Quit'	MSBuildLogsExtended.WPF4App	C:\GitHub\MSBuildLogsExtended\MSBuildLogsExtended\UI\MVVMLight\WPF4App\MainWindow.xaml.cs	208	Active
+Error	CS0117	'UIStringResource' does not contain a definition for 'QuitApplication'	MSBuildLogsExtended.WPF4App	C:\GitHub\MSBuildLogsExtended\MSBuildLogsExtended\UI\MVVMLight\WPF4App\MainWindow.xaml.cs	214	Active
+Error	CS0117	'UIStringResource' does not contain a definition for 'QuitApplicationMessage'	MSBuildLogsExtended.WPF4App	C:\GitHub\MSBuildLogsExtended\MSBuildLogsExtended\UI\MVVMLight\WPF4App\MainWindow.xaml.cs	215	Active
+10. Create a Generated Branch
+11. Change DB Backup

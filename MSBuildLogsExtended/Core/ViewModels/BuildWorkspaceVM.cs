@@ -31,7 +31,7 @@ namespace MSBuildLogsExtended.AspNetMvc40ViewModel
 
 
     public partial class WPEntityRelatedOfBuildVM 
-		: Framework.Mvc.ViewModelEntityRelatedBase<MSBuildLogsExtended.DataSourceEntities.Build.Default, MSBuildLogsExtended.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
+		: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildLogsExtended.DataSourceEntities.Build.Default, MSBuildLogsExtended.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
     {
         public WPEntityRelatedOfBuildVM(MSBuildLogsExtended.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier criteriaOfMasterEntity)
             : base(criteriaOfMasterEntity)
@@ -127,7 +127,7 @@ namespace MSBuildLogsExtended.AspNetMvc40ViewModel
 
 
     public partial class WPUpdateNameOnlyOfBuildVM 
-		: Framework.Mvc.ViewModelEntityRelatedBase<MSBuildLogsExtended.DataSourceEntities.Build.UpdateNameRequest, MSBuildLogsExtended.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
+		: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildLogsExtended.DataSourceEntities.Build.UpdateNameRequest, MSBuildLogsExtended.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
     {
 		public WPUpdateNameOnlyOfBuildVM ()
             : base(new MSBuildLogsExtended.CommonBLLEntities.BuildChainedQueryCriteriaByIdentifier())

@@ -30,7 +30,7 @@ namespace MSBuildLogsExtended.AspNetMvc40ViewModel
 
 
     public partial class WPEntityRelatedOfBuildEventCodeVM 
-		: Framework.Mvc.ViewModelEntityRelatedBase<MSBuildLogsExtended.DataSourceEntities.BuildEventCode, MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
+		: Framework.ViewModels.ViewModelEntityRelatedBase<MSBuildLogsExtended.DataSourceEntities.BuildEventCode, MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier, Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus>
     {
         public WPEntityRelatedOfBuildEventCodeVM(MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaByIdentifier criteriaOfMasterEntity)
             : base(criteriaOfMasterEntity)

@@ -36,10 +36,10 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
         {
             log.Info(string.Format("{0}: WPCommonOfBuildLog", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-            Framework.EntityContracts.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BuildLogChainedQueryCriteriaCommonFlatten> vmFromTempData;
+            Framework.ViewModels.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BuildLogChainedQueryCriteriaCommonFlatten> vmFromTempData;
             if (TempData.ContainsKey(TempDataKey_WPCommonOfBuildLog))
             {
-                vmFromTempData = (Framework.EntityContracts.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BuildLogChainedQueryCriteriaCommonFlatten>)TempData[TempDataKey_WPCommonOfBuildLog];
+                vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BuildLogChainedQueryCriteriaCommonFlatten>)TempData[TempDataKey_WPCommonOfBuildLog];
             }
             else
             {
@@ -101,10 +101,10 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
         {
             log.Info(string.Format("{0}: WPCommonOfBuildLog_Export", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-            Framework.EntityContracts.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BuildLogChainedQueryCriteriaCommonFlatten> vmFromTempData;
+            Framework.ViewModels.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BuildLogChainedQueryCriteriaCommonFlatten> vmFromTempData;
             if (TempData.ContainsKey(TempDataKey_WPCommonOfBuildLog))
             {
-                vmFromTempData = (Framework.EntityContracts.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BuildLogChainedQueryCriteriaCommonFlatten>)TempData[TempDataKey_WPCommonOfBuildLog];
+                vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BuildLogChainedQueryCriteriaCommonFlatten>)TempData[TempDataKey_WPCommonOfBuildLog];
 
 	            var searchResult = MSBuildLogsExtended.CommonBLLIoC.IoCBuildLog.GetMessageOfDefaultOfCommon(
 		            new MSBuildLogsExtended.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon(vmFromTempData.Criteria)

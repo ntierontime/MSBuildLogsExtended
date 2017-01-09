@@ -36,10 +36,10 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
         {
             log.Info(string.Format("{0}: WPCommonOfBuildEventCode", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-            Framework.EntityContracts.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommonFlatten> vmFromTempData;
+            Framework.ViewModels.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommonFlatten> vmFromTempData;
             if (TempData.ContainsKey(TempDataKey_WPCommonOfBuildEventCode))
             {
-                vmFromTempData = (Framework.EntityContracts.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommonFlatten>)TempData[TempDataKey_WPCommonOfBuildEventCode];
+                vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommonFlatten>)TempData[TempDataKey_WPCommonOfBuildEventCode];
             }
             else
             {
@@ -103,10 +103,10 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
         {
             log.Info(string.Format("{0}: WPCommonOfBuildEventCode_Export", Framework.LoggingOptions.UI_Process_Started.ToString()));
 
-            Framework.EntityContracts.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommonFlatten> vmFromTempData;
+            Framework.ViewModels.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommonFlatten> vmFromTempData;
             if (TempData.ContainsKey(TempDataKey_WPCommonOfBuildEventCode))
             {
-                vmFromTempData = (Framework.EntityContracts.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommonFlatten>)TempData[TempDataKey_WPCommonOfBuildEventCode];
+                vmFromTempData = (Framework.ViewModels.ViewModelBase<MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommonFlatten>)TempData[TempDataKey_WPCommonOfBuildEventCode];
 
 	            var searchResult = MSBuildLogsExtended.CommonBLLIoC.IoCBuildEventCode.GetMessageOfEntityOfCommon(
 		            new MSBuildLogsExtended.CommonBLLEntities.BuildEventCodeChainedQueryCriteriaCommon(vmFromTempData.Criteria)

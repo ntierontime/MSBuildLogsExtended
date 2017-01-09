@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MSBuildLogsExtended.AspNetMvc40ViewModel
 {
-    public partial class SolutionItemVM : Framework.EntityContracts.ViewModelItemBase<MSBuildLogsExtended.DataSourceEntities.SolutionIdentifier, MSBuildLogsExtended.DataSourceEntities.Solution>
+    public partial class SolutionItemVM : Framework.ViewModels.ViewModelItemBase<MSBuildLogsExtended.DataSourceEntities.SolutionIdentifier, MSBuildLogsExtended.DataSourceEntities.Solution>
     {
         public static SolutionItemVM Load(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier
             , Framework.UIAction uiAction)

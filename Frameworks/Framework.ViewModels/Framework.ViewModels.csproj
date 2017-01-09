@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2CC97C32-9FFA-4DA4-A6C0-83F300404EC3}</ProjectGuid>
+    <ProjectGuid>{2DEF4F9F-015D-40C4-B153-6C687C308152}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Framework.ViewModels</RootNamespace>
@@ -36,6 +36,7 @@
     <None Include="packages.config" />
     <Compile Include="IViewModelBase.cs" />
     <Compile Include="ViewModelBase.cs" />
+    <Compile Include="ViewModelBaseWithResultAndUIElement.cs" />
     <Compile Include="ViewModelEntityRelatedBase.cs" />
     <Compile Include="ViewModelItemBase.cs" />
   </ItemGroup>

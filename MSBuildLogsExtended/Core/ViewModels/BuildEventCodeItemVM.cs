@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MSBuildLogsExtended.AspNetMvc40ViewModel
 {
-    public partial class BuildEventCodeItemVM : Framework.EntityContracts.ViewModelItemBase<MSBuildLogsExtended.DataSourceEntities.BuildEventCodeIdentifier, MSBuildLogsExtended.DataSourceEntities.BuildEventCode>
+    public partial class BuildEventCodeItemVM : Framework.ViewModels.ViewModelItemBase<MSBuildLogsExtended.DataSourceEntities.BuildEventCodeIdentifier, MSBuildLogsExtended.DataSourceEntities.BuildEventCode>
     {
 
         public static BuildEventCodeItemVM Load(bool isToCompareIdByIdentifierOftOfByIdentifier, System.Int32 valueToCompareIdByIdentifierOftOfByIdentifier

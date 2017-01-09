@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MSBuildLogsExtended.AspNetMvc40ViewModel
 {
-    public partial class BuildItemVM : Framework.EntityContracts.ViewModelItemBase<MSBuildLogsExtended.DataSourceEntities.BuildIdentifier, MSBuildLogsExtended.DataSourceEntities.Build.Default>
+    public partial class BuildItemVM : Framework.ViewModels.ViewModelItemBase<MSBuildLogsExtended.DataSourceEntities.BuildIdentifier, MSBuildLogsExtended.DataSourceEntities.Build.Default>
     {
         #region log4net
 
