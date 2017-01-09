@@ -17,7 +17,7 @@
 			<RowDefinition Height="Auto"  />
 			<RowDefinition Height="Auto"  />
 		</Grid.RowDefinitions>
-        <ToolBarTray DockPanel.Dock="Top" Grid.Row="0" Background="LightBlue" HorizontalAlignment="Stretch">
+        <ToolBarTray DockPanel.Dock="Top" Grid.Row="0">
             <ToolBar DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildEventCodeCollectionVM, Source={StaticResource Locator}}">
                 <Button     Name="Search" Command="{Binding SearchCommand}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.SearchAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>

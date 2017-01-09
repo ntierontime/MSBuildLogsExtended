@@ -15,7 +15,7 @@
             <RowDefinition Height="Auto"  />
             <RowDefinition Height="Auto"  />
         </Grid.RowDefinitions>
-        <ToolBarTray Grid.Row="0" >
+        <ToolBarTray Grid.Row="0"  Style="{StaticResource ToolBarTrayStyle}">
             <ToolBar>
                 <Button     Name="Update" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM_Static.SaveCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.SaveAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>

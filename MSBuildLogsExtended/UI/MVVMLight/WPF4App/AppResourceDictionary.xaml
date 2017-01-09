@@ -71,6 +71,10 @@
               Value="{Binding Path=IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}},
               Converter={StaticResource boolToVis}, ConverterParameter=True}" />
     </Style>
+    <Style TargetType="{x:Type ToolBarTray}" x:Key="ToolBarTrayStyle">
+        <Setter Property="Background" Value="LightBlue" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+    </Style>    
 	<Style TargetType="ToolTip">
 	  <Setter Property = "HorizontalOffset" Value="10"/>
 	  <Setter Property = "VerticalOffset" Value="10"/>

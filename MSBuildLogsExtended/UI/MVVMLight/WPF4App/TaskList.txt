@@ -1,0 +1,26 @@
+1. Common, 
+1.1. (Done)GridView Stretch - fix: set width and height to null, and horizontal/vertical align stretch
+1.2. (Done)display back/forward button by default
+1.3. listview item in edit mode after back from item view
+1.4. Sort is wrong, asceding is descending, and vise versa.
+1.5. Searh pane, DateTime not stretch - should find percentage width 
+1.6. DropDown in list
+1.7. Link to Details
+2. Add, 
+2.1. remove: Solution/Id
+2.2. added dropdown
+2.3. (Done)refresh button not working
+3. Details, 
+3.1. remove: Id and SolutionId
+3.2. (Done)Copy not working
+4. Delete
+4.1. remove: Id and SolutionId
+4.2. (Done)"Are you sure you want to delete this?" Vertical Align
+4.3. (Done)Back button not working
+5. Edit
+5.1. (Done)ToolBar Color not correct
+5.2. added dropdown
+6. DataAnnotation validation
+6.1. https://code.msdn.microsoft.com/windowsdesktop/Validation-in-MVVM-using-12dafef3
+7. (Done)Add ToolBarTrayStyle
+8. 
