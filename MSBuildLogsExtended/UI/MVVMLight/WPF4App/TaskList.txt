@@ -34,3 +34,18 @@ Error	CS0117	'UIStringResource' does not contain a definition for 'QuitApplicati
 Error	CS0117	'UIStringResource' does not contain a definition for 'QuitApplicationMessage'	MSBuildLogsExtended.WPF4App	C:\GitHub\MSBuildLogsExtended\MSBuildLogsExtended\UI\MVVMLight\WPF4App\MainWindow.xaml.cs	215	Active
 10. Create a Generated Branch
 11. Change DB Backup
+12. Bugs:
+    <Compile Include="UIStringResource3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UIStringResource.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UIStringResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIStringResource3.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+13. Ressource File generate a partial class to contain default constructor.
+14. ScrollViewer of list - must set fixed height to make scrollviewer working.
+15. Bugs:
+Click pagination buttons on common page after click back button on details page, will goto details page.
+16. Pagination no displayed correct.
