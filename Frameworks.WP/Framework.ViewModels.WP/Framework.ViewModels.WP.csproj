@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CAD24419-852A-4EA0-9774-67F37287C5C7}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework.ViewModels</RootNamespace>
+    <AssemblyName>Framework.ViewModels.WP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="system" />
+    <Reference Include="mscorlib.Extensions" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Servicemodel" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
+    <Compile Include="..\..\Frameworks\Framework.ViewModels\IViewModelBase.cs">
+      <Link>IViewModelBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.ViewModels\ViewModelBase.cs">
+      <Link>ViewModelBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.ViewModels\ViewModelEntityRelatedBase.cs">
+      <Link>ViewModelEntityRelatedBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.ViewModels\ViewModelItemBase.cs">
+      <Link>ViewModelItemBase.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.WP\Framework.WP.csproj">
+      <Project>{1efe0717-bd17-4781-a7d2-7f0216a3460b}</Project>
+      <Name>Framework.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.CommonBLLEntities.WP\Framework.CommonBLLEntities.WP.csproj">
+      <Project>{642b975b-a490-40e4-a322-b63b88ba8829}</Project>
+      <Name>Framework.CommonBLLEntities.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.EntityContracts.WP\Framework.EntityContracts.WP.csproj">
+      <Project>{5d407e18-cc05-4089-a67b-aff0ea5907ad}</Project>
+      <Name>Framework.EntityContracts.WP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Resources.WP\Framework.Resources.WP.csproj">
+      <Project>{e711039f-7408-49fc-8049-c756ac6852ca}</Project>
+      <Name>Framework.Resources.WP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib.Extensions" />
+    <Reference Include="system" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Servicemodel" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!--
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="2cc97c32-9ffa-4da4-a6c0-83f300404ec3" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

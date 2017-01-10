@@ -607,6 +607,15 @@
   <data name="Pagination_PagingInformation" xml:space="preserve">
     <value>Page# {5} out of {4}. {0} Records: ({1} - {2}) out of {3}</value>
   </data>
+  <data name="Quit" xml:space="preserve">
+    <value>Quit</value>
+  </data>
+  <data name="QuitApplication" xml:space="preserve">
+    <value>Quit Application</value>
+  </data>
+  <data name="QuitApplicationMessage" xml:space="preserve">
+    <value>Do you want to quit application?</value>
+  </data>
   <data name="AddNewAlternativeText" xml:space="preserve">
     <value>AddNew</value>
   </data>

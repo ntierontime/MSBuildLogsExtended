@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -39,14 +39,9 @@
     <Compile Include="PagerHtmlRenderer.cs" />
     <Compile Include="ViewModelBaseWithResultAndUIElement.cs" />
     <Compile Include="ViewModels\MultipleFileUploadModel.cs" />
-    <Compile Include="ViewModels\ViewModelItemBase.cs" />
     <Compile Include="MvcHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Framework.ViewModels\Framework.ViewModels.csproj">
-      <Project>{2def4f9f-015d-40c4-b153-6c687c308152}</Project>
-      <Name>Framework.ViewModels</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Framework\Framework.csproj">
       <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
       <Name>Framework</Name>
@@ -58,6 +53,10 @@
     <ProjectReference Include="..\Framework.EntityContracts\Framework.EntityContracts.csproj">
       <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
       <Name>Framework.EntityContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.ViewModels\Framework.ViewModels.csproj">
+      <Project>{2cc97c32-9ffa-4da4-a6c0-83f300404ec3}</Project>
+      <Name>Framework.ViewModels</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,9 @@
+@{
+    ViewBag.Title = Framework.Resources.UIStringResource.Account_ConfirmEmail_ConfirmAccount;
+}
+<h2>@ViewBag.Title.</h2>
+<div>
+    <p>
+        @Framework.Resources.UIStringResource.Account_ConfirmEmail_ThankyouforconfirmingyouraccountPlease @Html.ActionLink(Framework.Resources.UIStringResource.Account_ConfirmEmail_ClickHereToLogIn, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+    </p>
+</div>

@@ -16,17 +16,16 @@
     >
     <Grid DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM.CurrentDefault, Source={StaticResource Locator}}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition   Width="Auto" />
-            <ColumnDefinition   Width="Auto" />
+            <ColumnDefinition   Width="150" />
+            <ColumnDefinition   Width="*" MaxWidth="750"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition   Height="Auto" />
-            <RowDefinition   Height="Auto" />
-            <RowDefinition   Height="Auto" />
-            <RowDefinition   Height="Auto" />
-            <RowDefinition   Height="Auto" />
-            <RowDefinition   Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
+            <RowDefinition   Height="35" />
         </Grid.RowDefinitions>
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Solution_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
 		<TextBlock Text="{Binding Path=Solution_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />

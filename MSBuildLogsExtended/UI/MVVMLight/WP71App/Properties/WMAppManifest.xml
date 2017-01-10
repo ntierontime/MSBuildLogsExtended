@@ -1,48 +1,35 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
-  <DefaultLanguage xmlns="" code="" />
-  <App xmlns="" ProductID="{e9b2d7c9-66e2-4548-8bbf-95b1ac20bd3a}" Title="MSBuildLogsExtended.WP71App" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="NTIER ON TIME TECHNOLOGIES INC." Description="MSBuildLogsExtended" Publisher="NTIER ON TIME TECHNOLOGIES INC." PublisherID="{3c885d3e-f9ab-4ced-ab32-99ad6d74bba5}">
+<?xml version="1.0" encoding="utf-8"?>
+
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
+  <App xmlns="" ProductID="{e9b2d7c9-66e2-4548-8bbf-95b1ac20bd3a}" Title="MSBuildLogsExtended.WP71App" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="NTIER ON TIME TECHNOLOGIES INC." Description="MSBuildLogsExtended" Publisher="NTIER ON TIME TECHNOLOGIES INC.">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.jpg</IconPath>
     <Capabilities>
-      <Capability Name="ID_CAP_GAMERSERVICES" />
-      <Capability Name="ID_CAP_IDENTITY_DEVICE" />
-      <Capability Name="ID_CAP_IDENTITY_USER" />
-      <Capability Name="ID_CAP_LOCATION" />
-      <Capability Name="ID_CAP_MICROPHONE" />
-      <Capability Name="ID_CAP_NETWORKING" />
-      <Capability Name="ID_CAP_PHONEDIALER" />
-      <Capability Name="ID_CAP_PUSH_NOTIFICATION" />
-      <Capability Name="ID_CAP_SENSORS" />
-      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
-      <Capability Name="ID_CAP_ISV_CAMERA" />
-      <Capability Name="ID_CAP_CONTACTS" />
-      <Capability Name="ID_CAP_APPOINTMENTS" />
-      <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
-      <Capability Name="ID_CAP_MEDIALIB_PHOTO" />
-      <Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
+      <Capability Name="ID_CAP_GAMERSERVICES"/>
+      <Capability Name="ID_CAP_IDENTITY_DEVICE"/>
+      <Capability Name="ID_CAP_IDENTITY_USER"/>
+      <Capability Name="ID_CAP_LOCATION"/>
+      <Capability Name="ID_CAP_MEDIALIB"/>
+      <Capability Name="ID_CAP_MICROPHONE"/>
+      <Capability Name="ID_CAP_NETWORKING"/>
+      <Capability Name="ID_CAP_PHONEDIALER"/>
+      <Capability Name="ID_CAP_PUSH_NOTIFICATION"/>
+      <Capability Name="ID_CAP_SENSORS"/>
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT"/>
+      <Capability Name="ID_CAP_ISV_CAMERA"/>
+      <Capability Name="ID_CAP_CONTACTS"/>
+      <Capability Name="ID_CAP_APPOINTMENTS"/>
     </Capabilities>
     <Tasks>
-      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+      <DefaultTask  Name ="_default" NavigationPage="MainPage.xaml"/>
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="MSBuildLogsExtended.WP71AppToken" TaskName="_default">
-        <TemplateFlip>
-          <SmallImageURI IsResource="false" IsRelative="true">Background.jpg</SmallImageURI>
+        <TemplateType5>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Background.jpg</BackgroundImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsResource="false" IsRelative="true">Background.jpg</BackgroundImageURI>
           <Title>MSBuildLogsExtended.WP71App</Title>
-          <BackContent></BackContent>
-          <BackBackgroundImageURI></BackBackgroundImageURI>
-          <BackTitle></BackTitle>
-          <DeviceLockImageURI></DeviceLockImageURI>
-          <HasLarge>false</HasLarge>
-        </TemplateFlip>
+        </TemplateType5>
       </PrimaryToken>
     </Tokens>
-    <ScreenResolutions>
-      <ScreenResolution Name="ID_RESOLUTION_WVGA" />
-      <ScreenResolution Name="ID_RESOLUTION_WXGA" />
-      <ScreenResolution Name="ID_RESOLUTION_HD720P" />
-    </ScreenResolutions>
   </App>
 </Deployment>

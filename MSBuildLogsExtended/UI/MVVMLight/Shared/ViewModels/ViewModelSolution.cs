@@ -428,7 +428,7 @@ namespace MSBuildLogsExtended.ViewModels
 						}
                         else
                         {
-                            this.m_EntityCollection.Clear();
+                            this.m_EntityCollectionDefault.Clear();
                         }
 
 #if WINDOWS_PHONE

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NTIER ON TIME TECHNOLOGIES INC.")]
 [assembly: AssemblyProduct("MSBuildLogsExtended")]
-[assembly: AssemblyCopyright("Copyright © NTIER ON TIME TECHNOLOGIES INC. 2016")]
+[assembly: AssemblyCopyright("Copyright © NTIER ON TIME TECHNOLOGIES INC. 2017")]
 [assembly: AssemblyTrademark("MSBuildLogsExtended")]
 [assembly: AssemblyCulture("")]
 

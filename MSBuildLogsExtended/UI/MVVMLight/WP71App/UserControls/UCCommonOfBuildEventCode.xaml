@@ -15,7 +15,11 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     d:DesignHeight="960" d:DesignWidth="480"
 	>
-<Grid>
+    <Grid HorizontalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 <Grid Width="960">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="Auto" />

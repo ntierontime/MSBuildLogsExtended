@@ -1,0 +1,72 @@
+@using UrlStringsAlias = MSBuildLogsExtended.AspNetMvc50Rasor.Helpers.UrlStrings;
+@model MSBuildLogsExtended.AspNetMvc40ViewModel.BuildLogItemVM
+<div class="row">
+    <div class="col-sm-12 col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2>@Model.ContentData.Title.</h2>
+                <h4>@Model.ContentData.Summary</h4>
+            </div>
+            <div class="panel-body">
+@if (Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.MessageOK && Model.StatusOfResult != Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus.UIProcessReady)
+{
+				<div class="text-danger">@Model.StatusMessageOfResult</div>
+}
+<div class="form-group">
+			@Html.LabelFor(model => model.Item.Build_1_Name, new { @class = "control-label" })
+        <div class="form-control">
+@Html.ActionLink(Model.Item.Build_1_Name, UrlStringsAlias.ActionName_Build_WPEntityRelatedOfBuild, UrlStringsAlias.ControllerName_Build, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.BuildId }, null)
+        </div>
+    </div>
+@Html.HiddenFor(model => model.Item.Id)@Html.HiddenFor(model => model.Item.Solution_1Id)  <div class="form-group">
+			@Html.LabelFor(model => model.Item.Solution_1_Name, new { @class = "control-label" })
+        <div class="form-control">
+@Html.ActionLink(Model.Item.Solution_1_Name, UrlStringsAlias.ActionName_Solution_WPEntityRelatedOfSolution, UrlStringsAlias.ControllerName_Solution, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Solution_1Id }, null)
+        </div>
+    </div>
+  <div class="form-group">
+			@Html.LabelFor(model => model.Item.BuildEventCode_1_Name, new { @class = "control-label" })
+        <div class="form-control">
+@Html.ActionLink(Model.Item.BuildEventCode_1_Name, UrlStringsAlias.ActionName_BuildEventCode_WPEntityRelatedOfBuildEventCode, UrlStringsAlias.ControllerName_BuildEventCode, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.BuildEventCodeId }, null)
+        </div>
+    </div>
+@Html.HiddenFor(model => model.Item.BuildId)@Html.HiddenFor(model => model.Item.BuildEventCodeId)  <div class="form-group">
+			@Html.LabelFor(model => model.Item.Message, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.Item.Message)
+        </div>
+    </div>
+  <div class="form-group">
+			@Html.LabelFor(model => model.Item.EventTime, new { @class = "control-label" })
+        <div class="form-control">
+			@Html.DisplayFor(model => model.Item.EventTime)
+        </div>
+    </div>
+            </div>
+			<div class="panel-footer nopadding">
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                    <div class="btn-group">
+						<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Edit, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
+							<span class="glyphicon glyphicon-edit"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resources.UIStringResource.EditAlternativeText</span>
+						</a>
+                    </div>
+                    <div class="btn-group">
+						<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Delete, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
+							<span class="glyphicon glyphicon-trash"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resources.UIStringResource.DeleteAlternativeText</span>
+						</a>
+                    </div>
+                    <div class="btn-group">
+						<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Index)" class="btn btn-default" role="button" type="button">
+							<span class="glyphicon glyphicon-ban-circle"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resources.UIStringResource.BackAlternativeText</span>
+						</a>
+                    </div>
+                    <div class="btn-group">
+						<a href="@Url.Action(UrlStringsAlias.ActionName_BuildLog_Copy, new { isToCompareIdByIdentifierOftOfByIdentifier=true, valueToCompareIdByIdentifierOftOfByIdentifier = Model.Item.Id })" class="btn btn-default" role="button" type="button">
+							<span class="glyphicon glyphicon-copy"></span><span class="hidden-xs hidden-sm visible-md-inline visible-lg-inline">@Framework.Resources.UIStringResource.CopyAlternativeText</span>
+						</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

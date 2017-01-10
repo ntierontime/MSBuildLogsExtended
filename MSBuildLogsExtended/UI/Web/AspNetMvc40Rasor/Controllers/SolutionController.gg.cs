@@ -71,8 +71,6 @@ namespace MSBuildLogsExtended.AspNetMvc40Rasor.Controllers
 
 				TempData[TempDataKey_WPCommonOfSolution] = viewModel.GetPrimaryInformationEntity();
 				TempData.Keep(TempDataKey_WPCommonOfSolution); 
-
-				ViewBag.StaticPagedResult = new PagedList.StaticPagedList<MSBuildLogsExtended.DataSourceEntities.Solution>(searchResult.Message, currentPage, searchResult.QueryPagingResult.PageSize, searchResult.QueryPagingResult.CountOfRecords);
 			}
             else
             {

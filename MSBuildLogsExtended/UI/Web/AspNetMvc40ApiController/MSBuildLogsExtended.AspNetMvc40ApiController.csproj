@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -107,6 +107,10 @@
     <ProjectReference Include="..\..\..\..\Frameworks\Framework.Services\Framework.Services.csproj">
       <Project>{3ef91dc7-12c9-47f3-bb18-ad3d85d1b624}</Project>
       <Name>Framework.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.ViewModels\Framework.ViewModels.csproj">
+      <Project>{2cc97c32-9ffa-4da4-a6c0-83f300404ec3}</Project>
+      <Name>Framework.ViewModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks\Framework.Web\Framework.Web.csproj">
       <Project>{950b9cdb-9286-4a1a-8d88-1df6954a45e3}</Project>

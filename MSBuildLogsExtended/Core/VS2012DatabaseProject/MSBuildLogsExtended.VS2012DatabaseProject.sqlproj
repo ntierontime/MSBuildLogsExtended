@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -7,7 +7,7 @@
     <Name>MSBuildLogsExtended.VS2012DatabaseProject</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{6c51bf0b-42f0-4670-9f20-a47bb0ea8866}</ProjectGuid>
+    <ProjectGuid>{6C51BF0B-42F0-4670-9F20-A47BB0EA8866}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
@@ -54,10 +54,10 @@
     <None Include="Build and Deploy\BuildBacpac.bat" />
     <None Include="Build and Deploy\DeployUsingMsdeploy.bat" />
     <None Include="Build and Deploy\DeployUsingSqlpackage.bat" />
-    <Build Include="dbo\Functions\BigIntegerToIPAddress.sql">
+    <Build Include="dbo\Functions\BigIntegerToIPAddress.sql" >
       <QuotedIdentifier>Off</QuotedIdentifier>
     </Build>
-    <Build Include="dbo\Functions\IPAddressToBigInteger.sql">
+    <Build Include="dbo\Functions\IPAddressToBigInteger.sql" >
       <QuotedIdentifier>Off</QuotedIdentifier>
     </Build>
     <Build Include="dbo\Stored Procedures\StoredProcedureOfGetAscendantOfAndGetdDescendantOf.sql" />

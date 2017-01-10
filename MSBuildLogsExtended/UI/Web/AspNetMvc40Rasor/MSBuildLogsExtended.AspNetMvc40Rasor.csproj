@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -8,19 +8,14 @@
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{F8B517AE-8E54-4429-84E4-5CB2EF533559}</ProjectGuid>
-    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.AspNetMvc40Rasor</RootNamespace>
     <AssemblyName>MSBuildLogsExtended.AspNetMvc40Rasor</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>false</UseIISExpress>
-    <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
-    <UseGlobalApplicationHostFile />
+    <UseIISExpress>true</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,21 +38,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <Compile Include="Controllers\BuildController.cs" />
-    <Compile Include="Controllers\BuildController.gg.cs">
-      <DependentUpon>BuildController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\BuildEventCodeController.cs" />
-    <Compile Include="Controllers\BuildEventCodeController.gg.cs">
-      <DependentUpon>BuildEventCodeController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\BuildLogController.cs" />
-    <Compile Include="Controllers\BuildLogController.gg.cs">
-      <DependentUpon>BuildLogController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\SolutionController.cs" />
-    <Compile Include="Controllers\SolutionController.gg.cs">
-      <DependentUpon>SolutionController.cs</DependentUpon>
-    </Compile>
     <None Include="Properties\PublishProfiles\VS2012PublishProfile.pubxml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
@@ -99,7 +82,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Web.config" />
+    <None Include="Views\Web.config" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -114,14 +97,11 @@
     <Compile Include="Helpers\UrlStrings.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Content Include="Global.asax" />
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
     <Compile Include="Helpers\ClaimsAuthorizationAttribute.cs" />
     <Compile Include="Helpers\CustomizedClaimTypes.cs" />
     <Compile Include="Helpers\WebAuthorizationAttribute.cs" />
     <Compile Include="Models\AccountModels.cs" />
-    <Content Include="Web.config" />
+    <None Include="Web.config" />
     <Content Include="Views\Build\WPCommonOfBuild.cshtml" />
     <Content Include="Views\Build\WPEntityRelatedOfBuild.cshtml" />
     <Content Include="Views\Build\WPUpdateNameOnlyOfBuild.cshtml" />
@@ -133,10 +113,6 @@
     <Content Include="Views\Solution\WPEntityRelatedOfSolution.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Frameworks\Framework.ViewModels\Framework.ViewModels.csproj">
-      <Project>{2def4f9f-015d-40c4-b153-6c687c308152}</Project>
-      <Name>Framework.ViewModels</Name>
-    </ProjectReference>
     <ProjectReference Include="..\AspNetMvc40ApiController\MSBuildLogsExtended.AspNetMvc40ApiController.csproj">
       <Project>{a895c92c-862c-4be8-8753-f42fcfd19e7c}</Project>
       <Name>MSBuildLogsExtended.AspNetMvc40ApiController</Name>
@@ -208,6 +184,10 @@
     <ProjectReference Include="..\..\..\..\Frameworks\Framework.Services\Framework.Services.csproj">
       <Project>{3ef91dc7-12c9-47f3-bb18-ad3d85d1b624}</Project>
       <Name>Framework.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.ViewModels\Framework.ViewModels.csproj">
+      <Project>{2cc97c32-9ffa-4da4-a6c0-83f300404ec3}</Project>
+      <Name>Framework.ViewModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks\Framework.Web\Framework.Web.csproj">
       <Project>{950b9cdb-9286-4a1a-8d88-1df6954a45e3}</Project>

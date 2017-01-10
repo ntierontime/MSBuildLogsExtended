@@ -163,6 +163,10 @@
       <Project>{23311ee2-a0cd-46f6-9766-652a04a7602f}</Project>
       <Name>Framework.Resources.WinRT</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Frameworks.WinRT\Framework.ViewModels.WinRT\Framework.ViewModels.WinRT.csproj">
+      <Project>{2e9772cc-0802-45c1-b5a7-9a096a04d08f}</Project>
+      <Name>Framework.ViewModels.WinRT</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\..\..\Frameworks.WinRT\Framework.WcfClient.WinRT\Framework.WcfClient.WinRT.csproj">
       <Project>{386955c8-c7dc-4e4c-b7ab-10d8c8be3c19}</Project>
       <Name>Framework.WcfClient.WinRT</Name>

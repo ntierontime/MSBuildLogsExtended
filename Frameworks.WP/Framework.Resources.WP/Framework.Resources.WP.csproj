@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -11,22 +11,13 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Framework.Resources</RootNamespace>
     <AssemblyName>Framework.Resources.WP</AssemblyName>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
-    <SilverlightVersion>
-    </SilverlightVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
     <SilverlightApplication>false</SilverlightApplication>
     <ValidateXaml>true</ValidateXaml>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <OldToolsVersion>4.0</OldToolsVersion>
-    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
-    <DefaultLanguage>en-US</DefaultLanguage>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,131 +40,144 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <PlatformTarget />
-    <OutputPath>Bin\x86\Debug</OutputPath>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <PlatformTarget />
-    <OutputPath>Bin\x86\Release</OutputPath>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
-    <PlatformTarget />
-    <OutputPath>Bin\ARM\Debug</OutputPath>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
-    <PlatformTarget />
-    <OutputPath>Bin\ARM\Release</OutputPath>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="system" />
+    <Reference Include="mscorlib.Extensions" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Servicemodel" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
-    <Content Include="Toolkit.Content\ApplicationBar.Edit.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="Toolkit.Content\ApplicationBar.Edit.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Favs.AddTo.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Favs.AddTo.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Favs.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Favs.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Feature.Camera.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Feature.Camera.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Feature.Email.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Feature.Email.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Feature.Search.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Feature.Search.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Feature.Settings.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Feature.Settings.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Feature.Video.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Feature.Video.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Folder.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Folder.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Minus.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Minus.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.New.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.New.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Next.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Next.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Overflowdots.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Overflowdots.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Questionmark.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Questionmark.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Refresh.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Refresh.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Save.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Save.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Share.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Share.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Stop.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Stop.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Sync.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Sync.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Transport.FastForward.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Transport.FastForward.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Transport.Pause.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Transport.Pause.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Transport.Play.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Transport.Play.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Transport.Rewind.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Transport.Rewind.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Upload.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Upload.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Add.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Back.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Back.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Basecircle.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Basecircle.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Check.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Close.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Close.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Delete.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Toolkit.Content\ApplicationBar.Download.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+
+    <Content Include="Toolkit.Content\ApplicationBar.Download.png" >
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+
     <EmbeddedResource Include="..\..\Frameworks\Framework.Resources\UIStringResource.resx">
       <Link>UIStringResource.resx</Link>
     </EmbeddedResource>
@@ -194,8 +198,8 @@
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
-  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!--
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -207,7 +211,8 @@
   -->
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkReference="c72b898b-b53b-42d5-9f4f-673f84bb485b" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <!-- For ProjectLinker -->
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="c72b898b-b53b-42d5-9f4f-673f84bb485b" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

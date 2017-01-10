@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -39,36 +39,8 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GalaSoft.MvvmLight, Version=5.3.0.19026, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MahApps.Metro, Version=1.4.1.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\MahApps.Metro.1.4.1\lib\net45\MahApps.Metro.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MahApps.Metro.IconPacks, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\MahApps.Metro.IconPacks.1.6.0\lib\net46\MahApps.Metro.IconPacks.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\MahApps.Metro.1.4.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -83,124 +55,68 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Resource Include="Resources\Entypo.ttf" />
+    <None Include="packages.config" />
     <Page Include="Pages\Build\Create.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\Build\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildEventCode\Create.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\BuildEventCode\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildLog\Create.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\BuildLog\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\Solution\Create.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\Solution\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\Build\Delete.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\Build\Delete.xaml.cs">
-      <DependentUpon>Delete.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildEventCode\Delete.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\BuildEventCode\Delete.xaml.cs">
-      <DependentUpon>Delete.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildLog\Delete.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\BuildLog\Delete.xaml.cs">
-      <DependentUpon>Delete.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\Solution\Delete.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\Solution\Delete.xaml.cs">
-      <DependentUpon>Delete.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\Build\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\Build\Details.xaml.cs">
-      <DependentUpon>Details.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildEventCode\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\BuildEventCode\Details.xaml.cs">
-      <DependentUpon>Details.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildLog\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\BuildLog\Details.xaml.cs">
-      <DependentUpon>Details.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\Solution\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\Solution\Details.xaml.cs">
-      <DependentUpon>Details.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\Build\Edit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\Build\Edit.xaml.cs">
-      <DependentUpon>Edit.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildEventCode\Edit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\BuildEventCode\Edit.xaml.cs">
-      <DependentUpon>Edit.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildLog\Edit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\BuildLog\Edit.xaml.cs">
-      <DependentUpon>Edit.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\Solution\Edit.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="Pages\Solution\Edit.xaml.cs">
-      <DependentUpon>Edit.xaml</DependentUpon>
-    </Compile>
-    <Page Include="Resources\Icons.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Resources\IconsNonShared.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -208,121 +124,70 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\Build\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\BuildEventCode\Create.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\BuildEventCode\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\BuildLog\Create.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\BuildLog\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\Solution\Create.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\Solution\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\Build\Delete.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\Build\Delete.xaml.cs">
-      <DependentUpon>Delete.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\BuildEventCode\Delete.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\BuildEventCode\Delete.xaml.cs">
-      <DependentUpon>Delete.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\BuildLog\Delete.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\BuildLog\Delete.xaml.cs">
-      <DependentUpon>Delete.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\Solution\Delete.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\Solution\Delete.xaml.cs">
-      <DependentUpon>Delete.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\Build\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\Build\Details.xaml.cs">
-      <DependentUpon>Details.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\BuildEventCode\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\BuildEventCode\Details.xaml.cs">
-      <DependentUpon>Details.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\BuildLog\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\BuildLog\Details.xaml.cs">
-      <DependentUpon>Details.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\Solution\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\Solution\Details.xaml.cs">
-      <DependentUpon>Details.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\Build\Edit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\Build\Edit.xaml.cs">
-      <DependentUpon>Edit.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\BuildEventCode\Edit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\BuildEventCode\Edit.xaml.cs">
-      <DependentUpon>Edit.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\BuildLog\Edit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\BuildLog\Edit.xaml.cs">
-      <DependentUpon>Edit.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\Solution\Edit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\Solution\Edit.xaml.cs">
-      <DependentUpon>Edit.xaml</DependentUpon>
-    </Compile>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
     <None Include="app.config" />
     <Page Include="AppResourceDictionary.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -336,77 +201,48 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-      <SubType>RESXCodeBehind</SubType>
     </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings" />
-    <Compile Include="Properties\Settings.designer.cs">
-      <DependentUpon>Settings.settings</DependentUpon>
-      <SubType>RESXCodeBehind</SubType>
-    </Compile>
     <Page Include="Pages\WPCommonOfBuild.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfBuild.xaml.cs">
-      <DependentUpon>WPCommonOfBuild.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\WPCommonOfBuildEventCode.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfBuildEventCode.xaml.cs">
-      <DependentUpon>WPCommonOfBuildEventCode.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\WPCommonOfBuildLog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfBuildLog.xaml.cs">
-      <DependentUpon>WPCommonOfBuildLog.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\WPCommonOfSolution.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfSolution.xaml.cs">
-      <DependentUpon>WPCommonOfSolution.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\UCCommonOfBuild.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfBuild.xaml.cs">
-      <DependentUpon>UCCommonOfBuild.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\UCCommonOfBuildEventCode.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfBuildEventCode.xaml.cs">
-      <DependentUpon>UCCommonOfBuildEventCode.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\UCCommonOfBuildLog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfBuildLog.xaml.cs">
-      <DependentUpon>UCCommonOfBuildLog.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\UCCommonOfSolution.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfSolution.xaml.cs">
-      <DependentUpon>UCCommonOfSolution.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core\CommonBLLEntities\MSBuildLogsExtended.CommonBLLEntities.csproj">
@@ -440,7 +276,10 @@
     <ProjectReference Include="..\..\..\..\Frameworks\Framework.Resources\Framework.Resources.csproj">
       <Project>{c72b898b-b53b-42d5-9f4f-673f84bb485b}</Project>
       <Name>Framework.Resources</Name>
-      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Frameworks\Framework.ViewModels\Framework.ViewModels.csproj">
+      <Project>{2cc97c32-9ffa-4da4-a6c0-83f300404ec3}</Project>
+      <Name>Framework.ViewModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks\Framework.WcfClient\Framework.WcfClient.csproj">
       <Project>{3ac70e9c-5e33-44af-8319-2e4f68da86cb}</Project>
@@ -450,9 +289,9 @@
       <Project>{e5302713-0022-4657-85d8-9620818071df}</Project>
       <Name>Framework.Xaml</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Shared\ViewModels\MSBuildLogsExtended.MVViewModels.csproj">
+    <ProjectReference Include="..\Shared\ViewModels\MSBuildLogsExtended.ViewModels.csproj">
       <Project>{f9f6afdd-cbc4-42c9-ad50-f3d721c11058}</Project>
-      <Name>MSBuildLogsExtended.MVViewModels</Name>
+      <Name>MSBuildLogsExtended.ViewModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Core\Resources\MSBuildLogsExtended.Resources.csproj">
       <Project>{ada3b560-c0b9-42d0-92ff-a76462e8d524}</Project>
@@ -468,10 +307,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\WindowsIcons-license.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Entypo-license.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!--

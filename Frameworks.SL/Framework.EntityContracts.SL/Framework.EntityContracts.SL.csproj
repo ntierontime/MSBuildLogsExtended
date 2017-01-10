@@ -93,17 +93,8 @@
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\ContentData.cs">
       <Link>ViewModels\ContentData.cs</Link>
     </Compile>
-    <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\IViewModelBase.cs">
-      <Link>ViewModels\IViewModelBase.cs</Link>
-    </Compile>
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\SearchStatus.cs">
       <Link>ViewModels\SearchStatus.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\ViewModelBase.cs">
-      <Link>ViewModels\ViewModelBase.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.EntityContracts\ViewModels\ViewModelItemBase.cs">
-      <Link>ViewModels\ViewModelItemBase.cs</Link>
     </Compile>
     <Compile Include="..\..\Frameworks\Framework.EntityContracts\Queries\QueryCriteriaBase.cs">
       <Link>Queries\QueryCriteriaBase.cs</Link>

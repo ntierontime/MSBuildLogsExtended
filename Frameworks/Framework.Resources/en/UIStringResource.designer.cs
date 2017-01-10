@@ -1669,6 +1669,36 @@ namespace Framework.Resources {
 
 
         /// <summary>
+        ///   Looks up a localized string similar to "Quit"".
+        /// </summary>
+        public static string Quit {
+            get {
+                return resourceLoader.GetString("Quit");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Quit Application"".
+        /// </summary>
+        public static string QuitApplication {
+            get {
+                return resourceLoader.GetString("QuitApplication");
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to "Do you want to quit application?"".
+        /// </summary>
+        public static string QuitApplicationMessage {
+            get {
+                return resourceLoader.GetString("QuitApplicationMessage");
+            }
+        }
+
+
+        /// <summary>
         ///   Looks up a localized string similar to "AddNew"".
         /// </summary>
         public static string AddNewAlternativeText {

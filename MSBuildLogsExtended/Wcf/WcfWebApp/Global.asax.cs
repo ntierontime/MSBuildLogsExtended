@@ -23,19 +23,18 @@ namespace MSBuildLogsExtended.WcfWebApp
         {
             string log4netConfig = Server.MapPath("~/log4net.config");
 
-            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Clear();
+			Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Clear();
             Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactory, MSBuildLogsExtended.CommonBLL.BusinessLogicLayerFactory>();
             Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer, Framework.Web.WebFormApplicationSessionVariablesIoCContainer>();
             Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildLogsExtended.DALContracts.DataAccessLayerFactoryContract, MSBuildLogsExtended.EntityFrameworkDAL.EFDataAccessLayerFactory>();
 
-            log.Info(Framework.LoggingOptions.Application_Started.ToString());
+			log.Info(Framework.LoggingOptions.Application_Started.ToString());
 			Framework.Web.WebFormApplicationApplicationVariables.GetDefault();
         }
 
         protected void Session_Start(object sender, EventArgs e)
         {
 			log.Info(Framework.LoggingOptions.Session_Started.ToString());
-
 
             Framework.CommonBLLEntities.BusinessLogicLayerMemberShip _BusinessLogicLayerMemberShip = new Framework.CommonBLLEntities.BusinessLogicLayerMemberShip();
             //Framework.Web.WebFormApplicationSessionVariables.BusinessLogicLayerContext = new Framework.CommonBLLEntities.BusinessLogicLayerContext(
@@ -46,7 +45,7 @@ namespace MSBuildLogsExtended.WcfWebApp
 				"MSBuildLogsExtended"
 				, typeof(Framework.Web.WebFormApplicationSessionVariables)
 				, typeof(Framework.CommonBLLEntities.BusinessLogicLayerContext)
-                , typeof(MSBuildLogsExtended.EntityFrameworkDAL.EFDataAccessLayerFactory)));
+				, typeof(MSBuildLogsExtended.EntityFrameworkDAL.EFDataAccessLayerFactory)));
             foreach (Framework.CommonBLLEntities.BusinessLogicLayerContextSetting _BusinessLogicLayerContextSetting in _BusinessLogicLayerContextSettingCollection)
             {
                 object[] _Params = new object[] {_BusinessLogicLayerMemberShip };
@@ -82,3 +81,4 @@ namespace MSBuildLogsExtended.WcfWebApp
         }
 	}
 }
+

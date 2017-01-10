@@ -119,114 +119,66 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\Build\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildEventCode\Create.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\BuildEventCode\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildLog\Create.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\BuildLog\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\Solution\Create.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\Solution\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\Build\Delete.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\Build\Delete.xaml.cs">
-      <DependentUpon>Delete.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildEventCode\Delete.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\BuildEventCode\Delete.xaml.cs">
-      <DependentUpon>Delete.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildLog\Delete.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\BuildLog\Delete.xaml.cs">
-      <DependentUpon>Delete.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\Solution\Delete.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\Solution\Delete.xaml.cs">
-      <DependentUpon>Delete.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\Build\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\Build\Details.xaml.cs">
-      <DependentUpon>Details.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildEventCode\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\BuildEventCode\Details.xaml.cs">
-      <DependentUpon>Details.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildLog\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\BuildLog\Details.xaml.cs">
-      <DependentUpon>Details.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\Solution\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\Solution\Details.xaml.cs">
-      <DependentUpon>Details.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\Build\Edit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\Build\Edit.xaml.cs">
-      <DependentUpon>Edit.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildEventCode\Edit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\BuildEventCode\Edit.xaml.cs">
-      <DependentUpon>Edit.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\BuildLog\Edit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\BuildLog\Edit.xaml.cs">
-      <DependentUpon>Edit.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\Solution\Edit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\Solution\Edit.xaml.cs">
-      <DependentUpon>Edit.xaml</DependentUpon>
-    </Compile>
     <Content Include="Properties\ServiceReferences.Designer.clientConfig">
       <SubType>Designer</SubType>
     </Content>
@@ -234,185 +186,106 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\Build\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\BuildEventCode\Create.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\BuildEventCode\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\BuildLog\Create.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\BuildLog\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\Solution\Create.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\Solution\Create.xaml.cs">
-      <DependentUpon>Create.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\Build\Delete.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\Build\Delete.xaml.cs">
-      <DependentUpon>Delete.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\BuildEventCode\Delete.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\BuildEventCode\Delete.xaml.cs">
-      <DependentUpon>Delete.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\BuildLog\Delete.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\BuildLog\Delete.xaml.cs">
-      <DependentUpon>Delete.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\Solution\Delete.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\Solution\Delete.xaml.cs">
-      <DependentUpon>Delete.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\Build\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\Build\Details.xaml.cs">
-      <DependentUpon>Details.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\BuildEventCode\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\BuildEventCode\Details.xaml.cs">
-      <DependentUpon>Details.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\BuildLog\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\BuildLog\Details.xaml.cs">
-      <DependentUpon>Details.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\Solution\Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\Solution\Details.xaml.cs">
-      <DependentUpon>Details.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\Build\Edit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\Build\Edit.xaml.cs">
-      <DependentUpon>Edit.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\BuildEventCode\Edit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\BuildEventCode\Edit.xaml.cs">
-      <DependentUpon>Edit.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\BuildLog\Edit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\BuildLog\Edit.xaml.cs">
-      <DependentUpon>Edit.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\Solution\Edit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\Solution\Edit.xaml.cs">
-      <DependentUpon>Edit.xaml</DependentUpon>
-    </Compile>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Page Include="GroupedItemsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="GroupedItemsPage.xaml.cs">
-      <DependentUpon>GroupedItemsPage.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\WPCommonOfBuild.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfBuild.xaml.cs">
-      <DependentUpon>WPCommonOfBuild.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\WPCommonOfBuildEventCode.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfBuildEventCode.xaml.cs">
-      <DependentUpon>WPCommonOfBuildEventCode.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\WPCommonOfBuildLog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfBuildLog.xaml.cs">
-      <DependentUpon>WPCommonOfBuildLog.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\WPCommonOfSolution.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfSolution.xaml.cs">
-      <DependentUpon>WPCommonOfSolution.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\UCCommonOfBuild.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfBuild.xaml.cs">
-      <DependentUpon>UCCommonOfBuild.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\UCCommonOfBuildEventCode.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfBuildEventCode.xaml.cs">
-      <DependentUpon>UCCommonOfBuildEventCode.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\UCCommonOfBuildLog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfBuildLog.xaml.cs">
-      <DependentUpon>UCCommonOfBuildLog.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\UCCommonOfSolution.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfSolution.xaml.cs">
-      <DependentUpon>UCCommonOfSolution.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core.WinRT\CommonBLLEntities.WinRT\MSBuildLogsExtended.CommonBLLEntities.WinRT.csproj">

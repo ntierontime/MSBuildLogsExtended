@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MSBuildLogsExtended.Resources</RootNamespace>
-    <AssemblyName>MSBuildLogsExtended.Resourcesa</AssemblyName>
+    <AssemblyName>MSBuildLogsExtended.Resources</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -35,34 +35,49 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <EmbeddedResource Include="UIStringResourcePerApp.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIStringResourcePerApp.designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="UIStringResourcePerApp.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>UIStringResourcePerApp.resx</DependentUpon>
-      <SubType>RESXCodeBehind</SubType>
     </Compile>
     <EmbeddedResource Include="UIStringResourcePerEntityBuild.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIStringResourcePerEntityBuild.designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="UIStringResourcePerEntityBuild.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>UIStringResourcePerEntityBuild.resx</DependentUpon>
-      <SubType>RESXCodeBehind</SubType>
     </Compile>
     <EmbeddedResource Include="UIStringResourcePerEntityBuildEventCode.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIStringResourcePerEntityBuildEventCode.designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="UIStringResourcePerEntityBuildEventCode.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>UIStringResourcePerEntityBuildEventCode.resx</DependentUpon>
-      <SubType>RESXCodeBehind</SubType>
     </Compile>
     <EmbeddedResource Include="UIStringResourcePerEntityBuildLog.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIStringResourcePerEntityBuildLog.designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="UIStringResourcePerEntityBuildLog.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>UIStringResourcePerEntityBuildLog.resx</DependentUpon>
-      <SubType>RESXCodeBehind</SubType>
     </Compile>
     <EmbeddedResource Include="UIStringResourcePerEntitySolution.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIStringResourcePerEntitySolution.designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="UIStringResourcePerEntitySolution.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>UIStringResourcePerEntitySolution.resx</DependentUpon>
-      <SubType>RESXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

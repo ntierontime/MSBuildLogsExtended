@@ -104,6 +104,10 @@
       <Project>{6fde9471-4e80-469d-b441-bd8cfa62f93e}</Project>
       <Name>Framework.Resources.SL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Framework.ViewModels.SL\Framework.ViewModels.SL.csproj">
+      <Project>{97d2a072-c8e8-4407-831e-6aeff424b737}</Project>
+      <Name>Framework.ViewModels.SL</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

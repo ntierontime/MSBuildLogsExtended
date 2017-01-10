@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -14,9 +14,6 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetPlatformVersion>8.1</TargetPlatformVersion>
-    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
-    <TargetFrameworkVersion />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -154,6 +151,10 @@
       <Project>{23311ee2-a0cd-46f6-9766-652a04a7602f}</Project>
       <Name>Framework.Resources.WinRT</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Framework.ViewModels.WinRT\Framework.ViewModels.WinRT.csproj">
+      <Project>{2e9772cc-0802-45c1-b5a7-9a096a04d08f}</Project>
+      <Name>Framework.ViewModels.WinRT</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
@@ -168,13 +169,13 @@
       <HintPath>..\..\packages\Win8nl.1.0.9\lib\NetCore45\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
-    <VisualStudioVersion>12.0</VisualStudioVersion>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkReference="e5302713-0022-4657-85d8-9620818071df" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="e5302713-0022-4657-85d8-9620818071df" />
     </VisualStudio>
   </ProjectExtensions>
   <!--

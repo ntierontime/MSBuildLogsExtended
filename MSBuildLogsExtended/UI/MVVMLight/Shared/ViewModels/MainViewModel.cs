@@ -18,7 +18,6 @@ namespace MSBuildLogsExtended.ViewModels
     /// </summary>
     public class MainViewModel : ViewModelBase
     {
-        public bool QuitConfirmationEnabled { get; set; }
         public string Welcome
         {
             get

@@ -84,17 +84,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
     <Content Include="Properties\AppManifest.xml" />
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
     <Page Include="Skins\MainSkin.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -106,58 +100,34 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfBuild.xaml.cs">
-      <DependentUpon>WPCommonOfBuild.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\WPCommonOfBuildEventCode.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfBuildEventCode.xaml.cs">
-      <DependentUpon>WPCommonOfBuildEventCode.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\WPCommonOfBuildLog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfBuildLog.xaml.cs">
-      <DependentUpon>WPCommonOfBuildLog.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\WPCommonOfSolution.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Pages\WPCommonOfSolution.xaml.cs">
-      <DependentUpon>WPCommonOfSolution.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\UCCommonOfBuild.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfBuild.xaml.cs">
-      <DependentUpon>UCCommonOfBuild.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\UCCommonOfBuildEventCode.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfBuildEventCode.xaml.cs">
-      <DependentUpon>UCCommonOfBuildEventCode.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\UCCommonOfBuildLog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfBuildLog.xaml.cs">
-      <DependentUpon>UCCommonOfBuildLog.xaml</DependentUpon>
-    </Compile>
     <Page Include="UserControls\UCCommonOfSolution.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UserControls\UCCommonOfSolution.xaml.cs">
-      <DependentUpon>UCCommonOfSolution.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core.SL\CommonBLLEntities.SL\MSBuildLogsExtended.CommonBLLEntities.SL.csproj">

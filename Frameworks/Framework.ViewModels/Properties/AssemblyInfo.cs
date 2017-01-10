@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Framework.ViewModels")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Framework.ViewModels")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Framework.ViewModels")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("NTIER ON TIME TECHNOLOGIES INC.")]
+[assembly: AssemblyProduct("MSBuildLogsExtended")]
+[assembly: AssemblyCopyright("Copyright © NTIER ON TIME TECHNOLOGIES INC. 2017")]
+[assembly: AssemblyTrademark("MSBuildLogsExtended")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2def4f9f-015d-40c4-b153-6c687c308152")]
+[assembly: Guid("2cc97c32-9ffa-4da4-a6c0-83f300404ec3")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -34,3 +34,4 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
