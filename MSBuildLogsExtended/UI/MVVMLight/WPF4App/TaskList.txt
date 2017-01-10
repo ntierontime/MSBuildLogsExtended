@@ -60,3 +60,5 @@ Although not used, but CommandManager.InvalidateRequerySuggested(); suppose to w
 17.2. (Ready)XXX.Resources.ResourceFileFactory
 17.3. (Ready)Related changes in LocalizedStrings.cs
 18. WPF Loading/Spinning popup
+http://stackoverflow.com/questions/6359848/wpf-loading-spinner/6369137#6369137
+Windows Phone <ProgressRing IsActive="True"/> http://stackoverflow.com/questions/23856883/how-do-you-show-the-loading-animation-for-windows-phone-8-1-universal-store-apps
