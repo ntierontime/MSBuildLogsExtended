@@ -73,7 +73,7 @@
   </i:EventTrigger>
             </i:Interaction.Triggers>
             <ListView.View >
-                        <GridView ColumnHeaderToolTip="BuildLog"  AllowsColumnReorder="true" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+                        <GridView ColumnHeaderToolTip="BuildLog"  AllowsColumnReorder="true"  >
   					<GridViewColumn Width="140">
 						<GridViewColumnHeader Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Build_1_Name, Source={StaticResource LocalizedStrings}}" Tag="Build_1_Name" />
                         <GridViewColumn.CellTemplate>

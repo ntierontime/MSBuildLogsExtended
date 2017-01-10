@@ -27,14 +27,14 @@
 8.1. (Ready)Framework.Resources -> Framework.ResourceLib
 8.2. (Ready)XXX.Resources -> XXX.ResourceLib
 8.3. (Ready)MVVMLightViewModels, from ViewModels -> MVVMLightViewModels
-9. (Ready)Bugs:
+9. (Ready-UAT)Bugs:
 Severity	Code	Description	Project	File	Line	Suppression State
 Error	CS0117	'UIStringResource' does not contain a definition for 'Quit'	MSBuildLogsExtended.WPF4App	C:\GitHub\MSBuildLogsExtended\MSBuildLogsExtended\UI\MVVMLight\WPF4App\MainWindow.xaml.cs	208	Active
 Error	CS0117	'UIStringResource' does not contain a definition for 'QuitApplication'	MSBuildLogsExtended.WPF4App	C:\GitHub\MSBuildLogsExtended\MSBuildLogsExtended\UI\MVVMLight\WPF4App\MainWindow.xaml.cs	214	Active
 Error	CS0117	'UIStringResource' does not contain a definition for 'QuitApplicationMessage'	MSBuildLogsExtended.WPF4App	C:\GitHub\MSBuildLogsExtended\MSBuildLogsExtended\UI\MVVMLight\WPF4App\MainWindow.xaml.cs	215	Active
 10. (Ready)Create a Generated Branch
 11. (Ready)Change DB Backup
-12. (Ready)Bugs:
+12. (Ready-UAT)Bugs:
     <Compile Include="UIStringResource3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -45,7 +45,7 @@ Error	CS0117	'UIStringResource' does not contain a definition for 'QuitApplicati
       <LastGenOutput>UIStringResource3.Designer.cs</LastGenOutput>
     </EmbeddedResource>
 13. (Ready)Ressource File generate a partial class to contain default constructor.
-14. (Ready)ScrollViewer of list - must set fixed height to make scrollviewer working.
+14. (Ready-UAT)ScrollViewer of list - must set fixed height to make scrollviewer working.
 15. Bugs:
 Click pagination buttons on common page after click back button on details page, will goto details page.
 16. Pagination not displayed correct.
