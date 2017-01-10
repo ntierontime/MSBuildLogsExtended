@@ -54,10 +54,9 @@ Fixes:
 http://stackoverflow.com/questions/1340302/wpf-how-to-force-a-command-to-re-evaluate-canexecute-via-its-commandbindings
 http://www.mvvmlight.net/installing/changes#v5_0_2
 Change GalaSoft.MvvmLight.Command -> GalaSoft.MvvmLight.CommandWpf in multiple MVVM ViewModels
+Although not used, but CommandManager.InvalidateRequerySuggested(); suppose to work.
 17. Add
 17.1. (Ready)Framework.Resources.ResourceFileFactory
 17.2. (Ready)XXX.Resources.ResourceFileFactory
 17.3. (Ready)Related changes in LocalizedStrings.cs
 18. WPF Loading/Spinning popup
-
-RefreshNewItemNoMessage

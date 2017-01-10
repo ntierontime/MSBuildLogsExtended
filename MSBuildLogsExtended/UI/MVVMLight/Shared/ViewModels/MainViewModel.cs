@@ -19,6 +19,7 @@ namespace MSBuildLogsExtended.ViewModels
     public class MainViewModel : ViewModelBase
     {
         public bool QuitConfirmationEnabled { get; set; }
+        public bool IsBusy { get; set; }
         public string Welcome
         {
             get
@@ -82,6 +83,8 @@ namespace MSBuildLogsExtended.ViewModels
             this.MenuItemSelectedCommand = new RelayCommand(MenuItemSelected);
 
             //#endregion 3. Initialize MenuItemSelectedCommand
+
+            this.IsBusy = false;
         }
 
         ////public override void Cleanup()

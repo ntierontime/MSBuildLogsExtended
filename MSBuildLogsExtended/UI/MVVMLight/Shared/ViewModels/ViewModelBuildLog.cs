@@ -544,6 +544,7 @@ namespace MSBuildLogsExtended.ViewModels
                 {
 					DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate()
 					{
+                        this.SearchStatus = Framework.EntityContracts.SearchStatus.Error;
                         if (!this.SuppressMVVMLightEventToCommandMessage)
                             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
                     });
@@ -574,6 +575,8 @@ namespace MSBuildLogsExtended.ViewModels
             }
             catch (Exception ex)
             {
+                this.SearchStatus = Framework.EntityContracts.SearchStatus.Error;
+
                 if (!this.SuppressMVVMLightEventToCommandMessage)
                     Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
             }

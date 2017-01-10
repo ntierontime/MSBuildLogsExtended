@@ -6,6 +6,7 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Messaging;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
+using System.Threading.Tasks;
 
 namespace MSBuildLogsExtended.WPF4App
 {
@@ -29,7 +30,7 @@ namespace MSBuildLogsExtended.WPF4App
 			InitializeMainMenuTree();
 
             InitializeNavigationSettingCollectionInMainViewModel();
-
+            
             Messenger.Default.Register<Framework.UIActionStatusMessage>(
                 this,
                 message =>
@@ -37,8 +38,18 @@ namespace MSBuildLogsExtended.WPF4App
                     if (MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Exists(t => t.SourceTypeFullName == message.SourceTypeFullName && t.SenderView == message.SenderView && t.UIAction == message.UIAction && t.UIActionStatus == message.UIActionStatus))
                     {
                         var navigationSetting = MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.FirstOrDefault(t => t.SourceTypeFullName == message.SourceTypeFullName && t.SenderView == message.SenderView && t.UIAction == message.UIAction && t.UIActionStatus == message.UIActionStatus);
+
                         if (navigationSetting != null)
                         {
+                            if (navigationSetting.UIActionStatus == Framework.UIActionStatus.Starting || navigationSetting.UIActionStatus == Framework.UIActionStatus.Launch)
+                            {
+                                MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.IsBusy = true;
+                            }
+                            else
+                            {
+                                MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.IsBusy = false;
+                            }
+
                             if (navigationSetting.NextUIAction == Framework.UIAction.GoBack)
                             {
                                 _mainFrame.GoBack();

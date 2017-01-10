@@ -10,5 +10,6 @@ namespace Framework.EntityContracts
         Unknown,
         Searching,
         SearchResultLoaded,
+        Error,
     }
 }
