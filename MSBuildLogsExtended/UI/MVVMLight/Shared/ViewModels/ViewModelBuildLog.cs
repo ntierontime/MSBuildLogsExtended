@@ -1,9 +1,10 @@
 using System;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.CommandWpf;
 using GalaSoft.MvvmLight.Threading;
 using GalaSoft.MvvmLight.Messaging;
+using System.Windows.Input;
 
 namespace MSBuildLogsExtended.ViewModels
 {
@@ -49,9 +50,9 @@ namespace MSBuildLogsExtended.ViewModels
         /// </summary>
         public WPCommonOfBuildLogVM()
         {
-            this.RefreshNewItem();
-			
-			this.EntityCollectionDefault = new ObservableCollection<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>();
+            this.RefreshNewItemNoMessage();
+
+            this.EntityCollectionDefault = new ObservableCollection<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>();
 
 
 		#region Commands for Cascading ComboBox
@@ -107,8 +108,16 @@ namespace MSBuildLogsExtended.ViewModels
             string viewName = ViewName_Edit;
             Framework.UIAction uiAction = Framework.UIAction.Refresh;
 
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
+            if(!this.SuppressMVVMLightEventToCommandMessage)
+                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
+            RefreshCurrentEditingItemNoMessage();
 
+            if (!this.SuppressMVVMLightEventToCommandMessage)
+                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+        }
+
+        protected override void RefreshCurrentEditingItemNoMessage()
+        {
             if (this.m_CurrentDefault != null)
             {
                 this.CurrentInEditingDefault = this.CurrentDefault.GetAClone(); //MSBuildLogsExtended.EntityContracts.IBuildLogHelper.Clone<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default, MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>(this.m_CurrentDefault);
@@ -117,27 +126,31 @@ namespace MSBuildLogsExtended.ViewModels
             {
                 this.CurrentInEditingDefault = null;
             }
-
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
         }
 
-		#endregion RefreshCurrentEditingItem
+        #endregion RefreshCurrentEditingItem
 
-		#region RefreshNewItem
+        #region RefreshNewItem
 
         protected override void RefreshNewItem()
         {
             string viewName = ViewName_Create;
             Framework.UIAction uiAction = Framework.UIAction.Refresh;
 
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
+            if (!this.SuppressMVVMLightEventToCommandMessage)
+                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
+            RefreshNewItemNoMessage();
 
-            this.NewItemDefault = new MSBuildLogsExtended.DataSourceEntities.BuildLog.Default {  };
-
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+            if (!this.SuppressMVVMLightEventToCommandMessage)
+                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
         }
 
-		#endregion RefreshNewItem
+        protected override void RefreshNewItemNoMessage()
+        {
+            this.NewItemDefault = new MSBuildLogsExtended.DataSourceEntities.BuildLog.Default { };
+        }
+
+        #endregion RefreshNewItem
 
         #region ClearSearchResult
 
@@ -149,11 +162,13 @@ namespace MSBuildLogsExtended.ViewModels
 			string viewName = ViewName_SearchResult;
 			Framework.UIAction uiAction = Framework.UIAction.ClearResult;
 
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
+            if (!this.SuppressMVVMLightEventToCommandMessage)
+                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 
             this.m_EntityCollectionDefault.Clear();
 
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+            if (!this.SuppressMVVMLightEventToCommandMessage)
+                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
         }
 
         #endregion ClearSearchResult
@@ -179,7 +194,8 @@ namespace MSBuildLogsExtended.ViewModels
 			string viewName = ViewName_Edit;
 			Framework.UIAction uiAction = Framework.UIAction.Update;
 
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
+            if (!this.SuppressMVVMLightEventToCommandMessage)
+                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 
             MSBuildLogsExtended.WcfContracts.IBuildLogServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuildLog();
 
@@ -195,14 +211,16 @@ namespace MSBuildLogsExtended.ViewModels
 						var responseMessage = _Instance.EndUpdateEntity(result);
 						// reload saved default
 	                    this.Search();
-						Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+                        if (!this.SuppressMVVMLightEventToCommandMessage)
+                            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
 					});
                 }
                 catch (Exception ex)
                 {
 					DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate()
 					{
-						Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
+                        if (!this.SuppressMVVMLightEventToCommandMessage)
+                            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
 					});
                 }
             };
@@ -224,7 +242,8 @@ namespace MSBuildLogsExtended.ViewModels
             }
             catch (Exception ex)
             {
-				Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
+                if (!this.SuppressMVVMLightEventToCommandMessage)
+                    Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
             }
 
             #endregion Asyncronized wcf method call
@@ -264,7 +283,8 @@ namespace MSBuildLogsExtended.ViewModels
 			string viewName = ViewName_Create;
 			Framework.UIAction uiAction = Framework.UIAction.Create;
 
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
+            if (!this.SuppressMVVMLightEventToCommandMessage)
+                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 			            
 			MSBuildLogsExtended.WcfContracts.IBuildLogServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuildLog();
 
@@ -282,14 +302,16 @@ namespace MSBuildLogsExtended.ViewModels
 						//// reload default
 						this.Search();
 
-						Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+                        if (!this.SuppressMVVMLightEventToCommandMessage)
+                            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
 	                });
                 }
                 catch (Exception ex)
                 {
 					DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate()
 					{
-						Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
+                        if (!this.SuppressMVVMLightEventToCommandMessage)
+                            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
 	                });
                 }
             };
@@ -312,7 +334,8 @@ namespace MSBuildLogsExtended.ViewModels
             }
             catch (Exception ex)
             {
-				Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
+                if (!this.SuppressMVVMLightEventToCommandMessage)
+                    Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
             }
 
             #endregion Asyncronized wcf method call
@@ -340,9 +363,10 @@ namespace MSBuildLogsExtended.ViewModels
 			#region Asyncronized wcf method call
 
 			string viewName = ViewName_Delete;
-			Framework.UIAction uiAction = Framework.UIAction.Delete;            
+			Framework.UIAction uiAction = Framework.UIAction.Delete;
 
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
+            if (!this.SuppressMVVMLightEventToCommandMessage)
+                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 
 			MSBuildLogsExtended.WcfContracts.IBuildLogServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuildLog();
 
@@ -359,14 +383,16 @@ namespace MSBuildLogsExtended.ViewModels
 
 						this.Search();
 
-						Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+                        if (!this.SuppressMVVMLightEventToCommandMessage)
+                            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
 	                });
 				}
                 catch (Exception ex)
                 {
 					DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate()
 					{
-						Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
+                        if (!this.SuppressMVVMLightEventToCommandMessage)
+                            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
 	                });
                 }
             };
@@ -388,7 +414,8 @@ namespace MSBuildLogsExtended.ViewModels
             }
             catch (Exception ex)
             {
-				Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
+                if (!this.SuppressMVVMLightEventToCommandMessage)
+                    Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
 			}
 
             #endregion Asyncronized wcf method call
@@ -450,7 +477,8 @@ namespace MSBuildLogsExtended.ViewModels
             string viewName = ViewName_SearchResult;
             Framework.UIAction uiAction = Framework.UIAction.Search;
 
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
+            if (!this.SuppressMVVMLightEventToCommandMessage)
+                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
 
             MSBuildLogsExtended.WcfContracts.IBuildLogServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuildLog();
 
@@ -466,6 +494,7 @@ namespace MSBuildLogsExtended.ViewModels
 						var responseMessage = _Instance.EndGetCollectionOfDefaultOfCommon(result);
 						MSBuildLogsExtended.DataSourceEntities.BuildLog.DefaultCollection collection = responseMessage.Message;
 
+                        this.SuppressMVVMLightEventToCommandMessage = true;
 						if (this.m_EntityCollectionDefault == null)
 						{
 							this.m_EntityCollectionDefault = new ObservableCollection<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>();
@@ -503,18 +532,24 @@ namespace MSBuildLogsExtended.ViewModels
 #endif
                         }
 
+                        this.SuppressMVVMLightEventToCommandMessage = false;
+
                         this.SearchStatus = Framework.EntityContracts.SearchStatus.SearchResultLoaded;
 
-						Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+                        if (!this.SuppressMVVMLightEventToCommandMessage)
+                            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
                     });
 				}
                 catch (Exception ex)
                 {
 					DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate()
 					{
-						Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
+                        if (!this.SuppressMVVMLightEventToCommandMessage)
+                            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
                     });
                 }
+
+                CommandManager.InvalidateRequerySuggested();
             };
 
             try
@@ -539,7 +574,8 @@ namespace MSBuildLogsExtended.ViewModels
             }
             catch (Exception ex)
             {
-				Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
+                if (!this.SuppressMVVMLightEventToCommandMessage)
+                    Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
             }
 
             #endregion Asyncronized wcf method call

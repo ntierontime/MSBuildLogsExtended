@@ -49,7 +49,7 @@ namespace MSBuildLogsExtended.ViewModels
         /// </summary>
         public WPCommonOfBuildVM()
         {
-            this.RefreshNewItem();
+            this.RefreshNewItemNoMessage();
 			
 			this.EntityCollectionDefault = new ObservableCollection<MSBuildLogsExtended.DataSourceEntities.Build.Default>();
 
@@ -83,7 +83,13 @@ namespace MSBuildLogsExtended.ViewModels
             Framework.UIAction uiAction = Framework.UIAction.Refresh;
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
+            RefreshCurrentEditingItemNoMessage();
 
+            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+        }
+
+        protected override void RefreshCurrentEditingItemNoMessage()
+        {
             if (this.m_CurrentDefault != null)
             {
                 this.CurrentInEditingDefault = this.CurrentDefault.GetAClone(); //MSBuildLogsExtended.EntityContracts.IBuildHelper.Clone<MSBuildLogsExtended.DataSourceEntities.Build.Default, MSBuildLogsExtended.DataSourceEntities.Build.Default>(this.m_CurrentDefault);
@@ -92,13 +98,11 @@ namespace MSBuildLogsExtended.ViewModels
             {
                 this.CurrentInEditingDefault = null;
             }
-
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
         }
 
-		#endregion RefreshCurrentEditingItem
+        #endregion RefreshCurrentEditingItem
 
-		#region RefreshNewItem
+        #region RefreshNewItem
 
         protected override void RefreshNewItem()
         {
@@ -106,13 +110,17 @@ namespace MSBuildLogsExtended.ViewModels
             Framework.UIAction uiAction = Framework.UIAction.Refresh;
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
-
-            this.NewItemDefault = new MSBuildLogsExtended.DataSourceEntities.Build.Default {  };
+            RefreshNewItemNoMessage();
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
         }
 
-		#endregion RefreshNewItem
+        protected override void RefreshNewItemNoMessage()
+        {
+            NewItemDefault = new MSBuildLogsExtended.DataSourceEntities.Build.Default { };
+        }
+
+        #endregion RefreshNewItem
 
         #region ClearSearchResult
 

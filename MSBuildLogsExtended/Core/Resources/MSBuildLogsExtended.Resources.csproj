@@ -36,6 +36,7 @@
     <None Include="packages.config" />
     <EmbeddedResource Include="UIStringResourcePerApp.resx">
     </EmbeddedResource>
+    <Compile Include="ResourceFileFactory.cs" />
     <Compile Include="UIStringResourcePerApp.designer.cs">
       <DependentUpon>UIStringResourcePerApp.resx</DependentUpon>
       <SubType>RESXCodeBehind</SubType>

@@ -1,14 +1,15 @@
 1. Common, 
 1.1. (Done)GridView Stretch - fix: set width and height to null, and horizontal/vertical align stretch
 1.2. (Done)display back/forward button by default
-1.3. listview item in edit mode after back from item view
+1.3. (Ready)listview item in edit mode after back from item view
 1.4. Sort is wrong, asceding is descending, and vise versa.
 1.5. Search pane, DateTime not stretch - should find percentage width 
 1.6. DropDown in list
 1.7. Link to Details
+1.8. (Ready)Remove Ids
 2. Add, 
-2.1. remove: Solution/Id
-2.2. added dropdown
+2.1. (Ready)remove: Solution/Id
+2.2. (Ready)added dropdown
 2.3. (Done)refresh button not working
 3. Details, 
 3.1. (Ready)remove: Id and SolutionId
@@ -32,7 +33,7 @@ Severity	Code	Description	Project	File	Line	Suppression State
 Error	CS0117	'UIStringResource' does not contain a definition for 'Quit'	MSBuildLogsExtended.WPF4App	C:\GitHub\MSBuildLogsExtended\MSBuildLogsExtended\UI\MVVMLight\WPF4App\MainWindow.xaml.cs	208	Active
 Error	CS0117	'UIStringResource' does not contain a definition for 'QuitApplication'	MSBuildLogsExtended.WPF4App	C:\GitHub\MSBuildLogsExtended\MSBuildLogsExtended\UI\MVVMLight\WPF4App\MainWindow.xaml.cs	214	Active
 Error	CS0117	'UIStringResource' does not contain a definition for 'QuitApplicationMessage'	MSBuildLogsExtended.WPF4App	C:\GitHub\MSBuildLogsExtended\MSBuildLogsExtended\UI\MVVMLight\WPF4App\MainWindow.xaml.cs	215	Active
-10. (Ready)Create a Generated Branch
+10. (Ready-UAT)Create a Generated Branch
 11. (Ready)Change DB Backup
 12. (Ready-UAT)Bugs:
     <Compile Include="UIStringResource3.Designer.cs">
@@ -44,8 +45,19 @@ Error	CS0117	'UIStringResource' does not contain a definition for 'QuitApplicati
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>UIStringResource3.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-13. (Ready)Ressource File generate a partial class to contain default constructor.
+13. (Ready-Obselete)Ressource File generate a partial class to contain default constructor.
 14. (Ready-UAT)ScrollViewer of list - must set fixed height to make scrollviewer working.
-15. Bugs:
+15. (Ready)Bugs:
 Click pagination buttons on common page after click back button on details page, will goto details page.
 16. Pagination not displayed correct.
+Fixes: 
+http://stackoverflow.com/questions/1340302/wpf-how-to-force-a-command-to-re-evaluate-canexecute-via-its-commandbindings
+http://www.mvvmlight.net/installing/changes#v5_0_2
+Change GalaSoft.MvvmLight.Command -> GalaSoft.MvvmLight.CommandWpf in multiple MVVM ViewModels
+17. Add
+17.1. (Ready)Framework.Resources.ResourceFileFactory
+17.2. (Ready)XXX.Resources.ResourceFileFactory
+17.3. (Ready)Related changes in LocalizedStrings.cs
+18. WPF Loading/Spinning popup
+
+RefreshNewItemNoMessage

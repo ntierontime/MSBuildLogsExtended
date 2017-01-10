@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.CommandWpf;
 using GalaSoft.MvvmLight.Messaging;
 using System.Collections.ObjectModel;
 
@@ -60,9 +60,18 @@ namespace Framework.Xaml
             this.PaginationPreviousPageCommand = new RelayCommand(PaginationPreviousPage, CanPaginationPreviousPage);
             this.PaginationNextPageCommand = new RelayCommand(PaginationNextPage, CanPaginationNextPage);
             this.PaginationLastPageCommand = new RelayCommand(PaginationLastPage, CanPaginationLastPage);
+
+
+            SuppressMVVMLightEventToCommandMessage = false;
         }
 
         #endregion constructor
+
+        #region Suppress MVVMLight EventToCommand Message
+
+        public bool SuppressMVVMLightEventToCommandMessage { get; set; }
+
+        #endregion Suppress MVVMLight EventToCommand Message
 
         #region Business Entity Collection + Current Selected or editing Entity
 
@@ -105,7 +114,7 @@ namespace Framework.Xaml
                 if (m_Current != value)
                 {
                     m_Current = value;
-                    this.RefreshCurrentEditingItem();
+                    this.RefreshCurrentEditingItemNoMessage();
                     RaisePropertyChanged("Current");
                 }
             }
@@ -216,7 +225,7 @@ namespace Framework.Xaml
 
         protected bool CanPaginationFirstPage()
         {
-            return this.SearchStatus != Framework.EntityContracts.SearchStatus.Searching && this.QueryPagingSetting != null && this.QueryPagingSetting.IsMoreThanOnePage && !this.QueryPagingSetting.IsCurrentPageIsFirstPage;
+            return this.QueryPagingSetting != null && this.QueryPagingSetting.IsMoreThanOnePage && !this.QueryPagingSetting.IsCurrentPageIsFirstPage;
         }
 
         public RelayCommand PaginationPreviousPageCommand { get; protected set; }
@@ -229,7 +238,7 @@ namespace Framework.Xaml
 
         protected bool CanPaginationPreviousPage()
         {
-            return this.SearchStatus != Framework.EntityContracts.SearchStatus.Searching && this.QueryPagingSetting != null && this.QueryPagingSetting.IsMoreThanOnePage && !this.QueryPagingSetting.IsCurrentPageIsFirstPage;
+            return this.QueryPagingSetting != null && this.QueryPagingSetting.IsMoreThanOnePage && !this.QueryPagingSetting.IsCurrentPageIsFirstPage;
         }
 
         public RelayCommand PaginationNextPageCommand { get; protected set; }
@@ -242,7 +251,7 @@ namespace Framework.Xaml
 
         protected bool CanPaginationNextPage()
         {
-            return this.SearchStatus != Framework.EntityContracts.SearchStatus.Searching && this.QueryPagingSetting != null && this.QueryPagingSetting.IsMoreThanOnePage && !this.QueryPagingSetting.IsCurrentPageIsLastPage;
+            return this.QueryPagingSetting != null && this.QueryPagingSetting.IsMoreThanOnePage && !this.QueryPagingSetting.IsCurrentPageIsLastPage;
         }
 
         public RelayCommand PaginationLastPageCommand { get; protected set; }
@@ -255,7 +264,7 @@ namespace Framework.Xaml
 
         protected bool CanPaginationLastPage()
         {
-            return this.SearchStatus != Framework.EntityContracts.SearchStatus.Searching && this.QueryPagingSetting != null && this.QueryPagingSetting.IsMoreThanOnePage && !this.QueryPagingSetting.IsCurrentPageIsLastPage;
+            return this.QueryPagingSetting != null && this.QueryPagingSetting.IsMoreThanOnePage && !this.QueryPagingSetting.IsCurrentPageIsLastPage;
         }
 
         #endregion Pagination Commands - First Page, Previous Page, Next Page, and Last Page
@@ -470,12 +479,15 @@ namespace Framework.Xaml
 
         public RelayCommand SelectionChangedCommand { get; protected set; }
 
-        protected void SelectionChanged()
+        protected virtual void SelectionChanged()
         {
-            string viewName = ViewName_SearchResult;
-            Framework.UIAction uiAction = Framework.UIAction.SelectionChanged;
-
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+            if (this.m_Current != null)
+            {
+                string viewName = ViewName_SearchResult;
+                Framework.UIAction uiAction = Framework.UIAction.SelectionChanged;
+                if (!SuppressMVVMLightEventToCommandMessage)
+                    Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+            }
         }
 
         #endregion SelectionChanged
@@ -485,6 +497,7 @@ namespace Framework.Xaml
         public RelayCommand RefreshCurrentEditingItemCommand { get; protected set; }
 
         protected abstract void RefreshCurrentEditingItem();
+        protected abstract void RefreshCurrentEditingItemNoMessage();
 
         #endregion RefreshCurrentEditingItem
 
@@ -493,6 +506,7 @@ namespace Framework.Xaml
         public RelayCommand RefreshNewItemCommand { get; protected set; }
 
         protected abstract void RefreshNewItem();
+        protected abstract void RefreshNewItemNoMessage();
 
         #endregion RefreshNewItem
 
@@ -724,7 +738,7 @@ namespace Framework.Xaml
 
         protected bool CanSearch()
         {
-            return this.QueryPagingSetting == null || !(this.SearchStatus == Framework.EntityContracts.SearchStatus.Searching);
+            return !(this.SearchStatus == Framework.EntityContracts.SearchStatus.Searching);
         }
 
         #endregion Search
@@ -819,7 +833,7 @@ namespace Framework.Xaml
                 if (m_CurrentDefault != value)
                 {
                     m_CurrentDefault = value;
-                    this.RefreshCurrentEditingItem();
+                    this.RefreshCurrentEditingItemNoMessage();
                     RaisePropertyChanged("CurrentDefault");
                 }
             }
@@ -837,6 +851,19 @@ namespace Framework.Xaml
         }
 
         #endregion Business Entity Collection + Current Selected or editing Entity
+
+
+        protected override void SelectionChanged()
+        {
+            if (this.CurrentDefault != null)
+            {
+                string viewName = ViewName_SearchResult;
+                Framework.UIAction uiAction = Framework.UIAction.SelectionChanged;
+                if (!SuppressMVVMLightEventToCommandMessage)
+                    Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+            }
+        }
+
     }
 }
 

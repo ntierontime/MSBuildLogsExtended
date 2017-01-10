@@ -9,8 +9,8 @@ namespace Framework.EntityContracts
     /// pull data according Paging setting.
     /// </summary>
     public class QueryPagingSetting : Framework.PropertyChangedNotifier
-	{
-		#region constructors
+    {
+        #region constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryPagingSetting"/> class.
@@ -92,6 +92,7 @@ namespace Framework.EntityContracts
             }
         }
 
+        
         public int m_CurrentPage;
         /// <summary>
         /// Gets or sets the index of the current page index.

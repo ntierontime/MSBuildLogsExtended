@@ -40,12 +40,12 @@
                     </StackPanel>
                 </Button>
                 <Separator />
-                <Button     Name="PaginationFirstPage" Command="{Binding PaginationFirstPageCommand}" Width="25" Height="25" ToolTip="{Binding Path=Framework_Resources_UIStringResource.FirstAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button     Name="PaginationFirstPage" Command="{Binding PaginationFirstPageCommand}" Width="25" Height="25" ToolTip="{Binding Path=Framework_Resources_UIStringResource.FirstAlternativeText, Source={StaticResource LocalizedStrings}}" IsEnabled="{Binding Path=QueryPagingSetting.CanGoBackward}">
                     <StackPanel>
                         <iconPacks:PackIconMaterial Kind="PageFirst" />
                     </StackPanel>
                 </Button>
-                <Button     Name="PaginationPreviousPage" Command="{Binding PaginationPreviousPageCommand}" Width="25" Height="25" ToolTip="{Binding Path=Framework_Resources_UIStringResource.PreviousAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button     Name="PaginationPreviousPage" Command="{Binding PaginationPreviousPageCommand}" Width="25" Height="25" ToolTip="{Binding Path=Framework_Resources_UIStringResource.PreviousAlternativeText, Source={StaticResource LocalizedStrings}}" IsEnabled="{Binding Path=QueryPagingSetting.CanGoBackward}">
                     <StackPanel>
                         <iconPacks:PackIconMaterial Kind="ChevronLeft" />
                     </StackPanel>
@@ -60,12 +60,12 @@
                         <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.GoAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button     Name="PaginationNextPage" Command="{Binding PaginationNextPageCommand}" Width="25" Height="25" ToolTip="{Binding Path=Framework_Resources_UIStringResource.NextAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button     Name="PaginationNextPage" Command="{Binding PaginationNextPageCommand}" Width="25" Height="25" ToolTip="{Binding Path=Framework_Resources_UIStringResource.NextAlternativeText, Source={StaticResource LocalizedStrings}}" IsEnabled="{Binding Path=QueryPagingSetting.CanGoForeward}">
                     <StackPanel>
                         <iconPacks:PackIconMaterial Kind="ChevronRight" />
                     </StackPanel>
                 </Button>
-                <Button     Name="PaginationLastPage" Command="{Binding PaginationLastPageCommand}" Width="25" Height="25" ToolTip="{Binding Path=Framework_Resources_UIStringResource.LastAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button     Name="PaginationLastPage" Command="{Binding PaginationLastPageCommand}" Width="25" Height="25" ToolTip="{Binding Path=Framework_Resources_UIStringResource.LastAlternativeText, Source={StaticResource LocalizedStrings}}" IsEnabled="{Binding Path=QueryPagingSetting.CanGoForeward}">
                     <StackPanel>
                         <iconPacks:PackIconMaterial Kind="PageLast" />
                     </StackPanel>

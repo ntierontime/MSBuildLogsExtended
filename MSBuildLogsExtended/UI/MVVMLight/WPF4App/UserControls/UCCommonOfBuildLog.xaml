@@ -80,7 +80,7 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Build_1_Name}" ToolTip="" />
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Build_1_Name}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridEditStyle}" Text="{Binding Path=Build_1_Name}" ToolTip="" />
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Build_1_Name}" />-->
                                 </Grid>
@@ -92,7 +92,7 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Id}" ToolTip="" />
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Id}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridEditStyle}" Text="{Binding Path=Id}" ToolTip="" />
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Id}" />-->
                                 </Grid>
@@ -104,7 +104,7 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Solution_1Id}" ToolTip="" />
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Solution_1Id}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridEditStyle}" Text="{Binding Path=Solution_1Id}" ToolTip="" />
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Solution_1Id}" />-->
                                 </Grid>
@@ -116,7 +116,7 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Solution_1_Name}" ToolTip="" />
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Solution_1_Name}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridEditStyle}" Text="{Binding Path=Solution_1_Name}" ToolTip="" />
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Solution_1_Name}" />-->
                                 </Grid>
@@ -128,7 +128,7 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildEventCode_1_Name}" ToolTip="" />
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildEventCode_1_Name}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridEditStyle}" Text="{Binding Path=BuildEventCode_1_Name}" ToolTip="" />
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=BuildEventCode_1_Name}" />-->
                                 </Grid>
@@ -140,7 +140,7 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildId}" ToolTip="" />
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildId}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridEditStyle}" Text="{Binding Path=BuildId}" ToolTip="" />
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=BuildId}" />-->
                                 </Grid>
@@ -152,7 +152,7 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildEventCodeId}" ToolTip="" />
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=BuildEventCodeId}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridEditStyle}" Text="{Binding Path=BuildEventCodeId}" ToolTip="" />
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=BuildEventCodeId}" />-->
                                 </Grid>
@@ -164,7 +164,7 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Message}" ToolTip="" />
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=Message}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridEditStyle}" Text="{Binding Path=Message}" ToolTip="" />
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Message}" />-->
                                 </Grid>
@@ -176,7 +176,7 @@
                             <DataTemplate>
                                 <Grid>
 									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=EventTime}" ToolTip="" />
-									<TextBlock Style="{StaticResource GridBlockStyle}" Text="{Binding Path=EventTime}" ToolTip="" />
+                                    <TextBlock Style="{StaticResource GridEditStyle}" Text="{Binding Path=EventTime}" ToolTip="" />
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=EventTime}" />-->
                                 </Grid>
