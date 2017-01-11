@@ -29,7 +29,7 @@
                         <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.SearchAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button     Name="AddNew" Command="{Binding LaunchCreateViewCommand}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.AddNewAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button     Name="AddNew" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.LaunchCreateViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.AddNewAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <Rectangle Width="20" Height="20" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
                             <Rectangle.OpacityMask>

@@ -14,14 +14,13 @@ namespace MSBuildLogsExtended.ViewModels
     /// After 2014-01-31 is Asyncronized Wcf Method call
     /// <para>
     /// Use the <strong>mvvminpc</strong> snippet to add bindable properties to this ViewModel.
-    /// </para>
-    /// <para>
+    /// </para><para>
     /// You can also use Blend to data bind with the tool's support.
-    /// </para>
-    /// <para>
+    /// </para><para>
     /// See http://www.galasoft.ch/mvvm/getstarted
     /// </para>
     /// </summary>
+    /// <seealso cref="Framework.Xaml.ViewModelBaseWithResultAndUIElement{MSBuildLogsExtended.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon, MSBuildLogsExtended.DataSourceEntities.BuildLogCollection, MSBuildLogsExtended.DataSourceEntities.BuildLog, MSBuildLogsExtended.DataSourceEntities.BuildLog.DefaultCollection, MSBuildLogsExtended.DataSourceEntities.BuildLog.Default}" />
     public class WPCommonOfBuildLogVM
 		: Framework.Xaml.ViewModelBaseWithResultAndUIElement<MSBuildLogsExtended.CommonBLLEntities.BuildLogChainedQueryCriteriaCommon, MSBuildLogsExtended.DataSourceEntities.BuildLogCollection, MSBuildLogsExtended.DataSourceEntities.BuildLog, MSBuildLogsExtended.DataSourceEntities.BuildLog.DefaultCollection, MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>
     {
@@ -54,7 +53,6 @@ namespace MSBuildLogsExtended.ViewModels
 
             this.EntityCollectionDefault = new ObservableCollection<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>();
 
-
 		#region Commands for Cascading ComboBox
 
             this.GetDropDownContentsOfBuildEventCode_1Command = new RelayCommand(this.GetDropDownContentsOfBuildEventCode_1);
@@ -85,9 +83,13 @@ namespace MSBuildLogsExtended.ViewModels
 #endif
 
 
-		#endregion Commands for Cascading ComboBox
+            #endregion Commands for Cascading ComboBox
 
+            #region Commands for LinkedButton in List
 
+            this.LaunchSolutionDetailsViewCommand = new RelayCommand(this.LaunchSolutionDetailsView);
+
+            #endregion Commands for LinkedButton in List
 
             ////if (IsInDesignMode)
             ////{
@@ -101,7 +103,7 @@ namespace MSBuildLogsExtended.ViewModels
 
         #endregion Constructor
 
-		#region RefreshCurrentEditingItem
+        #region RefreshCurrentEditingItem
 
         protected override void RefreshCurrentEditingItem()
         {
@@ -441,10 +443,13 @@ namespace MSBuildLogsExtended.ViewModels
             return this.m_CurrentDefault != null;
         }
 
-		#endregion Delete
+        #endregion Delete
+
+        #region Implement abstract Search
 
 #if WINDOWS_PHONE
         /// <summary>
+        /// for Windows Phone Only
         /// Set entity property value from Selected value which parse from selected item.
         /// </summary>
         /// <param name="entity">The entity.</param>
@@ -454,10 +459,13 @@ namespace MSBuildLogsExtended.ViewModels
             entity.Solution_1Id = this.ParseDropDownContentsOfSolution_1SelectedItem();
             entity.BuildId = this.ParseDropDownContentsOfBuild_1SelectedItem();
 
-        }	
-#endif
-#if WINDOWS_PHONE
-		private void AssignSelectedValueFromSelectedItemToCritieriaOfDefault()
+        }
+
+        /// <summary>
+        /// for Windows Phone Only
+        /// Assigns the selected value from selected item to critieria of default.
+        /// </summary>
+        private void AssignSelectedValueFromSelectedItemToCritieriaOfDefault()
         {
             this.m_Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1.ValueToCompare = this.ParseDropDownContentsOfBuildEventCode_1SelectedItem();
             this.m_Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.ValueToCompare = this.ParseDropDownContentsOfSolution_1SelectedItem();
@@ -466,7 +474,7 @@ namespace MSBuildLogsExtended.ViewModels
         }
 #endif
 
-        #region Implement abstract Search
+
 
         protected override void Search()
         {
@@ -617,7 +625,6 @@ namespace MSBuildLogsExtended.ViewModels
 #endif
 
         #endregion Implement abstract Search
-
 
 		#region Commands for Cascading ComboBox
 
@@ -943,9 +950,21 @@ namespace MSBuildLogsExtended.ViewModels
             }
         }
 
-		#endregion Commands for Cascading ComboBox
+        #endregion Commands for Cascading ComboBox
 
+        #region LinkButton Command to Details of referenced entities
 
+        public RelayCommand LaunchSolutionDetailsViewCommand { get; protected set; }
+
+        protected void LaunchSolutionDetailsView()
+        {
+            MSBuildLogsExtended.ViewModels.ViewModelLocator.MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM_Static.LoadItem(this.CurrentDefault.Solution_1Id);
+            MSBuildLogsExtended.ViewModels.ViewModelLocator.MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM_Static.LaunchViewDetailsViewCommand.Execute(null);
+        }
+
+        #endregion LinkButton Command to Details of referenced entities
+
+        #region GetDefaultListOfQueryOrderBySettingCollecionInString()
 
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {
@@ -954,9 +973,9 @@ namespace MSBuildLogsExtended.ViewModels
 					list.Add("Build_1_Name~DESC", "Build_1_Name Z-A");
             return list;
         }
+
+        #endregion GetDefaultListOfQueryOrderBySettingCollecionInString()
     }
-
-
 }
 
 

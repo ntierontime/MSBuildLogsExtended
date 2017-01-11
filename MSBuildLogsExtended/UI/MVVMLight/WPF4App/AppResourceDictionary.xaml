@@ -9,6 +9,8 @@
     >
     <!--Global View Model Locator-->
     <fvm:BoolToVisibilityConverter x:Key="boolToVis" />
+    <BooleanToVisibilityConverter x:Key="BoolToVis" />
+    
     <Style x:Key="ItemHeaderStyler">
         <Setter Property="ListBoxItem.Margin" Value="0,2,0,5"/>
         <Setter Property="ListBoxItem.Padding" Value="2"/>

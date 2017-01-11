@@ -8,7 +8,7 @@
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
 		xmlns:vm="clr-namespace:MSBuildLogsExtended.ViewModels;assembly=MSBuildLogsExtended.ViewModels"
 		xmlns:BuildLog="clr-namespace:MSBuildLogsExtended.WPF4App.UserControls.BuildLog"
-        Title="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildLog_Details, Source={StaticResource LocalizedStrings}}"
+        Title="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Details, Source={StaticResource LocalizedStrings}}"
         >
     <Grid>
         <Grid.RowDefinitions>

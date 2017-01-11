@@ -83,6 +83,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\UCSpinnerDotCircle.xaml.cs">
+      <DependentUpon>UCSpinnerDotCircle.xaml</DependentUpon>
+    </Compile>
+    <Page Include="UserControls\UCSpinnerDotCircle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Resource Include="Resources\Entypo.ttf" />
     <Page Include="Pages\Build\Create.xaml">
       <Generator>MSBuild:Compile</Generator>

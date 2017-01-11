@@ -41,7 +41,7 @@ namespace MSBuildLogsExtended.WPF4App
 
                         if (navigationSetting != null)
                         {
-                            if (navigationSetting.UIActionStatus == Framework.UIActionStatus.Starting || navigationSetting.UIActionStatus == Framework.UIActionStatus.Launch)
+                            if (navigationSetting.UIAction == Framework.UIAction.Search && navigationSetting.UIActionStatus == Framework.UIActionStatus.Starting)
                             {
                                 MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.IsBusy = true;
                             }
@@ -164,7 +164,7 @@ namespace MSBuildLogsExtended.WPF4App
             MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.ViewName_Edit, Framework.UIAction.Update,  Framework.UIActionStatus.Close, Framework.UIAction.GoBack, null, null);
             MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.ViewName_Delete, Framework.UIAction.Delete,  Framework.UIActionStatus.Close, Framework.UIAction.GoBack, null, null);
 
-            MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.ViewName_Create, Framework.UIAction.Create,  Framework.UIActionStatus.Success, Framework.UIAction.Navigate, "/Pages/WPCommonOfBuildLog.xaml", typeof(MSBuildLogsExtended.WPF4App.Pages.WPCommonOfBuildLog));
+            MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.ViewName_Create, Framework.UIAction.Create, Framework.UIActionStatus.Success, Framework.UIAction.Navigate, "/Pages/WPCommonOfBuildLog.xaml", typeof(MSBuildLogsExtended.WPF4App.Pages.WPCommonOfBuildLog));
             MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.ViewName_Edit, Framework.UIAction.Update,  Framework.UIActionStatus.Success, Framework.UIAction.Navigate, "/Pages/WPCommonOfBuildLog.xaml", typeof(MSBuildLogsExtended.WPF4App.Pages.WPCommonOfBuildLog));
             MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.ViewName_Delete, Framework.UIAction.Delete,  Framework.UIActionStatus.Success, Framework.UIAction.Navigate, "/Pages/WPCommonOfBuildLog.xaml", typeof(MSBuildLogsExtended.WPF4App.Pages.WPCommonOfBuildLog));
 
@@ -174,6 +174,7 @@ namespace MSBuildLogsExtended.WPF4App
 
             MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.ViewName_SearchResult, Framework.UIAction.Create,  Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/BuildLog/Create.xaml", typeof(MSBuildLogsExtended.WPF4App.Pages.BuildLog.Create));
 
+            MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.ViewName_Details, Framework.UIAction.ViewDetails, Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/BuildLog/Details.xaml", typeof(MSBuildLogsExtended.WPF4App.Pages.BuildLog.Details));
             MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.ViewName_Details, Framework.UIAction.Update,  Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/BuildLog/Edit.xaml", typeof(MSBuildLogsExtended.WPF4App.Pages.BuildLog.Edit));
             MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Add(MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.ViewName_Details, Framework.UIAction.Delete,  Framework.UIActionStatus.Launch, Framework.UIAction.Navigate, "/Pages/BuildLog/Delete.xaml", typeof(MSBuildLogsExtended.WPF4App.Pages.BuildLog.Delete));
 
