@@ -23,5 +23,11 @@ namespace MSBuildLogsExtended.WPF4App.UserControls
         {
             InitializeComponent();
         }
+
+        protected void SelectCurrentItem(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            ListBoxItem item = (ListBoxItem)sender;
+            item.IsSelected = true;
+        }
     }
 }

@@ -23,7 +23,7 @@
                         <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.EditAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button     Name="Copy" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.LaunchCopyViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.CopyAlternativeText, Source={StaticResource LocalizedStrings}}">
+                <Button     Name="Copy" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.LaunchCopyViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.CopyAlternativeText, Source={StaticResource LocalizedStrings}}" CommandParameter="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.CurrentDefault, Source={StaticResource Locator}}">
                     <StackPanel>
                         <iconPacks:PackIconMaterial Kind="ContentDuplicate" />
                         <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.CopyAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>

@@ -54,7 +54,7 @@
                 </i:Interaction.Triggers>
 </ComboBox>
         </Grid>
-<ListView Name="V_Common" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildCollectionVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM.CurrentDefault, Mode=TwoWay, Source={StaticResource Locator}}">
+<ListView Name="V_Common" Margin="12,12,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildCollectionVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM_Static.CurrentDefault, Mode=TwoWay, Source={StaticResource Locator}}">
   <i:Interaction.Triggers>
   <i:EventTrigger EventName="SelectionChanged">
     <cmd:EventToCommand Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM.SelectionChangedCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="True" />

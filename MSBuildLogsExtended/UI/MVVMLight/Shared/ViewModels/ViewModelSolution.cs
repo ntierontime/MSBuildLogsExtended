@@ -136,10 +136,10 @@ namespace MSBuildLogsExtended.ViewModels
 
         #region Copy
 
-        protected override void PrepareCopyView()
-        {
-            this.NewItem = this.Current.GetAClone();
-        }
+        //protected override void PrepareCopyView()
+        //{
+        //    this.NewItem = this.Current.GetAClone();
+        //}
 
         #endregion Copy
 

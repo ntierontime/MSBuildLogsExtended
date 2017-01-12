@@ -66,21 +66,24 @@
 <CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.IsToCompare}" />
 <ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfBuild_1OfCommon" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.BuildLog, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" ItemsSource="{Binding Path=DropDownContentsOfBuild_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.ValueToCompare}" />
         </Grid>
-        <ListView Name="V_Common" Padding="25" Height="600" Grid.Row="1" VerticalContentAlignment="Stretch" DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogCollectionVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.CurrentDefault, Mode=TwoWay, Source={StaticResource Locator}}" IsSynchronizedWithCurrentItem="True">
+        <ListView Name="V_Common" Padding="25" Height="600" Grid.Row="1" VerticalContentAlignment="Stretch" DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogCollectionVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM_Static.CurrentDefault, Mode=TwoWay, Source={StaticResource Locator}}" IsSynchronizedWithCurrentItem="True">
             <ListView.Resources>
-                <Style TargetType="ListViewItem">
+                <!--<Style TargetType="ListViewItem">
                     <Style.Triggers>
                         <Trigger Property="IsKeyboardFocusWithin" Value="True">
                             <Setter Property="IsSelected" Value="True"/>
                         </Trigger>
                     </Style.Triggers>
+                </Style>-->
+                <Style TargetType="ListBoxItem">
+                    <EventSetter Event="PreviewGotKeyboardFocus" Handler="SelectCurrentItem"/>
                 </Style>
             </ListView.Resources>
-            <!--<i:Interaction.Triggers>
-  <i:EventTrigger EventName="SelectionChanged">
-    <cmd:EventToCommand Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.SelectionChangedCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="True" />
-  </i:EventTrigger>
-            </i:Interaction.Triggers>-->
+            <i:Interaction.Triggers>
+  <!--<i:EventTrigger EventName="SelectionChanged">
+    <cmd:EventToCommand Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.SelectionChangedabcdeCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="True" />
+  </i:EventTrigger>-->
+            </i:Interaction.Triggers>
             <ListView.View >
                 <GridView ColumnHeaderToolTip="BuildLog"  AllowsColumnReorder="true"  >
                     <GridViewColumn>
@@ -88,13 +91,13 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <WrapPanel>
-                                    <Button     Name="Edit" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.LaunchEditViewCommand, Source={StaticResource Locator}}" ToolTip="{Binding Path=Framework_Resources_UIStringResource.EditAlternativeText, Source={StaticResource LocalizedStrings}}" >
+                                    <Button     Name="Edit" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.LaunchEditViewCommand, Source={StaticResource Locator}}" ToolTip="{Binding Path=Framework_Resources_UIStringResource.EditAlternativeText, Source={StaticResource LocalizedStrings}}" CommandParameter="{Binding}" >
                                         <StackPanel>
                                             <iconPacks:PackIconModern Kind="Edit" />
                                             <!--<TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.EditAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>-->
                                         </StackPanel>
                                     </Button>
-                                    <Button     Name="Details" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.LaunchViewDetailsViewCommand, Source={StaticResource Locator}}" ToolTip="{Binding Path=Framework_Resources_UIStringResource.DetailsAlternativeText, Source={StaticResource LocalizedStrings}}" >
+                                    <Button     Name="Details" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.LaunchViewDetailsViewCommand, Source={StaticResource Locator}}" ToolTip="{Binding Path=Framework_Resources_UIStringResource.DetailsAlternativeText, Source={StaticResource LocalizedStrings}}" CommandParameter="{Binding}" >
                                         <StackPanel>
                                             <iconPacks:PackIconOcticons Kind="Briefcase" />
                                             <!--<TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.DetailsAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>-->

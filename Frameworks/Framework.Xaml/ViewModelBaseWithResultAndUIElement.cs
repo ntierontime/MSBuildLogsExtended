@@ -26,12 +26,12 @@ namespace Framework.Xaml
             this.ClearSearchResultCommand = new RelayCommand(ClearSearchResult, CanClearSearchResult);
             this.RefreshNewItemCommand = new RelayCommand(this.RefreshNewItem);
 			
-			this.LaunchCopyViewCommand = new RelayCommand(LaunchCopyView);
+			this.LaunchCopyViewCommand = new RelayCommand<object>(LaunchCopyView);
             
-			this.LaunchViewDetailsViewCommand = new RelayCommand(LaunchViewDetailsView);
+			this.LaunchViewDetailsViewCommand = new RelayCommand<object>(LaunchViewDetailsView);
             this.CloseViewDetailsViewCommand = new RelayCommand(CloseViewDetailsView);
 
-            this.LaunchEditViewCommand = new RelayCommand(LaunchEditView);
+            this.LaunchEditViewCommand = new RelayCommand<object>(LaunchEditView);
             this.CloseEditViewCommand = new RelayCommand(CloseEditView);
             this.SaveCommand = new RelayCommand(Save, CanSave);
 
@@ -39,7 +39,7 @@ namespace Framework.Xaml
             this.CloseCreateViewCommand = new RelayCommand(CloseCreateView);
             this.AddCommand = new RelayCommand(Add, CanAdd);
 
-            this.LaunchDeleteViewCommand = new RelayCommand(LaunchDeleteView);
+            this.LaunchDeleteViewCommand = new RelayCommand<object>(LaunchDeleteView);
             this.CloseDeleteViewCommand = new RelayCommand(CloseDeleteView);
             this.DeleteCommand = new RelayCommand(Delete, CanDelete);
 
@@ -534,14 +534,24 @@ namespace Framework.Xaml
 
         #region ViewDetails
 
-        public RelayCommand LaunchViewDetailsViewCommand { get; protected set; }
+        public RelayCommand<object> LaunchViewDetailsViewCommand { get; protected set; }
 
-        protected void LaunchViewDetailsView()
+        protected void LaunchViewDetailsView(object o)
         {
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
 
+            PrepareViewDetailsView(o);
+
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
+        }
+
+        protected virtual void PrepareViewDetailsView(object o)
+        {
+            if (o != null && o is TSearchResultEntityItem)
+            {
+                this.Current = (TSearchResultEntityItem)o;
+            }
         }
 
         public RelayCommand CloseViewDetailsViewCommand { get; protected set; }
@@ -558,32 +568,56 @@ namespace Framework.Xaml
 		
         #region Copy
 
-        public RelayCommand LaunchCopyViewCommand { get; protected set; }
+        public RelayCommand<object> LaunchCopyViewCommand { get; protected set; }
 
-        protected void LaunchCopyView()
+        protected void LaunchCopyView(object o)
         {
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.Copy;
 
-            this.PrepareCopyView();
+            this.PrepareCopyView(o);
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
         }
 
-        protected abstract void PrepareCopyView();
+        protected virtual void PrepareCopyView(object o)
+        {
+            if (o == null && o is TSearchResultEntityItem)
+            {
+                if (this.NewItem == null)
+                {
+                    this.NewItem = new TSearchResultEntityItem();
+                }
+            }
+            else
+            {
+                this.NewItem = (TSearchResultEntityItem)o;
+            }
+    }
 
-        #endregion Copy
+    #endregion Copy
 
-        #region Save
+    #region Save
 
-        public RelayCommand LaunchEditViewCommand { get; protected set; }
+    public RelayCommand<object> LaunchEditViewCommand { get; protected set; }
 
-        protected void LaunchEditView()
+        protected void LaunchEditView(object o)
         {
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.Update;
 
+            this.PrepareEditView(o);
+
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
+        }
+
+
+        protected virtual void PrepareEditView(object o)
+        {
+            if (o != null && o is TSearchResultEntityItem)
+            {
+                this.CurrentInEditing = (TSearchResultEntityItem)o;
+            }
         }
 
         public RelayCommand CloseEditViewCommand { get; protected set; }
@@ -657,14 +691,24 @@ namespace Framework.Xaml
 
         #region Delete
 
-        public RelayCommand LaunchDeleteViewCommand { get; protected set; }
+        public RelayCommand<object> LaunchDeleteViewCommand { get; protected set; }
 
-        protected void LaunchDeleteView()
+        protected void LaunchDeleteView(object o)
         {
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.Delete;
 
+            this.PrepareDeleteView(o);
+
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
+        }
+
+        protected virtual void PrepareDeleteView(object o)
+        {
+            if (o != null && o is TSearchResultEntityItem)
+            {
+                this.Current = (TSearchResultEntityItem)o;
+            }
         }
 
         public RelayCommand CloseDeleteViewCommand { get; protected set; }
@@ -852,7 +896,6 @@ namespace Framework.Xaml
 
         #endregion Business Entity Collection + Current Selected or editing Entity
 
-
         protected override void SelectionChanged()
         {
             if (this.CurrentDefault != null)
@@ -863,7 +906,42 @@ namespace Framework.Xaml
                     Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
             }
         }
+        protected override void PrepareCopyView(object o)
+        {
+            if (o == null)
+            {
+                if (this.NewItemDefault == null)
+                {
+                    this.NewItemDefault = new TSearchResultDataViewItem();
+                }
+            }
+            else
+            {
+                this.NewItemDefault = (TSearchResultDataViewItem)o;
+            }
+        }
 
+        protected override void PrepareDeleteView(object o)
+        {
+            if (o != null && o is TSearchResultDataViewItem)
+            {
+                this.CurrentDefault = (TSearchResultDataViewItem)o;
+            }
+        }
+        protected override void PrepareEditView(object o)
+        {
+            if (o != null && o is TSearchResultDataViewItem)
+            {
+                this.CurrentInEditingDefault = (TSearchResultDataViewItem)o;
+            }
+        }
+        protected override void PrepareViewDetailsView(object o)
+        {
+            if (o != null && o is TSearchResultDataViewItem)
+            {
+                this.CurrentDefault = (TSearchResultDataViewItem)o;
+            }
+        }
     }
 }
 
