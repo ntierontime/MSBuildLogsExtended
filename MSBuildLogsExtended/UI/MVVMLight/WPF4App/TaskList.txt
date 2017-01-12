@@ -63,4 +63,7 @@ Although not used, but CommandManager.InvalidateRequerySuggested(); suppose to w
 http://stackoverflow.com/questions/6359848/wpf-loading-spinner/6369137#6369137
 Windows Phone <ProgressRing IsActive="True"/> http://stackoverflow.com/questions/23856883/how-do-you-show-the-loading-animation-for-windows-phone-8-1-universal-store-apps
 19. (Ready)BoolToVisibilityConverter can be removed for Wpf.
-20. 
+20. (Ready)single entity are tranferred as button command paramenters, details/delete/addnew/edit.
+21. ContentData, similar to asp.net mvc bootstrap Panel
+22. Customized Entity Update Form.
+23. Entity Related Page per entity.
