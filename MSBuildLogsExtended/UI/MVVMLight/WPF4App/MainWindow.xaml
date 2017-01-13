@@ -30,7 +30,7 @@
             <MenuItem Header="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Build, Mode=OneWay, Source={StaticResource LocalizedStrings}}" >
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
-                        <cmd:EventToCommand Command="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}"
+                                <cmd:EventToCommand Command="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildCollectionVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}"
                             PassEventArgsToCommand="True" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
@@ -38,7 +38,7 @@
             <MenuItem Header="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildEventCode.BuildEventCode, Mode=OneWay, Source={StaticResource LocalizedStrings}}" >
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
-                        <cmd:EventToCommand Command="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildEventCodeVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}"
+                                <cmd:EventToCommand Command="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildEventCodeCollectionVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}"
                             PassEventArgsToCommand="True" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
@@ -46,7 +46,7 @@
             <MenuItem Header="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildLog, Mode=OneWay, Source={StaticResource LocalizedStrings}}" >
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
-                        <cmd:EventToCommand Command="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}"
+                        <cmd:EventToCommand Command="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogCollectionVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}"
                             PassEventArgsToCommand="True" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
@@ -54,7 +54,7 @@
             <MenuItem Header="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntitySolution.Solution, Mode=OneWay, Source={StaticResource LocalizedStrings}}" >
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
-                        <cmd:EventToCommand Command="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}"
+                                <cmd:EventToCommand Command="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfSolutionCollectionVM.LaunchSearchViewCommand, Mode=OneWay, Source={StaticResource Locator}}"
                             PassEventArgsToCommand="True" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>

@@ -1550,8 +1550,8 @@ namespace MSBuildLogsExtended.ViewModels
 
         #region MVVMViewModel: MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM
 
-        private static MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM;
-        public static MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM_Static
+        private static MSBuildLogsExtended.ViewModels.BuildLogItemVM m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM;
+        public static MSBuildLogsExtended.ViewModels.BuildLogItemVM MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM_Static
         {
             get
             {
@@ -1564,7 +1564,7 @@ namespace MSBuildLogsExtended.ViewModels
             }
         }
 
-        public MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM
+        public MSBuildLogsExtended.ViewModels.BuildLogItemVM MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM
         {
             get
             {
@@ -1591,13 +1591,13 @@ namespace MSBuildLogsExtended.ViewModels
         {
             if (m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM == null)
             {
-                m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM = new MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM();
+                m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM = new MSBuildLogsExtended.ViewModels.BuildLogItemVM();
             }
         }
 
         #endregion MVVMViewModel: MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM
 
-		#region MVVMViewModel: MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM
+        #region MVVMViewModel: MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogCollectionVM
 
         private static MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogCollectionVM;
         public static MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogCollectionVM_Static
@@ -1644,9 +1644,56 @@ namespace MSBuildLogsExtended.ViewModels
             }
         }
 
+        #endregion MVVMViewModel: MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogCollectionVM
+
+        #region MVVMViewModel: MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVMExtended
+
+        private static MSBuildLogsExtended.ViewModels.BuildLogVMExtended m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended;
+        public static MSBuildLogsExtended.ViewModels.BuildLogVMExtended MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended_Static
+        {
+            get
+            {
+                if (m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended == null)
+                {
+                    CreateMSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended();
+                }
+
+                return m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended;
+            }
+        }
+
+        public MSBuildLogsExtended.ViewModels.BuildLogVMExtended MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended
+        {
+            get
+            {
+                return MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended_Static;
+            }
+        }
+
+        /// <summary>
+        /// Provides a deterministic way to delete the MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM property.
+        /// </summary>
+        public static void Clear_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended()
+        {
+            if (m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended != null)
+            {
+                m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended.Cleanup();
+                m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended = null;
+            }
+        }
+
+        /// <summary>
+        /// Provides a deterministic way to create the MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM property.
+        /// </summary>
+        public static void CreateMSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended()
+        {
+            if (m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended == null)
+            {
+                m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended = new MSBuildLogsExtended.ViewModels.BuildLogVMExtended();
+            }
+        }
+
         #endregion MVVMViewModel: MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM
-
-
 
 
         #region MVVMViewModel: MSBuildLogsExtended.ViewModels.WPCommonOfSolutionVM

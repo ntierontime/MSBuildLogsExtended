@@ -1,3 +1,4 @@
+using GalaSoft.MvvmLight.CommandWpf;
 using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Threading;
 using System;
@@ -13,8 +14,26 @@ namespace MSBuildLogsExtended.ViewModels
         #region constructor
 
         public BuildLogItemVM()
+            : base()
         {
             this.SuppressMVVMLightEventToCommandMessage = false;
+
+            this.LaunchCopyViewCommand = new RelayCommand<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>(LaunchCopyView);
+
+            this.LaunchViewDetailsViewCommand = new RelayCommand<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>(LaunchViewDetailsView);
+            this.CloseViewDetailsViewCommand = new RelayCommand(CloseViewDetailsView);
+
+            this.LaunchEditViewCommand = new RelayCommand<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>(LaunchEditView);
+            this.CloseEditViewCommand = new RelayCommand(CloseEditView);
+            this.SaveCommand = new RelayCommand(Save, CanSave);
+
+            this.LaunchCreateViewCommand = new RelayCommand(LaunchCreateView);
+            this.CloseCreateViewCommand = new RelayCommand(CloseCreateView);
+            this.AddCommand = new RelayCommand(Add, CanAdd);
+
+            this.LaunchDeleteViewCommand = new RelayCommand<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>(LaunchDeleteView);
+            this.CloseDeleteViewCommand = new RelayCommand(CloseDeleteView);
+            this.DeleteCommand = new RelayCommand(Delete, CanDelete);
         }
 
         #endregion constructor
@@ -181,8 +200,79 @@ namespace MSBuildLogsExtended.ViewModels
 
         protected override void Save()
         {
-            throw new NotImplementedException();
+            #region Asyncronized wcf method call
+
+            string viewName = ViewName_Edit;
+            Framework.UIAction uiAction = Framework.UIAction.Update;
+
+            if (!this.SuppressMVVMLightEventToCommandMessage)
+                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
+
+            MSBuildLogsExtended.WcfContracts.IBuildLogServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuildLog();
+
+            AsyncCallback asyncCallback = delegate (IAsyncResult result)
+            {
+#if WINDOWS_PHONE
+				DispatcherHelper.Initialize();
+#endif
+                try
+                {
+                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                    {
+                        var responseMessage = _Instance.EndUpdateEntity(result);
+
+                        if (!this.SuppressMVVMLightEventToCommandMessage)
+                            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
+                    });
+                }
+                catch (Exception ex)
+                {
+                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                    {
+                        if (!this.SuppressMVVMLightEventToCommandMessage)
+                            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
+                    });
+                }
+            };
+
+            try
+            {
+#if WINDOWS_PHONE
+                AssignSelectedValueFromSelectedItemToEntity(this.m_CurrentInEditingDefault);
+#endif
+
+                MSBuildLogsExtended.CommonBLLEntities.BuildLogRequestMessageBuiltIn _Request = new MSBuildLogsExtended.CommonBLLEntities.BuildLogRequestMessageBuiltIn()
+                {
+                    Critieria = new MSBuildLogsExtended.DataSourceEntities.BuildLogCollection(),
+                    BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
+                    BusinessLogicLayerRequestTypes = Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Update,
+                };
+                _Request.Critieria.Add(MSBuildLogsExtended.EntityContracts.IBuildLogHelper.Clone<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default, MSBuildLogsExtended.DataSourceEntities.BuildLog>(this.m_Item));
+                _Instance.BeginUpdateEntity(_Request, asyncCallback, null);
+            }
+            catch (Exception ex)
+            {
+                if (!this.SuppressMVVMLightEventToCommandMessage)
+                    Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
+            }
+
+            #endregion Asyncronized wcf method call
+
+            #region Syncronized wcf method call -- not in use/WPF only
+
+            /*
+            MSBuildLogsExtended.CommonBLLIoC.IoCBuildLog.UpdateEntity(this.m_CurrentDefault);
+			*/
+
+            #endregion Syncronized wcf method call -- not in use/WPF only
         }
+
+
+        public  void Cleanup()
+        {
+
+        }
+
     }
 }
 

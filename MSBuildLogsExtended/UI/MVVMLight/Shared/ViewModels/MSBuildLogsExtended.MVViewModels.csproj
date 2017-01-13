@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BuildLogItemVM.cs" />
+    <Compile Include="BuildLogVMExtended.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <Compile Include="MainViewModel.cs" />

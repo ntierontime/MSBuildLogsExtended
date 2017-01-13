@@ -977,5 +977,3 @@ namespace MSBuildLogsExtended.ViewModels
         #endregion GetDefaultListOfQueryOrderBySettingCollecionInString()
     }
 }
-
-

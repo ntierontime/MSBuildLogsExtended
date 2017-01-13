@@ -28,21 +28,21 @@
             <RowDefinition   Height="35" />
         </Grid.RowDefinitions>
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Build_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
-        <TextBlock Text="{Binding Path=CurrentDefault.Build_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
+        <TextBlock Text="{Binding Path=Item.Build_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
-        <TextBlock Text="{Binding Path=CurrentDefault.Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
+        <TextBlock Text="{Binding Path=Item.Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_1Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
-        <TextBlock Text="{Binding Path=CurrentDefault.Solution_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" />
+        <TextBlock Text="{Binding Path=Item.Solution_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
-        <TextBlock Text="{Binding Path=CurrentDefault.BuildEventCode_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" />
+        <TextBlock Text="{Binding Path=Item.BuildEventCode_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
-        <TextBlock Text="{Binding Path=CurrentDefault.BuildId, Mode=TwoWay}" Grid.Column="1" Grid.Row="5" />
+        <TextBlock Text="{Binding Path=Item.BuildId, Mode=TwoWay}" Grid.Column="1" Grid.Row="5" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCodeId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
-        <TextBlock Text="{Binding Path=CurrentDefault.BuildEventCodeId, Mode=TwoWay}" Grid.Column="1" Grid.Row="6" />
+        <TextBlock Text="{Binding Path=Item.BuildEventCodeId, Mode=TwoWay}" Grid.Column="1" Grid.Row="6" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Message, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
-        <TextBlock Text="{Binding Path=CurrentDefault.Message, Mode=TwoWay}" Grid.Column="1" Grid.Row="7" />
+        <TextBlock Text="{Binding Path=Item.Message, Mode=TwoWay}" Grid.Column="1" Grid.Row="7" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
-        <TextBlock Text="{Binding Path=CurrentDefault.EventTime, Mode=TwoWay}" Grid.Column="1" Grid.Row="8" />
+        <TextBlock Text="{Binding Path=Item.EventTime, Mode=TwoWay}" Grid.Column="1" Grid.Row="8" />
     </Grid>
 </UserControl>

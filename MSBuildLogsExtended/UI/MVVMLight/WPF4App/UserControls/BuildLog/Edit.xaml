@@ -28,20 +28,20 @@
             <RowDefinition   Height="35" />
         </Grid.RowDefinitions>
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Build_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
-        <TextBlock Text="{Binding Path=CurrentInEditingDefault.Build_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
+        <TextBlock Text="{Binding Path=Item.Build_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
-        <TextBlock Text="{Binding Path=CurrentInEditingDefault.Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
+        <TextBlock Text="{Binding Path=Item.Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_1Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
-        <TextBlock Text="{Binding Path=CurrentInEditingDefault.Solution_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" />
+        <TextBlock Text="{Binding Path=Item.Solution_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
-        <TextBlock Text="{Binding Path=CurrentInEditingDefault.BuildEventCode_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" />
+        <TextBlock Text="{Binding Path=Item.BuildEventCode_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
-		<ComboBox ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.BuildLog, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.DropDownContentsOfBuild_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=BuildId}" />
+        <ComboBox ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.BuildLog, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended.DropDownContentsOfBuild_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Item.BuildId}" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCodeId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Message, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
-        <TextBox Text="{Binding Path=CurrentInEditingDefault.Message, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="7" />
+        <TextBox Text="{Binding Path=Item.Message, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="7" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
-        <DatePicker HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="8" SelectedDate="{Binding Path=CurrentInEditingDefault.EventTime, Mode=TwoWay}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
+        <DatePicker HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="8" SelectedDate="{Binding Path=Item.EventTime, Mode=TwoWay}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
     </Grid>
 </UserControl>
