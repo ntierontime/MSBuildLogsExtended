@@ -20,8 +20,8 @@ namespace Framework.ViewModels
 
         public Framework.EntityContracts.ContentData ContentData { get; set; }
 
-        public TSearchCriteria Criteria { get; set; }
-        public TItem Item { get; set; }
+        public virtual TSearchCriteria Criteria { get; set; }
+        public virtual TItem Item { get; set; }
         public Framework.EntityContracts.SearchStatus SearchStatus { get; set; }
         public Framework.CommonBLLEntities.BusinessLogicLayerResponseStatus StatusOfResult { get; set; }
         public string StatusMessageOfResult { get; set; }

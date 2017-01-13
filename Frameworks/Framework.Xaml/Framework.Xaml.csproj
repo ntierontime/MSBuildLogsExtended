@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModelItemBase.cs" />
     <None Include="packages.config" />
     <Compile Include="TextBoxUpdateSourceBehaviour.cs" />
     <Compile Include="BindingUtility.cs" />

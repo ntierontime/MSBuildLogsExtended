@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="BuildLogItemVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <Compile Include="MainViewModel.cs" />
@@ -44,6 +45,10 @@
     <Compile Include="LocalizedStrings.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Frameworks\Framework.ViewModels\Framework.ViewModels.csproj">
+      <Project>{2def4f9f-015d-40c4-b153-6c687c308152}</Project>
+      <Name>Framework.ViewModels</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\..\Core\CommonBLLEntities\MSBuildLogsExtended.CommonBLLEntities.csproj">
       <Project>{f201379d-034b-4892-9aec-927a3d67d260}</Project>
       <Name>MSBuildLogsExtended.CommonBLLEntities</Name>
