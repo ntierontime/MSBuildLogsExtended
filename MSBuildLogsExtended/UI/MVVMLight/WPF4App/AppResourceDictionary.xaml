@@ -8,9 +8,26 @@
     mc:Ignorable="d"
     >
     <!--Global View Model Locator-->
-    <fvm:BoolToVisibilityConverter x:Key="boolToVis" />
     <BooleanToVisibilityConverter x:Key="BoolToVis" />
-    
+    <Style x:Key="RectangleStyle" TargetType="Rectangle">
+        <Setter Property = "Stretch" Value="Fill"/>
+        <Setter Property = "Fill" Value="LightBlue"/>
+        <Setter Property = "RadiusX" Value="15"/>
+        <Setter Property = "RadiusY" Value="15"/>
+        <Setter Property = "Width" Value="{Binding ActualWidth, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Grid}}}"/>
+    </Style>
+    <Style x:Key="BorderStyle" TargetType="Border">
+        <Setter Property = "BorderBrush" Value="White"/>
+        <Setter Property = "BorderThickness" Value="2"/>
+        <Setter Property = "Padding" Value="10"/>
+    </Style>
+    <Style x:Key="Heading" TargetType="Label">
+        <Setter Property="FontSize" Value="18" />
+    </Style>
+    <Style x:Key="SubHeading" TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+    </Style>
+
     <Style x:Key="ItemHeaderStyler">
         <Setter Property="ListBoxItem.Margin" Value="0,2,0,5"/>
         <Setter Property="ListBoxItem.Padding" Value="2"/>
@@ -62,16 +79,18 @@
     <Style TargetType="{x:Type TextBlock}"
            x:Key="GridBlockStyle">
         <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="Visibility"
+        <Setter Property="Margin" Value="5,0,5,0" />
+        <!--<Setter Property="Visibility"
               Value="{Binding Path=IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}},
-              Converter={StaticResource boolToVis}, ConverterParameter=False}" />
+              Converter={StaticResource BoolToVis}, ConverterParameter=False}" />-->
     </Style>
     <Style TargetType="{x:Type FrameworkElement}"
            x:Key="GridEditStyle">
         <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="Visibility"
+        <Setter Property="Margin" Value="5,0,5,0" />
+        <!--<Setter Property="Visibility"
               Value="{Binding Path=IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}},
-              Converter={StaticResource boolToVis}, ConverterParameter=True}" />
+              Converter={StaticResource BoolToVis}, ConverterParameter=True}" />-->
     </Style>
     <Style TargetType="{x:Type ToolBarTray}" x:Key="ToolBarTrayStyle">
         <Setter Property="Background" Value="LightBlue" />

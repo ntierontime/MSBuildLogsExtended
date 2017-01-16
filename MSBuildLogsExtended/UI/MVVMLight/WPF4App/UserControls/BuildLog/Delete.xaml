@@ -11,38 +11,59 @@
 			xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
 		    xmlns:vm="clr-namespace:MSBuildLogsExtended.ViewModels;assembly=MSBuildLogsExtended.ViewModels"
             >
-    <Grid DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM, Source={StaticResource Locator}}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition   Width="150" />
-            <ColumnDefinition   Width="*" MaxWidth="750"/>
-        </Grid.ColumnDefinitions>
+
+    <Grid HorizontalAlignment="Stretch" >
         <Grid.RowDefinitions>
-            <RowDefinition   Height="35" />
-            <RowDefinition   Height="35" />
-            <RowDefinition   Height="35" />
-            <RowDefinition   Height="35" />
-            <RowDefinition   Height="35" />
-            <RowDefinition   Height="35" />
-            <RowDefinition   Height="35" />
-            <RowDefinition   Height="35" />
-            <RowDefinition   Height="35" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Build_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
-		<TextBlock Text="{Binding Path=Item.Build_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
-		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
-        <TextBlock Text="{Binding Path=Item.Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
-		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_1Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
-		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
-        <TextBlock Text="{Binding Path=Item.Solution_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" />
-		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
-        <TextBlock Text="{Binding Path=Item.BuildEventCode_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" />
-		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
-        <TextBlock Text="{Binding Path=Item.BuildId, Mode=TwoWay}" Grid.Column="1" Grid.Row="5" />
-		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCodeId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
-        <TextBlock Text="{Binding Path=Item.BuildEventCodeId, Mode=TwoWay}" Grid.Column="1" Grid.Row="6" />
-		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Message, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
-        <TextBlock Text="{Binding Path=Item.Message, Mode=TwoWay}" Grid.Column="1" Grid.Row="7" />
-		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
-        <TextBlock Text="{Binding Path=Item.EventTime, Mode=TwoWay}" Grid.Column="1" Grid.Row="8" />
+        <Rectangle Style="{StaticResource RectangleStyle}" Grid.Row="0" />
+        <Rectangle Style="{StaticResource RectangleStyle}" Grid.Row="1" />
+        <Border Style="{StaticResource BorderStyle}" Grid.Row="0" >
+            <Grid HorizontalAlignment="Stretch" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildLog, Source={StaticResource LocalizedStrings}}" Style="{StaticResource Heading}" />
+                <Label Grid.Row="1" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Delete_BuildLog, Source={StaticResource LocalizedStrings}}" Style="{StaticResource SubHeading}" />
+            </Grid>
+        </Border>
+        <Border Style="{StaticResource BorderStyle}" Grid.Row="1" >
+            <Grid DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM, Source={StaticResource Locator}}" HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition   Width="150" />
+                    <ColumnDefinition   Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition   Height="35" />
+                    <RowDefinition   Height="35" />
+                    <RowDefinition   Height="35" />
+                    <RowDefinition   Height="35" />
+                    <RowDefinition   Height="35" />
+                    <RowDefinition   Height="35" />
+                    <RowDefinition   Height="35" />
+                    <RowDefinition   Height="35" />
+                    <RowDefinition   Height="35" />
+                </Grid.RowDefinitions>
+		        <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
+                <TextBlock Text="{Binding Path=Item.Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
+		        <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_1Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
+		        <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
+                <TextBlock Text="{Binding Path=Item.Solution_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" />
+		        <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
+                <TextBlock Text="{Binding Path=Item.BuildEventCode_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" />
+		        <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
+                <TextBlock Text="{Binding Path=Item.BuildId, Mode=TwoWay}" Grid.Column="1" Grid.Row="5" />
+		        <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCodeId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
+                <TextBlock Text="{Binding Path=Item.BuildEventCodeId, Mode=TwoWay}" Grid.Column="1" Grid.Row="6" />
+		        <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Message, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
+                <TextBlock Text="{Binding Path=Item.Message, Mode=TwoWay}" Grid.Column="1" Grid.Row="7" />
+		        <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
+                <TextBlock Text="{Binding Path=Item.EventTime, Mode=TwoWay}" Grid.Column="1" Grid.Row="8" />
+            </Grid>
+        </Border>
     </Grid>
 </UserControl>
+

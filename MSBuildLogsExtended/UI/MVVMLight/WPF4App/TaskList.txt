@@ -67,3 +67,12 @@ Windows Phone <ProgressRing IsActive="True"/> http://stackoverflow.com/questions
 21. ContentData, similar to asp.net mvc bootstrap Panel
 22. Customized Entity Update Form.
 23. Entity Related Page per entity.
+24. (Ready-UAT)Bundle.config missing in MSBuildLogsExtended.AspNetMvc40WebApi 
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	CS2001	Source file 'D:\Test4\WhatEverII\GeneratedCode\B2_Solutions\MSBuildLogsExtended\MSBuildLogsExtended\UI\Web\AspNetMvc40WebApi\App_Start\BundleConfig.cs' could not be found.	MSBuildLogsExtended.AspNetMvc40WebApi	D:\Test4\WhatEverII\GeneratedCode\B2_Solutions\MSBuildLogsExtended\MSBuildLogsExtended\UI\Web\AspNetMvc40WebApi\CSC	1	Active
+25. MVVMLightViewModels should add more references, PresentationCore/Framework + MVVMLight + System.ServiceModel
+26. WPF4App should add more references, PresentationCore/PresentationFramework + MVVMLight + Mahapps.Metro + Mahapps.Metro.IconPacks + System.ServiceModel
+27. Default was added to not.
+28. Some reference issue of 3 Linq to Sql projects
+29. Some reference issue of 2 EF V6 projects
+30. 

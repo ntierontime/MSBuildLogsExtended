@@ -22,8 +22,22 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Grid.Column="0" DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogCollectionVM, Source={StaticResource Locator}}" HorizontalAlignment="Stretch" Height="{Binding ElementName=LayoutRoot, Path=ActualHeight}">
+        <Rectangle Style="{StaticResource RectangleStyle}" Grid.Row="0" />
+        <Rectangle Style="{StaticResource RectangleStyle}" Grid.Row="1" />
+        <Rectangle Style="{StaticResource RectangleStyle}" Grid.Row="2" />
+
+        <Border Style="{StaticResource BorderStyle}" Grid.Row="0" >
+            <Grid HorizontalAlignment="Stretch" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildLog, Source={StaticResource LocalizedStrings}}" Style="{StaticResource Heading}" />
+            </Grid>
+        </Border>
+        <Border Style="{StaticResource BorderStyle}" Grid.Row="1" >
+            <Grid Grid.Row="1" Grid.Column="0" DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogCollectionVM, Source={StaticResource Locator}}" HorizontalAlignment="Stretch" Height="{Binding ElementName=LayoutRoot, Path=ActualHeight}">
 <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="160" />
                 <ColumnDefinition Width="*" />
@@ -34,8 +48,10 @@
 				<RowDefinition Height="30" />
 				<RowDefinition Height="30" />
 				<RowDefinition Height="30" />
-				<RowDefinition Height="30" />            </Grid.RowDefinitions>
-<CheckBox Name="ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft.IsToCompare}" />
+				<RowDefinition Height="30" /> 
+            </Grid.RowDefinitions>
+            <Rectangle Stretch="Fill" Fill="LightBlue" RadiusX="15" RadiusY="15" Margin="2" Grid.ColumnSpan="2" Grid.RowSpan="6" Width="{Binding ActualWidth, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Grid}}}"/>
+            <CheckBox Name="ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareMessageCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft.IsToCompare}" />
 <TextBox Name="ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon" Text="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft.ValueToBeContained}" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_ValueToBeContained_ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" />
 <CheckBox Name="ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.IsToCompare}" />
 <WrapPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch">
@@ -66,7 +82,9 @@
 <CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.IsToCompare}" />
             <ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfBuild_1OfCommon" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.BuildLog, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" ItemsSource="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended.DropDownContentsOfBuild_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.ValueToCompare}" />
         </Grid>
-        <ListView Name="V_Common" Padding="25" Height="600" Grid.Row="1" VerticalContentAlignment="Stretch" DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogCollectionVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM_Static.CurrentDefault, Mode=TwoWay, Source={StaticResource Locator}}" IsSynchronizedWithCurrentItem="True">
+        </Border>
+        <Border Style="{StaticResource BorderStyle}" Grid.Row="2" >
+            <ListView Name="V_Common" Padding="25" Height="600" Grid.Row="2" VerticalContentAlignment="Stretch" DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogCollectionVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM_Static.CurrentDefault, Mode=TwoWay, Source={StaticResource Locator}}" IsSynchronizedWithCurrentItem="True">
             <ListView.Resources>
                 <!--<Style TargetType="ListViewItem">
                     <Style.Triggers>
@@ -219,5 +237,6 @@
 </GridView>
             </ListView.View>
 </ListView>
-        </Grid>
+        </Border>
+    </Grid>
 </UserControl>

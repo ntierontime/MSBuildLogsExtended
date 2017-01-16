@@ -342,23 +342,23 @@ namespace Framework
 
     #region class NameValuePair and NameValueCollection
 
-	/// <summary>
+    /// <summary>
     /// Concrete NameValuePair
     /// </summary>
     [DataContract]
     public class NameValuePair : INameValuePair
     {
-		#region Constructors
+        #region Constructors
 
         /// <summary>
         /// Initializes a new instance of the <see cref="NameValuePair"/> class.
         /// </summary>
         public NameValuePair() { }
 
-		public NameValuePair(
+        public NameValuePair(
             long value, string name
             )
-			: this(value.ToString(), name)
+            : this(value.ToString(), name)
         {
         }
 
@@ -370,7 +370,7 @@ namespace Framework
         public NameValuePair(
             Guid value, string name
             )
-			: this(value.ToString(), name)
+            : this(value.ToString(), name)
         {
         }
 
@@ -381,7 +381,7 @@ namespace Framework
         /// <param name="name">The name.</param>
         public NameValuePair(
             string value, string name
-            ) 
+            )
         {
             this.Name = name;
             this.Value = value;
@@ -399,9 +399,9 @@ namespace Framework
         {
         }
 
-		#endregion Constructors
+        #endregion Constructors
 
-		#region Properties
+        #region Properties
 
 
         /// <summary>
@@ -410,7 +410,7 @@ namespace Framework
         /// <value>
         /// The value.
         /// </value>
-		[DataMember]
+        [DataMember]
 #if (WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
 #else
         [LINQtoCSV.CsvColumn()]
@@ -429,9 +429,9 @@ namespace Framework
 #endif
         public string Name { get; set; }
 
-		#endregion Properties
+        #endregion Properties
 
-		#region ToString()
+        #region ToString()
 
 
         /// <summary>
@@ -440,15 +440,15 @@ namespace Framework
         /// <returns>
         /// A <see cref="System.String"/> that represents this instance.
         /// </returns>
-		public override string ToString()
+        public override string ToString()
         {
             return string.Format("{0}:{1}", this.Value, this.Name);
         }
 
-		#endregion ToString()
+        #endregion ToString()
 
-		#region Equals(...)
-		
+        #region Equals(...)
+
         /// <summary>
         /// http://blog.ariankulp.com/2013/07/fixing-selecteditem-must-always-be-set.html
         /// Fixing SelectedItem must always be set to a valid value
@@ -474,7 +474,12 @@ namespace Framework
             }
         }
 
-		#endregion Equals(...)
+        #endregion Equals(...)
+
+        public override int GetHashCode()
+        {
+            return this.Value.GetHashCode();
+        }
 
         #region Parse value to .net value
 
@@ -742,6 +747,111 @@ namespace Framework
         }
 
         #endregion Parse value to .net value
+    }
+
+    /// <summary>
+    /// Concrete NameValuePair
+    /// </summary>
+    [DataContract]
+    public class NameValuePair<TValueType>
+    {
+        #region Constructors
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NameValuePair"/> class.
+        /// </summary>
+        public NameValuePair() { }
+
+        public NameValuePair(
+            TValueType value, string name
+            )
+        {
+            this.Value = value;
+            this.Name = name;
+        }
+
+
+        #endregion Constructors
+
+        #region Properties
+
+
+        /// <summary>
+        /// Gets or sets the value.
+        /// </summary>
+        /// <value>
+        /// The value.
+        /// </value>
+        [DataMember]
+#if (WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
+#else
+        [LINQtoCSV.CsvColumn()]
+#endif
+        public TValueType Value { get; set; }
+        /// <summary>
+        /// Gets or sets the name.
+        /// </summary>
+        /// <value>
+        /// The name.
+        /// </value>
+		[DataMember]
+#if (WINDOWS_PHONE || SILVERLIGHT || XAMARIN || __IOS__ || ANDROID)
+#else
+        [LINQtoCSV.CsvColumn()]
+#endif
+        public string Name { get; set; }
+
+        #endregion Properties
+
+        #region ToString()
+
+
+        /// <summary>
+        /// Returns a <see cref="System.String"/> that represents this instance.
+        /// </summary>
+        /// <returns>
+        /// A <see cref="System.String"/> that represents this instance.
+        /// </returns>
+        public override string ToString()
+        {
+            return string.Format("{0}:{1}", this.Value, this.Name);
+        }
+
+        #endregion ToString()
+
+        #region Equals(...)
+
+        /// <summary>
+        /// http://blog.ariankulp.com/2013/07/fixing-selecteditem-must-always-be-set.html
+        /// Fixing SelectedItem must always be set to a valid value
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            try
+            {
+                if (obj is NameValuePair<TValueType>)
+                {
+                    return ((NameValuePair<TValueType>)obj).Value.Equals(this.Value);
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        #endregion Equals(...)
+
+        public override int GetHashCode()
+        {
+            return this.Value.GetHashCode();
+        }
     }
 
 

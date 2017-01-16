@@ -19,29 +19,7 @@ namespace MSBuildLogsExtended.ViewModels
 
             this.GetDropDownContentsOfSolution_1Command = new RelayCommand(this.GetDropDownContentsOfSolution_1);
 
-
-#if NETFX_CORE
-            this.GetDropDownContentsOfSolution_1SelectionChangedCommand = new RelayCommand<Windows.UI.Xaml.Controls.SelectionChangedEventArgs>(
-                (e) =>
-                {
-                    if (e.AddedItems.Count > 0)
-                    {
-                        Framework.NameValuePair item = (Framework.NameValuePair)e.AddedItems[0];
-                        this.GetDropDownContentsOfBuild_1(item);
-                    }
-                });
-#else
-            this.GetDropDownContentsOfSolution_1SelectionChangedCommand = new RelayCommand<System.Windows.Controls.SelectionChangedEventArgs>(
-                (e) =>
-                {
-                    if (e.AddedItems.Count > 0)
-                    {
-                        Framework.NameValuePair item = (Framework.NameValuePair)e.AddedItems[0];
-                        this.GetDropDownContentsOfBuild_1(item);
-                    }
-                });
-#endif
-
+            this.GetDropDownContentsOfSolution_1SelectionChangedCommand = new RelayCommand<Framework.NameValuePair>(this.GetDropDownContentsOfBuild_1);
 
             #endregion Commands for Cascading ComboBox
 
@@ -223,9 +201,9 @@ namespace MSBuildLogsExtended.ViewModels
 #endif
 
 #if NETFX_CORE
-        public RelayCommand<Windows.UI.Xaml.Controls.SelectionChangedEventArgs> GetDropDownContentsOfSolution_1SelectionChangedCommand { get; private set; }
+        public RelayCommand<Framework.NameValuePair> GetDropDownContentsOfSolution_1SelectionChangedCommand { get; private set; }
 #else
-        public RelayCommand<System.Windows.Controls.SelectionChangedEventArgs> GetDropDownContentsOfSolution_1SelectionChangedCommand { get; private set; }
+        public RelayCommand<Framework.NameValuePair> GetDropDownContentsOfSolution_1SelectionChangedCommand { get; private set; }
 #endif
 
         public RelayCommand GetDropDownContentsOfSolution_1Command { get; private set; }
@@ -384,8 +362,8 @@ namespace MSBuildLogsExtended.ViewModels
 
         protected void LaunchSolutionDetailsView(MSBuildLogsExtended.DataSourceEntities.BuildLog.Default item)
         {
-            MSBuildLogsExtended.ViewModels.ViewModelLocator.MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM_Static.LoadItem(item.Solution_1Id);
-            MSBuildLogsExtended.ViewModels.ViewModelLocator.MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM_Static.LaunchViewDetailsViewCommand.Execute(null);
+            //MSBuildLogsExtended.ViewModels.ViewModelLocator.MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM_Static.LoadItem(item.Solution_1Id);
+            //MSBuildLogsExtended.ViewModels.ViewModelLocator.MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM_Static.LaunchViewDetailsViewCommand.Execute(null);
         }
 
         #endregion LinkButton Command to Details of referenced entities

@@ -49,11 +49,7 @@ namespace MSBuildLogsExtended.ViewModels
         /// </summary>
         public WPCommonOfSolutionVM()
         {
-            this.RefreshNewItemNoMessage();
-
             this.EntityCollection = new ObservableCollection<MSBuildLogsExtended.DataSourceEntities.Solution>();
-
-
 
             ////if (IsInDesignMode)
             ////{
@@ -66,54 +62,6 @@ namespace MSBuildLogsExtended.ViewModels
         }
 
         #endregion Constructor
-
-        #region RefreshCurrentEditingItem
-
-        protected override void RefreshCurrentEditingItem()
-        {
-            string viewName = ViewName_Edit;
-            Framework.UIAction uiAction = Framework.UIAction.Refresh;
-
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
-
-            RefreshCurrentEditingItemNoMessage();
-
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
-        }
-
-        protected override void RefreshCurrentEditingItemNoMessage()
-        {
-            if (this.m_Current != null)
-            {
-                this.CurrentInEditing = this.Current.GetAClone(); //MSBuildLogsExtended.EntityContracts.ISolutionHelper.Clone<MSBuildLogsExtended.DataSourceEntities.Solution, MSBuildLogsExtended.DataSourceEntities.Solution>(this.m_Current);
-            }
-            else
-            {
-                this.CurrentInEditing = null;
-            }
-        }
-
-        #endregion RefreshCurrentEditingItem
-
-        #region RefreshNewItem
-
-        protected override void RefreshNewItem()
-        {
-            string viewName = ViewName_Create;
-            Framework.UIAction uiAction = Framework.UIAction.Refresh;
-
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
-            RefreshNewItemNoMessage();
-
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
-        }
-
-        protected override void RefreshNewItemNoMessage()
-        {
-            this.NewItem = new MSBuildLogsExtended.DataSourceEntities.Solution { };
-        }
-
-        #endregion RefreshNewItem
 
         #region ClearSearchResult
 
@@ -133,264 +81,6 @@ namespace MSBuildLogsExtended.ViewModels
         }
 
         #endregion ClearSearchResult
-
-        #region Copy
-
-        //protected override void PrepareCopyView()
-        //{
-        //    this.NewItem = this.Current.GetAClone();
-        //}
-
-        #endregion Copy
-
-        #region Save
-
-        /// <summary>
-        /// update a MSBuildLogsExtended.DataSourceEntities.Solution.
-        /// </summary>
-        protected override void Save()
-        {
-            #region Asyncronized wcf method call
-
-            string viewName = ViewName_Edit;
-            Framework.UIAction uiAction = Framework.UIAction.Update;
-
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
-
-            MSBuildLogsExtended.WcfContracts.ISolutionServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceSolution();
-
-            AsyncCallback asyncCallback = delegate (IAsyncResult result)
-            {
-#if WINDOWS_PHONE
-				DispatcherHelper.Initialize();
-#endif
-                try
-                {
-                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
-                    {
-                        var responseMessage = _Instance.EndUpdateEntity(result);
-                        // reload saved default
-                        this.Search();
-                        Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
-                    });
-                }
-                catch (Exception ex)
-                {
-                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
-                    {
-                        Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
-                    });
-                }
-            };
-
-            try
-            {
-#if WINDOWS_PHONE
-                AssignSelectedValueFromSelectedItemToEntity(this.m_CurrentInEditing);
-#endif
-
-                MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageBuiltIn _Request = new MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageBuiltIn()
-                {
-                    Critieria = new MSBuildLogsExtended.DataSourceEntities.SolutionCollection(),
-                    BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
-                    BusinessLogicLayerRequestTypes = Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Update,
-                };
-                _Request.Critieria.Add(MSBuildLogsExtended.EntityContracts.ISolutionHelper.Clone<MSBuildLogsExtended.DataSourceEntities.Solution, MSBuildLogsExtended.DataSourceEntities.Solution>(this.m_CurrentInEditing));
-                _Instance.BeginUpdateEntity(_Request, asyncCallback, null);
-            }
-            catch (Exception ex)
-            {
-                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
-            }
-
-            #endregion Asyncronized wcf method call
-
-            #region Syncronized wcf method call -- not in use/WPF only
-
-            /*
-            MSBuildLogsExtended.CommonBLLIoC.IoCSolution.UpdateEntity(this.m_Current);
-			*/
-
-            #endregion Syncronized wcf method call -- not in use/WPF only
-
-        }
-
-        /// <summary>
-        /// Determines whether you can save MSBuildLogsExtended.DataSourceEntities.Solution.
-        /// </summary>
-        /// <returns>
-        /// 	<c>true</c> if you can; otherwise, <c>false</c>.
-        /// </returns>
-        protected override bool CanSave()
-        {
-            return this.m_Current != null;
-        }
-
-        #endregion Save
-
-        #region Add
-
-        /// <summary>
-        /// Adds a MSBuildLogsExtended.DataSourceEntities.Solution to the list and repo.
-        /// </summary>
-        protected override void Add()
-        {
-            #region Asyncronized wcf method call
-
-            string viewName = ViewName_Create;
-            Framework.UIAction uiAction = Framework.UIAction.Create;
-
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
-
-            MSBuildLogsExtended.WcfContracts.ISolutionServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceSolution();
-
-            AsyncCallback asyncCallback = delegate (IAsyncResult result)
-            {
-#if WINDOWS_PHONE
-				DispatcherHelper.Initialize();
-#endif
-                try
-                {
-                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
-                    {
-                        var responseMessage = _Instance.EndInsertEntity(result);
-
-                        //// reload default
-                        this.Search();
-
-                        Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
-                    });
-                }
-                catch (Exception ex)
-                {
-                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
-                    {
-                        Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
-                    });
-                }
-            };
-
-
-            try
-            {
-#if WINDOWS_PHONE
-                AssignSelectedValueFromSelectedItemToEntity(this.m_NewItem);
-#endif
-
-                MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageBuiltIn _Request = new MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageBuiltIn()
-                {
-                    Critieria = new MSBuildLogsExtended.DataSourceEntities.SolutionCollection(),
-                    BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
-                    BusinessLogicLayerRequestTypes = Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Create,
-                };
-                _Request.Critieria.Add(MSBuildLogsExtended.EntityContracts.ISolutionHelper.Clone<MSBuildLogsExtended.DataSourceEntities.Solution, MSBuildLogsExtended.DataSourceEntities.Solution>(this.m_NewItem));
-                _Instance.BeginInsertEntity(_Request, asyncCallback, null);
-            }
-            catch (Exception ex)
-            {
-                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
-            }
-
-            #endregion Asyncronized wcf method call
-
-            #region Syncronized wcf method call -- not in use/WPF only
-
-            /*
-            MSBuildLogsExtended.DataSourceEntities.Solution _NewItem = new MSBuildLogsExtended.DataSourceEntities.Solution();
-            this.m_EntityCollection.Add(_NewItem);
-            MSBuildLogsExtended.CommonBLLIoC.IoCSolution.InsertEntity(_NewItemDefault);
-			*/
-
-            #endregion Syncronized wcf method call -- not in use/WPF only
-        }
-
-        #endregion Add
-
-        #region Delete
-
-        /// <summary>,
-        /// delete a MSBuildLogsExtended.DataSourceEntities.Solution.
-        /// </summary>
-        protected override void Delete()
-        {
-            #region Asyncronized wcf method call
-
-            string viewName = ViewName_Delete;
-            Framework.UIAction uiAction = Framework.UIAction.Delete;
-
-            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Starting));
-
-            MSBuildLogsExtended.WcfContracts.ISolutionServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceSolution();
-
-            AsyncCallback asyncCallback = delegate (IAsyncResult result)
-            {
-#if WINDOWS_PHONE
-				DispatcherHelper.Initialize();
-#endif
-                try
-                {
-                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
-                    {
-                        var responseMessage = _Instance.EndDeleteEntity(result);
-
-                        this.Search();
-
-                        Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Success));
-                    });
-                }
-                catch (Exception ex)
-                {
-                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
-                    {
-                        Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
-                    });
-                }
-            };
-
-            try
-            {
-#if WINDOWS_PHONE
-                AssignSelectedValueFromSelectedItemToEntity(this.m_CurrentInEditing);
-#endif
-
-                MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageBuiltIn _Request = new MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageBuiltIn()
-                {
-                    Critieria = new MSBuildLogsExtended.DataSourceEntities.SolutionCollection(),
-                    BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
-                    BusinessLogicLayerRequestTypes = Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Delete,
-                };
-                _Request.Critieria.Add(MSBuildLogsExtended.EntityContracts.ISolutionHelper.Clone<MSBuildLogsExtended.DataSourceEntities.Solution, MSBuildLogsExtended.DataSourceEntities.Solution>(this.m_Current));
-                _Instance.BeginDeleteEntity(_Request, asyncCallback, null);
-            }
-            catch (Exception ex)
-            {
-                Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
-            }
-
-            #endregion Asyncronized wcf method call
-
-            #region Syncronized wcf method call -- not in use/WPF only
-
-            /*
-            MSBuildLogsExtended.CommonBLLIoC.IoCSolution.DeleteEntity(this.m_Current);//
-            this.m_EntityCollection.Remove(this.m_Current);
-			*/
-
-            #endregion Syncronized wcf method call -- not in use/WPF only
-        }
-
-        /// <summary>
-        /// Determines whether you can delete a MSBuildLogsExtended.DataSourceEntities.Solution.
-        /// </summary>
-        /// <returns>
-        /// 	<c>true</c> if you can; otherwise, <c>false</c>.
-        /// </returns>
-        protected override bool CanDelete()
-        {
-            return this.m_Current != null;
-        }
-
-        #endregion Delete
 
 #if WINDOWS_PHONE
         /// <summary>
@@ -550,50 +240,50 @@ namespace MSBuildLogsExtended.ViewModels
             return list;
         }
 
-        public void LoadItem(int id)
-        {
-            #region Asyncronized wcf method call
+//        public void LoadItem(int id)
+//        {
+//            #region Asyncronized wcf method call
 
-            MSBuildLogsExtended.WcfContracts.ISolutionServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceSolution();
+//            MSBuildLogsExtended.WcfContracts.ISolutionServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceSolution();
 
-            AsyncCallback asyncCallback = delegate (IAsyncResult result)
-            {
-#if WINDOWS_PHONE
-				DispatcherHelper.Initialize();
-#endif
-                try
-                {
-                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate()
-                    {
-                        var responseMessage = _Instance.EndGetSingleOfEntityOfByIdentifier(result);
-                        this.Current = responseMessage.Message[0];
-                    });
-                }
-                catch (Exception ex)
-                {
-                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
-                    {
-                    });
-                }
-            };
+//            AsyncCallback asyncCallback = delegate (IAsyncResult result)
+//            {
+//#if WINDOWS_PHONE
+//				DispatcherHelper.Initialize();
+//#endif
+//                try
+//                {
+//                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate()
+//                    {
+//                        var responseMessage = _Instance.EndGetSingleOfEntityOfByIdentifier(result);
+//                        this.Current = responseMessage.Message[0];
+//                    });
+//                }
+//                catch (Exception ex)
+//                {
+//                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+//                    {
+//                    });
+//                }
+//            };
 
 
-            try
-            {
+//            try
+//            {
 
-                MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageUserDefinedOfByIdentifier()
-                {
-                    Critieria = new CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(true, id),
-                    BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
-                    BusinessLogicLayerRequestTypes = Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Create,
-                };
-                _Instance.BeginGetSingleOfEntityOfByIdentifier(_Request, asyncCallback, null);
-            }
-            catch (Exception ex)
-            {
-            }
+//                MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageUserDefinedOfByIdentifier()
+//                {
+//                    Critieria = new CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(true, id),
+//                    BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
+//                    BusinessLogicLayerRequestTypes = Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Create,
+//                };
+//                _Instance.BeginGetSingleOfEntityOfByIdentifier(_Request, asyncCallback, null);
+//            }
+//            catch (Exception ex)
+//            {
+//            }
 
-            #endregion Asyncronized wcf method call   
-        }
+//            #endregion Asyncronized wcf method call   
+//        }
     }
 }
