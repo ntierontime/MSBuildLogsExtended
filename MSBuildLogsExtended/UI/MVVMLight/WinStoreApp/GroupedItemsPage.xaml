@@ -37,9 +37,9 @@
             SelectedItem="{Binding Path=SelectedMenuTreeItem, Mode=TwoWay}"
             SelectionMode="Single"
             IsSwipeEnabled="false" >
-            <wrtb:Interaction.Behaviors>
+            <!--<wrtb:Interaction.Behaviors>
                 <w8lnb:EventToBoundCommandBehavior Event="Tapped" Command="{Binding MenuItemSelectedCommand}" />
-            </wrtb:Interaction.Behaviors>
+            </wrtb:Interaction.Behaviors>-->
             <GridView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <VirtualizingStackPanel Orientation="Horizontal"/>

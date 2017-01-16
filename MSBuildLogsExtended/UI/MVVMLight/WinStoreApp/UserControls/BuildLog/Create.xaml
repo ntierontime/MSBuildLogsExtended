@@ -46,6 +46,6 @@
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Message, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
 		<TextBox Text="{Binding Path=Message, Mode=TwoWay}" Grid.Column="1" Grid.Row="7" fvm:TextBoxUpdateSourceBehaviour.BindingSource="Message" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
-		<WinRTDatePicker:DatePicker Grid.Column="1" Grid.Row="8" SelectedDate="{Binding Path=EventTime, Mode=TwoWay}" />
+		<!--<WinRTDatePicker:DatePicker Grid.Column="1" Grid.Row="8" SelectedDate="{Binding Path=EventTime, Mode=TwoWay}" />-->
     </Grid>
 </UserControl>

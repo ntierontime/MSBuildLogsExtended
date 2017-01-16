@@ -5,10 +5,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:cmd="using:GalaSoft.MvvmLight.Command"
-    xmlns:i="using:Windows.UI.Interactivity"
-    xmlns:wrtb="using:WinRtBehaviors"
-    xmlns:w8lnb="using:Win8nl.Behaviors"
-    xmlns:WinRTDatePicker="using:WinRTDatePicker"
     xmlns:vm="using:MSBuildLogsExtended.ViewModels"
     xmlns:fresx="using:Framework.Resources"
     xmlns:eresx="using:MSBuildLogsExtended.Resources"
@@ -43,21 +39,21 @@
 <TextBox Name="ID_TextBox_Search_valueToBeContainedMessageCommonOftOfCommon" Text="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft.ValueToBeContained, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" fvm:TextBoxUpdateSourceBehaviour.BindingSource="Criteria.BuildLogQueryCriteriaCommon.MessageCommonOft.ValueToBeContained" />
 <CheckBox Name="ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareEventTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.IsToCompare, Mode=TwoWay}" />
 <CheckBox Name="ID_CheckBox_Search_isToCompareLowerBoundEventTimeCommonOftOfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.IsToCompareLowerBound_ID_CheckBox_Search_isToCompareLowerBoundEventTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.IsToCompareLowerBound, Mode=TwoWay}" />
-<WinRTDatePicker:DatePicker Name="ID_DatePicker_Search_lowerBoundEventTimeCommonOftOfCommon" Grid.Column="1" Grid.Row="2" SelectedDate="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.LowerBound, Mode=TwoWay}" />
+<!--<WinRTDatePicker:DatePicker Name="ID_DatePicker_Search_lowerBoundEventTimeCommonOftOfCommon" Grid.Column="1" Grid.Row="2" SelectedDate="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.LowerBound, Mode=TwoWay}" />-->
 <CheckBox Name="ID_CheckBox_Search_isToCompareUpperBoundEventTimeCommonOftOfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.IsToCompareUpperBound_ID_CheckBox_Search_isToCompareUpperBoundEventTimeCommonOftOfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.IsToCompareUpperBound, Mode=TwoWay}" />
-<WinRTDatePicker:DatePicker Name="ID_DatePicker_Search_upperBoundEventTimeCommonOftOfCommon" Grid.Column="1" Grid.Row="3" SelectedDate="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.UpperBound, Mode=TwoWay}" />
+<!--<WinRTDatePicker:DatePicker Name="ID_DatePicker_Search_upperBoundEventTimeCommonOftOfCommon" Grid.Column="1" Grid.Row="3" SelectedDate="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.EventTimeCommonOft.UpperBound, Mode=TwoWay}" />-->
 <CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_1OfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuildEventCode_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1.IsToCompare, Mode=TwoWay}" />
 <ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfBuildEventCode_1OfCommon" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" ItemsSource="{Binding Path=DropDownContentsOfBuildEventCode_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuildEventCode_1.ValueToCompare, Mode=TwoWay}">
-                  <wrtb:Interaction.Behaviors>
+                  <!--<wrtb:Interaction.Behaviors>
                   <w8lnb:EventToBoundCommandBehavior Event="Loaded" Command="{Binding Path=GetDropDownContentsOfBuildEventCode_1Command}" />
-                </wrtb:Interaction.Behaviors>
+                </wrtb:Interaction.Behaviors>-->
 </ComboBox>
 <CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="5" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.IsToCompare, Mode=TwoWay}" />
 <ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=DropDownContentsOfSolution_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.ValueToCompare, Mode=TwoWay}">
-                  <wrtb:Interaction.Behaviors>
+                  <!--<wrtb:Interaction.Behaviors>
                   <w8lnb:EventToBoundCommandBehavior Event="Loaded" Command="{Binding Path=GetDropDownContentsOfSolution_1Command}" />
                   <w8lnb:EventToBoundCommandBehavior Event="SelectionChanged" Command="{Binding Path=GetDropDownContentsOfSolution_1SelectionChangedCommand}" />
-                </wrtb:Interaction.Behaviors>
+                </wrtb:Interaction.Behaviors>-->
 </ComboBox>
 <CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="6" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.IsToCompare, Mode=TwoWay}" />
 <ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfBuild_1OfCommon" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="6" ItemsSource="{Binding Path=DropDownContentsOfBuild_1}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.ValueToCompare, Mode=TwoWay}" />
@@ -73,9 +69,9 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 <ListView Name="V_Common" Height="800" Width="600" Margin="12,12,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogCollectionVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.CurrentDefault, Mode=TwoWay, Source={StaticResource Locator}}">
-  <wrtb:Interaction.Behaviors>
+  <!--<wrtb:Interaction.Behaviors>
                     <w8lnb:EventToBoundCommandBehavior Event="Tapped" Command="{Binding MSBuildLogsExtended_ViewModels_ViewModelBuildLog_Static.SelectionChangedCommand, Source={StaticResource Locator}}" />
-                </wrtb:Interaction.Behaviors>
+                </wrtb:Interaction.Behaviors>-->
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid VerticalAlignment="Center">

@@ -59,6 +59,180 @@
       <DependentUpon>SolutionController.cs</DependentUpon>
     </Compile>
     <None Include="Properties\PublishProfiles\VS2012PublishProfile.pubxml" />
+    <Content Include="Scripts\._inputmask.js" />
+    <Content Include="Scripts\._jquery.inputmask.bundle.js" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap-datepicker.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\dataTables\autoFill.bootstrap.js" />
+    <Content Include="Scripts\dataTables\autoFill.bootstrap.min.js" />
+    <Content Include="Scripts\dataTables\autoFill.bootstrap4.js" />
+    <Content Include="Scripts\dataTables\autoFill.bootstrap4.min.js" />
+    <Content Include="Scripts\dataTables\autoFill.foundation.js" />
+    <Content Include="Scripts\dataTables\autoFill.foundation.min.js" />
+    <Content Include="Scripts\dataTables\autoFill.jqueryui.js" />
+    <Content Include="Scripts\dataTables\autoFill.jqueryui.min.js" />
+    <Content Include="Scripts\dataTables\autoFill.semanticui.js" />
+    <Content Include="Scripts\dataTables\autoFill.semanticui.min.js" />
+    <Content Include="Scripts\dataTables\buttons.bootstrap.js" />
+    <Content Include="Scripts\dataTables\buttons.bootstrap.min.js" />
+    <Content Include="Scripts\dataTables\buttons.bootstrap4.js" />
+    <Content Include="Scripts\dataTables\buttons.bootstrap4.min.js" />
+    <Content Include="Scripts\dataTables\buttons.colVis.js" />
+    <Content Include="Scripts\dataTables\buttons.colVis.min.js" />
+    <Content Include="Scripts\dataTables\buttons.flash.js" />
+    <Content Include="Scripts\dataTables\buttons.flash.min.js" />
+    <Content Include="Scripts\dataTables\buttons.foundation.js" />
+    <Content Include="Scripts\dataTables\buttons.foundation.min.js" />
+    <Content Include="Scripts\dataTables\buttons.html5.js" />
+    <Content Include="Scripts\dataTables\buttons.html5.min.js" />
+    <Content Include="Scripts\dataTables\buttons.jqueryui.js" />
+    <Content Include="Scripts\dataTables\buttons.jqueryui.min.js" />
+    <Content Include="Scripts\dataTables\buttons.print.js" />
+    <Content Include="Scripts\dataTables\buttons.print.min.js" />
+    <Content Include="Scripts\dataTables\buttons.semanticui.js" />
+    <Content Include="Scripts\dataTables\buttons.semanticui.min.js" />
+    <Content Include="Scripts\dataTables\dataTables.autoFill.js" />
+    <Content Include="Scripts\dataTables\dataTables.autoFill.min.js" />
+    <Content Include="Scripts\dataTables\dataTables.bootstrap.js" />
+    <Content Include="Scripts\dataTables\dataTables.bootstrap.min.js" />
+    <Content Include="Scripts\dataTables\dataTables.bootstrap4.js" />
+    <Content Include="Scripts\dataTables\dataTables.bootstrap4.min.js" />
+    <Content Include="Scripts\dataTables\dataTables.buttons.js" />
+    <Content Include="Scripts\dataTables\dataTables.buttons.min.js" />
+    <Content Include="Scripts\dataTables\dataTables.colReorder.js" />
+    <Content Include="Scripts\dataTables\dataTables.colReorder.min.js" />
+    <Content Include="Scripts\dataTables\dataTables.fixedColumns.js" />
+    <Content Include="Scripts\dataTables\dataTables.fixedColumns.min.js" />
+    <Content Include="Scripts\dataTables\dataTables.fixedHeader.js" />
+    <Content Include="Scripts\dataTables\dataTables.fixedHeader.min.js" />
+    <Content Include="Scripts\dataTables\dataTables.foundation.js" />
+    <Content Include="Scripts\dataTables\dataTables.foundation.min.js" />
+    <Content Include="Scripts\dataTables\dataTables.jqueryui.js" />
+    <Content Include="Scripts\dataTables\dataTables.jqueryui.min.js" />
+    <Content Include="Scripts\dataTables\dataTables.keyTable.js" />
+    <Content Include="Scripts\dataTables\dataTables.keyTable.min.js" />
+    <Content Include="Scripts\dataTables\dataTables.material.js" />
+    <Content Include="Scripts\dataTables\dataTables.material.min.js" />
+    <Content Include="Scripts\dataTables\dataTables.responsive.js" />
+    <Content Include="Scripts\dataTables\dataTables.responsive.min.js" />
+    <Content Include="Scripts\dataTables\dataTables.rowReorder.js" />
+    <Content Include="Scripts\dataTables\dataTables.rowReorder.min.js" />
+    <Content Include="Scripts\dataTables\dataTables.scroller.js" />
+    <Content Include="Scripts\dataTables\dataTables.scroller.min.js" />
+    <Content Include="Scripts\dataTables\dataTables.select.js" />
+    <Content Include="Scripts\dataTables\dataTables.select.min.js" />
+    <Content Include="Scripts\dataTables\dataTables.semanticui.js" />
+    <Content Include="Scripts\dataTables\dataTables.semanticui.min.js" />
+    <Content Include="Scripts\dataTables\dataTables.uikit.js" />
+    <Content Include="Scripts\dataTables\dataTables.uikit.min.js" />
+    <Content Include="Scripts\dataTables\jquery.dataTables.js" />
+    <Content Include="Scripts\dataTables\jquery.dataTables.min.js" />
+    <Content Include="Scripts\dataTables\responsive.bootstrap.js" />
+    <Content Include="Scripts\dataTables\responsive.bootstrap.min.js" />
+    <Content Include="Scripts\dataTables\responsive.bootstrap4.js" />
+    <Content Include="Scripts\dataTables\responsive.bootstrap4.min.js" />
+    <Content Include="Scripts\dataTables\responsive.foundation.js" />
+    <Content Include="Scripts\dataTables\responsive.foundation.min.js" />
+    <Content Include="Scripts\dataTables\responsive.jqueryui.js" />
+    <Content Include="Scripts\dataTables\responsive.jqueryui.min.js" />
+    <Content Include="Scripts\dataTables\responsive.semanticui.js" />
+    <Content Include="Scripts\dataTables\responsive.semanticui.min.js" />
+    <Content Include="Scripts\excanvas.js" />
+    <None Include="Scripts\jquery-2.2.2.intellisense.js" />
+    <Content Include="Scripts\jquery-2.2.2.js" />
+    <Content Include="Scripts\jquery-2.2.2.min.js" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-3.4.0.debug.js" />
+    <Content Include="Scripts\knockout-3.4.0.js" />
+    <Content Include="Scripts\knockout-3.4.1.debug.js" />
+    <Content Include="Scripts\knockout-3.4.1.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.en-AU.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.eo.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ko.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.mn.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.nb.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="Scripts\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <None Include="Scripts\_references.js" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -131,6 +305,11 @@
     <Content Include="Views\BuildLog\WPEntityRelatedOfBuildLog.cshtml" />
     <Content Include="Views\Solution\WPCommonOfSolution.cshtml" />
     <Content Include="Views\Solution\WPEntityRelatedOfSolution.cshtml" />
+    <Content Include="Scripts\jquery-2.2.2.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.intellisense.js~HEAD" />
+    <Content Include="Scripts\jquery-3.1.1.intellisense.js~master" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Frameworks\Framework.ViewModels\Framework.ViewModels.csproj">
@@ -223,7 +402,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.IdentityModel.Logging.1.1.2\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.IdentityModel.Tokens.5.1.2\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -232,6 +423,10 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.IdentityModel.Tokens.Jwt.5.1.2\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Net" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
@@ -350,10 +545,6 @@
       <HintPath>..\..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="log4net, Version=2.0.6.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\log4net.2.0.6\lib\net45-full\log4net.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\..\..\..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -363,16 +554,8 @@
     <Reference Include="Microsoft.AspNet.Identity.Owin">
       <HintPath>..\..\..\..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Microsoft.IdentityModel.Logging.1.1.0\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.IdentityModel.Protocol.Extensions, Version=1.0.3.42, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Microsoft.IdentityModel.Protocol.Extensions.1.0.3.308261200\lib\net45\Microsoft.IdentityModel.Protocol.Extensions.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Microsoft.IdentityModel.Tokens.5.1.0\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Owin">
@@ -451,10 +634,6 @@
     </Reference>
     <Reference Include="System.Diagnostics.TraceSource, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\System.Diagnostics.TraceSource.4.3.0\lib\net46\System.Diagnostics.TraceSource.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\System.IdentityModel.Tokens.Jwt.5.1.0\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">

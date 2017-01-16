@@ -49,9 +49,9 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 <ListView Name="V_Common" Height="800" Width="600" Margin="12,12,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1" DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildEventCodeCollectionVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollection}" SelectedItem="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildEventCodeVM.Current, Mode=TwoWay, Source={StaticResource Locator}}">
-  <wrtb:Interaction.Behaviors>
+  <!--<wrtb:Interaction.Behaviors>
                     <w8lnb:EventToBoundCommandBehavior Event="Tapped" Command="{Binding MSBuildLogsExtended_ViewModels_ViewModelBuildEventCode_Static.SelectionChangedCommand, Source={StaticResource Locator}}" />
-                </wrtb:Interaction.Behaviors>
+                </wrtb:Interaction.Behaviors>-->
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid VerticalAlignment="Center">

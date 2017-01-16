@@ -8,7 +8,6 @@
     xmlns:i="using:Windows.UI.Interactivity"
     xmlns:wrtb="using:WinRtBehaviors"
     xmlns:w8lnb="using:Win8nl.Behaviors"
-    xmlns:WinRTDatePicker="using:WinRTDatePicker"
     xmlns:vm="using:MSBuildLogsExtended.ViewModels"
     xmlns:fresx="using:Framework.Resources"
     xmlns:eresx="using:MSBuildLogsExtended.Resources"
@@ -38,6 +37,7 @@
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.Description, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
 		<TextBox Text="{Binding Path=Description, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" fvm:TextBoxUpdateSourceBehaviour.BindingSource="Description" />
 		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.BuildStartTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
-		<WinRTDatePicker:DatePicker Grid.Column="1" Grid.Row="5" SelectedDate="{Binding Path=BuildStartTime, Mode=TwoWay}" />
+		<!--<WinRTDatePicker:DatePicker Grid.Column="1" Grid.Row="5" SelectedDate="{Binding Path=BuildStartTime, Mode=TwoWay}" />-->
+        <DatePicker Grid.Column="1" Grid.Row="5" Date="{Binding Path=BuildStartTime, Mode=TwoWay}" ></DatePicker>
     </Grid>
 </UserControl>

@@ -1,29 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{776D82B5-9BCD-4E41-8DD9-51DA6CB4EC9E}</ProjectGuid>
+    <ProjectGuid>{96DEAEF3-95E9-48A5-A38B-655FA3FC8B7E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Framework.CommonBLLEntities</RootNamespace>
-    <AssemblyName>Framework.CommonBLLEntities.WinRT</AssemblyName>
+    <RootNamespace>Framework.ViewModels.WinRT</RootNamespace>
+    <AssemblyName>Framework.ViewModels.WinRT</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetPlatformVersion>8.1</TargetPlatformVersion>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
-    <TargetFrameworkVersion />
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -31,14 +30,14 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\ARM\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>ARM</PlatformTarget>
@@ -48,7 +47,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
     <OutputPath>bin\ARM\Release\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
     <DebugType>pdbonly</DebugType>
@@ -60,7 +59,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\x64\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
@@ -70,7 +69,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>bin\x64\Release\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
     <DebugType>pdbonly</DebugType>
@@ -82,7 +81,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\x86\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
@@ -92,7 +91,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
     <DebugType>pdbonly</DebugType>
@@ -102,40 +101,10 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="packages.config" />
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerContext.cs">
-      <Link>BusinessLogicLayerContext.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerContextContainerCommon.cs">
-      <Link>BusinessLogicLayerContextContainerCommon.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerContextSetting.cs">
-      <Link>BusinessLogicLayerContextSetting.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerMemberShipContract.cs">
-      <Link>BusinessLogicLayerMemberShipContract.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerRequestMessageBase.cs">
-      <Link>BusinessLogicLayerRequestMessageBase.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerRequestTypes.cs">
-      <Link>BusinessLogicLayerRequestTypes.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\BusinessLogicLayerResponseMessageBase.cs">
-      <Link>BusinessLogicLayerResponseMessageBase.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\IBusinessLogicLayerContextContainer.cs">
-      <Link>IBusinessLogicLayerContextContainer.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Frameworks\Framework.CommonBLLEntities\SessionVariablesCommon.cs">
-      <Link>SessionVariablesCommon.cs</Link>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Framework.WinRT\Framework.WinRT.csproj">
-      <Project>{460fe8b2-17ec-4a7e-83f8-b77b88e8b284}</Project>
-      <Name>Framework.WinRT</Name>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\Framework.CommonBLLEntities.WinRT\Framework.CommonBLLEntities.WinRT.csproj">
+      <Project>{776d82b5-9bcd-4e41-8dd9-51da6cb4ec9e}</Project>
+      <Name>Framework.CommonBLLEntities.WinRT</Name>
     </ProjectReference>
     <ProjectReference Include="..\Framework.DataSourceEntities.WinRT\Framework.DataSourceEntities.WinRT.csproj">
       <Project>{7e03e94e-cd7b-4261-9ff3-cfb6d5df2adf}</Project>
@@ -149,10 +118,32 @@
       <Project>{23311ee2-a0cd-46f6-9766-652a04a7602f}</Project>
       <Name>Framework.Resources.WinRT</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Framework.WcfClient.WinRT\Framework.WcfClient.WinRT.csproj">
+      <Project>{386955c8-c7dc-4e4c-b7ab-10d8c8be3c19}</Project>
+      <Name>Framework.WcfClient.WinRT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.WinRT\Framework.WinRT.csproj">
+      <Project>{460fe8b2-17ec-4a7e-83f8-b77b88e8b284}</Project>
+      <Name>Framework.WinRT</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="..\..\Frameworks\Framework.ViewModels\IViewModelBase.cs">
+      <Link>IViewModelBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.ViewModels\ViewModelBase.cs">
+      <Link>ViewModelBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.ViewModels\ViewModelBaseWithResultAndUIElement.cs">
+      <Link>ViewModelBaseWithResultAndUIElement.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.ViewModels\ViewModelEntityRelatedBase.cs">
+      <Link>ViewModelEntityRelatedBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Frameworks\Framework.ViewModels\ViewModelItemBase.cs">
+      <Link>ViewModelItemBase.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
@@ -160,18 +151,9 @@
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkReference="ba8c8c0b-470a-4d3c-b3da-9e28599799b5" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <UserProperties ProjectLinkReference="2def4f9f-015d-40c4-b153-6c687c308152" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
     </VisualStudio>
   </ProjectExtensions>
-  <!--
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-  </Target>
-  -->
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

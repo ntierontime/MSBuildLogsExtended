@@ -12,9 +12,13 @@ namespace Framework.Resources
         {
             return new Framework.Resources.UIStringResource();
         }
+
+#if NETFX_CORE
+#else
         public static Framework.Resources.UIImageResource GetUIImageResource()
         {
             return new Framework.Resources.UIImageResource();
         }
+#endif
     }
 }

@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="app.config" />
     <None Include="packages.config" />
     <Compile Include="ApiControllers\BuildApiController.cs" />
     <Compile Include="ApiControllers\BuildEventCodeApiController.cs" />
@@ -40,6 +41,14 @@
     <Compile Include="ApiControllers\SolutionApiController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\EntityFrameworkContextV6CodeFirst\MSBuildLogsExtended.EntityFrameworkContextV6CodeFirst.csproj">
+      <Project>{53e9d500-88e1-433a-87fa-501c11e9879e}</Project>
+      <Name>MSBuildLogsExtended.EntityFrameworkContextV6CodeFirst</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\EntityFrameworkDALV6CodeFirst\MSBuildLogsExtended.EntityFrameworkDALV6CodeFirst.csproj">
+      <Project>{90f719d6-ac27-4f7c-a42b-723601155b53}</Project>
+      <Name>MSBuildLogsExtended.EntityFrameworkDALV6CodeFirst</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AspNetMvc40ViewModel\MSBuildLogsExtended.AspNetMvc40ViewModel.csproj">
       <Project>{4a61b777-efd3-4dc3-9570-5a5d1a043bc8}</Project>
       <Name>MSBuildLogsExtended.AspNetMvc40ViewModel</Name>
@@ -67,14 +76,6 @@
     <ProjectReference Include="..\..\..\Core\EntityContracts\MSBuildLogsExtended.EntityContracts.csproj">
       <Project>{a9940920-207f-471d-8164-13d5a4b518ba}</Project>
       <Name>MSBuildLogsExtended.EntityContracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\EntityFrameworkContext\MSBuildLogsExtended.EntityFrameworkContext.csproj">
-      <Project>{0944dc45-7c53-4b2c-aa74-dfdab6f161c1}</Project>
-      <Name>MSBuildLogsExtended.EntityFrameworkContext</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Core\EntityFrameworkDAL\MSBuildLogsExtended.EntityFrameworkDAL.csproj">
-      <Project>{10f1931e-d077-4422-9eee-f2511d13425c}</Project>
-      <Name>MSBuildLogsExtended.EntityFrameworkDAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Frameworks\Framework\Framework.csproj">
       <Project>{6d25aa30-c3af-4ae0-b567-0f2653120cdc}</Project>
@@ -122,6 +123,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -182,10 +187,6 @@
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="log4net, Version=2.0.6.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\log4net.2.0.6\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">

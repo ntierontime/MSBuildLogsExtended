@@ -103,6 +103,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceFileFactory.cs" />
     <None Include="packages.config" />
     <PRIResource Include="..\..\Core\Resources\en\UIStringResourcePerApp.resw">
       <Link>en\UIStringResourcePerApp.resw</Link>
@@ -160,7 +161,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="ada3b560-c0b9-42d0-92ff-a76462e8d524" />
+      <UserProperties ProjectLinkReference="ada3b560-c0b9-42d0-92ff-a76462e8d524" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
     </VisualStudio>
   </ProjectExtensions>
   <!--

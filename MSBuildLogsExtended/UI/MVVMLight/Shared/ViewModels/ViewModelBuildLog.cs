@@ -1,7 +1,7 @@
 using System;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.CommandWpf;
+using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Threading;
 using GalaSoft.MvvmLight.Messaging;
 using System.Windows.Input;
@@ -235,8 +235,10 @@ namespace MSBuildLogsExtended.ViewModels
                             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
                     });
                 }
-
+#if NETFX_CORE
+#else
                 CommandManager.InvalidateRequerySuggested();
+#endif
             };
 
             try
@@ -267,9 +269,9 @@ namespace MSBuildLogsExtended.ViewModels
                     Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Failed, ex.Message));
             }
 
-            #endregion Asyncronized wcf method call
+#endregion Asyncronized wcf method call
 
-            #region Syncronized wcf method call -- not in use/WPF only
+#region Syncronized wcf method call -- not in use/WPF only
 
             /*
             if (this.m_EntityCollection == null)
@@ -288,7 +290,7 @@ namespace MSBuildLogsExtended.ViewModels
                 }
             }
             */
-            #endregion Syncronized wcf method call -- not in use/WPF only
+#endregion Syncronized wcf method call -- not in use/WPF only
         }
 
 #if WINDOWS_PHONE
@@ -302,9 +304,9 @@ namespace MSBuildLogsExtended.ViewModels
         //}
 #endif
 
-        #endregion Implement abstract Search
+#endregion Implement abstract Search
 
-		#region Commands for Cascading ComboBox
+#region Commands for Cascading ComboBox
 
         public ObservableCollection<Framework.NameValuePair> m_DropDownContentsOfBuildEventCode_1 = new ObservableCollection<Framework.NameValuePair>();
 
@@ -628,9 +630,9 @@ namespace MSBuildLogsExtended.ViewModels
             }
         }
 
-        #endregion Commands for Cascading ComboBox
+#endregion Commands for Cascading ComboBox
 
-        #region LinkButton Command to Details of referenced entities
+#region LinkButton Command to Details of referenced entities
 
         public RelayCommand LaunchSolutionDetailsViewCommand { get; protected set; }
 
@@ -640,9 +642,9 @@ namespace MSBuildLogsExtended.ViewModels
             //MSBuildLogsExtended.ViewModels.ViewModelLocator.MSBuildLogsExtended_ViewModels_WPCommonOfSolutionVM_Static.LaunchViewDetailsViewCommand.Execute(null);
         }
 
-        #endregion LinkButton Command to Details of referenced entities
+#endregion LinkButton Command to Details of referenced entities
 
-        #region GetDefaultListOfQueryOrderBySettingCollecionInString()
+#region GetDefaultListOfQueryOrderBySettingCollecionInString()
 
         public override Framework.NameValueCollection GetDefaultListOfQueryOrderBySettingCollecionInString()
         {
@@ -652,6 +654,6 @@ namespace MSBuildLogsExtended.ViewModels
             return list;
         }
 
-        #endregion GetDefaultListOfQueryOrderBySettingCollecionInString()
+#endregion GetDefaultListOfQueryOrderBySettingCollecionInString()
     }
 }
