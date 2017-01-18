@@ -6,12 +6,7 @@
     xmlns:local="using:MSBuildLogsExtended.WinStoreApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:i="using:Windows.UI.Interactivity"
-    xmlns:wrtb="using:WinRtBehaviors"
-    xmlns:w8lnb="using:Win8nl.Behaviors"
-	xmlns:vm="using:MSBuildLogsExtended.ViewModels"
-    xmlns:fresx="using:Framework.Resources"
-	xmlns:eresx="using:MSBuildLogsExtended.Resources"
+
     xmlns:fvm="using:Framework.Xaml"
     DataContext="{Binding Main, Source={StaticResource Locator}}"
     mc:Ignorable="d">
@@ -26,50 +21,6 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <!-- Horizontal scrolling grid used in most view states -->
-        <GridView
-            x:Name="itemGridView"
-            AutomationProperties.AutomationId="ItemGridView"
-            AutomationProperties.Name="Grouped Items"
-            Grid.RowSpan="2"
-            Padding="116,137,40,46"
-            ItemsSource="{Binding Path=MainMenuTree.MenuTreeItems}"
-            ItemTemplate="{StaticResource Standard250x250ItemTemplate}"
-            SelectedItem="{Binding Path=SelectedMenuTreeItem, Mode=TwoWay}"
-            SelectionMode="Single"
-            IsSwipeEnabled="false" >
-            <!--<wrtb:Interaction.Behaviors>
-                <w8lnb:EventToBoundCommandBehavior Event="Tapped" Command="{Binding MenuItemSelectedCommand}" />
-            </wrtb:Interaction.Behaviors>-->
-            <GridView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <VirtualizingStackPanel Orientation="Horizontal"/>
-                </ItemsPanelTemplate>
-            </GridView.ItemsPanel>
-            <GridView.GroupStyle>
-                <GroupStyle>
-                    <GroupStyle.HeaderTemplate>
-                        <DataTemplate>
-                            <Grid Margin="1,0,0,6">
-                                <Button
-                                    AutomationProperties.Name="Group Title"
-                                    Style="{StaticResource TextPrimaryButtonStyle}">
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{Binding TreeItemName}" Margin="3,-7,10,10" Style="{StaticResource GroupHeaderTextStyle}" />
-                                        <TextBlock Text="{Binding SenderView}" Margin="3,-7,10,10" Style="{StaticResource GroupHeaderTextStyle}" />
-                                        <TextBlock Text="{StaticResource ChevronGlyph}" FontFamily="Segoe UI Symbol" Margin="0,-7,0,10" Style="{StaticResource GroupHeaderTextStyle}"/>
-                                    </StackPanel>
-                                </Button>
-                            </Grid>
-                        </DataTemplate>
-                    </GroupStyle.HeaderTemplate>
-                    <GroupStyle.Panel>
-                        <ItemsPanelTemplate>
-                            <VariableSizedWrapGrid Orientation="Vertical" Margin="0,0,80,0"/>
-                        </ItemsPanelTemplate>
-                    </GroupStyle.Panel>
-                </GroupStyle>
-            </GridView.GroupStyle>
-        </GridView>
         <!-- Back button and page title -->
         <Grid>
             <Grid.ColumnDefinitions>

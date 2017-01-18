@@ -75,4 +75,6 @@ Error	CS2001	Source file 'D:\Test4\WhatEverII\GeneratedCode\B2_Solutions\MSBuild
 27. Default was added to not.
 28. Some reference issue of 3 Linq to Sql projects
 29. Some reference issue of 2 EF V6 projects
-30. 
+30. windows nuget configuration is invalid
+31. LayoutAwarePage.cs can be removed
+Fix: get latest .vsix from http://dist.nuget.org/index.html, then re-open visual studio.
