@@ -1,0 +1,32 @@
+<UserControl
+    x:Class="MSBuildLogsExtended.WinStoreApp.UserControls.BuildEventCode.Delete"
+    xmlns:local="using:MSBuildLogsExtended.WinStoreApp.UserControls.BuildEventCode"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+
+    xmlns:vm="using:MSBuildLogsExtended.ViewModels"
+    xmlns:fresx="using:Framework.Resources"
+    xmlns:eresx="using:MSBuildLogsExtended.Resources"
+    xmlns:fvm="using:Framework.Xaml"
+    mc:Ignorable="d">
+    <Grid DataContext="{Binding MSBuildLogsExtended_ViewModels_ViewModelBuildEventCode_Static.Current, Source={StaticResource Locator}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition   Width="Auto" />
+            <ColumnDefinition   Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition   Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildEventCode.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="0" />
+		<TextBlock Text="{Binding Path=Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="0" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildEventCode.EventCode, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
+		<TextBlock Text="{Binding Path=EventCode, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
+		<TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildEventCode.Description, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
+		<TextBlock Text="{Binding Path=Description, Mode=TwoWay}" Grid.Column="1" Grid.Row="2" />
+    </Grid>
+</UserControl>
