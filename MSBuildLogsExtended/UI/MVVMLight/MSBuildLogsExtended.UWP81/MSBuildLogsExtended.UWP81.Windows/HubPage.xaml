@@ -8,8 +8,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:cmd="using:GalaSoft.MvvmLight.Command"
-    xmlns:i="using:Microsoft.Xaml.Interactivity"
-    xmlns:ic="using:Microsoft.Xaml.Interactivity.Core"
+xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     mc:Ignorable="d"
     xmlns:fvm="using:Framework.Xaml"
     xmlns:vm="using:MSBuildLogsExtended.ViewModels"
@@ -79,7 +79,12 @@
                             IsSwipeEnabled="false"
                             Width="580" 
                         >
-                    <GridView.ItemsPanel>
+                            <interactivity:Interaction.Behaviors>
+                                <core:EventTriggerBehavior EventName="Tapped">
+                                    <core:InvokeCommandAction Command="{Binding MenuItemSelectedCommand1, Mode=OneWay}" CommandParameter="{Binding SelectedItem, ElementName=itemGridView}"/>
+                                </core:EventTriggerBehavior>
+                            </interactivity:Interaction.Behaviors>
+                            <GridView.ItemsPanel>
                         <ItemsPanelTemplate>
                             <VirtualizingStackPanel Orientation="Horizontal"/>
                         </ItemsPanelTemplate>
@@ -90,9 +95,9 @@
                                 <DataTemplate>
                                     <Grid Margin="1,0,0,6">
                                         <Button
-                                    AutomationProperties.Name="Group Title"
-                                    Style="{StaticResource TextPrimaryButtonStyle}">
-                                            <StackPanel Orientation="Horizontal">
+                                            AutomationProperties.Name="Group Title"
+                                            Style="{StaticResource TextPrimaryButtonStyle}">
+                                                    <StackPanel Orientation="Horizontal">
                                                 <TextBlock Text="{Binding TreeItemName}" Margin="3,-7,10,10" Style="{StaticResource GroupHeaderTextStyle}" />
                                                 <TextBlock Text="{Binding SenderView}" Margin="3,-7,10,10" Style="{StaticResource GroupHeaderTextStyle}" />
                                                 <TextBlock Text="{StaticResource ChevronGlyph}" FontFamily="Segoe UI Symbol" Margin="0,-7,0,10" Style="{StaticResource GroupHeaderTextStyle}"/>

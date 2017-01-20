@@ -50,6 +50,12 @@ namespace MSBuildLogsExtended.ViewModels
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(this.SelectedMenuTreeItem.SourceTypeFullName, this.SelectedMenuTreeItem.SenderView, this.SelectedMenuTreeItem.UIAction, this.SelectedMenuTreeItem.UIActionStatus));
         }
 
+        public RelayCommand<Framework.MenuTreeItem> MenuItemSelectedCommand1 { get; private set; }
+        public void MenuItemSelected(Framework.MenuTreeItem selectedMenuTreeItem)
+        {
+            Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(selectedMenuTreeItem.SourceTypeFullName, selectedMenuTreeItem.SenderView, selectedMenuTreeItem.UIAction, selectedMenuTreeItem.UIActionStatus));
+        }
+
         public Framework.NavigationSettingCollection NavigationSettingCollection { get; set; }
 
         /// <summary>
@@ -81,7 +87,7 @@ namespace MSBuildLogsExtended.ViewModels
             //#region 3. Initialize MenuItemSelectedCommand
 
             this.MenuItemSelectedCommand = new RelayCommand(MenuItemSelected);
-
+            this.MenuItemSelectedCommand1 = new RelayCommand<Framework.MenuTreeItem>(MenuItemSelected);
             //#endregion 3. Initialize MenuItemSelectedCommand
 
             this.IsBusy = false;

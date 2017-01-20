@@ -1,0 +1,10 @@
+	<i:Interaction.Triggers>
+		<i:EventTrigger EventName="Click">
+			<i:InvokeCommandAction Command="{Binding ShowCommand}" />
+		</i:EventTrigger>
+	</i:Interaction.Triggers>
+	
+	
+	<i:Interaction.Behaviors>
+		<local:TappedBehavior Command="{Binding ShowCommand}" />
+	</i:Interaction.Behaviors>

@@ -48,6 +48,8 @@ namespace MSBuildLogsExtended.UWP81
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
+
+            GalaSoft.MvvmLight.Threading.DispatcherHelper.Initialize();
         }
 
         /// <summary>
