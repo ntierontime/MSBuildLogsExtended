@@ -18,6 +18,29 @@ namespace Framework.Xaml
         public ViewModelItemBase()
             : base()
         {
+            this.SuppressMVVMLightEventToCommandMessage = false;
+
+            this.LaunchCopyViewCommand = new RelayCommand<TItem>(LaunchCopyView);
+
+            this.LaunchViewDetailsViewCommand = new RelayCommand<TItem>(LaunchViewDetailsView);
+            this.CloseViewDetailsViewCommand = new RelayCommand(CloseViewDetailsView);
+
+            this.LaunchEditViewCommand = new RelayCommand<TItem>(LaunchEditView);
+            this.CloseEditViewCommand = new RelayCommand(CloseEditView);
+            this.SaveCommand = new RelayCommand(Save, CanSave);
+
+            this.LaunchCreateViewCommand = new RelayCommand(LaunchCreateView);
+            this.CloseCreateViewCommand = new RelayCommand(CloseCreateView);
+            this.AddCommand = new RelayCommand(Add, CanAdd);
+
+            this.LaunchDeleteViewCommand = new RelayCommand<TItem>(LaunchDeleteView);
+            this.CloseDeleteViewCommand = new RelayCommand(CloseDeleteView);
+            this.DeleteCommand = new RelayCommand(Delete, CanDelete);
+
+            this.RefreshCurrentItemCommand = new RelayCommand(RefreshItem);
+
+            this.LoadItemCommand = new RelayCommand(this.LoadItem);
+            this.LoadItemCommandTyped = new RelayCommand<TSearchCriteria>(this.LoadItem);
         }
 
         #endregion constructor
@@ -258,6 +281,21 @@ namespace Framework.Xaml
         }
 
         #endregion Delete
+
+        #region LoadItem
+
+        public RelayCommand LoadItemCommand { get; protected set; }
+        public RelayCommand<TSearchCriteria> LoadItemCommandTyped { get; protected set; }
+
+
+        public virtual void LoadItem()
+        {
+            this.LoadItem(this.Criteria);
+        }
+
+        public abstract void LoadItem(TSearchCriteria identifier);
+
+        #endregion LoadItem
 
         #region RefreshCurrentEditingItem
 

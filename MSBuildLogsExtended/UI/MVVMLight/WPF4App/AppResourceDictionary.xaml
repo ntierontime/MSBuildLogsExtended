@@ -7,7 +7,6 @@
 	xmlns:fvm="clr-namespace:Framework.Xaml;assembly=Framework.Xaml"
     mc:Ignorable="d"
     >
-    <!--Global View Model Locator-->
     <BooleanToVisibilityConverter x:Key="BoolToVis" />
     <Style x:Key="RectangleStyle" TargetType="Rectangle">
         <Setter Property = "Stretch" Value="Fill"/>
@@ -27,7 +26,6 @@
     <Style x:Key="SubHeading" TargetType="Label">
         <Setter Property="FontSize" Value="12" />
     </Style>
-
     <Style x:Key="ItemHeaderStyler">
         <Setter Property="ListBoxItem.Margin" Value="0,2,0,5"/>
         <Setter Property="ListBoxItem.Padding" Value="2"/>

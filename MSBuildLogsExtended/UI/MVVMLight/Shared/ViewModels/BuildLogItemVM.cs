@@ -15,24 +15,7 @@ namespace MSBuildLogsExtended.ViewModels
         public BuildLogItemVM()
             : base()
         {
-            this.SuppressMVVMLightEventToCommandMessage = false;
-
-            this.LaunchCopyViewCommand = new RelayCommand<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>(LaunchCopyView);
-
-            this.LaunchViewDetailsViewCommand = new RelayCommand<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>(LaunchViewDetailsView);
-            this.CloseViewDetailsViewCommand = new RelayCommand(CloseViewDetailsView);
-
-            this.LaunchEditViewCommand = new RelayCommand<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>(LaunchEditView);
-            this.CloseEditViewCommand = new RelayCommand(CloseEditView);
-            this.SaveCommand = new RelayCommand(Save, CanSave);
-
-            this.LaunchCreateViewCommand = new RelayCommand(LaunchCreateView);
-            this.CloseCreateViewCommand = new RelayCommand(CloseCreateView);
-            this.AddCommand = new RelayCommand(Add, CanAdd);
-
-            this.LaunchDeleteViewCommand = new RelayCommand<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default>(LaunchDeleteView);
-            this.CloseDeleteViewCommand = new RelayCommand(CloseDeleteView);
-            this.DeleteCommand = new RelayCommand(Delete, CanDelete);
+            
         }
 
         #endregion constructor
@@ -41,7 +24,6 @@ namespace MSBuildLogsExtended.ViewModels
 
         public const string EntityName_Static = "WPCommonOfBuildLogVM";
 
-        #endregion fields and properties
 
         public override string EntityName
         {
@@ -50,6 +32,8 @@ namespace MSBuildLogsExtended.ViewModels
                 return EntityName_Static;
             }
         }
+
+        #endregion fields and properties
 
         protected override void Add()
         {

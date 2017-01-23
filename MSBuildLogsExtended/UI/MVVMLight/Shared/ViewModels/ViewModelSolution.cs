@@ -240,50 +240,50 @@ namespace MSBuildLogsExtended.ViewModels
             return list;
         }
 
-//        public void LoadItem(int id)
-//        {
-//            #region Asyncronized wcf method call
+        public void LoadItem(int id)
+        {
+            #region Asyncronized wcf method call
 
-//            MSBuildLogsExtended.WcfContracts.ISolutionServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceSolution();
+            MSBuildLogsExtended.WcfContracts.ISolutionServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceSolution();
 
-//            AsyncCallback asyncCallback = delegate (IAsyncResult result)
-//            {
-//#if WINDOWS_PHONE
-//				DispatcherHelper.Initialize();
-//#endif
-//                try
-//                {
-//                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate()
-//                    {
-//                        var responseMessage = _Instance.EndGetSingleOfEntityOfByIdentifier(result);
-//                        this.Current = responseMessage.Message[0];
-//                    });
-//                }
-//                catch (Exception ex)
-//                {
-//                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
-//                    {
-//                    });
-//                }
-//            };
+            AsyncCallback asyncCallback = delegate (IAsyncResult result)
+            {
+#if WINDOWS_PHONE
+				DispatcherHelper.Initialize();
+#endif
+                try
+                {
+                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                    {
+                        var responseMessage = _Instance.EndGetSingleOfEntityOfByIdentifier(result);
+                        this.Current = responseMessage.Message[0];
+                    });
+                }
+                catch (Exception ex)
+                {
+                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                    {
+                    });
+                }
+            };
 
 
-//            try
-//            {
+            try
+            {
 
-//                MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageUserDefinedOfByIdentifier()
-//                {
-//                    Critieria = new CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(true, id),
-//                    BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
-//                    BusinessLogicLayerRequestTypes = Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Create,
-//                };
-//                _Instance.BeginGetSingleOfEntityOfByIdentifier(_Request, asyncCallback, null);
-//            }
-//            catch (Exception ex)
-//            {
-//            }
+                MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildLogsExtended.CommonBLLEntities.SolutionRequestMessageUserDefinedOfByIdentifier()
+                {
+                    Critieria = new CommonBLLEntities.SolutionChainedQueryCriteriaByIdentifier(true, id),
+                    BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
+                    BusinessLogicLayerRequestTypes = Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Create,
+                };
+                _Instance.BeginGetSingleOfEntityOfByIdentifier(_Request, asyncCallback, null);
+            }
+            catch (Exception ex)
+            {
+            }
 
-//            #endregion Asyncronized wcf method call   
-//        }
+            #endregion Asyncronized wcf method call   
+        }
     }
 }
