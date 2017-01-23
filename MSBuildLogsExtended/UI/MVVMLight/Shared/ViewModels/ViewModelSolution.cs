@@ -256,7 +256,7 @@ namespace MSBuildLogsExtended.ViewModels
                     DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
                     {
                         var responseMessage = _Instance.EndGetSingleOfEntityOfByIdentifier(result);
-                        this.Current = responseMessage.Message[0];
+                        //this.Current = responseMessage.Message[0];
                     });
                 }
                 catch (Exception ex)

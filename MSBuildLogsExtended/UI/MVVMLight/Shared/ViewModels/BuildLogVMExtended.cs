@@ -1,4 +1,4 @@
-﻿using GalaSoft.MvvmLight.Command;
+﻿using GalaSoft.MvvmLight.CommandWpf;
 using GalaSoft.MvvmLight.Threading;
 using System;
 using System.Collections.Generic;
@@ -222,7 +222,11 @@ namespace MSBuildLogsExtended.ViewModels
                     {
                         var responseMessage = _Instance.EndGetCollectionOfNameValuePairOfAll(result);
                         Framework.NameValueCollection collection = responseMessage.Message;
-                        this.DropDownContentsOfSolution_1.Clear();
+                        if (this.DropDownContentsOfSolution_1 != null && this.DropDownContentsOfSolution_1.Count > 0)
+                        {
+                            this.DropDownContentsOfSolution_1.Clear();
+                        }
+
                         if (collection != null)
                         {
                             foreach (Framework.NameValuePair item in collection)
@@ -264,6 +268,16 @@ namespace MSBuildLogsExtended.ViewModels
             {
                 return this.m_DropDownContentsOfBuild_1;
             }
+            set
+            {
+                if (this.m_DropDownContentsOfBuild_1 == value)
+                {
+                    return;
+                }
+
+                this.m_DropDownContentsOfBuild_1 = value;
+                RaisePropertyChanged("DropDownContentsOfBuild_1");
+            }
         }
 
 #if WINDOWS_PHONE
@@ -304,53 +318,59 @@ namespace MSBuildLogsExtended.ViewModels
 
         public void GetDropDownContentsOfBuild_1(Framework.NameValuePair input)
         {
-            MSBuildLogsExtended.DataSourceEntities.SolutionIdentifier parentIdentifier = MSBuildLogsExtended.EntityContracts.ISolutionIdentifierHelper.Create<MSBuildLogsExtended.DataSourceEntities.SolutionIdentifier>(input.Value);
-
-            MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuild();
-
-            AsyncCallback asyncCallback = delegate (IAsyncResult result)
+            if (input != null)
             {
-                try
+                MSBuildLogsExtended.DataSourceEntities.SolutionIdentifier parentIdentifier = MSBuildLogsExtended.EntityContracts.ISolutionIdentifierHelper.Create<MSBuildLogsExtended.DataSourceEntities.SolutionIdentifier>(input.Value);
+
+                MSBuildLogsExtended.WcfContracts.IBuildServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuild();
+
+                AsyncCallback asyncCallback = delegate (IAsyncResult result)
                 {
+                    try
+                    {
 #if WINDOWS_PHONE
                     DispatcherHelper.Initialize();
 #endif
                     DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
-                    {
-                        var responseMessage = _Instance.EndGetCollectionOfNameValuePairOfByFKOnly(result);
-                        Framework.NameValueCollection collection = responseMessage.Message;
-                        this.DropDownContentsOfBuild_1.Clear();
-                        if (collection != null)
                         {
-                            foreach (Framework.NameValuePair item in collection)
+                            var responseMessage = _Instance.EndGetCollectionOfNameValuePairOfByFKOnly(result);
+                            Framework.NameValueCollection collection = responseMessage.Message;
+                            if (this.DropDownContentsOfBuild_1 != null && this.DropDownContentsOfBuild_1.Count > 0)
                             {
-                                this.DropDownContentsOfBuild_1.Add(item);
+                                this.DropDownContentsOfBuild_1.Clear();
                             }
-                        }
-                    });
+                            if (collection != null)
+                            {
+                                foreach (Framework.NameValuePair item in collection)
+                                {
+                                    this.DropDownContentsOfBuild_1.Add(item);
+                                }
+                            }
+                        });
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+                };
+
+                try
+                {
+                    MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly()
+                    {
+                        Critieria = new MSBuildLogsExtended.CommonBLLEntities.BuildChainedQueryCriteriaByFKOnly(true, parentIdentifier.Id),
+                        QueryPagingSetting = new Framework.EntityContracts.QueryPagingSetting(-1, -1),
+                        QueryOrderBySettingCollection = new Framework.EntityContracts.QueryOrderBySettingCollection(null),
+                        BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
+                        BusinessLogicLayerRequestTypes = Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search,
+                    };
+
+                    _Instance.BeginGetCollectionOfNameValuePairOfByFKOnly(_Request, asyncCallback, null);
                 }
                 catch (Exception ex)
                 {
 
                 }
-            };
-
-            try
-            {
-                MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly _Request = new MSBuildLogsExtended.CommonBLLEntities.BuildRequestMessageUserDefinedOfByFKOnly()
-                {
-                    Critieria = new MSBuildLogsExtended.CommonBLLEntities.BuildChainedQueryCriteriaByFKOnly(true, parentIdentifier.Id),
-                    QueryPagingSetting = new Framework.EntityContracts.QueryPagingSetting(-1, -1),
-                    QueryOrderBySettingCollection = new Framework.EntityContracts.QueryOrderBySettingCollection(null),
-                    BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
-                    BusinessLogicLayerRequestTypes = Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Search,
-                };
-
-                _Instance.BeginGetCollectionOfNameValuePairOfByFKOnly(_Request, asyncCallback, null);
-            }
-            catch (Exception ex)
-            {
-
             }
         }
 

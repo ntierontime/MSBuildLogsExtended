@@ -45,15 +45,15 @@
                     <RowDefinition   Height="35" />
                     <RowDefinition   Height="35" />
                 </Grid.RowDefinitions>
-		        <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
+                <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="1" />
                 <TextBlock Text="{Binding Path=Item.Id, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" />
-		        <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_1Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
-                <ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntitySolution.Build, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended.DropDownContentsOfSolution_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Item.Solution_1Id, Mode=TwoWay}" IsEditable="False" IsSynchronizedWithCurrentItem="False" >
+                <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_1Id, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="2" />
+                <ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntitySolution.Build, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended.DropDownContentsOfSolution_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Item.Solution_1Id, Mode=TwoWay}" IsEditable="False" IsSynchronizedWithCurrentItem="True" >
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="Loading">
                             <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended.GetDropDownContentsOfSolution_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="false" ></cmd:EventToCommand>
                         </i:EventTrigger>
-                        <i:EventTrigger EventName="Loaded">
+                        <i:EventTrigger EventName="Loading">
                             <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended.GetDropDownContentsOfSolution_1SelectionChangedCommand, Source={StaticResource Locator}}" CommandParameter="{Binding ElementName=ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon, Path=SelectedItem}"></cmd:EventToCommand>
                         </i:EventTrigger>
                         <i:EventTrigger EventName="SelectionChanged">
@@ -63,11 +63,11 @@
                 </ComboBox>
                 <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Solution_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="3" />
                 <TextBlock Text="{Binding Path=Item.Solution_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="3" />
-		        <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
+                <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCode_1_Name, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="4" />
                 <TextBlock Text="{Binding Path=Item.BuildEventCode_1_Name, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" />
-		        <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
+                <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="5" />
                 <ComboBox ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuild.BuildLog, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended.DropDownContentsOfBuild_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Item.BuildId, Mode=TwoWay}" IsSynchronizedWithCurrentItem="True" IsEditable="False"/>
-		        <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCodeId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
+                <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.BuildEventCodeId, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="6" />
                 <ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfBuildEventCode_1OfCommon" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildEventCode.BuildLog, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="6" SelectedValue="{Binding Path=Item.BuildEventCodeId, Mode=TwoWay}" ItemsSource="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended.DropDownContentsOfBuildEventCode_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value">
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="Loading">
@@ -77,9 +77,9 @@
                 </ComboBox>
                 <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Message, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="7" />
                 <TextBox Text="{Binding Path=Item.Message, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="7" />
-		        <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
+                <TextBlock Text="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.EventTime, Source={StaticResource LocalizedStrings}}" Grid.Column="0" Grid.Row="8" />
                 <DatePicker HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="8" SelectedDate="{Binding Path=Item.EventTime, Mode=TwoWay}" SelectedDateFormat="Long" CalendarStyle="{StaticResource GridEditStyle}" DisplayDateEnd="1/1/2300" DisplayDateStart="1/1/1900" FirstDayOfWeek="Sunday" />
-                </Grid>
+            </Grid>
         </Border>
     </Grid>
 </UserControl>

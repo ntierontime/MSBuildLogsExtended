@@ -104,10 +104,39 @@ namespace Framework.Xaml
 
         public bool SuppressMVVMLightEventToCommandMessage { get; set; }
 
-        protected virtual void PrepareItem(TItem o)
+        protected virtual void PrepareItem(TItem o, bool isReloadFromDataSource, bool createNew, bool withIdentifier)
         {
-            this.OriginalItem = o;
-            this.Item = o;
+            if (createNew)
+            {
+                this.Item = new TItem();
+            }
+            else if (isReloadFromDataSource)
+            {
+                if (o != null)
+                {
+                    this.ReLoadItem(o);
+                }
+                else
+                {
+                    this.ReLoadItem(this.Item);
+                }
+            }
+            else
+            {
+                if (o != null)
+                {
+                    if (withIdentifier)
+                    {
+                        this.OriginalItem = ((Framework.EntityContracts.IClone<TItem>)o).GetAClone();
+                        this.Item = ((Framework.EntityContracts.IClone<TItem>)o).GetAClone();
+                    }
+                    else
+                    {
+                        this.OriginalItem = ((Framework.EntityContracts.IClone<TItem>)o).GetACloneWithoutIdentifier();
+                        this.Item = ((Framework.EntityContracts.IClone<TItem>)o).GetACloneWithoutIdentifier();
+                    }
+                }
+            }
         }
 
         #region ViewDetails
@@ -119,7 +148,7 @@ namespace Framework.Xaml
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.ViewDetails;
 
-            PrepareItem(o);
+            PrepareItem(o, true, false, true);
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
         }
@@ -145,7 +174,7 @@ namespace Framework.Xaml
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.Copy;
 
-            PrepareItem(o);
+            PrepareItem(o, false, false, false);
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
         }
@@ -161,7 +190,7 @@ namespace Framework.Xaml
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.Update;
 
-            PrepareItem(o);
+            PrepareItem(o, true, false, true);
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
         }
@@ -191,7 +220,7 @@ namespace Framework.Xaml
         /// </returns>
         protected virtual bool CanSave()
         {
-            return this.Item != null;
+            return true;
         }
 
         #endregion Save
@@ -247,7 +276,7 @@ namespace Framework.Xaml
             string viewName = ViewName_Details;
             Framework.UIAction uiAction = Framework.UIAction.Delete;
 
-            PrepareItem(o);
+            PrepareItem(o, true, false, true);
 
             Messenger.Default.Send<Framework.UIActionStatusMessage>(new Framework.UIActionStatusMessage(EntityName, viewName, uiAction, Framework.UIActionStatus.Launch));
         }
@@ -294,6 +323,9 @@ namespace Framework.Xaml
         }
 
         public abstract void LoadItem(TSearchCriteria identifier);
+
+
+        public abstract void ReLoadItem(TItem o);
 
         #endregion LoadItem
 

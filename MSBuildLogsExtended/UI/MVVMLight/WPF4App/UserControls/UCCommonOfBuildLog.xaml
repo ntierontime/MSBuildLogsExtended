@@ -71,12 +71,15 @@
 <CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfSolution_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.IsToCompare}" />
             <ComboBox Name="ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntitySolution.Build, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" ItemsSource="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended.DropDownContentsOfSolution_1, Source={StaticResource Locator}}" DisplayMemberPath="Name" SelectedValuePath="Value" SelectedValue="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfSolution_1.ValueToCompare}">
                   <i:Interaction.Triggers>
-                    <i:EventTrigger EventName="Loaded">
-                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended.GetDropDownContentsOfSolution_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
-                    </i:EventTrigger>
-                    <i:EventTrigger EventName="SelectionChanged">
-                        <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended.GetDropDownContentsOfSolution_1SelectionChangedCommand, Source={StaticResource Locator}}" PassEventArgsToCommand="True"></cmd:EventToCommand>
-                    </i:EventTrigger>
+                        <i:EventTrigger EventName="Loaded">
+                            <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended.GetDropDownContentsOfSolution_1Command, Source={StaticResource Locator}}" PassEventArgsToCommand="false" ></cmd:EventToCommand>
+                        </i:EventTrigger>
+                        <i:EventTrigger EventName="Loaded">
+                            <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended.GetDropDownContentsOfSolution_1SelectionChangedCommand, Source={StaticResource Locator}}" CommandParameter="{Binding ElementName=ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon, Path=SelectedItem}"></cmd:EventToCommand>
+                        </i:EventTrigger>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <cmd:EventToCommand Command="{Binding Mode=OneWay, Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVMExtended.GetDropDownContentsOfSolution_1SelectionChangedCommand, Source={StaticResource Locator}}" CommandParameter="{Binding ElementName=ID_DropDownList_Search_valueToCompareIdCommonOfSolution_1OfCommon, Path=SelectedItem}"></cmd:EventToCommand>
+                        </i:EventTrigger>
                 </i:Interaction.Triggers>
 </ComboBox>
 <CheckBox Name="ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon" Content="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, Source={StaticResource LocalizedStrings}}" ToolTip="{Binding Path=MSBuildLogsExtended_Resources_UIStringResourcePerEntityBuildLog.Tooltip_of_IsToCompare_ID_CheckBox_Search_isToCompareIdCommonOfBuild_1OfCommon, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" IsChecked="{Binding Path=Criteria.BuildLogQueryCriteriaCommon.IdCommonOfBuild_1.IsToCompare}" />
@@ -84,7 +87,7 @@
         </Grid>
         </Border>
         <Border Style="{StaticResource BorderStyle}" Grid.Row="2" >
-            <ListView Name="V_Common" Padding="25" Height="600" Grid.Row="2" VerticalContentAlignment="Stretch" DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogCollectionVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM_Static.CurrentDefault, Mode=TwoWay, Source={StaticResource Locator}}" IsSynchronizedWithCurrentItem="True">
+            <ListView Name="V_Common" Padding="25" Height="600" Grid.Row="2" VerticalContentAlignment="Stretch" DataContext="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogCollectionVM, Source={StaticResource Locator}}" ItemsSource="{Binding Path=EntityCollectionDefault}" SelectedItem="{Binding Path=MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.Item, Mode=TwoWay, Source={StaticResource Locator}}" IsSynchronizedWithCurrentItem="True">
             <ListView.Resources>
                 <!--<Style TargetType="ListViewItem">
                     <Style.Triggers>

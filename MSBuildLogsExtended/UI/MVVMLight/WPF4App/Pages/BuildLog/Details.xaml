@@ -29,6 +29,12 @@
                         <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.CopyAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
                     </StackPanel>
                 </Button>
+                <Button     Name="Reload" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.LoadItemCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.RefreshAlternativeText, Source={StaticResource LocalizedStrings}}">
+                    <StackPanel>
+                        <iconPacks:PackIconMaterial Kind="Reload" />
+                        <TextBlock Text="{Binding Path=Framework_Resources_UIStringResource.RefreshAlternativeText, Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    </StackPanel>
+                </Button>
                 <Button     Name="Delete" Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.LaunchDeleteViewCommand, Source={StaticResource Locator}}" Width="75" Height="45" ToolTip="{Binding Path=Framework_Resources_UIStringResource.DeleteAlternativeText, Source={StaticResource LocalizedStrings}}">
                     <StackPanel>
                         <iconPacks:PackIconMaterial Kind="Delete" HorizontalAlignment="Center" />

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -54,6 +54,10 @@
     <Compile Include="DataSourceQueryCriteriaByEntityReferences\BuildLogQueryCriteriaByEntityReference.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Frameworks\Framework.EntityContracts\Framework.EntityContracts.csproj">
+      <Project>{c3a270de-9727-492e-91e2-f56e7e0e0f83}</Project>
+      <Name>Framework.EntityContracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EntityContracts\MSBuildLogsExtended.EntityContracts.csproj">
       <Project>{a9940920-207f-471d-8164-13d5a4b518ba}</Project>
       <Name>MSBuildLogsExtended.EntityContracts</Name>

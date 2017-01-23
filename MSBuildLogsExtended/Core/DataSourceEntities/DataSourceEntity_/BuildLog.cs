@@ -255,10 +255,10 @@ namespace MSBuildLogsExtended.DataSourceEntities
         /// <summary>
         /// View "Default" class of <see cref="BuildLog"/>, used across the solution. 
         /// </summary>
-		public partial class Default :Framework.PropertyChangedNotifier, MSBuildLogsExtended.EntityContracts.IBuildLog
+		public partial class Default :Framework.PropertyChangedNotifier, MSBuildLogsExtended.EntityContracts.IBuildLog, Framework.EntityContracts.IClone<Default>
 		{
 
-			#region Storage Fields
+            #region Storage Fields
 
         public System.String m_Build_1_Name;
 
@@ -489,7 +489,7 @@ namespace MSBuildLogsExtended.DataSourceEntities
         }
 
 
-			#endregion properties
+            #endregion properties
 
             #region Method of BuildLog.Default  GetAClone()
 
@@ -501,22 +501,43 @@ namespace MSBuildLogsExtended.DataSourceEntities
             {
                 Default cloned = new Default();
 
-			cloned.m_Build_1_Name = m_Build_1_Name;
-			cloned.m_Id = m_Id;
-			cloned.m_Solution_1Id = m_Solution_1Id;
-			cloned.m_Solution_1_Name = m_Solution_1_Name;
-			cloned.m_BuildEventCode_1_Name = m_BuildEventCode_1_Name;
-			cloned.m_BuildId = m_BuildId;
-			cloned.m_BuildEventCodeId = m_BuildEventCodeId;
-			cloned.m_Message = m_Message;
-			cloned.m_EventTime = m_EventTime;
+                cloned.m_Build_1_Name = m_Build_1_Name;
+                cloned.m_Id = m_Id;
+                cloned.m_Solution_1Id = m_Solution_1Id;
+                cloned.m_Solution_1_Name = m_Solution_1_Name;
+                cloned.m_BuildEventCode_1_Name = m_BuildEventCode_1_Name;
+                cloned.m_BuildId = m_BuildId;
+                cloned.m_BuildEventCodeId = m_BuildEventCodeId;
+                cloned.m_Message = m_Message;
+                cloned.m_EventTime = m_EventTime;
+
+                return cloned;
+            }
+
+            /// <summary>
+            /// Gets the A clone.
+            /// </summary>
+            /// <returns>a new instance with same value</returns>
+            public Default GetACloneWithoutIdentifier()
+            {
+                Default cloned = new Default();
+
+                cloned.m_Build_1_Name = m_Build_1_Name;
+                cloned.m_Id = default(long);
+                cloned.m_Solution_1Id = m_Solution_1Id;
+                cloned.m_Solution_1_Name = m_Solution_1_Name;
+                cloned.m_BuildEventCode_1_Name = m_BuildEventCode_1_Name;
+                cloned.m_BuildId = m_BuildId;
+                cloned.m_BuildEventCodeId = m_BuildEventCodeId;
+                cloned.m_Message = m_Message;
+                cloned.m_EventTime = m_EventTime;
 
                 return cloned;
             }
 
 
             #endregion Method of BuildLog.Default  GetAClone()
-		}
+        }
 
         /// <summary>
         /// View "Default" class of <see cref="BuildLog"/>, used across the solution. 

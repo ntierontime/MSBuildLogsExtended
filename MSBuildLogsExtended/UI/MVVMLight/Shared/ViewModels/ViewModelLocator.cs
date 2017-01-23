@@ -742,8 +742,8 @@ namespace MSBuildLogsExtended.ViewModels
 
         #region MVVMViewModel: MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM
 
-        private static MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM;
-        public static MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM_Static
+        private static MSBuildLogsExtended.ViewModels.BuildLogItemVM m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM;
+        public static MSBuildLogsExtended.ViewModels.BuildLogItemVM MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM_Static
         {
             get
             {
@@ -756,7 +756,7 @@ namespace MSBuildLogsExtended.ViewModels
             }
         }
 
-        public MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM
+        public MSBuildLogsExtended.ViewModels.BuildLogItemVM MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM
         {
             get
             {
@@ -783,7 +783,7 @@ namespace MSBuildLogsExtended.ViewModels
         {
             if (m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM == null)
             {
-                m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM = new MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM();
+                m_MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM = new MSBuildLogsExtended.ViewModels.BuildLogItemVM();
             }
         }
 

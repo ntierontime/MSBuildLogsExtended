@@ -1,10 +1,11 @@
-using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.CommandWpf;
 using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Threading;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using MSBuildLogsExtended.DataSourceEntities;
 
 namespace MSBuildLogsExtended.ViewModels
 {
@@ -250,6 +251,66 @@ namespace MSBuildLogsExtended.ViewModels
             #endregion Syncronized wcf method call -- not in use/WPF only
         }
 
+        public override void ReLoadItem(MSBuildLogsExtended.DataSourceEntities.BuildLog.Default o)
+        {
+            var identifier = MSBuildLogsExtended.EntityContracts.IBuildLogIdentifierHelper.Clone<MSBuildLogsExtended.DataSourceEntities.BuildLog.Default, MSBuildLogsExtended.DataSourceEntities.BuildLogIdentifier>(o);
+            this.LoadItem(identifier);
+        }
+
+        public override void LoadItem(MSBuildLogsExtended.DataSourceEntities.BuildLogIdentifier identifier)
+        {
+                if(identifier != null)
+                {
+                    this.Criteria = identifier;
+                }
+                else
+                {
+                    this.Criteria = new MSBuildLogsExtended.DataSourceEntities.BuildLogIdentifier(this.Item);
+                }
+
+                #region Asyncronized wcf method call
+
+                MSBuildLogsExtended.WcfContracts.IBuildLogServiceAsyn _Instance = MSBuildLogsExtended.WcfContracts.WcfServiceResolverAsyn.ResolveWcfServiceBuildLog();
+
+            AsyncCallback asyncCallback = delegate (IAsyncResult result)
+            {
+#if WINDOWS_PHONE
+				DispatcherHelper.Initialize();
+#endif
+                try
+                {
+                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                    {
+                        var responseMessage = _Instance.EndGetSingleOfDefaultOfByIdentifier(result);
+                        this.Item = responseMessage.Message[0];
+                    });
+                }
+                catch (Exception ex)
+                {
+                    DispatcherHelper.CheckBeginInvokeOnUI((Action)delegate ()
+                    {
+                    });
+                }
+            };
+
+
+            try
+            {
+
+                MSBuildLogsExtended.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier _Request = new MSBuildLogsExtended.CommonBLLEntities.BuildLogRequestMessageUserDefinedOfByIdentifier()
+                {
+                    Critieria = new MSBuildLogsExtended.CommonBLLEntities.BuildLogChainedQueryCriteriaByIdentifier(true, this.Criteria.Id),
+                    BusinessLogicLayerRequestID = Guid.NewGuid().ToString(),
+                    BusinessLogicLayerRequestTypes = Framework.CommonBLLEntities.BusinessLogicLayerRequestTypes.Create,
+                };
+                _Instance.BeginGetSingleOfDefaultOfByIdentifier(_Request, asyncCallback, null);
+            }
+            catch (Exception ex)
+            {
+            }
+
+            #endregion Asyncronized wcf method call   
+        }
 
         public  void Cleanup()
         {

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.CommandWpf;
 using GalaSoft.MvvmLight.Threading;
 using GalaSoft.MvvmLight.Messaging;
 using System.Windows.Input;
