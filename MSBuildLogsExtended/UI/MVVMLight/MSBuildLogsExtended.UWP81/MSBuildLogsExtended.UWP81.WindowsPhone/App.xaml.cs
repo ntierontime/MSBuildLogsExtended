@@ -40,12 +40,12 @@ namespace MSBuildLogsExtended.UWP81
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
 
-            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer, Framework.CommonBLLEntities.BusinessLogicLayerContextContainerCommon>();
+            //Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<Framework.CommonBLLEntities.IBusinessLogicLayerContextContainer, Framework.CommonBLLEntities.BusinessLogicLayerContextContainerCommon>();
 
-            Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactoryAsyn, MSBuildLogsExtended.WcfClientBLL.WcfClientFactoryAsyn>();
+            //Framework.IoCContainerWrapperSingleton.Instance.IoCContainer.Register<MSBuildLogsExtended.WcfContracts.IBusinessLogicLayerFactoryAsyn, MSBuildLogsExtended.WcfClientBLL.WcfClientFactoryAsyn>();
 
-            Framework.CommonBLLEntities.BusinessLogicLayerMemberShip _BusinessLogicLayerMemberShip = new Framework.CommonBLLEntities.BusinessLogicLayerMemberShip();
-            Framework.CommonBLLEntities.SessionVariablesCommon.BusinessLogicLayerContext = new Framework.CommonBLLEntities.BusinessLogicLayerContext(_BusinessLogicLayerMemberShip);
+            //Framework.CommonBLLEntities.BusinessLogicLayerMemberShip _BusinessLogicLayerMemberShip = new Framework.CommonBLLEntities.BusinessLogicLayerMemberShip();
+            //Framework.CommonBLLEntities.SessionVariablesCommon.BusinessLogicLayerContext = new Framework.CommonBLLEntities.BusinessLogicLayerContext(_BusinessLogicLayerMemberShip);
         }
 
         /// <summary>
@@ -125,30 +125,30 @@ namespace MSBuildLogsExtended.UWP81
             // Ensure the current window is active
             Window.Current.Activate();
 
-            InitializeMainMenuTree();
+            //InitializeMainMenuTree();
 
-            InitializeNavigationSettingCollectionInMainViewModel();
+            //InitializeNavigationSettingCollectionInMainViewModel();
 
-            Messenger.Default.Register<Framework.UIActionStatusMessage>(
-                this,
-                message =>
-                {
-                    if (MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Count(t => t.SourceTypeFullName == message.SourceTypeFullName && t.SenderView == message.SenderView && t.UIAction == message.UIAction && t.UIActionStatus == message.UIActionStatus) > 0)
-                    {
-                        var navigationSetting = MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.FirstOrDefault(t => t.SourceTypeFullName == message.SourceTypeFullName && t.SenderView == message.SenderView && t.UIAction == message.UIAction && t.UIActionStatus == message.UIActionStatus);
-                        if (navigationSetting != null)
-                        {
-                            if (navigationSetting.NextUIAction == Framework.UIAction.GoBack)
-                            {
-                                rootFrame.GoBack();
-                            }
-                            else if (navigationSetting.NextUIAction == Framework.UIAction.Navigate)
-                            {
-                                rootFrame.Navigate(navigationSetting.TargetPageType);
-                            }
-                        }
-                    }
-                });
+            //Messenger.Default.Register<Framework.UIActionStatusMessage>(
+            //    this,
+            //    message =>
+            //    {
+            //        if (MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.Count(t => t.SourceTypeFullName == message.SourceTypeFullName && t.SenderView == message.SenderView && t.UIAction == message.UIAction && t.UIActionStatus == message.UIActionStatus) > 0)
+            //        {
+            //            var navigationSetting = MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.NavigationSettingCollection.FirstOrDefault(t => t.SourceTypeFullName == message.SourceTypeFullName && t.SenderView == message.SenderView && t.UIAction == message.UIAction && t.UIActionStatus == message.UIActionStatus);
+            //            if (navigationSetting != null)
+            //            {
+            //                if (navigationSetting.NextUIAction == Framework.UIAction.GoBack)
+            //                {
+            //                    rootFrame.GoBack();
+            //                }
+            //                else if (navigationSetting.NextUIAction == Framework.UIAction.Navigate)
+            //                {
+            //                    rootFrame.Navigate(navigationSetting.TargetPageType);
+            //                }
+            //            }
+            //        }
+            //    });
         }
 
 #if WINDOWS_PHONE_APP
@@ -180,14 +180,14 @@ namespace MSBuildLogsExtended.UWP81
 
         private static void InitializeMainMenuTree()
         {
-            // 1.1 MSBuildLogsExtended.Build
-            MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.MainMenuTree.AddSubMenuTreeItem("Common of MSBuildLogsExtended.Build", MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_Build, MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_Build, MSBuildLogsExtended.Resources.UIStringResourcePerApp.Description_Of_Common_of_MSBuildLogsExtended_Build, null, null, MSBuildLogsExtended.ViewModels.WPCommonOfBuildVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfBuildVM.ViewName_SearchResult, Framework.UIAction.Search, Framework.UIActionStatus.Launch);
-            // 1.2 MSBuildLogsExtended.BuildEventCode
-            MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.MainMenuTree.AddSubMenuTreeItem("Common of MSBuildLogsExtended.BuildEventCode", MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_BuildEventCode, MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_BuildEventCode, MSBuildLogsExtended.Resources.UIStringResourcePerApp.Description_Of_Common_of_MSBuildLogsExtended_BuildEventCode, null, null, MSBuildLogsExtended.ViewModels.WPCommonOfBuildEventCodeVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfBuildEventCodeVM.ViewName_SearchResult, Framework.UIAction.Search, Framework.UIActionStatus.Launch);
-            // 1.3 MSBuildLogsExtended.BuildLog
-            MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.MainMenuTree.AddSubMenuTreeItem("Common of MSBuildLogsExtended.BuildLog", MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_BuildLog, MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_BuildLog, MSBuildLogsExtended.Resources.UIStringResourcePerApp.Description_Of_Common_of_MSBuildLogsExtended_BuildLog, null, null, MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.ViewName_SearchResult, Framework.UIAction.Search, Framework.UIActionStatus.Launch);
-            // 1.4 MSBuildLogsExtended.Solution
-            MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.MainMenuTree.AddSubMenuTreeItem("Common of MSBuildLogsExtended.Solution", MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_Solution, MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_Solution, MSBuildLogsExtended.Resources.UIStringResourcePerApp.Description_Of_Common_of_MSBuildLogsExtended_Solution, null, null, MSBuildLogsExtended.ViewModels.WPCommonOfSolutionVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfSolutionVM.ViewName_SearchResult, Framework.UIAction.Search, Framework.UIActionStatus.Launch);
+            //// 1.1 MSBuildLogsExtended.Build
+            //MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.MainMenuTree.AddSubMenuTreeItem("Common of MSBuildLogsExtended.Build", MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_Build, MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_Build, MSBuildLogsExtended.Resources.UIStringResourcePerApp.Description_Of_Common_of_MSBuildLogsExtended_Build, null, null, MSBuildLogsExtended.ViewModels.WPCommonOfBuildVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfBuildVM.ViewName_SearchResult, Framework.UIAction.Search, Framework.UIActionStatus.Launch);
+            //// 1.2 MSBuildLogsExtended.BuildEventCode
+            //MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.MainMenuTree.AddSubMenuTreeItem("Common of MSBuildLogsExtended.BuildEventCode", MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_BuildEventCode, MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_BuildEventCode, MSBuildLogsExtended.Resources.UIStringResourcePerApp.Description_Of_Common_of_MSBuildLogsExtended_BuildEventCode, null, null, MSBuildLogsExtended.ViewModels.WPCommonOfBuildEventCodeVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfBuildEventCodeVM.ViewName_SearchResult, Framework.UIAction.Search, Framework.UIActionStatus.Launch);
+            //// 1.3 MSBuildLogsExtended.BuildLog
+            //MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.MainMenuTree.AddSubMenuTreeItem("Common of MSBuildLogsExtended.BuildLog", MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_BuildLog, MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_BuildLog, MSBuildLogsExtended.Resources.UIStringResourcePerApp.Description_Of_Common_of_MSBuildLogsExtended_BuildLog, null, null, MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfBuildLogVM.ViewName_SearchResult, Framework.UIAction.Search, Framework.UIActionStatus.Launch);
+            //// 1.4 MSBuildLogsExtended.Solution
+            //MSBuildLogsExtended.ViewModels.ViewModelLocator.MainStatic.MainMenuTree.AddSubMenuTreeItem("Common of MSBuildLogsExtended.Solution", MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_Solution, MSBuildLogsExtended.Resources.UIStringResourcePerApp.Common_of_MSBuildLogsExtended_Solution, MSBuildLogsExtended.Resources.UIStringResourcePerApp.Description_Of_Common_of_MSBuildLogsExtended_Solution, null, null, MSBuildLogsExtended.ViewModels.WPCommonOfSolutionVM.EntityName_Static, MSBuildLogsExtended.ViewModels.WPCommonOfSolutionVM.ViewName_SearchResult, Framework.UIAction.Search, Framework.UIActionStatus.Launch);
 
         }
 

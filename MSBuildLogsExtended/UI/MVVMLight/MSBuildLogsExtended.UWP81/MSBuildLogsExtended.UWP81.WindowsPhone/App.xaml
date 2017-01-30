@@ -9,11 +9,15 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <!--
                 <ResourceDictionary Source="Common/LocalStyles.xaml"/>
+                -->
             </ResourceDictionary.MergedDictionaries>
             <x:String x:Key="AppName">MSBuildLogsExtended</x:String>
+            <!--
             <vm:ViewModelLocator x:Key="Locator" />
             <vm:LocalizedStrings x:Key="LocalizedStrings" />
+            -->
             <!--<fvm:BooleanToOnOffConverter x:Key="BooleanToOnOffConverter"/>-->
         </ResourceDictionary>
     </Application.Resources>

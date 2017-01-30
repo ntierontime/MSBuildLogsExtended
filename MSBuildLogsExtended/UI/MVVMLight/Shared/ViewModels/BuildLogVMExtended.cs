@@ -1,4 +1,4 @@
-﻿using GalaSoft.MvvmLight.CommandWpf;
+﻿using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Threading;
 using System;
 using System.Collections.Generic;
