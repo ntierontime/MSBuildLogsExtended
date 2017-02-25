@@ -80,3 +80,4 @@ Error	CS2001	Source file 'D:\Test4\WhatEverII\GeneratedCode\B2_Solutions\MSBuild
 Fix: get latest .vsix from http://dist.nuget.org/index.html, then re-open visual studio.
 32. WinRT Behaviors SDK
 MVVM event to command binding #2: Behaviors and event triggers
+33. MSBuildExtensionPack
