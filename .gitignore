@@ -278,3 +278,5 @@ __pycache__/
 # Cake - Uncomment if you are using it
 # tools/
 MSBuildLogsExtended/Wcf/WcfWebApp/log.txt
+MSBuildLogsExtended/Wcf/WcfWebApp/MSBuildLogsExtended.WcfWebApp.csproj.user
+*.user

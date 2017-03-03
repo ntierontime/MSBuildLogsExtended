@@ -170,7 +170,7 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Grid>
-                                    <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Solution_1_Name}"  Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.LaunchSolutionDetailsViewCommand, Source={StaticResource Locator}}" />
+                                    <Button Style="{StaticResource LinkButton}" Content="{Binding Path=Solution_1_Name}"  Command="{Binding MSBuildLogsExtended_ViewModels_WPCommonOfBuildLogVM.LaunchSolutionDetailsViewCommand, Source={StaticResource Locator}}" CommandParameter="{Binding}" />
 									<!-- You can un-comment to enable editing in list -->
 									<!--<TextBox Style="{StaticResource GridEditStyle}" Text="{Binding Path=Solution_1_Name}" />-->
                                 </Grid>
