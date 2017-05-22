@@ -6,6 +6,12 @@ using System.Web.Mvc;
 
 namespace Framework.Mvc
 {
+    /// <summary>
+    /// this class can be removed.
+    /// </summary>
+    /// <typeparam name="TSearchCriteria">The type of the search criteria.</typeparam>
+    /// <typeparam name="TSearchResult">The type of the search result.</typeparam>
+    /// <seealso cref="Framework.ViewModels.ViewModelBase{TSearchCriteria}" />
     public abstract class ViewModelBaseWithResultAndUIElement<TSearchCriteria, TSearchResult>
         : Framework.ViewModels.ViewModelBase<TSearchCriteria>
         where TSearchCriteria : class, new()
